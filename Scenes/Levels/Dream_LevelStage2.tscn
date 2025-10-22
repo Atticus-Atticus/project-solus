@@ -70,11 +70,11 @@
 [ext_resource type="PackedScene" uid="uid://bp2h2y2o2v2ey" path="res://Models/book_shelf.tscn" id="68_wj52g"]
 [ext_resource type="PackedScene" uid="uid://dtqxgv38xf2ma" path="res://Models/Bonnie_interactable.tscn" id="69_u0hfp"]
 [ext_resource type="PackedScene" uid="uid://ds457b1bslawv" path="res://Models/ModelShip_interactable.tscn" id="70_5adaa"]
-[ext_resource type="AudioStream" uid="uid://b8ky66atjxdta" path="res://Audio/CityAmbience.wav" id="71_8pndh"]
 [ext_resource type="AudioStream" uid="uid://ck2hq8dvokmv7" path="res://Audio/PlaneFlyOver1.wav" id="72_ig6tu"]
 [ext_resource type="AudioStream" uid="uid://7gi5kcgxcmeo" path="res://Audio/RiotAndAnarchy.wav" id="72_uxr3y"]
 [ext_resource type="AudioStream" uid="uid://dri6sgua58ukk" path="res://Audio/PoliceSiren.wav" id="73_b0yfd"]
 [ext_resource type="PackedScene" uid="uid://j7agfwvhdu8e" path="res://Scenes/Objects/model_ship.tscn" id="73_ifen4"]
+[ext_resource type="AudioStream" uid="uid://dw14dka61tbg2" path="res://Audio/CityAmbience.mp3" id="73_oe8p2"]
 [ext_resource type="AudioStream" uid="uid://cucjm8gbb8ae3" path="res://Audio/Music/7800-soft-dough-138.wav" id="74_5b838"]
 [ext_resource type="PackedScene" uid="uid://bjon3x6ddohyo" path="res://Particles/fire_effect.tscn" id="74_bmf1f"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="78_lmui1"]
@@ -4544,7 +4544,7 @@ autoplay = true
 
 [node name="Ambience" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7925, 2.4631, -6.03069)
-stream = ExtResource("71_8pndh")
+stream = ExtResource("73_oe8p2")
 volume_db = -10.0
 autoplay = true
 

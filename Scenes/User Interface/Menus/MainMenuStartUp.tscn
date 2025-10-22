@@ -193,10 +193,8 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 396.0
-offset_bottom = 141.0
+offset_right = 398.0
+offset_bottom = 139.0
 mouse_filter = 2
 
 [node name="CRT Shader2" parent="." instance=ExtResource("9_fe3fc")]

@@ -20,8 +20,8 @@
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="16_25uyb"]
 [ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="17_1llti"]
 [ext_resource type="AudioStream" uid="uid://dif64pbv6ratc" path="res://Audio/Speech/NaomiSpeech.wav" id="18_pwww1"]
-[ext_resource type="AudioStream" uid="uid://fpjiacst2cwa" path="res://Audio/CreepyAmbience.wav" id="19_fa2mk"]
 [ext_resource type="AudioStream" uid="uid://bvaa5afgeje7p" path="res://Audio/CinematicBoom.wav" id="20_qmva7"]
+[ext_resource type="AudioStream" uid="uid://djoue732e37sw" path="res://Audio/CreepyAmbience.mp3" id="21_lo61k"]
 
 [sub_resource type="Animation" id="Animation_2joo3"]
 resource_name = "Cutscene2"
@@ -688,7 +688,7 @@ stream = ExtResource("17_1llti")
 stream = ExtResource("18_pwww1")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_fa2mk")
+stream = ExtResource("21_lo61k")
 autoplay = true
 
 [node name="Boom" type="AudioStreamPlayer" parent="."]

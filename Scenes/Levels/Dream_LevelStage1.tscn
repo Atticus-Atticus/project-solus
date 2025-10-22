@@ -69,7 +69,7 @@
 [ext_resource type="PackedScene" uid="uid://bp2h2y2o2v2ey" path="res://Models/book_shelf.tscn" id="68_gdun6"]
 [ext_resource type="PackedScene" uid="uid://dtqxgv38xf2ma" path="res://Models/Bonnie_interactable.tscn" id="69_mu1hk"]
 [ext_resource type="PackedScene" uid="uid://ds457b1bslawv" path="res://Models/ModelShip_interactable.tscn" id="70_qo1sp"]
-[ext_resource type="AudioStream" uid="uid://b8ky66atjxdta" path="res://Audio/CityAmbience.wav" id="71_0ra0w"]
+[ext_resource type="AudioStream" uid="uid://dutoxwe52h40n" path="res://Audio/CityAmbienceInside.mp3" id="71_u8vlt"]
 [ext_resource type="AudioStream" uid="uid://ck2hq8dvokmv7" path="res://Audio/PlaneFlyOver1.wav" id="72_ywiq2"]
 [ext_resource type="PackedScene" uid="uid://j7agfwvhdu8e" path="res://Scenes/Objects/model_ship.tscn" id="73_ics5a"]
 [ext_resource type="AudioStream" uid="uid://yyof2bae0dw8" path="res://Audio/Music/7816-nikki-dreams-of-pete-138.wav" id="73_m0640"]
@@ -4320,7 +4320,7 @@ skeleton = NodePath("")
 
 [node name="Ambience" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7925, 2.4631, -6.03069)
-stream = ExtResource("71_0ra0w")
+stream = ExtResource("71_u8vlt")
 autoplay = true
 
 [node name="FlyOver" type="AudioStreamPlayer3D" parent="."]
