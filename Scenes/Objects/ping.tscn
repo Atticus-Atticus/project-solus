@@ -1,0 +1,146 @@
+[gd_scene load_steps=21 format=3 uid="uid://3d80o4u06sud"]
+
+[ext_resource type="Script" path="res://Scripts/ping_Script.gd" id="1_hbiur"]
+[ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="1_sw5co"]
+[ext_resource type="PackedScene" uid="uid://bgjsdkjw3614c" path="res://Scenes/Objects/ping_radius_trigger.tscn" id="3_wt1c3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh800"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydexb"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enuci"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhmuc"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfan3"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlct1"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btc55"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8ilw"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c1r6"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgfh6"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(50, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kq6k"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(100, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6trp1"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(150, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn07d"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(0, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7i6m"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(50, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mn81"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(100, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g4di"]
+atlas = ExtResource("1_sw5co")
+region = Rect2(150, 150, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgu5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh800")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydexb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enuci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhmuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfan3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlct1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btc55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8ilw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1c1r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgfh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kq6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6trp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn07d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7i6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mn81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g4di")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D"]
+modulate = Color(0.4, 1, 0.941176, 1)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jgu5w")
+frame_progress = 0.293492
+script = ExtResource("1_hbiur")
+area_path = NodePath("PingRadiusTrigger")
+
+[node name="PingRadiusTrigger" parent="." instance=ExtResource("3_wt1c3")]
+transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 0, 0, 0)

@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://due1b5qs0ato5"]
+
+[ext_resource type="Script" path="res://Scripts/Airlock_Script.gd" id="1_y4hjl"]
+[ext_resource type="ArrayMesh" uid="uid://8tv83us3yk4v" path="res://Models/Clutter/RationBox.obj" id="2_tn5v5"]
+[ext_resource type="AudioStream" uid="uid://dp7tykv4i0t6o" path="res://Audio/PickUpBox.wav" id="3_lgtvp"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="4_lll31"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iwcuo"]
+
+[sub_resource type="Animation" id="Animation_dh185"]
+resource_name = "FlashingLight"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ne2fn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_diwla"]
+_data = {
+"FlashingLight": SubResource("Animation_dh185"),
+"RESET": SubResource("Animation_ne2fn")
+}
+
+[node name="BaseSupplyNode" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Supplies"]]
+script = ExtResource("1_y4hjl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.98677, 0, 0, 0, 1.81304, 0, 0, 0, 0.840609, 0, 0, 0)
+shape = SubResource("BoxShape3D_iwcuo")
+
+[node name="RationBox" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(2.02682, 0, 0, 0, 1.10312, 0, 0, 0, 2.37923, 0, 0, 0)
+mesh = ExtResource("2_tn5v5")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_diwla")
+}
+autoplay = "FlashingLight"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710644, -5.98431e-05)
+visible = false
+light_color = Color(0, 0.533333, 0, 1)
+light_energy = 0.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.642694, 0)
+stream = ExtResource("3_lgtvp")
+
+[node name="AnimatedSprite3D17" parent="." instance=ExtResource("4_lll31")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.658998, 0)
+modulate = Color(0.4, 1, 0.941176, 1)
+frame_progress = 0.62075

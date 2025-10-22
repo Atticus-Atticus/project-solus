@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq7mjo8ve435w"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_maqkh"]
+[ext_resource type="Script" path="res://Scripts/CamCounterScript.gd" id="3_fj1te"]
+[ext_resource type="Texture2D" uid="uid://cqybqni06cl3d" path="res://Scenes/Project Solus Camera HUD Effects.png" id="4_7g1if"]
+[ext_resource type="Texture2D" uid="uid://cdrn2bh31o81u" path="res://Scenes/User Interface/HUD/FFWD.png" id="5_f833m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cvcec"]
+font = ExtResource("1_maqkh")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_tye4a"]
+font = ExtResource("1_maqkh")
+font_size = 42
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CamLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 64.0
+offset_right = 577.0
+offset_bottom = 115.0
+text = "Cam"
+label_settings = SubResource("LabelSettings_cvcec")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 94.0
+offset_right = 417.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.858807, 4.71681e-06, 1.15514e-06, 1)
+text = "REC"
+label_settings = SubResource("LabelSettings_tye4a")
+vertical_alignment = 1
+script = ExtResource("3_fj1te")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 94.0
+offset_right = 417.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.858807, 4.71681e-06, 1.15514e-06, 1)
+text = "FFWD"
+label_settings = SubResource("LabelSettings_tye4a")
+vertical_alignment = 1
+
+[node name="ProjectSolusCameraHudEffects" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("4_7g1if")
+
+[node name="FFWD" type="Sprite2D" parent="."]
+position = Vector2(232, 140)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("5_f833m")

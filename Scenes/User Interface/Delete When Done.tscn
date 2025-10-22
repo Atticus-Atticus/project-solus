@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://co7dfyrco6f8m"]
+
+[ext_resource type="Texture2D" uid="uid://bx373uwpftytu" path="res://Scenes/User Interface/Menus/Project Solus Splash Screen.png" id="1_t0quf"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderMENU.tscn" id="2_dbbhr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ProjectSolusSplashScreen" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_t0quf")
+
+[node name="CRT Shader" parent="." instance=ExtResource("2_dbbhr")]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://3cloyi8v8tn3"]
+
+[ext_resource type="Texture2D" uid="uid://e7ka3g6pxu41" path="res://Temp Textures/TempTextureGreen.png" id="1_n8p3n"]
+[ext_resource type="PackedScene" uid="uid://c4e6t6j7sf0tn" path="res://Scenes/Objects/CameraObject.tscn" id="2_abfrj"]
+[ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="3_ebsbr"]
+[ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="4_y7qtl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bndo"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_dpp11"]
+sky_material = SubResource("ProceduralSkyMaterial_1bndo")
+
+[sub_resource type="Environment" id="Environment_476hc"]
+background_mode = 2
+sky = SubResource("Sky_dpp11")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqidf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itrlf"]
+albedo_texture = ExtResource("1_n8p3n")
+
+[sub_resource type="BoxMesh" id="BoxMesh_vjaci"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_476hc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("BoxShape3D_tqidf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+material_override = SubResource("StandardMaterial3D_itrlf")
+mesh = SubResource("BoxMesh_vjaci")
+
+[node name="CameraMain" parent="." instance=ExtResource("2_abfrj")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 3.52374, 0)
+
+[node name="CameraTrigger" parent="CameraMain" instance=ExtResource("3_ebsbr")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -7.80713, 0)
+
+[node name="Player" parent="." instance=ExtResource("4_y7qtl")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.79287, 1.89501, -3.282)

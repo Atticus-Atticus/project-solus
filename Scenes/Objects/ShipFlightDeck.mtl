@@ -1,0 +1,16 @@
+# Made in Blockbench 4.12.4
+newmtl m_121e1745-5af4-b7c5-8d18-d5471b3b4397
+map_Kd FlightDeckFloor.png
+newmtl m_c1707003-2a67-02bf-638f-13d77dcf0dca
+map_Kd FlightDeckRoof.png
+newmtl m_0281c889-74ec-82da-5205-20e13f777089
+map_Kd FlightDeckRadio.png
+newmtl m_5e090ce1-8fdb-f774-eb73-421c23e3c7ee
+map_Kd FlightDeckServer.png
+newmtl m_b036a58a-8984-f724-defc-4463b8db6ea5
+map_Kd FlightControls.png
+newmtl m_0137b6eb-6a5c-6e52-fd8c-b1e2fab0bd97
+map_Kd ProGamerFlightSeat.png
+newmtl m_c7a586c1-67e7-8b24-3fd7-43048feee250
+map_Kd FlightDeckWalls.png
+newmtl none

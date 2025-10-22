@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://j7agfwvhdu8e"]
+
+[ext_resource type="ArrayMesh" uid="uid://cj6etv378hy2m" path="res://Models/Ship/CalihanShipStand.obj" id="1_4mc4v"]
+[ext_resource type="PackedScene" uid="uid://dxd5e17wrkapr" path="res://Models/Ship/Calihan Ship.gltf" id="2_o0knp"]
+
+[node name="ModelShip" type="Node3D"]
+
+[node name="CalihanShipStand" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_4mc4v")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_o0knp")]
+transform = Transform3D(2.41049, -0.589424, 0.303532, 0.634537, 2.38276, -0.412107, -0.192135, 0.474392, 2.44705, 0.0199854, 0.679618, -0.0197064)

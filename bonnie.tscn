@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://b61e0kdxnwmta"]
+
+[ext_resource type="Texture2D" uid="uid://dkbamisa3gvqk" path="res://Models/Bonnie/BonnieBowl.png" id="1_v7y57"]
+[ext_resource type="ArrayMesh" uid="uid://bojg17ykwni1k" path="res://Models/Bonnie/BonnieBowl.obj" id="2_0xiid"]
+[ext_resource type="PackedScene" uid="uid://j7ln0wl4dtke" path="res://Models/Bonnie/Bonnie.gltf" id="3_q0be3"]
+[ext_resource type="Animation" uid="uid://4d06ipycdidh" path="res://Models/Bonnie/animation.res" id="4_lajmp"]
+[ext_resource type="Animation" uid="uid://dm30j4mqfd8gi" path="res://Models/Bonnie/BonnieIDLE.res" id="5_6xcii"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfbr3"]
+transparency = 1
+cull_mode = 1
+albedo_color = Color(1, 1, 1, 0.5)
+albedo_texture = ExtResource("1_v7y57")
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7y6c"]
+_data = {
+"BonnieIDLE": ExtResource("5_6xcii"),
+"animation": ExtResource("4_lajmp")
+}
+
+[node name="Bonnie" type="Node3D"]
+
+[node name="BonnieBowl" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_rfbr3")
+mesh = ExtResource("2_0xiid")
+
+[node name="blockbench_export" parent="." instance=ExtResource("3_q0be3")]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="blockbench_export"]
+libraries = {
+"Bonnie": SubResource("AnimationLibrary_o7y6c")
+}
+autoplay = "Bonnie/BonnieIDLE"

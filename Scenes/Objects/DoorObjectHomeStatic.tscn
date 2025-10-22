@@ -1,0 +1,155 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2w8home4lm1n"]
+
+[ext_resource type="ArrayMesh" uid="uid://ktmm3yk71mt8" path="res://Models/Home Models/HomeDoorLeft.obj" id="2_uns0m"]
+[ext_resource type="ArrayMesh" uid="uid://dr6exj4ejlf5x" path="res://Models/Home Models/HomeDoorRight.obj" id="3_3iao1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lvlee"]
+data = PackedVector3Array(0.6875, 0.9583, -0.125, 0.6875, 0.1875, -0.125, 0.6875, 0.9583, 0.125, 0.6875, 0.9583, 0.125, 0.6875, 0.1875, -0.125, 0.6875, 0.1875, 0.125, 0.25, 0.9583, 0.125, 0.25, 0.1875, 0.125, 0.25, 0.9583, -0.125, 0.25, 0.9583, -0.125, 0.25, 0.1875, 0.125, 0.25, 0.1875, -0.125, 0.6875, 2.5, 0.125, -0.25, 2.5, 0.125, 0.6875, 2.5, -0.125, 0.6875, 2.5, -0.125, -0.25, 2.5, 0.125, -0.25, 2.5, -0.125, 0.6875, 0.1875, 0.125, 0.6875, 0.1875, -0.125, 0.25, 0.1875, 0.125, 0.25, 0.1875, 0.125, 0.6875, 0.1875, -0.125, 0.25, 0.1875, -0.125, 0.6875, 0.9583, 0.125, 0.6875, 0.1875, 0.125, 0.25, 0.9583, 0.125, 0.25, 0.9583, 0.125, 0.6875, 0.1875, 0.125, 0.25, 0.1875, 0.125, 0.25, 0.9583, -0.125, 0.25, 0.1875, -0.125, 0.6875, 0.9583, -0.125, 0.6875, 0.9583, -0.125, 0.25, 0.1875, -0.125, 0.6875, 0.1875, -0.125, 0.6875, 1.7291, -0.125, 0.6875, 2.5, -0.125, -0.25, 1.7291, -0.125, -0.25, 1.7291, -0.125, 0.6875, 2.5, -0.125, -0.25, 2.5, -0.125, 0.6875, 0.9583, -0.125, 0.6875, 1.7291, -0.125, 0.25, 0.9583, -0.125, 0.25, 0.9583, -0.125, 0.6875, 1.7291, -0.125, -0.25, 1.7291, -0.125, -0.25, 1.7291, -0.125, -0.25, 2.5, -0.125, -0.25, 1.7291, 0.125, -0.25, 1.7291, 0.125, -0.25, 2.5, -0.125, -0.25, 2.5, 0.125, 0.25, 0.9583, -0.125, -0.25, 1.7291, -0.125, 0.25, 0.9583, 0.125, 0.25, 0.9583, 0.125, -0.25, 1.7291, -0.125, -0.25, 1.7291, 0.125, -0.25, 1.7291, 0.125, -0.25, 2.5, 0.125, 0.6875, 1.7291, 0.125, 0.6875, 1.7291, 0.125, -0.25, 2.5, 0.125, 0.6875, 2.5, 0.125, 0.25, 0.9583, 0.125, -0.25, 1.7291, 0.125, 0.6875, 0.9583, 0.125, 0.6875, 0.9583, 0.125, -0.25, 1.7291, 0.125, 0.6875, 1.7291, 0.125, 0.6875, 1.7291, 0.125, 0.6875, 2.5, 0.125, 0.6875, 1.7291, -0.125, 0.6875, 1.7291, -0.125, 0.6875, 2.5, 0.125, 0.6875, 2.5, -0.125, 0.6875, 0.9583, 0.125, 0.6875, 1.7291, 0.125, 0.6875, 0.9583, -0.125, 0.6875, 0.9583, -0.125, 0.6875, 1.7291, 0.125, 0.6875, 1.7291, -0.125)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_de43a"]
+data = PackedVector3Array(0.25, 0.9583, -0.125, 0.25, 0.1875, -0.125, 0.25, 0.9583, 0.125, 0.25, 0.9583, 0.125, 0.25, 0.1875, -0.125, 0.25, 0.1875, 0.125, -0.6875, 0.9583, 0.125, -0.6875, 0.1875, 0.125, -0.6875, 0.9583, -0.125, -0.6875, 0.9583, -0.125, -0.6875, 0.1875, 0.125, -0.6875, 0.1875, -0.125, -0.25, 2.5, 0.125, -0.6875, 2.5, 0.125, -0.25, 2.5, -0.125, -0.25, 2.5, -0.125, -0.6875, 2.5, 0.125, -0.6875, 2.5, -0.125, 0.25, 0.1875, 0.125, 0.25, 0.1875, -0.125, -0.6875, 0.1875, 0.125, -0.6875, 0.1875, 0.125, 0.25, 0.1875, -0.125, -0.6875, 0.1875, -0.125, 0.25, 0.9583, 0.125, 0.25, 0.1875, 0.125, -0.6875, 0.9583, 0.125, -0.6875, 0.9583, 0.125, 0.25, 0.1875, 0.125, -0.6875, 0.1875, 0.125, -0.6875, 0.9583, -0.125, -0.6875, 0.1875, -0.125, 0.25, 0.9583, -0.125, 0.25, 0.9583, -0.125, -0.6875, 0.1875, -0.125, 0.25, 0.1875, -0.125, -0.25, 1.7291, -0.125, -0.25, 2.5, -0.125, -0.6875, 1.7291, -0.125, -0.6875, 1.7291, -0.125, -0.25, 2.5, -0.125, -0.6875, 2.5, -0.125, 0.25, 0.9583, -0.125, -0.25, 1.7291, -0.125, -0.6875, 0.9583, -0.125, -0.6875, 0.9583, -0.125, -0.25, 1.7291, -0.125, -0.6875, 1.7291, -0.125, -0.6875, 1.7291, -0.125, -0.6875, 2.5, -0.125, -0.6875, 1.7291, 0.125, -0.6875, 1.7291, 0.125, -0.6875, 2.5, -0.125, -0.6875, 2.5, 0.125, -0.6875, 0.9583, -0.125, -0.6875, 1.7291, -0.125, -0.6875, 0.9583, 0.125, -0.6875, 0.9583, 0.125, -0.6875, 1.7291, -0.125, -0.6875, 1.7291, 0.125, -0.6875, 1.7291, 0.125, -0.6875, 2.5, 0.125, -0.25, 1.7291, 0.125, -0.25, 1.7291, 0.125, -0.6875, 2.5, 0.125, -0.25, 2.5, 0.125, -0.6875, 0.9583, 0.125, -0.6875, 1.7291, 0.125, 0.25, 0.9583, 0.125, 0.25, 0.9583, 0.125, -0.6875, 1.7291, 0.125, -0.25, 1.7291, 0.125, -0.25, 1.7291, 0.125, -0.25, 2.5, 0.125, -0.25, 1.7291, -0.125, -0.25, 1.7291, -0.125, -0.25, 2.5, 0.125, -0.25, 2.5, -0.125, 0.25, 0.9583, 0.125, -0.25, 1.7291, 0.125, 0.25, 0.9583, -0.125, 0.25, 0.9583, -0.125, -0.25, 1.7291, 0.125, -0.25, 1.7291, -0.125)
+
+[sub_resource type="Animation" id="Animation_har7x"]
+resource_name = "Close"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/AudioStreamPlayer3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y6vlm"]
+resource_name = "Open"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/AudioStreamPlayer3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(2, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o4u7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ig4l"]
+_data = {
+"Close": SubResource("Animation_har7x"),
+"Open": SubResource("Animation_y6vlm"),
+"RESET": SubResource("Animation_o4u7w")
+}
+
+[node name="DoorNode" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_lvlee")
+
+[node name="HomeDoorLeft" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2"]
+mesh = ExtResource("2_uns0m")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_de43a")
+
+[node name="HomeDoorRight" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = ExtResource("3_3iao1")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3ig4l")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95095, 0)

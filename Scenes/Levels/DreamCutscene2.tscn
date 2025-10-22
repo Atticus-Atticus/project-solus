@@ -1,0 +1,697 @@
+[gd_scene load_steps=36 format=3 uid="uid://qj4jbhsfbf7e"]
+
+[ext_resource type="Script" path="res://Scripts/dream_cutscene_2_script.gd" id="1_ikt5c"]
+[ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_6ybmq"]
+[ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="3_8j0m5"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_ss7ua"]
+[ext_resource type="ArrayMesh" uid="uid://buxw7oqqhe7wx" path="res://Models/Home Models/HomeCornerFront1.obj" id="5_6g46u"]
+[ext_resource type="LabelSettings" uid="uid://tp8yager30fu" path="res://Scenes/User Interface/Dialogue/DialogueBoxText.tres" id="5_nr0x1"]
+[ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="6_2t4nl"]
+[ext_resource type="ArrayMesh" uid="uid://c11kxfxkvxuxk" path="res://Models/Home Models/HomeWallFront.obj" id="7_v2kig"]
+[ext_resource type="ArrayMesh" uid="uid://5jesnubkb3hj" path="res://Models/Home Models/HomeCornerSide1.obj" id="8_8in1g"]
+[ext_resource type="ArrayMesh" uid="uid://cuxbkdh2p7h8r" path="res://Models/Home Models/HomeWallDoorFront.obj" id="9_5x0jg"]
+[ext_resource type="ArrayMesh" uid="uid://dtmdnv5tu1wka" path="res://Models/Home Models/HomeWallUNI.obj" id="10_ydlmy"]
+[ext_resource type="PackedScene" uid="uid://y3m821e5561a" path="res://Models/Sci-Fi City Assets/Household/Beds/Bed Double.fbx" id="11_jln87"]
+[ext_resource type="PackedScene" uid="uid://bia735rkr1d8g" path="res://Models/Sci-Fi City Assets/Household/Tables/Table B.fbx" id="12_j5xeq"]
+[ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="13_0kavk"]
+[ext_resource type="PackedScene" uid="uid://c4ejwph3itmdh" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Cutscene2.tscn" id="14_06hk3"]
+[ext_resource type="Shader" path="res://Shaders/Glitch.gdshader" id="14_or18c"]
+[ext_resource type="PackedScene" uid="uid://dxfc02nvg3ckf" path="res://Models/CutscenePlayer/CalihanArms.tscn" id="15_f8igq"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="16_25uyb"]
+[ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="17_1llti"]
+[ext_resource type="AudioStream" uid="uid://dif64pbv6ratc" path="res://Audio/Speech/NaomiSpeech.wav" id="18_pwww1"]
+[ext_resource type="AudioStream" uid="uid://fpjiacst2cwa" path="res://Audio/CreepyAmbience.wav" id="19_fa2mk"]
+[ext_resource type="AudioStream" uid="uid://bvaa5afgeje7p" path="res://Audio/CinematicBoom.wav" id="20_qmva7"]
+
+[sub_resource type="Animation" id="Animation_2joo3"]
+resource_name = "Cutscene2"
+length = 17.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 16.2, 16.2333, 16.2667, 16.3333, 16.3667, 16.4, 16.4667, 16.5, 16.9667, 17, 17.3667, 17.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextboxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7, 9, 11, 11.5, 13, 14.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 11.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextboxContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 11, 13, 16.2333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Calihan: Naomi?", "Naomi: ...calihan..."]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 11.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("blockbench_export:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 16.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CalihanSpeech")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.03333, 9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NaomiSpeech")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(13, 14.5333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Boom:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(11.3667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_gk18n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextboxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextboxContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Calihan: Naomi?"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("blockbench_export:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Boom:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wkmrm"]
+_data = {
+"Cutscene2": SubResource("Animation_2joo3"),
+"RESET": SubResource("Animation_gk18n")
+}
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbw1o"]
+sky_top_color = Color(0.295519, 0.0134573, 0.229063, 1)
+sky_horizon_color = Color(0.28397, 6.55781e-06, 0.213301, 1)
+sky_energy_multiplier = 0.0
+ground_bottom_color = Color(0.193654, 0.00289694, 0.133764, 1)
+
+[sub_resource type="Sky" id="Sky_ma6x2"]
+sky_material = SubResource("ProceduralSkyMaterial_dbw1o")
+
+[sub_resource type="Environment" id="Environment_e68sc"]
+background_mode = 2
+background_energy_multiplier = 0.5
+sky = SubResource("Sky_ma6x2")
+sky_rotation = Vector3(-0.10472, 0, 0.10472)
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 57.51
+volumetric_fog_detail_spread = 2.37841
+volumetric_fog_ambient_inject = 1.0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7st78"]
+data = PackedVector3Array(0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.25, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.25, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, -0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, -0.5, 2.5625, 0.5, -0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.5625, 0.5, 0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, 0.3333, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.3125, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.3333, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.25, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.3333, 0.3125, 0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.5, 2.5625, -0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, -0.5, 0.5, 0.3125, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, 0.5, 0.3333, 2.5625, 0.5, 0.5, 2.5625, 0.5, 0.25, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5, 0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1875, 0.5, -0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oega3"]
+data = PackedVector3Array(0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1875, 0.5, -0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pslee"]
+data = PackedVector3Array(0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1875, 0.5, -0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.25, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.25, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, -0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, -0.5, 2.5625, 0.5, -0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.5625, 0.5, 0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qrsv5"]
+data = PackedVector3Array(-0.3333, 0.3125, 0.5, -0.5, 0.3125, 0.5, -0.25, 0.1875, 0.5, -0.25, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, -0.5, -0.3333, 0.3125, -0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, -0.3333, 0.3125, -0.5, -0.25, 0.1875, -0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, -0.5, -0.25, 2.6875, 0.5, -0.25, 2.6875, 0.5, -0.5, 2.6875, -0.5, -0.25, 2.6875, -0.5, -0.5, 0.1875, 0.5, -0.25, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, -0.25, 0.1875, 0.5, -0.25, 0.1875, -0.5, -0.5, 0.3125, 0.5, -0.5, 0.3125, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, -0.5, -0.5, 0.1875, -0.5, -0.3333, 0.3125, -0.5, -0.25, 0.1875, -0.5, -0.3333, 0.3125, 0.5, -0.3333, 0.3125, 0.5, -0.25, 0.1875, -0.5, -0.25, 0.1875, 0.5, -0.3333, 2.5625, -0.5, -0.3333, 0.3125, -0.5, -0.3333, 2.5625, 0.5, -0.3333, 2.5625, 0.5, -0.3333, 0.3125, -0.5, -0.3333, 0.3125, 0.5, -0.5, 2.5625, -0.5, -0.3333, 2.5625, -0.5, -0.5, 0.3125, -0.5, -0.5, 0.3125, -0.5, -0.3333, 2.5625, -0.5, -0.3333, 0.3125, -0.5, -0.5, 2.5625, 0.5, -0.5, 2.5625, -0.5, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, -0.5, 2.5625, -0.5, -0.5, 0.3125, -0.5, -0.3333, 2.5625, 0.5, -0.5, 2.5625, 0.5, -0.3333, 0.3125, 0.5, -0.3333, 0.3125, 0.5, -0.5, 2.5625, 0.5, -0.5, 0.3125, 0.5, -0.3333, 2.5625, 0.5, -0.25, 2.6875, 0.5, -0.3333, 2.5625, -0.5, -0.3333, 2.5625, -0.5, -0.25, 2.6875, 0.5, -0.25, 2.6875, -0.5, -0.3333, 2.5625, -0.5, -0.5, 2.5625, -0.5, -0.25, 2.6875, -0.5, -0.25, 2.6875, -0.5, -0.5, 2.5625, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.5625, -0.5, -0.5, 2.5625, 0.5, -0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.5625, 0.5, -0.3333, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, -0.3333, 2.5625, 0.5, -0.25, 2.6875, 0.5, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.25, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.25, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, 0.25, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.3125, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 0.1875, 0.25, 0.5, 0.1875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.5, -0.5, 0.3125, 0.5, -0.5, 2.5625, 0.3333, -0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, -0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, -0.5, 2.5625, 0.5, -0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.3333, 0.5, 0.3125, 0.3333, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.3333, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.25, -0.5, 2.6875, 0.25, -0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.5625, 0.5, 0.5, 2.5625, 0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.3333, 0.5, 2.6875, 0.25, 0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1875, 0.5, -0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.875, 0.5, 0.5, 2.875, -0.5, -0.5, 2.875, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.875, 0.5, 0.5, 2.875, 0.5, -0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, -0.5, -0.5, 2.6875, -0.5, 0.5, 2.875, -0.5, 0.5, 2.875, -0.5, -0.5, 2.6875, -0.5, -0.5, 2.875, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sq8jl"]
+data = PackedVector3Array(-0.75, 0.3125, 0.3333, -0.75, 0.1875, 0.25, -0.75, 0.3125, 0.5, -0.75, 0.3125, 0.5, -0.75, 0.1875, 0.25, -0.75, 0.1875, 0.5, -1, 0.3125, 0.5, -1, 0.3125, 0.3333, -1, 0.1875, 0.5, -1, 0.1875, 0.5, -1, 0.3125, 0.3333, -1, 0.1875, 0.25, 0, 2.6875, 0.5, -1, 2.6875, 0.5, 0, 2.6875, 0.25, 0, 2.6875, 0.25, -1, 2.6875, 0.5, -1, 2.6875, 0.25, -0.75, 0.1875, 0.5, -0.75, 0.1875, 0.25, -1, 0.1875, 0.5, -1, 0.1875, 0.5, -0.75, 0.1875, 0.25, -1, 0.1875, 0.25, -0.75, 0.3125, 0.5, -1, 0.3125, 0.5, -0.75, 0.1875, 0.5, -0.75, 0.1875, 0.5, -1, 0.3125, 0.5, -1, 0.1875, 0.5, -1, 0.3125, 0.3333, -1, 0.1875, 0.25, -0.75, 0.3125, 0.3333, -0.75, 0.3125, 0.3333, -1, 0.1875, 0.25, -0.75, 0.1875, 0.25, -1, 2.5625, 0.3333, -1, 0.3125, 0.3333, -0.75, 2.5625, 0.3333, -0.75, 2.5625, 0.3333, -1, 0.3125, 0.3333, -0.75, 0.3125, 0.3333, -1, 2.5625, 0.5, -1, 2.5625, 0.3333, -1, 0.3125, 0.5, -1, 0.3125, 0.5, -1, 2.5625, 0.3333, -1, 0.3125, 0.3333, -0.75, 2.5625, 0.5, -1, 2.5625, 0.5, -0.75, 0.3125, 0.5, -0.75, 0.3125, 0.5, -1, 2.5625, 0.5, -1, 0.3125, 0.5, -0.75, 2.5625, 0.3333, -0.75, 0.3125, 0.3333, -0.75, 2.5625, 0.5, -0.75, 2.5625, 0.5, -0.75, 0.3125, 0.3333, -0.75, 0.3125, 0.5, -0.75, 2.5625, 0.3333, 0, 2.6875, 0.25, -1, 2.5625, 0.3333, -1, 2.5625, 0.3333, 0, 2.6875, 0.25, -1, 2.6875, 0.25, -1, 2.5625, 0.3333, -1, 2.5625, 0.5, -1, 2.6875, 0.25, -1, 2.6875, 0.25, -1, 2.5625, 0.5, -1, 2.6875, 0.5, -1, 2.5625, 0.5, -0.75, 2.5625, 0.5, -1, 2.6875, 0.5, -1, 2.6875, 0.5, -0.75, 2.5625, 0.5, 0, 2.6875, 0.5, -0.75, 2.5625, 0.5, 0, 2.6875, 0.5, -0.75, 2.5625, 0.3333, -0.75, 2.5625, 0.3333, 0, 2.6875, 0.5, 0, 2.6875, 0.25, 0, 0.1875, 0.5, 0, 0, 0.5, 0, 0.1875, -0.5, 0, 0.1875, -0.5, 0, 0, 0.5, 0, 0, -0.5, -1, 0.1875, 0.5, -1, 0.1875, -0.5, -1, 0, 0.5, -1, 0, 0.5, -1, 0.1875, -0.5, -1, 0, -0.5, 0, 0, 0.5, -1, 0, 0.5, 0, 0, -0.5, 0, 0, -0.5, -1, 0, 0.5, -1, 0, -0.5, 0, 0.1875, 0.5, -1, 0.1875, 0.5, 0, 0, 0.5, 0, 0, 0.5, -1, 0.1875, 0.5, -1, 0, 0.5, 0, 0.1875, -0.5, 0, 0, -0.5, -1, 0.1875, -0.5, -1, 0.1875, -0.5, 0, 0, -0.5, -1, 0, -0.5, 0, 2.6875, 0.5, 0, 2.6875, -0.5, 0, 2.875, 0.5, 0, 2.875, 0.5, 0, 2.6875, -0.5, 0, 2.875, -0.5, -1, 2.875, -0.5, -1, 2.6875, -0.5, -1, 2.875, 0.5, -1, 2.875, 0.5, -1, 2.6875, -0.5, -1, 2.6875, 0.5, 0, 2.875, 0.5, 0, 2.875, -0.5, -1, 2.875, 0.5, -1, 2.875, 0.5, 0, 2.875, -0.5, -1, 2.875, -0.5, 0, 2.6875, 0.5, 0, 2.6875, -0.5, -1, 2.6875, 0.5, -1, 2.6875, 0.5, 0, 2.6875, -0.5, -1, 2.6875, -0.5, -1, 2.875, 0.5, -1, 2.6875, 0.5, 0, 2.875, 0.5, 0, 2.875, 0.5, -1, 2.6875, 0.5, 0, 2.6875, 0.5, 0, 2.6875, -0.5, -1, 2.6875, -0.5, 0, 2.875, -0.5, 0, 2.875, -0.5, -1, 2.6875, -0.5, -1, 2.875, -0.5, 0, 0.1875, 0.5, -1, 0.1875, 0.5, 0, 0.1875, -0.5, 0, 0.1875, -0.5, -1, 0.1875, 0.5, -1, 0.1875, -0.5, 1, 0.1875, 0.5, 1, 0, 0.5, 1, 0.1875, -0.5, 1, 0.1875, -0.5, 1, 0, 0.5, 1, 0, -0.5, 0, 0.1875, 0.5, 0, 0.1875, -0.5, 0, 0, 0.5, 0, 0, 0.5, 0, 0.1875, -0.5, 0, 0, -0.5, 1, 0, 0.5, 0, 0, 0.5, 1, 0, -0.5, 1, 0, -0.5, 0, 0, 0.5, 0, 0, -0.5, 1, 0.1875, 0.5, 0, 0.1875, 0.5, 1, 0, 0.5, 1, 0, 0.5, 0, 0.1875, 0.5, 0, 0, 0.5, 1, 0.1875, -0.5, 1, 0, -0.5, 0, 0.1875, -0.5, 0, 0.1875, -0.5, 1, 0, -0.5, 0, 0, -0.5, 1, 2.6875, 0.5, 1, 2.6875, -0.5, 1, 2.875, 0.5, 1, 2.875, 0.5, 1, 2.6875, -0.5, 1, 2.875, -0.5, 0, 2.875, -0.5, 0, 2.6875, -0.5, 0, 2.875, 0.5, 0, 2.875, 0.5, 0, 2.6875, -0.5, 0, 2.6875, 0.5, 1, 2.875, 0.5, 1, 2.875, -0.5, 0, 2.875, 0.5, 0, 2.875, 0.5, 1, 2.875, -0.5, 0, 2.875, -0.5, 1, 2.6875, 0.5, 1, 2.6875, -0.5, 0, 2.6875, 0.5, 0, 2.6875, 0.5, 1, 2.6875, -0.5, 0, 2.6875, -0.5, 0, 2.875, 0.5, 0, 2.6875, 0.5, 1, 2.875, 0.5, 1, 2.875, 0.5, 0, 2.6875, 0.5, 1, 2.6875, 0.5, 1, 2.6875, -0.5, 0, 2.6875, -0.5, 1, 2.875, -0.5, 1, 2.875, -0.5, 0, 2.6875, -0.5, 0, 2.875, -0.5, 1, 0.1875, 0.5, 0, 0.1875, 0.5, 1, 0.1875, -0.5, 1, 0.1875, -0.5, 0, 0.1875, 0.5, 0, 0.1875, -0.5, 0.75, 0.3125, 0.3333, 0.75, 0.3125, 0.5, 0.75, 0.1875, 0.25, 0.75, 0.1875, 0.25, 0.75, 0.3125, 0.5, 0.75, 0.1875, 0.5, 1, 0.3125, 0.5, 1, 0.1875, 0.5, 1, 0.3125, 0.3333, 1, 0.3125, 0.3333, 1, 0.1875, 0.5, 1, 0.1875, 0.25, 0, 2.6875, 0.5, 0, 2.6875, 0.25, 1, 2.6875, 0.5, 1, 2.6875, 0.5, 0, 2.6875, 0.25, 1, 2.6875, 0.25, 0.75, 0.1875, 0.5, 1, 0.1875, 0.5, 0.75, 0.1875, 0.25, 0.75, 0.1875, 0.25, 1, 0.1875, 0.5, 1, 0.1875, 0.25, 0.75, 0.3125, 0.5, 0.75, 0.1875, 0.5, 1, 0.3125, 0.5, 1, 0.3125, 0.5, 0.75, 0.1875, 0.5, 1, 0.1875, 0.5, 1, 0.3125, 0.3333, 0.75, 0.3125, 0.3333, 1, 0.1875, 0.25, 1, 0.1875, 0.25, 0.75, 0.3125, 0.3333, 0.75, 0.1875, 0.25, 1, 2.5625, 0.3333, 0.75, 2.5625, 0.3333, 1, 0.3125, 0.3333, 1, 0.3125, 0.3333, 0.75, 2.5625, 0.3333, 0.75, 0.3125, 0.3333, 1, 2.5625, 0.5, 1, 0.3125, 0.5, 1, 2.5625, 0.3333, 1, 2.5625, 0.3333, 1, 0.3125, 0.5, 1, 0.3125, 0.3333, 0.75, 2.5625, 0.5, 0.75, 0.3125, 0.5, 1, 2.5625, 0.5, 1, 2.5625, 0.5, 0.75, 0.3125, 0.5, 1, 0.3125, 0.5, 0.75, 2.5625, 0.3333, 0.75, 2.5625, 0.5, 0.75, 0.3125, 0.3333, 0.75, 0.3125, 0.3333, 0.75, 2.5625, 0.5, 0.75, 0.3125, 0.5, 0.75, 2.5625, 0.3333, 1, 2.5625, 0.3333, 0, 2.6875, 0.25, 0, 2.6875, 0.25, 1, 2.5625, 0.3333, 1, 2.6875, 0.25, 1, 2.5625, 0.3333, 1, 2.6875, 0.25, 1, 2.5625, 0.5, 1, 2.5625, 0.5, 1, 2.6875, 0.25, 1, 2.6875, 0.5, 1, 2.5625, 0.5, 1, 2.6875, 0.5, 0.75, 2.5625, 0.5, 0.75, 2.5625, 0.5, 1, 2.6875, 0.5, 0, 2.6875, 0.5, 0.75, 2.5625, 0.5, 0.75, 2.5625, 0.3333, 0, 2.6875, 0.5, 0, 2.6875, 0.5, 0.75, 2.5625, 0.3333, 0, 2.6875, 0.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bvkep"]
+data = PackedVector3Array(0.3333, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.3125, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.3333, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.25, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.3333, 0.3125, 0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.5, 2.5625, -0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, -0.5, 0.5, 0.3125, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, 0.5, 0.3333, 2.5625, 0.5, 0.5, 2.5625, 0.5, 0.25, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n3k4c"]
+shader = ExtResource("14_or18c")
+shader_parameter/shake_power = 0.04
+shader_parameter/shake_rate = 0.4
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 15.0
+shader_parameter/shake_color_rate = 0.01
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ikt5c")
+
+[node name="CRT Shader" parent="." instance=ExtResource("2_6ybmq")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -178.0
+offset_top = -110.0
+offset_right = 2175.0
+offset_bottom = 1395.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -320.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_8j0m5")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_ss7ua")
+theme_override_font_sizes/font_size = 50
+text = ">"
+label_settings = ExtResource("5_nr0x1")
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_ss7ua")
+theme_override_font_sizes/font_size = 50
+text = "Calihan: Naomi?"
+label_settings = ExtResource("5_nr0x1")
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_ss7ua")
+theme_override_font_sizes/font_size = 50
+text = "v"
+label_settings = ExtResource("5_nr0x1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wkmrm")
+}
+autoplay = "Cutscene2"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e68sc")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46973, 2.45369, 1.28086)
+light_energy = 0.1
+omni_range = 2.418
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88154, 2.44731, -3.80153)
+light_color = Color(0.340478, 0.000131265, 0.26838, 1)
+light_energy = 0.434
+omni_range = 3.13567
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.17604, 2.53573, -5.18395)
+fov = 52.3294
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(0.790272, 0, -0.612756, 0, 1, 0, 0.612756, 0, 0.790272, 0, 0, 0)
+spot_range = 3.34504
+spot_angle = 43.3239
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D114" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 4.76837e-07, 0, 2, 0, -4.76837e-07, 0, 2, 0, 0, 2)
+shape = SubResource("ConcavePolygonShape3D_7st78")
+
+[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D114"]
+mesh = ExtResource("5_6g46u")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D115" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -6.51683e-07, 0, 2, 0, 6.51683e-07, 0, -2, -6, 0, -6)
+shape = SubResource("ConcavePolygonShape3D_7st78")
+
+[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D115"]
+mesh = ExtResource("5_6g46u")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D85" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D85"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D86" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D86"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D87" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D87"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D88" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D88"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D89" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D89"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D90" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D90"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D91" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D91"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D92" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D92"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D95" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D95"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D96" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D96"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D97" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D97"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D100" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_oega3")
+
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D100"]
+mesh = ExtResource("6_2t4nl")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D93" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, -4.76837e-07, 0, 2, 0, 4.76837e-07, 0, 2, -2, 0, 2)
+shape = SubResource("ConcavePolygonShape3D_pslee")
+
+[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D93"]
+mesh = ExtResource("7_v2kig")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D94" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, -4.76837e-07, 0, 2, 0, 4.76837e-07, 0, 2, -4, 0, 2)
+shape = SubResource("ConcavePolygonShape3D_pslee")
+
+[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D94"]
+mesh = ExtResource("7_v2kig")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D98" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 2)
+shape = SubResource("ConcavePolygonShape3D_qrsv5")
+
+[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D98"]
+mesh = ExtResource("8_8in1g")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D99" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, -6)
+shape = SubResource("ConcavePolygonShape3D_qrsv5")
+
+[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D99"]
+mesh = ExtResource("8_8in1g")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D126" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -3, 0, -6)
+shape = SubResource("ConcavePolygonShape3D_sq8jl")
+
+[node name="HomeWallDoorFront4" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D126"]
+mesh = ExtResource("9_5x0jg")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D52" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D52"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D53" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D53"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D54" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D54"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D55" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, -4)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D55"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D56" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, -2)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D56"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D57" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_bvkep")
+
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D57"]
+mesh = ExtResource("10_ydlmy")
+skeleton = NodePath("../..")
+
+[node name="Bed Double" parent="." instance=ExtResource("11_jln87")]
+transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, -3.05418, 0.957018, 1.033)
+
+[node name="Table B" parent="." instance=ExtResource("12_j5xeq")]
+transform = Transform3D(0.43237, 0, 0, 0, 0.666281, 0, 0, 0, 0.4, -0.576542, 1.01246, 1.67357)
+
+[node name="Table B2" parent="." instance=ExtResource("12_j5xeq")]
+transform = Transform3D(0.43237, 0, 0, 0, 0.666281, 0, 0, 0, 0.4, -5.44595, 1.01246, 1.67357)
+
+[node name="Lamp C" parent="." instance=ExtResource("13_0kavk")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -5.66227, 1.99529, 1.84141)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("14_06hk3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.09335, 0.428454, -2.66407)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_n3k4c")
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1922.0
+offset_bottom = 1078.0
+
+[node name="blockbench_export" parent="." instance=ExtResource("15_f8igq")]
+transform = Transform3D(-0.99877, 0, -0.049582, 0.00174941, 0.999377, -0.0352398, 0.0495511, -0.0352832, -0.998148, -3.20577, 0.161993, -4.7786)
+visible = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 97.0
+offset_right = 466.0
+offset_bottom = 168.0
+text = "Press BACKSPACE to skip cutscene"
+label_settings = ExtResource("16_25uyb")
+
+[node name="CalihanSpeech" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_1llti")
+
+[node name="NaomiSpeech" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_pwww1")
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_fa2mk")
+autoplay = true
+
+[node name="Boom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_qmva7")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

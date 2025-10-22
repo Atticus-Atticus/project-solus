@@ -1,0 +1,246 @@
+[gd_scene load_steps=17 format=3 uid="uid://cwaoogya1u84"]
+
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_4apuk"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_37eoc"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_rvp4i"]
+[ext_resource type="Script" path="res://Scripts/PlayButtonScript.gd" id="3_pbbw1"]
+[ext_resource type="Script" path="res://Scripts/SettingsButtonScript.gd" id="4_ii4xb"]
+[ext_resource type="Script" path="res://Scripts/ExitButtonScript.gd" id="5_0nmoh"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="6_23flb"]
+[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="7_gvxfj"]
+[ext_resource type="Script" path="res://Scripts/StartUpScript.gd" id="9_cfb8p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_esjad"]
+line_spacing = 20.0
+font = ExtResource("1_37eoc")
+font_size = 35
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
+line_spacing = 20.0
+font = ExtResource("1_37eoc")
+font_size = 35
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
+line_spacing = 0.0
+font = ExtResource("1_37eoc")
+font_size = 34
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="Animation" id="Animation_nbo6e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_16u6q"]
+resource_name = "StartUp"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gjvee"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
+_data = {
+"RESET": SubResource("Animation_nbo6e"),
+"StartUp": SubResource("Animation_16u6q"),
+"new_animation": SubResource("Animation_gjvee")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("1_rvp4i")
+
+[node name="StartUpText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+> 
+> Checking Memory... 64GB OK + 24GB Extended OK
+> 
+> Detecting Primary Master... SD-512 4TB
+> Detecting Primary Slave... None
+> Detecting Secondary Master... CD-ROM
+> Detecting Secondary Slave... None
+>
+> Loading BLACKBOX READER...
+>
+> **ERROR: BLACKBOX FILES CORRUPT OR DAMAGED**
+> Attempting automatic recovery...
+>
+> Restoring COMMAND.COM... OK
+> Restoring CONFIG.SYS... OK
+> 
+> Integrity check... PASSED
+>
+> Booting PROJECT SOLUS...
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_esjad")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 425.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> 
+>
+>
+>
+>
+>                                                                           v0.1
+> 	 (demo)
+>
+> Please select a program to run...
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="TitleLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 171.0
+offset_right = 1608.0
+offset_bottom = -747.0
+grow_vertical = 2
+text = "    ____                  _              __     _____         __            
+   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
+ / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
+                   /___/                                                    "
+label_settings = SubResource("LabelSettings_2r0ac")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0537708
+anchor_right = 0.187
+anchor_bottom = 1.17222
+offset_left = -0.240005
+offset_top = 515.0
+offset_right = 139.96
+offset_bottom = -422.0
+grow_vertical = 2
+theme = ExtResource("1_4apuk")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Run Program"
+alignment = 0
+script = ExtResource("3_pbbw1")
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Config Program"
+alignment = 0
+script = ExtResource("4_ii4xb")
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit Program"
+alignment = 0
+script = ExtResource("5_0nmoh")
+
+[node name="CRT Shader" parent="." instance=ExtResource("6_23flb")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 396.0
+offset_bottom = 141.0
+mouse_filter = 2
+
+[node name="CRT Shader2" parent="." instance=ExtResource("7_gvxfj")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8as7b")
+}
+autoplay = "StartUp"
+speed_scale = 0.8
+script = ExtResource("9_cfb8p")
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Settings" to="MarginContainer/VBoxContainer/Settings" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Settings" to="MarginContainer/VBoxContainer/Settings" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

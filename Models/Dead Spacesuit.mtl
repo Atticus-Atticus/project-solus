@@ -1,0 +1,14 @@
+# Made in Blockbench 4.12.4
+newmtl m_8217e4d0-b95b-bf63-51c2-500b11c04b7a
+map_Kd Bench01.png
+newmtl m_7d8933a3-99bf-819d-20e5-6b9a6ad456ff
+map_Kd Spacesuit Underbody.png
+newmtl m_11644822-50ba-a6e7-02d8-c68a20721838
+map_Kd Spacesuit Armour.png
+newmtl m_701f8fa9-a594-5a64-f97d-e0ac3fdd07fd
+map_Kd Spacesuit Helmet.png
+newmtl m_939b02b2-df4c-255e-486f-2d355257d222
+map_Kd Spacesuit Arms.png
+newmtl m_b9306b6b-3402-fb8c-6949-e2c979050137
+map_Kd Spacesuit Legs.png
+newmtl none

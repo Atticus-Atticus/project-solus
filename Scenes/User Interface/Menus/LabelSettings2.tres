@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://blip5s2fcb4ug"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_nvfwf"]
+
+[resource]
+line_spacing = 10.0
+font = ExtResource("1_nvfwf")
+font_size = 20
+font_color = Color(0.4, 1, 0.941176, 1)

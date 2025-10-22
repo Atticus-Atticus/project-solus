@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://caecrp1h8c0do"]
+
+[ext_resource type="Shader" path="res://Shaders/PixelationTest.gdshader" id="1_tbyc5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nv00p"]
+render_priority = 0
+shader = ExtResource("1_tbyc5")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[node name="Pixelation" type="ColorRect"]
+material = SubResource("ShaderMaterial_nv00p")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

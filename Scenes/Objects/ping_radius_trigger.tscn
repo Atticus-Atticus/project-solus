@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgjsdkjw3614c"]
+
+[ext_resource type="Script" path="res://Scripts/ping_radius_trigger_script.gd" id="1_yn8mo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7lxck"]
+
+[node name="PingRadiusTrigger" type="Area3D"]
+script = ExtResource("1_yn8mo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_7lxck")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

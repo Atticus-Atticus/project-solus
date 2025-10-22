@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4e6t6j7sf0tn"]
+
+[ext_resource type="Script" path="res://Scripts/camera_model_script.gd" id="1_hysne"]
+[ext_resource type="Texture2D" uid="uid://ca21et6nfx8jh" path="res://Scenes/User Interface/Menus/tv-4k-tv-static-d3k7px9ms3ebgfv4.jpg" id="2_3d3qm"]
+[ext_resource type="AudioStream" uid="uid://dh6njkag285wr" path="res://Audio/ChangeCam.wav" id="2_a3uwk"]
+[ext_resource type="Shader" path="res://Shaders/Pixel.gdshader" id="3_fl1ui"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w81m7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_e1kub"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g0afu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jo7kj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4m6wn"]
+render_priority = 0
+shader = ExtResource("3_fl1ui")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = false
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 1.0
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[node name="Camera" type="Node3D"]
+script = ExtResource("1_hysne")
+
+[node name="Tv-4k-tv-static-d3k7Px9Ms3Ebgfv4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("2_3d3qm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_w81m7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.834065, 0)
+mesh = SubResource("SphereMesh_e1kub")
+
+[node name="Hinge" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.834, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge"]
+transform = Transform3D(1.34356, 0, 0, 0, 1, 0, 0, 0, 2.23696, 0, -0.492868, -0.442949)
+mesh = SubResource("BoxMesh_g0afu")
+
+[node name="Camera3D" type="Camera3D" parent="Hinge" groups=["Security Cams"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.445434, -0.886012)
+
+[node name="Postprocess" type="MeshInstance3D" parent="Hinge"]
+transform = Transform3D(2.40969, 0, 0, 0, -4.37114e-08, -1.84268, 0, 1, -8.05461e-08, 0, -0.504651, -1.84258)
+visible = false
+mesh = SubResource("PlaneMesh_jo7kj")
+surface_material_override/0 = SubResource("ShaderMaterial_4m6wn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_a3uwk")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c68d06b21nb8m"]
+
+[ext_resource type="Shader" path="res://Shaders/Glitch.gdshader" id="1_51s8w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bfoi5"]
+shader = ExtResource("1_51s8w")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="GlitchShader" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_bfoi5")
+offset_right = 1920.0
+offset_bottom = 1080.0

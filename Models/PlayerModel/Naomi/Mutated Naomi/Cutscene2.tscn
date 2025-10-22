@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ejwph3itmdh"]
+
+[ext_resource type="PackedScene" uid="uid://cg50mhrabl3ii" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Naomi Mutated Cutscene.gltf" id="1_7e2nk"]
+
+[node name="blockbench_export" instance=ExtResource("1_7e2nk")]
+
+[node name="Root Base Model F" parent="Node" index="0"]
+transform = Transform3D(-0.743144, 0, 0.669131, 0, 1, 0, -0.669131, 0, -0.743144, 0, 0, 0)
+
+[node name="Upper Body" parent="Node/Root Base Model F/Root Center" index="0"]
+transform = Transform3D(0.973045, 0, -0.230616, 0, 1, 0, 0.230616, 0, 0.973045, 0, -0.0375, 0)
+
+[node name="Head Part" parent="Node/Root Base Model F/Root Center/Upper Body" index="14"]
+transform = Transform3D(0.452005, -0.00192204, -0.892013, -1.16415e-10, 0.999998, -0.00215472, 0.892015, 0.000973944, 0.452004, 0, 0.24375, 0.0125)
+
+[node name="Right Upper Arm2" parent="Node/Root Base Model F/Root Center/Upper Body" index="15"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0.078125, 0.175, -0.009375)
+
+[node name="Right Lower Arm2" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2" index="3"]
+transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 0.999999, 0.00242188, -0.131917, 0.0015625)
+
+[node name="Right Hand" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2" index="3"]
+transform = Transform3D(-0.991445, 0.130402, 0.00569347, 0.130526, 0.990501, 0.0432462, 2.79397e-09, 0.0436194, -0.999048, -0.003125, -0.1125, 0)
+
+[node name="Right Thumb Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Thumb Lower" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0.00068875, -0.0265831, -0.0022675)
+
+[node name="Right Index Lower" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand" index="5"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.172987, 0.98106, -0.0871558, 0.0151344, 0.0858316, 0.996195, -0.0078125, -0.0440288, 0.0112044)
+
+[node name="Right Index Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Index Lower" index="3"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, -0.01875, -0.0015625)
+
+[node name="Right Fingers Lower" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand" index="6"]
+transform = Transform3D(0.984808, -0.173648, -9.31323e-10, 0.172163, 0.976383, -0.130526, 0.0226656, 0.128543, 0.991445, -0.0078125, -0.0424662, -0.0106706)
+
+[node name="Right Fingers Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Fingers Lower" index="3"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0.0015625, -0.0208131, 0.000511875)
+
+[node name="Left Upper Arm2" parent="Node/Root Base Model F/Root Center/Upper Body" index="16"]
+transform = Transform3D(0.975688, 0.207512, -0.0705133, -0.219127, 0.917696, -0.331388, -0.00405723, 0.338783, 0.940856, -0.078125, 0.175, -0.009375)
+
+[node name="Left Lower Arm2" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2" index="8"]
+transform = Transform3D(0.988067, -0.153971, 0.00403793, 0.153723, 0.984163, -0.0882755, 0.00961787, 0.0878428, 0.996088, -0.00242188, -0.131917, 0.0015625)
+
+[node name="Left Hand" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2" index="3"]
+transform = Transform3D(-0.898737, 0.336525, 0.28111, 0.38526, 0.912168, 0.13973, -0.209397, 0.233881, -0.949448, 0.003125, -0.1125, 0)
+
+[node name="Left Thumb Lower" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand" index="4"]
+transform = Transform3D(0.843371, 0.537246, 0.00966203, -0.526322, 0.822334, 0.216224, 0.10822, -0.187442, 0.976296, -0.0015625, -0.0174663, 0.0143294)
+
+[node name="Left Thumb Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Thumb Lower" index="3"]
+transform = Transform3D(0.877678, -0.473622, 0.0732345, 0.476337, 0.845275, -0.242102, 0.0527614, 0.247372, 0.967483, -0.00068875, -0.0453331, -0.0022675)
+
+[node name="Left Index Lower" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand" index="5"]
+transform = Transform3D(0.983311, -0.175206, 0.0490047, 0.170579, 0.981539, 0.0865137, -0.0632577, -0.0767107, 0.995045, 0.0078125, -0.0440288, 0.0112044)
+
+[node name="Left Index Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Index Lower" index="3"]
+transform = Transform3D(0.766045, 0.642788, 0, -0.642788, 0.766045, 0, 0, 0, 1, 0, -0.0375, -0.0015625)
+
+[node name="Left Fingers Lower" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand" index="6"]
+transform = Transform3D(0.991248, 0.128497, -0.0302398, -0.131962, 0.958557, -0.252498, -0.00345885, 0.254279, 0.967124, 0.0078125, -0.0424662, -0.0106706)
+
+[node name="Left Fingers Upper" parent="Node/Root Base Model F/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Fingers Lower" index="3"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -0.0015625, -0.0395631, 0.000511875)
+
+[node name="Right Foot2" parent="Node/Root Base Model F/Root Center/Lower Body/Right Upper Leg2/Right Lower Leg2" index="3"]
+transform = Transform3D(0.996195, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, 0.996195, 0, -0.184375, 0.00625)
+
+[node name="Left Upper Leg2" parent="Node/Root Base Model F/Root Center/Lower Body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, -0.04375, -0.084375, -0.0046875)
+
+[node name="Left Lower Leg2" parent="Node/Root Base Model F/Root Center/Lower Body/Left Upper Leg2" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.184375, -0.0015625)
+
+[node name="Left Foot2" parent="Node/Root Base Model F/Root Center/Lower Body/Left Upper Leg2/Left Lower Leg2" index="3"]
+transform = Transform3D(0.996195, 0, 0.0871558, 0, 1, 0, -0.0871558, 0, 0.996195, 0, -0.184375, 0.00625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "NaomiMutatedTurn"

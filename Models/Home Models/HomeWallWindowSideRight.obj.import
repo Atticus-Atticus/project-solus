@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ci8lap7aobgca"
+path="res://.godot/imported/HomeWallWindowSideRight.obj-eecfd0a4e628a8d22835d985f304e83b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HomeWallWindowSideRight.obj-eecfd0a4e628a8d22835d985f304e83b.mesh"]
+
+source_file="res://Models/Home Models/HomeWallWindowSideRight.obj"
+dest_files=["res://.godot/imported/HomeWallWindowSideRight.obj-eecfd0a4e628a8d22835d985f304e83b.mesh", "res://.godot/imported/HomeWallWindowSideRight.obj-eecfd0a4e628a8d22835d985f304e83b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

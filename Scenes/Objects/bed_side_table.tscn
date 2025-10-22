@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq6ryrpwjeeqa"]
+
+[ext_resource type="Script" path="res://Scripts/bedside_script.gd" id="1_hohdw"]
+[ext_resource type="ArrayMesh" uid="uid://rxjloqp003a7" path="res://Models/Clutter/BedSideTable.obj" id="2_q8g6g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rog5s"]
+
+[node name="BedSideTable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_hohdw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.980202, 0, 0, 0, 2, 0, 0, 0, 1.01862, 0, 0, 0)
+shape = SubResource("BoxShape3D_rog5s")
+
+[node name="BedSideTable" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(2.0404, 0, 0, 0, 1, 0, 0, 0, 1.96344, 0, 0, 0)
+mesh = ExtResource("2_q8g6g")
+skeleton = NodePath("../../..")

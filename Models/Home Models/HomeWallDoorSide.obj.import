@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://l6pv085t6pdj"
+path="res://.godot/imported/HomeWallDoorSide.obj-305c12ec879c040f33de4ee6450b80bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HomeWallDoorSide.obj-305c12ec879c040f33de4ee6450b80bb.mesh"]
+
+source_file="res://Models/Home Models/HomeWallDoorSide.obj"
+dest_files=["res://.godot/imported/HomeWallDoorSide.obj-305c12ec879c040f33de4ee6450b80bb.mesh", "res://.godot/imported/HomeWallDoorSide.obj-305c12ec879c040f33de4ee6450b80bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

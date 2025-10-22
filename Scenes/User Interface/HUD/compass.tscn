@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://be3jmh3x7g48r"]
+
+[ext_resource type="Script" path="res://Scripts/compassScript.gd" id="1_gwljv"]
+[ext_resource type="Texture2D" uid="uid://bf010nc43t2yi" path="res://Scenes/User Interface/HUD/CompassWidget.png" id="2_om8rb"]
+[ext_resource type="Texture2D" uid="uid://cfj2xpf3yqq30" path="res://Scenes/User Interface/HUD/Compass W.png" id="3_56m4e"]
+[ext_resource type="Texture2D" uid="uid://balps7rrr7yi7" path="res://Scenes/User Interface/HUD/Compass A.png" id="4_seek3"]
+[ext_resource type="Texture2D" uid="uid://cd67eiw86myb8" path="res://Scenes/User Interface/HUD/Compass S.png" id="5_gcrd5"]
+[ext_resource type="Texture2D" uid="uid://cpbvxdxqksug2" path="res://Scenes/User Interface/HUD/Compass D.png" id="6_v5kp5"]
+
+[node name="Compass" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -9.0
+offset_right = 8.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwljv")
+
+[node name="CompassWidget" type="Sprite2D" parent="."]
+texture = ExtResource("2_om8rb")
+
+[node name="CompassW" type="Sprite2D" parent="CompassWidget"]
+position = Vector2(0, -180)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_56m4e")
+
+[node name="CompassA" type="Sprite2D" parent="CompassWidget"]
+position = Vector2(-340, 160)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_seek3")
+
+[node name="CompassS" type="Sprite2D" parent="CompassWidget"]
+position = Vector2(0, 160)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_gcrd5")
+
+[node name="CompassD" type="Sprite2D" parent="CompassWidget"]
+position = Vector2(340, 160)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_v5kp5")

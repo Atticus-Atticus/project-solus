@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://daqf6a6wnoqax"]
+
+[ext_resource type="PackedScene" uid="uid://dv64x1mtf4cqn" path="res://Models/CutscenePlayer/ProjectSolusCutscene.gltf" id="1_p52bh"]
+[ext_resource type="Animation" uid="uid://dk7yjjqbxie4d" path="res://Models/CutscenePlayer/sleep.res" id="2_5ckc0"]
+[ext_resource type="ArrayMesh" uid="uid://c6endhqsfrs4y" path="res://Models/ShipMid.obj" id="3_4fte0"]
+[ext_resource type="ArrayMesh" uid="uid://df4vwhqnfj2qb" path="res://Models/ShipWallBase.obj" id="4_rdgdn"]
+[ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="5_41c1x"]
+[ext_resource type="PackedScene" uid="uid://dr013f3737p1a" path="res://Scenes/Objects/DoorObject.tscn" id="6_wuy81"]
+[ext_resource type="ArrayMesh" uid="uid://cd7dbu82gvthi" path="res://Models/ShipWallPillar.obj" id="7_c7tmh"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gh2j"]
+_data = {
+"sleep": ExtResource("2_5ckc0")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_p52bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823759, 0, 0.407282)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="blockbench_export"]
+libraries = {
+"Cutscene": SubResource("AnimationLibrary_0gh2j")
+}
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="ShipMid" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("3_4fte0")
+skeleton = NodePath("../../..")
+
+[node name="ShipMid4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+mesh = ExtResource("3_4fte0")
+skeleton = NodePath("../../..")
+
+[node name="ShipMid2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("3_4fte0")
+skeleton = NodePath("../../..")
+
+[node name="ShipMid3" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("3_4fte0")
+skeleton = NodePath("../../..")
+
+[node name="ShipWallBase" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("4_rdgdn")
+skeleton = NodePath("../..")
+
+[node name="ShipWallBase2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+mesh = ExtResource("4_rdgdn")
+skeleton = NodePath("../..")
+
+[node name="ShipWallBase4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+mesh = ExtResource("4_rdgdn")
+skeleton = NodePath("../..")
+
+[node name="ShipWallBase5" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = ExtResource("4_rdgdn")
+skeleton = NodePath("../..")
+
+[node name="ShipWallBase7" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+mesh = ExtResource("4_rdgdn")
+skeleton = NodePath("../..")
+
+[node name="ShipWallCorner1" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = ExtResource("5_41c1x")
+skeleton = NodePath("../../..")
+
+[node name="ShipWallCorner3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = ExtResource("5_41c1x")
+skeleton = NodePath("../../..")
+
+[node name="ShipWallCorner4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+mesh = ExtResource("5_41c1x")
+skeleton = NodePath("../../..")
+
+[node name="ShipWallCorner2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+mesh = ExtResource("5_41c1x")
+skeleton = NodePath("../../..")
+
+[node name="DoorNode" parent="StaticBody3D" instance=ExtResource("6_wuy81")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, 2)
+
+[node name="ShipWallPillar2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+mesh = ExtResource("7_c7tmh")
+skeleton = NodePath("../../..")
+
+[node name="ShipWallPillar3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mesh = ExtResource("7_c7tmh")
+skeleton = NodePath("../../..")

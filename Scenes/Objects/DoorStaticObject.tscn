@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://coqafoewo83k4"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3bljoob4ioom" path="res://Models/ShipDoor.obj" id="2_twtgw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8file"]
+
+[node name="DoorNode" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3.01992e-08, 0, -2.22642, 0, 3.9097, 0, 0.4, 0, 1.6809e-07, 1.09922, 2.2784, 0.983315)
+shape = SubResource("BoxShape3D_8file")
+
+[node name="ShipDoorLeft2" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2"]
+transform = Transform3D(-2.18557e-07, 0, -2.80218, 0, 0.518702, 0, 1, 0, -2.44975e-08, 0.00997353, -0.496397, 0.00103843)
+mesh = ExtResource("2_twtgw")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(4.76995e-09, 0, 2.22642, 0, 3.9097, 0, -0.4, 0, 2.65498e-08, -1.08, 2.29, 0.990188)
+shape = SubResource("BoxShape3D_8file")
+
+[node name="ShipDoorLeft2" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D3"]
+transform = Transform3D(-2.18557e-07, 0, -2.80218, 0, 0.518702, 0, 1, 0, -2.44975e-08, 0.0156555, -0.496397, 0.00103843)
+mesh = ExtResource("2_twtgw")
+skeleton = NodePath("../../..")

@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs2yc8pa41ft5"]
+
+[ext_resource type="Script" path="res://Scripts/DatadriveLore1Script.gd" id="1_j2crt"]
+[ext_resource type="ArrayMesh" uid="uid://bf03ydhy472dg" path="res://Models/Clutter/Datadrive.obj" id="1_p1wdn"]
+[ext_resource type="AudioStream" uid="uid://dp7tykv4i0t6o" path="res://Audio/PickUpBox.wav" id="3_mptt6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uq3e0"]
+
+[sub_resource type="Animation" id="Animation_dh185"]
+resource_name = "FlashingLight"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ne2fn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_diwla"]
+_data = {
+"FlashingLight": SubResource("Animation_dh185"),
+"RESET": SubResource("Animation_ne2fn")
+}
+
+[node name="Datadrive" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_j2crt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_uq3e0")
+
+[node name="Datadrive" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.5, 0)
+mesh = ExtResource("1_p1wdn")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_diwla")
+}
+autoplay = "FlashingLight"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0624435, 0.400058, -0.320544)
+light_color = Color(0, 0.421794, 0.847099, 1)
+light_energy = 0.0
+omni_range = 0.464632
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.642694, 0)
+stream = ExtResource("3_mptt6")

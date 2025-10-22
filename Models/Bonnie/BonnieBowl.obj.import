@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bojg17ykwni1k"
+path="res://.godot/imported/BonnieBowl.obj-b741d39bb050af2140ee3fd367abaf4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BonnieBowl.obj-b741d39bb050af2140ee3fd367abaf4b.mesh"]
+
+source_file="res://Models/Bonnie/BonnieBowl.obj"
+dest_files=["res://.godot/imported/BonnieBowl.obj-b741d39bb050af2140ee3fd367abaf4b.mesh", "res://.godot/imported/BonnieBowl.obj-b741d39bb050af2140ee3fd367abaf4b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

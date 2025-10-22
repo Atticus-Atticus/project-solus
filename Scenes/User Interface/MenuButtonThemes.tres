@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://c0hd413ct61mn"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_mtgfi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4o0f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scm4j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg3c1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgmb6"]
+bg_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irset"]
+bg_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydd4n"]
+bg_color = Color(0, 0.109804, 0.211765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.4, 1, 0.941176, 1)
+
+[resource]
+Button/colors/font_color = Color(0.4, 1, 0.941176, 1)
+Button/colors/font_hover_color = Color(0.4, 1, 0.941176, 1)
+Button/colors/font_hover_pressed_color = Color(0.4, 1, 0.941176, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 0)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0)
+Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_mtgfi")
+Button/styles/hover = SubResource("StyleBoxFlat_t4o0f")
+Button/styles/normal = SubResource("StyleBoxFlat_scm4j")
+Button/styles/pressed = SubResource("StyleBoxFlat_cg3c1")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_wgmb6")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_irset")
+Panel/styles/panel = SubResource("StyleBoxFlat_ydd4n")

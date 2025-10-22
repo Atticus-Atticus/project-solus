@@ -1,0 +1,125 @@
+[gd_scene load_steps=24 format=3 uid="uid://32a206g6l5m4"]
+
+[ext_resource type="Script" path="res://Scripts/Player_Controls.gd" id="1_2ts3d"]
+[ext_resource type="PackedScene" uid="uid://efnm7xbfpi1l" path="res://Models/PlayerModel/Calihan/CalihanModel.gltf" id="2_8gtmr"]
+[ext_resource type="Script" path="res://Scripts/RayCastScript.gd" id="2_ilxdd"]
+[ext_resource type="Animation" uid="uid://bu6b2v2shcbn4" path="res://Models/PlayerModel/Calihan/CalihanIdle01.res" id="4_rvyft"]
+[ext_resource type="Animation" uid="uid://e3xjst3j311l" path="res://Models/PlayerModel/Calihan/CalihanIdleLoop.res" id="5_dm4ym"]
+[ext_resource type="Animation" uid="uid://c4mmk3yv5qmum" path="res://Models/PlayerModel/Calihan/CalihanPickUP.res" id="6_4mjr0"]
+[ext_resource type="AudioStream" uid="uid://06sucnqvqq34" path="res://Audio/MetalStep1.wav" id="6_5yqee"]
+[ext_resource type="AudioStream" uid="uid://d34ykrt5wfet3" path="res://Audio/MetalStep2.wav" id="7_of7b1"]
+[ext_resource type="Animation" uid="uid://epd61smy7y4f" path="res://Models/PlayerModel/Calihan/CalihanWalk.res" id="7_v33vt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrw7a"]
+size = Vector3(1, 2.00671, 1)
+
+[sub_resource type="Animation" id="Animation_x17n4"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nubgd"]
+_data = {
+"RESET": SubResource("Animation_x17n4")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u3opx"]
+_data = {
+"CalihanIdle01": ExtResource("4_rvyft"),
+"CalihanIdleLoop": ExtResource("5_dm4ym"),
+"CalihanPickUP": ExtResource("6_4mjr0"),
+"CalihanWalk": ExtResource("7_v33vt")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2kcw7"]
+animation = &"CalihanAnimations/CalihanIdle01"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_x6h86"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0vp8r"]
+animation = &"CalihanAnimations/CalihanIdleLoop"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5dunw"]
+animation = &"CalihanAnimations/CalihanIdleLoop"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cnscl"]
+animation = &"CalihanAnimations/CalihanWalk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_gql5f"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_5dunw")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_cnscl")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_de0c3"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7ipnl"]
+animation = &"CalihanAnimations/CalihanPickUP"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y6tal"]
+animation = &"CalihanAnimations/CalihanWalk"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pv6mb"]
+graph_offset = Vector2(510.647, -311.491)
+nodes/Idle1/node = SubResource("AnimationNodeAnimation_2kcw7")
+nodes/Idle1/position = Vector2(920, -120)
+nodes/IdleBlend/node = SubResource("AnimationNodeBlend2_x6h86")
+nodes/IdleBlend/position = Vector2(1380, -220)
+nodes/IdleLoop/node = SubResource("AnimationNodeAnimation_0vp8r")
+nodes/IdleLoop/position = Vector2(900, -300)
+nodes/MovementBlend/node = SubResource("AnimationNodeBlendSpace1D_gql5f")
+nodes/MovementBlend/position = Vector2(1580, -180)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_de0c3")
+nodes/OneShot/position = Vector2(1820, -100)
+nodes/PickUp/node = SubResource("AnimationNodeAnimation_7ipnl")
+nodes/PickUp/position = Vector2(980, 100)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_y6tal")
+nodes/Walk/position = Vector2(1760, -360)
+nodes/output/position = Vector2(2180, -60)
+node_connections = [&"IdleBlend", 0, &"IdleLoop", &"IdleBlend", 1, &"Idle1", &"OneShot", 0, &"MovementBlend", &"OneShot", 1, &"PickUp", &"output", 0, &"OneShot"]
+
+[node name="Player" type="Node3D" groups=["Player"]]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_2ts3d")
+
+[node name="Body" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.716336, 0, 0, 0, 1.10955, 0, 0, 0, 0.826326, 0, 0, 0)
+shape = SubResource("BoxShape3D_vrw7a")
+
+[node name="blockbench_export2" parent="CharacterBody3D/Body" instance=ExtResource("2_8gtmr")]
+transform = Transform3D(3.5, 0, 0, 0, 2.26, 0, 0, 0, 3.034, 0, -1.0074, 0)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody3D/Body/blockbench_export2"]
+libraries = {
+"": SubResource("AnimationLibrary_nubgd"),
+"CalihanAnimations": SubResource("AnimationLibrary_u3opx")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="CharacterBody3D/Body/blockbench_export2"]
+tree_root = SubResource("AnimationNodeBlendTree_pv6mb")
+advance_expression_base_node = NodePath("../../..")
+anim_player = NodePath("../AnimationPlayer2")
+parameters/IdleBlend/blend_amount = 0.0
+parameters/MovementBlend/blend_position = -0.000643075
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(0.997818, 0, 0, 0, -0.00344798, -1.35258, 0, 0.771232, -0.104025, 0, -0.562282, -0.493397)
+script = ExtResource("2_ilxdd")
+
+[node name="InteractableLight" type="OmniLight3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(0.697996, 0, 0, 0, 0.450634, 0, 0, 0, 1.17669, 0, 1.50038, 4.3835e-09)
+visible = false
+light_color = Color(1, 0, 0, 1)
+
+[node name="Step1" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, -0.162686, -0.922841, -0.984908)
+stream = ExtResource("6_5yqee")
+volume_db = -10.0
+
+[node name="Step2" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, 0.180242, -0.922841, -0.984908)
+stream = ExtResource("7_of7b1")
+volume_db = -10.0

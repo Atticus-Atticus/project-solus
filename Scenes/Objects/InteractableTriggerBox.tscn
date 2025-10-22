@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgy23g24xqws4"]
+
+[ext_resource type="Script" path="res://Scripts/interactable_trigger_box_toggle.gd" id="1_p1lpx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lsd8k"]
+
+[node name="InteractTrigger" type="Area3D"]
+script = ExtResource("1_p1lpx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lsd8k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

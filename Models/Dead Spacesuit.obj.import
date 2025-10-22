@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkk6rtjpeqsi4"
+path="res://.godot/imported/Dead Spacesuit.obj-4890bd16b20df5396c9aa2e07925eae3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dead Spacesuit.obj-4890bd16b20df5396c9aa2e07925eae3.mesh"]
+
+source_file="res://Models/Dead Spacesuit.obj"
+dest_files=["res://.godot/imported/Dead Spacesuit.obj-4890bd16b20df5396c9aa2e07925eae3.mesh", "res://.godot/imported/Dead Spacesuit.obj-4890bd16b20df5396c9aa2e07925eae3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

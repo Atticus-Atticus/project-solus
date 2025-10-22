@@ -1,0 +1,8 @@
+# Made in Blockbench 4.12.4
+newmtl m_34700f7c-3da5-b500-98a0-1b4c02ada1e6
+map_Kd ShipAirlock01.png
+newmtl m_3d17a490-e9af-3f72-dfba-18fa23d5113f
+map_Kd ShipAirlockWall01.png
+newmtl m_d2817f9a-42b7-43eb-8ecc-2ec768160199
+map_Kd AirlockPipe01.png
+newmtl none

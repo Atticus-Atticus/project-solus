@@ -1,0 +1,203 @@
+[gd_scene load_steps=14 format=3 uid="uid://drcjx2a442yt7"]
+
+[ext_resource type="Script" path="res://Scripts/credits_menu_script.gd" id="1_2emg8"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_kqwra"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_6ton8"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_56pl2"]
+[ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="5_hu4cb"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_05kd7"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="6_ha5nn"]
+[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_deir5"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_xkmao"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="9_ibhi0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
+line_spacing = 20.0
+font = ExtResource("2_6ton8")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
+line_spacing = 0.0
+font = ExtResource("2_6ton8")
+font_size = 34
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Environment" id="Environment_vnkvj"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2emg8")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("1_kqwra")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 425.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> 
+>
+>
+>                                                                           v0.2
+>  (demo) 
+>
+> Project Solus developed by...
+> Atticus
+>
+> Developed using...
+> Godot
+>
+> Assets made in...
+> Blockbench
+>
+> Audio sourced from...
+> Pixabay and Soundsnap
+>
+> Press \"ESC\" to return to the main menu.
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="TitleLabel" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 83.0
+offset_right = 1608.0
+offset_bottom = -835.0
+grow_vertical = 2
+text = "    ____                  _              __     _____         __            
+   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
+ / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
+                   /___/                                                    "
+label_settings = SubResource("LabelSettings_2r0ac")
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 1256.0
+offset_right = 402.0
+offset_bottom = 1287.0
+theme = ExtResource("3_56pl2")
+text = "Return to menu"
+alignment = 0
+script = ExtResource("5_hu4cb")
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("6_ha5nn")
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_05kd7")
+autoplay = true
+
+[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_deir5")
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vnkvj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 277.0
+offset_right = 1510.0
+offset_bottom = 622.0
+theme = ExtResource("3_56pl2")
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 1046.0
+offset_bottom = -22.0
+grow_vertical = 2
+text = "
+Asset Packs used...
+
+
+LowPolyAssets on itch.io
+Low Poly Household items:
+https://lowpolyassets.itch.io/low-poly-household-item-pack
+
+Synty
+POLYGON - Sci-Fi City Pack
+https://syntystore.com/en-gb/products/polygon-sci-fi-city"
+label_settings = ExtResource("9_ibhi0")
+clip_text = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 628.0
+offset_right = 1700.0
+offset_bottom = 973.0
+theme = ExtResource("3_56pl2")
+
+[node name="Label" type="Label" parent="Panel2"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 721.0
+offset_bottom = -22.0
+grow_vertical = 2
+text = "
+Special Thanks...
+
+
+Friends, family and my college tutors who kept me going, 
+either by listening to me ramble about different parts of the 
+game or helped with idea generation, bug fixing, and 
+play testing. 
+Thank you so much.
+
+<3"
+label_settings = ExtResource("9_ibhi0")
+clip_text = true
+
+[node name="CRT Shader" parent="." instance=ExtResource("8_xkmao")]
+layout_mode = 1
+mouse_filter = 2
+
+[connection signal="mouse_entered" from="Exit" to="Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Exit" to="Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

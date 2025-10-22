@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtmdnv5tu1wka"
+path="res://.godot/imported/HomeWallUNI.obj-07fbeb6c2ba05f6d93bedcd0417450a6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HomeWallUNI.obj-07fbeb6c2ba05f6d93bedcd0417450a6.mesh"]
+
+source_file="res://Models/Home Models/HomeWallUNI.obj"
+dest_files=["res://.godot/imported/HomeWallUNI.obj-07fbeb6c2ba05f6d93bedcd0417450a6.mesh", "res://.godot/imported/HomeWallUNI.obj-07fbeb6c2ba05f6d93bedcd0417450a6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

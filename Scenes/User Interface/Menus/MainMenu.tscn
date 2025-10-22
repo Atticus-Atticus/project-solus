@@ -1,0 +1,236 @@
+[gd_scene load_steps=18 format=3 uid="uid://cwaoogya1u84"]
+
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_4apuk"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_37eoc"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_rvp4i"]
+[ext_resource type="Script" path="res://Scripts/reset_StoryStage_script.gd" id="1_y4g87"]
+[ext_resource type="Script" path="res://Scripts/PlayButtonScript.gd" id="3_pbbw1"]
+[ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="3_pq36e"]
+[ext_resource type="Script" path="res://Scripts/ExitButtonScript.gd" id="5_0nmoh"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="6_23flb"]
+[ext_resource type="Script" path="res://Scripts/credits_button.gd" id="6_n0anp"]
+[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="7_gvxfj"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="8_uqu75"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="10_81kxu"]
+[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="11_rd3md"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_esjad"]
+line_spacing = 20.0
+font = ExtResource("1_37eoc")
+font_size = 35
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
+line_spacing = 20.0
+font = ExtResource("1_37eoc")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
+line_spacing = 0.0
+font = ExtResource("1_37eoc")
+font_size = 34
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Environment" id="Environment_mp1ky"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y4g87")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("1_rvp4i")
+
+[node name="Volume" parent="." instance=ExtResource("3_pq36e")]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 846.0
+offset_right = 120.0
+offset_bottom = 846.0
+
+[node name="StartUpText" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+> 
+> Checking Memory... 64GB OK + 24GB Extended OK
+> 
+> Detecting Primary Master... SD-512 4TB
+> Detecting Primary Slave... None
+> Detecting Secondary Master... CD-ROM
+> Detecting Secondary Slave... None
+>
+> Loading BLACKBOX READER...
+>
+> **ERROR: BLACKBOX FILES CORRUPT OR DAMAGED**
+> Attempting automatic recovery...
+>
+> Restoring COMMAND.COM... OK
+> Restoring CONFIG.SYS... OK
+> 
+> Integrity check... PASSED
+>
+> Booting PROJECT SOLUS...
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_esjad")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 425.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+>
+>
+>
+>
+>                                                                           v0.2
+> 	 (demo)
+>
+> Please select a program to run...
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="TitleLabel" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 171.0
+offset_right = 1608.0
+offset_bottom = -747.0
+grow_vertical = 2
+text = "    ____                  _              __     _____         __            
+   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
+ / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
+                   /___/                                                    "
+label_settings = SubResource("LabelSettings_2r0ac")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0558542
+anchor_top = -0.037963
+anchor_right = 0.191167
+anchor_bottom = 1.21296
+offset_left = -0.240005
+offset_top = 515.0
+offset_right = 139.96
+offset_bottom = -422.0
+grow_vertical = 2
+theme = ExtResource("1_4apuk")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Run Program"
+alignment = 0
+script = ExtResource("3_pbbw1")
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+alignment = 0
+script = ExtResource("6_n0anp")
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit Program"
+alignment = 0
+script = ExtResource("5_0nmoh")
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("8_uqu75")
+
+[node name="CRT Shader" parent="." instance=ExtResource("6_23flb")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1946.0
+offset_bottom = 1096.0
+mouse_filter = 2
+
+[node name="CRT Shader2" parent="." instance=ExtResource("7_gvxfj")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_81kxu")
+volume_db = -2.0
+autoplay = true
+
+[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_rd3md")
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mp1ky")
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_pressed"]

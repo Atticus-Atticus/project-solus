@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk43a5yojxfh4"
+path="res://.godot/imported/ShipWallPillarOrange.obj-346827b5490569cbf808f6a678441c69.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ShipWallPillarOrange.obj-346827b5490569cbf808f6a678441c69.mesh"]
+
+source_file="res://Models/ShipWallPillarOrange.obj"
+dest_files=["res://.godot/imported/ShipWallPillarOrange.obj-346827b5490569cbf808f6a678441c69.mesh", "res://.godot/imported/ShipWallPillarOrange.obj-346827b5490569cbf808f6a678441c69.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

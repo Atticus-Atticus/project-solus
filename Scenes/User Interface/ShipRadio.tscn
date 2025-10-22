@@ -1,0 +1,156 @@
+[gd_scene load_steps=20 format=3 uid="uid://b41lhca377h1u"]
+
+[ext_resource type="Script" path="res://Scripts/ship_radio_script.gd" id="1_fyaab"]
+[ext_resource type="Script" path="res://Scripts/ShipRadioCameraScript.gd" id="1_trtwo"]
+[ext_resource type="Texture2D" uid="uid://cdlj7sf16324x" path="res://Models/SkyBox/panorama_image.png" id="2_qb4w1"]
+[ext_resource type="Script" path="res://Scripts/RadioButtonTestScript.gd" id="3_62yd5"]
+[ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="5_1dlmi"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="5_h0ubv"]
+[ext_resource type="LabelSettings" uid="uid://clxf3x4jpjvx8" path="res://Scenes/User Interface/ShipRadioButton.tres" id="7_cau1o"]
+[ext_resource type="Shader" path="res://Shaders/crt_shader_radio.gdshader" id="7_ijqvb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
+resource_local_to_scene = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l064c"]
+panorama = ExtResource("2_qb4w1")
+
+[sub_resource type="Sky" id="Sky_1rcs1"]
+sky_material = SubResource("PanoramaSkyMaterial_l064c")
+
+[sub_resource type="Environment" id="Environment_fwuq5"]
+background_mode = 2
+sky = SubResource("Sky_1rcs1")
+sky_rotation = Vector3(0, 2.31256, 0.10472)
+ambient_light_color = Color(0, 0, 0, 0.945098)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+reflected_light_source = 2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p6go3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1iiu"]
+albedo_texture = ExtResource("5_1dlmi")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tidt5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_57sr1"]
+viewport_path = NodePath("MeshInstance3D2/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ma8rn"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_57sr1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_sv2o5"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ma8rn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k3hv6"]
+shader = ExtResource("7_ijqvb")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 1.0
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/roll = false
+shader_parameter/roll_speed = 0.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Radio" type="Node3D"]
+script = ExtResource("1_fyaab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(19, 0, 0, 0, 10, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.55944)
+script = ExtResource("1_trtwo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.896897, -0.42355, -0.127205, -0.433016, 0.899517, 0.0580159, 0.0898504, 0.107116, -0.990178, -7, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fwuq5")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.843588, 0.53699, 0, -0.53699, 0.843588, 0.155885, 2.14552, 3.30418)
+light_energy = 4.0
+spot_range = 86.3607
+spot_angle = 87.1875
+
+[node name="Button + freq" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.35587, 2.8022, -0.7843)
+script = ExtResource("3_62yd5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Button + freq"]
+shape = SubResource("CylinderShape3D_p6go3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Button + freq/CollisionShape3D"]
+material_override = SubResource("StandardMaterial3D_h1iiu")
+mesh = SubResource("CylinderMesh_tidt5")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29502, 2.86191, 0.367018)
+light_color = Color(1, 0, 0, 1)
+omni_range = 1.17783
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 2.808, 0, 0, 0, 1.873, -0.0160968, 2.25182, 0.0961626)
+mesh = SubResource("QuadMesh_sv2o5")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D2"]
+size = Vector2i(1024, 512)
+
+[node name="Control" type="Control" parent="MeshInstance3D2/SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1024.0
+offset_bottom = 512.0
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="MeshInstance3D2/SubViewport/Control"]
+position = Vector2(514, 401)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("5_h0ubv")
+
+[node name="Label" type="Label" parent="MeshInstance3D2/SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -148.0
+offset_right = -135.0
+offset_bottom = 153.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "000"
+label_settings = ExtResource("7_cau1o")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MeshInstance3D2/SubViewport/Control"]
+material = SubResource("ShaderMaterial_k3hv6")
+layout_mode = 0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 1022.0
+offset_bottom = 514.0
+mouse_filter = 2

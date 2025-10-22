@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmjb1whpk1c0q"]
+
+[ext_resource type="Script" path="res://Scripts/VolumeControlScript.gd" id="1_u3ceb"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_478fi"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="3_jbwac"]
+
+[node name="Volume" type="Control"]
+layout_mode = 3
+anchor_right = 0.206
+anchor_bottom = 0.108
+offset_right = 0.47998
+offset_bottom = 0.360001
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3ceb")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 396.0
+offset_bottom = 117.0
+theme = ExtResource("2_478fi")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 391.0
+offset_bottom = 60.0
+text = "Volume Control"
+label_settings = ExtResource("3_jbwac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 75.0
+offset_right = 388.0
+offset_bottom = 108.0
+max_value = 1.5
+step = 0.001
+
+[connection signal="value_changed" from="Panel/HSlider" to="." method="_on_h_slider_value_changed"]

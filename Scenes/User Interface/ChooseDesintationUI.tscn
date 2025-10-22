@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqd6lfhpo5ywn"]
+
+[ext_resource type="Script" path="res://Scripts/go_to_ship_button.gd" id="1_akrdt"]
+[ext_resource type="Script" path="res://Scripts/go_to_station_button.gd" id="2_j7l1m"]
+
+[node name="ChooseDesination" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -356.0
+offset_right = 3.0
+offset_bottom = -356.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 420.0
+offset_top = 800.0
+offset_right = 1452.0
+offset_bottom = 823.0
+text = "Please Choose Destination"
+horizontal_alignment = 1
+
+[node name="Go to Ship" type="Button" parent="."]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 855.0
+offset_right = 833.0
+offset_bottom = 982.0
+text = "Abandoned Ship"
+script = ExtResource("1_akrdt")
+
+[node name="Go to Station" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1058.0
+offset_top = 858.0
+offset_right = 1418.0
+offset_bottom = 985.0
+text = "Brimpie Orbital"
+script = ExtResource("2_j7l1m")
+
+[connection signal="pressed" from="Go to Ship" to="Go to Ship" method="_on_pressed"]
+[connection signal="pressed" from="Go to Station" to="Go to Station" method="_on_pressed"]

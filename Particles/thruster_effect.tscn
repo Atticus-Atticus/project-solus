@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://6lu31r05ib36"]
+
+[ext_resource type="Shader" path="res://Shaders/ShipEngines.gdshader" id="1_3u3en"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ccuag"]
+top_radius = 0.2
+height = 5.0
+
+[sub_resource type="Gradient" id="Gradient_of5y4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kib5g"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q72qf"]
+seamless = true
+color_ramp = SubResource("Gradient_of5y4")
+noise = SubResource("FastNoiseLite_kib5g")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fyku0"]
+render_priority = 0
+shader = ExtResource("1_3u3en")
+shader_parameter/model_height = 5.0
+shader_parameter/dissolve_start = 0.0
+shader_parameter/dissolve_length = 1.0
+shader_parameter/gradient_bias = 1.0
+shader_parameter/noise_speed = 1.5
+shader_parameter/noise_strength = 0.2
+shader_parameter/stretch_factor = 0.6
+shader_parameter/noise_direction = Vector2(0, 1)
+shader_parameter/_color = Color(3.27289e-06, 0.652597, 0.964934, 1)
+shader_parameter/power_factor = 1.0
+shader_parameter/fresnel_factor = 1.0
+shader_parameter/fresnel_amplification = 1.0
+shader_parameter/fresnel_power = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_q72qf")
+
+[node name="Thruster Effect" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ccuag")
+surface_material_override/0 = SubResource("ShaderMaterial_fyku0")

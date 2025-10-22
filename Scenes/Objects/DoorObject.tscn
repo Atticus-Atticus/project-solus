@@ -1,0 +1,167 @@
+[gd_scene load_steps=11 format=3 uid="uid://dr013f3737p1a"]
+
+[ext_resource type="Script" path="res://Scripts/DoorScript.gd" id="1_kmfkc"]
+[ext_resource type="ArrayMesh" uid="uid://d3bljoob4ioom" path="res://Models/ShipDoor.obj" id="2_as5s7"]
+[ext_resource type="AudioStream" uid="uid://b1xlopb76soba" path="res://Audio/DoorClose.wav" id="4_4nj6l"]
+[ext_resource type="AudioStream" uid="uid://b2ulid1c43i2f" path="res://Audio/DoorOpen.wav" id="5_f3qhw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4jiwu"]
+data = PackedVector3Array(-0.4563, 1.925, 0.1875, -0.4563, -0.0125, 0.1875, -0.4563, 1.925, -0.1875, -0.4563, 1.925, -0.1875, -0.4563, -0.0125, 0.1875, -0.4563, -0.0125, -0.1875, 0.4813, 1.925, 0.1875, 0.4813, 1.925, -0.1875, 0.4813, -0.0125, 0.1875, 0.4813, -0.0125, 0.1875, 0.4813, 1.925, -0.1875, 0.4813, -0.0125, -0.1875, -0.4563, 1.925, 0.1875, -0.4563, 1.925, -0.1875, 0.4813, 1.925, 0.1875, 0.4813, 1.925, 0.1875, -0.4563, 1.925, -0.1875, 0.4813, 1.925, -0.1875, -0.4563, -0.0125, 0.1875, 0.4813, -0.0125, 0.1875, -0.4563, -0.0125, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, -0.0125, 0.1875, 0.4813, -0.0125, -0.1875, -0.4563, 1.925, 0.1875, 0.4813, 1.925, 0.1875, -0.4563, -0.0125, 0.1875, -0.4563, -0.0125, 0.1875, 0.4813, 1.925, 0.1875, 0.4813, -0.0125, 0.1875, -0.4563, 1.925, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, 1.925, -0.1875, 0.4813, 1.925, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, -0.0125, -0.1875)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8rhd7"]
+data = PackedVector3Array(-0.4563, 1.925, 0.1875, -0.4563, -0.0125, 0.1875, -0.4563, 1.925, -0.1875, -0.4563, 1.925, -0.1875, -0.4563, -0.0125, 0.1875, -0.4563, -0.0125, -0.1875, 0.4813, 1.925, 0.1875, 0.4813, 1.925, -0.1875, 0.4813, -0.0125, 0.1875, 0.4813, -0.0125, 0.1875, 0.4813, 1.925, -0.1875, 0.4813, -0.0125, -0.1875, -0.4563, 1.925, 0.1875, -0.4563, 1.925, -0.1875, 0.4813, 1.925, 0.1875, 0.4813, 1.925, 0.1875, -0.4563, 1.925, -0.1875, 0.4813, 1.925, -0.1875, -0.4563, -0.0125, 0.1875, 0.4813, -0.0125, 0.1875, -0.4563, -0.0125, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, -0.0125, 0.1875, 0.4813, -0.0125, -0.1875, -0.4563, 1.925, 0.1875, 0.4813, 1.925, 0.1875, -0.4563, -0.0125, 0.1875, -0.4563, -0.0125, 0.1875, 0.4813, 1.925, 0.1875, 0.4813, -0.0125, 0.1875, -0.4563, 1.925, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, 1.925, -0.1875, 0.4813, 1.925, -0.1875, -0.4563, -0.0125, -0.1875, 0.4813, -0.0125, -0.1875)
+
+[sub_resource type="Animation" id="Animation_har7x"]
+resource_name = "Close"
+length = 4.11
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.55, 0.2, 0.5), Vector3(0.55, 0.2, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.55, 0.2, 0.5), Vector3(-0.55, 0.2, 0.5)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaticBody3D/DoorClose")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_y6vlm"]
+resource_name = "Open"
+length = 4.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 4.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.55, 0.2, 0.5), Vector3(-0.55, 0.2, 0.5), Vector3(-1.55, 0.2, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 4.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.55, 0.2, 0.5), Vector3(0.55, 0.2, 0.5), Vector3(1.55, 0.2, 0.5)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaticBody3D/DoorOpen")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_o4u7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/CollisionShape3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.55, 0.2, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.55, 0.2, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ig4l"]
+_data = {
+"Close": SubResource("Animation_har7x"),
+"Open": SubResource("Animation_y6vlm"),
+"RESET": SubResource("Animation_o4u7w")
+}
+
+[node name="DoorNode" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_kmfkc")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.155, 0, 4.80825e-08, 0, 1, 0, -1.00973e-07, 0, -0.55, 0.55, 0.2, 0.5)
+shape = SubResource("ConcavePolygonShape3D_4jiwu")
+
+[node name="ShipDoorLeft2" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = ExtResource("2_as5s7")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1.155, 0, -2.97673e-08, 0, 1, 0, 6.25113e-08, 0, 0.55, -0.55, 0.2, 0.5)
+shape = SubResource("ConcavePolygonShape3D_8rhd7")
+
+[node name="ShipDoorLeft3" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_as5s7")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3ig4l")
+}
+
+[node name="DoorOpen" type="AudioStreamPlayer3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95095, 0.523297)
+stream = ExtResource("5_f3qhw")
+
+[node name="DoorClose" type="AudioStreamPlayer3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95095, 0.523297)
+stream = ExtResource("4_4nj6l")

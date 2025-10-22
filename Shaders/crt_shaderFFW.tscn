@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk7uxuuv2lmqn"]
+
+[ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="1_tolo6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdcnx"]
+shader = ExtResource("1_tolo6")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.063
+shader_parameter/scanlines_width = 0.5
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 12.99
+shader_parameter/roll_size = 15.882
+shader_parameter/roll_variation = 4.303
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01
+shader_parameter/noise_opacity = 0.163
+shader_parameter/noise_speed = 26.275
+shader_parameter/static_noise_intensity = 0.134
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.365
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="CRT Shader FFW" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qdcnx")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2

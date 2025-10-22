@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhwhixh1mx8os"
+path="res://.godot/imported/Ending Explosion.wav-12a57a09d68f2c3ce6b85152c2093abc.sample"
+
+[deps]
+
+source_file="res://Audio/Ending Explosion.wav"
+dest_files=["res://.godot/imported/Ending Explosion.wav-12a57a09d68f2c3ce6b85152c2093abc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

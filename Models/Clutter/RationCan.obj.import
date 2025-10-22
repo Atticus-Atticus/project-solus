@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ortoy8nqyjps"
+path="res://.godot/imported/RationCan.obj-484c6c0cf74b50649f6eee76f80f12a3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RationCan.obj-484c6c0cf74b50649f6eee76f80f12a3.mesh"]
+
+source_file="res://Models/Clutter/RationCan.obj"
+dest_files=["res://.godot/imported/RationCan.obj-484c6c0cf74b50649f6eee76f80f12a3.mesh", "res://.godot/imported/RationCan.obj-484c6c0cf74b50649f6eee76f80f12a3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

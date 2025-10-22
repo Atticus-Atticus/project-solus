@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds457b1bslawv"]
+
+[ext_resource type="Script" path="res://Scripts/ModelShipInteractableScript.gd" id="1_t8lda"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxe4x"]
+
+[node name="BookShelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_t8lda")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_uxe4x")

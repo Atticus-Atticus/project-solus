@@ -1,0 +1,1238 @@
+[gd_scene load_steps=31 format=3 uid="uid://gau34na8j31t"]
+
+[ext_resource type="Script" path="res://Scripts/data_base_menu_script.gd" id="1_wy1b0"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_jbfp7"]
+[ext_resource type="Shader" path="res://Shaders/PauseMenuBackground.gdshader" id="3_u8oml"]
+[ext_resource type="Script" path="res://Scripts/keysfound_script.gd" id="5_oplpb"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_qh6do"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="6_vjryu"]
+[ext_resource type="Script" path="res://Scripts/calihanrecord_script.gd" id="7_vkhjs"]
+[ext_resource type="Script" path="res://Scripts/naomirecord_script.gd" id="8_ag15j"]
+[ext_resource type="Script" path="res://Scripts/DatabaseButtonScript.gd" id="8_s6gd0"]
+[ext_resource type="Script" path="res://Scripts/close_terminal_script.gd" id="10_l4klt"]
+[ext_resource type="Script" path="res://Scenes/User Interface/Menus/encryption_file_script.gd" id="10_pb4xb"]
+[ext_resource type="Script" path="res://Scripts/database_x_button.gd" id="10_qpogf"]
+[ext_resource type="Script" path="res://Scripts/Lore1ButtonScript.gd" id="11_wu2jc"]
+[ext_resource type="Script" path="res://Scripts/lore_2_script.gd" id="12_a7ju5"]
+[ext_resource type="Script" path="res://Scripts/lore_3_script.gd" id="13_667g6"]
+[ext_resource type="Script" path="res://Scripts/neuro_blackbox_button_script.gd" id="13_tlba5"]
+[ext_resource type="Script" path="res://Scripts/lore_4_script.gd" id="14_dx833"]
+[ext_resource type="Script" path="res://Scripts/lore_5_script.gd" id="15_fgpow"]
+[ext_resource type="Script" path="res://Scripts/lore_6_script.gd" id="16_75qe2"]
+[ext_resource type="Script" path="res://Scripts/lore_7_script.gd" id="17_sdvkq"]
+[ext_resource type="Script" path="res://Scripts/lore_8_script.gd" id="18_r7p8c"]
+[ext_resource type="Script" path="res://Scripts/lore1_x_button.gd" id="19_k3cli"]
+[ext_resource type="Script" path="res://Scripts/simulation_9.gd" id="19_rn5ta"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="20_q0khx"]
+[ext_resource type="Script" path="res://Scripts/life_beyond_scale_10.gd" id="20_v1oxy"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="21_pcyv2"]
+[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="22_rlyqr"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="23_d1qpe"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="24_tl14l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8c0vo"]
+shader = ExtResource("3_u8oml")
+shader_parameter/amount = 0.0
+
+[node name="Database Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wy1b0")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("2_jbfp7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_8c0vo")
+layout_mode = 0
+offset_left = -68.0
+offset_top = -38.0
+offset_right = 2005.0
+offset_bottom = 1114.0
+color = Color(0, 0.0705882, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+>
+> 
+>                                               
+> 	 
+> Loading Database... done.
+> Displaying files.
+> File: [For_Calihan.txt] locked behind class B encryption.
+> Additional Server Terminals may yield the keys to a decryption scheme.
+> 
+> 
+>
+>
+>
+>  /2 keys found. 
+>
+> 
+>
+>
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = ExtResource("5_qh6do")
+
+[node name="keysfound" type="Label" parent="."]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 718.0
+offset_right = 147.0
+offset_bottom = 746.0
+text = "0"
+label_settings = ExtResource("5_qh6do")
+script = ExtResource("5_oplpb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056375
+anchor_top = -0.126852
+anchor_right = 0.129187
+anchor_bottom = 1.17222
+offset_left = -0.240005
+offset_top = 515.0
+offset_right = 139.96
+offset_bottom = -422.0
+grow_vertical = 2
+theme = ExtResource("6_vjryu")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="Calihan" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Solarian Coalition Personnel Record - Calihan Lonan"
+alignment = 0
+script = ExtResource("7_vkhjs")
+
+[node name="Naomi" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Solarian Coalition Personnel Record - Naomi Lonan-Roseberry"
+alignment = 0
+script = ExtResource("8_ag15j")
+
+[node name="Database" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Database"
+alignment = 0
+script = ExtResource("8_s6gd0")
+
+[node name="EncryptionFile" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "For_Calihan.txt"
+alignment = 0
+script = ExtResource("10_pb4xb")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056375
+anchor_top = 0.269444
+anchor_right = 0.143771
+anchor_bottom = 1.17222
+offset_left = -0.240005
+offset_top = 515.0
+offset_right = 139.96
+offset_bottom = -422.0
+grow_vertical = 2
+theme = ExtResource("6_vjryu")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="CloseTerminal" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Click here to shut down terminal"
+alignment = 0
+script = ExtResource("10_l4klt")
+
+[node name="DatabasePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 625.0
+offset_top = 101.0
+offset_right = 1335.0
+offset_bottom = 972.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="DatabasePanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("10_qpogf")
+
+[node name="MarginContainer" type="MarginContainer" parent="DatabasePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00738029
+anchor_top = 0.560276
+anchor_right = 0.991578
+anchor_bottom = 1.57702
+offset_left = -0.240005
+offset_top = -225.0
+offset_right = -0.0200195
+offset_bottom = -705.58
+grow_vertical = 2
+theme = ExtResource("6_vjryu")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DatabasePanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="NeuroBlackbox 0" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Neurological Blackboxes"
+alignment = 0
+script = ExtResource("13_tlba5")
+
+[node name="FotN 1" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Festival of the Nova"
+alignment = 0
+script = ExtResource("11_wu2jc")
+
+[node name="FCC 2" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Farseeing Courier Company"
+alignment = 0
+script = ExtResource("12_a7ju5")
+
+[node name="Cali1 3" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Calihan Journal Entry 1"
+alignment = 0
+script = ExtResource("13_667g6")
+
+[node name="Cali2 4" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Calihan Journal Entry 2
+"
+alignment = 0
+script = ExtResource("14_dx833")
+
+[node name="ReadMe 5" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ListenClosely.wav"
+alignment = 0
+script = ExtResource("15_fgpow")
+
+[node name="Cali3 6" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Calihan Journal Entry 3
+"
+alignment = 0
+script = ExtResource("16_75qe2")
+
+[node name="AbndShip 7" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Abandoned ship's log
+"
+alignment = 0
+script = ExtResource("17_sdvkq")
+
+[node name="Brimpie Orb 8" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Brimpie Orbital Log
+"
+alignment = 0
+script = ExtResource("18_r7p8c")
+
+[node name="Simulation 9" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "The Numbers behind the stars"
+alignment = 0
+script = ExtResource("19_rn5ta")
+
+[node name="LifeBeyondScale 10" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Life beyond scale
+"
+alignment = 0
+script = ExtResource("20_v1oxy")
+
+[node name="CalihanPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 805.0
+offset_top = 78.0
+offset_right = 1863.0
+offset_bottom = 978.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="CalihanPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="CalihanPanel"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - CALIHAN LONAN
+[confidential personnel file]
+
+FULL NAME:  Calihan Lonan
+STATUS:  Registered Citizen
+SERVICE ID:  2374-092-CL
+OCCUPATION:  Interstellar Courier for Farseeing Courier Company
+WORLD OF BIRTH:  Brimpie - 3
+REGISTERED HOMEWORLD:  Brimpie - 3
+REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
+
+ASSOCIATIONS:
+  Registered domestic partnership with Naomi Lonan-Roseberry
+  Registered Parents: Elias Lonan and Jeneva Lonan(deceased)
+
+OCCUPATION:
+  Currently serving as a Farseeing Interstellar Courier.
+  Former Wheat and Algae Farmer before gaining admission into the 
+  Solarian Academy of Pilots.
+
+NOTES:
+  Psychological profile indicates emotional detachment, high stress tolerance, 
+  and low interpersonal engagement.
+  
+  Underwent disciplinary review following altercation with superior officer.
+  See incident report: SY-379 for more info.
+
+Remarks:
+  \"Lonan works best alone. Doesn't ask for help, doesn't expect it either.\"
+   - Supervisor D. Renhall, Farseeing Courier Management Division 4
+
+   \"Shows signs of unresolved trauma. Possible bullying from peers.\"
+   - Dr. Elia Morrix, Psych Eval"
+label_settings = ExtResource("20_q0khx")
+clip_text = true
+
+[node name="NaomiPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 805.0
+offset_top = 78.0
+offset_right = 1863.0
+offset_bottom = 978.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="NaomiPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="NaomiPanel"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - NAOMI LONAN-ROSEBERRY
+[confidential personnel file]
+
+FULL NAME:  Naomi Lonan-Roseberry
+STATUS:  Registered Citizen
+SERVICE ID:  4449-773-NR
+OCCUPATION:  N/A
+WORLD OF BIRTH:  Brimpie - 4, Buoy Station 16
+REGISTERED HOMEWORLD:  Brimpie - 3
+REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
+
+ASSOCIATIONS:
+  Registered domestic partnership with Calihan Lonan.
+  No immediate family registered.
+
+OCCUPATION:
+  Former Deep Space Radio Operator and Telemetry Officer.
+  Occupation lost due to advancements in artificial intelligence.
+
+NOTES:
+  Previous psychological evaluations note elevated empathy levels, signs of codependency, 
+  and chronic anxiety.
+  
+  Applied multiple times for off-world transfer; all applications denied due to 
+  bureaucratic backlog.
+
+  Rumors of involvement in unauthorized signal tracing and Coalition surveillance evasion.
+
+Remarks:
+  “Brilliant mind. Too soft for Coalition work.”
+   - Director R. Zannis, Brimpie - 4 Communications"
+label_settings = ExtResource("20_q0khx")
+clip_text = true
+
+[node name="ForCalihanPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 736.0
+offset_top = 197.0
+offset_right = 1794.0
+offset_bottom = 883.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="ForCalihanPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="ForCalihanPanel"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "
+Calihan...
+
+I don't blame you if you don't want to hear from me, but there's something I must say. 
+I wasn't trying to start a fight with you before you left. 
+I just... wanted to talk. Not fight. We've never had an argument until now.
+
+Remember when we used to sit up all night talking? I miss those nights... 
+I miss you.
+
+It feels like you've been slowly drifting away and every time I try to reach you, 
+it feels like I'm grabbing at smoke. I'm probably just overacting and that you're 
+probably going through something you don't want to talk about, but knowing you're 
+suffering in slience makes me suffer too. More so because you refuse to talk about it.
+
+Sometimes I wonder if I have done something wrong or broken our love in some way. 
+Did I ask for too much? Was I too close? Did I hurt you? 
+It's getting difficult to prove those negative thoughts wrong, but the thought that 
+somewhere deep down you're still in there. The man who used to smile at me and laugh at 
+my stupid jokes. The man who made me feel so special when he called me his star.
+
+If you ever read this just know that I'll always be here waiting for you.
+
+I love you."
+label_settings = ExtResource("20_q0khx")
+clip_text = true
+
+[node name="LorePanel0" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 117.0
+offset_right = 1774.0
+offset_bottom = 935.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel0"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel0"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 893.0
+offset_bottom = -16.0
+grow_vertical = 2
+text = "FEATURE | The Mind Recorded
+Neurological Blackboxes and the end of forgetting
+By Dr. Varrin Essel
+Published in The Solarian Observer
+
+It began as an innovation in accident forensics.
+A neural implant at the base of the skull, capable of tethering to nearby devices and drawing their feeds into a central chip.
+These devices include but are no limited to: cameras, terminals, and even drones.
+The result: a seamless record of the host's life from every available angle.
+
+At first, its promise was undeniable. Collisions, industrial disasters, military engagements, all could be reconstructed with precision. No longer was the truth hidden in the chaos of events. 
+Now, the Neurological Blackbox is compulsory. By mandate of the Coalition, every Citizen above the age of 21 Sol Years must undergo the procedure to have one implanted.
+Officials insist the benefits are overwhelming. Perfect evidence, flawless accountability, and clarity in disputes.
+\"Your life is your testimony,\" declared one Government spokesperson.
+But many find no comfort in this certainty.
+Where once a mistake could be forgotten, a word could fade, or a private moment would remain private, now all is preserved.
+
+One unsettling truth: we may not simply use technology anymore.
+We have become its content.
+"
+label_settings = ExtResource("20_q0khx")
+autowrap_mode = 3
+
+[node name="LorePanel1" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 157.0
+offset_right = 1774.0
+offset_bottom = 939.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel1"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 2418.0
+offset_bottom = -20.0
+grow_vertical = 2
+text = "Festival of the Nova
+
+
+The system of VX-66458 is reaching its final breathtaking moment.
+And you're invited to be part of history!
+
+Join us for 7 cycles of celebration across the neighbouring systems.
+
+From roaring parties on orbiting stations to open-sky festivals unders the
+moons, all of Solarian Space will come alive with music, lights, and the 
+spirit of those who dare toast the stars themselves.
+
+Secure your passage now!
+Shuttles, accomodations, and ship parking are limited 
+and are filling up fast.
+
+This isn't just a party. It's the Festival of the Nova.
+
+When stars die, legends are born.
+Will you be there to see it?
+
+
+Note from Festival organizers:
+We are aware of the recent statement from the GDD about the dangers of a 
+supernova.
+Please also take into account that the chances of new elements or radiation 
+coming from a supernova are a million to one."
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 157.0
+offset_right = 1774.0
+offset_bottom = 939.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel2"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 897.0
+offset_bottom = -23.0
+grow_vertical = 2
+text = "The Farseeing Courier Company
+Light Speed! Right Speed!
+
+
+Established in 2209, The Farseeing Courier Company is the oldest and most
+prestigous interstellar delievery service within The Great Solarian Systems.
+
+Pioneers of post-FTL logistics, Farseeing Couriers was the first to harness 
+humanity's crowning technological achievement, Faster-Than-Light travel, 
+for commerical and civilian services. Today, we proudly deliver over 
+12 million packages each cycle, ensuring that no planet is too distant, 
+and no parcel is too small to warrent our unmatched precision and dedication.
+
+With an impeccable on-time delivery rating and a reputation for zero
+tolerance towards inefficiency or deviation, Farseeing Couriers stands not 
+just as a courier service, but as an institution. Our reputation for 
+flawless preformance and strict internal standards is not merely upheld,
+it is enforced.
+
+Whether you're shipping from the icy moons of Outer Orion or the orbital
+cities of the Empyrean Twins, you can trust us to move your cargo at 
+light speed, and the right speed."
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel3" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 863.0
+offset_top = 127.0
+offset_right = 1770.0
+offset_bottom = 945.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel3"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 36.0
+offset_right = 888.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "Calihan Journal Entry 1
+
+
+Another cycle, another credit.
+
+Company sent me on this long ass haul to the middle of nowhere. 
+Nice and easy job. 
+Just a lot of sitting around while in transit.
+Can get boring after a while but hey, atleast I'm getting paid to sit on my
+ass and watch the stars go by.
+
+Wonder what Naomi's up to. 
+I should buy her a gift on the way home. A nice charm bracelet or something.
+I know she's had her eye on one she saw recently.
+Would make a nice surprise for when I get home.
+
+Damn spacer sickness is getting to me again.
+seems I'll probably spend most of this journey asleep.
+"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel4" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 157.0
+offset_right = 1774.0
+offset_bottom = 939.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel4"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 57.0
+offset_right = 888.0
+offset_bottom = -20.0
+grow_vertical = 2
+text = "Calihan Journal Entry 2
+
+
+Woke up earlier to a purple light outside the ship.
+Is that festival everyone was going on about?
+That's too bright for my liking.
+
+Comms and Navigation are offline. 
+Must have drifted off course and out of range of the ICN.
+
+Not my first time in uncharted deep space. 
+Getting back should be simple if I am not too far out.
+
+Just need to basically rotate the ship 180 degrees and hope for the best.
+
+
+Update:
+
+How far out am I?
+Been flying for like a couple hours now.
+
+Think I can see a refueling station on the port side.
+I'll head there and get my bearings.
+"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel5" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 651.0
+offset_top = 64.0
+offset_right = 1811.0
+offset_bottom = 1008.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel5"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel5"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 1135.0
+offset_bottom = 6.0
+grow_vertical = 2
+text = "ListenClosely.wav
+
+*The following is a transcript of the audio recording*
+
+This is Dr George Burklee of the Galactic Astronomy Administration. The supernova event taking 
+place within the VX-66458 system has resulted in a nebula that is slowly spreading across 
+Solarian Space. 
+This nebula is emitting a previously unknown type of radiation. Initial analysis indicates that 
+exposure to this radiation causes severe neurological disturbances. Starting with radiation 
+sickness then leading to memory loss, paranoia, insanity, increased aggression and finishing with 
+complete loss of cognitive functions and humanity.
+
+Any individuals showing these symptoms must be isolated and transported to the nearest GAA safe
+zone for treatement.
+
+This new type of radiation cannot seem to penetrate the metal alloys used in ships, stations and 
+EVA suits. This means anyone who isn’t inside a ship or station, or wearing an EVA is at risk of 
+exposure, even on inhabited worlds. Scans on a nearby planet inidicate that the radiation can
+affect the very air we breathe.
+
+The nebula’s advance is faster than predicted. We believe… it shimmers… it’s beautiful… like…
+No! No. Must stay focused.
+
+The nebula is affecting the Interstellar Communications Network. We’ve lost contact with all 
+outposts inside VX-66458 and the surrounding systems. Only shortwave radio seems to be unaffected.
+If you have managed to receive this message, I urge you to stay inside your vessel for the sake of 
+humanity… Do not listen to… the whispers… it’s… calling… I can hear it. It knows my name…
+NO! Must… Stay… Focused…
+
+But… Their faces… my colleagues… they were my friends…
+
+AHHHHHH-…
+"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel6" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 157.0
+offset_right = 1774.0
+offset_bottom = 939.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel6"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel6"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 25.0
+offset_right = 1021.0
+offset_bottom = -13.0
+grow_vertical = 2
+text = "Calihan Journal Entry 3
+
+
+Think I just found the fueling station of horrors.
+Or either an empty station with one crazy squatter.
+
+That woman in there seemed... I don't know.
+She looked dead but was still moving. Like something out of those old movies 
+Naomi likes.
+
+Can't get ahold of system authorities cos comms are still off.
+And now my ship picked up a virus. Great, a dirty docking port.
+
+The virus is a audio file? Might as well give it a listen.
+
+If what this file is saying is true... I...
+Need to get home.
+
+*Log updated 3 cycles later*
+
+Brimpie's gone and...
+Naomi. She...
+My light. My star.
+
+I saw our apartment and it was.... I can still see it when I blink.
+
+Nothing's left for me now...
+Guess I'll just drift above Brimpie and slowly wither away with it.
+
+"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel7" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 649.0
+offset_top = 59.0
+offset_right = 1869.0
+offset_bottom = 1012.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel7"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel7"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 48.0
+offset_right = 2598.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "Abandoned ship's log
+
+Log 1: 
+      Finally saved enough to buy a ship and explore. Best retirement purchase ever.
+
+Log 2: 
+      Got a map of places to see and things to do. I wish my Chloe was here to see this.
+
+*The logs are filled with pictures of an old man trying to take selfies with different 
+ types of celestial bodies*
+
+Log 79: 
+      Saw a comet today. Too fast. Couldn't get a picture.
+
+Log 80: 
+      decided to take a spacewalk when a wave of purple light hit me. Have not felt well since. 
+      Some rest will help.
+
+Log 81: 
+      Still feeling sick. Cannot seem to get the comms link to work. Also why is space purple now?
+
+Log 82: 
+      Sickness getting worse. I keep thinking I am seeing things.
+
+Log 83: 
+      So hungry... Radio came to life... Could've sworn I heard her voice.... In the static... 
+      but she's been dead for 3 years.
+
+Log 84: 
+      I must go... Can't take it anymore... 
+      Chloe... Forgive me...
+"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel8" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 117.0
+offset_right = 1774.0
+offset_bottom = 935.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel8"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel8"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 898.0
+offset_bottom = -16.0
+grow_vertical = 2
+text = "Brimpie Orbital Log
+
+
+Everything has gone to hell.
+
+People are fighting over what's left of the rations. Station admins have
+given up on trying to keep the peace and just joined the rioting.
+Don't blame them.
+
+----------------------------------------------------------------------------
+
+A ship from Brimpie 2 arrived and had infected people on board. 
+We had to quarantine half of the station to contain it.
+
+----------------------------------------------------------------------------
+
+Patrick's a goner.
+He ran into the quarantine zone claiming he could hear the voice of his 
+boyfriend in there. 
+
+----------------------------------------------------------------------------
+
+Me and the others are thinking of stealing a ship and getting out of here 
+before things get worse.
+
+Probably do what all of other rich uptight bastards did and head off into
+deep space looking for a new world."
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel9" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 117.0
+offset_right = 1774.0
+offset_bottom = 935.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel9"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel9"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 898.0
+offset_bottom = -16.0
+grow_vertical = 2
+text = "OPINION | The Numbers Behind the Stars
+Are we living in a simulation?
+By Dr. Ellian Vex
+Published in The Solarian Observer
+
+It begins as many things do, with a number.
+Not one that changes markets or guides spacecrafts, but one that always
+seems to appear.
+Citizens across different systems, cultures, and professions have quietly
+reported recurring numbers. For example: 1123, 3344, 512, 907.
+These numbers are seen everywhere from starship diagnostic codes, 
+personal ID tages, planetary soil analyses, and even in
+digitized genetic helix sequences.
+
+A growing theory among philosophers suggests that such reptitions may not be
+random at all. But instead the echoes of computational processes.
+Their argument? That existance and the universe itself may be a simulation
+of immense complexity, and these numbers are the residue of virtual 
+scaffolding, bleeding into observable space.
+
+We may never be able to prove such a theory true or not, but new questions
+open up:
+
+If our universe is code,
+who wrote it?
+
+and, for what purpose?"
+label_settings = ExtResource("20_q0khx")
+
+[node name="LorePanel10" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 867.0
+offset_top = 117.0
+offset_right = 1774.0
+offset_bottom = 935.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="LorePanel10"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="LorePanel10"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 898.0
+offset_bottom = -16.0
+grow_vertical = 2
+text = "FEATURE | Life Beyond Scale
+The possibility of life beyond comprehension
+By Dr. Halena Myrr
+Published in The Solarian Observer
+
+We spend much of our time searching for life we can understand.
+Biological signatures, heat patterns, or transmissions.
+But what if the greatest threat to our continued existence does not seek us
+out, does not communicate, or may not even know we exist?
+
+Recent gravitational anomalies near the outskirts of the VX-00907 system and 
+the VX-66458 system have led some in the scientific community to revisit an 
+old but unsettled hypothesis. The universe may be home to entities so 
+vast, so fundamentally different in structure and perception, that our 
+existence registers to them no more than bacteria does to us.
+
+Such macrocosmic lifeforms, if they exist, would not be bound to the scale 
+of flesh and matter, but prehaps to gravity wells, stellar currents, or even
+dark matter flows. They would not invade, nor attack.
+They would simply move and in doing so, perhaps rupture the fabric of space,
+extinguish stars, or collapse civilizations without intent, without malice,
+and without ever knowing they were there.
+
+The unsettling truth: we may not be actors on the galactic stage, 
+but fungal growth on its scaffolding.
+
+And if we are crushed beneath such a being, it wouldn't be war.
+It would be indifference."
+label_settings = ExtResource("20_q0khx")
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("21_pcyv2")
+
+[node name="CRT Shader2" parent="." instance=ExtResource("22_rlyqr")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="CRT Shader" parent="." instance=ExtResource("23_d1qpe")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 396.0
+offset_bottom = 141.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_tl14l")
+volume_db = -2.0
+autoplay = true
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_pressed"]
+[connection signal="pressed" from="DatabasePanel/X Button" to="DatabasePanel/X Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_pressed"]
+[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_mouse_exited"]
+[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_pressed"]
+[connection signal="pressed" from="CalihanPanel/X Button" to="CalihanPanel/X Button" method="_on_pressed"]
+[connection signal="pressed" from="NaomiPanel/X Button" to="NaomiPanel/X Button" method="_on_pressed"]
+[connection signal="pressed" from="ForCalihanPanel/X Button" to="ForCalihanPanel/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel0/X Button" to="LorePanel0/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel1/X Button" to="LorePanel1/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel2/X Button" to="LorePanel2/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel3/X Button" to="LorePanel3/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel4/X Button" to="LorePanel4/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel5/X Button" to="LorePanel5/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel6/X Button" to="LorePanel6/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel7/X Button" to="LorePanel7/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel8/X Button" to="LorePanel8/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel9/X Button" to="LorePanel9/X Button" method="_on_pressed"]
+[connection signal="pressed" from="LorePanel10/X Button" to="LorePanel10/X Button" method="_on_pressed"]

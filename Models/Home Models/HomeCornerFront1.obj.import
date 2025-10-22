@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://buxw7oqqhe7wx"
+path="res://.godot/imported/HomeCornerFront1.obj-9bbee4daa826ccff7bb817fffa78d256.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HomeCornerFront1.obj-9bbee4daa826ccff7bb817fffa78d256.mesh"]
+
+source_file="res://Models/Home Models/HomeCornerFront1.obj"
+dest_files=["res://.godot/imported/HomeCornerFront1.obj-9bbee4daa826ccff7bb817fffa78d256.mesh", "res://.godot/imported/HomeCornerFront1.obj-9bbee4daa826ccff7bb817fffa78d256.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,82 @@
+[gd_scene load_steps=15 format=3 uid="uid://wkbuik3xngwr"]
+
+[ext_resource type="Script" path="res://Scripts/fake_player_script.gd" id="1_4w4ga"]
+[ext_resource type="PackedScene" uid="uid://dl1vaaowusyjy" path="res://Models/PlayerModel/Naomi/Normal Naomi/Naomi.gltf" id="2_bgm1v"]
+[ext_resource type="Animation" uid="uid://dsyajnkide172" path="res://Models/PlayerModel/Naomi/Normal Naomi/NaomiIdle.res" id="3_gy13v"]
+[ext_resource type="Animation" uid="uid://8fofl5e1uxg1" path="res://Models/PlayerModel/Naomi/Normal Naomi/NaomiWalk.res" id="4_k67a3"]
+[ext_resource type="Animation" uid="uid://b8ak7n1v06oir" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose1.res" id="5_gekrv"]
+[ext_resource type="Animation" uid="uid://l8oswunav2pu" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose2.res" id="6_e1k07"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrw7a"]
+size = Vector3(1, 2.00671, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nkkps"]
+_data = {
+"NaomiIdle": ExtResource("3_gy13v"),
+"NaomiWalk": ExtResource("4_k67a3"),
+"Pose1": ExtResource("5_gekrv"),
+"Pose2": ExtResource("6_e1k07")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_35h7m"]
+animation = &"CaliMations/Cali_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sn7yg"]
+animation = &"CaliMations/Cali_Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6y137"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qr1np"]
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7xk0d"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n0228"]
+states/CaliMations_Cali_Idle/node = SubResource("AnimationNodeAnimation_35h7m")
+states/CaliMations_Cali_Idle/position = Vector2(377, 100)
+states/CaliMations_Cali_Walk/node = SubResource("AnimationNodeAnimation_sn7yg")
+states/CaliMations_Cali_Walk/position = Vector2(369, -15)
+states/Start/position = Vector2(203, 100)
+transitions = ["Start", "CaliMations_Cali_Idle", SubResource("AnimationNodeStateMachineTransition_6y137"), "CaliMations_Cali_Idle", "CaliMations_Cali_Walk", SubResource("AnimationNodeStateMachineTransition_qr1np"), "CaliMations_Cali_Walk", "CaliMations_Cali_Idle", SubResource("AnimationNodeStateMachineTransition_7xk0d")]
+graph_offset = Vector2(-91, -67)
+
+[node name="Player" type="Node3D"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+script = ExtResource("1_4w4ga")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Body" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.716336, 0, 0, 0, 1.10955, 0, 0, 0, 0.826326, 0, 0.173708, 0)
+shape = SubResource("BoxShape3D_vrw7a")
+
+[node name="blockbench_export2" parent="StaticBody3D/Body" instance=ExtResource("2_bgm1v")]
+transform = Transform3D(3.5, 0, 0, 0, 2.26, 0, 0, 0, 3.033, -0.0102951, -1.02338, 0.0180146)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="StaticBody3D/Body/blockbench_export2"]
+libraries = {
+"Naomi": SubResource("AnimationLibrary_nkkps")
+}
+autoplay = "Naomi/NaomiWalk"
+
+[node name="InteractableLight" type="OmniLight3D" parent="StaticBody3D/Body"]
+transform = Transform3D(0.697996, 0, 0, 0, 0.450634, 0, 0, 0, 1.17669, 0, 1.50038, 4.3835e-09)
+visible = false
+light_color = Color(1, 0, 0, 1)
+
+[node name="Step1" type="AudioStreamPlayer3D" parent="StaticBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, -0.162686, -0.922841, -0.984908)
+volume_db = -10.0
+
+[node name="Step2" type="AudioStreamPlayer3D" parent="StaticBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, 0.180242, -0.922841, -0.984908)
+volume_db = -10.0
+
+[node name="AnimationTree" type="AnimationTree" parent="StaticBody3D"]
+tree_root = SubResource("AnimationNodeStateMachine_n0228")
+parameters/conditions/idle = false
+parameters/conditions/walk = true

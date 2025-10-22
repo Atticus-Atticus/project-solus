@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs3mpfpadj28f"]
+
+[ext_resource type="PackedScene" uid="uid://dgmoy1bkw2csc" path="res://Models/Bonnie/Bonnie.gltf" id="1_03un5"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bonnie" parent="." instance=ExtResource("1_03un5")]

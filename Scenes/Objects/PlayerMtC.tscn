@@ -1,0 +1,91 @@
+[gd_scene load_steps=17 format=3 uid="uid://8seu316pgori"]
+
+[ext_resource type="Script" path="res://Scripts/ClickToMove.gd" id="1_is25c"]
+[ext_resource type="PackedScene" uid="uid://do0uqp2q1lmik" path="res://Models/PlayerModel/CalIhan02old.gltf" id="2_hqq1d"]
+[ext_resource type="Animation" uid="uid://dr6f5ij5ww3wy" path="res://Models/PlayerModel/Cali_Idle.res" id="3_x365q"]
+[ext_resource type="Animation" uid="uid://c1xlw0of2nuaw" path="res://Models/PlayerModel/Cali_Walk.res" id="4_d20ip"]
+[ext_resource type="Script" path="res://Scripts/RayCastScript.gd" id="5_prqdi"]
+[ext_resource type="AudioStream" uid="uid://06sucnqvqq34" path="res://Audio/MetalStep1.wav" id="6_aauyf"]
+[ext_resource type="AudioStream" uid="uid://d34ykrt5wfet3" path="res://Audio/MetalStep2.wav" id="7_x0up5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_08m8q"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ljwl"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ewqu3"]
+_data = {
+"Cali_Idle": ExtResource("3_x365q"),
+"Cali_Walk": ExtResource("4_d20ip")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_35h7m"]
+animation = &"CaliMations/Cali_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sn7yg"]
+animation = &"CaliMations/Cali_Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6y137"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qr1np"]
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7xk0d"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n0228"]
+states/CaliMations_Cali_Idle/node = SubResource("AnimationNodeAnimation_35h7m")
+states/CaliMations_Cali_Idle/position = Vector2(377, 100)
+states/CaliMations_Cali_Walk/node = SubResource("AnimationNodeAnimation_sn7yg")
+states/CaliMations_Cali_Walk/position = Vector2(369, -15)
+states/Start/position = Vector2(203, 100)
+transitions = ["Start", "CaliMations_Cali_Idle", SubResource("AnimationNodeStateMachineTransition_6y137"), "CaliMations_Cali_Idle", "CaliMations_Cali_Walk", SubResource("AnimationNodeStateMachineTransition_qr1np"), "CaliMations_Cali_Walk", "CaliMations_Cali_Idle", SubResource("AnimationNodeStateMachineTransition_7xk0d")]
+graph_offset = Vector2(-91, -67)
+
+[node name="Player" type="Node3D"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_is25c")
+
+[node name="Body" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.716336, 0, 0, 0, 1.10955, 0, 0, 0, 0.424922, 0, -0.384792, 0)
+shape = SubResource("CapsuleShape3D_08m8q")
+
+[node name="blockbench_export" parent="CharacterBody3D/Body" instance=ExtResource("2_hqq1d")]
+transform = Transform3D(2.79198, 0, 0, 0, 1.80254, 0, 0, 0, 4.70674, 0, -1.02444, 0.042)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody3D/Body/blockbench_export"]
+libraries = {
+"": SubResource("AnimationLibrary_3ljwl"),
+"CaliMations": SubResource("AnimationLibrary_ewqu3")
+}
+autoplay = "CaliMations/Cali_Idle"
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(1, 0, 0, 0, -0.00754902, -1.35137, 0, 1.68854, -0.103932, 0, -0.562282, -0.493397)
+script = ExtResource("5_prqdi")
+
+[node name="InteractableLight" type="OmniLight3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(0.697996, 0, 0, 0, 0.450634, 0, 0, 0, 1.17669, 0, 1.50038, 4.3835e-09)
+visible = false
+light_color = Color(1, 0, 0, 1)
+
+[node name="Step1" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, -0.162686, -0.922841, -0.984908)
+stream = ExtResource("6_aauyf")
+volume_db = -10.0
+
+[node name="Step2" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, 0.180242, -0.922841, -0.984908)
+stream = ExtResource("7_x0up5")
+volume_db = -10.0
+
+[node name="AnimationTree" type="AnimationTree" parent="CharacterBody3D"]
+root_node = NodePath("../Body/blockbench_export")
+tree_root = SubResource("AnimationNodeStateMachine_n0228")
+anim_player = NodePath("../Body/blockbench_export/AnimationPlayer2")
+parameters/conditions/idle = false
+parameters/conditions/walk = true

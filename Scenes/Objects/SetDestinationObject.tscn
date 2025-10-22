@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1jd8f8jweohe"]
+
+[ext_resource type="Script" path="res://Scripts/SetDestinationScript.gd" id="1_ff4vd"]
+[ext_resource type="Texture2D" uid="uid://e7ka3g6pxu41" path="res://Temp Textures/TempTextureGreen.png" id="1_tjoao"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tiefw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q40nc"]
+albedo_texture = ExtResource("1_tjoao")
+
+[sub_resource type="BoxMesh" id="BoxMesh_i5wiu"]
+
+[node name="ShipDestination" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_ff4vd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_tiefw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+material_override = SubResource("StandardMaterial3D_q40nc")
+mesh = SubResource("BoxMesh_i5wiu")

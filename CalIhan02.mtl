@@ -1,0 +1,22 @@
+# Made in Blockbench 4.12.4
+newmtl m_632a8c6d-00c9-9d53-17cd-7264c8fc957f
+map_Kd CalihanHead.png
+newmtl m_1a03ba29-ce45-d06e-cab3-7abc073a828f
+map_Kd CalihanHair.png
+newmtl m_d9de41dd-3108-816d-0bbb-46ff8142c85b
+map_Kd CalianNeck.png
+newmtl m_9c8e14a5-4ede-2e2c-9b1b-aa58230f0289
+map_Kd CalihArmRight.png
+newmtl m_e7dea593-5faa-d34b-deea-856e76328c40
+map_Kd CalihArmLeft.png
+newmtl m_9e1de86c-b869-2f79-7362-2b396f17c4d9
+map_Kd CalihanIDBagde.png
+newmtl m_ff63ee98-2fb3-5263-2c49-cbab1a37f2a9
+map_Kd CalihanChest.png
+newmtl m_10c248c2-d407-f8f0-cd2e-5371bdbfc0c8
+map_Kd CalihanLegLeft.png
+newmtl m_969cb3ab-8669-8322-e394-2a0903952415
+map_Kd CalihanLegRight.png
+newmtl m_169cb486-0f0c-c09f-6df3-1c9266068424
+map_Kd CalihanPelvis.png
+newmtl none

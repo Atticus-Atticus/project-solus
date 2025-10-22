@@ -1,0 +1,223 @@
+[gd_scene load_steps=17 format=3 uid="uid://diuahu6achtkk"]
+
+[ext_resource type="Script" path="res://Scripts/end_screen_script.gd" id="1_556m3"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_ymhye"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_nc3wt"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_356r0"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_eof3g"]
+[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_y1rxs"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_3e411"]
+[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="9_pbu27"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_esjad"]
+line_spacing = 20.0
+font = ExtResource("2_nc3wt")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
+line_spacing = 20.0
+font = ExtResource("2_nc3wt")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
+line_spacing = 0.0
+font = ExtResource("2_nc3wt")
+font_size = 34
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Animation" id="Animation_nbo6e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_16u6q"]
+resource_name = "StartUp"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gjvee"]
+resource_name = "new_animation"
+length = 5.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
+_data = {
+"RESET": SubResource("Animation_nbo6e"),
+"StartUp": SubResource("Animation_16u6q"),
+"Title": SubResource("Animation_gjvee")
+}
+
+[sub_resource type="Environment" id="Environment_7hb0h"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_556m3")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("1_ymhye")
+
+[node name="StartUpText" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+> 
+> ERROR CODE: 5 - CRITICAL RECORDING FAILURE 
+> Running MANUAL_CRASH... 
+> 
+> A FATAL ERROR HAS OCCURRED 
+> Device OS has been shut down to prevent further neural damage.
+> 
+> Preforming integrity check... FAIL
+> 
+> ERROR: NEUROBLACKBOX FILES CORRUPT OR DAMAGED
+> Attempting automatic recovery...
+> Restoring COMMAND.COM... OK
+> Restoring CONFIG.SYS... OK
+> Restoring NeuroBlackbox... FAIL
+> 
+> Integrity check... FAILED
+> Press ENTER to attempt cold restart...
+> If problems continue, please contact a registered Generic Computers Ltd technician.
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_esjad")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 425.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> 
+>
+>
+>
+>
+>                                                                           v0.1
+> 	 (demo)
+>
+> Please select a program to run...
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="TitleLabel" type="Label" parent="."]
+visible = false
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 171.0
+offset_right = 1608.0
+offset_bottom = -747.0
+grow_vertical = 2
+text = "    ____                  _              __     _____         __            
+   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
+ / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
+                   /___/                                                    "
+label_settings = SubResource("LabelSettings_2r0ac")
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("4_356r0")
+
+[node name="CRT Shader" parent="." instance=ExtResource("8_3e411")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 396.0
+offset_bottom = 141.0
+mouse_filter = 2
+
+[node name="CRT Shader2" parent="." instance=ExtResource("9_pbu27")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8as7b")
+}
+autoplay = "StartUp"
+speed_scale = 0.8
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_eof3g")
+autoplay = true
+
+[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_y1rxs")
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7hb0h")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://bgudoc35jqo6r"]
+
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_a5jq7"]
+[ext_resource type="Script" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_ghp36"]
+[ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
+[ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="22_ihjxp"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lnlhy")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("1_a5jq7")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
+>
+> 
+>
+>
+>
+>
+> Pause Input recognised...
+> Program is now paused.
+> Press the ESC key to resume Program.
+> To Exit Program click \"Return to Menu\"
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = ExtResource("5_kj5pt")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056375
+anchor_top = -0.0833333
+anchor_right = 0.187
+anchor_bottom = 1.25833
+offset_left = -0.240005
+offset_top = 515.0
+offset_right = 139.96
+offset_bottom = -422.0
+grow_vertical = 2
+theme = ExtResource("3_ghp36")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="Exit to menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Return to Menu"
+alignment = 0
+script = ExtResource("4_fjykx")
+
+[node name="Volume" parent="." instance=ExtResource("22_ihjxp")]
+layout_mode = 1
+offset_left = 104.0
+offset_top = 768.0
+offset_right = 104.0
+offset_bottom = 768.0
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("19_12j1a")
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_ci7g1")
+volume_db = -2.0
+autoplay = true
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_pressed"]
