@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://867we3yx00"]
 
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_1ahx7"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Menus/Project Solus Main Menu Background.png" id="1_1ahx7"]
 [ext_resource type="Script" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_yjw5q"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_8auyq"]

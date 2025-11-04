@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crvt0ql2c1h5y"
-path.s3tc="res://.godot/imported/PolygonSciFi_Road_01.png-72d58238a6806ad5f40a50e7a6038984.s3tc.ctex"
+path.s3tc="res://.godot/imported/PolygonSciFi_Road_01.png-2b4d5c471bb80b36bd0729c3a9921184.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/Sci-Fi City Assets/textures/PolygonSciFi_Road_01.png"
-dest_files=["res://.godot/imported/PolygonSciFi_Road_01.png-72d58238a6806ad5f40a50e7a6038984.s3tc.ctex"]
+source_file="res://Models/Sci-Fi City Assets/Textures/PolygonSciFi_Road_01.png"
+dest_files=["res://.godot/imported/PolygonSciFi_Road_01.png-2b4d5c471bb80b36bd0729c3a9921184.s3tc.ctex"]
 
 [params]
 
