@@ -1,53 +1,37 @@
-class_name Controls extends CharacterBody3D
+extends CharacterBody3D
 
+@export var move_speed: float = 2.5
+@export var rotation_speed: float = 2.5
+@export var gravity: float = 9.8
 
-const SPEED = 2.7
-const JUMP_VELOCITY = 4.5
-@export var PlayerPOS = 0
-
-@onready var anim_tree = $Body/blockbench_export2/AnimationTree
-
-var last_direction = Vector3.FORWARD
-@export var rotation_speed = 5
-#changes the player body to face the direction it's moving
+var speed: Vector3 = Vector3.ZERO
 
 func _physics_process(delta: float) -> void:
-	# Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		#velocity.y = JUMP_VELOCITY
+	var input_dir = Vector2.ZERO
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("Left", "Right", "Foward", "Backward")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction && Globals.PlayerControls == true:
-		last_direction = direction
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-	$Body.rotation.y = lerp_angle($Body.rotation.y, atan2(-last_direction.x, -last_direction.z), delta * rotation_speed)
-#changes the player body to face the direction it's moving
+	if Input.is_action_pressed("Backward"):
+		input_dir.y -= 1
+	if Input.is_action_pressed("Forward"):
+		input_dir.y += 1
+	if Input.is_action_pressed("Right"):
+		input_dir.x -= 1
+	if Input.is_action_pressed("Left"):
+		input_dir.x += 1
 
+	# Apply rotation (A / D)
+	rotation.y += input_dir.x * rotation_speed * delta
+
+	# Forward/backward movement in facing direction
+	var forward = -transform.basis.z
+	var move_dir = forward * input_dir.y
+
+	# Gravity
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0
 
+	# Apply movement
+	velocity.x = move_dir.x * move_speed
+	velocity.z = move_dir.z * move_speed
 	move_and_slide()
-
-
-func _process(delta: float) -> void:
-	PlayerPOS = global_position
-	if Input.is_action_just_pressed("Debug"):
-		print(Globals.StoryStage)
-#getting player position every tick
-
-	var speed = velocity.length()
-	anim_tree.set("parameters/MovementBlend/blend_position", speed)
-
-func get_player_pos():
-	SceneSwitcher.PlayerSpawn = PlayerPOS
-#save player position to global varaible in SceneSwitcher.gd
-func get_player_pos2():
-	Globals.HallwayPos = PlayerPOS
-#save player position to global varaible in Globals.gd

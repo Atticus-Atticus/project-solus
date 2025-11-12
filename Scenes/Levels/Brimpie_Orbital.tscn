@@ -1,4 +1,4 @@
-[gd_scene load_steps=464 format=4 uid="uid://brcficuro5mup"]
+[gd_scene load_steps=465 format=4 uid="uid://brcficuro5mup"]
 
 [ext_resource type="PackedScene" uid="uid://dr013f3737p1a" path="res://Scenes/Objects/DoorObject.tscn" id="1_2i266"]
 [ext_resource type="Script" path="res://Scripts/brimpie_orbital_script.gd" id="1_kk3li"]
@@ -69,6 +69,7 @@
 [ext_resource type="Texture2D" uid="uid://2ih2vskgkus5" path="res://Decals/1in30Drawing.png" id="66_xkiip"]
 [ext_resource type="Texture2D" uid="uid://cu5cvvj8ftsr5" path="res://Models/BloodSplatter.png" id="68_qlncl"]
 [ext_resource type="PackedScene" uid="uid://iirxidepvo3v" path="res://Models/DeadSpaceSuit.gltf" id="69_ke1l7"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="70_qfmyx"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vx47i"]
 data = PackedVector3Array(0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1852, 0.5, -0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0.1852, -0.5, -0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, 0.5, -0.5, 2.5, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5)
@@ -10636,6 +10637,8 @@ texture_albedo = ExtResource("68_qlncl")
 
 [node name="blockbench_export" parent="." instance=ExtResource("69_ke1l7")]
 transform = Transform3D(-2.71644, 0, 1.27317, 0, 3, 0, -1.27317, 0, -2.71644, -0.936389, 0.3704, -1.6714)
+
+[node name="Control" parent="." instance=ExtResource("70_qfmyx")]
 
 [connection signal="body_entered" from="RunnerTrigger" to="RunnerTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="MutatedNaomi/Area3D" to="MutatedNaomi/Area3D" method="_on_body_entered"]

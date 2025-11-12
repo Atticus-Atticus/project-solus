@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xqa10t4rt0ql"]
+
+[ext_resource type="Script" path="res://Scripts/Pointer_Control_Script.gd" id="1_d3vpa"]
+[ext_resource type="Texture2D" uid="uid://yyrcqh1pekxo" path="res://Scenes/User Interface/Menus/Solus Pointer.png" id="2_jx2yt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d3vpa")
+
+[node name="SolusPointer" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jx2yt")

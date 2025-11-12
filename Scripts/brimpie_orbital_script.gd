@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 		add_child(text2)
 		TextOnScreen = 1
 
+
 func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
