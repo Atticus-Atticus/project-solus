@@ -2459,7 +2459,7 @@ position = Vector2(60, 1367)
 texture = ExtResource("4_s84ir")
 
 [node name="Player" parent="." instance=ExtResource("44_x7vej")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.2697, 1.59873, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.67326, 1.59873, -1.67291)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.332591, 0.478962, -0.81239, -0.577144, 0.577907, 0.576999, 0.745847, 0.660771, 0.0842234, -8.9514, 7.11261, -0.269775)

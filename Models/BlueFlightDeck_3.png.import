@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cikcwmi4h2k8v"
+uid="uid://cd2a0nw77v8tb"
 path.s3tc="res://.godot/imported/BlueFlightDeck_3.png-ab8f2d4b5f6711dafd402f1bc6bda0a3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "05073edb24179ba9211f2ca35f13ef03"
 }
 
 [deps]

@@ -5,14 +5,15 @@ extends Node3D
 @onready var LoadPlayer: PackedScene = preload("res://Scenes/Objects/Player.tscn")
 @onready var Player = $Player/CharacterBody3D
 
+@onready var text: PackedScene = preload("res://Scenes/User Interface/Dialogue/Loop1DialogueBox.tscn")
+
 var timer := 0.0
 
 var playing1 = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 
 func _process(delta: float) -> void:
@@ -44,3 +45,8 @@ func pausemenu():
 
 func _on_fly_over_finished() -> void:
 	playing1 = 0
+
+
+func _on_animation_player_image_flash_animation_finished(anim_name: StringName) -> void:
+	var LoadedText = text.instantiate()
+	add_child(LoadedText)

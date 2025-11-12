@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drcjx2a442yt7"]
+[gd_scene load_steps=17 format=3 uid="uid://drcjx2a442yt7"]
 
 [ext_resource type="Script" path="res://Scripts/credits_menu_script.gd" id="1_2emg8"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_kqwra"]
@@ -33,6 +33,44 @@ glow_strength = 0.83
 glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
+
+[sub_resource type="Animation" id="Animation_rt7fl"]
+resource_name = "FlashingSquare"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_o54d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
+_data = {
+"FlashingSquare": SubResource("Animation_rt7fl"),
+"RESET": SubResource("Animation_o54d8")
+}
 
 [node name="CreditsMenu" type="Control"]
 layout_mode = 3
@@ -194,8 +232,27 @@ Thank you so much.
 label_settings = ExtResource("9_ibhi0")
 clip_text = true
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 912.0
+offset_right = 924.0
+offset_bottom = 952.0
+scale = Vector2(0.48, 0.64)
+color = Color(0.4, 1, 0.941176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_kaeub")
+}
+autoplay = "FlashingSquare"
+
 [node name="CRT Shader" parent="." instance=ExtResource("8_xkmao")]
 layout_mode = 1
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = -3.0
 mouse_filter = 2
 
 [connection signal="mouse_entered" from="Exit" to="Exit" method="_on_mouse_entered"]

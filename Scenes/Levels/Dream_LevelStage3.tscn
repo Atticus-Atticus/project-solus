@@ -2696,7 +2696,7 @@ scale = Vector2(0.748828, 0.75)
 texture = ExtResource("4_jcey6")
 
 [node name="Player" parent="." instance=ExtResource("4_4osc4")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.27, 1.875, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.66533, 1.875, -1.57096)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.332591, 0.478962, -0.81239, -0.577144, 0.577907, 0.576999, 0.745847, 0.660771, 0.0842234, -31.0108, 19.1156, -0.466172)
@@ -4681,5 +4681,6 @@ frame_progress = 0.62075
 [node name="LockedDoorInteractableNode" parent="." instance=ExtResource("80_tto8a")]
 transform = Transform3D(1, 0, 0, 0, 2.97917, 0, 0, 0, 1.96954, 2.98377, 1.80227, 9.79594)
 
+[connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="Siren" to="." method="_on_siren_finished"]
 [connection signal="finished" from="FlyOver" to="." method="_on_fly_over_finished"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cwaoogya1u84"]
+[gd_scene load_steps=23 format=3 uid="uid://cwaoogya1u84"]
 
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_4apuk"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_37eoc"]
@@ -32,6 +32,44 @@ font = ExtResource("1_37eoc")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
 
+[sub_resource type="Animation" id="Animation_rt7fl"]
+resource_name = "FlashingSquare"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_o54d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
+_data = {
+"FlashingSquare": SubResource("Animation_rt7fl"),
+"RESET": SubResource("Animation_o54d8")
+}
+
 [sub_resource type="Environment" id="Environment_mp1ky"]
 background_mode = 3
 glow_enabled = true
@@ -41,6 +79,14 @@ glow_strength = 0.83
 glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
+
+[sub_resource type="Animation" id="Animation_woufd"]
+resource_name = "MenuTransition"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtql0"]
+_data = {
+"MenuTransition": SubResource("Animation_woufd")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -118,9 +164,9 @@ text = "
 >                                                                           v0.2
 > 	 (demo)
 >
+>
+>
 > Please select a program to run...
->
->
 >
 >
 >
@@ -197,15 +243,28 @@ script = ExtResource("5_0nmoh")
 position = Vector2(60, 1367)
 texture = ExtResource("8_uqu75")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 529.0
+offset_right = 808.0
+offset_bottom = 569.0
+scale = Vector2(0.48, 0.64)
+color = Color(0.4, 1, 0.941176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_kaeub")
+}
+autoplay = "FlashingSquare"
+
 [node name="CRT Shader" parent="." instance=ExtResource("6_23flb")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 1946.0
-offset_bottom = 1096.0
+offset_right = 1948.0
+offset_bottom = 1094.0
 mouse_filter = 2
 
 [node name="CRT Shader2" parent="." instance=ExtResource("7_gvxfj")]
@@ -224,6 +283,11 @@ autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mp1ky")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mtql0")
+}
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_exited"]

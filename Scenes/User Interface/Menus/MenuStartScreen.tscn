@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://doxs6pm1pob7y"]
+[gd_scene load_steps=19 format=3 uid="uid://doxs6pm1pob7y"]
 
 [ext_resource type="Script" path="res://Scripts/menu_start_screen_script.gd" id="1_ipek4"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_8ia5h"]
@@ -26,6 +26,44 @@ font = ExtResource("3_htx6k")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
 
+[sub_resource type="Animation" id="Animation_rt7fl"]
+resource_name = "FlashingSquare"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_o54d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
+_data = {
+"FlashingSquare": SubResource("Animation_rt7fl"),
+"RESET": SubResource("Animation_o54d8")
+}
+
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
 tracks/0/type = "value"
@@ -43,7 +81,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
-length = 6.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -118,8 +156,8 @@ text = "
 > Neural Status: CRITCAL ERROR
 > Memory Integrity: <32%
 > 
-> 
 > Attempting Memory Playback... [OK]
+>
 > Press ENTER to initiate sequence
 > 
 > 
@@ -216,15 +254,27 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 863.0
+offset_right = 790.0
+offset_bottom = 903.0
+scale = Vector2(0.48, 0.64)
+color = Color(0.4, 1, 0.941176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_kaeub")
+}
+
 [node name="CRT Shader" parent="." instance=ExtResource("4_1umdw")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 396.0
-offset_bottom = 141.0
+offset_right = 398.0
+offset_bottom = 139.0
 mouse_filter = 2
 
 [node name="CRT Shader2" parent="." instance=ExtResource("5_on3rr")]
@@ -250,4 +300,4 @@ autoplay = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ypv75")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
