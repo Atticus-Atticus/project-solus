@@ -10637,7 +10637,7 @@ texture_albedo = ExtResource("68_qlncl")
 [node name="blockbench_export" parent="." instance=ExtResource("69_ke1l7")]
 transform = Transform3D(-2.71644, 0, 1.27317, 0, 3, 0, -1.27317, 0, -2.71644, -0.936389, 0.3704, -1.6714)
 
-[node name="Control" parent="." instance=ExtResource("70_qfmyx")]
+[node name="PointerNode" parent="." instance=ExtResource("70_qfmyx")]
 
 [connection signal="body_entered" from="RunnerTrigger" to="RunnerTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="MutatedNaomi/Area3D" to="MutatedNaomi/Area3D" method="_on_body_entered"]

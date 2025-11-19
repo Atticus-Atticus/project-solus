@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3an4wo8tws83"]
+
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_50isw"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="2_k7o2i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 480.0
+offset_bottom = 178.0
+theme = ExtResource("1_50isw")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 474.0
+offset_bottom = 60.0
+text = "Control Type"
+label_settings = ExtResource("2_k7o2i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 88.0
+offset_right = 193.0
+offset_bottom = 144.0
+toggle_mode = true
+text = "Tank 
+Controls"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 88.0
+offset_right = 444.0
+offset_bottom = 144.0
+toggle_mode = true
+text = "Mouse
+Controls"
