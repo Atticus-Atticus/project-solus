@@ -435,6 +435,75 @@ Remarks:
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
+[node name="SecretPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 803.0
+offset_top = 63.0
+offset_right = 1861.0
+offset_bottom = 1016.0
+theme = ExtResource("6_vjryu")
+
+[node name="X Button" type="Button" parent="SecretPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("6_vjryu")
+text = "X"
+script = ExtResource("19_k3cli")
+
+[node name="Label" type="Label" parent="SecretPanel"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - AMY RAYEN
+[confidential cadet personnel file]
+
+FULL NAME:  Amy Rayen
+STATUS:  Registered Citizen
+SERVICE ID:  7721-907-AR
+OCCUPATION:  Cadet, Solarian Army Corps
+WORLD OF BIRTH:  82-G Eridani - d
+REGISTERED HOMEWORLD:  82-G Eridani - d
+REGISTERED RESIDENCE:  Barracks 1305, Cadet Complex Theta-19
+
+ASSOCIATIONS:
+  Maintains close bond with fellow Cadet Corporal Marcus.
+  Biological parents identified as two senior-ranking officers (names redacted).
+  Parents relationship deemed in violation of Coalition Oath Statute 12-B.
+
+OCCUPATION:
+  Currently enlisted in the Solarian Armed Forces reporting to Sergeant Crawford.
+  Specialization: Combat Medic
+
+NOTES:
+  Previous psychological evaluations note elevated compliance, and surppressed emotional 
+  expression. Also signs of introversion and chronic hypervigilance. 
+  Most notably around figures of authority.
+  
+  Tendency to seek isolation. (Roof access violations x12)
+
+  Shows creative tendencies. (unauthorised sketchbook confiscated twice) 
+
+Remarks:
+  \"Quiet. Obedient. Keeps her head down. Has potential, but refuses to step forward.\"
+  - Drill Instructor P. Varrin, Youth Cadet Corps Division 3.
+
+  \"Her parentage makes her a political liability. Recommend continued observation.\"
+  - Commander [REDACTED], Personnel Oversight Committee"
+label_settings = ExtResource("20_q0khx")
+clip_text = true
+
 [node name="ForCalihanPanel" type="Panel" parent="."]
 visible = false
 layout_mode = 0
@@ -1224,6 +1293,7 @@ autoplay = true
 [connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_pressed"]
 [connection signal="pressed" from="CalihanPanel/X Button" to="CalihanPanel/X Button" method="_on_pressed"]
 [connection signal="pressed" from="NaomiPanel/X Button" to="NaomiPanel/X Button" method="_on_pressed"]
+[connection signal="pressed" from="SecretPanel/X Button" to="SecretPanel/X Button" method="_on_pressed"]
 [connection signal="pressed" from="ForCalihanPanel/X Button" to="ForCalihanPanel/X Button" method="_on_pressed"]
 [connection signal="pressed" from="LorePanel0/X Button" to="LorePanel0/X Button" method="_on_pressed"]
 [connection signal="pressed" from="LorePanel1/X Button" to="LorePanel1/X Button" method="_on_pressed"]
