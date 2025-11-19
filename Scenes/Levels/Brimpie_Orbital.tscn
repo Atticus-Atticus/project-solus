@@ -1,4 +1,4 @@
-[gd_scene load_steps=465 format=4 uid="uid://brcficuro5mup"]
+[gd_scene load_steps=467 format=4 uid="uid://brcficuro5mup"]
 
 [ext_resource type="PackedScene" uid="uid://dr013f3737p1a" path="res://Scenes/Objects/DoorObject.tscn" id="1_2i266"]
 [ext_resource type="Script" path="res://Scripts/brimpie_orbital_script.gd" id="1_kk3li"]
@@ -70,6 +70,8 @@
 [ext_resource type="Texture2D" uid="uid://cu5cvvj8ftsr5" path="res://Models/BloodSplatter.png" id="68_qlncl"]
 [ext_resource type="PackedScene" uid="uid://iirxidepvo3v" path="res://Models/DeadSpaceSuit.gltf" id="69_ke1l7"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="70_qfmyx"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="71_rq3pp"]
+[ext_resource type="Script" path="res://Scripts/FPSCounterScript.gd" id="72_7qrwl"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vx47i"]
 data = PackedVector3Array(0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1852, 0.5, -0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0.1852, -0.5, -0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, 0.5, -0.5, 2.5, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5)
@@ -1852,6 +1854,8 @@ script = ExtResource("1_kk3li")
 
 [node name="HUD" parent="." instance=ExtResource("3_dasoq")]
 offset_bottom = -1.99988
+
+[node name="PointerNode" parent="." instance=ExtResource("70_qfmyx")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_hm30d")]
 visible = false
@@ -10385,7 +10389,7 @@ visible = false
 transform = Transform3D(-0.174868, 0, -0.984592, 0, 1, 0, 0.984592, 0, -0.174868, 3.74862, 0.3704, 46.2881)
 
 [node name="BaseSupplyNode2" parent="." instance=ExtResource("39_j32wl")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.6283, 0.3704, 52.209)
+transform = Transform3D(0.835817, 0, -0.549008, 0, 1, 0, 0.549008, 0, 0.835817, 9.49916, 0.3704, 50.1585)
 
 [node name="BaseSupplyNode" parent="." instance=ExtResource("39_j32wl")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24.0996, 0.3704, 52.9606)
@@ -10637,7 +10641,14 @@ texture_albedo = ExtResource("68_qlncl")
 [node name="blockbench_export" parent="." instance=ExtResource("69_ke1l7")]
 transform = Transform3D(-2.71644, 0, 1.27317, 0, 3, 0, -1.27317, 0, -2.71644, -0.936389, 0.3704, -1.6714)
 
-[node name="PointerNode" parent="." instance=ExtResource("70_qfmyx")]
+[node name="Label" type="Label" parent="."]
+offset_left = 1454.0
+offset_top = 83.0
+offset_right = 1572.0
+offset_bottom = 157.0
+text = "60"
+label_settings = ExtResource("71_rq3pp")
+script = ExtResource("72_7qrwl")
 
 [connection signal="body_entered" from="RunnerTrigger" to="RunnerTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="MutatedNaomi/Area3D" to="MutatedNaomi/Area3D" method="_on_body_entered"]

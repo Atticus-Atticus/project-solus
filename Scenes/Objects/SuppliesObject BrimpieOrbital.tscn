@@ -78,5 +78,4 @@ stream = ExtResource("3_lgtvp")
 
 [node name="AnimatedSprite3D17" parent="." instance=ExtResource("4_lll31")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.658998, 0)
-modulate = Color(0.4, 1, 0.941176, 1)
 frame_progress = 0.62075

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgudoc35jqo6r"]
+[gd_scene load_steps=10 format=3 uid="uid://bgudoc35jqo6r"]
 
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_a5jq7"]
 [ext_resource type="Script" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_ghp36"]
 [ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
+[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="7_4h5sl"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
 [ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="22_ihjxp"]
@@ -90,10 +91,17 @@ script = ExtResource("4_fjykx")
 
 [node name="Volume" parent="." instance=ExtResource("22_ihjxp")]
 layout_mode = 1
-offset_left = 104.0
+offset_left = 128.0
 offset_top = 768.0
-offset_right = 104.0
+offset_right = 128.0
 offset_bottom = 768.0
+
+[node name="ChangeInputNode" parent="." instance=ExtResource("7_4h5sl")]
+layout_mode = 1
+offset_left = 1024.0
+offset_top = 128.0
+offset_right = -179.0
+offset_bottom = -638.0
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
 position = Vector2(60, 1367)

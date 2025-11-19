@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://3lv51hs8ah58"]
+[gd_scene load_steps=21 format=3 uid="uid://3lv51hs8ah58"]
 
 [ext_resource type="Script" path="res://Scripts/menu_start_screen_2_script.gd" id="1_5hgys"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_raa3i"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_t62y8"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_1xurr"]
+[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="4_7i76o"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="5_n6dy8"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="5_pb0i1"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_2dyxb"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_hctay"]
 
@@ -26,6 +28,44 @@ font = ExtResource("3_t62y8")
 font_size = 34
 font_color = Color(0, 1, 0, 1)
 
+[sub_resource type="Animation" id="Animation_rt7fl"]
+resource_name = "FlashingSquare"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_o54d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
+_data = {
+"FlashingSquare": SubResource("Animation_rt7fl"),
+"RESET": SubResource("Animation_o54d8")
+}
+
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
 tracks/0/type = "value"
@@ -40,6 +80,42 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, 182)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, 289)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, 395)]
+}
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
@@ -51,10 +127,46 @@ tracks/0/path = NodePath("StartUpText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 0.18, 0.18, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(106, 182), Vector2(106, 182), Vector2(871, 182)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(106, 289), Vector2(106, 289), Vector2(871, 289)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(106, 395), Vector2(106, 395), Vector2(871, 395)]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
@@ -104,26 +216,24 @@ offset_bottom = 2.0
 grow_vertical = 2
 text = "
 > 
-> USER ADVISORY:
-> In rare cases, users have reported HALLUCINATORY OVERLAYS present in source memory
-> HALLUCINATORY OVERLAYS are due to a fault with the subject's memory and are to be ignored
+> 
+> Please select a control method...
 >
-> INTERFACE CONTROLS:
-> Use W A S D to navigate reconstructed spaces // Use E to engage with objects
-> Use SPACE to advance dialogue // Use ESC to access the pause menu
 >
-> PLEASE NOTE: 
-> Movement controls ARE NOT relative to the camera's direction, but the subject's
 >
-> SYSTEM INDICATORS:
-> Objects will PING when interaction is possible
-> Objects with a faint blue pulse may be collacted to unlock additional Database entries
-> The Database can be used to learn more information about the subject and surroundings
-> The Database can be accessed via active server terminals found within reconstruction
 >
-> Press ENTER to begin playback...
+> 
 >
-"
+>
+> Tank controls are recommended...
+>
+> Use 'W' to move Forward. Use 'S' to move Backwards.
+> The Subject will always face and move towards the mouse's position
+> Use 'E' to interact with objects that pulse blue.
+>
+> Press ENTER to continue...
+>
+>"
 label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
@@ -214,6 +324,56 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
+[node name="ChangeInputNode" parent="." instance=ExtResource("4_7i76o")]
+layout_mode = 1
+offset_left = 110.0
+offset_top = 185.0
+offset_right = -1093.0
+offset_bottom = -581.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 182.0
+offset_right = 831.0
+offset_bottom = 299.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 289.0
+offset_right = 831.0
+offset_bottom = 406.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 395.0
+offset_right = 831.0
+offset_bottom = 512.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 628.0
+offset_top = 814.0
+offset_right = 668.0
+offset_bottom = 854.0
+scale = Vector2(0.48, 0.64)
+color = Color(0.4, 1, 0.941176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect4"]
+libraries = {
+"": SubResource("AnimationLibrary_kaeub")
+}
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("5_pb0i1")
+
 [node name="CRT Shader" parent="." instance=ExtResource("4_1xurr")]
 layout_mode = 2
 anchors_preset = 0
@@ -246,5 +406,5 @@ autoplay = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_b5v2b")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="tree_exited" from="ChangeMenuSFX" to="." method="_on_change_menu_sfx_tree_exited"]

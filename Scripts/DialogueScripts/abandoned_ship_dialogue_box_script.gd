@@ -44,6 +44,6 @@ func _process(delta: float) -> void:
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 6:
-		Globals.CamText = "Search the ship for any supplies"
+		Globals.CamText = "Search the ship for any supplies. 0/1"
 		Globals.PlayerControls = true
 		$".".queue_free()

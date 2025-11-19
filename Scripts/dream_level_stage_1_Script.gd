@@ -35,11 +35,13 @@ func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
 		$Ambience.play()
+		$Music.play()
 		Engine.time_scale = 1
 	else:
 		pause_menu.show()
 		Engine.time_scale = 0
 		$Ambience.stop()
+		$Music.stop()
 	Globals.paused = !Globals.paused
 
 

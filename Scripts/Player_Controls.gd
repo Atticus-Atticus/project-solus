@@ -21,10 +21,10 @@ var _last_forward: Vector3 = Vector3.FORWARD
 
 func _physics_process(delta: float) -> void:
 	# Toggle controls with Debug
-	if Input.is_action_just_pressed("Debug"):
-		Globals.InputType = !Globals.InputType
-		var mode_name := "Mouse Directional" if Globals.InputType else "Tank Controls"
-		print("InputType switched to: ", mode_name)
+	#if Input.is_action_just_pressed("Debug"):
+		#Globals.InputType = !Globals.InputType
+		#var mode_name := "Mouse Directional" if Globals.InputType else "Tank Controls"
+		#print("InputType switched to: ", mode_name)
 
 	# If Globals.InputType is false then controls
 	# If Globals.InputType is true then mouse directional

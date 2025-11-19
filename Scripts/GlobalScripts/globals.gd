@@ -11,7 +11,7 @@ var lore9 = 0
 var lore10 = 0
 #Keeping track of which collectibles the player has found.
 
-var InputType = true
+var InputType = false
 #false for tank controls
 #true for mouse controls
 
