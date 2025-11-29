@@ -3,7 +3,7 @@ extends Control
 @onready var cursor = $ProjectSolusCursor2
 
 func _ready() -> void:
-	Engine.max_fps = 30
+	#Engine.max_fps = 30
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

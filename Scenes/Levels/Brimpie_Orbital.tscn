@@ -10642,6 +10642,7 @@ texture_albedo = ExtResource("68_qlncl")
 transform = Transform3D(-2.71644, 0, 1.27317, 0, 3, 0, -1.27317, 0, -2.71644, -0.936389, 0.3704, -1.6714)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 1454.0
 offset_top = 83.0
 offset_right = 1572.0

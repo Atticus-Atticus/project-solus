@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://do8fx8e50k864"]
+[gd_scene load_steps=19 format=3 uid="uid://do8fx8e50k864"]
 
 [ext_resource type="Script" path="res://Scripts/dream_crash_screen_script.gd" id="1_163g5"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_l4fph"]
@@ -26,6 +26,44 @@ font = ExtResource("3_27ud3")
 font_size = 34
 font_color = Color(0, 1, 0, 1)
 
+[sub_resource type="Animation" id="Animation_rt7fl"]
+resource_name = "FlashingSquare"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_o54d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
+_data = {
+"FlashingSquare": SubResource("Animation_rt7fl"),
+"RESET": SubResource("Animation_o54d8")
+}
+
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
 tracks/0/type = "value"
@@ -40,6 +78,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
@@ -51,10 +101,10 @@ tracks/0/path = NodePath("StartUpText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2, 2.5, 3.23333, 3.73333, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 0.413333, 0.413333, 0.556741, 0.556741, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
@@ -120,7 +170,7 @@ text = "
 > STATUS: MEMORY STREAM SWAP IN PROGRESS
 > Do not terminate session
 >
-> Press ENTER to attempt stabilization
+> Press ENTER to attempt stabilization...
 >
 >
 "
@@ -214,6 +264,21 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 887.0
+offset_top = 862.0
+offset_right = 927.0
+offset_bottom = 902.0
+scale = Vector2(0.48, 0.64)
+color = Color(0.4, 1, 0.941176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_kaeub")
+}
+
 [node name="CRT Shader" parent="." instance=ExtResource("4_k2lga")]
 layout_mode = 2
 anchors_preset = 0
@@ -248,5 +313,5 @@ autoplay = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_b5v2b")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="tree_exited" from="ChangeMenuSFX" to="." method="_on_change_menu_sfx_tree_exited"]

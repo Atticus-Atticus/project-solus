@@ -8,9 +8,9 @@ extends Node3D
 var TextOnScreen = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#$AirlockDoorSFX.play()
-	#var text1 = text_scene1.instantiate()
-	#add_child(text1)
+	$AirlockDoorSFX.play()
+	var text1 = text_scene1.instantiate()
+	add_child(text1)
 
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bke6eawl3rsvg"]
+
+[ext_resource type="Script" path="res://Scripts/waterfall_display_test.gd" id="1_xkjd7"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 328.0
+offset_right = 855.0
+offset_bottom = 559.0
+script = ExtResource("1_xkjd7")

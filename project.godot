@@ -30,6 +30,7 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 Globals="*res://Scripts/GlobalScripts/globals.gd"
 SceneSwitcher="*res://Scripts/GlobalScripts/SceneSwitcher.gd"
 RecTime="*res://addons/stopwatch/Stopwatch.gd"
+VolumeControlScript="*res://Scripts/VolumeControlScript.gd"
 
 [display]
 
