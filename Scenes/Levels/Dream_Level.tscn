@@ -1,9 +1,10 @@
-[gd_scene load_steps=396 format=4 uid="uid://dyanfvngv2iot"]
+[gd_scene load_steps=397 format=4 uid="uid://dyanfvngv2iot"]
 
 [ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="1_fnwyn"]
 [ext_resource type="Script" path="res://Scripts/dream_level_script.gd" id="1_xk6i7"]
 [ext_resource type="ArrayMesh" uid="uid://l6pv085t6pdj" path="res://Models/Home Models/HomeWallDoorSide.obj" id="2_6pt17"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_rb3ft"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_p772u"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_wy8j1"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="3_yx00u"]
 [ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="4_bj0bd"]
@@ -2609,6 +2610,8 @@ data = PackedVector3Array(0.3333, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.25, 0.1875,
 script = ExtResource("1_xk6i7")
 
 [node name="CRT Shader" parent="." instance=ExtResource("2_rb3ft")]
+
+[node name="PointerNode" parent="." instance=ExtResource("3_p772u")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_wy8j1")]
 visible = false

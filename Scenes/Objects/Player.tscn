@@ -58,7 +58,6 @@ animation = &"CalihanAnimations/CalihanPickUP"
 animation = &"CalihanAnimations/CalihanWalk"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pv6mb"]
-graph_offset = Vector2(510.647, -311.491)
 nodes/Idle1/node = SubResource("AnimationNodeAnimation_2kcw7")
 nodes/Idle1/position = Vector2(920, -120)
 nodes/IdleBlend/node = SubResource("AnimationNodeBlend2_x6h86")

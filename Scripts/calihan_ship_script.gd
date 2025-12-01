@@ -41,8 +41,8 @@ func _ready() -> void:
 	SceneSwitcher.Destination = 0
 	Globals.Destination = 0
 
-#func _on_child_exiting_tree(node: Node) -> void:
-	#$Player/CharacterBody3D.get_player_pos()
+func _on_child_exiting_tree(node: Node) -> void:
+	$Player/CharacterBody3D.get_player_pos()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):

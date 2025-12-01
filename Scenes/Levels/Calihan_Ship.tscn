@@ -1,4 +1,4 @@
-[gd_scene load_steps=257 format=4 uid="uid://dst6s21m4r7g6"]
+[gd_scene load_steps=258 format=4 uid="uid://dst6s21m4r7g6"]
 
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="1_6b51t"]
 [ext_resource type="Script" path="res://Scripts/calihan_ship_script.gd" id="1_lxh1w"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cq7mjo8ve435w" path="res://Scenes/User Interface/HUD/HUD2.tscn" id="7_hykaw"]
 [ext_resource type="ArrayMesh" uid="uid://bh8gmj8mknr28" path="res://Models/Clutter/TrashBag.obj" id="8_8mb34"]
 [ext_resource type="PackedScene" uid="uid://b03dx4b6rocx8" path="res://Scenes/Objects/PlayerSuppliesObject.tscn" id="9_8xua8"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="9_8yw1e"]
 [ext_resource type="ArrayMesh" uid="uid://cd7dbu82gvthi" path="res://Models/ShipWallPillar.obj" id="10_ux5ib"]
 [ext_resource type="PackedScene" uid="uid://coqafoewo83k4" path="res://Scenes/Objects/DoorStaticObject.tscn" id="11_k13xf"]
 [ext_resource type="PackedScene" uid="uid://dr013f3737p1a" path="res://Scenes/Objects/DoorObject.tscn" id="12_jfdeo"]
@@ -1995,6 +1996,8 @@ visible = false
 [node name="SystemScreen" parent="." instance=ExtResource("5_lr73c")]
 visible = false
 
+[node name="PointerNode" parent="." instance=ExtResource("9_8yw1e")]
+
 [node name="PauseMenu" parent="." instance=ExtResource("4_tt708")]
 visible = false
 
@@ -3652,7 +3655,7 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 10.8513,
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D15" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.03968, 0.518074, -31.0218)
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 7.86116, 0.485242, -31.3494)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D16" parent="." instance=ExtResource("69_swly8")]

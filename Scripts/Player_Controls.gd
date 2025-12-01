@@ -23,6 +23,9 @@ var _last_forward: Vector3 = Vector3.FORWARD
 var _current_cam: Camera3D = null
 var _cam_lock_time_left: float = 0.0
 
+@export var playerPOS = 0
+
+@onready var anim_tree = $Body/blockbench_export2/AnimationTree
 
 func _ready() -> void:
 	_current_cam = get_viewport().get_camera_3d()
@@ -140,3 +143,19 @@ func _mouse_directional_physics(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	move_and_slide()
+
+
+func _process(delta: float) -> void:
+	playerPOS = global_position
+	
+	var speed = velocity.length()
+	anim_tree.set("parameters/MovementBlend/blend_position", speed)
+
+func get_player_pos():
+	SceneSwitcher.PlayerSpawn = playerPOS
+	#sace the player position to global variable
+
+func get_player_pos2():
+	Globals.HallwayPos = playerPOS
+	#same as function above
+	#pos2 is now unused

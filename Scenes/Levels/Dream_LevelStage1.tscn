@@ -1,7 +1,8 @@
-[gd_scene load_steps=398 format=4 uid="uid://j5gfaqt640by"]
+[gd_scene load_steps=399 format=4 uid="uid://j5gfaqt640by"]
 
 [ext_resource type="Script" path="res://Scripts/dream_level_stage_1_Script.gd" id="1_oeecw"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_bp0yw"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_414cb"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_s67xj"]
 [ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="4_ikdca"]
 [ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="5_squ5f"]
@@ -2704,6 +2705,8 @@ shadow_mesh = SubResource("ArrayMesh_fmd84")
 script = ExtResource("1_oeecw")
 
 [node name="CRT Shader" parent="." instance=ExtResource("2_bp0yw")]
+
+[node name="PointerNode" parent="." instance=ExtResource("3_414cb")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_s67xj")]
 visible = false

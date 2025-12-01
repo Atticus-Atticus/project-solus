@@ -1,8 +1,9 @@
-[gd_scene load_steps=407 format=4 uid="uid://c2fgojsjtr757"]
+[gd_scene load_steps=408 format=4 uid="uid://c2fgojsjtr757"]
 
 [ext_resource type="Script" path="res://Scripts/dream_level_stage_3_Script.gd" id="1_fw444"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_pdj8h"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_s3cja"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_vqyp7"]
 [ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="4_4osc4"]
 [ext_resource type="Texture2D" uid="uid://chqa8jjgl65bo" path="res://Images/DreamFlash3.png" id="4_jcey6"]
 [ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="5_8h5yi"]
@@ -2877,6 +2878,8 @@ _data = {
 script = ExtResource("1_fw444")
 
 [node name="CRT Shader" parent="." instance=ExtResource("2_pdj8h")]
+
+[node name="PointerNode" parent="." instance=ExtResource("3_vqyp7")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_s3cja")]
 visible = false
