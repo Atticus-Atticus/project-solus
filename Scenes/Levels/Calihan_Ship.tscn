@@ -1993,10 +1993,10 @@ color = Color(0, 0, 0, 0)
 [node name="HUD2" parent="." instance=ExtResource("7_hykaw")]
 visible = false
 
+[node name="PointerNode" parent="." instance=ExtResource("9_8yw1e")]
+
 [node name="SystemScreen" parent="." instance=ExtResource("5_lr73c")]
 visible = false
-
-[node name="PointerNode" parent="." instance=ExtResource("9_8yw1e")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_tt708")]
 visible = false
