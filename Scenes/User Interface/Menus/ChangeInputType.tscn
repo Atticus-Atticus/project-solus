@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3an4wo8tws83"]
+[gd_scene load_steps=5 format=3 uid="uid://d3an4wo8tws83"]
 
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_50isw"]
 [ext_resource type="Script" path="res://Scripts/change_input_type.gd" id="1_qyb0b"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="2_k7o2i"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="4_6vf77"]
 
 [node name="ChangeInputNode" type="Control"]
 layout_mode = 3
@@ -100,6 +101,11 @@ grow_horizontal = 0
 grow_vertical = 0
 text = ">   Mouse  <
 > Controls <"
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6vf77")
+volume_db = -2.0
+autoplay = true
 
 [connection signal="pressed" from="Panel/Tank Ctrl" to="." method="_on_tank_ctrl_pressed"]
 [connection signal="pressed" from="Panel/Mouse Ctrl" to="." method="_on_mouse_ctrl_pressed"]

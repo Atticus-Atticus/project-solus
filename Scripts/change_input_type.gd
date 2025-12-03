@@ -18,8 +18,10 @@ func _process(delta: float) -> void:
 func _on_mouse_ctrl_pressed() -> void:
 	Globals.InputType = true
 	current.text = "Mouse Directional"
+	$ChangeMenuSFX.play()
 
 
 func _on_tank_ctrl_pressed() -> void:
 	Globals.InputType = false
 	current.text = "Tank Controls"
+	$ChangeMenuSFX.play()
