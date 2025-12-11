@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 	cursor.position = get_global_mouse_position()
 
-	if Globals.InputType == false:
+	if Globals.InputType == 1:
 		$StartUpText.text = "
 > 
 > 
@@ -25,16 +25,16 @@ func _process(delta: float) -> void:
 > 
 >
 >
-> Tank controls are recommended...
 >
 > Use 'W' to move Forward. Use 'S' to move Backwards.
 > Use 'A' to rotate Left. Use 'D' to rotate Right.
 > Use 'E' to interact with objects that pulse blue.
 >
+>
 > Press ENTER to continue...
 >
 "
-	else:
+	if Globals.InputType == 2:
 		$StartUpText.text = "
 > 
 > 
@@ -46,12 +46,33 @@ func _process(delta: float) -> void:
 > 
 >
 >
-> Tank controls are recommended...
 >
 > Use 'W' to move Forward. Use 'S' to move Backwards.
 > The Subject will always face and move towards the mouse's position
 > Use 'E' to interact with objects that pulse blue.
 >
+>
+> Press ENTER to continue...
+>
+>"
+	if Globals.InputType == 3:
+		$StartUpText.text = "
+> 
+> 
+> Please select a control method...
+>
+>
+>
+>
+> 
+>
+>
+>
+> Use 'W' to move away from Camera. Use 'S' to move towards Camera.
+> Use 'A' to move Left. Use 'D' to move Right.
+> Use 'E' to interact with objects that pulse blue.
+>
+> 
 > Press ENTER to continue...
 >
 >"

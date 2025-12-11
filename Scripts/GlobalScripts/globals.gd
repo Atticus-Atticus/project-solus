@@ -11,11 +11,14 @@ var lore9 = 0
 var lore10 = 0
 #Keeping track of which collectibles the player has found.
 
-var InputType = false
-#false for tank controls
-#true for mouse controls
+var InputType = 1
+#1 used for tank controls (default)
+#2 used for mouse directional
+#3 used for camera relative movement
 
 var PlayerControls = true
+#disable or enable player controls
+
 var InDialogue = false
 #used to disable player controls during dialogue
 

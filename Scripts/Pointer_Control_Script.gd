@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pointer.position = get_global_mouse_position()
 
-	if Globals.InputType == false:
-		pointer.hide()
-	else:
+	if Globals.InputType == 2:
 		pointer.show()
+	else:
+		pointer.hide()
