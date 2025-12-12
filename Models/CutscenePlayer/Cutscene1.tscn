@@ -155,3 +155,6 @@ transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1
 
 [node name="Left_Foot2" parent="Node/Root Base Model F/Root_Center2/Lower_Body2/Left_Upper_Leg2/Left_Lower_Leg2" index="3"]
 transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, -0.184375, 0.00625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Anim1Loop"
