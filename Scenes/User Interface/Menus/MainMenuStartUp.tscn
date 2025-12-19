@@ -133,10 +133,10 @@ text = "
 > 
 > Checking Memory... 64GB OK + 24GB Extended OK
 > 
-> Detecting IDE Primary Master... SD-512 750GB
-> Detecting IDE Primary Slave... None
-> Detecting IDE Secondary Master... CD-ROM
-> Detecting IDE Secondary Slave... None
+> Detecting IDE Primary Controller... SD-512 750GB
+> Detecting IDE Primary Worker... None
+> Detecting IDE Secondary Controller... CD-ROM
+> Detecting IDE Secondary Worker... None
 >
 > Loading BLACKBOX READER...
 >
