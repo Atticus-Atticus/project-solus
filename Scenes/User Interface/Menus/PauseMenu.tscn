@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgudoc35jqo6r"]
+[gd_scene load_steps=12 format=3 uid="uid://bgudoc35jqo6r"]
 
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_a5jq7"]
 [ext_resource type="Script" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
@@ -6,9 +6,16 @@
 [ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
 [ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="7_4h5sl"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="8_kkqpe"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
 [ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="22_ihjxp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iyd4t"]
+line_spacing = 15.0
+font = ExtResource("8_kkqpe")
+font_size = 30
+font_color = Color(0.4, 1, 0.941176, 1)
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -38,14 +45,14 @@ text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
 >
 > 
->
->
->
->
 > Pause Input recognised...
 > Program is now paused.
 > Press the 'ESC' key to resume Program.
 > To Exit Program click \"Return to Menu\"
+>
+>
+>
+>
 >
 >
 >
@@ -62,10 +69,10 @@ label_settings = ExtResource("5_kj5pt")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.056375
-anchor_top = -0.0833333
-anchor_right = 0.187
-anchor_bottom = 1.25833
+anchor_left = 0.0579375
+anchor_top = -0.257407
+anchor_right = 0.188562
+anchor_bottom = 1.08426
 offset_left = -0.240005
 offset_top = 515.0
 offset_right = 139.96
@@ -98,10 +105,36 @@ offset_bottom = 768.0
 
 [node name="ChangeInputNode" parent="." instance=ExtResource("7_4h5sl")]
 layout_mode = 1
-offset_left = 1024.0
-offset_top = 128.0
-offset_right = -179.0
-offset_bottom = -638.0
+offset_left = 1102.0
+offset_top = 318.0
+offset_right = -101.0
+offset_bottom = -448.0
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 621.0
+offset_top = 626.0
+offset_right = 1870.0
+offset_bottom = 935.0
+theme = ExtResource("3_ghp36")
+
+[node name="Label2" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -133.5
+offset_right = 1211.0
+offset_bottom = 134.5
+grow_vertical = 2
+text = "Use 'W' to move Forward. Use 'S' to move Backwards.
+The Subject will always face and move towards the mouse's position
+Use 'E' to interact with objects that pulse blue.
+
+Objects that glow green will progress the subject's memory.
+Please ignore any hallucinatory overalls that may be present.\""
+label_settings = SubResource("LabelSettings_iyd4t")
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
 position = Vector2(60, 1367)

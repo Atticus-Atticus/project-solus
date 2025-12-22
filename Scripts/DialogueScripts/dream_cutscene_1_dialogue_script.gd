@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	if textline == 1:
 		$TextboxContainer/TweenAnimation.play("TextTweenACTUAL")
 		$NaomiSpeech.play()
+		$NaomiSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
 		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Mhmm...")

@@ -3603,67 +3603,67 @@ mesh = SubResource("ArrayMesh_a707u")
 skeleton = NodePath("")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0835913, 0.241299, 3.64094)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.418721, 0.494427, 3.8092)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D2" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9009, -0.115891, -5.24365)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.9009, -0.115891, -5.24365)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D3" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.7601, 0.612243, -14.013)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 19.5054, 0.678858, -13.8185)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D4" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.34112, 0.612243, -14.013)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 3.41664, 0.805516, -13.4023)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D5" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.6859, 0.612243, -14.013)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 12.6859, 0.612243, -13.9767)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D6" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.3058, 0.612243, -14.013)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13.3058, 0.612243, -14.013)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D7" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.3058, 0.612243, -1.91128)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13.3058, 0.612243, -1.91128)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D8" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.5633, 0.612243, -1.91128)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 12.5633, 0.612243, -1.91128)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D9" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3768, 0.612243, -1.91128)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 3.3768, 0.612243, -1.91128)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D10" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.59263, 0.612243, -1.91128)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 2.59263, 0.612243, -1.91128)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D11" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.0369, 0.612243, -20.6431)
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 7.92775, 0.612243, -20.6431)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D12" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.0369, 0.612243, -21.4422)
+transform = Transform3D(-1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, -1.41421, 7.2674, 1.0643, -21.7417)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D14" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 10.8513, 0.0948298, -25.4515)
+transform = Transform3D(1.50996e-07, 0, 2, 0, 2, 0, -2, 0, 1.50996e-07, 10.688, 0.363209, -25.2112)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D15" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 7.86116, 0.485242, -31.3494)
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 7.70134, 0.599966, -30.4829)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D16" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.27895, 0.79234, -23.9124)
+transform = Transform3D(-1.5, 0, 1.78814e-07, 0, 1.5, 0, -1.78814e-07, 0, -1.5, 5.27895, 1.00988, -23.6913)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D17" parent="." instance=ExtResource("69_swly8")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 10.8068, 0.245812, -5.25162)
+transform = Transform3D(-2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, -2.12132, 10.6522, 0.386347, -4.95486)
 frame_progress = 0.62075
 
 [node name="ColorRect3" type="ColorRect" parent="."]

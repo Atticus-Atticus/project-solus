@@ -134,6 +134,7 @@ animations = [{
 }]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 modulate = Color(0.4, 1, 0.941176, 1)
 billboard = 1
 texture_filter = 0
@@ -143,4 +144,4 @@ script = ExtResource("1_hbiur")
 area_path = NodePath("PingRadiusTrigger")
 
 [node name="PingRadiusTrigger" parent="." instance=ExtResource("3_wt1c3")]
-transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)

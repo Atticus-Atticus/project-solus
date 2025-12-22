@@ -4925,14 +4925,6 @@ libraries = {
 }
 autoplay = "AlarmLight"
 
-[node name="AnimatedSprite3D" parent="." instance=ExtResource("79_vx487")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87234, 2.54388, 4.10432)
-frame_progress = 0.62075
-
-[node name="AnimatedSprite3D2" parent="." instance=ExtResource("79_vx487")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04349, 2.0341, 11.2564)
-frame_progress = 0.62075
-
 [node name="AnimatedSprite3D3" parent="." instance=ExtResource("79_vx487")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.054538, 2.04957, 13.5398)
 frame_progress = 0.62075
@@ -4947,6 +4939,13 @@ frame_progress = 0.62075
 
 [node name="LockedDoorInteractableNode" parent="." instance=ExtResource("80_tto8a")]
 transform = Transform3D(1, 0, 0, 0, 2.97917, 0, 0, 0, 1.96954, 2.98377, 1.80227, 9.79594)
+
+[node name="AnimatedSprite3D" parent="." instance=ExtResource("79_vx487")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99685, 2.54388, 4.277)
+
+[node name="AnimatedSprite3D2" parent="." instance=ExtResource("79_vx487")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9997, 2.21539, 11.2564)
+frame_progress = 0.62075
 
 [connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="Siren" to="." method="_on_siren_finished"]

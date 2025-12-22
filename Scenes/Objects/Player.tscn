@@ -58,6 +58,7 @@ animation = &"CalihanAnimations/CalihanPickUP"
 animation = &"CalihanAnimations/CalihanWalk"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pv6mb"]
+graph_offset = Vector2(403.208, -336.647)
 nodes/Idle1/node = SubResource("AnimationNodeAnimation_2kcw7")
 nodes/Idle1/position = Vector2(920, -120)
 nodes/IdleBlend/node = SubResource("AnimationNodeBlend2_x6h86")
@@ -105,7 +106,7 @@ parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Body"]
-transform = Transform3D(0.997818, 0, 0, 0, -0.00344798, -1.35258, 0, 0.771232, -0.104025, 0, -0.562282, -0.493397)
+transform = Transform3D(1.00442, 0, 0, 0, -0.00229461, -1.36429, 0, 0.51325, -0.104926, 0, -0.562282, -0.493397)
 script = ExtResource("2_ilxdd")
 
 [node name="InteractableLight" type="OmniLight3D" parent="CharacterBody3D/Body"]
@@ -114,11 +115,11 @@ visible = false
 light_color = Color(1, 0, 0, 1)
 
 [node name="Step1" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
-transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, -0.162686, -0.922841, -0.984908)
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.00848, -0.162686, -0.922841, -0.33998)
 stream = ExtResource("6_5yqee")
 volume_db = -10.0
 
 [node name="Step2" type="AudioStreamPlayer3D" parent="CharacterBody3D/Body"]
-transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.96114, 0.180242, -0.922841, -0.984908)
+transform = Transform3D(1.16333, 0, 0, 0, 0.751055, 0, 0, 0, 1.00848, 0.180242, -0.922841, -0.33998)
 stream = ExtResource("7_of7b1")
 volume_db = -10.0

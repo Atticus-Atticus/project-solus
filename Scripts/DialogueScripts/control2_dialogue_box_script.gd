@@ -17,12 +17,12 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Would it of been too much of an expense for an actual flight seat?")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Would it of been too much to ask for an actual flight seat?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeed.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: eh, I can't complain too much. They did bolt  it to the floor for me.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Eh, can't complain too much. It is bolted it to the floor.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeed.play()
 

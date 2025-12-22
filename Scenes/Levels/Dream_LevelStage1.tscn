@@ -4604,20 +4604,12 @@ autoplay = true
 [node name="ModelShip" parent="." instance=ExtResource("73_ics5a")]
 transform = Transform3D(0.45489, 0, -0.207545, 0, 0.5, 0, 0.207545, 0, 0.45489, -2.07049, 1.61871, 4.13365)
 
-[node name="AnimatedSprite3D" parent="." instance=ExtResource("75_xg7xk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87234, 2.54388, 4.10432)
-frame_progress = 0.62075
-
-[node name="AnimatedSprite3D2" parent="." instance=ExtResource("75_xg7xk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04349, 2.0341, 11.2564)
-frame_progress = 0.62075
-
 [node name="AnimatedSprite3D3" parent="." instance=ExtResource("75_xg7xk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.054538, 2.04957, 13.5398)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D4" parent="." instance=ExtResource("75_xg7xk")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.79356, 2.07189, -3.14515)
+transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 6.83665, 2.07189, -3.14515)
 frame_progress = 0.62075
 
 [node name="AnimatedSprite3D6" parent="." instance=ExtResource("75_xg7xk")]
@@ -4633,6 +4625,13 @@ transform = Transform3D(1, 0, 0, 0, 2.97917, 0, 0, 0, 1.96954, 2.98377, 1.80227,
 
 [node name="LockedDoorInteractableNode2" parent="." instance=ExtResource("77_vjc7j")]
 transform = Transform3D(1.89904, 0, 0, 0, 2.89598, 0, 0, 0, 1, 9.80095, 1.71451, -4.38108)
+
+[node name="AnimatedSprite3D7" parent="." instance=ExtResource("75_xg7xk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99685, 2.54388, 4.277)
+
+[node name="AnimatedSprite3D8" parent="." instance=ExtResource("75_xg7xk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9997, 2.21539, 11.2564)
+frame_progress = 0.62075
 
 [connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="FlyOver" to="." method="_on_fly_over_finished"]
