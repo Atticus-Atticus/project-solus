@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcj43udyj7ucf"
-path.bptc="res://.godot/imported/Bonnie_3.png-a4bf30901d5db5f451bfb6ff35ed7c20.bptc.ctex"
+uid="uid://bwggwgw4lt7ji"
+path.bptc="res://.godot/imported/Bonnie_4.png-0cbdc8f216118816c8d911790d7fde9c.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d91efcd275f9b85ef769a185ccb4bf9"
+"md5": "bb4fc2dd4a06d40d875fea5966ae2003"
 }
 
 [deps]
 
-source_file="res://Models/Bonnie/Bonnie_3.png"
-dest_files=["res://.godot/imported/Bonnie_3.png-a4bf30901d5db5f451bfb6ff35ed7c20.bptc.ctex"]
+source_file="res://Models/Bonnie/Bonnie_4.png"
+dest_files=["res://.godot/imported/Bonnie_4.png-0cbdc8f216118816c8d911790d7fde9c.bptc.ctex"]
 
 [params]
 
