@@ -2,7 +2,7 @@ extends AnimatedSprite3D
 
 @export var area_path: NodePath        # drag your Area3D here, or leave empty if it's named "Area3D"
 @export var normalize_distance: bool = true  # true: alpha = 1 - d/max_distance, false: alpha = clamp(d,0..1)
-@export var max_distance: float = 2.5  # used when normalize_distance = true
+@export var max_distance: float = 4  # used when normalize_distance = true
 @export var debug: bool = false
 
 func _ready() -> void:
@@ -37,7 +37,3 @@ func _on_dist(d: float) -> void:
 	var c := modulate
 	c.a = alpha
 	modulate = c
-
-	if debug:
-		# print("distance=", d, " alpha=", alpha)
-		pass

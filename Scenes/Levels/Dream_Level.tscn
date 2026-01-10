@@ -7,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_p772u"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_wy8j1"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="3_yx00u"]
-[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="4_bj0bd"]
 [ext_resource type="ArrayMesh" uid="uid://c11kxfxkvxuxk" path="res://Models/Home Models/HomeWallFront.obj" id="4_r46qv"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_s84ir"]
 [ext_resource type="ArrayMesh" uid="uid://buxw7oqqhe7wx" path="res://Models/Home Models/HomeCornerFront1.obj" id="5_81c58"]
 [ext_resource type="ArrayMesh" uid="uid://5jesnubkb3hj" path="res://Models/Home Models/HomeCornerSide1.obj" id="6_lbf2q"]
 [ext_resource type="PackedScene" uid="uid://l4vcveksvjuf" path="res://Models/Sci-Fi City Assets/Household/Kitchen/Microwave.fbx" id="6_qugqs"]
+[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_ikkyk"]
 [ext_resource type="ArrayMesh" uid="uid://cuxbkdh2p7h8r" path="res://Models/Home Models/HomeWallDoorFront.obj" id="7_tbp8t"]
 [ext_resource type="Texture2D" uid="uid://bnp6ykdmruwr3" path="res://Models/Home Models/HomeOutsideWall.png" id="8_lqplp"]
 [ext_resource type="ArrayMesh" uid="uid://c1xlnl8ypia5c" path="res://Models/Home Models/HomeBalcony.obj" id="9_0j560"]
@@ -2667,8 +2667,8 @@ libraries = {
 }
 autoplay = "Light 2"
 
-[node name="Bonnie" parent="." instance=ExtResource("4_bj0bd")]
-transform = Transform3D(0.368183, 0, 0.473753, 0, 0.6, 0, -0.473753, 0, 0.368183, -2.01812, 1.64032, 10.8004)
+[node name="Bonnie2" parent="." instance=ExtResource("7_ikkyk")]
+transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
 
 [node name="Level" type="StaticBody3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

@@ -60,7 +60,6 @@
 [ext_resource type="ArrayMesh" uid="uid://cxb5jsbf6pwur" path="res://Models/Clutter/WallSpaceSuitLocker.obj" id="46_gxcfn"]
 [ext_resource type="ArrayMesh" uid="uid://wrf10arnrol8" path="res://Models/Clutter/Spacesuit Helmet.obj" id="47_gs747"]
 [ext_resource type="PackedScene" uid="uid://ccsfwkaiv2rnj" path="res://Scenes/Objects/database_interactable.tscn" id="51_mvpr6"]
-[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="53_op7uq"]
 [ext_resource type="Texture2D" uid="uid://ddx7l2r8j8evk" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_02_A.png" id="54_6s8v2"]
 [ext_resource type="Texture2D" uid="uid://cq6tiibh8jurs" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_03_A.png" id="55_8twgp"]
 [ext_resource type="Texture2D" uid="uid://c4fh1pkf6dyt5" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_01_A.png" id="56_nplmc"]
@@ -79,6 +78,7 @@
 [ext_resource type="Shader" path="res://Shaders/Glitch.gdshader" id="68_rxu0r"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="69_swly8"]
 [ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="73_y476v"]
+[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="79_s7ggu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
 shader = ExtResource("68_rxu0r")
@@ -3468,9 +3468,6 @@ transform = Transform3D(-1.8, 0, 2.71792e-07, 0, 1.8, 0, -2.71792e-07, 0, -1.8, 
 [node name="DatabaseInteractable2" parent="." instance=ExtResource("51_mvpr6")]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 4.04538, -1.63573, -23.9963)
 
-[node name="Bonnie" parent="." instance=ExtResource("53_op7uq")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.50154, 0.661166, -29.4772)
-
 [node name="SM_Prop_Cables_Ceiling_02" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.614616, 0, -0.788827, 0, 1, 0, 0.788827, 0, -0.614616, 10.4393, 2.66593, -11.333)
 mesh = SubResource("ArrayMesh_2yau6")
@@ -3674,6 +3671,9 @@ offset_top = -2.0
 offset_right = 1922.0
 offset_bottom = 1078.0
 mouse_filter = 2
+
+[node name="Bonnie2" parent="." instance=ExtResource("79_s7ggu")]
+transform = Transform3D(0.699092, 0, 0.388934, 0, 0.8, 0, -0.388934, 0, 0.699092, 5.48416, 0.6852, -29.5691)
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_bp0yw"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_414cb"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_s67xj"]
-[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="4_ikdca"]
 [ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="5_squ5f"]
 [ext_resource type="PackedScene" uid="uid://l4vcveksvjuf" path="res://Models/Sci-Fi City Assets/Household/Kitchen/Microwave.fbx" id="6_uh8t5"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="7_0uhaq"]
+[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_m11f4"]
 [ext_resource type="ArrayMesh" uid="uid://l6pv085t6pdj" path="res://Models/Home Models/HomeWallDoorSide.obj" id="8_0fugm"]
 [ext_resource type="PackedScene" uid="uid://e7n31s7uho6n" path="res://Models/Sci-Fi City Assets/Household/Miscellaneous/Alarm Clock.fbx" id="9_yfx13"]
 [ext_resource type="ArrayMesh" uid="uid://c11kxfxkvxuxk" path="res://Models/Home Models/HomeWallFront.obj" id="10_hu2xj"]
@@ -2777,8 +2777,8 @@ libraries = {
 }
 autoplay = "Light 2"
 
-[node name="Bonnie" parent="." instance=ExtResource("4_ikdca")]
-transform = Transform3D(0.368183, 0, 0.473753, 0, 0.6, 0, -0.473753, 0, 0.368183, -2.01812, 1.64032, 10.8004)
+[node name="Bonnie2" parent="." instance=ExtResource("7_m11f4")]
+transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
 
 [node name="Level" type="StaticBody3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

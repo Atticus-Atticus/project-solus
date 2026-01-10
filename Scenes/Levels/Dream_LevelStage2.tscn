@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_krt71"]
 [ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="4_alsok"]
 [ext_resource type="Texture2D" uid="uid://bagkwhxtxaoe" path="res://Images/DreamFlash2.png" id="4_saf07"]
-[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="5_m224u"]
 [ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="6_vo7l0"]
+[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_iya41"]
 [ext_resource type="PackedScene" uid="uid://l4vcveksvjuf" path="res://Models/Sci-Fi City Assets/Household/Kitchen/Microwave.fbx" id="7_xr2v2"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="8_pxyre"]
 [ext_resource type="ArrayMesh" uid="uid://l6pv085t6pdj" path="res://Models/Home Models/HomeWallDoorSide.obj" id="9_4a84f"]
@@ -2900,8 +2900,8 @@ libraries = {
 }
 autoplay = "Light 2"
 
-[node name="Bonnie" parent="." instance=ExtResource("5_m224u")]
-transform = Transform3D(0.368183, 0, 0.473753, 0, 0.6, 0, -0.473753, 0, 0.368183, -2.01812, 1.64032, 10.8004)
+[node name="Bonnie2" parent="." instance=ExtResource("7_iya41")]
+transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
 
 [node name="Level" type="StaticBody3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
