@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cwaoogya1u84"]
+[gd_scene load_steps=22 format=3 uid="uid://cwaoogya1u84"]
 
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_4apuk"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_37eoc"]
@@ -13,12 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="8_uqu75"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="10_81kxu"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="11_rd3md"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_esjad"]
-line_spacing = 20.0
-font = ExtResource("1_37eoc")
-font_size = 35
-font_color = Color(0, 1, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_srlce"]
 line_spacing = 20.0
@@ -109,42 +103,6 @@ offset_top = 846.0
 offset_right = 120.0
 offset_bottom = 846.0
 
-[node name="StartUpText" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 67.0
-offset_top = -2.0
-offset_right = 1767.0
-offset_bottom = 2.0
-grow_vertical = 2
-text = "
-> Generic BIOS v9.07 (c) Copyright 2054 - 2578 Generic Computers Ltd.
-> 
-> Checking Memory... 64GB OK + 24GB Extended OK
-> 
-> Detecting Primary Master... SD-512 4TB
-> Detecting Primary Slave... None
-> Detecting Secondary Master... CD-ROM
-> Detecting Secondary Slave... None
->
-> Loading BLACKBOX READER...
->
-> **ERROR: BLACKBOX FILES CORRUPT OR DAMAGED**
-> Attempting automatic recovery...
->
-> Restoring COMMAND.COM... OK
-> Restoring CONFIG.SYS... OK
-> 
-> Integrity check... PASSED
->
-> Booting PROJECT SOLUS...
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
-label_settings = SubResource("LabelSettings_esjad")
-visible_characters = 0
-visible_ratio = 0.0
-
 [node name="Label" type="Label" parent="."]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -158,7 +116,7 @@ grow_vertical = 2
 text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
 >
->
+> Welcome \"USER\" to...
 >
 >
 >                                                                           v0.2.1

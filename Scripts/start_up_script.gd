@@ -6,6 +6,7 @@ extends Control
 func _ready() -> void:
 	$AnimationPlayer.play("StartUp")
 	$StartUpSFX.play()
+	$Login.hide()
 
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 

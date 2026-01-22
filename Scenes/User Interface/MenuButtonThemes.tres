@@ -39,4 +39,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_scm4j")
 Button/styles/pressed = SubResource("StyleBoxFlat_cg3c1")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_wgmb6")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_irset")
+LineEdit/colors/font_color = Color(0.4, 1, 0.941176, 1)
+LineEdit/font_sizes/font_size = 25
+LineEdit/fonts/font = ExtResource("1_mtgfi")
 Panel/styles/panel = SubResource("StyleBoxFlat_ydd4n")

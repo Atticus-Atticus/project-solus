@@ -1,4 +1,16 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://jvpocjkos3ae"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://jvpocjkos3ae"]
+
+[sub_resource type="AudioEffectEQ10" id="AudioEffectEQ10_f5cqx"]
+resource_name = "EQ10"
+band_db/31_hz = -24.0
+band_db/62_hz = -18.0
+band_db/125_hz = -8.0
+band_db/2000_hz = -24.0
+band_db/4000_hz = -6.0
+band_db/8000_hz = -14.0
+band_db/16000_hz = -24.0
 
 [resource]
 bus/0/volume_db = -10.5185
+bus/0/effect/0/effect = SubResource("AudioEffectEQ10_f5cqx")
+bus/0/effect/0/enabled = true

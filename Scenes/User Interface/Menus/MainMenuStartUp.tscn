@@ -1,9 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://867we3yx00"]
+[gd_scene load_steps=24 format=3 uid="uid://867we3yx00"]
 
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_1ahx7"]
 [ext_resource type="Script" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_yjw5q"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_8auyq"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="4_xa31x"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_v0pky"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="6_1aj7i"]
 [ext_resource type="AudioStream" uid="uid://dhw6gaaote7jm" path="res://Audio/StartScreenBootUp.wav" id="6_3p0yw"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_30hjv"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_wxj22"]
@@ -28,6 +31,91 @@ font = ExtResource("2_yjw5q")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
 
+[sub_resource type="Animation" id="Animation_0a7rf"]
+resource_name = "Show"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 384), Vector2(1348, 384)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, 501), Vector2(576, 501), Vector2(1344, 501)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, 618), Vector2(576, 618), Vector2(1348, 618)]
+}
+
+[sub_resource type="Animation" id="Animation_otn71"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 384)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 501)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 618)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xqpr1"]
+_data = {
+"RESET": SubResource("Animation_otn71"),
+"Show": SubResource("Animation_0a7rf")
+}
+
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
 tracks/0/type = "value"
@@ -45,19 +133,19 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("StartUpText:position")
+tracks/1/path = NodePath("Label:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(67, -2)]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
-length = 8.2667
+length = 13.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -65,22 +153,22 @@ tracks/0/path = NodePath("StartUpText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.133333, 6.76667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.133333, 1, 1.5, 1.73333, 3.06667, 3.3, 5.13333, 5.36667, 6.86667, 7.33333, 9.1, 9.33333, 9.73333, 9.86667, 10.1667, 10.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 0.138365, 0.182627, 0.182627, 0.303719, 0.303719, 0.475448, 0.475448, 0.622062, 0.622062, 0.818441, 0.818441, 0.870315, 0.870315, 0.915206, 0.915206, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("StartUpText:position")
+tracks/1/path = NodePath("Label:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 8.26667),
+"times": PackedFloat32Array(1, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(67, -2), Vector2(67, -2)]
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
@@ -129,33 +217,31 @@ offset_right = 1767.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 > 
-> Checking Memory... 64GB OK + 24GB Extended OK
+> Checking Memory... 64TB OK + 24TB Extended
 > 
-> Detecting IDE Primary Controller... SD-512 750GB
+> Detecting IDE Primary Controller... SD-512 750TB
 > Detecting IDE Primary Worker... None
 > Detecting IDE Secondary Controller... CD-ROM
 > Detecting IDE Secondary Worker... None
 >
-> Loading BLACKBOX READER...
+> Loading GenericOS v11.6...
 >
-> **ERROR: BLACKBOX FILES CORRUPT OR DAMAGED**
+> **ERROR: OS FILES CORRUPT OR DAMAGED**
 > Attempting automatic recovery...
->
 > Restoring COMMAND.COM... OK
 > Restoring CONFIG.SYS... OK
-> 
 > Integrity check... PASSED
 >
-> Booting PROJECT SOLUS...
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+> Booting NeuroBlackboxReader...
+>
+>"
 label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Label" type="Label" parent="."]
-visible = false
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -166,15 +252,7 @@ offset_right = 425.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> 
->
->
->
->
->                                                                           v0.1
-> 	 (demo)                                                         By Company
->
-> Please select a program to run...
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 >
 >
 >
@@ -186,8 +264,18 @@ text = "
 >
 >
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
 label_settings = SubResource("LabelSettings_srlce")
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="TitleLabel" type="Label" parent="."]
 visible = false
@@ -208,11 +296,169 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
+[node name="Login" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Login"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 556.0
+offset_top = 364.0
+offset_right = 1324.0
+offset_bottom = 676.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_xa31x")
+
+[node name="Label" type="Label" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -234.5
+offset_top = 23.0
+offset_right = 234.5
+offset_bottom = 71.0
+grow_horizontal = 2
+text = "Please Enter Login Details"
+label_settings = ExtResource("5_v0pky")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -53.0
+offset_right = 260.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Please Do NOT use personal information."
+label_settings = ExtResource("6_1aj7i")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label2" type="Label" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -38.0
+offset_right = 469.0
+offset_bottom = 38.0
+grow_vertical = 2
+text = "Username:
+Password:"
+label_settings = ExtResource("5_v0pky")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit User" type="LineEdit" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -38.0
+offset_right = 188.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_xa31x")
+max_length = 16
+
+[node name="LineEdit Pass" type="LineEdit" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = 7.0
+offset_right = 188.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_xa31x")
+max_length = 16
+
+[node name="EnterButton" type="Button" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = -78.0
+offset_right = 265.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "> Enter <"
+
+[node name="ResetButton" type="Button" parent="Login/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -78.0
+offset_right = -80.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "> Reset Login <"
+
+[node name="ColorRect" type="ColorRect" parent="Login"]
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 1348.0
+offset_bottom = 501.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Login"]
+offset_left = 576.0
+offset_top = 501.0
+offset_right = 1348.0
+offset_bottom = 618.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Login"]
+offset_left = 576.0
+offset_top = 618.0
+offset_right = 1348.0
+offset_bottom = 735.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="AnimationPlayerLogin" type="AnimationPlayer" parent="Login"]
+libraries = {
+"": SubResource("AnimationLibrary_xqpr1")
+}
+speed_scale = 0.7
+
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
 position = Vector2(60, 1367)
 texture = ExtResource("4_8auyq")
 
 [node name="CRT Shader" parent="." instance=ExtResource("8_30hjv")]
+visible = false
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
@@ -230,7 +476,7 @@ mouse_filter = 2
 libraries = {
 "": SubResource("AnimationLibrary_8as7b")
 }
-speed_scale = 0.8
+speed_scale = 0.7
 script = ExtResource("10_20jfy")
 
 [node name="StartUpSFX" type="AudioStreamPlayer" parent="."]

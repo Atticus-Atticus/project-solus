@@ -1,0 +1,224 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq5n64oul5qwe"]
+
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_j661u"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="2_7avuq"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="3_o5vqo"]
+
+[sub_resource type="Animation" id="Animation_feean"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 384)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 497)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 604)]
+}
+
+[sub_resource type="Animation" id="Animation_mywpp"]
+resource_name = "Start"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 384), Vector2(1348, 384)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, 497), Vector2(576, 497), Vector2(1348, 501)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, 604), Vector2(576, 604), Vector2(1348, 604)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_otayo"]
+_data = {
+"RESET": SubResource("Animation_feean"),
+"Start": SubResource("Animation_mywpp")
+}
+
+[node name="LoginNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -156.0
+offset_right = 384.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j661u")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -234.5
+offset_top = 23.0
+offset_right = 234.5
+offset_bottom = 71.0
+grow_horizontal = 2
+text = "Please Enter Login Details"
+label_settings = ExtResource("2_7avuq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -53.0
+offset_right = 260.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Please Do NOT use personal information."
+label_settings = ExtResource("3_o5vqo")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -38.0
+offset_right = 469.0
+offset_bottom = 38.0
+grow_vertical = 2
+text = "Username:
+Password:"
+label_settings = ExtResource("2_7avuq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit User" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -38.0
+offset_right = 188.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j661u")
+max_length = 16
+
+[node name="LineEdit Pass" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = 7.0
+offset_right = 188.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j661u")
+max_length = 16
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 1348.0
+offset_bottom = 501.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 497.0
+offset_right = 1348.0
+offset_bottom = 614.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 604.0
+offset_right = 1348.0
+offset_bottom = 721.0
+color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_otayo")
+}
+autoplay = "Start"
+speed_scale = 0.7
