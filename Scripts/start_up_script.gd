@@ -12,3 +12,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	cursor.position = get_global_mouse_position()
+
+
+func _on_start_up_sfx_finished() -> void:
+	$MenuSFX.play()

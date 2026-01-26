@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://867we3yx00"]
+[gd_scene load_steps=25 format=3 uid="uid://867we3yx00"]
 
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_1ahx7"]
 [ext_resource type="Script" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_wxj22"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="9_fe3fc"]
 [ext_resource type="Script" path="res://Scripts/StartUpScript.gd" id="10_20jfy"]
+[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="12_62ken"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
 line_spacing = 20.0
@@ -30,6 +31,45 @@ line_spacing = 0.0
 font = ExtResource("2_yjw5q")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Animation" id="Animation_otn71"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 384)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 501)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 618)]
+}
 
 [sub_resource type="Animation" id="Animation_0a7rf"]
 resource_name = "Show"
@@ -69,45 +109,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(576, 618), Vector2(576, 618), Vector2(1348, 618)]
-}
-
-[sub_resource type="Animation" id="Animation_otn71"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 384)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 501)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 618)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xqpr1"]
@@ -344,7 +345,7 @@ offset_right = 260.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Please Do NOT use personal information."
+text = "Please Do NOT use personal information. Access Keys are NOT saved."
 label_settings = ExtResource("6_1aj7i")
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -355,11 +356,11 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_top = -38.0
-offset_right = 469.0
+offset_right = 426.0
 offset_bottom = 38.0
 grow_vertical = 2
-text = "Username:
-Password:"
+text = "  Username:
+Access Key:"
 label_settings = ExtResource("5_v0pky")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -395,6 +396,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_xa31x")
 max_length = 16
+secret = true
 
 [node name="EnterButton" type="Button" parent="Login/Panel"]
 layout_mode = 1
@@ -427,6 +429,8 @@ grow_vertical = 0
 text = "> Reset Login <"
 
 [node name="ColorRect" type="ColorRect" parent="Login"]
+visible = false
+layout_mode = 0
 offset_left = 576.0
 offset_top = 384.0
 offset_right = 1348.0
@@ -434,6 +438,8 @@ offset_bottom = 501.0
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Login"]
+visible = false
+layout_mode = 0
 offset_left = 576.0
 offset_top = 501.0
 offset_right = 1348.0
@@ -441,6 +447,8 @@ offset_bottom = 618.0
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Login"]
+visible = false
+layout_mode = 0
 offset_left = 576.0
 offset_top = 618.0
 offset_right = 1348.0
@@ -482,6 +490,9 @@ script = ExtResource("10_20jfy")
 [node name="StartUpSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_3p0yw")
 
+[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_62ken")
+
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_wxj22")
 
@@ -489,3 +500,4 @@ stream = ExtResource("8_wxj22")
 environment = SubResource("Environment_e55cl")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
+[connection signal="finished" from="StartUpSFX" to="." method="_on_start_up_sfx_finished"]
