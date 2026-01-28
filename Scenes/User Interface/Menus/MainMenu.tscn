@@ -116,10 +116,10 @@ grow_vertical = 2
 text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
 >
-> Welcome \"USER\" to...
+> 
 >
 >
->                                                                           v0.2.1
+>                                                                           v0.3
 > 	 (Alpha Build)
 >
 >
@@ -135,6 +135,19 @@ text = "
 >
 >
 This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="WelcomeLabel" type="Label" parent="."]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 107.0
+offset_top = 142.0
+offset_right = 507.0
+offset_bottom = -910.0
+grow_vertical = 2
+text = "Welcome USER to..."
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="TitleLabel" type="Label" parent="."]

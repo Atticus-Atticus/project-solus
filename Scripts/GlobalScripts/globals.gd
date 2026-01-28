@@ -1,5 +1,6 @@
 extends Node
 
+var Username: String = "USER"
 
 var Compass = true
 
