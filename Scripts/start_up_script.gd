@@ -5,14 +5,32 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimationPlayer.play("StartUp")
-	$StartUpSFX.play()
 	$Login.hide()
+	cursor.hide()
 
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _process(delta: float) -> void:
 	cursor.position = get_global_mouse_position()
+
+var has_started := false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if has_started:
+		return
+		
+	if event is InputEventMouseMotion:
+		return
+		
+	if event.is_pressed():
+		has_started = true
+		cursor.show()
+		_start_up()
+
+func _start_up():
+	$"Blank Background".hide()
+	$AnimationPlayer.play("StartUp")
+	$StartUpSFX.play()
 
 
 func _on_start_up_sfx_finished() -> void:

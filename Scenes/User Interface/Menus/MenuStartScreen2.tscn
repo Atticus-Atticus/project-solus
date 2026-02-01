@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_raa3i"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_t62y8"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_1xurr"]
-[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="4_7i76o"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="4_7eaqs"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_5hu2x"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="5_n6dy8"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="5_pb0i1"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_2dyxb"]
@@ -16,17 +17,10 @@ font = ExtResource("3_t62y8")
 font_size = 35
 font_color = Color(0.4, 1, 0.941176, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
-line_spacing = 20.0
+[sub_resource type="LabelSettings" id="LabelSettings_gdsk5"]
 font = ExtResource("3_t62y8")
-font_size = 35
-font_color = Color(0, 1, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
-line_spacing = 0.0
-font = ExtResource("3_t62y8")
-font_size = 34
-font_color = Color(0, 1, 0, 1)
+font_size = 41
+font_color = Color(0.4, 1, 0.941176, 1)
 
 [sub_resource type="Animation" id="Animation_rt7fl"]
 resource_name = "FlashingSquare"
@@ -90,7 +84,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(106, 182)]
+"values": [Vector2(119, 291)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -102,7 +96,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(106, 289)]
+"values": [Vector2(119, 472)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -114,12 +108,12 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(106, 395)]
+"values": [Vector2(119, 653)]
 }
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
-length = 7.0
+length = 3.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -127,10 +121,10 @@ tracks/0/path = NodePath("StartUpText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 1.8, 7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.6, 0.666667, 0.766667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.16, 0.16, 1.0]
+"values": [0.3, 0.3, 0.333333, 0.333333, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -139,10 +133,10 @@ tracks/1/path = NodePath("ColorRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 1.4),
+"times": PackedFloat32Array(0, 2.5, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(106, 182), Vector2(106, 182), Vector2(887, 182)]
+"values": [Vector2(119, 360), Vector2(119, 360), Vector2(1155, 360)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -151,10 +145,10 @@ tracks/2/path = NodePath("ColorRect2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.2, 1.6),
+"times": PackedFloat32Array(0, 2.7, 3.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(106, 289), Vector2(106, 289), Vector2(887, 289)]
+"values": [Vector2(119, 569), Vector2(119, 569), Vector2(1155, 569)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -163,10 +157,10 @@ tracks/3/path = NodePath("ColorRect3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.4, 1.8),
+"times": PackedFloat32Array(0, 2.9, 3.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(106, 395), Vector2(106, 395), Vector2(894, 395)]
+"values": [Vector2(119, 739), Vector2(119, 739), Vector2(1155, 739)]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
@@ -217,23 +211,23 @@ grow_vertical = 2
 text = "
 > 
 > 
-> Please select a control method...
 >
+> Accessing NBB-Archive... DONE
 >
+> Tutorial and Calibration highly recommended
 >
 >
 > 
 >
 >
 >
-> Use 'W' to move away from Camera. Use 'S' to move towards Camera.
-> Use 'A' to move Left. Use 'D' to move Right.
-> Use 'E' to interact with objects that pulse blue.
+> 
+> 
+> 
 >
-> Objects that glow green will progress the subject's memory.
-> Please ignore any hallucinatory overalls that may be present.
+> 
+> 
 >
-> Press ENTER to continue...
 >
 "
 label_settings = SubResource("LabelSettings_esjad")
@@ -271,99 +265,288 @@ text = "
 > 
 > 
 > 
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
 label_settings = SubResource("LabelSettings_esjad")
 
-[node name="Label" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 67.0
-offset_top = -2.0
-offset_right = 425.0
-offset_bottom = 2.0
-grow_vertical = 2
-text = "
-> 
->
->
->
->
->                                                                           v0.1
-> 	 (demo)                                                         By Company
->
-> Please select a program to run...
->
->
->
->
->
->
->
->
->
->
->
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
-label_settings = SubResource("LabelSettings_srlce")
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 360.0
+offset_right = 1011.0
+offset_bottom = 959.0
+theme = ExtResource("4_7eaqs")
 
-[node name="TitleLabel" type="Label" parent="."]
-visible = false
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 132.0
-offset_top = 171.0
-offset_right = 1608.0
-offset_bottom = -747.0
-grow_vertical = 2
-text = "    ____                  _              __     _____         __            
-   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
-  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
- / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
-/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
-                   /___/                                                    "
-label_settings = SubResource("LabelSettings_2r0ac")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 37.0
+offset_right = 290.0
+offset_bottom = 65.0
+grow_horizontal = 2
+text = "Please choose a file to view."
+label_settings = SubResource("LabelSettings_gdsk5")
+horizontal_alignment = 1
 
-[node name="ChangeInputNode" parent="." instance=ExtResource("4_7i76o")]
+[node name="Label8" type="Label" parent="Panel"]
 layout_mode = 1
-offset_left = 110.0
-offset_top = 185.0
-offset_right = -1093.0
-offset_bottom = -581.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -422.0
+offset_top = 122.0
+offset_right = -305.0
+offset_bottom = 154.0
+grow_horizontal = 2
+text = "File:"
+label_settings = SubResource("LabelSettings_gdsk5")
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 122.0
+offset_right = 310.0
+offset_bottom = 154.0
+grow_horizontal = 2
+text = "Status:"
+label_settings = SubResource("LabelSettings_gdsk5")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 454.0
+offset_right = 413.0
+offset_bottom = 504.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 259.0
+offset_right = 413.0
+offset_bottom = 309.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 209.0
+offset_right = 413.0
+offset_bottom = 259.0
+grow_horizontal = 2
+text = "Ready"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 309.0
+offset_right = 413.0
+offset_bottom = 359.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 359.0
+offset_right = 413.0
+offset_bottom = 409.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 404.0
+offset_right = 413.0
+offset_bottom = 454.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 504.0
+offset_right = 413.0
+offset_bottom = 554.0
+grow_horizontal = 2
+text = "Decompiling"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial Finished" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 159.0
+offset_right = 413.0
+offset_bottom = 209.0
+grow_horizontal = 2
+text = "Ready"
+label_settings = ExtResource("5_5hu2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TutorialButton" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 159.0
+offset_right = 593.0
+offset_bottom = 209.0
+text = "> Tutorial and Calibartion <"
+alignment = 0
+
+[node name="Story1Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 205.0
+offset_right = 593.0
+offset_bottom = 255.0
+text = "> Subject 1: Calihan Lonan <"
+alignment = 0
+
+[node name="Story2Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 254.0
+offset_right = 639.0
+offset_bottom = 304.0
+disabled = true
+text = "> Subject 2: Cadet Amy Rayen <"
+alignment = 0
+
+[node name="Story3Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 304.0
+offset_right = 593.0
+offset_bottom = 354.0
+disabled = true
+text = "> Subject data unavailable <"
+alignment = 0
+
+[node name="Story4Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 354.0
+offset_right = 593.0
+offset_bottom = 404.0
+disabled = true
+text = "> Subject data unavailable <"
+alignment = 0
+
+[node name="Story5Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 404.0
+offset_right = 593.0
+offset_bottom = 454.0
+disabled = true
+text = "> Subject data unavailable <"
+alignment = 0
+
+[node name="Story6Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 454.0
+offset_right = 593.0
+offset_bottom = 504.0
+disabled = true
+text = "> Subject data unavailable <"
+alignment = 0
+
+[node name="Story7Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 504.0
+offset_right = 593.0
+offset_bottom = 554.0
+disabled = true
+text = "> Subject data unavailable <"
+alignment = 0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 182.0
-offset_right = 878.0
-offset_bottom = 299.0
+offset_left = 119.0
+offset_top = 291.0
+offset_right = 1011.0
+offset_bottom = 500.0
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 289.0
-offset_right = 878.0
-offset_bottom = 406.0
+offset_left = 119.0
+offset_top = 472.0
+offset_right = 1011.0
+offset_bottom = 653.0
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 395.0
-offset_right = 878.0
-offset_bottom = 512.0
+offset_left = 119.0
+offset_top = 653.0
+offset_right = 1011.0
+offset_bottom = 897.0
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 628.0
-offset_top = 910.0
-offset_right = 668.0
-offset_bottom = 950.0
+offset_left = 969.0
+offset_top = 286.0
+offset_right = 1009.0
+offset_bottom = 326.0
 scale = Vector2(0.48, 0.64)
 color = Color(0.4, 1, 0.941176, 1)
 

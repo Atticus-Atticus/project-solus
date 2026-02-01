@@ -4,6 +4,8 @@ var Username: String = "USER"
 
 var Compass = true
 
+var TutorialComplete = false
+
 var Lore1 = 0
 var lore2 = 0
 var lore7 = 0

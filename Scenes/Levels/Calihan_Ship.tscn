@@ -1982,6 +1982,7 @@ offset_bottom = 1076.0
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1919.0
 offset_bottom = 1078.0
 color = Color(0, 0, 0, 0)

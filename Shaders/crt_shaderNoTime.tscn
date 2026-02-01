@@ -2,23 +2,23 @@
 
 [ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="4_4wgej"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdcnx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4j2s"]
 shader = ExtResource("4_4wgej")
 shader_parameter/overlay = false
-shader_parameter/resolution = Vector2(1920, 1080)
-shader_parameter/brightness = 1.4
-shader_parameter/scanlines_opacity = 0.063
+shader_parameter/resolution = Vector2(1280, 720)
+shader_parameter/brightness = 1.2
+shader_parameter/scanlines_opacity = 0.01
 shader_parameter/scanlines_width = 0.5
 shader_parameter/grille_opacity = 0.0
 shader_parameter/roll = false
-shader_parameter/roll_speed = 1.0
-shader_parameter/roll_size = 4.494
-shader_parameter/roll_variation = 0.1
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 9.42
+shader_parameter/roll_variation = 4.453
 shader_parameter/distort_intensity = 0.05
 shader_parameter/aberration = 0.01
-shader_parameter/noise_opacity = 0.163
+shader_parameter/noise_opacity = 0.047
 shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.134
+shader_parameter/static_noise_intensity = 0.054
 shader_parameter/pixelate = true
 shader_parameter/discolor = false
 shader_parameter/warp_amount = 0.365
@@ -39,10 +39,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_qdcnx")
+material = SubResource("ShaderMaterial_f4j2s")
 layout_mode = 0
-offset_left = -2.0
-offset_top = 2.0
-offset_right = 1918.0
-offset_bottom = 1082.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2

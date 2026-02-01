@@ -134,7 +134,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="WelcomeLabel" type="Label" parent="."]
@@ -174,7 +174,7 @@ anchors_preset = -1
 anchor_left = 0.0558542
 anchor_top = -0.037963
 anchor_right = 0.191167
-anchor_bottom = 1.21296
+anchor_bottom = 1.21759
 offset_left = -0.240005
 offset_top = 515.0
 offset_right = 139.96
@@ -194,19 +194,19 @@ theme_override_constants/separation = 21
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Run Program"
+text = "> BEGIN <"
 alignment = 0
 script = ExtResource("3_pbbw1")
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Credits"
+text = "> CREDITS <"
 alignment = 0
 script = ExtResource("6_n0anp")
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Exit Program"
+text = "> EXIT PROGRAM <"
 alignment = 0
 script = ExtResource("5_0nmoh")
 

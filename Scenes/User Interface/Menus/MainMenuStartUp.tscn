@@ -1,6 +1,5 @@
-[gd_scene load_steps=25 format=3 uid="uid://867we3yx00"]
+[gd_scene load_steps=30 format=3 uid="uid://867we3yx00"]
 
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_1ahx7"]
 [ext_resource type="Script" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_yjw5q"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_8auyq"]
@@ -9,10 +8,51 @@
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="6_1aj7i"]
 [ext_resource type="AudioStream" uid="uid://dhw6gaaote7jm" path="res://Audio/StartScreenBootUp.wav" id="6_3p0yw"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_30hjv"]
+[ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="8_r2snd"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_wxj22"]
-[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="9_fe3fc"]
 [ext_resource type="Script" path="res://Scripts/StartUpScript.gd" id="10_20jfy"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="12_62ken"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ejov"]
+font = ExtResource("2_yjw5q")
+font_size = 20
+font_color = Color(1, 1, 1, 0.65098)
+
+[sub_resource type="Animation" id="Animation_xauk4"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.65098)]
+}
+
+[sub_resource type="Animation" id="Animation_hj2xq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.65098)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kac2"]
+_data = {
+"FadeIn": SubResource("Animation_xauk4"),
+"RESET": SubResource("Animation_hj2xq")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
 line_spacing = 20.0
@@ -117,6 +157,30 @@ _data = {
 "Show": SubResource("Animation_0a7rf")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxgho"]
+shader = ExtResource("8_r2snd")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1280, 720)
+shader_parameter/brightness = 1.2
+shader_parameter/scanlines_opacity = 0.01
+shader_parameter/scanlines_width = 0.5
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 9.42
+shader_parameter/roll_variation = 4.453
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01
+shader_parameter/noise_opacity = 0.047
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 1.0
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.365
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
 tracks/0/type = "value"
@@ -143,10 +207,58 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CRT Shader:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CRT:material:shader_parameter/static_noise_intensity")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CRT:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
-length = 13.0
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -154,10 +266,10 @@ tracks/0/path = NodePath("StartUpText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.133333, 1, 1.5, 1.73333, 3.06667, 3.3, 5.13333, 5.36667, 6.86667, 7.33333, 9.1, 9.33333, 9.73333, 9.86667, 10.1667, 10.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1.5, 2.36667, 2.73333, 2.83333, 3.13333, 3.23333, 4.3, 4.4, 5.26667, 5.36667, 6.13333, 6.23333, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.138365, 0.182627, 0.182627, 0.303719, 0.303719, 0.475448, 0.475448, 0.622062, 0.622062, 0.818441, 0.818441, 0.870315, 0.870315, 0.915206, 0.915206, 1.0]
+"values": [0.0, 0.138365, 0.206552, 0.206552, 0.264141, 0.264141, 0.47, 0.47, 0.646667, 0.646667, 0.81, 0.81, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -166,21 +278,62 @@ tracks/1/path = NodePath("Label:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1, 1.5),
+"times": PackedFloat32Array(2.36667, 2.86667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CRT:material:shader_parameter/static_noise_intensity")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.06]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CRT:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
 resource_name = "new_animation"
 length = 5.0
 
+[sub_resource type="Animation" id="Animation_vi7bc"]
+resource_name = "TurnOn"
+length = 5.0
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
 _data = {
 "RESET": SubResource("Animation_nbo6e"),
 "StartUp": SubResource("Animation_16u6q"),
-"Title": SubResource("Animation_gjvee")
+"Title": SubResource("Animation_gjvee"),
+"TurnOn": SubResource("Animation_vi7bc")
 }
 
 [sub_resource type="Environment" id="Environment_e55cl"]
@@ -202,10 +355,52 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kejyf")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(967.75, 550.25)
-scale = Vector2(1.65287, 1.64971)
-texture = ExtResource("1_1ahx7")
+[node name="Blank Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Blank Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -11.5
+offset_right = 64.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press any key."
+label_settings = SubResource("LabelSettings_7ejov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Blank Background"]
+libraries = {
+"": SubResource("AnimationLibrary_8kac2")
+}
+autoplay = "FadeIn"
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="StartUpText" type="Label" parent="."]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -220,24 +415,24 @@ grow_vertical = 2
 text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 > 
-> Checking Memory... 64TB OK + 24TB Extended
+> Initialising System Core...
+>
+> Checking Quantum Memory...  128TB OK + 32TB Extended
+> Syncing Coalition Atomic Clock... PASSED
 > 
-> Detecting IDE Primary Controller... SD-512 750TB
-> Detecting IDE Primary Worker... None
-> Detecting IDE Secondary Controller... CD-ROM
-> Detecting IDE Secondary Worker... None
->
+> Detecting Primary Data Controller...  QD-512 1024TB
+> Detecting Primary Worker Node... NONE
+> Detecting Secondary Data Controller...  NBB-Archive
+> Detecting Secondary Worker Node... NONE
+> 
+> Loading System Drivers... COMPLETE
 > Loading GenericOS v11.6...
+> 
+> Running NeuroBlackBoxReader.exe...
+> 
+> Loading GUI...
 >
-> **ERROR: OS FILES CORRUPT OR DAMAGED**
-> Attempting automatic recovery...
-> Restoring COMMAND.COM... OK
-> Restoring CONFIG.SYS... OK
-> Integrity check... PASSED
->
-> Booting NeuroBlackboxReader...
->
->"
+> "
 label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
@@ -298,6 +493,7 @@ text = "    ____                  _              __     _____         __
 label_settings = SubResource("LabelSettings_2r0ac")
 
 [node name="Login" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -448,6 +644,7 @@ position = Vector2(60, 1367)
 texture = ExtResource("4_8auyq")
 
 [node name="CRT Shader" parent="." instance=ExtResource("8_30hjv")]
+visible = false
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
@@ -456,9 +653,12 @@ offset_right = 398.0
 offset_bottom = 139.0
 mouse_filter = 2
 
-[node name="CRT Shader2" parent="." instance=ExtResource("9_fe3fc")]
+[node name="CRT" type="ColorRect" parent="."]
 visible = false
-layout_mode = 1
+material = SubResource("ShaderMaterial_uxgho")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
