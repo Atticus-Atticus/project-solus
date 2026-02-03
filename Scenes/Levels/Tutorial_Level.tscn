@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqgtb6xpdhjmr"]
+
+[ext_resource type="Script" path="res://Scripts/tutorial_level_script.gd" id="1_xmmdp"]
+[ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_pi301"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_d1j3b"]
+[ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="4_8laqr"]
+[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="5_cikgm"]
+[ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="6_vekju"]
+[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_n6ybd"]
+[ext_resource type="PackedScene" uid="uid://c4e6t6j7sf0tn" path="res://Scenes/Objects/CameraObject.tscn" id="46_5t6ra"]
+[ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="47_77jew"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="79_523mh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbd1m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_th3uv"]
+
+[node name="DreamLevelNode" type="Node3D"]
+script = ExtResource("1_xmmdp")
+
+[node name="CRT Shader" parent="." instance=ExtResource("2_pi301")]
+
+[node name="PointerNode" parent="." instance=ExtResource("3_d1j3b")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_8laqr")]
+visible = false
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+position = Vector2(60, 1367)
+texture = ExtResource("5_cikgm")
+
+[node name="Player" parent="." instance=ExtResource("6_vekju")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.67326, 1.59873, -1.67291)
+
+[node name="Bonnie2" parent="." instance=ExtResource("7_n6ybd")]
+transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
+
+[node name="CameraMain" parent="." instance=ExtResource("46_5t6ra")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.173, 3.6, 5.007)
+
+[node name="CameraTrigger" parent="CameraMain" instance=ExtResource("47_77jew")]
+transform = Transform3D(39.6113, 0, 0, 0, 16.006, 0, 0, 0, 46.5815, 17.8589, -14.7982, -21.829)
+
+[node name="CameraMain2" parent="." instance=ExtResource("46_5t6ra")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.241, 3.6, 13.497)
+
+[node name="CameraTrigger" parent="CameraMain2" instance=ExtResource("47_77jew")]
+transform = Transform3D(30.1847, 0, 0, 0, 16.006, 0, 0, 0, 60.5241, 12.1807, -11.3215, -7.95291)
+
+[node name="CameraMain3" parent="." instance=ExtResource("46_5t6ra")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 6.32, 3.6, 4.881)
+
+[node name="CameraTrigger" parent="CameraMain3" instance=ExtResource("47_77jew")]
+transform = Transform3D(30.6953, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, 13.4196, -11.4277, -19.5361)
+
+[node name="CameraMain4" parent="." instance=ExtResource("46_5t6ra")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.37227, 3.43906, 3.52265)
+
+[node name="CameraTrigger" parent="CameraMain4" instance=ExtResource("47_77jew")]
+transform = Transform3D(15.6412, 0, 0, 0, 16.006, 0, 0, 0, 35.2117, -5.67344, -7.97324, -18.7169)
+
+[node name="AnimatedSprite3D" parent="." instance=ExtResource("79_523mh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99685, 2.54388, 4.277)
+
+[node name="Level" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level"]
+transform = Transform3D(19.2398, 0, 0, 0, 1, 0, 0, 0, 18.8832, 0, -0.261439, 0)
+shape = SubResource("BoxShape3D_mbd1m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/CollisionShape3D"]
+mesh = SubResource("BoxMesh_th3uv")
+skeleton = NodePath("../..")

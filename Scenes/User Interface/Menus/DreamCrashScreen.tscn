@@ -245,7 +245,7 @@ text = "
 > 
 > 
 > 
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
 label_settings = SubResource("LabelSettings_esjad")
 
 [node name="Label" type="Label" parent="."]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_bw4qf"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_u56vv"]
 [ext_resource type="PackedScene" uid="uid://dycxml7xdprl3" path="res://Models/CutscenePlayer/Cutscene1.tscn" id="4_nxlvy"]
-[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://bonnie.tscn" id="5_wku1e"]
+[ext_resource type="PackedScene" uid="uid://b61e0kdxnwmta" path="res://The Attic/bonnie.tscn" id="5_wku1e"]
 [ext_resource type="ArrayMesh" uid="uid://dw07jucg4tmjp" path="res://Models/Home Models/HomeMid.obj" id="6_4ygme"]
 [ext_resource type="PackedScene" uid="uid://l4vcveksvjuf" path="res://Models/Sci-Fi City Assets/Household/Kitchen/Microwave.fbx" id="7_q0bcd"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="8_2648i"]
@@ -104,7 +104,6 @@ sky_material = SubResource("ProceduralSkyMaterial_hlw1n")
 [sub_resource type="Environment" id="Environment_48plf"]
 background_mode = 2
 sky = SubResource("Sky_vqt42")
-sky_rotation = Vector3(0.10472, -1.58476, 0.10472)
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
@@ -2415,7 +2414,7 @@ visible = false
 [node name="CRT Shader" parent="." instance=ExtResource("2_bw4qf")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.332591, 0.478962, -0.81239, -0.577144, 0.577907, 0.576999, 0.745847, 0.660771, 0.0842234, -8.9514, 7.11261, -0.269775)
+transform = Transform3D(-0.464763, 0.403192, -0.788309, -0.560912, 0.55481, 0.614462, 0.685108, 0.727751, -0.0316995, -8.9514, 7.11261, -0.269775)
 light_color = Color(1, 0.896779, 0.857361, 1)
 light_energy = 0.75
 light_volumetric_fog_energy = 0.788
@@ -2425,8 +2424,8 @@ shadow_enabled = true
 environment = SubResource("Environment_48plf")
 
 [node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(135.072, 0, 0, 0, 2.40957, 0, 0, 0, 153.406, -8.64614, -5.20041, 0)
-size = Vector3(2, 2.00378, 2)
+transform = Transform3D(135.072, 0, 0, 0, 89.5218, 0, 0, 0, 153.406, -9.81385, -2.44268, 0)
+size = Vector3(1.52881, 2.00378, 2)
 material = SubResource("FogMaterial_itxr4")
 
 [node name="AnimationPlayer Jaclyn" type="AnimationPlayer" parent="."]
@@ -3529,7 +3528,7 @@ mesh = SubResource("ArrayMesh_vtf5n")
 skeleton = NodePath("")
 
 [node name="SM_Bld_Large_Part_08" type="MeshInstance3D" parent="Clutter"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2345, -7.32297, 1.31145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2345, -4.81859, 1.31145)
 material_override = SubResource("StandardMaterial3D_s5igg")
 mesh = SubResource("ArrayMesh_uffo4")
 skeleton = NodePath("")
@@ -3960,7 +3959,7 @@ mesh = SubResource("ArrayMesh_e3kd0")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Hologram_Bottle_02" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0138638, -0.19988, 0.346202, -7.62079e-09, 0.34641, 0.2, -0.39976, -0.0069319, 0.0120064, -11.208, -0.300396, 1.3481)
+transform = Transform3D(0.0138638, -0.19988, 0.346202, -7.62079e-09, 0.34641, 0.2, -0.39976, -0.0069319, 0.0120064, -11.208, 2.20398, 1.3481)
 material_override = SubResource("StandardMaterial3D_y2rgl")
 transparency = 0.1
 cast_shadow = 0
@@ -4166,7 +4165,7 @@ mesh = SubResource("ArrayMesh_murhf")
 skeleton = NodePath("")
 
 [node name="SM_Bld_Large_10" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7322, -15.022, 4.10595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7322, -13.1068, 4.10595)
 material_override = SubResource("StandardMaterial3D_qyltu")
 mesh = SubResource("ArrayMesh_aetvy")
 skeleton = NodePath("")

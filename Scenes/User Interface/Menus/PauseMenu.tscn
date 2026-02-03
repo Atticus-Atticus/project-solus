@@ -63,7 +63,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
 label_settings = ExtResource("5_kj5pt")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
