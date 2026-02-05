@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg7nxttds0cxk"]
+[gd_scene format=3 uid="uid://bg7nxttds0cxk"]
 
-[ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="4_4wgej"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="4_4wgej"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f4j2s"]
 shader = ExtResource("4_4wgej")
@@ -21,12 +21,12 @@ shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.054
 shader_parameter/pixelate = true
 shader_parameter/discolor = false
-shader_parameter/warp_amount = 0.365
+shader_parameter/warp_amount = 0.10000000475
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="CRT Shader" type="Control"]
+[node name="CRT Shader" type="Control" unique_id=1149146521]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +38,7 @@ offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=746682090]
 material = SubResource("ShaderMaterial_f4j2s")
 layout_mode = 0
 offset_right = 1920.0

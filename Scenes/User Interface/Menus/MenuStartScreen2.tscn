@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://3lv51hs8ah58"]
+[gd_scene format=3 uid="uid://3lv51hs8ah58"]
 
-[ext_resource type="Script" path="res://Scripts/menu_start_screen_2_script.gd" id="1_5hgys"]
+[ext_resource type="Script" uid="uid://1ss8e02gpl1" path="res://Scripts/menu_start_screen_2_script.gd" id="1_5hgys"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_raa3i"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_t62y8"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_1xurr"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="5_n6dy8"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="5_pb0i1"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_2dyxb"]
+[ext_resource type="Script" uid="uid://c4nwyr488h2nk" path="res://Scripts/tutorial_button_script.gd" id="6_20u2j"]
+[ext_resource type="Script" uid="uid://bckermg5hkpu6" path="res://Scripts/story_1_button_script.gd" id="7_f3ah7"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_hctay"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
@@ -56,8 +58,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
 _data = {
-"FlashingSquare": SubResource("Animation_rt7fl"),
-"RESET": SubResource("Animation_o54d8")
+&"FlashingSquare": SubResource("Animation_rt7fl"),
+&"RESET": SubResource("Animation_o54d8")
 }
 
 [sub_resource type="Animation" id="Animation_nbo6e"]
@@ -169,9 +171,9 @@ length = 5.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
 _data = {
-"RESET": SubResource("Animation_nbo6e"),
-"StartUp": SubResource("Animation_16u6q"),
-"Title": SubResource("Animation_gjvee")
+&"RESET": SubResource("Animation_nbo6e"),
+&"StartUp": SubResource("Animation_16u6q"),
+&"Title": SubResource("Animation_gjvee")
 }
 
 [sub_resource type="Environment" id="Environment_b5v2b"]
@@ -180,11 +182,10 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 2.4
 glow_strength = 0.83
-glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1626504867]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -193,12 +194,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5hgys")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=743243178]
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("2_raa3i")
 
-[node name="StartUpText" type="Label" parent="."]
+[node name="StartUpText" type="Label" parent="." unique_id=1658988849]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -234,7 +235,7 @@ label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="StartUpText2" type="Label" parent="."]
+[node name="StartUpText2" type="Label" parent="." unique_id=357667033]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -245,7 +246,7 @@ offset_right = 1767.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 > 
 >  
 >  
@@ -265,18 +266,18 @@ text = "
 > 
 > 
 > 
-This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
+This Terminal is property of the Coalition Collective of Intelligence."
 label_settings = SubResource("LabelSettings_esjad")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1657842523]
 layout_mode = 0
 offset_left = 119.0
 offset_top = 360.0
-offset_right = 1011.0
+offset_right = 1146.0
 offset_bottom = 959.0
 theme = ExtResource("4_7eaqs")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=1849161260]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -290,42 +291,42 @@ text = "Please choose a file to view."
 label_settings = SubResource("LabelSettings_gdsk5")
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="Panel"]
+[node name="Label8" type="Label" parent="Panel" unique_id=1392144600]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -422.0
+offset_left = -485.5
 offset_top = 122.0
-offset_right = -305.0
+offset_right = -368.5
 offset_bottom = 154.0
 grow_horizontal = 2
 text = "File:"
 label_settings = SubResource("LabelSettings_gdsk5")
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Panel"]
+[node name="Label9" type="Label" parent="Panel" unique_id=1979542242]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 241.5
 offset_top = 122.0
-offset_right = 310.0
+offset_right = 405.5
 offset_bottom = 154.0
 grow_horizontal = 2
 text = "Status:"
 label_settings = SubResource("LabelSettings_gdsk5")
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="Panel" unique_id=587697395]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 454.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 504.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -333,14 +334,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="Panel"]
+[node name="Label3" type="Label" parent="Panel" unique_id=588357366]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 259.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 309.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -348,14 +349,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label10" type="Label" parent="Panel"]
+[node name="Label10" type="Label" parent="Panel" unique_id=610890932]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 209.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 259.0
 grow_horizontal = 2
 text = "Ready"
@@ -363,14 +364,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="Panel"]
+[node name="Label4" type="Label" parent="Panel" unique_id=838406757]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 309.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 359.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -378,14 +379,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="Panel"]
+[node name="Label5" type="Label" parent="Panel" unique_id=2016882585]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 359.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 409.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -393,14 +394,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label6" type="Label" parent="Panel"]
+[node name="Label6" type="Label" parent="Panel" unique_id=1767376184]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 404.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 454.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -408,14 +409,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label7" type="Label" parent="Panel"]
+[node name="Label7" type="Label" parent="Panel" unique_id=162778805]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 504.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 554.0
 grow_horizontal = 2
 text = "Decompiling"
@@ -423,14 +424,14 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tutorial Finished" type="Label" parent="Panel"]
+[node name="Tutorial Finished" type="Label" parent="Panel" unique_id=1099735108]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 193.0
+offset_left = 265.0
 offset_top = 159.0
-offset_right = 413.0
+offset_right = 485.0
 offset_bottom = 209.0
 grow_horizontal = 2
 text = "Ready"
@@ -438,26 +439,28 @@ label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TutorialButton" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="TutorialButton" type="Button" parent="Panel" unique_id=1533907137]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 159.0
 offset_right = 593.0
 offset_bottom = 209.0
 text = "> Tutorial and Calibartion <"
 alignment = 0
+script = ExtResource("6_20u2j")
 
-[node name="Story1Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story1Button" type="Button" parent="Panel" unique_id=1022827814]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 205.0
 offset_right = 593.0
 offset_bottom = 255.0
 text = "> Subject 1: Calihan Lonan <"
 alignment = 0
+script = ExtResource("7_f3ah7")
 
-[node name="Story2Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story2Button" type="Button" parent="Panel" unique_id=180002326]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 254.0
 offset_right = 639.0
@@ -466,8 +469,8 @@ disabled = true
 text = "> Subject 2: Cadet Amy Rayen <"
 alignment = 0
 
-[node name="Story3Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story3Button" type="Button" parent="Panel" unique_id=2110379050]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 304.0
 offset_right = 593.0
@@ -476,8 +479,8 @@ disabled = true
 text = "> Subject data unavailable <"
 alignment = 0
 
-[node name="Story4Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story4Button" type="Button" parent="Panel" unique_id=159310694]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 354.0
 offset_right = 593.0
@@ -486,8 +489,8 @@ disabled = true
 text = "> Subject data unavailable <"
 alignment = 0
 
-[node name="Story5Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story5Button" type="Button" parent="Panel" unique_id=1317067673]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 404.0
 offset_right = 593.0
@@ -496,8 +499,8 @@ disabled = true
 text = "> Subject data unavailable <"
 alignment = 0
 
-[node name="Story6Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story6Button" type="Button" parent="Panel" unique_id=1757940275]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 454.0
 offset_right = 593.0
@@ -506,8 +509,8 @@ disabled = true
 text = "> Subject data unavailable <"
 alignment = 0
 
-[node name="Story7Button" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="Story7Button" type="Button" parent="Panel" unique_id=1543590464]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 504.0
 offset_right = 593.0
@@ -516,31 +519,34 @@ disabled = true
 text = "> Subject data unavailable <"
 alignment = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=269809877]
 layout_mode = 0
 offset_left = 119.0
-offset_top = 360.0
-offset_right = 1011.0
-offset_bottom = 569.0
+offset_top = 291.0
+offset_right = 1010.99854
+offset_bottom = 500.0
+scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1327333593]
 layout_mode = 0
 offset_left = 119.0
-offset_top = 569.0
-offset_right = 1011.0
-offset_bottom = 750.0
+offset_top = 472.0
+offset_right = 1010.99927
+offset_bottom = 653.0
+scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1561254433]
 layout_mode = 0
 offset_left = 119.0
-offset_top = 739.0
-offset_right = 1011.0
-offset_bottom = 978.0
+offset_top = 653.0
+offset_right = 1010.99927
+offset_bottom = 892.0
+scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="."]
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1181235413]
 visible = false
 layout_mode = 0
 offset_left = 969.0
@@ -550,46 +556,52 @@ offset_bottom = 326.0
 scale = Vector2(0.48, 0.64)
 color = Color(0.4, 1, 0.941176, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect4"]
-libraries = {
-"": SubResource("AnimationLibrary_kaeub")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect4" unique_id=1776531783]
+libraries/ = SubResource("AnimationLibrary_kaeub")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=814076117]
 position = Vector2(60, 1367)
 texture = ExtResource("5_pb0i1")
 
-[node name="CRT Shader" parent="." instance=ExtResource("4_1xurr")]
-layout_mode = 2
+[node name="CRT Shader" parent="." unique_id=1058456537 instance=ExtResource("4_1xurr")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 398.0
-offset_bottom = 139.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 396.0
+offset_bottom = 141.0
+grow_horizontal = 1
+grow_vertical = 1
 mouse_filter = 2
 
-[node name="CRT Shader2" parent="." instance=ExtResource("5_n6dy8")]
+[node name="CRT Shader2" parent="." unique_id=1448452296 instance=ExtResource("5_n6dy8")]
 visible = false
 layout_mode = 1
 mouse_filter = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_8as7b")
-}
-autoplay = "StartUp"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=271777983]
+libraries/ = SubResource("AnimationLibrary_8as7b")
+autoplay = &"StartUp"
 speed_scale = 0.8
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1086604483]
 stream = ExtResource("6_2dyxb")
 autoplay = true
 
-[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=1083717462]
 stream = ExtResource("7_hctay")
 autoplay = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=536765326]
 environment = SubResource("Environment_b5v2b")
 
+[connection signal="mouse_entered" from="Panel/TutorialButton" to="Panel/TutorialButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/TutorialButton" to="Panel/TutorialButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/TutorialButton" to="Panel/TutorialButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="tree_exited" from="ChangeMenuSFX" to="." method="_on_change_menu_sfx_tree_exited"]

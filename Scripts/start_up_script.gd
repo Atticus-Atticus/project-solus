@@ -47,4 +47,4 @@ func _on_enter_button_mouse_exited() -> void:
 
 func _on_enter_button_pressed() -> void:
 	UserManager.process_entered_username($"Login/Panel/LineEdit User".text)
-	get_tree().change_scene_to_file("res://Scenes/User Interface/Menus/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/User Interface/Menus/MainMenuStartUp2.tscn")

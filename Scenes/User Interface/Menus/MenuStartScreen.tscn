@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://doxs6pm1pob7y"]
+[gd_scene format=3 uid="uid://doxs6pm1pob7y"]
 
-[ext_resource type="Script" path="res://Scripts/menu_start_screen_script.gd" id="1_ipek4"]
+[ext_resource type="Script" uid="uid://cqu0hancuqbkd" path="res://Scripts/menu_start_screen_script.gd" id="1_ipek4"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_8ia5h"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_htx6k"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_1umdw"]
@@ -66,8 +66,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
 _data = {
-"FlashingSquare": SubResource("Animation_rt7fl"),
-"RESET": SubResource("Animation_o54d8")
+&"FlashingSquare": SubResource("Animation_rt7fl"),
+&"RESET": SubResource("Animation_o54d8")
 }
 
 [sub_resource type="Animation" id="Animation_nbo6e"]
@@ -179,9 +179,9 @@ length = 5.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
 _data = {
-"RESET": SubResource("Animation_nbo6e"),
-"StartUp": SubResource("Animation_16u6q"),
-"Title": SubResource("Animation_gjvee")
+&"RESET": SubResource("Animation_nbo6e"),
+&"StartUp": SubResource("Animation_16u6q"),
+&"Title": SubResource("Animation_gjvee")
 }
 
 [sub_resource type="Environment" id="Environment_ypv75"]
@@ -190,11 +190,10 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 2.4
 glow_strength = 0.83
-glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=238637431]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -203,12 +202,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ipek4")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1539862851]
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("2_8ia5h")
 
-[node name="StartUpText" type="Label" parent="."]
+[node name="StartUpText" type="Label" parent="." unique_id=1811224651]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -244,7 +243,7 @@ label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="StartUpText2" type="Label" parent="."]
+[node name="StartUpText2" type="Label" parent="." unique_id=1804777553]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -255,7 +254,7 @@ offset_right = 1767.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 > 
 >  
 >  
@@ -275,10 +274,10 @@ text = "
 > 
 > 
 > 
-This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
+This Terminal is property of the Coalition Collective of Intelligence."
 label_settings = SubResource("LabelSettings_esjad")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1196889175]
 visible = false
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -313,7 +312,7 @@ text = "
 This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
 label_settings = SubResource("LabelSettings_srlce")
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=2004873163]
 visible = false
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -332,15 +331,15 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=248441161]
 layout_mode = 0
 offset_left = 110.0
 offset_top = 325.0
-offset_right = 922.0
-offset_bottom = 803.0
+offset_right = 110.0
+offset_bottom = 325.0
 theme = ExtResource("4_3q4rb")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=1443632119]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -348,28 +347,30 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -392.0
-offset_top = -227.0
+offset_top = -251.0
 offset_right = 393.0
-offset_bottom = 226.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "
 
 A supernova event has resulted in the formation of a rapidly expanding nebula.
 
+85% of Solarian Space has been lost.
+
 All communications and network infrastructure are down.
 
 A final transmission from a station within the nebula reports that the nebula is affecting personnel by mutating them into hostile entities.
 
-The Ministry of Intelligence has been tasked by High Command to determine the nature of this phenomenon.
+The Ministry of Intelligence has been tasked by the remnemts of High Command to determine the nature of this phenomenon.
 
-Your assignment is to review recovered Neurological Blackbox Data in hopes of understanding this new threat."
+Your assignment is to review recovered Neurological Blackbox Data in hopes of understanding this new threat to the Coalition's Prosperity."
 label_settings = SubResource("LabelSettings_dr6lu")
 autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="Panel" unique_id=2132913844]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -377,9 +378,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -392.0
-offset_top = -227.0
+offset_top = -241.0
 offset_right = 393.0
-offset_bottom = 226.0
+offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "USER,"
@@ -388,7 +389,7 @@ autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1806371816]
 visible = false
 layout_mode = 0
 offset_left = 569.0
@@ -398,41 +399,41 @@ offset_bottom = 903.0
 scale = Vector2(0.48, 0.64)
 color = Color(0.4, 1, 0.941176, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-libraries = {
-"": SubResource("AnimationLibrary_kaeub")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=932432568]
+libraries/ = SubResource("AnimationLibrary_kaeub")
 
-[node name="CRT Shader" parent="." instance=ExtResource("4_1umdw")]
-layout_mode = 2
+[node name="CRT Shader" parent="." unique_id=925975107 instance=ExtResource("4_1umdw")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 398.0
-offset_bottom = 139.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 396.0
+offset_bottom = 141.0
+grow_horizontal = 1
+grow_vertical = 1
 mouse_filter = 2
 
-[node name="CRT Shader2" parent="." instance=ExtResource("5_on3rr")]
+[node name="CRT Shader2" parent="." unique_id=209783574 instance=ExtResource("5_on3rr")]
 visible = false
 layout_mode = 1
 mouse_filter = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_8as7b")
-}
-autoplay = "StartUp"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350397204]
+libraries/ = SubResource("AnimationLibrary_8as7b")
+autoplay = &"StartUp"
 speed_scale = 0.8
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=231218108]
 stream = ExtResource("6_sqxrc")
 autoplay = true
 
-[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=1728331117]
 stream = ExtResource("7_dw2w3")
 autoplay = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1780088522]
 environment = SubResource("Environment_ypv75")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

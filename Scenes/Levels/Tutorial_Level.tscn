@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqgtb6xpdhjmr"]
+[gd_scene format=3 uid="uid://dqgtb6xpdhjmr"]
 
-[ext_resource type="Script" path="res://Scripts/tutorial_level_script.gd" id="1_xmmdp"]
+[ext_resource type="Script" uid="uid://c61rp5tndlb8w" path="res://Scripts/tutorial_level_script.gd" id="1_xmmdp"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_pi301"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_d1j3b"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="4_8laqr"]
@@ -15,59 +15,59 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_th3uv"]
 
-[node name="DreamLevelNode" type="Node3D"]
+[node name="DreamLevelNode" type="Node3D" unique_id=2128980848]
 script = ExtResource("1_xmmdp")
 
-[node name="CRT Shader" parent="." instance=ExtResource("2_pi301")]
+[node name="CRT Shader" parent="." unique_id=1647089845 instance=ExtResource("2_pi301")]
 
-[node name="PointerNode" parent="." instance=ExtResource("3_d1j3b")]
+[node name="PointerNode" parent="." unique_id=280367567 instance=ExtResource("3_d1j3b")]
 
-[node name="PauseMenu" parent="." instance=ExtResource("4_8laqr")]
+[node name="PauseMenu" parent="." unique_id=116919811 instance=ExtResource("4_8laqr")]
 visible = false
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=994050031]
 position = Vector2(60, 1367)
 texture = ExtResource("5_cikgm")
 
-[node name="Player" parent="." instance=ExtResource("6_vekju")]
+[node name="Player" parent="." unique_id=118311981 instance=ExtResource("6_vekju")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.67326, 1.59873, -1.67291)
 
-[node name="Bonnie2" parent="." instance=ExtResource("7_n6ybd")]
+[node name="Bonnie2" parent="." unique_id=2076220815 instance=ExtResource("7_n6ybd")]
 transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
 
-[node name="CameraMain" parent="." instance=ExtResource("46_5t6ra")]
+[node name="CameraMain" parent="." unique_id=324212487 instance=ExtResource("46_5t6ra")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.173, 3.6, 5.007)
 
-[node name="CameraTrigger" parent="CameraMain" instance=ExtResource("47_77jew")]
+[node name="CameraTrigger" parent="CameraMain" unique_id=281827350 instance=ExtResource("47_77jew")]
 transform = Transform3D(39.6113, 0, 0, 0, 16.006, 0, 0, 0, 46.5815, 17.8589, -14.7982, -21.829)
 
-[node name="CameraMain2" parent="." instance=ExtResource("46_5t6ra")]
+[node name="CameraMain2" parent="." unique_id=62055375 instance=ExtResource("46_5t6ra")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.241, 3.6, 13.497)
 
-[node name="CameraTrigger" parent="CameraMain2" instance=ExtResource("47_77jew")]
+[node name="CameraTrigger" parent="CameraMain2" unique_id=1363451063 instance=ExtResource("47_77jew")]
 transform = Transform3D(30.1847, 0, 0, 0, 16.006, 0, 0, 0, 60.5241, 12.1807, -11.3215, -7.95291)
 
-[node name="CameraMain3" parent="." instance=ExtResource("46_5t6ra")]
+[node name="CameraMain3" parent="." unique_id=124102766 instance=ExtResource("46_5t6ra")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 6.32, 3.6, 4.881)
 
-[node name="CameraTrigger" parent="CameraMain3" instance=ExtResource("47_77jew")]
+[node name="CameraTrigger" parent="CameraMain3" unique_id=1000248280 instance=ExtResource("47_77jew")]
 transform = Transform3D(30.6953, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, 13.4196, -11.4277, -19.5361)
 
-[node name="CameraMain4" parent="." instance=ExtResource("46_5t6ra")]
+[node name="CameraMain4" parent="." unique_id=1705800357 instance=ExtResource("46_5t6ra")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.37227, 3.43906, 3.52265)
 
-[node name="CameraTrigger" parent="CameraMain4" instance=ExtResource("47_77jew")]
+[node name="CameraTrigger" parent="CameraMain4" unique_id=892682157 instance=ExtResource("47_77jew")]
 transform = Transform3D(15.6412, 0, 0, 0, 16.006, 0, 0, 0, 35.2117, -5.67344, -7.97324, -18.7169)
 
-[node name="AnimatedSprite3D" parent="." instance=ExtResource("79_523mh")]
+[node name="AnimatedSprite3D" parent="." unique_id=1874958388 instance=ExtResource("79_523mh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99685, 2.54388, 4.277)
 
-[node name="Level" type="StaticBody3D" parent="."]
+[node name="Level" type="StaticBody3D" parent="." unique_id=1423796087]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level" unique_id=670257050]
 transform = Transform3D(19.2398, 0, 0, 0, 1, 0, 0, 0, 18.8832, 0, -0.261439, 0)
 shape = SubResource("BoxShape3D_mbd1m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/CollisionShape3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/CollisionShape3D" unique_id=69139144]
 mesh = SubResource("BoxMesh_th3uv")
 skeleton = NodePath("../..")

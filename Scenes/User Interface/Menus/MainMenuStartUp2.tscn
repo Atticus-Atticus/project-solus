@@ -1,0 +1,269 @@
+[gd_scene format=3 uid="uid://c2p37qp5ydk80"]
+
+[ext_resource type="Script" uid="uid://ch16yf8vy3ttb" path="res://Scripts/main_menu_start_up_2_script.gd" id="1_3yx4b"]
+[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_4ryb5"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="4_falc1"]
+[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="10_k65rf"]
+[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="11_kdlvi"]
+[ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="12_ncdvo"]
+[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="13_xljdq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlce"]
+line_spacing = 20.0
+font = ExtResource("4_falc1")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
+line_spacing = 0.0
+font = ExtResource("4_falc1")
+font_size = 34
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Environment" id="Environment_mp1ky"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
+
+[sub_resource type="Animation" id="Animation_wkysx"]
+resource_name = "MenuOpening"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.42375, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WelcomeLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.01, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TitleLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_woufd"]
+resource_name = "MenuTransition"
+
+[sub_resource type="Animation" id="Animation_31me3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WelcomeLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TitleLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtql0"]
+_data = {
+&"MenuOpening": SubResource("Animation_wkysx"),
+&"MenuTransition": SubResource("Animation_woufd"),
+&"RESET": SubResource("Animation_31me3")
+}
+
+[node name="MainMenu" type="Control" unique_id=808204362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3yx4b")
+
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1335430341]
+position = Vector2(967.75, 550.25)
+scale = Vector2(1.65287, 1.64971)
+texture = ExtResource("2_4ryb5")
+
+[node name="Label2" type="Label" parent="." unique_id=1685964518]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1687.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
+>
+> 
+>
+>
+> 
+> 
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Coalition Collective of Intelligence."
+label_settings = SubResource("LabelSettings_srlce")
+
+[node name="Label" type="Label" parent="." unique_id=968439915]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 425.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+ 
+ 
+  
+ 
+ 
+>                                                                           v0.3
+> 	 (Alpha Build)
+
+
+
+> Please select a program to run...
+
+> > BEGIN <
+> > OPTIONS <
+> > CREDITS <
+> > EXIT PROGRAM <"
+label_settings = SubResource("LabelSettings_srlce")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="WelcomeLabel" type="Label" parent="." unique_id=1098830884]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 107.0
+offset_top = 142.0
+offset_right = 507.0
+offset_bottom = -910.0
+grow_vertical = 2
+text = "Welcome USER to..."
+label_settings = SubResource("LabelSettings_srlce")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1903582626]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 171.0
+offset_right = 1608.0
+offset_bottom = -747.0
+grow_vertical = 2
+text = "    ____                  _              __     _____         __            
+   / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
+ / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/   /____/ \\____//_/ \\__,_//____/  
+                   /___/                                                    "
+label_settings = SubResource("LabelSettings_2r0ac")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="CRT Shader" parent="." unique_id=434780428 instance=ExtResource("10_k65rf")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1946.0
+offset_bottom = 1096.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
+
+[node name="CRT Shader2" parent="." unique_id=1094389167 instance=ExtResource("11_kdlvi")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1985223328]
+stream = ExtResource("12_ncdvo")
+volume_db = -2.0
+autoplay = true
+
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=1117078891]
+stream = ExtResource("13_xljdq")
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1292493903]
+environment = SubResource("Environment_mp1ky")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2124735123]
+libraries/ = SubResource("AnimationLibrary_mtql0")
+autoplay = &"MenuOpening"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

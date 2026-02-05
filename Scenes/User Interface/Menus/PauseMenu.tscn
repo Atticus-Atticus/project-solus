@@ -1,23 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bgudoc35jqo6r"]
+[gd_scene format=3 uid="uid://bgudoc35jqo6r"]
 
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_a5jq7"]
-[ext_resource type="Script" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
+[ext_resource type="Script" uid="uid://budlmu3lqq23a" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_ghp36"]
-[ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
+[ext_resource type="Script" uid="uid://bmxas43uii3q1" path="res://Scripts/options_button_script.gd" id="4_5dqt4"]
+[ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
-[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="7_4h5sl"]
-[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="8_kkqpe"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
-[ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="22_ihjxp"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_iyd4t"]
-line_spacing = 15.0
-font = ExtResource("8_kkqpe")
-font_size = 30
-font_color = Color(0.4, 1, 0.941176, 1)
-
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=1048540629]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,12 +17,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lnlhy")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(967.75, 550.25)
-scale = Vector2(1.65287, 1.64971)
-texture = ExtResource("1_a5jq7")
+[node name="Background" type="ColorRect" parent="." unique_id=1873617878]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -540.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.10980392, 0.21176471, 0.78431374)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2140919871]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -42,7 +40,7 @@ offset_right = 1767.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 >
 > 
 > Pause Input recognised...
@@ -63,16 +61,16 @@ text = "
 >
 >
 >
-This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
+This Terminal is property of the Coalition Collective of Intelligence."
 label_settings = ExtResource("5_kj5pt")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1229217335]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0579375
-anchor_top = -0.257407
+anchor_left = 0.057937503
+anchor_top = -0.08055556
 anchor_right = 0.188562
-anchor_bottom = 1.08426
+anchor_bottom = 0.8601852
 offset_left = -0.240005
 offset_top = 515.0
 offset_right = 139.96
@@ -85,66 +83,35 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1053702859]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="Exit to menu" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1941655625]
 layout_mode = 2
-text = "Return to Menu"
+text = "> Options <"
+alignment = 0
+script = ExtResource("4_5dqt4")
+
+[node name="Exit to menu2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2122319374]
+layout_mode = 2
+text = "> Return to Menu <"
 alignment = 0
 script = ExtResource("4_fjykx")
 
-[node name="Volume" parent="." instance=ExtResource("22_ihjxp")]
-layout_mode = 1
-offset_left = 128.0
-offset_top = 768.0
-offset_right = 128.0
-offset_bottom = 768.0
-
-[node name="ChangeInputNode" parent="." instance=ExtResource("7_4h5sl")]
-layout_mode = 1
-offset_left = 1102.0
-offset_top = 318.0
-offset_right = -101.0
-offset_bottom = -448.0
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 621.0
-offset_top = 626.0
-offset_right = 1870.0
-offset_bottom = 935.0
-theme = ExtResource("3_ghp36")
-
-[node name="Label2" type="Label" parent="Panel2"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 11.0
-offset_top = -133.5
-offset_right = 1211.0
-offset_bottom = 134.5
-grow_vertical = 2
-text = "Use 'W' to move Forward. Use 'S' to move Backwards.
-The Subject will always face and move towards the mouse's position
-Use 'E' to interact with objects that pulse blue.
-
-Objects that glow green will progress the subject's memory.
-Please ignore any hallucinatory overalls that may be present.\""
-label_settings = SubResource("LabelSettings_iyd4t")
-
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=600730338]
 position = Vector2(60, 1367)
 texture = ExtResource("19_12j1a")
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=335092426]
 stream = ExtResource("22_ci7g1")
 volume_db = -2.0
 autoplay = true
 
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit to menu" to="MarginContainer/VBoxContainer/Exit to menu" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit to menu2" to="MarginContainer/VBoxContainer/Exit to menu2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit to menu2" to="MarginContainer/VBoxContainer/Exit to menu2" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit to menu2" to="MarginContainer/VBoxContainer/Exit to menu2" method="_on_pressed"]

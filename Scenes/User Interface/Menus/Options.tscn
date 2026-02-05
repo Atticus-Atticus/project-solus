@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://yge8fijrn5xd"]
+
+[ext_resource type="Script" uid="uid://csal4lodh3pkw" path="res://Scripts/options_panel_script.gd" id="1_we4i2"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_5gnfj"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_vomr3"]
+[ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="4_43q1g"]
+[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="5_iynpq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xn2yy"]
+font = ExtResource("3_vomr3")
+font_size = 64
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4llvd"]
+line_spacing = 15.0
+font = ExtResource("3_vomr3")
+font_size = 30
+font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Animation" id="Animation_reqnr"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Control:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1391, 804), Vector2(12, 804), Vector2(12, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sx7s1"]
+resource_name = "Open"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 0), Vector2(10, 804), Vector2(1391, 804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_dlpj5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1391, 804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_boeap"]
+_data = {
+&"Close": SubResource("Animation_reqnr"),
+&"Open": SubResource("Animation_sx7s1"),
+&"RESET": SubResource("Animation_dlpj5")
+}
+
+[node name="Options Panel" type="Control" unique_id=1776467909]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_we4i2")
+
+[node name="Panel" type="Panel" parent="." unique_id=1715596703]
+layout_mode = 1
+offset_right = 1391.0
+offset_bottom = 804.0
+theme = ExtResource("2_5gnfj")
+
+[node name="Control" type="Control" parent="Panel" unique_id=1936173576]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Panel/Control" unique_id=1383154783]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 528.0
+offset_right = 784.0
+offset_bottom = 129.0
+grow_horizontal = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_xn2yy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volume" parent="Panel/Control" unique_id=1022413433 instance=ExtResource("4_43q1g")]
+layout_mode = 1
+offset_left = 53.0
+offset_top = 195.0
+offset_right = 53.47998
+offset_bottom = 195.36002
+
+[node name="ChangeInputNode" parent="Panel/Control" unique_id=659633144 instance=ExtResource("5_iynpq")]
+layout_mode = 1
+offset_left = 53.0
+offset_top = 335.99997
+offset_right = 13.0
+offset_bottom = 295.99997
+scale = Vector2(0.8, 0.8)
+
+[node name="Panel2" type="Panel" parent="Panel/Control" unique_id=226610838]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 573.0
+offset_right = 1302.0
+offset_bottom = 750.0
+theme = ExtResource("2_5gnfj")
+
+[node name="Controls" type="Label" parent="Panel/Control/Panel2" unique_id=460046906]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -600.0
+offset_top = -154.0
+offset_right = 600.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Use 'W' to move Forward. Use 'S' to move Backwards.
+The Subject will always face and move towards the mouse's position.
+Use 'E' to interact with objects.
+Use 'N' to show objective."
+label_settings = SubResource("LabelSettings_4llvd")
+
+[node name="X Button" type="Button" parent="Panel/Control" unique_id=69237454]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1280.0
+offset_right = 1336.0
+offset_bottom = 60.0
+grow_horizontal = 0
+scale = Vector2(1.2, 1.2)
+theme = ExtResource("2_5gnfj")
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1547898002]
+libraries/ = SubResource("AnimationLibrary_boeap")
+autoplay = &"Open"
+
+[connection signal="pressed" from="Panel/Control/X Button" to="." method="_on_x_button_pressed"]

@@ -1,11 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://doyqkixipx1dp"]
+[gd_scene format=3 uid="uid://doyqkixipx1dp"]
 
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_g0tmx"]
-[ext_resource type="Script" path="res://Scripts/menu_end_screen_2_script.gd" id="1_id73v"]
+[ext_resource type="Script" uid="uid://02ig1w4j5ja" path="res://Scripts/menu_end_screen_2_script.gd" id="1_id73v"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_pevw5"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_sfyxx"]
-[ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_kld0h"]
-[ext_resource type="Script" path="res://Scripts/ExitButtonScript.gd" id="7_q34im"]
+[ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_kld0h"]
+[ext_resource type="Script" uid="uid://b0hxy8yfqev5o" path="res://Scripts/ExitButtonScript.gd" id="7_q34im"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="7_ugvpk"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_32ybp"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_xcu8k"]
@@ -36,11 +36,10 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 2.4
 glow_strength = 0.83
-glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1439737978]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,12 +48,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_id73v")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1114786969]
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("1_g0tmx")
 
-[node name="StartUpText" type="Label" parent="."]
+[node name="StartUpText" type="Label" parent="." unique_id=1829160380]
 visible = false
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -91,7 +90,7 @@ label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1090858051]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -102,7 +101,7 @@ offset_right = 425.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd.
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 >
 > THANK YOU FOR PLAYING...
 >
@@ -122,10 +121,10 @@ text = "
 >
 >
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Coalition Collective of Intelligence."
 label_settings = SubResource("LabelSettings_srlce")
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=1437658539]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -143,7 +142,7 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1202708745]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0516875
@@ -162,29 +161,29 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=47069117]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="Exit to Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Exit to Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1406099096]
 layout_mode = 2
 text = "Return to Menu"
 alignment = 0
 script = ExtResource("4_kld0h")
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1660006555]
 layout_mode = 2
 text = "Exit Program"
 alignment = 0
 script = ExtResource("7_q34im")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=2132315631]
 position = Vector2(60, 1367)
 texture = ExtResource("7_ugvpk")
 
-[node name="CRT Shader" parent="." instance=ExtResource("8_xcu8k")]
-layout_mode = 2
+[node name="CRT Shader" parent="." unique_id=723716134 instance=ExtResource("8_xcu8k")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -192,22 +191,24 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 396.0
 offset_bottom = 141.0
+grow_horizontal = 1
+grow_vertical = 1
 mouse_filter = 2
 
-[node name="CRT Shader2" parent="." instance=ExtResource("9_jdp4e")]
+[node name="CRT Shader2" parent="." unique_id=621608671 instance=ExtResource("9_jdp4e")]
 visible = false
 layout_mode = 1
 mouse_filter = 2
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=489065403]
 stream = ExtResource("8_32ybp")
 autoplay = true
 
-[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=512250773]
 stream = ExtResource("9_7qwva")
 autoplay = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=925410664]
 environment = SubResource("Environment_30g80")
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit to Menu" to="MarginContainer/VBoxContainer/Exit to Menu" method="_on_mouse_entered"]

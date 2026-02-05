@@ -1,10 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://drcjx2a442yt7"]
+[gd_scene format=3 uid="uid://drcjx2a442yt7"]
 
-[ext_resource type="Script" path="res://Scripts/credits_menu_script.gd" id="1_2emg8"]
+[ext_resource type="Script" uid="uid://b2gjo5kat6h34" path="res://Scripts/credits_menu_script.gd" id="1_2emg8"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_kqwra"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_6ton8"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_56pl2"]
-[ext_resource type="Script" path="res://Scripts/ReturnToMenuButtonScript.gd" id="5_hu4cb"]
+[ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="5_hu4cb"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_05kd7"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="6_ha5nn"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_deir5"]
@@ -30,7 +30,6 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 2.4
 glow_strength = 0.83
-glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
 
@@ -68,11 +67,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kaeub"]
 _data = {
-"FlashingSquare": SubResource("Animation_rt7fl"),
-"RESET": SubResource("Animation_o54d8")
+&"FlashingSquare": SubResource("Animation_rt7fl"),
+&"RESET": SubResource("Animation_o54d8")
 }
 
-[node name="CreditsMenu" type="Control"]
+[node name="CreditsMenu" type="Control" unique_id=1624326669]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,12 +84,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2emg8")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=220627740]
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("1_kqwra")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1375756557]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -124,7 +123,7 @@ text = "
 This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
 label_settings = SubResource("LabelSettings_srlce")
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=1943957016]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -142,7 +141,7 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
-[node name="Exit" type="Button" parent="."]
+[node name="Exit" type="Button" parent="." unique_id=717258447]
 layout_mode = 0
 offset_left = 122.0
 offset_top = 1256.0
@@ -153,22 +152,22 @@ text = "Return to menu"
 alignment = 0
 script = ExtResource("5_hu4cb")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=806446075]
 position = Vector2(60, 1367)
 texture = ExtResource("6_ha5nn")
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1266289724]
 stream = ExtResource("6_05kd7")
 autoplay = true
 
-[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=426237672]
 stream = ExtResource("7_deir5")
 autoplay = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=535895800]
 environment = SubResource("Environment_vnkvj")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=478266556]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 277.0
@@ -176,7 +175,7 @@ offset_right = 1510.0
 offset_bottom = 622.0
 theme = ExtResource("3_56pl2")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=956666983]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -200,7 +199,7 @@ https://syntystore.com/en-gb/products/polygon-sci-fi-city"
 label_settings = ExtResource("9_ibhi0")
 clip_text = true
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=1015708249]
 layout_mode = 0
 offset_left = 970.0
 offset_top = 628.0
@@ -208,7 +207,7 @@ offset_right = 1700.0
 offset_bottom = 973.0
 theme = ExtResource("3_56pl2")
 
-[node name="Label" type="Label" parent="Panel2"]
+[node name="Label" type="Label" parent="Panel2" unique_id=1584525148]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -232,7 +231,7 @@ Thank you so much.
 label_settings = ExtResource("9_ibhi0")
 clip_text = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1260568650]
 layout_mode = 0
 offset_left = 884.0
 offset_top = 912.0
@@ -241,18 +240,16 @@ offset_bottom = 952.0
 scale = Vector2(0.48, 0.64)
 color = Color(0.4, 1, 0.941176, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-libraries = {
-"": SubResource("AnimationLibrary_kaeub")
-}
-autoplay = "FlashingSquare"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=2030924743]
+libraries/ = SubResource("AnimationLibrary_kaeub")
+autoplay = &"FlashingSquare"
 
-[node name="CRT Shader" parent="." instance=ExtResource("8_xkmao")]
+[node name="CRT Shader" parent="." unique_id=40419339 instance=ExtResource("8_xkmao")]
 layout_mode = 1
-offset_left = 3.0
-offset_top = -3.0
-offset_right = 3.0
-offset_bottom = -3.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 mouse_filter = 2
 
 [connection signal="mouse_entered" from="Exit" to="Exit" method="_on_mouse_entered"]

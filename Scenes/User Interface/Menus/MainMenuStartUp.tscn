@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://867we3yx00"]
+[gd_scene format=3 uid="uid://867we3yx00"]
 
-[ext_resource type="Script" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
+[ext_resource type="Script" uid="uid://chhvq2kpb6elv" path="res://Scripts/start_up_script.gd" id="1_kejyf"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_yjw5q"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_8auyq"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="4_xa31x"]
@@ -8,9 +8,9 @@
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="6_1aj7i"]
 [ext_resource type="AudioStream" uid="uid://dhw6gaaote7jm" path="res://Audio/StartScreenBootUp.wav" id="6_3p0yw"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_30hjv"]
-[ext_resource type="Shader" path="res://Shaders/CRT.gdshader" id="8_r2snd"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="8_r2snd"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_wxj22"]
-[ext_resource type="Script" path="res://Scripts/StartUpScript.gd" id="10_20jfy"]
+[ext_resource type="Script" uid="uid://bsm6d4ehekqo" path="res://Scripts/StartUpScript.gd" id="10_20jfy"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="12_62ken"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ejov"]
@@ -50,8 +50,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kac2"]
 _data = {
-"FadeIn": SubResource("Animation_xauk4"),
-"RESET": SubResource("Animation_hj2xq")
+&"FadeIn": SubResource("Animation_xauk4"),
+&"RESET": SubResource("Animation_hj2xq")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
@@ -153,8 +153,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xqpr1"]
 _data = {
-"RESET": SubResource("Animation_otn71"),
-"Show": SubResource("Animation_0a7rf")
+&"RESET": SubResource("Animation_otn71"),
+&"Show": SubResource("Animation_0a7rf")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uxgho"]
@@ -176,7 +176,7 @@ shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 1.0
 shader_parameter/pixelate = true
 shader_parameter/discolor = false
-shader_parameter/warp_amount = 0.365
+shader_parameter/warp_amount = 0.10000000475
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
@@ -330,10 +330,10 @@ length = 5.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8as7b"]
 _data = {
-"RESET": SubResource("Animation_nbo6e"),
-"StartUp": SubResource("Animation_16u6q"),
-"Title": SubResource("Animation_gjvee"),
-"TurnOn": SubResource("Animation_vi7bc")
+&"RESET": SubResource("Animation_nbo6e"),
+&"StartUp": SubResource("Animation_16u6q"),
+&"Title": SubResource("Animation_gjvee"),
+&"TurnOn": SubResource("Animation_vi7bc")
 }
 
 [sub_resource type="Environment" id="Environment_e55cl"]
@@ -342,11 +342,10 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 2.4
 glow_strength = 0.83
-glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.75
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=212934873]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -355,7 +354,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kejyf")
 
-[node name="Blank Background" type="ColorRect" parent="."]
+[node name="Blank Background" type="ColorRect" parent="." unique_id=49495430]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -367,7 +366,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="Blank Background"]
+[node name="Label" type="Label" parent="Blank Background" unique_id=1442195769]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -383,13 +382,11 @@ grow_vertical = 2
 text = "Press any key."
 label_settings = SubResource("LabelSettings_7ejov")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Blank Background"]
-libraries = {
-"": SubResource("AnimationLibrary_8kac2")
-}
-autoplay = "FadeIn"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Blank Background" unique_id=770666318]
+libraries/ = SubResource("AnimationLibrary_8kac2")
+autoplay = &"FadeIn"
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=2035511040]
 visible = false
 layout_mode = 1
 anchors_preset = 14
@@ -402,7 +399,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="StartUpText" type="Label" parent="."]
+[node name="StartUpText" type="Label" parent="." unique_id=1518083198]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -437,7 +434,7 @@ label_settings = SubResource("LabelSettings_esjad")
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=461874615]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -468,12 +465,12 @@ text = "
 >
 >
 >
-This Terminal is property of the Ministry of Intelligence. The Coalition Endures!"
+This Terminal is property of the Coalition Collective of Intelligence."
 label_settings = SubResource("LabelSettings_srlce")
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=59270224]
 visible = false
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -492,13 +489,13 @@ text = "    ____                  _              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
-[node name="Login" type="Control" parent="."]
+[node name="Login" type="Control" parent="." unique_id=1063518864]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel" type="Panel" parent="Login"]
+[node name="Panel" type="Panel" parent="Login" unique_id=816255214]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -513,7 +510,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_xa31x")
 
-[node name="Label" type="Label" parent="Login/Panel"]
+[node name="Label" type="Label" parent="Login/Panel" unique_id=56905413]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -528,7 +525,7 @@ label_settings = ExtResource("5_v0pky")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="Login/Panel"]
+[node name="Label3" type="Label" parent="Login/Panel" unique_id=1260091388]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -546,7 +543,7 @@ label_settings = ExtResource("6_1aj7i")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Label2" type="Label" parent="Login/Panel"]
+[node name="Label2" type="Label" parent="Login/Panel" unique_id=1839589761]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -561,7 +558,7 @@ label_settings = ExtResource("5_v0pky")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LineEdit User" type="LineEdit" parent="Login/Panel"]
+[node name="LineEdit User" type="LineEdit" parent="Login/Panel" unique_id=634577659]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -577,7 +574,7 @@ grow_vertical = 2
 theme = ExtResource("4_xa31x")
 max_length = 16
 
-[node name="LineEdit Pass" type="LineEdit" parent="Login/Panel"]
+[node name="LineEdit Pass" type="LineEdit" parent="Login/Panel" unique_id=626035777]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -594,7 +591,7 @@ theme = ExtResource("4_xa31x")
 max_length = 16
 secret = true
 
-[node name="EnterButton" type="Button" parent="Login/Panel"]
+[node name="EnterButton" type="Button" parent="Login/Panel" unique_id=857984423]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -609,7 +606,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "> Enter <"
 
-[node name="ColorRect" type="ColorRect" parent="Login"]
+[node name="ColorRect" type="ColorRect" parent="Login" unique_id=1487443822]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 384.0
@@ -617,7 +614,7 @@ offset_right = 1348.0
 offset_bottom = 501.0
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="Login"]
+[node name="ColorRect2" type="ColorRect" parent="Login" unique_id=54684818]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 501.0
@@ -625,7 +622,7 @@ offset_right = 1348.0
 offset_bottom = 618.0
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="Login"]
+[node name="ColorRect3" type="ColorRect" parent="Login" unique_id=1841760090]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 618.0
@@ -633,27 +630,29 @@ offset_right = 1348.0
 offset_bottom = 735.0
 color = Color(0, 0.109804, 0.211765, 1)
 
-[node name="AnimationPlayerLogin" type="AnimationPlayer" parent="Login"]
-libraries = {
-"": SubResource("AnimationLibrary_xqpr1")
-}
+[node name="AnimationPlayerLogin" type="AnimationPlayer" parent="Login" unique_id=389517743]
+libraries/ = SubResource("AnimationLibrary_xqpr1")
 speed_scale = 0.7
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=1496109505]
 position = Vector2(60, 1367)
 texture = ExtResource("4_8auyq")
 
-[node name="CRT Shader" parent="." instance=ExtResource("8_30hjv")]
+[node name="CRT Shader" parent="." unique_id=1240629253 instance=ExtResource("8_30hjv")]
 visible = false
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
 offset_right = 398.0
 offset_bottom = 139.0
+grow_horizontal = 1
+grow_vertical = 1
 mouse_filter = 2
 
-[node name="CRT" type="ColorRect" parent="."]
+[node name="CRT" type="ColorRect" parent="." unique_id=1298255951]
 visible = false
 material = SubResource("ShaderMaterial_uxgho")
 layout_mode = 0
@@ -661,23 +660,21 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_8as7b")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1186299672]
+libraries/ = SubResource("AnimationLibrary_8as7b")
 speed_scale = 0.7
 script = ExtResource("10_20jfy")
 
-[node name="StartUpSFX" type="AudioStreamPlayer" parent="."]
+[node name="StartUpSFX" type="AudioStreamPlayer" parent="." unique_id=379822813]
 stream = ExtResource("6_3p0yw")
 
-[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=1499121002]
 stream = ExtResource("12_62ken")
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1523727004]
 stream = ExtResource("8_wxj22")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759802349]
 environment = SubResource("Environment_e55cl")
 
 [connection signal="mouse_entered" from="Login/Panel/EnterButton" to="." method="_on_enter_button_mouse_entered"]
