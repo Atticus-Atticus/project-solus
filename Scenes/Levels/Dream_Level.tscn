@@ -82,29 +82,28 @@
 [ext_resource type="PackedScene" uid="uid://q7ysb3bi5fui" path="res://Scenes/Objects/LockedDoor3InteractableObject.tscn" id="80_88inp"]
 [ext_resource type="PackedScene" uid="uid://b52ggwlf74yqg" path="res://Scenes/Objects/LockedDoor4InteractableObject.tscn" id="81_mfumk"]
 
-[sub_resource type="Gradient" id="Gradient_bp4lf"]
+[sub_resource type="Gradient" id="Gradient_jmdbl"]
 offsets = PackedFloat32Array(0, 0.00574713, 1)
 colors = PackedColorArray(0.597864, 6.28106e-05, 0.499278, 0, 0, 0, 0, 0, 1, 1, 1, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_81apo"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fogdd"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_auvnh"]
-noise = SubResource("FastNoiseLite_81apo")
-color_ramp = SubResource("Gradient_bp4lf")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lbfbo"]
+noise = SubResource("FastNoiseLite_fogdd")
+color_ramp = SubResource("Gradient_jmdbl")
 seamless = true
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b4bi3"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2uqbe"]
 sky_top_color = Color(0.283698, 0.45926, 0.65871, 1)
 sky_horizon_color = Color(0.455998, 0.662419, 0.953085, 1)
-sky_cover = SubResource("NoiseTexture2D_auvnh")
+sky_cover = SubResource("NoiseTexture2D_lbfbo")
 
-[sub_resource type="Sky" id="Sky_6o5hp"]
-sky_material = SubResource("ProceduralSkyMaterial_b4bi3")
+[sub_resource type="Sky" id="Sky_vqt42"]
+sky_material = SubResource("ProceduralSkyMaterial_2uqbe")
 
-[sub_resource type="Environment" id="Environment_731mp"]
+[sub_resource type="Environment" id="Environment_g8y58"]
 background_mode = 2
-sky = SubResource("Sky_6o5hp")
-sky_rotation = Vector3(0, -0.872665, 0.10472)
+sky = SubResource("Sky_vqt42")
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
@@ -118,7 +117,7 @@ volumetric_fog_detail_spread = 2.37841
 volumetric_fog_ambient_inject = 1.0
 
 [sub_resource type="FogMaterial" id="FogMaterial_0jpfw"]
-density = 1.2105
+density = 2.3534
 albedo = Color(0.951134, 0.946696, 0.93993, 1)
 emission = Color(0.419813, 0.419813, 0.419813, 1)
 height_falloff = 2.06766
@@ -2626,14 +2625,15 @@ texture = ExtResource("4_s84ir")
 [node name="Player" parent="." unique_id=1415750608 instance=ExtResource("44_x7vej")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.67326, 1.59873, -1.67291)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=523885015]
-transform = Transform3D(-0.332591, 0.478962, -0.81239, -0.577144, 0.577907, 0.576999, 0.745847, 0.660771, 0.0842234, -8.9514, 7.11261, -0.269775)
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1018173805]
+transform = Transform3D(-0.48463625, 0.3814495, -0.7871618, -0.5608805, 0.5550375, 0.6142851, 0.6712232, 0.73920864, -0.05504372, -10.978876, 2.428401, -3.642932)
 light_color = Color(1, 0.896779, 0.857361, 1)
+light_energy = 0.75
 light_volumetric_fog_energy = 0.788
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=904036893]
-environment = SubResource("Environment_731mp")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=124044450]
+environment = SubResource("Environment_g8y58")
 
 [node name="FogVolume" type="FogVolume" parent="." unique_id=1334562698]
 transform = Transform3D(135.072, 0, 0, 0, 2.40957, 0, 0, 0, 153.406, -8.64614, -5.20041, 0)

@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4e6t6j7sf0tn"]
+[gd_scene format=3 uid="uid://c4e6t6j7sf0tn"]
 
-[ext_resource type="Script" path="res://Scripts/camera_model_script.gd" id="1_hysne"]
+[ext_resource type="Script" uid="uid://codv8n4rqy2ns" path="res://Scripts/camera_model_script.gd" id="1_hysne"]
 [ext_resource type="Texture2D" uid="uid://ca21et6nfx8jh" path="res://Scenes/User Interface/Menus/tv-4k-tv-static-d3k7px9ms3ebgfv4.jpg" id="2_3d3qm"]
 [ext_resource type="AudioStream" uid="uid://dh6njkag285wr" path="res://Audio/ChangeCam.wav" id="2_a3uwk"]
-[ext_resource type="Shader" path="res://Shaders/Pixel.gdshader" id="3_fl1ui"]
+[ext_resource type="Shader" uid="uid://dn0tx4hqul6t0" path="res://Shaders/Pixel.gdshader" id="3_fl1ui"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_w81m7"]
 
@@ -23,36 +23,37 @@ shader_parameter/highlight_strength = 1.0
 shader_parameter/highlight_color = Color(1, 1, 1, 1)
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 
-[node name="Camera" type="Node3D"]
+[node name="Camera" type="Node3D" unique_id=1294855615]
 script = ExtResource("1_hysne")
 
-[node name="Tv-4k-tv-static-d3k7Px9Ms3Ebgfv4" type="Sprite2D" parent="."]
+[node name="Tv-4k-tv-static-d3k7Px9Ms3Ebgfv4" type="Sprite2D" parent="." unique_id=2033593167]
 visible = false
 position = Vector2(960, 540)
 texture = ExtResource("2_3d3qm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1792511425]
 mesh = SubResource("CylinderMesh_w81m7")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=306561204]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.834065, 0)
 mesh = SubResource("SphereMesh_e1kub")
 
-[node name="Hinge" type="Node3D" parent="."]
+[node name="Hinge" type="Node3D" parent="." unique_id=239635874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.834, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge" unique_id=565087124]
 transform = Transform3D(1.34356, 0, 0, 0, 1, 0, 0, 0, 2.23696, 0, -0.492868, -0.442949)
 mesh = SubResource("BoxMesh_g0afu")
 
-[node name="Camera3D" type="Camera3D" parent="Hinge" groups=["Security Cams"]]
+[node name="Camera3D" type="Camera3D" parent="Hinge" unique_id=1465436430 groups=["Security Cams"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.445434, -0.886012)
+fov = 80.0
 
-[node name="Postprocess" type="MeshInstance3D" parent="Hinge"]
+[node name="Postprocess" type="MeshInstance3D" parent="Hinge" unique_id=1765672454]
 transform = Transform3D(2.40969, 0, 0, 0, -4.37114e-08, -1.84268, 0, 1, -8.05461e-08, 0, -0.504651, -1.84258)
 visible = false
 mesh = SubResource("PlaneMesh_jo7kj")
 surface_material_override/0 = SubResource("ShaderMaterial_4m6wn")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1140948825]
 stream = ExtResource("2_a3uwk")

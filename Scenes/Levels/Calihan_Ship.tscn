@@ -77,6 +77,7 @@
 [ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="68_rxu0r"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="69_swly8"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="73_y476v"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="75_884ru"]
 [ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="79_s7ggu"]
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="79_vap76"]
 
@@ -1750,6 +1751,11 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1avul"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_umbca"]
+font = ExtResource("75_884ru")
+font_size = 75
+font_color = Color(1, 0, 0, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwh4b"]
 albedo_texture = ExtResource("56_nplmc")
 
@@ -2006,6 +2012,7 @@ offset_bottom = 1078.0
 color = Color(0, 0, 0, 0)
 
 [node name="CRT Shader" parent="." unique_id=276973089 instance=ExtResource("1_6b51t")]
+visible = false
 
 [node name="HUD" parent="." unique_id=543915682 instance=ExtResource("4_y61xs")]
 
@@ -2021,7 +2028,7 @@ visible = false
 visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2144969543]
-transform = Transform3D(-0.991046, 0.0287286, 0.130391, 0.0366749, 0.997587, 0.058955, -0.128382, 0.0632092, -0.989708, 7.35825, 8.85602, -0.466172)
+transform = Transform3D(-0.9910464, 0.02872871, 0.13039044, 0.03667491, 0.9975867, 0.058954988, -0.12838204, 0.06320919, -0.98970836, 7.35825, 8.85602, -0.466172)
 light_color = Color(0.235294, 0, 0.172549, 1)
 shadow_enabled = true
 
@@ -3319,6 +3326,14 @@ script = ExtResource("67_gakp8")
 transform = Transform3D(0.350675, 0, -1.46023, 0, 1, 0, 0.331002, 0, 1.54702, -0.17611, 0.5, -1.51182)
 shape = SubResource("BoxShape3D_1avul")
 
+[node name="Label" type="Label" parent="Naomi/Area3D" unique_id=194456596]
+offset_left = 263.0
+offset_top = 156.0
+offset_right = 1289.0
+offset_bottom = 431.0
+text = "ERROR"
+label_settings = SubResource("LabelSettings_umbca")
+
 [node name="ColorRect2" type="ColorRect" parent="Naomi/Area3D" unique_id=236305318]
 material = SubResource("ShaderMaterial_jysci")
 offset_left = 2.0
@@ -3340,6 +3355,14 @@ script = ExtResource("68_fjes8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Naomi2/Area3D" unique_id=609518302]
 transform = Transform3D(0.499877, 0, -0.161523, 0, 1, 0, 0.0275447, 0, 2.93131, -0.581655, 0.5, -1.8969)
 shape = SubResource("BoxShape3D_1avul")
+
+[node name="Label" type="Label" parent="Naomi2/Area3D" unique_id=1798640770]
+offset_left = 263.0
+offset_top = 156.0
+offset_right = 1289.0
+offset_bottom = 431.0
+text = "ERROR"
+label_settings = SubResource("LabelSettings_umbca")
 
 [node name="ColorRect2" type="ColorRect" parent="Naomi2/Area3D" unique_id=537610384]
 material = SubResource("ShaderMaterial_jysci")
@@ -3456,7 +3479,7 @@ transform = Transform3D(0.699092, 0, 0.388934, 0, 0.8, 0, -0.388934, 0, 0.699092
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67952, -1)
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=2016232445]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, -1.68, -28)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, -0.97968626, -28.981548)
 light_energy = 0.2
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
