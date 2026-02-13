@@ -3,7 +3,7 @@ extends Control
 
 func _ready() -> void:
 	$ColorRect.hide()
-	$Panel/Label2.text = UserManager.current_username
+	$Panel/Label2.text = UserManager.current_username + (",")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

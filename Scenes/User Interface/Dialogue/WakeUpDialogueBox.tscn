@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://1cjx45ql8lgd"]
+[gd_scene format=3 uid="uid://1cjx45ql8lgd"]
 
-[ext_resource type="Script" path="res://Scripts/DialogueScripts/Wake_up_dialogue_box_script.gd" id="1_s4hwh"]
+[ext_resource type="Script" uid="uid://dlkofnsapml3b" path="res://Scripts/DialogueScripts/Wake_up_dialogue_box_script.gd" id="1_s4hwh"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_khcr7"]
 [ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="2_o6dig"]
 [ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="3_plwbh"]
@@ -44,8 +44,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iy72d"]
 _data = {
-"RESET": SubResource("Animation_vxsjl"),
-"TextTween": SubResource("Animation_5bkkr")
+&"RESET": SubResource("Animation_vxsjl"),
+&"TextTween": SubResource("Animation_5bkkr")
 }
 
 [node name="WakeUpTextBox" type="Node"]

@@ -16,12 +16,12 @@ var anim2 = 0
 func _ready() -> void:
 	if SceneSwitcher.PlayerSpawn == null:
 		var LoadedPlayer = LoadPlayer.instantiate()
-		LoadedPlayer.scale *= 1.1
+		LoadedPlayer.scale *= 1.2
 		add_child(LoadedPlayer)
 	else:
 		var LoadedPlayer = LoadPlayer.instantiate()
 		LoadedPlayer.position = SceneSwitcher.PlayerSpawn
-		LoadedPlayer.scale *= 1.1
+		LoadedPlayer.scale *= 1.2
 		add_child(LoadedPlayer)
 		$AirlockDoorSFX.play()
 

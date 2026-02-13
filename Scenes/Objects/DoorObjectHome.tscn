@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgeadqxeitvap"]
+[gd_scene format=3 uid="uid://bgeadqxeitvap"]
 
-[ext_resource type="Script" path="res://Scripts/DoorScript.gd" id="1_lwht3"]
+[ext_resource type="Script" uid="uid://cnnj76aufagwh" path="res://Scripts/DoorScript.gd" id="1_lwht3"]
 [ext_resource type="ArrayMesh" uid="uid://ktmm3yk71mt8" path="res://Models/Home Models/HomeDoorLeft.obj" id="2_fsyvj"]
 [ext_resource type="ArrayMesh" uid="uid://dr6exj4ejlf5x" path="res://Models/Home Models/HomeDoorRight.obj" id="3_uheja"]
 
@@ -121,38 +121,37 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ig4l"]
 _data = {
-"Close": SubResource("Animation_har7x"),
-"Open": SubResource("Animation_y6vlm"),
-"RESET": SubResource("Animation_o4u7w")
+&"Close": SubResource("Animation_har7x"),
+&"Open": SubResource("Animation_y6vlm"),
+&"RESET": SubResource("Animation_o4u7w")
 }
 
-[node name="DoorNode" type="Node3D"]
+[node name="DoorNode" type="Node3D" unique_id=385544309]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." node_paths=PackedStringArray("animation_player")]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1255216839 node_paths=PackedStringArray("animation_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38300994, 0)
 script = ExtResource("1_lwht3")
 animation_player = NodePath("AnimationPlayer")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=442301582]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_lvlee")
 
-[node name="HomeDoorLeft" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2"]
+[node name="HomeDoorLeft" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2" unique_id=1412726993]
 mesh = ExtResource("2_fsyvj")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=894054491]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_de43a")
 
-[node name="HomeDoorRight" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+[node name="HomeDoorRight" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=195264757]
 mesh = ExtResource("3_uheja")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D" unique_id=1841877038]
 root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_3ig4l")
-}
+libraries/ = SubResource("AnimationLibrary_3ig4l")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D" unique_id=744554362]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95095, 0)

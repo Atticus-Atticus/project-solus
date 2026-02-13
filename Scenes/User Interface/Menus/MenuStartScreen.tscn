@@ -143,10 +143,10 @@ tracks/1/path = NodePath("Panel:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.03333, 2.53333),
+"times": PackedFloat32Array(2, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 478), Vector2(812, 478)]
+"values": [Vector2(0, 520), Vector2(812, 520)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -347,9 +347,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -392.0
-offset_top = -251.0
+offset_top = -254.5
 offset_right = 393.0
-offset_bottom = 250.0
+offset_bottom = 246.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "
@@ -362,7 +362,7 @@ All communications and network infrastructure are down.
 
 A final transmission from a station within the nebula reports that the nebula is affecting personnel by mutating them into hostile entities.
 
-The Ministry of Intelligence has been tasked by the remnemts of High Command to determine the nature of this phenomenon.
+The Collective of Intelligence has been tasked by the remnemts of High Command to determine the nature of this phenomenon.
 
 Your assignment is to review recovered Neurological Blackbox Data in hopes of understanding this new threat to the Coalition's Prosperity."
 label_settings = SubResource("LabelSettings_dr6lu")

@@ -6,14 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="4_8laqr"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="5_cikgm"]
 [ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="6_vekju"]
-[ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_n6ybd"]
+[ext_resource type="Texture2D" uid="uid://e7ka3g6pxu41" path="res://Temp Textures/TempTextureGreen.png" id="10_unxep"]
 [ext_resource type="PackedScene" uid="uid://c4e6t6j7sf0tn" path="res://Scenes/Objects/CameraObject.tscn" id="46_5t6ra"]
 [ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="47_77jew"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="79_523mh"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mbd1m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2sdy"]
+albedo_texture = ExtResource("10_unxep")
 
-[sub_resource type="BoxMesh" id="BoxMesh_th3uv"]
+[sub_resource type="BoxMesh" id="BoxMesh_55q1j"]
 
 [node name="DreamLevelNode" type="Node3D" unique_id=2128980848]
 script = ExtResource("1_xmmdp")
@@ -32,42 +33,28 @@ texture = ExtResource("5_cikgm")
 [node name="Player" parent="." unique_id=118311981 instance=ExtResource("6_vekju")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.67326, 1.59873, -1.67291)
 
-[node name="Bonnie2" parent="." unique_id=2076220815 instance=ExtResource("7_n6ybd")]
-transform = Transform3D(0.589585, 0, -0.377345, 0, 0.7, 0, 0.377345, 0, 0.589585, -1.99729, 1.6232, 10.7942)
-
 [node name="CameraMain" parent="." unique_id=324212487 instance=ExtResource("46_5t6ra")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.173, 3.6, 5.007)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 4, 0)
 
 [node name="CameraTrigger" parent="CameraMain" unique_id=281827350 instance=ExtResource("47_77jew")]
-transform = Transform3D(39.6113, 0, 0, 0, 16.006, 0, 0, 0, 46.5815, 17.8589, -14.7982, -21.829)
-
-[node name="CameraMain2" parent="." unique_id=62055375 instance=ExtResource("46_5t6ra")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.241, 3.6, 13.497)
-
-[node name="CameraTrigger" parent="CameraMain2" unique_id=1363451063 instance=ExtResource("47_77jew")]
-transform = Transform3D(30.1847, 0, 0, 0, 16.006, 0, 0, 0, 60.5241, 12.1807, -11.3215, -7.95291)
-
-[node name="CameraMain3" parent="." unique_id=124102766 instance=ExtResource("46_5t6ra")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 6.32, 3.6, 4.881)
-
-[node name="CameraTrigger" parent="CameraMain3" unique_id=1000248280 instance=ExtResource("47_77jew")]
-transform = Transform3D(30.6953, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, 13.4196, -11.4277, -19.5361)
-
-[node name="CameraMain4" parent="." unique_id=1705800357 instance=ExtResource("46_5t6ra")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.37227, 3.43906, 3.52265)
-
-[node name="CameraTrigger" parent="CameraMain4" unique_id=892682157 instance=ExtResource("47_77jew")]
-transform = Transform3D(15.6412, 0, 0, 0, 16.006, 0, 0, 0, 35.2117, -5.67344, -7.97324, -18.7169)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -20, 0)
 
 [node name="AnimatedSprite3D" parent="." unique_id=1874958388 instance=ExtResource("79_523mh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99685, 2.54388, 4.277)
 
 [node name="Level" type="StaticBody3D" parent="." unique_id=1423796087]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level" unique_id=670257050]
-transform = Transform3D(19.2398, 0, 0, 0, 1, 0, 0, 0, 18.8832, 0, -0.261439, 0)
-shape = SubResource("BoxShape3D_mbd1m")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level" unique_id=1380543217]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_b2sdy")
+mesh = SubResource("BoxMesh_55q1j")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/CollisionShape3D" unique_id=69139144]
-mesh = SubResource("BoxMesh_th3uv")
-skeleton = NodePath("../..")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Level" unique_id=1392030563]
+transform = Transform3D(10.799999, 0, 0, 0, 1, 0, 0, 0, 3, 10, -1, -5)
+material_override = SubResource("StandardMaterial3D_b2sdy")
+mesh = SubResource("BoxMesh_55q1j")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Level" unique_id=1429971567]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 9, 14, -1, 1)
+material_override = SubResource("StandardMaterial3D_b2sdy")
+mesh = SubResource("BoxMesh_55q1j")

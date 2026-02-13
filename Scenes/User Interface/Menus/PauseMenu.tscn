@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bmxas43uii3q1" path="res://Scripts/options_button_script.gd" id="4_5dqt4"]
 [ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
+[ext_resource type="PackedScene" uid="uid://yge8fijrn5xd" path="res://Scenes/User Interface/Menus/Options.tscn" id="6_soebr"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
 
@@ -99,6 +100,14 @@ layout_mode = 2
 text = "> Return to Menu <"
 alignment = 0
 script = ExtResource("4_fjykx")
+
+[node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("6_soebr")]
+visible = false
+layout_mode = 1
+offset_left = 160.0
+offset_top = 154.0
+offset_right = 160.0
+offset_bottom = 154.0
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=600730338]
 position = Vector2(60, 1367)

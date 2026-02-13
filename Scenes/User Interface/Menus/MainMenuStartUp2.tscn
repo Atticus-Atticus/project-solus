@@ -189,10 +189,10 @@ text = "
 
 > Please select a program to run...
 
-> > BEGIN <
-> > OPTIONS <
-> > CREDITS <
-> > EXIT PROGRAM <"
+> > Begin <
+> > Options <
+> > Credits <
+> > Exit Program <"
 label_settings = SubResource("LabelSettings_srlce")
 visible_characters = 0
 visible_ratio = 0.0

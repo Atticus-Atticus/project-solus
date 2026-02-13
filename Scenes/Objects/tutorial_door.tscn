@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://drbinwxqdhmbn"]
+
+[ext_resource type="Texture2D" uid="uid://cncluhl8g3snl" path="res://Temp Textures/TempTextureBrown.png" id="1_lpgn6"]
+[ext_resource type="Script" uid="uid://ctdvtrsjxkgjd" path="res://Scripts/tutorial_door_script.gd" id="1_tnl85"]
+[ext_resource type="Texture2D" uid="uid://cua1bx75fhoe2" path="res://Temp Textures/TempTextureGray.png" id="2_tnl85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpgn6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0wji"]
+albedo_texture = ExtResource("1_lpgn6")
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0wji"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3aq3"]
+albedo_texture = ExtResource("2_tnl85")
+
+[sub_resource type="BoxMesh" id="BoxMesh_u3aq3"]
+
+[sub_resource type="Animation" id="Animation_q2kad"]
+resource_name = "DoorClose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4xl51"]
+resource_name = "DoorOpen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ohx7c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ciw47"]
+_data = {
+&"DoorClose": SubResource("Animation_q2kad"),
+&"DoorOpen": SubResource("Animation_4xl51"),
+&"RESET": SubResource("Animation_ohx7c")
+}
+
+[node name="TutorialDoor" type="Node3D" unique_id=1755218769]
+script = ExtResource("1_tnl85")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=935347584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=379086413]
+transform = Transform3D(0.1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_lpgn6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1895124149]
+material_override = SubResource("StandardMaterial3D_y0wji")
+mesh = SubResource("BoxMesh_y0wji")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=362344233]
+transform = Transform3D(0.15, 0, 0, 0, 0.3, 0, 0, 0, 0.11, 0, 1, 0.3)
+material_override = SubResource("StandardMaterial3D_u3aq3")
+mesh = SubResource("BoxMesh_u3aq3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=510095998]
+libraries/ = SubResource("AnimationLibrary_ciw47")

@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$".".hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +27,12 @@ Use 'E' to interact with objects that pulse blue.
 Use 'N' to show objective."
 
 
+func _open_menu():
+	$".".show()
+	$AnimationPlayer.play("Open")
+
+
 func _on_x_button_pressed() -> void:
 	$AnimationPlayer.play("Close")
 	await get_tree().create_timer(1.3).timeout
-	queue_free()
+	$".".hide()

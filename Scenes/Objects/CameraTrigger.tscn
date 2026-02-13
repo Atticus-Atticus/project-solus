@@ -1,28 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://qkolvndo8c42"]
+[gd_scene format=3 uid="uid://qkolvndo8c42"]
 
-[ext_resource type="Script" path="res://Scripts/CameraTriggerScript.gd" id="1_mosh8"]
+[ext_resource type="Script" uid="uid://cchun5xv6788q" path="res://Scripts/CameraTriggerScript.gd" id="1_mosh8"]
 [ext_resource type="AudioStream" uid="uid://dh6njkag285wr" path="res://Audio/ChangeCam.wav" id="2_j3ub6"]
 [ext_resource type="Texture2D" uid="uid://ca21et6nfx8jh" path="res://Scenes/User Interface/Menus/tv-4k-tv-static-d3k7px9ms3ebgfv4.jpg" id="3_pfco0"]
 [ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="4_s4tr3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n4us8"]
 
-[node name="CameraTrigger" type="Area3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_10kdq"]
+
+[node name="CameraTrigger" type="Area3D" unique_id=339341151]
 script = ExtResource("1_mosh8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1614585429]
 shape = SubResource("BoxShape3D_n4us8")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=361763847]
 stream = ExtResource("2_j3ub6")
 
-[node name="Static" type="Sprite2D" parent="."]
+[node name="Static" type="Sprite2D" parent="." unique_id=1456332621]
 visible = false
 position = Vector2(960, 540)
 texture = ExtResource("3_pfco0")
 
-[node name="CRT Shader Static" parent="." instance=ExtResource("4_s4tr3")]
+[node name="CRT Shader Static" parent="." unique_id=1311618545 instance=ExtResource("4_s4tr3")]
 visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=957835746]
+mesh = SubResource("BoxMesh_10kdq")
 
 [connection signal="body_entered" from="." to="." method="enter_trigger"]
 [connection signal="body_exited" from="." to="." method="exit_trigger"]

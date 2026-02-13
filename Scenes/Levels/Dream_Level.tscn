@@ -4203,24 +4203,28 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.173, 3.6, 5.007)
 
 [node name="CameraTrigger" parent="CameraMain" unique_id=1076638187 instance=ExtResource("14_1ypgy")]
 transform = Transform3D(39.6113, 0, 0, 0, 16.006, 0, 0, 0, 46.5815, 17.8589, -14.7982, -21.829)
+visible = false
 
 [node name="CameraMain2" parent="." unique_id=364177814 instance=ExtResource("13_jldc8")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.241, 3.6, 13.497)
 
 [node name="CameraTrigger" parent="CameraMain2" unique_id=96906576 instance=ExtResource("14_1ypgy")]
 transform = Transform3D(30.1847, 0, 0, 0, 16.006, 0, 0, 0, 60.5241, 12.1807, -11.3215, -7.95291)
+visible = false
 
 [node name="CameraMain3" parent="." unique_id=167541263 instance=ExtResource("13_jldc8")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 6.32, 3.6, 4.881)
 
 [node name="CameraTrigger" parent="CameraMain3" unique_id=1352599018 instance=ExtResource("14_1ypgy")]
 transform = Transform3D(30.6953, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, 13.4196, -11.4277, -19.5361)
+visible = false
 
 [node name="CameraMain4" parent="." unique_id=1357525984 instance=ExtResource("13_jldc8")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.37227, 3.43906, 3.52265)
 
 [node name="CameraTrigger" parent="CameraMain4" unique_id=931096400 instance=ExtResource("14_1ypgy")]
 transform = Transform3D(15.6412, 0, 0, 0, 16.006, 0, 0, 0, 35.2117, -5.67344, -7.97324, -18.7169)
+visible = false
 
 [node name="Node3D" parent="." unique_id=87300090 instance=ExtResource("20_3m3rq")]
 transform = Transform3D(1.95856, 0, 0, 0, 3.54026, 0, 0, 0, 1.2, 0.0357592, 0.864013, 14.3513)

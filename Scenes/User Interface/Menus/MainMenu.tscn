@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bmxas43uii3q1" path="res://Scripts/options_button_script.gd" id="7_4uqfl"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="7_gvxfj"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="8_uqu75"]
+[ext_resource type="PackedScene" uid="uid://yge8fijrn5xd" path="res://Scenes/User Interface/Menus/Options.tscn" id="9_tr3c8"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="10_81kxu"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="11_rd3md"]
 
@@ -187,31 +188,27 @@ theme_override_constants/separation = 21
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=602867290]
 layout_mode = 2
-text = "> BEGIN <"
+text = "> Begin <"
 alignment = 0
 script = ExtResource("3_pbbw1")
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=761155826]
 layout_mode = 2
-text = "> OPTIONS <"
+text = "> Options <"
 alignment = 0
 script = ExtResource("7_4uqfl")
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1012220440]
 layout_mode = 2
-text = "> CREDITS <"
+text = "> Credits <"
 alignment = 0
 script = ExtResource("6_n0anp")
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1151524765]
 layout_mode = 2
-text = "> EXIT PROGRAM <"
+text = "> Exit Program <"
 alignment = 0
 script = ExtResource("5_0nmoh")
-
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=346135372]
-position = Vector2(60, 1367)
-texture = ExtResource("8_uqu75")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1571590109]
 layout_mode = 0
@@ -225,6 +222,17 @@ color = Color(0.4, 1, 0.941176, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=119036246]
 libraries/ = SubResource("AnimationLibrary_kaeub")
 autoplay = &"FlashingSquare"
+
+[node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("9_tr3c8")]
+layout_mode = 1
+offset_left = 132.0
+offset_top = 187.0
+offset_right = 132.0
+offset_bottom = 187.0
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=346135372]
+position = Vector2(60, 1367)
+texture = ExtResource("8_uqu75")
 
 [node name="CRT Shader" parent="." unique_id=434780428 instance=ExtResource("6_23flb")]
 layout_mode = 0
