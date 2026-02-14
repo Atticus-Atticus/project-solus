@@ -1,30 +1,30 @@
-[gd_scene load_steps=31 format=3 uid="uid://gau34na8j31t"]
+[gd_scene format=3 uid="uid://gau34na8j31t"]
 
-[ext_resource type="Script" path="res://Scripts/data_base_menu_script.gd" id="1_wy1b0"]
+[ext_resource type="Script" uid="uid://rayt1edgi1js" path="res://Scripts/data_base_menu_script.gd" id="1_wy1b0"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_jbfp7"]
-[ext_resource type="Shader" path="res://Shaders/PauseMenuBackground.gdshader" id="3_u8oml"]
-[ext_resource type="Script" path="res://Scripts/keysfound_script.gd" id="5_oplpb"]
+[ext_resource type="Shader" uid="uid://bd8o4dwtxkvgg" path="res://Shaders/PauseMenuBackground.gdshader" id="3_u8oml"]
+[ext_resource type="Script" uid="uid://35otybe1lta8" path="res://Scripts/keysfound_script.gd" id="5_oplpb"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_qh6do"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="6_vjryu"]
-[ext_resource type="Script" path="res://Scripts/calihanrecord_script.gd" id="7_vkhjs"]
-[ext_resource type="Script" path="res://Scripts/naomirecord_script.gd" id="8_ag15j"]
-[ext_resource type="Script" path="res://Scripts/DatabaseButtonScript.gd" id="8_s6gd0"]
-[ext_resource type="Script" path="res://Scripts/close_terminal_script.gd" id="10_l4klt"]
-[ext_resource type="Script" path="res://Scenes/User Interface/Menus/encryption_file_script.gd" id="10_pb4xb"]
-[ext_resource type="Script" path="res://Scripts/database_x_button.gd" id="10_qpogf"]
-[ext_resource type="Script" path="res://Scripts/Lore1ButtonScript.gd" id="11_wu2jc"]
-[ext_resource type="Script" path="res://Scripts/lore_2_script.gd" id="12_a7ju5"]
-[ext_resource type="Script" path="res://Scripts/lore_3_script.gd" id="13_667g6"]
-[ext_resource type="Script" path="res://Scripts/neuro_blackbox_button_script.gd" id="13_tlba5"]
-[ext_resource type="Script" path="res://Scripts/lore_4_script.gd" id="14_dx833"]
-[ext_resource type="Script" path="res://Scripts/lore_5_script.gd" id="15_fgpow"]
-[ext_resource type="Script" path="res://Scripts/lore_6_script.gd" id="16_75qe2"]
-[ext_resource type="Script" path="res://Scripts/lore_7_script.gd" id="17_sdvkq"]
-[ext_resource type="Script" path="res://Scripts/lore_8_script.gd" id="18_r7p8c"]
-[ext_resource type="Script" path="res://Scripts/lore1_x_button.gd" id="19_k3cli"]
-[ext_resource type="Script" path="res://Scripts/simulation_9.gd" id="19_rn5ta"]
+[ext_resource type="Script" uid="uid://c3xwwyhm8i22i" path="res://Scripts/calihanrecord_script.gd" id="7_vkhjs"]
+[ext_resource type="Script" uid="uid://3cp6o5chwtch" path="res://Scripts/naomirecord_script.gd" id="8_ag15j"]
+[ext_resource type="Script" uid="uid://dfos8bq4fpwap" path="res://Scripts/DatabaseButtonScript.gd" id="8_s6gd0"]
+[ext_resource type="Script" uid="uid://dflikoq3mt6a1" path="res://Scripts/close_terminal_script.gd" id="10_l4klt"]
+[ext_resource type="Script" uid="uid://cd741y4ug3at7" path="res://Scenes/User Interface/Menus/encryption_file_script.gd" id="10_pb4xb"]
+[ext_resource type="Script" uid="uid://c6mh6b02oashj" path="res://Scripts/database_x_button.gd" id="10_qpogf"]
+[ext_resource type="Script" uid="uid://doy30lfwxndwu" path="res://Scripts/Lore1ButtonScript.gd" id="11_wu2jc"]
+[ext_resource type="Script" uid="uid://cl66dth3kstbr" path="res://Scripts/lore_2_script.gd" id="12_a7ju5"]
+[ext_resource type="Script" uid="uid://c8qnbklup44pa" path="res://Scripts/lore_3_script.gd" id="13_667g6"]
+[ext_resource type="Script" uid="uid://da06dyygi1ufn" path="res://Scripts/neuro_blackbox_button_script.gd" id="13_tlba5"]
+[ext_resource type="Script" uid="uid://cmwf6hkqv7grv" path="res://Scripts/lore_4_script.gd" id="14_dx833"]
+[ext_resource type="Script" uid="uid://cck1iiwx6tph2" path="res://Scripts/lore_5_script.gd" id="15_fgpow"]
+[ext_resource type="Script" uid="uid://dv734ol2d608t" path="res://Scripts/lore_6_script.gd" id="16_75qe2"]
+[ext_resource type="Script" uid="uid://bb5vbhfx6808e" path="res://Scripts/lore_7_script.gd" id="17_sdvkq"]
+[ext_resource type="Script" uid="uid://bocjcs5n83ghe" path="res://Scripts/lore_8_script.gd" id="18_r7p8c"]
+[ext_resource type="Script" uid="uid://bvg1wln35255g" path="res://Scripts/lore1_x_button.gd" id="19_k3cli"]
+[ext_resource type="Script" uid="uid://b8hi0a2uqr6kg" path="res://Scripts/simulation_9.gd" id="19_rn5ta"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="20_q0khx"]
-[ext_resource type="Script" path="res://Scripts/life_beyond_scale_10.gd" id="20_v1oxy"]
+[ext_resource type="Script" uid="uid://cfefmha4jn7dt" path="res://Scripts/life_beyond_scale_10.gd" id="20_v1oxy"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="21_pcyv2"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="22_rlyqr"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="23_d1qpe"]
@@ -34,7 +34,7 @@
 shader = ExtResource("3_u8oml")
 shader_parameter/amount = 0.0
 
-[node name="Database Menu" type="Control"]
+[node name="Database Menu" type="Control" unique_id=698585151]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,12 +43,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wy1b0")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=325178456]
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("2_jbfp7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=542616222]
 visible = false
 material = SubResource("ShaderMaterial_8c0vo")
 layout_mode = 0
@@ -58,7 +58,7 @@ offset_right = 2005.0
 offset_bottom = 1114.0
 color = Color(0, 0.0705882, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=59243286]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -92,7 +92,7 @@ text = "
 This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
 label_settings = ExtResource("5_qh6do")
 
-[node name="keysfound" type="Label" parent="."]
+[node name="keysfound" type="Label" parent="." unique_id=1447555578]
 layout_mode = 0
 offset_left = 107.0
 offset_top = 718.0
@@ -102,7 +102,7 @@ text = "0"
 label_settings = ExtResource("5_qh6do")
 script = ExtResource("5_oplpb")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=665407426]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.056375
@@ -121,37 +121,37 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2078352240]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="Calihan" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Calihan" type="Button" parent="MarginContainer/VBoxContainer" unique_id=191854741]
 layout_mode = 2
 text = "Solarian Coalition Personnel Record - Calihan Lonan"
 alignment = 0
 script = ExtResource("7_vkhjs")
 
-[node name="Naomi" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Naomi" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1205210580]
 layout_mode = 2
 text = "Solarian Coalition Personnel Record - Naomi Lonan-Roseberry"
 alignment = 0
 script = ExtResource("8_ag15j")
 
-[node name="Database" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Database" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1100619355]
 layout_mode = 2
 text = "Database"
 alignment = 0
 script = ExtResource("8_s6gd0")
 
-[node name="EncryptionFile" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="EncryptionFile" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1087369088]
 layout_mode = 2
 disabled = true
 text = "For_Calihan.txt"
 alignment = 0
 script = ExtResource("10_pb4xb")
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=439206893]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.056375
@@ -170,18 +170,18 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=2050161691]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="CloseTerminal" type="Button" parent="MarginContainer2/VBoxContainer"]
+[node name="CloseTerminal" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1731297558]
 layout_mode = 2
 text = "Click here to shut down terminal"
 alignment = 0
 script = ExtResource("10_l4klt")
 
-[node name="DatabasePanel" type="Panel" parent="."]
+[node name="DatabasePanel" type="Panel" parent="." unique_id=689416855]
 visible = false
 layout_mode = 0
 offset_left = 625.0
@@ -190,7 +190,7 @@ offset_right = 1335.0
 offset_bottom = 972.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="DatabasePanel"]
+[node name="X Button" type="Button" parent="DatabasePanel" unique_id=648727739]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -202,7 +202,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("10_qpogf")
 
-[node name="MarginContainer" type="MarginContainer" parent="DatabasePanel"]
+[node name="MarginContainer" type="MarginContainer" parent="DatabasePanel" unique_id=1894313832]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00738029
@@ -221,58 +221,58 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DatabasePanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="DatabasePanel/MarginContainer" unique_id=1349809967]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="NeuroBlackbox 0" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="NeuroBlackbox 0" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1230651948]
 layout_mode = 2
 text = "Neurological Blackboxes"
 alignment = 0
 script = ExtResource("13_tlba5")
 
-[node name="FotN 1" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="FotN 1" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=688643060]
 layout_mode = 2
 disabled = true
 text = "Festival of the Nova"
 alignment = 0
 script = ExtResource("11_wu2jc")
 
-[node name="FCC 2" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="FCC 2" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1807297793]
 layout_mode = 2
 disabled = true
 text = "Farseeing Courier Company"
 alignment = 0
 script = ExtResource("12_a7ju5")
 
-[node name="Cali1 3" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="Cali1 3" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1441320394]
 layout_mode = 2
 text = "Calihan Journal Entry 1"
 alignment = 0
 script = ExtResource("13_667g6")
 
-[node name="Cali2 4" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="Cali2 4" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1949023277]
 layout_mode = 2
 text = "Calihan Journal Entry 2
 "
 alignment = 0
 script = ExtResource("14_dx833")
 
-[node name="ReadMe 5" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="ReadMe 5" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1549372494]
 layout_mode = 2
 text = "ListenClosely.wav"
 alignment = 0
 script = ExtResource("15_fgpow")
 
-[node name="Cali3 6" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="Cali3 6" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=38178924]
 layout_mode = 2
 text = "Calihan Journal Entry 3
 "
 alignment = 0
 script = ExtResource("16_75qe2")
 
-[node name="AbndShip 7" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="AbndShip 7" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=215276551]
 layout_mode = 2
 disabled = true
 text = "Abandoned ship's log
@@ -280,7 +280,7 @@ text = "Abandoned ship's log
 alignment = 0
 script = ExtResource("17_sdvkq")
 
-[node name="Brimpie Orb 8" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="Brimpie Orb 8" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=561496633]
 layout_mode = 2
 disabled = true
 text = "Brimpie Orbital Log
@@ -288,14 +288,14 @@ text = "Brimpie Orbital Log
 alignment = 0
 script = ExtResource("18_r7p8c")
 
-[node name="Simulation 9" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="Simulation 9" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1047632342]
 layout_mode = 2
 disabled = true
 text = "The Numbers behind the stars"
 alignment = 0
 script = ExtResource("19_rn5ta")
 
-[node name="LifeBeyondScale 10" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer"]
+[node name="LifeBeyondScale 10" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=355676959]
 layout_mode = 2
 disabled = true
 text = "Life beyond scale
@@ -303,7 +303,7 @@ text = "Life beyond scale
 alignment = 0
 script = ExtResource("20_v1oxy")
 
-[node name="CalihanPanel" type="Panel" parent="."]
+[node name="CalihanPanel" type="Panel" parent="." unique_id=107449489]
 visible = false
 layout_mode = 0
 offset_left = 805.0
@@ -312,7 +312,7 @@ offset_right = 1863.0
 offset_bottom = 978.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="CalihanPanel"]
+[node name="X Button" type="Button" parent="CalihanPanel" unique_id=830573162]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -324,7 +324,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="CalihanPanel"]
+[node name="Label" type="Label" parent="CalihanPanel" unique_id=1779742725]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -340,9 +340,9 @@ text = "Solarian Coalition Personnel Record - CALIHAN LONAN
 FULL NAME:  Calihan Lonan
 STATUS:  Registered Citizen
 SERVICE ID:  2374-092-CL
-OCCUPATION:  Interstellar Courier for Farseeing Courier Company
-WORLD OF BIRTH:  Brimpie - 3
-REGISTERED HOMEWORLD:  Brimpie - 3
+OCCUPATION:  Interstellar Courier for The Farseeing Courier Company
+WORLD OF BIRTH:  Brimpie-3
+REGISTERED HOMEWORLD:  Brimpie-3
 REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
 
 ASSOCIATIONS:
@@ -370,7 +370,7 @@ Remarks:
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
-[node name="NaomiPanel" type="Panel" parent="."]
+[node name="NaomiPanel" type="Panel" parent="." unique_id=1958668346]
 visible = false
 layout_mode = 0
 offset_left = 805.0
@@ -379,7 +379,7 @@ offset_right = 1863.0
 offset_bottom = 978.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="NaomiPanel"]
+[node name="X Button" type="Button" parent="NaomiPanel" unique_id=2042790016]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -391,7 +391,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="NaomiPanel"]
+[node name="Label" type="Label" parent="NaomiPanel" unique_id=1566146898]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -408,13 +408,13 @@ FULL NAME:  Naomi Lonan-Roseberry
 STATUS:  Registered Citizen
 SERVICE ID:  4449-773-NR
 OCCUPATION:  N/A
-WORLD OF BIRTH:  Brimpie - 4, Buoy Station 16
-REGISTERED HOMEWORLD:  Brimpie - 3
+WORLD OF BIRTH:  Brimpie-4, Buoy Station 16
+REGISTERED HOMEWORLD:  Brimpie-3
 REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
 
 ASSOCIATIONS:
   Registered domestic partnership with Calihan Lonan.
-  No immediate family registered.
+  No immediate family on file.
 
 OCCUPATION:
   Former Deep Space Radio Operator and Telemetry Officer.
@@ -431,11 +431,11 @@ NOTES:
 
 Remarks:
   “Brilliant mind. Too soft for Coalition work.”
-   - Director R. Zannis, Brimpie - 4 Communications"
+   - Director R. Zannis, Brimpie-4 Communications Admin"
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
-[node name="SecretPanel" type="Panel" parent="."]
+[node name="SecretPanel" type="Panel" parent="." unique_id=2103044928]
 visible = false
 layout_mode = 0
 offset_left = 803.0
@@ -444,7 +444,7 @@ offset_right = 1861.0
 offset_bottom = 1016.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="SecretPanel"]
+[node name="X Button" type="Button" parent="SecretPanel" unique_id=1376217755]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -456,7 +456,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="SecretPanel"]
+[node name="Label" type="Label" parent="SecretPanel" unique_id=1843217611]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -473,8 +473,8 @@ FULL NAME:  Amy Rayen
 STATUS:  Registered Citizen
 SERVICE ID:  7721-907-AR
 OCCUPATION:  Cadet, Solarian Army Corps
-WORLD OF BIRTH:  82-G Eridani - d
-REGISTERED HOMEWORLD:  82-G Eridani - d
+WORLD OF BIRTH:  82-G Eridani-d
+REGISTERED HOMEWORLD:  82-G Eridani-d
 REGISTERED RESIDENCE:  Barracks 1305, Cadet Complex Theta-19
 
 ASSOCIATIONS:
@@ -504,7 +504,7 @@ Remarks:
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
-[node name="ForCalihanPanel" type="Panel" parent="."]
+[node name="ForCalihanPanel" type="Panel" parent="." unique_id=54108137]
 visible = false
 layout_mode = 0
 offset_left = 736.0
@@ -513,7 +513,7 @@ offset_right = 1794.0
 offset_bottom = 883.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="ForCalihanPanel"]
+[node name="X Button" type="Button" parent="ForCalihanPanel" unique_id=162584358]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -525,7 +525,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="ForCalihanPanel"]
+[node name="Label" type="Label" parent="ForCalihanPanel" unique_id=637337750]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -562,7 +562,7 @@ I love you."
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
-[node name="LorePanel0" type="Panel" parent="."]
+[node name="LorePanel0" type="Panel" parent="." unique_id=460563607]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -571,7 +571,7 @@ offset_right = 1774.0
 offset_bottom = 935.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel0"]
+[node name="X Button" type="Button" parent="LorePanel0" unique_id=1361842634]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -583,7 +583,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel0"]
+[node name="Label" type="Label" parent="LorePanel0" unique_id=592363843]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -616,7 +616,7 @@ We have become its content.
 label_settings = ExtResource("20_q0khx")
 autowrap_mode = 3
 
-[node name="LorePanel1" type="Panel" parent="."]
+[node name="LorePanel1" type="Panel" parent="." unique_id=1552261267]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -625,7 +625,7 @@ offset_right = 1774.0
 offset_bottom = 939.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel1"]
+[node name="X Button" type="Button" parent="LorePanel1" unique_id=897739257]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -637,7 +637,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel1"]
+[node name="Label" type="Label" parent="LorePanel1" unique_id=572887717]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -676,7 +676,7 @@ Please also take into account that the chances of new elements or radiation
 coming from a supernova are a million to one."
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel2" type="Panel" parent="."]
+[node name="LorePanel2" type="Panel" parent="." unique_id=1264935464]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -685,7 +685,7 @@ offset_right = 1774.0
 offset_bottom = 939.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel2"]
+[node name="X Button" type="Button" parent="LorePanel2" unique_id=2082763271]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -697,7 +697,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel2"]
+[node name="Label" type="Label" parent="LorePanel2" unique_id=1430561231]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -731,7 +731,7 @@ cities of the Empyrean Twins, you can trust us to move your cargo at
 light speed, and the right speed."
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel3" type="Panel" parent="."]
+[node name="LorePanel3" type="Panel" parent="." unique_id=2080106070]
 visible = false
 layout_mode = 0
 offset_left = 863.0
@@ -740,7 +740,7 @@ offset_right = 1770.0
 offset_bottom = 945.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel3"]
+[node name="X Button" type="Button" parent="LorePanel3" unique_id=1559093037]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -752,7 +752,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel3"]
+[node name="Label" type="Label" parent="LorePanel3" unique_id=1481547398]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -783,7 +783,7 @@ seems I'll probably spend most of this journey asleep.
 "
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel4" type="Panel" parent="."]
+[node name="LorePanel4" type="Panel" parent="." unique_id=2060204214]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -792,7 +792,7 @@ offset_right = 1774.0
 offset_bottom = 939.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel4"]
+[node name="X Button" type="Button" parent="LorePanel4" unique_id=1807635674]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -804,7 +804,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel4"]
+[node name="Label" type="Label" parent="LorePanel4" unique_id=1719079136]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -840,7 +840,7 @@ I'll head there and get my bearings.
 "
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel5" type="Panel" parent="."]
+[node name="LorePanel5" type="Panel" parent="." unique_id=784570424]
 visible = false
 layout_mode = 0
 offset_left = 651.0
@@ -849,7 +849,7 @@ offset_right = 1811.0
 offset_bottom = 1008.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel5"]
+[node name="X Button" type="Button" parent="LorePanel5" unique_id=1460906697]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -861,7 +861,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel5"]
+[node name="Label" type="Label" parent="LorePanel5" unique_id=431137221]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -906,7 +906,7 @@ AHHHHHH-…
 "
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel6" type="Panel" parent="."]
+[node name="LorePanel6" type="Panel" parent="." unique_id=1810831684]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -915,7 +915,7 @@ offset_right = 1774.0
 offset_bottom = 939.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel6"]
+[node name="X Button" type="Button" parent="LorePanel6" unique_id=1067201175]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -927,7 +927,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel6"]
+[node name="Label" type="Label" parent="LorePanel6" unique_id=925663719]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -969,7 +969,7 @@ Guess I'll just drift above Brimpie and slowly wither away with it.
 "
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel7" type="Panel" parent="."]
+[node name="LorePanel7" type="Panel" parent="." unique_id=1121075489]
 visible = false
 layout_mode = 0
 offset_left = 649.0
@@ -978,7 +978,7 @@ offset_right = 1869.0
 offset_bottom = 1012.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel7"]
+[node name="X Button" type="Button" parent="LorePanel7" unique_id=1293806013]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -990,7 +990,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel7"]
+[node name="Label" type="Label" parent="LorePanel7" unique_id=286927949]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -1034,7 +1034,7 @@ Log 84:
 "
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel8" type="Panel" parent="."]
+[node name="LorePanel8" type="Panel" parent="." unique_id=202064542]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -1043,7 +1043,7 @@ offset_right = 1774.0
 offset_bottom = 935.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel8"]
+[node name="X Button" type="Button" parent="LorePanel8" unique_id=1496066666]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -1055,7 +1055,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel8"]
+[node name="Label" type="Label" parent="LorePanel8" unique_id=1055750278]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -1094,7 +1094,7 @@ Probably do what all of other rich uptight bastards did and head off into
 deep space looking for a new world."
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel9" type="Panel" parent="."]
+[node name="LorePanel9" type="Panel" parent="." unique_id=305382630]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -1103,7 +1103,7 @@ offset_right = 1774.0
 offset_bottom = 935.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel9"]
+[node name="X Button" type="Button" parent="LorePanel9" unique_id=1543756491]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -1115,7 +1115,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel9"]
+[node name="Label" type="Label" parent="LorePanel9" unique_id=38903479]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -1154,7 +1154,7 @@ who wrote it?
 and, for what purpose?"
 label_settings = ExtResource("20_q0khx")
 
-[node name="LorePanel10" type="Panel" parent="."]
+[node name="LorePanel10" type="Panel" parent="." unique_id=837627865]
 visible = false
 layout_mode = 0
 offset_left = 867.0
@@ -1163,7 +1163,7 @@ offset_right = 1774.0
 offset_bottom = 935.0
 theme = ExtResource("6_vjryu")
 
-[node name="X Button" type="Button" parent="LorePanel10"]
+[node name="X Button" type="Button" parent="LorePanel10" unique_id=850113274]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -1175,7 +1175,7 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
-[node name="Label" type="Label" parent="LorePanel10"]
+[node name="Label" type="Label" parent="LorePanel10" unique_id=1770509678]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
@@ -1215,17 +1215,18 @@ And if we are crushed beneath such a being, it wouldn't be war.
 It would be indifference."
 label_settings = ExtResource("20_q0khx")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=138610122]
 position = Vector2(60, 1367)
 texture = ExtResource("21_pcyv2")
 
-[node name="CRT Shader2" parent="." instance=ExtResource("22_rlyqr")]
+[node name="CRT Shader2" parent="." unique_id=39602826 instance=ExtResource("22_rlyqr")]
 visible = false
 layout_mode = 1
 mouse_filter = 2
 
-[node name="CRT Shader" parent="." instance=ExtResource("23_d1qpe")]
+[node name="CRT Shader" parent="." unique_id=463006829 instance=ExtResource("23_d1qpe")]
 visible = false
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1237,7 +1238,7 @@ grow_horizontal = 1
 grow_vertical = 1
 mouse_filter = 2
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1215288909]
 stream = ExtResource("24_tl14l")
 volume_db = -2.0
 autoplay = true

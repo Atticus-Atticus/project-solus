@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="7_fce30"]
 [ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="8_vx1b8"]
 [ext_resource type="PackedScene" uid="uid://bgeadqxeitvap" path="res://Scenes/Objects/DoorObjectHome.tscn" id="9_fce30"]
-[ext_resource type="Texture2D" uid="uid://c2rcdbe07c4xw" path="res://Models/Textures/TempTextureBlue.png" id="10_unp4q"]
+[ext_resource type="Texture2D" uid="uid://c2rcdbe07c4xw" path="res://Temp Textures/TempTextureBlue.png" id="10_unp4q"]
 [ext_resource type="PackedScene" uid="uid://drbinwxqdhmbn" path="res://Scenes/Objects/tutorial_door.tscn" id="12_x7ktj"]
 [ext_resource type="PackedScene" uid="uid://dxd5e17wrkapr" path="res://Models/Ship/Calihan Ship.gltf" id="14_jss2i"]
 [ext_resource type="PackedScene" uid="uid://6lu31r05ib36" path="res://Particles/thruster_effect.tscn" id="15_reklg"]
@@ -2537,5 +2537,6 @@ transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-0
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.158084, 0.0657587, 0.126627)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1374621128]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 0)
+transform = Transform3D(0.46466818, 0, 0, 0, 0.5463561, 0, 0, 0, 1, -43.97285, 1.9753287, -22.968985)
+billboard = 2
 sprite_frames = SubResource("SpriteFrames_21jvv")

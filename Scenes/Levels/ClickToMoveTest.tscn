@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cv3pgb5j655rm"]
+[gd_scene format=3 uid="uid://cv3pgb5j655rm"]
 
 [ext_resource type="Texture2D" uid="uid://e7ka3g6pxu41" path="res://Temp Textures/TempTextureGreen.png" id="1_40lsx"]
-[ext_resource type="Script" path="res://Scripts/ClickToMove.gd" id="1_u3xn0"]
+[ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="1_u3xn0"]
+[ext_resource type="ArrayMesh" uid="uid://c6endhqsfrs4y" path="res://Models/ShipMid.obj" id="2_wvye5"]
 [ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="3_65s5i"]
-[ext_resource type="PackedScene" uid="uid://c4e6t6j7sf0tn" path="res://Scenes/Objects/CameraObject.tscn" id="4_o1at0"]
+[ext_resource type="PackedScene" uid="uid://del30s26fg6vm" path="res://Scenes/Objects/CameraObjectStatic.tscn" id="4_68a8o"]
 [ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="5_kri1u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w4kda"]
@@ -20,10 +21,10 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_fvieb"]
-vertices = PackedVector3Array(-4.97238, 0.0432526, -4.48725, -4.97238, 0.0432526, 4.51275, 5.02762, 0.0432526, 4.51275, 5.02762, 0.0432526, -4.48725)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-4.7223845, 0.04325255, 4.26275, -3.2223845, 0.04325255, 4.26275, -2.9723845, 0.04325255, 1.0127501, -4.7223845, 0.04325255, -4.23725, -1.2223845, 0.04325255, 1.2627501, 4.7776155, 0.04325255, 4.26275, 4.7776155, 0.04325255, -4.23725, -1.2223845, 0.04325255, 4.26275, -2.7223845, 0.38325253, 1.5127501, -2.7223845, 0.38325253, 4.01275, -1.7223845, 0.38325253, 4.01275, -1.7223845, 0.38325253, 1.5127501)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 3), PackedInt32Array(4, 2, 3), PackedInt32Array(5, 7, 4), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9)]
 cell_height = 0.01
-agent_radius = 0.0
+agent_radius = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otdas"]
 albedo_texture = ExtResource("1_40lsx")
@@ -41,56 +42,108 @@ albedo_texture = ExtResource("3_65s5i")
 
 [sub_resource type="BoxMesh" id="BoxMesh_26cv6"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=483920132]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1563731407]
 environment = SubResource("Environment_0srib")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1152509803]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=301208045]
 transform = Transform3D(3.22408, 0, 0, 0, 1, 0, 0, 0, 3.54624, 0, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_fvieb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(9.94477, 0, 0, 0, 0.0534949, 0, 0, 0, 8.9745, 0, 0, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1921663005]
+transform = Transform3D(9.944769, 0, 0, 0, 0.053494897, 0, 0, 0, 8.9745, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_otdas")
 mesh = SubResource("BoxMesh_iadh7")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D" unique_id=413980394]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=1860207258]
 shape = SubResource("BoxShape3D_0ve0b")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27342, 1.24384, 0)
+[node name="ShipMid21" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=519496241]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.24951085, 0, 0.1885267)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid22" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=596339235]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.24951085, 0, 0.25136894)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid23" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=2128958664]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.24951085, 0, 0.3142112)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid24" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=1688583952]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.24951085, 0, 0.3770534)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid25" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=1496497832]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.24951085, 0, 0.43989563)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid26" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=1186355374]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.18713313, 0, 0.43989563)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid27" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=465026391]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.18713313, 0, 0.3770534)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid28" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=1740746464]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.18713313, 0, 0.3142112)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid29" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=836083788]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.18713313, 0, 0.25136894)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="ShipMid30" type="MeshInstance3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D" unique_id=634301885]
+transform = Transform3D(0.062377714, 0, 0, 0, 37.386745, 0, 0, 0, 0.062842235, -0.18713313, 0, 0.1885267)
+mesh = ExtResource("2_wvye5")
+skeleton = NodePath("../../../../../..")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1606529207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.72658, 1.24384, 8)
 script = ExtResource("1_u3xn0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1297159009]
 shape = SubResource("CapsuleShape3D_6hn15")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=1879499322]
 mesh = SubResource("CapsuleMesh_8vqlh")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=297576873]
 transform = Transform3D(0.257562, 0, 0, 0, 0.294782, 0, 0, 0, 0.365385, -0.0754814, 0.407165, -0.527833)
 material_override = SubResource("StandardMaterial3D_yaoye")
 mesh = SubResource("BoxMesh_26cv6")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D"]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=1845403120]
 debug_enabled = true
 
-[node name="CameraCaliRoom" parent="." instance=ExtResource("4_o1at0")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -15.5099, 4.07213, 13.4559)
+[node name="Camera" parent="." unique_id=1294855615 instance=ExtResource("4_68a8o")]
+transform = Transform3D(0.70710677, 0.1830127, -0.68301266, 0, 0.96592593, 0.25881907, 0.7071068, -0.18301271, 0.6830127, -16, 5, 17)
 
-[node name="CameraTrigger" parent="CameraCaliRoom" instance=ExtResource("5_kri1u")]
-transform = Transform3D(113.81, 0, 0, 0, 18.0502, 0, 0, 0, 168.635, 21.9647, -10.6395, -67.6051)
+[node name="CameraTrigger" parent="Camera" unique_id=339341151 instance=ExtResource("5_kri1u")]
+transform = Transform3D(11.495316, 0.14571632, 22.709513, 3.2829206, 1.8716966, -8.690142, -11.846514, 0.6600835, 19.628078, -5.656865, 0.16258061, -16.061598)
+visible = false
 
-[node name="CameraCaliRoom2" parent="." instance=ExtResource("4_o1at0")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.851864, 4.07213, 13.4559)
+[node name="Camera2" parent="." unique_id=2142383008 instance=ExtResource("4_68a8o")]
+transform = Transform3D(0.70710677, 0.1830127, -0.68301266, 0, 0.96592593, 0.25881907, 0.7071068, -0.18301271, 0.6830127, 0, 5, 17)
 
-[node name="CameraTrigger" parent="CameraCaliRoom2" instance=ExtResource("5_kri1u")]
-transform = Transform3D(113.81, 0, 0, 0, 18.0502, 0, 0, 0, 168.635, 54.4647, -10.6395, -67.6051)
+[node name="CameraTrigger2" parent="Camera2" unique_id=229506622 instance=ExtResource("5_kri1u")]
+transform = Transform3D(11.495316, 0.14571637, 22.709518, 3.2829216, 1.8716966, -8.6901455, -11.846517, 0.6600836, 19.628086, -4.2426524, 0.52860785, -17.427633)
+visible = false

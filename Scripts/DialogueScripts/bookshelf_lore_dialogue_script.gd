@@ -19,19 +19,19 @@ func _process(delta: float) -> void:
 
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* Humanity took its place among the stars. But under the rule of the Terran Parliament, became fractured and weak.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* Humanity took its place among the stars. But under the rule of the Terran Parliament, became fractured and weak. And humamity suffered suffered for it.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* Eventually, unrest took hold and a great war broke out between the Terran Parliament and the Growing Unity of Humanity.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* After a series of failed rebellions against the Terran Parliament, a handful of small systems from unified to form the Solarian Coalition.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* In the end, the Growing Unity stood above all and became the leaders humanity needed. The Solarian Coalition.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("* In the end, the Solarian Coalition stood above all and became the leaders humanity needed. Placing prosperity above all.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 5:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: The inner systems hold most, if not all, the power.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Long Live the Coalition.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
