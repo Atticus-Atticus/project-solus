@@ -2193,12 +2193,8 @@ mesh = ExtResource("6_8ouc5")
 skeleton = NodePath("../../../..")
 
 [node name="InvisableWall" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=332374980]
-transform = Transform3D(6.49834, 0, 0.247118, 0, 2.70826, 0, -1.40487, 0, 1.14306, 12.4327, 1.70463, 4.72195)
+transform = Transform3D(6.408334, 0, 0.31146473, 0, 2.7082596, 0, -1.7706836, 0, 1.1272279, 12.4327, 0.8077539, 4.7625027)
 shape = SubResource("BoxShape3D_0dh0d")
-
-[node name="InvisableWall2" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=1753494528]
-transform = Transform3D(6.49391, 0.180939, 0.238211, -0.449159, 2.70205, -0.00384424, -1.35259, -0.0285725, 1.14495, 12.2021, 1.87322, 4.99005)
-shape = SubResource("BoxShape3D_hj141")
 
 [node name="InvisableWall3" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=1849939249]
 transform = Transform3D(3.38826, 0, -0.388746, 0, 2.61857, 0, 0.377719, 0, 3.48717, 4.17073, 1.90382, -14.1663)
@@ -3214,7 +3210,7 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 4, -12
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.74119, 2.45818, 3.68843)
 
 [node name="CameraTrigger" parent="CameraCaliRoom" unique_id=1934842075 instance=ExtResource("4_di1hq")]
-transform = Transform3D(25.0388, 0, 0, 0, 18.0502, 0, 0, 0, 54.0419, 9.64679, -10.6395, -25)
+transform = Transform3D(25.0388, 0, 0, 0, 18.0502, 0, 0, 0, 54.0419, 9.64679, -10.639499, -25)
 visible = false
 
 [node name="CameraMain" parent="." unique_id=1254674241 instance=ExtResource("3_46pqe")]
@@ -3246,10 +3242,10 @@ transform = Transform3D(38.9746, 0, 0, 0, 10.9824, 0, 0, 0, 44.585, 10.5048, -12
 visible = false
 
 [node name="CameraMallHall" parent="." unique_id=1168754562 instance=ExtResource("3_46pqe")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 13.1535, 2.48224, 1.74425)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 13.1535, 2.48224, 0.74425006)
 
 [node name="CameraTrigger" parent="CameraMallHall" unique_id=514920506 instance=ExtResource("4_di1hq")]
-transform = Transform3D(27.7845, 0, 0, 0, 10.9824, 0, 0, 0, 41.065002, -6.3013153, -13.8874, -16.281)
+transform = Transform3D(27.7845, 0, 0, 0, 10.9824, 0, 0, 0, 41.065002, -6.301323, -13.8874, -11.281)
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=482219605]

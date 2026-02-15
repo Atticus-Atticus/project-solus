@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 	# --- PITCH (vertical tilt) ---
 	var to_target_full := character.global_position - pitch_pivot.global_position
 	var flat_dist := Vector2(to_target_full.x, to_target_full.z).length()
-	var desired_pitch := -atan2(to_target_full.y, flat_dist) # negative = look down is positive pitch in Godot convention
+	var desired_pitch := -atan2(to_target_full.y, flat_dist)
 	var min_r := deg_to_rad(pitch_min_deg)
 	var max_r := deg_to_rad(pitch_max_deg)
 	desired_pitch = clamp(desired_pitch, min_r, max_r)
@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 	if not cam.is_current():
 		cam.make_current()
 
-	# Zoom (optional clamp so it can't go silly)
+	# Zoom (clamp added so it can't go silly)
 	if Input.is_action_just_pressed("CameraZoomIn"):
 		cam.fov = clamp(cam.fov + 10.0, 30.0, 110.0)
 	if Input.is_action_just_pressed("CameraZoomOut"):

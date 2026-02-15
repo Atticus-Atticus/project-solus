@@ -37,15 +37,11 @@ func _input(event: InputEvent) -> void:
 		var space := get_world_3d().direct_space_state
 		var query := PhysicsRayQueryParameters3D.create(from, to)
 
-		# IMPORTANT: don't hit yourself (or your hitboxes/areas)
-		query.exclude = [self]  # if this complains, use: [get_rid()]
 
-		# Usually floors/walls are bodies, not areas. Turn areas off unless needed.
+		query.exclude = [self]
 		query.collide_with_bodies = true
 		query.collide_with_areas = false
-
-		# OPTIONAL but recommended: only raycast against "walkable" layers
-		# query.collision_mask = 1 << 0   # example: layer 1
+		#query.collision_mask = 1 << 0
 
 		var result: Dictionary = space.intersect_ray(query)
 
