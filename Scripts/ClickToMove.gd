@@ -1,44 +1,56 @@
 extends CharacterBody3D
 
-@onready var NavAgent : NavigationAgent3D = $NavigationAgent3D
-var speed = 5
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var speed: float = 5.0
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(NavAgent.is_target_reached()):
+	if nav_agent.is_target_reached():
+		velocity = Vector3.ZERO
 		return
-	
-	MoveToPoint(delta, speed)
-	pass
 
-func MoveToPoint(delta, speed):
-	var targetPos = NavAgent.get_next_path_position()
-	var direction = global_position.direction_to(targetPos)
-	facedirection(targetPos)
+	move_to_point(delta)
+
+func move_to_point(delta: float) -> void:
+	var target_pos: Vector3 = nav_agent.get_next_path_position()
+	var direction: Vector3 = global_position.direction_to(target_pos)
+
+	face_direction(target_pos)
+
 	velocity = direction * speed
 	move_and_slide()
 
-func facedirection(direction):
-	look_at(Vector3(direction.x, global_position.y, direction.z), Vector3.UP)
+func face_direction(target: Vector3) -> void:
+	look_at(Vector3(target.x, global_position.y, target.z), Vector3.UP)
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("LMB"):
-		var camera = get_tree().get_nodes_in_group("Security Cams")[0]
-		var mousepos = get_viewport().get_mouse_position()
-		var raylength = 100
-		var from = camera.project_ray_origin(mousepos)
-		var to = from + camera.project_ray_normal(mousepos) * raylength
-		var space = get_world_3d().direct_space_state
-		var rayquery = PhysicsRayQueryParameters3D.new()
-		rayquery.from = from
-		rayquery.to = to
-		rayquery.collide_with_areas = true
-		var result = space.intersect_ray(rayquery)
-		print(result)
-		
-		NavAgent.target_position = result.position
+	if event.is_action_pressed("LMB"):
+		var cam: Camera3D = get_viewport().get_camera_3d()
+		if cam == null:
+			return
+
+		var mouse_pos: Vector2 = get_viewport().get_mouse_position()
+		var ray_length: float = 10000.0
+		var from: Vector3 = cam.project_ray_origin(mouse_pos)
+		var to: Vector3 = from + cam.project_ray_normal(mouse_pos) * ray_length
+
+		var space := get_world_3d().direct_space_state
+		var query := PhysicsRayQueryParameters3D.create(from, to)
+
+		# IMPORTANT: don't hit yourself (or your hitboxes/areas)
+		query.exclude = [self]  # if this complains, use: [get_rid()]
+
+		# Usually floors/walls are bodies, not areas. Turn areas off unless needed.
+		query.collide_with_bodies = true
+		query.collide_with_areas = false
+
+		# OPTIONAL but recommended: only raycast against "walkable" layers
+		# query.collision_mask = 1 << 0   # example: layer 1
+
+		var result: Dictionary = space.intersect_ray(query)
+
+		if result.is_empty():
+			return  # clicked empty space -> do nothing
+
+		var hit_pos: Vector3 = result["position"]
+		nav_agent.target_position = hit_pos
