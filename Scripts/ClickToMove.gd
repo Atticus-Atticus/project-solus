@@ -2,9 +2,18 @@ extends CharacterBody3D
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
-@export var speed: float = 5.0
+@export var speed: float = 2.5
+
+var holding_click = false
 
 func _process(delta: float) -> void:
+	if nav_agent.is_target_reached():
+		velocity = Vector3.ZERO
+		return
+
+	if holding_click and Input.get_last_mouse_velocity().length() > 0:
+		_update_target_from_mouse()
+
 	if nav_agent.is_target_reached():
 		velocity = Vector3.ZERO
 		return
@@ -25,28 +34,32 @@ func face_direction(target: Vector3) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("LMB"):
-		var cam: Camera3D = get_viewport().get_camera_3d()
-		if cam == null:
-			return
+		holding_click = true
+		_update_target_from_mouse()
+	elif event.is_action_released("LMB"):
+		holding_click = false
 
-		var mouse_pos: Vector2 = get_viewport().get_mouse_position()
-		var ray_length: float = 10000.0
-		var from: Vector3 = cam.project_ray_origin(mouse_pos)
-		var to: Vector3 = from + cam.project_ray_normal(mouse_pos) * ray_length
-
-		var space := get_world_3d().direct_space_state
-		var query := PhysicsRayQueryParameters3D.create(from, to)
-
-
-		query.exclude = [self]
-		query.collide_with_bodies = true
-		query.collide_with_areas = false
-		#query.collision_mask = 1 << 0
-
-		var result: Dictionary = space.intersect_ray(query)
-
-		if result.is_empty():
-			return  # clicked empty space -> do nothing
-
-		var hit_pos: Vector3 = result["position"]
-		nav_agent.target_position = hit_pos
+func _update_target_from_mouse():
+	var cam: Camera3D = get_viewport().get_camera_3d()
+	if cam == null:
+		return
+	
+	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
+	var ray_length: float = 10000.0
+	var from: Vector3 = cam.project_ray_origin(mouse_pos)
+	var to: Vector3 = cam.project_ray_normal(mouse_pos) * ray_length
+	
+	var space := get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(from, to)
+	
+	query.exclude = [self]
+	query.collide_with_bodies = true
+	query.collide_with_areas= false
+	
+	var result: Dictionary = space.intersect_ray(query)
+	
+	if result.is_empty():
+		return
+	
+	var hit_pos: Vector3 = result["position"]
+	nav_agent.target_position = hit_pos

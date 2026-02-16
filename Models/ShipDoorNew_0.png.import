@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gv71krjd2p6x"
-path.bptc="res://.godot/imported/Moon.png-8f49b3f8835603f042de60112cb529bf.bptc.ctex"
+uid="uid://b624irom5qppj"
+path.bptc="res://.godot/imported/ShipDoorNew_0.png-12c74c12cb6d767568b869f502ddd977.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7bf936346089804afe29e335c5068c29"
+}
 
 [deps]
 
-source_file="res://Temp Textures/Moon.png"
-dest_files=["res://.godot/imported/Moon.png-8f49b3f8835603f042de60112cb529bf.bptc.ctex"]
+source_file="res://Models/ShipDoorNew_0.png"
+dest_files=["res://.godot/imported/ShipDoorNew_0.png-12c74c12cb6d767568b869f502ddd977.bptc.ctex"]
 
 [params]
 
