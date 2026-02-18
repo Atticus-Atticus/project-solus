@@ -31,7 +31,7 @@ glow_hdr_scale = 1.75
 
 [sub_resource type="Animation" id="Animation_wkysx"]
 resource_name = "MenuOpening"
-length = 8.0
+length = 5.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,10 +39,10 @@ tracks/0/path = NodePath("Label:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2, 8),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(2, 3.15, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.42375, 1.0]
+"values": [0.42375, 0.5341979, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -222,7 +222,7 @@ offset_top = 171.0
 offset_right = 1608.0
 offset_bottom = -747.0
 grow_vertical = 2
-text = "    ____                  _              __     _____         __            
+text = "    ____                  __              __     _____         __            
    / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
   / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
  / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 

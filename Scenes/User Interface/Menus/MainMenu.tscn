@@ -153,7 +153,7 @@ offset_top = 171.0
 offset_right = 1608.0
 offset_bottom = -747.0
 grow_vertical = 2
-text = "    ____                  _              __     _____         __            
+text = "    ____                  __              __     _____         __            
    / __ \\ _____ ____     (_)___   _____ / /_   / ___/ ____   / /__  __ _____
   / /_/ // ___// __ \\   / // _ \\ / ___// __/   \\__ \\ / __ \\ / // / / // ___/
  / ____// /   / /_/ /  / //  __// /__ / /_    ___/ // /_/ // // /_/ /(__  ) 
@@ -224,6 +224,7 @@ libraries/ = SubResource("AnimationLibrary_kaeub")
 autoplay = &"FlashingSquare"
 
 [node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("9_tr3c8")]
+visible = false
 layout_mode = 1
 offset_left = 132.0
 offset_top = 187.0
