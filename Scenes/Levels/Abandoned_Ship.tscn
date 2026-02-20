@@ -1801,6 +1801,7 @@ mesh = ExtResource("31_8jojy")
 
 [node name="CameraAirlock" parent="." unique_id=754971535 instance=ExtResource("5_413vk")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.6809, 4.45594, 3.79913)
+starting_rotation = Vector3(15, 45, 0)
 
 [node name="CameraTrigger" parent="CameraAirlock" unique_id=1988479703 instance=ExtResource("6_hd5g5")]
 transform = Transform3D(70.5464, 0, 0, 0, 12.0669, 0, 0, 0, 85.7708, 36.511, -10.1784, -29.6392)
@@ -1808,6 +1809,7 @@ visible = false
 
 [node name="CameraAirlock3" parent="." unique_id=2049381599 instance=ExtResource("5_413vk")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 14.2685, 4.45594, 5.77305)
+starting_rotation = Vector3(15, 45, 0)
 
 [node name="CameraTrigger" parent="CameraAirlock3" unique_id=713942039 instance=ExtResource("6_hd5g5")]
 transform = Transform3D(35.5715, 0, 0, 0, 12.0669, 0, 0, 0, 64.0711, 14.0854, -12.3841, -28.5491)
@@ -1832,6 +1834,7 @@ visible = false
 
 [node name="CameraFlightDeck" parent="." unique_id=595184220 instance=ExtResource("5_413vk")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 5.56218, 4.45656, -12.0829)
+starting_rotation = Vector3(15, 45, 0)
 
 [node name="CameraTrigger" parent="CameraFlightDeck" unique_id=589198654 instance=ExtResource("6_hd5g5")]
 transform = Transform3D(38.9746, 0, 0, 0, 10.9824, 0, 0, 0, 44.585, 10.5048, -12.6126, -20.1633)

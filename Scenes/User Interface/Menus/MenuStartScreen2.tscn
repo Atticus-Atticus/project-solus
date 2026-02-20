@@ -215,7 +215,7 @@ text = "
 >
 > Accessing NBB-Archive... DONE
 >
-> Tutorial and Calibration highly recommended
+> Tutorial and Calibration still work in progress.
 >
 >
 > 
@@ -434,7 +434,7 @@ offset_top = 159.0
 offset_right = 485.0
 offset_bottom = 209.0
 grow_horizontal = 2
-text = "Ready"
+text = "WIP"
 label_settings = ExtResource("5_5hu2x")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -445,6 +445,7 @@ offset_left = 24.0
 offset_top = 159.0
 offset_right = 593.0
 offset_bottom = 209.0
+disabled = true
 text = "> Tutorial and Calibartion <"
 alignment = 0
 script = ExtResource("6_20u2j")
@@ -523,7 +524,7 @@ alignment = 0
 layout_mode = 0
 offset_left = 119.0
 offset_top = 291.0
-offset_right = 1010.99854
+offset_right = 1010.99866
 offset_bottom = 500.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
@@ -532,7 +533,7 @@ color = Color(0, 0.109804, 0.211765, 1)
 layout_mode = 0
 offset_left = 119.0
 offset_top = 472.0
-offset_right = 1010.99927
+offset_right = 1010.9983
 offset_bottom = 653.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
@@ -541,7 +542,7 @@ color = Color(0, 0.109804, 0.211765, 1)
 layout_mode = 0
 offset_left = 119.0
 offset_top = 653.0
-offset_right = 1010.99927
+offset_right = 1010.9983
 offset_bottom = 892.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
