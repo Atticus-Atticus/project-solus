@@ -126,12 +126,12 @@ _data = {
 &"RESET": SubResource("Animation_o4u7w")
 }
 
-[node name="DoorNode" type="Node3D" unique_id=385544309]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1255216839 node_paths=PackedStringArray("animation_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38300994, 0)
+[node name="DoorNode" type="Node3D" unique_id=385544309 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_lwht3")
-animation_player = NodePath("AnimationPlayer")
+animation_player = NodePath("StaticBody3D/AnimationPlayer")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1255216839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38300994, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=442301582]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

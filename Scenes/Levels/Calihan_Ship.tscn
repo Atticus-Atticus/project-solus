@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://b03dx4b6rocx8" path="res://Scenes/Objects/PlayerSuppliesObject.tscn" id="9_8xua8"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="9_8yw1e"]
 [ext_resource type="ArrayMesh" uid="uid://cd7dbu82gvthi" path="res://Models/ShipWallPillar.obj" id="10_ux5ib"]
-[ext_resource type="PackedScene" uid="uid://dr013f3737p1a" path="res://Scenes/Objects/DoorObject.tscn" id="12_jfdeo"]
 [ext_resource type="AudioStream" uid="uid://c5hl73oqswx46" path="res://Audio/FastFoward.wav" id="12_ysvwy"]
 [ext_resource type="Texture2D" uid="uid://j8wm3nibh0p6" path="res://Models/Clutter/ElectricalBox01.png" id="14_yxp4w"]
 [ext_resource type="PackedScene" uid="uid://cq3708xbtemf7" path="res://Scenes/Objects/LockedDoorInteractableObject.tscn" id="15_hye6e"]
@@ -79,6 +78,7 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="75_884ru"]
 [ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="79_s7ggu"]
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="79_vap76"]
+[ext_resource type="PackedScene" uid="uid://c8j8rcwhqdijx" path="res://Scenes/Objects/DoorNewObject.tscn" id="80_884ru"]
 [ext_resource type="PackedScene" uid="uid://bskxgw16ycwx7" path="res://Scenes/Objects/DoorNewStaticObject.tscn" id="81_umbca"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
@@ -3153,18 +3153,6 @@ transform = Transform3D(3.24416, 0, 0, 0, 1.23063, 0, 0, 0, 1, 8.98421, -0.19045
 [node name="Datadrive" parent="NavigationRegion3D/Clutter" unique_id=1411369316 instance=ExtResource("32_dmpu4")]
 transform = Transform3D(0.659936, 0, -0.751322, 0, 1, 0, 0.751322, 0, 0.659936, 12.4685, -0.62960005, 0.0859425)
 
-[node name="DoorNode" parent="." unique_id=772533229 instance=ExtResource("12_jfdeo")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 8, -2, -2)
-
-[node name="DoorNode4" parent="." unique_id=1679586279 instance=ExtResource("12_jfdeo")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 12, -2, -14)
-
-[node name="DoorNode2" parent="." unique_id=1794556888 instance=ExtResource("12_jfdeo")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, -2, -22)
-
-[node name="DoorNode3" parent="." unique_id=1319263689 instance=ExtResource("12_jfdeo")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 4, -2, -2)
-
 [node name="CameraCaliRoom" parent="." unique_id=1262959634 instance=ExtResource("3_46pqe")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.74119, 2.45818, 3.68843)
 starting_rotation = Vector3(0, 180, 0)
@@ -3697,6 +3685,18 @@ light_energy = 0.5
 
 [node name="DoorNode5" parent="." unique_id=814900261 instance=ExtResource("81_umbca")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, -1.6494346, -14)
+
+[node name="DoorNewNode" parent="." unique_id=1806845348 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4, -2, -2)
+
+[node name="DoorNewNode2" parent="." unique_id=231148070 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 8, -2, -2)
+
+[node name="DoorNewNode3" parent="." unique_id=1552347518 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 12, -2, -14)
+
+[node name="DoorNewNode4" parent="." unique_id=1544407298 instance=ExtResource("80_884ru")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 8, -2, -20)
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

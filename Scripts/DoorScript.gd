@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Node3D
 
 var toggle = false
 #determine whether door is open or not. false = closed and true = open.
@@ -6,7 +6,7 @@ var interactable = true
 #prevents the player from interacting with the door while it's opening and closing
 @export var animation_player: AnimationPlayer
 
-func interact():
+func _door():
 	if interactable == true:
 		interactable = false
 		toggle = !toggle
@@ -19,4 +19,3 @@ func interact():
 		interactable = true
 		toggle = false
 #closes door after 5 seconds when opened
-#add trigger box that stops door from closing on player
