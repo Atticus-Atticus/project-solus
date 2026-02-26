@@ -176,7 +176,7 @@ position = Vector2(60, 1367)
 texture = ExtResource("4_355mm")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=34837998]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.72658, 2.24384, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.72658, 2.24384, -9)
 script = ExtResource("7_unp4q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1412018492]
@@ -2661,13 +2661,6 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 0.5, -18, 4.5, -40.5)
 transform = Transform3D(-5.857326e-08, 0, 0.6, 0, 1.1, 0, -1.34, 0, -2.6226834e-08, -30, 0.5, -9.4)
 
 [node name="Door Interactable" parent="Interactables/DoorNode2" unique_id=694830916 instance=ExtResource("17_unp4q")]
-transform = Transform3D(-3.2620438e-08, 0, -0.74626863, 0, 0.90909094, 0, 1.6666666, 0, -7.285231e-08, 0, 2.7272727, 0)
-collision_layer = 3
-
-[node name="DoorNode3" parent="Interactables" unique_id=609762471 instance=ExtResource("9_fce30")]
-transform = Transform3D(-5.857326e-08, 0, 0.6, 0, 1.1, 0, -1.34, 0, -2.6226834e-08, -12, 0.5, -9.4)
-
-[node name="Door Interactable" parent="Interactables/DoorNode3" unique_id=2031174056 instance=ExtResource("17_unp4q")]
 transform = Transform3D(-3.2620438e-08, 0, -0.74626863, 0, 0.90909094, 0, 1.6666666, 0, -7.285231e-08, 0, 2.7272727, 1.6666679)
 collision_layer = 3
 

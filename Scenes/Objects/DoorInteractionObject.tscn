@@ -5,43 +5,30 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ccwu"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xblo2"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_52v2l"]
 
-[node name="Door Interactable" type="StaticBody3D" unique_id=1027791356 node_paths=PackedStringArray("exit_front", "exit_back")]
+[node name="Door Interactable" type="StaticBody3D" unique_id=1027791356]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_ox6ct")
-exit_front = NodePath("FrontExitPoint")
-exit_back = NodePath("BackExitPoint")
 
-[node name="FrontIcon" type="CollisionShape3D" parent="." unique_id=919028892]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=919028892]
 shape = SubResource("BoxShape3D_4ccwu")
 debug_color = Color(0, 0.5568628, 0.6509804, 1)
+
+[node name="Block" type="CollisionShape3D" parent="." unique_id=216019599]
+transform = Transform3D(0.3143069, 0, 0, 0, 3.7282448, 0, 0, 0, 3, 0.33345842, -2.5045118, 0)
+shape = SubResource("BoxShape3D_xblo2")
 
 [node name="AnimatedSprite3D" parent="." unique_id=347065643 instance=ExtResource("2_4ccwu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 0)
-
-[node name="BackIcon" type="CollisionShape3D" parent="." unique_id=2035275585]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
-shape = SubResource("BoxShape3D_4ccwu")
-debug_color = Color(0, 0.5568628, 0.6509804, 1)
-
-[node name="AnimatedSprite3D2" parent="." unique_id=1005278773 instance=ExtResource("2_4ccwu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1524028132]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=795022271]
 transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 3, 0, -2, 0)
 shape = SubResource("BoxShape3D_52v2l")
-
-[node name="FrontExitPoint" type="Marker3D" parent="." unique_id=923623702]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -3, 0)
-
-[node name="BackExitPoint" type="Marker3D" parent="." unique_id=2128430509]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -3, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_enter_trigger"]
 [connection signal="body_exited" from="Area3D" to="." method="_exit_trigger"]
