@@ -1,22 +1,22 @@
-extends StaticBody3D
+extends Node3D
 
-@export var exit_point: Marker3D = null
+@export var exit_front: Marker3D
+@export var exit_back: Marker3D
 
-func _ready() -> void:
-	$Area3D.monitoring = false
-	$Block.disabled = false
+var _busy := false
 
-func interact():
-	$Area3D.monitoring = true
-	$Block.disabled = true
+func interact(player: CharacterBody3D, from_front: bool) -> void:
+	if _busy:
+		return
+	_busy = true
 
+	# open the door
+	get_parent()._door()
 
-func _enter_trigger(body):
-	if body is CharacterBody3D:
-		get_parent()._door()
+	# choose destination on the opposite side
+	var dest := (exit_back.global_position if from_front else exit_front.global_position)
 
+	player.ep = dest
+	await player._move_through_door()
 
-func _exit_trigger(body):
-	if body is CharacterBody3D:
-		$Area3D.monitoring = false
-		$Block.disabled = false
+	_busy = false
