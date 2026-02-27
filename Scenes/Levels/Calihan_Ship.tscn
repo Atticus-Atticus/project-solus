@@ -80,6 +80,8 @@
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="79_vap76"]
 [ext_resource type="PackedScene" uid="uid://c8j8rcwhqdijx" path="res://Scenes/Objects/DoorNewObject.tscn" id="80_884ru"]
 [ext_resource type="PackedScene" uid="uid://bskxgw16ycwx7" path="res://Scenes/Objects/DoorNewStaticObject.tscn" id="81_umbca"]
+[ext_resource type="PackedScene" uid="uid://b45p76r754ycy" path="res://Scenes/Objects/DoorInteractionObject.tscn" id="81_ydjyw"]
+[ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="82_tvdd6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
 shader = ExtResource("68_rxu0r")
@@ -1994,6 +1996,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_28o2u")
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ouqyo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ubtfw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mll0"]
+albedo_texture = ExtResource("21_nkete")
+
+[sub_resource type="BoxMesh" id="BoxMesh_q3orp"]
+
 [node name="MainLevelNode" type="Node3D" unique_id=2133606017]
 script = ExtResource("1_lxh1w")
 
@@ -3426,14 +3437,6 @@ frame_progress = 0.62075
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 8.56726, 0.6122427, -1.91128)
 frame_progress = 0.62075
 
-[node name="AnimatedSprite3D9" parent="." unique_id=762532642 instance=ExtResource("69_swly8")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 3.3768, 0.6122427, -1.91128)
-frame_progress = 0.62075
-
-[node name="AnimatedSprite3D10" parent="." unique_id=46157017 instance=ExtResource("69_swly8")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 2.59263, 0.6122427, -1.91128)
-frame_progress = 0.62075
-
 [node name="AnimatedSprite3D11" parent="." unique_id=830470482 instance=ExtResource("69_swly8")]
 transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 7.92775, 0.6122427, -20.6431)
 frame_progress = 0.62075
@@ -3689,6 +3692,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, -
 [node name="DoorNewNode" parent="." unique_id=1806845348 instance=ExtResource("80_884ru")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4, -2, -2)
 
+[node name="Door Interactable" parent="DoorNewNode" unique_id=207222191 instance=ExtResource("81_ydjyw")]
+transform = Transform3D(-1.5736099e-08, 0, 1, 0, 1, 0, -0.35999995, 0, -4.371139e-08, 0, 1.7456993, 0.5)
+
 [node name="DoorNewNode2" parent="." unique_id=231148070 instance=ExtResource("80_884ru")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 8, -2, -2)
 
@@ -3697,6 +3703,25 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 12, 
 
 [node name="DoorNewNode4" parent="." unique_id=1544407298 instance=ExtResource("80_884ru")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 8, -2, -20)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1530557117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72657967, 0.24383998, -1)
+script = ExtResource("82_tvdd6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1630032137]
+shape = SubResource("CapsuleShape3D_ouqyo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=274584679]
+mesh = SubResource("CapsuleMesh_ubtfw")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=317179464]
+transform = Transform3D(0.257562, 0, 0, 0, 0.294782, 0, 0, 0, 0.365385, -0.0754814, 0.407165, -0.527833)
+material_override = SubResource("StandardMaterial3D_5mll0")
+mesh = SubResource("BoxMesh_q3orp")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=2050428504]
+debug_enabled = true
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

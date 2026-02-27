@@ -1,13 +1,22 @@
 extends CharacterBody3D
 
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+
 @export var speed: float = 2.5
 @export var ray_length: float = 10000.0
 
+@export var turn_speed := 8.0      # higher = faster rotation
+@export var arrive_dist := 1    # how close counts as "reached"
+
 var holding_click := false
+var ep: Vector3
+
+var _auto_move := false
 
 func _process(delta: float) -> void:
-	if not Globals.PlayerControls:
+	# If controls are OFF and we're NOT in an auto-move sequence, fully stop.
+	if not Globals.PlayerControls and not _auto_move:
 		velocity = Vector3.ZERO
 		return
 
@@ -15,13 +24,20 @@ func _process(delta: float) -> void:
 		velocity = Vector3.ZERO
 		return
 
-	if holding_click and Input.get_last_mouse_velocity().length() > 0.0:
+	# Only allow "hold click updates destination" when player controls are enabled
+	if Globals.PlayerControls and holding_click and Input.get_last_mouse_velocity().length() > 0.0:
 		_update_target_from_mouse()
 
 	move_to_point(delta)
 
+	#if nav_agent.target_position == ep:
+		#_auto_move = false
+		#Globals.PlayerControls = true
+
 func _input(event: InputEvent) -> void:
 	if not Globals.PlayerControls:
+		holding_click = false
+		# Optional: stop any existing click-to-move path
 		nav_agent.target_position = global_position
 		return
 
@@ -29,7 +45,6 @@ func _input(event: InputEvent) -> void:
 		holding_click = true
 		_try_interact_under_mouse()
 		_update_target_from_mouse()
-
 	elif event.is_action_released("LMB"):
 		holding_click = false
 
@@ -78,3 +93,26 @@ func _update_target_from_mouse() -> void:
 
 	var hit_pos: Vector3 = result["position"]
 	nav_agent.target_position = hit_pos
+
+
+func _move_through_door() -> void:
+	Globals.PlayerControls = false
+	_auto_move = true
+	holding_click = false
+
+	#if anim_player:
+		#anim_player.play("Interact")
+		#await anim_player.animation_finished
+#commented out as animation player hasn't been added yet
+
+	nav_agent.target_position = ep
+	await _wait_until_reached(ep)
+	ep = Vector3.ZERO
+
+	_auto_move = false
+	Globals.PlayerControls = true
+
+
+func _wait_until_reached(target_pos: Vector3) -> void:
+	while global_position.distance_to(target_pos) > arrive_dist:
+		await get_tree().process_frame

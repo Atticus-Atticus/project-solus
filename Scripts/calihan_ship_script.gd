@@ -14,16 +14,16 @@ var anim1 = 0
 var anim2 = 0
 
 func _ready() -> void:
-	if SceneSwitcher.PlayerSpawn == null:
-		var LoadedPlayer = LoadPlayer.instantiate()
-		LoadedPlayer.scale *= 1.2
-		add_child(LoadedPlayer)
-	else:
-		var LoadedPlayer = LoadPlayer.instantiate()
-		LoadedPlayer.position = SceneSwitcher.PlayerSpawn
-		LoadedPlayer.scale *= 1.2
-		add_child(LoadedPlayer)
-		$AirlockDoorSFX.play()
+	#if SceneSwitcher.PlayerSpawn == null:
+		#var LoadedPlayer = LoadPlayer.instantiate()
+		#LoadedPlayer.scale *= 1.2
+		#add_child(LoadedPlayer)
+	#else:
+		#var LoadedPlayer = LoadPlayer.instantiate()
+		#LoadedPlayer.position = SceneSwitcher.PlayerSpawn
+		#LoadedPlayer.scale *= 1.2
+		#add_child(LoadedPlayer)
+		#$AirlockDoorSFX.play()
 	
 	if Globals.StoryStage == 1:
 		var LoadedText = WakeUpText.instantiate()
@@ -40,8 +40,8 @@ func _ready() -> void:
 	SceneSwitcher.Destination = 0
 	Globals.Destination = 0
 
-func _on_child_exiting_tree(node: Node) -> void:
-	$Player/CharacterBody3D.get_player_pos()
+#func _on_child_exiting_tree(node: Node) -> void:
+	#$Player/CharacterBody3D.get_player_pos()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):
