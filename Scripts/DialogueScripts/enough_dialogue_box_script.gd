@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
 		$TextboxContainer.show()
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Nevermind. Time to go.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Nevermind. Time to go.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeed.play()
 		
@@ -36,6 +36,6 @@ func _process(delta: float) -> void:
 
 func _on_scream_finished() -> void:
 		$TextboxContainer.show()
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Nevermind. Time to go.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Nevermind. Time to go.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeed.play()

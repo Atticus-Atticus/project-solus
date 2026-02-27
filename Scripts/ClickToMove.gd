@@ -7,14 +7,16 @@ extends CharacterBody3D
 @export var ray_length: float = 10000.0
 
 @export var turn_speed := 8.0      # higher = faster rotation
-@export var arrive_dist := 1    # how close counts as "reached"
+@export var arrive_dist := 2    # how close counts as "reached"
 
 var holding_click := false
 var ep: Vector3
+#ep is set by the door interactable
+#ap is the location of the marker3D in the door interactable scene that the player moves to after the door opens
 
 var _auto_move := false
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	# If controls are OFF and we're NOT in an auto-move sequence, fully stop.
 	if not Globals.PlayerControls and not _auto_move:
 		velocity = Vector3.ZERO
@@ -33,6 +35,9 @@ func _process(delta: float) -> void:
 	#if nav_agent.target_position == ep:
 		#_auto_move = false
 		#Globals.PlayerControls = true
+
+	if Input.is_action_just_pressed("Debug"):
+		get_tree().reload_current_scene()
 
 func _input(event: InputEvent) -> void:
 	if not Globals.PlayerControls:
@@ -107,10 +112,10 @@ func _move_through_door() -> void:
 
 	nav_agent.target_position = ep
 	await _wait_until_reached(ep)
-	ep = Vector3.ZERO
 
 	_auto_move = false
 	Globals.PlayerControls = true
+	ep = Vector3.ZERO
 
 
 func _wait_until_reached(target_pos: Vector3) -> void:

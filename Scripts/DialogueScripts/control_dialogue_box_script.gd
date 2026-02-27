@@ -25,37 +25,41 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Displaying Coordinates")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Displaying Coordinates")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: That's... That's on the other side of Solarian Space!")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("That's... That's on the other side of Solarian Space!")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: How did she... No. It doesn't matter.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("How did she... No. It doesn't matter.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: I need supplies for the journey.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("I need supplies for the journey.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 5:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Ship, do a system wide scan and ping anything found.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship, do a system wide scan and ping anything found.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 6:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Displaying scan results to main console.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Displaying scan results to main console.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 7:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Brimpie Orbital and another ship. They'll do.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Brimpie Orbital and another ship. They'll do.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 

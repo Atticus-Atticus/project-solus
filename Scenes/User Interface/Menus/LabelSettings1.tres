@@ -1,4 +1,4 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://4dlvvwnnmr3"]
+[gd_resource type="LabelSettings" format=3 uid="uid://4dlvvwnnmr3"]
 
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_1oij1"]
 

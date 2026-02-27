@@ -256,7 +256,6 @@ mouse_filter = 2
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1985223328]
 stream = ExtResource("10_81kxu")
 volume_db = -2.0
-autoplay = true
 
 [node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=1117078891]
 stream = ExtResource("11_rd3md")

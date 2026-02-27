@@ -14,7 +14,7 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: I won her at a carnival when I was a kid.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("I won her at a carnival when I was a kid.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 

@@ -86,8 +86,3 @@ func _process(delta: float) -> void:
 
 func _on_change_menu_sfx_tree_exited() -> void:
 	$MenuSFX.stop()
-
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	$ColorRect4.show()
-	$ColorRect4/AnimationPlayer.play("FlashingSquare")

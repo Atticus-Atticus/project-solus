@@ -20,26 +20,28 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: ANYONE HERE!?")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("ANYONE HERE!?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: I JUST NEED SOME SUPPLIES AND I'LL LEAVE YOU ALONE!")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("I JUST NEED SOME SUPPLIES AND I'LL LEAVE YOU ALONE!")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("*")
 		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("...")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: I don't think anyone is here.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("I don't think anyone is here.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 5:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: I should check the Mess Hall for anything I can borrow.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("I should check the Mess Hall for anything I can borrow.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 

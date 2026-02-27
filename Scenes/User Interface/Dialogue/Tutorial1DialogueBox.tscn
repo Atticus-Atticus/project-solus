@@ -87,7 +87,7 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_4x1py")
 theme_override_font_sizes/font_size = 50
-text = ">"
+text = "*"
 label_settings = ExtResource("4_04xkn")
 
 [node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=633995611]
@@ -97,7 +97,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("3_4x1py")
 theme_override_font_sizes/font_size = 50
-text = "* Welcome, USER, to the Neurological Blackbox Virtual Simulator."
+text = "Tutorial and Calibration loaded. Beginning course."
 label_settings = ExtResource("4_04xkn")
 autowrap_mode = 2
 clip_text = true

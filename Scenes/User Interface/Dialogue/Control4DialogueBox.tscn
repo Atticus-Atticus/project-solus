@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkn02cjifagn7"]
+[gd_scene format=3 uid="uid://bkn02cjifagn7"]
 
-[ext_resource type="Script" path="res://Scripts/DialogueScripts/control4_dialogue_box_script.gd" id="1_q7tu8"]
+[ext_resource type="Script" uid="uid://cdwhded40o4dq" path="res://Scripts/DialogueScripts/control4_dialogue_box_script.gd" id="1_q7tu8"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_htof7"]
 [ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="2_j3ko5"]
 [ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="3_r81hv"]
@@ -43,14 +43,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iy72d"]
 _data = {
-"RESET": SubResource("Animation_vxsjl"),
-"TextTween": SubResource("Animation_5bkkr")
+&"RESET": SubResource("Animation_vxsjl"),
+&"TextTween": SubResource("Animation_5bkkr")
 }
 
-[node name="Control4TextBox" type="Node"]
+[node name="Control4TextBox" type="Node" unique_id=2059349107]
 script = ExtResource("1_q7tu8")
 
-[node name="TextboxContainer" type="MarginContainer" parent="."]
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=890431459]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -62,48 +62,48 @@ theme_override_constants/margin_left = 100
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="Panel" type="Panel" parent="TextboxContainer"]
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=51677364]
 layout_mode = 2
 theme_override_styles/panel = ExtResource("2_j3ko5")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=1292645471]
 layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=1945045795]
 visible = false
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=88890049]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=401323683]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_htof7")
 theme_override_font_sizes/font_size = 50
-text = ">"
+text = "Ship_Com:"
 label_settings = ExtResource("4_wvfja")
 
-[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=2004307621]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_htof7")
 theme_override_font_sizes/font_size = 50
-text = "Ship AI: Route plotted to the Avalon System. Charging FTL Core"
+text = "Route plotted to the Avalon System. Charging FTL Core"
 label_settings = ExtResource("4_wvfja")
 autowrap_mode = 2
 clip_text = true
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=491136136]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -112,25 +112,23 @@ theme_override_font_sizes/font_size = 50
 text = "v"
 label_settings = ExtResource("4_wvfja")
 
-[node name="TweenAnimation" type="AnimationPlayer" parent="TextboxContainer"]
-libraries = {
-"": SubResource("AnimationLibrary_iy72d")
-}
+[node name="TweenAnimation" type="AnimationPlayer" parent="TextboxContainer" unique_id=214786739]
+libraries/ = SubResource("AnimationLibrary_iy72d")
 speed_scale = 2.5
 
-[node name="CalihanSpeech" type="AudioStreamPlayer" parent="."]
+[node name="CalihanSpeech" type="AudioStreamPlayer" parent="." unique_id=786210949]
 stream = ExtResource("3_r81hv")
 
-[node name="ShipAISpeech" type="AudioStreamPlayer" parent="."]
+[node name="ShipAISpeech" type="AudioStreamPlayer" parent="." unique_id=308994011]
 stream = ExtResource("4_43qyw")
 
-[node name="ShipBeep" type="AudioStreamPlayer" parent="."]
+[node name="ShipBeep" type="AudioStreamPlayer" parent="." unique_id=1585574131]
 stream = ExtResource("5_hm26g")
 
-[node name="SpacerSpeech" type="AudioStreamPlayer" parent="."]
+[node name="SpacerSpeech" type="AudioStreamPlayer" parent="." unique_id=1253586002]
 stream = ExtResource("6_kt75v")
 
-[node name="Alarm" type="AudioStreamPlayer" parent="."]
+[node name="Alarm" type="AudioStreamPlayer" parent="." unique_id=415841095]
 stream = ExtResource("6_pdw3h")
 
 [connection signal="animation_finished" from="TextboxContainer/TweenAnimation" to="." method="_on_tween_animation_animation_finished"]

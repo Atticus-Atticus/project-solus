@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://c37oy72re3oil"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_vfaxl"]
+
+[resource]
+font = ExtResource("1_vfaxl")
+font_size = 20
+font_color = Color(0.4, 1, 0.9411765, 1)

@@ -28,44 +28,51 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Estimated travel time: 14 Cycles")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Estimated travel time: 14 Cycles")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: *Sigh of relief* I'll see you soon, Naomi.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("*Sigh of relief* I'll see you soon, Naomi.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: 2 new contacts detected")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("2 new contacts detected")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: WHAT!?")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("WHAT!?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 5:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Spacer: Hey Hey Farseeing Courier. Do you have a package for us?")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Unknown:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Hey Hey Farseeing Courier. Do you have a package for us?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$SpacerSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 6:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Alert. Weapons lock detected.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Alert. Weapons lock detected.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 7:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: No. No. No!")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("No. No. No!")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 8:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Projectile launch detected. Impact alert.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Projectile launch detected. Impact alert.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipAISpeech.play()
 		$Alarm.play()

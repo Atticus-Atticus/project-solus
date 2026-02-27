@@ -22,29 +22,33 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Well... Guess that's it then.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Well... Guess that's it then.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Incoming Long Range Communication.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Incoming Long Range Communication.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: What? I thought the comms net was dead.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("What? I thought the comms net was dead.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Ship AI: Incoming Long Range Communication.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Incoming Long Range Communication.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()
 		$ShipAISpeech.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 5:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Calihan: Yeah yeah, I heard you.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Yeah yeah, I heard you.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$CalihanSpeech.play()
 
