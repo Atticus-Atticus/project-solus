@@ -13,18 +13,18 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 	$CalihanSpeech.stop()
 
 func _process(delta: float) -> void:
-	$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("*")
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("After Earth's old governments fell, the Terran Parliament rose from the ashes and lifted humanity to the stars.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("*")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("After Earth's old governments fell, the Terran Parliament rose from the ashes and lifted humanity with it.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Humanity took its place among the stars. But under the rule of the Terran Parliament, became fractured and weak. And humamity suffered suffered for it.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Humanity took its place among the stars. But under the lazy rule of the Terran Parliament, became fractured and weak. And humamity suffered suffered for it.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("After a series of failed rebellions against the Terran Parliament, a handful of small systems from unified to form the Solarian Coalition.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("After a series of failed rebellions against the Terran Parliament, a handful of small systems unified to form the Solarian Coalition.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 4:

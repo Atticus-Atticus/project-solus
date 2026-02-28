@@ -39,10 +39,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Debug"):
 		get_tree().reload_current_scene()
 
+
 func _input(event: InputEvent) -> void:
+	# If controls are disabled BUT we're auto-moving, ignore input completely.
 	if not Globals.PlayerControls:
+		if _auto_move:
+			return
 		holding_click = false
-		# Optional: stop any existing click-to-move path
 		nav_agent.target_position = global_position
 		return
 
