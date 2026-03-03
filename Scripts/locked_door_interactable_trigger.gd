@@ -1,10 +1,19 @@
 extends StaticBody3D
 
-#this is the foundation for all dialogue boxes
+@export var text_scene: PackedScene
 
-@onready var text_scene: PackedScene = preload("res://Scenes/User Interface/Dialogue/LockedDoorDialogueBox.tscn")
-#change this to the required dialogue box scene
+@export var trigger = Area3D
+
+var in_dialogue = false
 
 func interact():
+	if in_dialogue:
+		return
+	if trigger.monitoring:
+		return # already armed
+	trigger.monitoring = true
+
+func _show_dialogue():
 	var text_temp = text_scene.instantiate()
 	add_child(text_temp)
+	trigger.monitoring = false

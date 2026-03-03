@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://nw7ta1u1f7qs"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_0sm1d"]
+[ext_resource type="Script" uid="uid://dcij140hbq5f0" path="res://Scripts/splash_screen_script.gd" id="1_enoj8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_enoj8"]
+font = ExtResource("1_0sm1d")
+font_size = 25
+font_color = Color(0.69411767, 0.69411767, 0.69411767, 0)
+
+[sub_resource type="Animation" id="Animation_0sm1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.69411767, 0.69411767, 0.69411767, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_enoj8"]
+resource_name = "begin"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.69411767, 0.69411767, 0.69411767, 0), Color(0.69411767, 0.69411767, 0.69411767, 1), Color(0.69411767, 0.69411767, 0.69411767, 1), Color(0.69411767, 0.69411767, 0.69411767, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqhca"]
+_data = {
+&"RESET": SubResource("Animation_0sm1d"),
+&"begin": SubResource("Animation_enoj8")
+}
+
+[node name="Control" type="Control" unique_id=338897972]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_enoj8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1128812505]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -10.0
+offset_right = 1975.0
+offset_bottom = 1117.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1961474435]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -383.0
+offset_top = -176.0
+offset_right = 383.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Disclaimer: Project Solus is currently in alpha.
+This game is still being worked on.
+Everything you see in game is subject to change.
+Expect to find bugs, errors and mistakes as you play.
+
+If you find any, please let me know so they can be fixed in a future update."
+label_settings = SubResource("LabelSettings_enoj8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2034101597]
+libraries/ = SubResource("AnimationLibrary_fqhca")
+autoplay = &"begin"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

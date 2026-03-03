@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://co5iny00t6wux"]
+
+[ext_resource type="Script" uid="uid://cf7bo8djjvr6l" path="res://Scripts/Interactions_Trigger_Script.gd" id="1_y3sod"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3sod"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y3sod"]
+
+[node name="PointClickTriggerbox" type="Area3D" unique_id=1015541827 node_paths=PackedStringArray("area")]
+script = ExtResource("1_y3sod")
+area = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1743142309]
+shape = SubResource("BoxShape3D_y3sod")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=500617719]
+mesh = SubResource("BoxMesh_y3sod")
+
+[connection signal="body_entered" from="." to="." method="_entered_trigger"]
+[connection signal="body_exited" from="." to="." method="_exit_trigger"]

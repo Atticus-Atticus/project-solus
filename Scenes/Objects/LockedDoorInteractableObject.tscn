@@ -1,23 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq3708xbtemf7"]
+[gd_scene format=3 uid="uid://cq3708xbtemf7"]
 
-[ext_resource type="Script" path="res://Scripts/locked_door_interactable_trigger.gd" id="1_s7k8c"]
-[ext_resource type="Texture2D" uid="uid://l0t8xiw70xma" path="res://Temp Textures/TempPurple.png" id="2_uur35"]
+[ext_resource type="Script" uid="uid://ujmnfts3iq4j" path="res://Scripts/locked_door_interactable_trigger.gd" id="1_s7k8c"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_3s57j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8i2dr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h37ha"]
-albedo_texture = ExtResource("2_uur35")
-
-[sub_resource type="BoxMesh" id="BoxMesh_mif46"]
-
-[node name="LockedDoorInteractableNode" type="Node3D"]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="LockedDoorInteractableNode" type="StaticBody3D" unique_id=1089615765]
 script = ExtResource("1_s7k8c")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959610252]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("BoxShape3D_8i2dr")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-material_override = SubResource("StandardMaterial3D_h37ha")
-mesh = SubResource("BoxMesh_mif46")
+[node name="AnimatedSprite3D2" parent="." unique_id=263787004 instance=ExtResource("2_3s57j")]

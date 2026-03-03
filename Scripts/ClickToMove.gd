@@ -6,10 +6,12 @@ extends CharacterBody3D
 @export var speed: float = 2.5
 @export var ray_length: float = 10000.0
 
-@export var turn_speed := 8.0      # higher = faster rotation
+@export var turn_speed := 8.0
 @export var arrive_dist := 2    # how close counts as "reached"
+#keep this var above 1. going below that number causes problems.
 
 var holding_click := false
+var sp: Vector3
 var ep: Vector3
 #ep is set by the door interactable
 #ap is the location of the marker3D in the door interactable scene that the player moves to after the door opens
@@ -113,12 +115,14 @@ func _move_through_door() -> void:
 		#await anim_player.animation_finished
 #commented out as animation player hasn't been added yet
 
+	await get_tree().create_timer(1.5).timeout
 	nav_agent.target_position = ep
 	await _wait_until_reached(ep)
 
 	_auto_move = false
 	Globals.PlayerControls = true
 	ep = Vector3.ZERO
+	sp = Vector3.ZERO
 
 
 func _wait_until_reached(target_pos: Vector3) -> void:

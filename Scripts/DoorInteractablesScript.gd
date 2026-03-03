@@ -14,17 +14,19 @@ func _start_monitoring():
 
 func _enter_trigger(body):
 	if body is CharacterBody3D and front == true:
-		get_parent()._door()
-		await get_tree().create_timer(1.5).timeout
+		body.sp = front_exit.global_position
 		body.ep = back_exit.global_position
 		body._move_through_door()
+		#await get_tree().create_timer(1.5).timeout
+		get_parent()._door()
 		front = false
 
 	if body is CharacterBody3D and back == true:
-		get_parent()._door()
-		await get_tree().create_timer(1.5).timeout
+		body.sp = back_exit.global_position
 		body.ep = front_exit.global_position
 		body._move_through_door()
+		#await get_tree().create_timer(1.5).timeout
+		get_parent()._door()
 		back = false
 
 func _exit_trigger(body):
