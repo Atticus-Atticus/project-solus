@@ -1853,7 +1853,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1waoo")
 
 [node name="StationLevelNode" type="Node3D" unique_id=1552572337]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37805, -0.755595, 1.74168)
 script = ExtResource("1_kk3li")
 
 [node name="CRT Shader" parent="." unique_id=706398202 instance=ExtResource("1_uws2h")]

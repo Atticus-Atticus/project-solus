@@ -19,8 +19,10 @@ func _process(delta: float) -> void:
 func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
+		Globals.PlayerControls = false
 		#Engine.time_scale = 1
 	else:
 		pause_menu.show()
+		Globals.PlayerControls = true
 		#Engine.time_scale = 0
 	Globals.paused = !Globals.paused

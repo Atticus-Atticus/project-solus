@@ -29,10 +29,12 @@ func _process(delta: float) -> void:
 func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
+		Globals.PlayerControls = true
 		$AudioStreamPlayer.play()
 		#Engine.time_scale = 1
 	else:
 		pause_menu.show()
+		Globals.PlayerControls = false
 		$AudioStreamPlayer.stop()
 		#Engine.time_scale = 0
 	Globals.paused = !Globals.paused

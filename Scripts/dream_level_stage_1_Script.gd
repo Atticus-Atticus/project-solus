@@ -36,9 +36,11 @@ func pausemenu():
 		pause_menu.hide()
 		$Ambience.play()
 		$Music.play()
+		Globals.PlayerControls = true
 		#Engine.time_scale = 1
 	else:
 		pause_menu.show()
+		Globals.PlayerControls = false
 		#Engine.time_scale = 0
 		$Ambience.stop()
 		$Music.stop()

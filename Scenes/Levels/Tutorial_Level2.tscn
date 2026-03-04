@@ -168,7 +168,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 1.0
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=34837998]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.72658, 2.24384, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72657967, 2.24384, -3)
 script = ExtResource("7_unp4q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1412018492]
@@ -2010,29 +2010,12 @@ shape = SubResource("BoxShape3D_hwovb")
 material_override = SubResource("StandardMaterial3D_bu66q")
 mesh = SubResource("BoxMesh_tevjm")
 
-[node name="CollisionShape3D59" type="CollisionShape3D" parent="NavigationRegion3D/LevelStaticBox" unique_id=416959559]
-transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 4.25, -12, 3, -13.4)
-shape = SubResource("BoxShape3D_hwovb")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/LevelStaticBox/CollisionShape3D59" unique_id=1428221356]
-transform = Transform3D(0.9999984, -0.0015998848, 0.00075673085, 0.0015997369, 0.9999987, 0.00019287351, -0.0007570432, -0.00019164376, 0.99999964, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_bu66q")
-mesh = SubResource("BoxMesh_tevjm")
-
 [node name="CollisionShape3D61" type="CollisionShape3D" parent="NavigationRegion3D/LevelStaticBox" unique_id=283998474]
 transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 4.25, -30, 3, -13.4)
 shape = SubResource("BoxShape3D_hwovb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/LevelStaticBox/CollisionShape3D61" unique_id=626635597]
 transform = Transform3D(0.9999984, -0.0015998848, 0.00075673085, 0.0015997369, 0.9999987, 0.00019287351, -0.0007570432, -0.00019164376, 0.99999964, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_bu66q")
-mesh = SubResource("BoxMesh_tevjm")
-
-[node name="CollisionShape3D60" type="CollisionShape3D" parent="NavigationRegion3D/LevelStaticBox" unique_id=700952435]
-transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 4.25, -12, 3, -5.3999996)
-shape = SubResource("BoxShape3D_hwovb")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/LevelStaticBox/CollisionShape3D60" unique_id=1896938995]
 material_override = SubResource("StandardMaterial3D_bu66q")
 mesh = SubResource("BoxMesh_tevjm")
 
@@ -2649,13 +2632,25 @@ material_override = SubResource("StandardMaterial3D_reklg")
 mesh = SubResource("BoxMesh_tevjm")
 skeleton = NodePath("../NavigationRegion3D/LevelStaticBox/CollisionShape3D215")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1628668865]
+transform = Transform3D(3, 0, 0, 0, 5.0000005, 0, 0, 0, 1, -26, 3, -17)
+material_override = SubResource("StandardMaterial3D_reklg")
+mesh = SubResource("BoxMesh_tevjm")
+skeleton = NodePath("../NavigationRegion3D/LevelStaticBox/CollisionShape3D215")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2115955040]
+transform = Transform3D(3, 0, 0, 0, 5.0000005, 0, 0, 0, 1, -8, 3, -17)
+material_override = SubResource("StandardMaterial3D_reklg")
+mesh = SubResource("BoxMesh_tevjm")
+skeleton = NodePath("../NavigationRegion3D/LevelStaticBox/CollisionShape3D215")
+
 [node name="Cameras" type="Node3D" parent="." unique_id=1552305081]
 
 [node name="Camera" parent="Cameras" unique_id=1294855615 instance=ExtResource("6_tsagn")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4, 5, -4)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -14, 5, -4)
 
 [node name="CameraTrigger" parent="Cameras/Camera" unique_id=1609956293 instance=ExtResource("7_fce30")]
-transform = Transform3D(77.880005, 0, 0, 0, 38.72, 0, 0, 0, 105.600006, 0, -10, -15)
+transform = Transform3D(165.8533, 0, 0, 0, 38.72, 0, 0, 0, 105.600006, 5, -10, -15)
 visible = false
 
 [node name="Camera4" parent="Cameras" unique_id=2012539935 instance=ExtResource("6_tsagn")]
@@ -2680,10 +2675,10 @@ transform = Transform3D(51.081028, 0, 0, 0, 10, 0, 0, 0, 71.47871, 25, -10, 25)
 visible = false
 
 [node name="Camera7" parent="Cameras" unique_id=1454919603 instance=ExtResource("6_tsagn")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -17, 5, -26)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -17, 5, -27)
 
 [node name="CameraTrigger" parent="Cameras/Camera7" unique_id=1310401105 instance=ExtResource("7_fce30")]
-transform = Transform3D(76.621544, 0, 0, 0, 10, 0, 0, 0, 71.47871, -20, -10, -30)
+transform = Transform3D(76.621544, 0, 0, 0, 10, 0, 0, 0, 71.47871, -20, -10, -25)
 visible = false
 
 [node name="Camera8" parent="Cameras" unique_id=1396109430 instance=ExtResource("6_tsagn")]
@@ -2721,13 +2716,6 @@ transform = Transform3D(0.24000001, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -10, 5, -62)
 transform = Transform3D(80.06952, 0, 0, 0, 36.300003, 0, 0, 0, 39.667427, -40, -5, -15)
 visible = false
 
-[node name="Camera3" parent="Cameras" unique_id=2087976479 instance=ExtResource("6_tsagn")]
-transform = Transform3D(0.252, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -20, 5, -4)
-
-[node name="CameraTrigger" parent="Cameras/Camera3" unique_id=499341445 instance=ExtResource("7_fce30")]
-transform = Transform3D(67.43089, 0, 0, 0, 37.800003, 0, 0, 0, 108.324005, -5, -10, -15)
-visible = false
-
 [node name="Camera2" parent="Cameras" unique_id=1132463987 instance=ExtResource("6_tsagn")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -39, 5, -2)
 
@@ -2756,12 +2744,6 @@ transform = Transform3D(1.34, 0, 0, 0, 1.1, 0, 0, 0, 0.6, -38, 0.5, -16.4)
 [node name="Door Interactable" parent="Interactables/DoorNode5" unique_id=207222191 instance=ExtResource("17_unp4q")]
 transform = Transform3D(-3.2620438e-08, 0, -0.74626863, 0, 0.90909094, 0, 1.6666666, 0, -7.285231e-08, 0, 2.7272727, 0)
 
-[node name="DoorNode4" parent="Interactables" unique_id=1976615979 instance=ExtResource("9_fce30")]
-transform = Transform3D(-5.857326e-08, 0, 0.6, 0, 1.1, 0, -1.34, 0, -2.6226834e-08, -12, 0.5, -9.4)
-
-[node name="Door Interactable" parent="Interactables/DoorNode4" unique_id=1856412214 instance=ExtResource("17_unp4q")]
-transform = Transform3D(-3.2620438e-08, 0, -0.74626863, 0, 0.90909094, 0, 1.6666666, 0, -7.285231e-08, 0, 2.7272727, 0)
-
 [node name="DoorNode3" parent="Interactables" unique_id=2123995930 instance=ExtResource("9_fce30")]
 transform = Transform3D(-1.34, 0, -5.2453668e-08, 0, 1.1, 0, 1.1714652e-07, 0, -0.6, -18, 0.5, -40.4)
 
@@ -2786,6 +2768,21 @@ transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-0
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.159636, 0.0657587, 0.126627)
 
 [node name="Thruster Effect4" parent="Background/blockbench_export6" unique_id=296511509 instance=ExtResource("15_reklg")]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.158084, 0.0657587, 0.126627)
+
+[node name="blockbench_export7" parent="Background" unique_id=1241881823 instance=ExtResource("14_jss2i")]
+transform = Transform3D(25.000004, 0, -43.30127, 0, 50, 0, 43.30127, 0, 25.000004, -73, -12, 9)
+
+[node name="Thruster Effect" parent="Background/blockbench_export7" unique_id=1616786806 instance=ExtResource("15_reklg")]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.142942, 0.166796, 0.411317)
+
+[node name="Thruster Effect3" parent="Background/blockbench_export7" unique_id=1145091330 instance=ExtResource("15_reklg")]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.144602, 0.166796, 0.411317)
+
+[node name="Thruster Effect2" parent="Background/blockbench_export7" unique_id=1549272601 instance=ExtResource("15_reklg")]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.159636, 0.0657587, 0.126627)
+
+[node name="Thruster Effect4" parent="Background/blockbench_export7" unique_id=1143377734 instance=ExtResource("15_reklg")]
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.158084, 0.0657587, 0.126627)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1374621128]

@@ -79,9 +79,11 @@ func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
 		$AudioStreamPlayer.play()
+		Globals.PlayerControls = true
 		#Engine.time_scale = 1
 	else:
 		pause_menu.show()
+		Globals.PlayerControls = false
 		#Engine.time_scale = 0
 		$AudioStreamPlayer.stop()
 	Globals.paused = !Globals.paused
