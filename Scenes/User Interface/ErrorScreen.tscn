@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b8i1sxljrq3gc"]
+
+[ext_resource type="Texture2D" uid="uid://dfv48y2rqy3nn" path="res://icon.svg" id="1_lulml"]
+[ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="2_tdqlu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyk6m"]
+shader = ExtResource("2_tdqlu")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="Control" type="Control" unique_id=929896289]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1929960946]
+position = Vector2(460, 685)
+texture = ExtResource("1_lulml")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1084267538]
+material = SubResource("ShaderMaterial_iyk6m")
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1922.0
+offset_bottom = 1078.0
+metadata/_edit_use_anchors_ = true
