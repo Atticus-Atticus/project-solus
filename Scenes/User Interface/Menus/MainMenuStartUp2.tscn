@@ -234,16 +234,6 @@ visible_ratio = 0.0
 
 [node name="CRT Shader" parent="." unique_id=434780428 instance=ExtResource("10_k65rf")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 1946.0
-offset_bottom = 1096.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
 [node name="CRT Shader2" parent="." unique_id=1094389167 instance=ExtResource("11_kdlvi")]
 visible = false

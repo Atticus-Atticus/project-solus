@@ -26,21 +26,8 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="CRT Shader" type="Control" unique_id=1149146521]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=746682090]
+[node name="ColorRect" type="ColorRect" unique_id=1878880858]
 material = SubResource("ShaderMaterial_f4j2s")
-layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2

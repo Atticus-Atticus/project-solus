@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://b8i1sxljrq3gc"]
 
-[ext_resource type="Texture2D" uid="uid://dfv48y2rqy3nn" path="res://icon.svg" id="1_lulml"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_lulml"]
 [ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="2_tdqlu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tdqlu"]
+font = ExtResource("1_lulml")
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iyk6m"]
+font = ExtResource("1_lulml")
+font_size = 25
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iyk6m"]
 shader = ExtResource("2_tdqlu")
@@ -19,11 +28,81 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1929960946]
-position = Vector2(460, 685)
-texture = ExtResource("1_lulml")
+[node name="Label" type="Label" parent="." unique_id=709707354]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 156.0
+offset_right = 1155.0
+offset_bottom = 431.0
+text = "ERROR"
+label_settings = SubResource("LabelSettings_tdqlu")
+
+[node name="Label2" type="Label" parent="." unique_id=288587018]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 246.0
+offset_right = 815.0
+offset_bottom = 1001.0
+text = "BLACKBOX DIAGNOSTIC MODE
+------------------------------------------------
+Parsing memory reconstruction...
+Rendering scene...
+
+WARNING: DATA ANAOMALY DETECTED
+
+Unregistered entity detected in playback stream
+
+ENTITY ID: UNKNOWN
+Attempting identification...
+
+Searching registry 1... FAIL
+Searching registry 2... FAIL
+Searching registry 3... FAIL
+
+RESULT: NO MATCH FOUND
+
+Attempting removal...
+
+ERROR: ENTITY PERSISTING
+
+Initiating containment protocol...
+
+Masking visual artifact...
+Rebuilding frame buffer...
+Locking memory segment...
+
+STATUS: ANOMALY CONTAINED
+------------------------------------------------
+Playback resumed"
+label_settings = SubResource("LabelSettings_iyk6m")
+
+[node name="Label3" type="Label" parent="." unique_id=874280944]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 246.0
+offset_right = 1573.0
+offset_bottom = 519.0
+text = "4572526F52
+-----------------------------
+49 66 20 79 6F 75 20 67 61 7A 65 20 6C 6F 6E 67 20 65 6E 6F 75 67 68 20 69 6E 74 6F 20 61 6E 20 61 62 79 73 73 2C 20 74 68 65 20 61 62 79 73 73 20 61 6C 73 6F 20 67 61 7A 65 73 20 69 6E 74 6F 20 79 6F 75 2E
+
+"
+label_settings = SubResource("LabelSettings_iyk6m")
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="." unique_id=369391414]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 939.0
+offset_right = 1853.0
+offset_bottom = 1074.0
+text = "I have seen the dark universe yawning,
+          Where the black planets roll without aim"
+label_settings = SubResource("LabelSettings_iyk6m")
+autowrap_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1084267538]
+visible = false
 material = SubResource("ShaderMaterial_iyk6m")
 layout_mode = 0
 offset_left = 2.0

@@ -492,16 +492,6 @@ texture = ExtResource("5_pb0i1")
 
 [node name="CRT Shader" parent="." unique_id=1058456537 instance=ExtResource("4_1xurr")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 396.0
-offset_bottom = 141.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
 [node name="CRT Shader2" parent="." unique_id=1448452296 instance=ExtResource("5_n6dy8")]
 visible = false

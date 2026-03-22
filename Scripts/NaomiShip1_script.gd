@@ -13,7 +13,7 @@ func _on_body_entered(body: CharacterBody3D) -> void:
 		Globals.NaomiShip1 = true
 		$ColorRect2.show()
 		$Label.show()
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(1.5).timeout
 		$ColorRect2.hide()
 		$Label.hide()
 		$"..".hide()
