@@ -3279,22 +3279,6 @@ script = ExtResource("67_gakp8")
 transform = Transform3D(0.350675, 0, -1.46023, 0, 1, 0, 0.331002, 0, 1.54702, -0.17611, 0.5, -1.51182)
 shape = SubResource("BoxShape3D_1avul")
 
-[node name="Label" type="Label" parent="Naomi/Area3D" unique_id=194456596]
-offset_left = 263.0
-offset_top = 156.0
-offset_right = 1289.0
-offset_bottom = 431.0
-text = "ERROR"
-label_settings = SubResource("LabelSettings_umbca")
-
-[node name="ColorRect2" type="ColorRect" parent="Naomi/Area3D" unique_id=236305318]
-material = SubResource("ShaderMaterial_jysci")
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1922.0
-offset_bottom = 1078.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Naomi2" parent="." unique_id=156014508 instance=ExtResource("57_6kdkd")]
 transform = Transform3D(-3.19674, 0, 0.144325, 0, 3.2, 0, -0.144325, 0, -3.19674, 8.60112, -1.62546, -19.9014)
 

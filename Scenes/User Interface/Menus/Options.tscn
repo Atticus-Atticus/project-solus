@@ -196,5 +196,6 @@ text = "X"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1547898002]
 libraries/ = SubResource("AnimationLibrary_boeap")
+speed_scale = 2.0
 
 [connection signal="pressed" from="Panel/Control/X Button" to="." method="_on_x_button_pressed"]

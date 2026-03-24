@@ -60,8 +60,6 @@
 [ext_resource type="Animation" uid="uid://l8oswunav2pu" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose2.res" id="58_syyjd"]
 [ext_resource type="Animation" uid="uid://bk28p3ffg26m1" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Pose2.res" id="59_vimbc"]
 [ext_resource type="Script" uid="uid://c4omxgk7gy1on" path="res://Scripts/Naomi Trigger.gd" id="60_nrogp"]
-[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="61_473di"]
-[ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="61_wpcls"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="62_jnbip"]
 [ext_resource type="PackedScene" uid="uid://8jcon8uugkxp" path="res://Scenes/Objects/RadioInteractObject.tscn" id="62_nipua"]
 
@@ -679,19 +677,6 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cw8py"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_omuvx"]
-font = ExtResource("61_473di")
-font_size = 75
-font_color = Color(1, 0, 0, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0stws"]
-shader = ExtResource("61_wpcls")
-shader_parameter/shake_power = 0.04
-shader_parameter/shake_rate = 0.4
-shader_parameter/shake_speed = 5.0
-shader_parameter/shake_block_size = 15.0
-shader_parameter/shake_color_rate = 0.01
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_473di"]
 albedo_texture = ExtResource("46_vgvhr")
@@ -1936,22 +1921,6 @@ script = ExtResource("60_nrogp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MutatedNaomi2/Area3D" unique_id=1718414328]
 transform = Transform3D(0.180159, 0, -1.97329, 0, 1, 0, 0.447301, 0, 0.794779, 0.337394, 0.5, -1.21786)
 shape = SubResource("BoxShape3D_cw8py")
-
-[node name="Label" type="Label" parent="MutatedNaomi2/Area3D" unique_id=222694390]
-offset_left = 263.0
-offset_top = 156.0
-offset_right = 1289.0
-offset_bottom = 431.0
-text = "ERROR"
-label_settings = SubResource("LabelSettings_omuvx")
-
-[node name="ColorRect2" type="ColorRect" parent="MutatedNaomi2/Area3D" unique_id=204147270]
-material = SubResource("ShaderMaterial_0stws")
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1922.0
-offset_bottom = 1078.0
-metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite3D17" parent="." unique_id=1641848903 instance=ExtResource("62_jnbip")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.67906, 2.52256, 0.0192235)
