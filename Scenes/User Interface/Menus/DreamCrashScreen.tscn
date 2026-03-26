@@ -278,7 +278,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance"
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1508806075]

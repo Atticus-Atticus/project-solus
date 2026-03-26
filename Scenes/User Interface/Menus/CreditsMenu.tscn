@@ -120,7 +120,7 @@ text = "
 >
 > Press \"ESC\" to return to the main menu.
 >
-This Terminal is property of the Farseeing Courier Company. Light Speed! Right Speed!"
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1943957016]
@@ -151,10 +151,6 @@ theme = ExtResource("3_56pl2")
 text = "Return to menu"
 alignment = 0
 script = ExtResource("5_hu4cb")
-
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=806446075]
-position = Vector2(60, 1367)
-texture = ExtResource("6_ha5nn")
 
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1266289724]
 stream = ExtResource("6_05kd7")
@@ -243,6 +239,10 @@ color = Color(0.4, 1, 0.941176, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=2030924743]
 libraries/ = SubResource("AnimationLibrary_kaeub")
 autoplay = &"FlashingSquare"
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=806446075]
+position = Vector2(60, 1367)
+texture = ExtResource("6_ha5nn")
 
 [node name="CRT Shader" parent="." unique_id=40419339 instance=ExtResource("8_xkmao")]
 layout_mode = 1

@@ -137,7 +137,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Coalition Collective of Intelligence."
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="WelcomeLabel" type="Label" parent="." unique_id=1098830884]

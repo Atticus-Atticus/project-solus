@@ -274,7 +274,7 @@ text = "
 > 
 > 
 > 
-This Terminal is property of the Coalition Collective of Intelligence."
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_esjad")
 
 [node name="Label" type="Label" parent="." unique_id=1196889175]

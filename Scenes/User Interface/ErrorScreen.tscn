@@ -5,6 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://nd7txv25ssn" path="res://Scenes/User Interface/HUD/Project Solus Camera HUD ERROR.png" id="2_iyk6m"]
 [ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="2_tdqlu"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ghu3o"]
+line_spacing = 20.0
+font = ExtResource("1_lulml")
+font_size = 35
+font_color = Color(0.4, 1, 0.941176, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_tdqlu"]
 font = ExtResource("1_lulml")
 font_size = 100
@@ -139,6 +145,40 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iyk6m")
+
+[node name="Label4" type="Label" parent="." unique_id=1390624092]
+modulate = Color(1.199976, 1.199976, 1.199976, 0.16470589)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = -2.0
+offset_right = 1767.0
+offset_bottom = 2.0
+grow_vertical = 2
+text = "
+> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
+>
+> 
+>
+>
+>  
+> 	
+>
+>
+>
+> 
+>
+>
+>
+>
+>
+>
+>
+>
+>
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
+label_settings = SubResource("LabelSettings_ghu3o")
 
 [node name="Label" type="Label" parent="." unique_id=709707354]
 layout_mode = 0

@@ -61,7 +61,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Coalition Collective of Intelligence."
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = ExtResource("5_kj5pt")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1229217335]
