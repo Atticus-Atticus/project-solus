@@ -4836,7 +4836,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_f1gk8")
 
 [node name="DoorNode" parent="Level" unique_id=1392510197 instance=ExtResource("1_2i266")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 18, 0, 18)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 18, -4, 18)
 
 [node name="DoorNode2" parent="Level" unique_id=263138034 instance=ExtResource("1_2i266")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12, -4, 6)
@@ -10180,7 +10180,7 @@ mesh = SubResource("ArrayMesh_eixmc")
 skeleton = NodePath("")
 
 [node name="SM_Prop_Cables_Ceiling_04" type="MeshInstance3D" parent="Clutter" unique_id=835949003]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5854, 4.7921, 34.5836)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.794487, 4.7921, 34.5836)
 material_override = SubResource("StandardMaterial3D_p6oy4")
 mesh = SubResource("ArrayMesh_eixmc")
 skeleton = NodePath("")
@@ -10210,6 +10210,21 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 
 
 [node name="OverheadLight14" parent="Lights" unique_id=1460056201 instance=ExtResource("34_swfy8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 4.65, 18)
+
+[node name="OverheadLight16" parent="Lights" unique_id=519205741 instance=ExtResource("34_swfy8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 4.65, 18)
+
+[node name="OverheadLight17" parent="Lights" unique_id=1306439960 instance=ExtResource("34_swfy8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 4.65, 27)
+
+[node name="OverheadLight18" parent="Lights" unique_id=601380346 instance=ExtResource("34_swfy8")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 21, 4.65, 35)
+
+[node name="OverheadLight19" parent="Lights" unique_id=1748418599 instance=ExtResource("34_swfy8")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 31, 4.65, 35)
+
+[node name="OverheadLight20" parent="Lights" unique_id=411535610 instance=ExtResource("34_swfy8")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 37, 4.65, 35)
 
 [node name="OverheadLight5" parent="Lights" unique_id=17120640 instance=ExtResource("34_swfy8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4.65, 18)

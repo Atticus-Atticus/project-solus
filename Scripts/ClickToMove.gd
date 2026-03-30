@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export var ray_length: float = 10000.0
 
 @export var turn_speed := 8.0
-@export var arrive_dist := 2    # how close counts as "reached"
+@export var arrive_dist := 1.5    # how close counts as "reached"
 #keep this var above 1. going below that number causes problems.
 
 var holding_click := false

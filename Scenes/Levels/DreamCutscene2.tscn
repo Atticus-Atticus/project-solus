@@ -1,6 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://qj4jbhsfbf7e"]
+[gd_scene format=3 uid="uid://qj4jbhsfbf7e"]
 
-[ext_resource type="Script" path="res://Scripts/dream_cutscene_2_script.gd" id="1_ikt5c"]
+[ext_resource type="Script" uid="uid://cqcdmxavo54q0" path="res://Scripts/dream_cutscene_2_script.gd" id="1_ikt5c"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_6ybmq"]
 [ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="3_8j0m5"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_ss7ua"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bia735rkr1d8g" path="res://Models/Sci-Fi City Assets/Household/Tables/Table B.fbx" id="12_j5xeq"]
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="13_0kavk"]
 [ext_resource type="PackedScene" uid="uid://c4ejwph3itmdh" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Cutscene2.tscn" id="14_06hk3"]
-[ext_resource type="Shader" path="res://Shaders/Glitch.gdshader" id="14_or18c"]
+[ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="14_or18c"]
 [ext_resource type="PackedScene" uid="uid://dxfc02nvg3ckf" path="res://Models/CutscenePlayer/CalihanArms.tscn" id="15_f8igq"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="16_25uyb"]
 [ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="17_1llti"]
@@ -23,9 +23,17 @@
 [ext_resource type="AudioStream" uid="uid://bvaa5afgeje7p" path="res://Audio/CinematicBoom.wav" id="20_qmva7"]
 [ext_resource type="AudioStream" uid="uid://djoue732e37sw" path="res://Audio/CreepyAmbience.mp3" id="21_lo61k"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n3k4c"]
+shader = ExtResource("14_or18c")
+shader_parameter/shake_power = 0.04
+shader_parameter/shake_rate = 0.4
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 15.0
+shader_parameter/shake_color_rate = 0.01
+
 [sub_resource type="Animation" id="Animation_2joo3"]
 resource_name = "Cutscene2"
-length = 17.5
+length = 15.5333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,10 +41,10 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5, 16.2, 16.2333, 16.2667, 16.3333, 16.3667, 16.4, 16.4667, 16.5, 16.9667, 17, 17.3667, 17.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -65,70 +73,46 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect2:visible")
+tracks/3/path = NodePath("TextboxContainer:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 11.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("TextboxContainer:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 11, 13, 16.2333),
+"times": PackedFloat32Array(0, 11, 13, 15.533334),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [true, false, true, false]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0, 11),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": ["Calihan: Naomi?", "Naomi: ...calihan..."]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0, 11.2667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("blockbench_export:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 16.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/8/type = "method"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("CalihanSpeech")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CalihanSpeech")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(7.03333, 9),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -139,13 +123,13 @@ tracks/8/keys = {
 "method": &"stop"
 }]
 }
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("NaomiSpeech")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NaomiSpeech")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(13, 14.5333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -156,17 +140,29 @@ tracks/9/keys = {
 "method": &"stop"
 }]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Boom:playing")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Boom:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
 "times": PackedFloat32Array(11.3667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ColorRect2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 13.007933, 14.5333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_gk18n"]
@@ -210,70 +206,58 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect2:visible")
+tracks/3/path = NodePath("TextboxContainer:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("TextboxContainer:visible")
+tracks/4/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": ["Calihan: Naomi?"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:text")
+tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Calihan: Naomi?"]
+"values": [1]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/6/path = NodePath("Boom:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [true]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("blockbench_export:visible")
+tracks/7/path = NodePath("ColorRect2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Boom:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -282,8 +266,8 @@ tracks/8/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkmrm"]
 _data = {
-"Cutscene2": SubResource("Animation_2joo3"),
-"RESET": SubResource("Animation_gk18n")
+&"Cutscene2": SubResource("Animation_2joo3"),
+&"RESET": SubResource("Animation_gk18n")
 }
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbw1o"]
@@ -330,27 +314,26 @@ data = PackedVector3Array(-0.75, 0.3125, 0.3333, -0.75, 0.1875, 0.25, -0.75, 0.3
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bvkep"]
 data = PackedVector3Array(0.3333, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.3125, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.3333, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, -0.5, 0.5, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 0.1875, -0.5, 0.25, 0.1875, -0.5, 0.5, 0.1875, 0.5, 0.5, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.25, 0.1875, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0.3125, 0.5, 0.5, 0.1875, 0.5, 0.3333, 0.3125, 0.5, 0.25, 0.1875, 0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.25, 0.1875, 0.5, 0.25, 0.1875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.3333, 0.3125, 0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, 0.5, 0.3333, 0.3125, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, -0.5, 0.5, 0.3125, -0.5, 0.5, 2.5625, 0.5, 0.5, 0.3125, 0.5, 0.3333, 2.5625, -0.5, 0.5, 2.5625, -0.5, 0.3333, 0.3125, -0.5, 0.3333, 0.3125, -0.5, 0.5, 2.5625, -0.5, 0.5, 0.3125, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5, 0.3333, 2.5625, 0.5, 0.3333, 2.5625, 0.5, 0.25, 2.6875, -0.5, 0.25, 2.6875, 0.5, 0.3333, 2.5625, 0.5, 0.5, 2.5625, 0.5, 0.25, 2.6875, 0.5, 0.25, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, 0.5, 0.5, 2.6875, 0.5, 0.5, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.5625, -0.5, 0.3333, 2.5625, -0.5, 0.5, 2.6875, -0.5, 0.5, 2.6875, -0.5, 0.3333, 2.5625, -0.5, 0.25, 2.6875, -0.5)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n3k4c"]
-shader = ExtResource("14_or18c")
-shader_parameter/shake_power = 0.04
-shader_parameter/shake_rate = 0.4
-shader_parameter/shake_speed = 5.0
-shader_parameter/shake_block_size = 15.0
-shader_parameter/shake_color_rate = 0.01
-
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=1819401272]
 script = ExtResource("1_ikt5c")
 
-[node name="CRT Shader" parent="." instance=ExtResource("2_6ybmq")]
+[node name="CRT Shader" parent="." unique_id=151903025 instance=ExtResource("2_6ybmq")]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1108213389]
 offset_left = -178.0
 offset_top = -110.0
 offset_right = 2175.0
 offset_bottom = 1395.0
 color = Color(0, 0, 0, 1)
 
-[node name="TextboxContainer" type="MarginContainer" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=508571578]
+material = SubResource("ShaderMaterial_n3k4c")
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1922.0
+offset_bottom = 1078.0
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=1700279873]
 visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 12
@@ -364,25 +347,25 @@ theme_override_constants/margin_left = 100
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="Panel" type="Panel" parent="TextboxContainer"]
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=52531039]
 layout_mode = 2
 theme_override_styles/panel = ExtResource("3_8j0m5")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=1822013803]
 layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=802922422]
 visible = false
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=1218726610]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=14335983]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -391,7 +374,7 @@ theme_override_font_sizes/font_size = 50
 text = ">"
 label_settings = ExtResource("5_nr0x1")
 
-[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=336988132]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -407,7 +390,7 @@ text_overrun_behavior = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=263503781]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -416,264 +399,255 @@ theme_override_font_sizes/font_size = 50
 text = "v"
 label_settings = ExtResource("5_nr0x1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wkmrm")
-}
-autoplay = "Cutscene2"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=383611267]
+libraries/ = SubResource("AnimationLibrary_wkmrm")
+autoplay = &"Cutscene2"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=325253172]
 environment = SubResource("Environment_e68sc")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=86079005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46973, 2.45369, 1.28086)
 light_energy = 0.1
 omni_range = 2.418
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1231332423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88154, 2.44731, -3.80153)
 light_color = Color(0.340478, 0.000131265, 0.26838, 1)
 light_energy = 0.434
 omni_range = 3.13567
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1136707096]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.17604, 2.53573, -5.18395)
 fov = 52.3294
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1946806800]
 transform = Transform3D(0.790272, 0, -0.612756, 0, 1, 0, 0.612756, 0, 0.790272, 0, 0, 0)
 spot_range = 3.34504
 spot_angle = 43.3239
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1126406964]
 
-[node name="CollisionShape3D114" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D114" type="CollisionShape3D" parent="StaticBody3D" unique_id=413005421]
 transform = Transform3D(2, 0, 4.76837e-07, 0, 2, 0, -4.76837e-07, 0, 2, 0, 0, 2)
 shape = SubResource("ConcavePolygonShape3D_7st78")
 
-[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D114"]
+[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D114" unique_id=447723457]
 mesh = ExtResource("5_6g46u")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D115" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D115" type="CollisionShape3D" parent="StaticBody3D" unique_id=574897470]
 transform = Transform3D(-2, 0, -6.51683e-07, 0, 2, 0, 6.51683e-07, 0, -2, -6, 0, -6)
 shape = SubResource("ConcavePolygonShape3D_7st78")
 
-[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D115"]
+[node name="HomeCornerFront6" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D115" unique_id=1386630588]
 mesh = ExtResource("5_6g46u")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D85" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D85" type="CollisionShape3D" parent="StaticBody3D" unique_id=1029891419]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D85"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D85" unique_id=1218772320]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D86" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D86" type="CollisionShape3D" parent="StaticBody3D" unique_id=254071446]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D86"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D86" unique_id=2048588997]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D87" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D87" type="CollisionShape3D" parent="StaticBody3D" unique_id=713793737]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D87"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D87" unique_id=1406598139]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D88" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D88" type="CollisionShape3D" parent="StaticBody3D" unique_id=209127991]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D88"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D88" unique_id=1275218609]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D89" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D89" type="CollisionShape3D" parent="StaticBody3D" unique_id=420089421]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D89"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D89" unique_id=2005450340]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D90" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D90" type="CollisionShape3D" parent="StaticBody3D" unique_id=1276161035]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D90"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D90" unique_id=451284279]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D91" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D91" type="CollisionShape3D" parent="StaticBody3D" unique_id=1743399325]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D91"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D91" unique_id=1934618538]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D92" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D92" type="CollisionShape3D" parent="StaticBody3D" unique_id=68490803]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D92"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D92" unique_id=1917951762]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D95" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D95" type="CollisionShape3D" parent="StaticBody3D" unique_id=1696018834]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D95"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D95" unique_id=42362853]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D96" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D96" type="CollisionShape3D" parent="StaticBody3D" unique_id=1416058568]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D96"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D96" unique_id=976618073]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D97" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D97" type="CollisionShape3D" parent="StaticBody3D" unique_id=1123297098]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D97"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D97" unique_id=2138658859]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D100" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D100" type="CollisionShape3D" parent="StaticBody3D" unique_id=988394321]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_oega3")
 
-[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D100"]
+[node name="HomeMid42" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D100" unique_id=1036630017]
 mesh = ExtResource("6_2t4nl")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D93" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D93" type="CollisionShape3D" parent="StaticBody3D" unique_id=874137139]
 transform = Transform3D(2, 0, -4.76837e-07, 0, 2, 0, 4.76837e-07, 0, 2, -2, 0, 2)
 shape = SubResource("ConcavePolygonShape3D_pslee")
 
-[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D93"]
+[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D93" unique_id=1608158374]
 mesh = ExtResource("7_v2kig")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D94" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D94" type="CollisionShape3D" parent="StaticBody3D" unique_id=590709430]
 transform = Transform3D(2, 0, -4.76837e-07, 0, 2, 0, 4.76837e-07, 0, 2, -4, 0, 2)
 shape = SubResource("ConcavePolygonShape3D_pslee")
 
-[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D94"]
+[node name="HomeWallFront7" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D94" unique_id=718402522]
 mesh = ExtResource("7_v2kig")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D98" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D98" type="CollisionShape3D" parent="StaticBody3D" unique_id=1758123875]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 2)
 shape = SubResource("ConcavePolygonShape3D_qrsv5")
 
-[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D98"]
+[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D98" unique_id=996636844]
 mesh = ExtResource("8_8in1g")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D99" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D99" type="CollisionShape3D" parent="StaticBody3D" unique_id=1874426321]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, -6)
 shape = SubResource("ConcavePolygonShape3D_qrsv5")
 
-[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D99"]
+[node name="HomeCornerSide1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D99" unique_id=2130408140]
 mesh = ExtResource("8_8in1g")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D126" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D126" type="CollisionShape3D" parent="StaticBody3D" unique_id=1910929824]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -3, 0, -6)
 shape = SubResource("ConcavePolygonShape3D_sq8jl")
 
-[node name="HomeWallDoorFront4" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D126"]
+[node name="HomeWallDoorFront4" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D126" unique_id=248144904]
 mesh = ExtResource("9_5x0jg")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D52" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D52" type="CollisionShape3D" parent="StaticBody3D" unique_id=267825890]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D52"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D52" unique_id=1479085467]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D53" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D53" type="CollisionShape3D" parent="StaticBody3D" unique_id=132290430]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D53"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D53" unique_id=564931301]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D54" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D54" type="CollisionShape3D" parent="StaticBody3D" unique_id=189420004]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D54"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D54" unique_id=1116790331]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D55" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D55" type="CollisionShape3D" parent="StaticBody3D" unique_id=779520558]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, -4)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D55"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D55" unique_id=689208890]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D56" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D56" type="CollisionShape3D" parent="StaticBody3D" unique_id=603724131]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, -2)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D56"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D56" unique_id=719837769]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D57" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D57" type="CollisionShape3D" parent="StaticBody3D" unique_id=85492593]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -6, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_bvkep")
 
-[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D57"]
+[node name="HomeWallUni14" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D57" unique_id=10591572]
 mesh = ExtResource("10_ydlmy")
 skeleton = NodePath("../..")
 
-[node name="Bed Double" parent="." instance=ExtResource("11_jln87")]
+[node name="Bed Double" parent="." unique_id=479285374 instance=ExtResource("11_jln87")]
 transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, -3.05418, 0.957018, 1.033)
 
-[node name="Table B" parent="." instance=ExtResource("12_j5xeq")]
+[node name="Table B" parent="." unique_id=705552040 instance=ExtResource("12_j5xeq")]
 transform = Transform3D(0.43237, 0, 0, 0, 0.666281, 0, 0, 0, 0.4, -0.576542, 1.01246, 1.67357)
 
-[node name="Table B2" parent="." instance=ExtResource("12_j5xeq")]
+[node name="Table B2" parent="." unique_id=1266811174 instance=ExtResource("12_j5xeq")]
 transform = Transform3D(0.43237, 0, 0, 0, 0.666281, 0, 0, 0, 0.4, -5.44595, 1.01246, 1.67357)
 
-[node name="Lamp C" parent="." instance=ExtResource("13_0kavk")]
+[node name="Lamp C" parent="." unique_id=1871041310 instance=ExtResource("13_0kavk")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -5.66227, 1.99529, 1.84141)
 
-[node name="blockbench_export2" parent="." instance=ExtResource("14_06hk3")]
+[node name="blockbench_export2" parent="." unique_id=1373057169 instance=ExtResource("14_06hk3")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.09335, 0.428454, -2.66407)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_n3k4c")
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1922.0
-offset_bottom = 1078.0
-
-[node name="blockbench_export" parent="." instance=ExtResource("15_f8igq")]
+[node name="blockbench_export" parent="." unique_id=796719314 instance=ExtResource("15_f8igq")]
 transform = Transform3D(-0.99877, 0, -0.049582, 0.00174941, 0.999377, -0.0352398, 0.0495511, -0.0352832, -0.998148, -3.20577, 0.161993, -4.7786)
 visible = false
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=626237288]
 offset_left = 146.0
 offset_top = 97.0
 offset_right = 466.0
@@ -681,17 +655,18 @@ offset_bottom = 168.0
 text = "Press BACKSPACE to skip cutscene"
 label_settings = ExtResource("16_25uyb")
 
-[node name="CalihanSpeech" type="AudioStreamPlayer" parent="."]
+[node name="CalihanSpeech" type="AudioStreamPlayer" parent="." unique_id=135657921]
 stream = ExtResource("17_1llti")
 
-[node name="NaomiSpeech" type="AudioStreamPlayer" parent="."]
+[node name="NaomiSpeech" type="AudioStreamPlayer" parent="." unique_id=2038179707]
 stream = ExtResource("18_pwww1")
 
-[node name="Ambience" type="AudioStreamPlayer" parent="."]
+[node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=733359677]
 stream = ExtResource("21_lo61k")
+volume_db = 0.5
 autoplay = true
 
-[node name="Boom" type="AudioStreamPlayer" parent="."]
+[node name="Boom" type="AudioStreamPlayer" parent="." unique_id=279120955]
 stream = ExtResource("20_qmva7")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

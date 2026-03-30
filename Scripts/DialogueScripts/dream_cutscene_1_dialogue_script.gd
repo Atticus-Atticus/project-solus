@@ -5,6 +5,8 @@ var textline = 0
 func _ready() -> void:
 	$TextboxContainer/TweenAnimation.play("TextTween2")
 	Globals.PlayerControls = false
+	await get_tree().create_timer(2).timeout
+	$NaomiSpeech.play()
 
 func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 	textline += 1

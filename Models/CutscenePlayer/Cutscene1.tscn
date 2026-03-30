@@ -1,160 +1,426 @@
-[gd_scene load_steps=3 format=3 uid="uid://dycxml7xdprl3"]
+[gd_scene format=3 uid="uid://dycxml7xdprl3"]
 
 [ext_resource type="PackedScene" uid="uid://bxh14o8oxtvnx" path="res://Models/CutscenePlayer/DreamLevelCutscene1.gltf" id="1_1ngcu"]
-[ext_resource type="Script" path="res://Scripts/cutscene_1_model_script.gd" id="2_6uv8x"]
+[ext_resource type="Script" uid="uid://b8nq3h6pk8uin" path="res://Scripts/cutscene_1_model_script.gd" id="2_6uv8x"]
+[ext_resource type="Script" uid="uid://0j8wu7h1s051" path="res://Scripts/DialogueScripts/cutscene1_dialogue_script.gd" id="3_u50qh"]
+[ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="4_gtaxy"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="5_5saya"]
+[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="6_ax766"]
+[ext_resource type="LabelSettings" uid="uid://tp8yager30fu" path="res://Scenes/User Interface/Dialogue/DialogueBoxText.tres" id="7_b07bd"]
+[ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="8_v830i"]
+[ext_resource type="AudioStream" uid="uid://dif64pbv6ratc" path="res://Audio/Speech/NaomiSpeech.wav" id="9_m3bfi"]
 
-[node name="blockbench_export" instance=ExtResource("1_1ngcu")]
+[sub_resource type="Animation" id="Animation_d8ckh"]
+resource_name = "BlackToFade"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1heel"]
+resource_name = "FadeToBlack"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vxsjl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_uhu3r"]
+resource_name = "ScreenTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u50qh"]
+resource_name = "TextTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_5bkkr"]
+resource_name = "TextTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_flk8l"]
+resource_name = "TextTweenACTUAL"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2wdev"]
+_data = {
+&"BlackToFade": SubResource("Animation_d8ckh"),
+&"FadeToBlack": SubResource("Animation_1heel"),
+&"RESET": SubResource("Animation_vxsjl"),
+&"ScreenTween": SubResource("Animation_uhu3r"),
+&"TextTween": SubResource("Animation_u50qh"),
+&"TextTween2": SubResource("Animation_5bkkr"),
+&"TextTweenACTUAL": SubResource("Animation_flk8l")
+}
+
+[node name="blockbench_export" unique_id=994117362 instance=ExtResource("1_1ngcu")]
 script = ExtResource("2_6uv8x")
 
 [node name="Upper Body" parent="Node/Root Base Model M/Root Center" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, -0.025, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.043619372, 0, -0.043619372, 0.999048, 0, -0.025, 0)
 
 [node name="Head Part" parent="Node/Root Base Model M/Root Center/Upper Body/Neck2" index="1"]
-transform = Transform3D(0.991445, 5.58794e-09, -0.130526, 0.0170371, 0.991445, 0.12941, 0.12941, -0.130526, 0.982963, 0, 0.0125, -0.0046875)
+transform = Transform3D(0.99144506, 5.5879363e-09, -0.13052621, 0.017037088, 0.99144495, 0.12940955, 0.12940957, -0.13052623, 0.982963, 0, 0.0125, -0.0046875)
 
 [node name="EyeBrow Right2" parent="Node/Root Base Model M/Root Center/Upper Body/Neck2/Head Part/Face/EyeBrows" index="1"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0.0015625, 0.0296875, 0.0078125)
+transform = Transform3D(0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, 0, 0, 1, 0.0015625, 0.0296875, 0.0078125)
 
 [node name="Right Upper Arm2" parent="Node/Root Base Model M/Root Center/Upper Body" index="4"]
-transform = Transform3D(0.991413, -0.130282, 0.0112895, 0.130646, 0.990533, -0.0421331, -0.00569347, 0.0432462, 0.999048, 0.09375, 0.178125, -0.009375)
+transform = Transform3D(0.99141294, -0.13028193, 0.011289527, 0.13064624, 0.990533, -0.042133085, -0.0056934743, 0.043246206, 0.999048, 0.09375, 0.178125, -0.009375)
 
 [node name="Right Lower Arm2" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2" index="3"]
-transform = Transform3D(0.991445, 0.130402, -0.00569347, -0.130526, 0.990501, -0.0432462, -1.39698e-09, 0.0436194, 0.999048, 0.0015625, -0.132813, 0.0015625)
+transform = Transform3D(0.99144495, 0.13040195, -0.005693471, -0.13052621, 0.990501, -0.043246206, -1.3969841e-09, 0.043619376, 0.999048, 0.0015625, -0.132813, 0.0015625)
 
 [node name="Right Hand" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2" index="3"]
-transform = Transform3D(-0.996195, 0.0870727, 0.00380171, 0.0871558, 0.995246, 0.0434534, -2.7474e-08, 0.0436194, -0.999048, 0, -0.11875, 0)
+transform = Transform3D(-0.99619496, 0.087072745, 0.0038017072, 0.08715577, 0.99524593, 0.04345339, -2.7474023e-08, 0.04361937, -0.999048, 0, -0.11875, 0)
 
 [node name="Right Thumb Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Thumb Lower" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0.0046875, -0.028125, 0.0046875)
+transform = Transform3D(1, 0, 0, 0, 0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0.0046875, -0.028125, 0.0046875)
 
 [node name="Right Index Lower" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand" index="5"]
-transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.00625, -0.04375, 0.0109375)
+transform = Transform3D(0.98480797, -0.17364824, 0, 0.17364824, 0.98480797, 0, 0, 0, 1, -0.00625, -0.04375, 0.0109375)
 
 [node name="Right Index Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Index Lower" index="3"]
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, -0.0171875, 0)
+transform = Transform3D(0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0, 0, 0, 1, 0, -0.0171875, 0)
 
 [node name="Right Fingers Lower" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand" index="6"]
-transform = Transform3D(0.984808, -0.17101, 0.0301537, 0.173648, 0.969846, -0.17101, -1.86265e-09, 0.173648, 0.984808, -0.00625, -0.0421875, -0.0078125)
+transform = Transform3D(0.98480797, -0.17101002, 0.0301537, 0.17364822, 0.969846, -0.17101012, -1.8626456e-09, 0.17364812, 0.984808, -0.00625, -0.0421875, -0.0078125)
 
 [node name="Right Fingers Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Right Upper Arm2/Right Lower Arm2/Right Hand/Right Fingers Lower" index="3"]
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, -0.0192212, -0.001385)
+transform = Transform3D(0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0, 0, 0, 1, 0, -0.0192212, -0.001385)
 
 [node name="Left Upper Arm2" parent="Node/Root Base Model M/Root Center/Upper Body" index="5"]
-transform = Transform3D(0.991445, 0.130402, -0.00569347, -0.130526, 0.990501, -0.0432462, -1.39698e-09, 0.0436194, 0.999048, -0.09375, 0.178125, -0.009375)
+transform = Transform3D(0.99144495, 0.13040195, -0.005693471, -0.13052621, 0.990501, -0.043246206, -1.3969841e-09, 0.043619376, 0.999048, -0.09375, 0.178125, -0.009375)
 
 [node name="Left Lower Arm2" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2" index="3"]
-transform = Transform3D(0.991445, -0.130402, 0.00569347, 0.130526, 0.990501, -0.0432462, 1.39698e-09, 0.0436194, 0.999048, -0.0015625, -0.132813, 0.0015625)
+transform = Transform3D(0.99144495, -0.13040195, 0.005693471, 0.13052621, 0.990501, -0.043246206, 1.3969841e-09, 0.043619376, 0.999048, -0.0015625, -0.132813, 0.0015625)
 
 [node name="Left Hand" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2" index="3"]
-transform = Transform3D(-0.996195, -0.0870727, -0.00380171, -0.0871558, 0.995246, 0.0434534, 2.7474e-08, 0.0436194, -0.999048, 0, -0.11875, 0)
+transform = Transform3D(-0.99619496, -0.087072745, -0.0038017072, -0.08715577, 0.99524593, 0.04345339, 2.7474023e-08, 0.04361937, -0.999048, 0, -0.11875, 0)
 
 [node name="Left Thumb Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Thumb Lower" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.0046875, -0.028125, 0.0046875)
+transform = Transform3D(1, 0, 0, 0, 0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, -0.0046875, -0.028125, 0.0046875)
 
 [node name="Left Index Lower" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand" index="5"]
-transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0.00625, -0.04375, 0.0109375)
+transform = Transform3D(0.98480797, 0.17364824, 0, -0.17364824, 0.98480797, 0, 0, 0, 1, 0.00625, -0.04375, 0.0109375)
 
 [node name="Left Index Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Index Lower" index="3"]
-transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0, -0.0171875, 0)
+transform = Transform3D(0.98480797, 0.17364824, 0, -0.17364824, 0.98480797, 0, 0, 0, 1, 0, -0.0171875, 0)
 
 [node name="Left Fingers Lower" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand" index="6"]
-transform = Transform3D(0.984808, 0.17101, -0.0301537, -0.173648, 0.969846, -0.17101, 1.86265e-09, 0.173648, 0.984808, 0.00625, -0.0421875, -0.0078125)
+transform = Transform3D(0.98480797, 0.17101002, -0.0301537, -0.17364822, 0.969846, -0.17101012, 1.8626456e-09, 0.17364812, 0.984808, 0.00625, -0.0421875, -0.0078125)
 
 [node name="Left Fingers Upper" parent="Node/Root Base Model M/Root Center/Upper Body/Left Upper Arm2/Left Lower Arm2/Left Hand/Left Fingers Lower" index="3"]
-transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0, -0.0192212, -0.001385)
+transform = Transform3D(0.98480797, 0.17364824, 0, -0.17364824, 0.98480797, 0, 0, 0, 1, 0, -0.0192212, -0.001385)
 
 [node name="Lower Body" parent="Node/Root Base Model M/Root Center" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0, -0.025, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99619496, -0.08715576, 0, 0.08715576, 0.99619496, 0, -0.025, 0)
 
 [node name="Right Upper Leg2" parent="Node/Root Base Model M/Root Center/Lower Body" index="3"]
-transform = Transform3D(0.995412, -0.0396553, -0.0870728, 0.0435779, 0.998097, 0.0436194, 0.0851773, -0.0472137, 0.995247, 0.04375, -0.103125, -0.0046875)
+transform = Transform3D(0.995412, -0.039655328, -0.08707283, 0.043577854, 0.998097, 0.04361941, 0.08517733, -0.047213707, 0.99524707, 0.04375, -0.103125, -0.0046875)
 
 [node name="Right Lower Leg2" parent="Node/Root Base Model M/Root Center/Lower Body/Right Upper Leg2" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, -0.184375, 0.0046875)
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, -0.184375, 0.0046875)
 
 [node name="Right Foot2" parent="Node/Root Base Model M/Root Center/Lower Body/Right Upper Leg2/Right Lower Leg2" index="3"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, -0.196875, 0)
+transform = Transform3D(0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, 0, 0, 1, 0, -0.196875, 0)
 
 [node name="Left Upper Leg2" parent="Node/Root Base Model M/Root Center/Lower Body" index="4"]
-transform = Transform3D(0.965499, 0.0308543, 0.258573, -0.0435779, 0.998097, 0.0436194, -0.256735, -0.0533825, 0.965006, -0.04375, -0.103125, -0.0046875)
+transform = Transform3D(0.9654989, 0.030854298, 0.25857258, -0.043577872, 0.998097, 0.043619372, -0.25673488, -0.053382505, 0.96500605, -0.04375, -0.103125, -0.0046875)
 
 [node name="Left Lower Leg2" parent="Node/Root Base Model M/Root Center/Lower Body/Left Upper Leg2" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, -0.184375, 0.0046875)
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, -0.184375, 0.0046875)
 
 [node name="Left Foot2" parent="Node/Root Base Model M/Root Center/Lower Body/Left Upper Leg2/Left Lower Leg2" index="3"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0, -0.196875, 0)
+transform = Transform3D(0.999048, -0.04361938, 0, 0.04361938, 0.999048, 0, 0, 0, 1, 0, -0.196875, 0)
 
 [node name="Root Base Model F" parent="Node" index="1"]
-transform = Transform3D(0.953717, 0, -0.300706, 0, 1, 0, 0.300706, 0, 0.953717, -0.125, 0, 0.1)
+transform = Transform3D(0.95371705, 0, -0.30070582, 0, 1, 0, 0.30070582, 0, 0.95371705, -0.125, 0, 0.1)
 
 [node name="Head_Part2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Neck22" index="1"]
-transform = Transform3D(0.965926, -0.0112895, -0.258573, 0, 0.999048, -0.0436194, 0.258819, 0.0421331, 0.965006, 0, 0.03125, -0.0015625)
+transform = Transform3D(0.96592593, -0.011289525, -0.25857258, 0, 0.999048, -0.04361937, 0.25881907, 0.04213308, 0.96500605, 0, 0.03125, -0.0015625)
 
 [node name="EyeBrow_Left2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Neck22/Head_Part2/Face3/EyeBrows2" index="0"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, -0.034375, 0, 0)
+transform = Transform3D(0.999048, -0.043619372, 0, 0.043619372, 0.999048, 0, 0, 0, 1, -0.034375, 0, 0)
 
 [node name="Right_Upper_Arm2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2" index="3"]
-transform = Transform3D(0.619998, -0.726571, 0.296137, 0.770063, 0.635827, -0.052217, -0.150353, 0.260419, 0.953717, 0.078125, 0.175, -0.009375)
+transform = Transform3D(0.6199978, -0.72657084, 0.29613733, 0.7700631, 0.63582724, -0.052217018, -0.15035293, 0.26041877, 0.95371693, 0.078125, 0.175, -0.009375)
 
 [node name="Right_Lower_Arm2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2" index="3"]
-transform = Transform3D(0.70935, -0.655729, 0.258537, -0.0166925, -0.382319, -0.92388, 0.704659, 0.651038, -0.282144, 0.00242188, -0.131917, 0.0015625)
+transform = Transform3D(0.70934993, -0.6557291, 0.25853735, -0.016692478, -0.3823191, -0.92387986, 0.7046589, 0.6510377, -0.28214398, 0.00242188, -0.131917, 0.0015625)
 
 [node name="Right_Hand2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2" index="3"]
-transform = Transform3D(-0.991445, -0.130402, -0.00569347, -0.130526, 0.990501, 0.0432462, -2.79397e-09, 0.0436194, -0.999048, -0.003125, -0.1125, 0)
+transform = Transform3D(-0.99144495, -0.13040194, -0.0056934683, -0.1305262, 0.990501, 0.043246202, -2.7939682e-09, 0.043619372, -0.999048, -0.003125, -0.1125, 0)
 
 [node name="Right_Thumb_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2/Right_Hand2/Right_Thumb_Lower2" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0.00068875, -0.0265831, -0.0022675)
+transform = Transform3D(1, 0, 0, 0, 0.99619496, -0.08715577, 0, 0.08715577, 0.99619496, 0.00068875, -0.0265831, -0.0022675)
 
 [node name="Right_Index_Lower2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2/Right_Hand2" index="5"]
-transform = Transform3D(0.887011, -0.459991, 0.0402441, 0.461749, 0.883635, -0.0773081, 7.45058e-09, 0.0871557, 0.996195, -0.0078125, -0.0440288, 0.0112044)
+transform = Transform3D(0.8870112, -0.45999122, 0.04024405, 0.4617488, 0.8836348, -0.0773081, 7.450583e-09, 0.087155685, 0.99619496, -0.0078125, -0.0440288, 0.0112044)
 
 [node name="Right_Index_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2/Right_Hand2/Right_Index_Lower2" index="3"]
-transform = Transform3D(0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 0, 1, 0, -0.01875, -0.0015625)
+transform = Transform3D(0.9063079, -0.42261836, 0, 0.42261836, 0.9063079, 0, 0, 0, 1, 0, -0.01875, -0.0015625)
 
 [node name="Right_Fingers_Lower2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2/Right_Hand2" index="6"]
-transform = Transform3D(0.923879, -0.381227, 0.0333531, 0.382683, 0.920364, -0.0805214, -3.72529e-09, 0.0871557, 0.996195, -0.0078125, -0.0424662, -0.0106706)
+transform = Transform3D(0.9238789, -0.3812272, 0.033353068, 0.3826832, 0.92036384, -0.08052143, -3.7252879e-09, 0.087155744, 0.99619496, -0.0078125, -0.0424662, -0.0106706)
 
 [node name="Right_Fingers_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Right_Upper_Arm2/Right_Lower_Arm2/Right_Hand2/Right_Fingers_Lower2" index="3"]
-transform = Transform3D(0.887011, -0.461749, 0, 0.461749, 0.887011, 0, 0, 0, 1, 0.0015625, -0.0208131, 0.000511875)
+transform = Transform3D(0.8870111, -0.46174878, 0, 0.46174878, 0.8870111, 0, 0, 0, 1, 0.0015625, -0.0208131, 0.000511875)
 
 [node name="Left_Upper_Arm2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2" index="4"]
-transform = Transform3D(0.608761, 0.509957, -0.607744, -0.793353, 0.391304, -0.466338, 0, 0.766044, 0.642788, -0.078125, 0.175, -0.009375)
+transform = Transform3D(0.60876113, 0.5099572, -0.607744, -0.7933529, 0.391304, -0.46633843, 0, 0.7660439, 0.64278764, -0.078125, 0.175, -0.009375)
 
 [node name="Left_Lower_Arm2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2" index="3"]
-transform = Transform3D(1, 0, 0, 0, -0.573576, -0.819152, 0, 0.819152, -0.573577, -0.00242188, -0.131917, 0.0015625)
+transform = Transform3D(1, 0, 0, 0, -0.5735763, -0.8191522, 0, 0.81915176, -0.57357657, -0.00242188, -0.131917, 0.0015625)
 
 [node name="Left_Hand2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2" index="3"]
-transform = Transform3D(-0.999048, -0.0435779, -0.00190259, -0.0436194, 0.998097, 0.0435779, -6.10016e-08, 0.0436194, -0.999048, 0.003125, -0.1125, 0)
+transform = Transform3D(-0.999048, -0.043577857, -0.0019025895, -0.043619372, 0.99809694, 0.04357786, -6.1001614e-08, 0.043619372, -0.999048, 0.003125, -0.1125, 0)
 
 [node name="Left_Thumb_Lower2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2" index="4"]
-transform = Transform3D(0.984238, 0.157226, 0.0809619, -0.176216, 0.910539, 0.373986, -0.0149187, -0.382358, 0.923894, -0.0015625, -0.0174663, 0.0143294)
+transform = Transform3D(0.9842379, 0.15722574, 0.08096189, -0.1762163, 0.91053903, 0.37398612, -0.014918707, -0.382358, 0.923894, -0.0015625, -0.0174663, 0.0143294)
 
 [node name="Left_Thumb_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2/Left_Thumb_Lower2" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, -0.00068875, -0.0265831, -0.0022675)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.04361938, 0, 0.04361938, 0.999048, -0.00068875, -0.0265831, -0.0022675)
 
 [node name="Left_Index_Lower2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2" index="5"]
-transform = Transform3D(0.965926, 0.257834, -0.0225576, -0.258819, 0.96225, -0.084186, -1.86265e-09, 0.0871557, 0.996195, 0.0078125, -0.0440288, 0.0112044)
+transform = Transform3D(0.96592593, 0.2578341, -0.02255757, -0.2588191, 0.96224993, -0.084186, -1.8626454e-09, 0.087155715, 0.9961949, 0.0078125, -0.0440288, 0.0112044)
 
 [node name="Left_Index_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2/Left_Index_Lower2" index="3"]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0, -0.01875, -0.0015625)
+transform = Transform3D(0.96592593, 0.25881907, 0, -0.25881907, 0.96592593, 0, 0, 0, 1, 0, -0.01875, -0.0015625)
 
 [node name="Left_Fingers_Lower2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2" index="6"]
-transform = Transform3D(0.984808, 0.172987, -0.0151344, -0.173648, 0.98106, -0.0858317, 0, 0.0871557, 0.996195, 0.0078125, -0.0424662, -0.0106706)
+transform = Transform3D(0.984808, 0.17298734, -0.01513444, -0.17364822, 0.98105997, -0.08583167, 0, 0.08715572, 0.9961949, 0.0078125, -0.0424662, -0.0106706)
 
 [node name="Left_Fingers_Upper2" parent="Node/Root Base Model F/Root_Center2/Upper_Body2/Left_Upper_Arm2/Left_Lower_Arm2/Left_Hand2/Left_Fingers_Lower2" index="3"]
-transform = Transform3D(0.92388, 0.382684, 0, -0.382684, 0.92388, 0, 0, 0, 1, -0.0015625, -0.0208131, 0.000511875)
+transform = Transform3D(0.92388004, 0.3826837, 0, -0.3826837, 0.92388004, 0, 0, 0, 1, -0.0015625, -0.0208131, 0.000511875)
 
 [node name="Right_Upper_Leg2" parent="Node/Root Base Model F/Root_Center2/Lower_Body2" index="2"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0.04375, -0.084375, -0.0046875)
+transform = Transform3D(0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, 0, 0, 1, 0.04375, -0.084375, -0.0046875)
 
 [node name="Right_Foot2" parent="Node/Root Base Model F/Root_Center2/Lower_Body2/Right_Upper_Leg2/Right_Lower_Leg2" index="3"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0, -0.184375, 0.00625)
+transform = Transform3D(0.999048, -0.04361938, 0, 0.04361938, 0.999048, 0, 0, 0, 1, 0, -0.184375, 0.00625)
 
 [node name="Left_Upper_Leg2" parent="Node/Root Base Model F/Root_Center2/Lower_Body2" index="3"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, -0.04375, -0.084375, -0.0046875)
+transform = Transform3D(0.999048, -0.04361938, 0, 0.04361938, 0.999048, 0, 0, 0, 1, -0.04375, -0.084375, -0.0046875)
 
 [node name="Left_Foot2" parent="Node/Root Base Model F/Root_Center2/Lower_Body2/Left_Upper_Leg2/Left_Lower_Leg2" index="3"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, -0.184375, 0.00625)
+transform = Transform3D(0.999048, 0.04361938, 0, -0.04361938, 0.999048, 0, 0, 0, 1, 0, -0.184375, 0.00625)
 
 [node name="AnimationPlayer" parent="." index="1"]
-autoplay = "Anim1Loop"
+autoplay = &"Anim1Loop"
+
+[node name="Dialogue" type="Control" parent="." index="2" unique_id=1972439204]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_u50qh")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogue" index="0" unique_id=1379829677]
+layout_mode = 0
+offset_left = -971.0
+offset_top = -1067.0
+offset_right = 1023.0
+offset_bottom = 74.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextboxContainer" type="MarginContainer" parent="Dialogue" index="1" unique_id=1230264198]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -320.0
+offset_right = 955.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="Dialogue/TextboxContainer" index="0" unique_id=1968309139]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_gtaxy")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue/TextboxContainer" index="1" unique_id=1409085670]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="Dialogue/TextboxContainer/MarginContainer" index="0" unique_id=1703035073]
+layout_mode = 2
+
+[node name="SpaceToAdv" type="Label" parent="Dialogue/TextboxContainer/MarginContainer" index="1" unique_id=1235000297]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_5saya")
+theme_override_font_sizes/font_size = 50
+text = "Press SPACE to advance text"
+label_settings = ExtResource("6_ax766")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialogue/TextboxContainer/MarginContainer" index="2" unique_id=1428754014]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="Dialogue/TextboxContainer/MarginContainer/HBoxContainer" index="0" unique_id=468539115]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_5saya")
+theme_override_font_sizes/font_size = 50
+text = "Naomi:"
+label_settings = ExtResource("7_b07bd")
+
+[node name="Label" type="Label" parent="Dialogue/TextboxContainer/MarginContainer/HBoxContainer" index="1" unique_id=1237641554]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_5saya")
+theme_override_font_sizes/font_size = 50
+text = "Everything okay, my love?"
+label_settings = ExtResource("7_b07bd")
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="Dialogue/TextboxContainer/MarginContainer/HBoxContainer" index="2" unique_id=398341209]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_5saya")
+theme_override_font_sizes/font_size = 50
+text = "v"
+label_settings = ExtResource("7_b07bd")
+
+[node name="TweenAnimation" type="AnimationPlayer" parent="Dialogue/TextboxContainer" index="2" unique_id=1048029015]
+libraries/ = SubResource("AnimationLibrary_2wdev")
+speed_scale = 2.5
+
+[node name="CalihanSpeech" type="AudioStreamPlayer" parent="Dialogue" index="2" unique_id=34207301]
+stream = ExtResource("8_v830i")
+
+[node name="NaomiSpeech" type="AudioStreamPlayer" parent="Dialogue" index="3" unique_id=55614390]
+stream = ExtResource("9_m3bfi")
+
+[node name="Timer" type="Timer" parent="Dialogue" index="4" unique_id=1322327623]
+wait_time = 4.0
+
+[connection signal="animation_finished" from="Dialogue/TextboxContainer/TweenAnimation" to="Dialogue" method="_on_animation_finished"]
+[connection signal="timeout" from="Dialogue/Timer" to="Dialogue" method="_on_timer_timeout"]
