@@ -20,33 +20,9 @@ font_color = Color(1, 1, 1, 0.65098)
 
 [sub_resource type="Animation" id="Animation_xauk4"]
 resource_name = "FadeIn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.65098)]
-}
 
 [sub_resource type="Animation" id="Animation_hj2xq"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.65098)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kac2"]
 _data = {
@@ -465,7 +441,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Coalition Collective of Intelligence."
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_srlce")
 visible_characters = 0
 visible_ratio = 0.0
@@ -610,7 +586,7 @@ text = "> Enter <"
 layout_mode = 0
 offset_left = 576.0
 offset_top = 384.0
-offset_right = 1348.0
+offset_right = 1347.9995
 offset_bottom = 501.0
 color = Color(0, 0.109804, 0.211765, 1)
 
@@ -618,7 +594,7 @@ color = Color(0, 0.109804, 0.211765, 1)
 layout_mode = 0
 offset_left = 576.0
 offset_top = 501.0
-offset_right = 1348.0
+offset_right = 1347.999
 offset_bottom = 618.0
 color = Color(0, 0.109804, 0.211765, 1)
 
@@ -626,7 +602,7 @@ color = Color(0, 0.109804, 0.211765, 1)
 layout_mode = 0
 offset_left = 576.0
 offset_top = 618.0
-offset_right = 1348.0
+offset_right = 1347.999
 offset_bottom = 735.0
 color = Color(0, 0.109804, 0.211765, 1)
 
@@ -641,16 +617,8 @@ texture = ExtResource("4_8auyq")
 [node name="CRT Shader" parent="." unique_id=1240629253 instance=ExtResource("8_30hjv")]
 visible = false
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 398.0
 offset_bottom = 139.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
 [node name="CRT" type="ColorRect" parent="." unique_id=1298255951]
 visible = false
