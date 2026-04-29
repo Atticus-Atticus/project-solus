@@ -388,7 +388,7 @@ grow_vertical = 2
 text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 > 
-> Initialising System Core...
+> Initialising Kernal...
 >
 > Checking Quantum Memory...  128TB OK + 32TB Extended
 > Syncing Coalition Atomic Clock... PASSED
