@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://uynypn6huu46"]
+
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_mjkqi"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_mjkqi")
+font_size = 35
+font_color = Color(0.4, 1, 0.9411765, 1)
