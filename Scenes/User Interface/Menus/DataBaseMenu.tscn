@@ -546,7 +546,7 @@ Remember when we used to sit up all night talking? I miss those nights...
 I miss you.
 
 It feels like you've been slowly drifting away and every time I try to reach you, 
-it feels like I'm grabbing at smoke. I'm probably just overacting and that you're 
+it feels like I'm grabbing at smoke. I'm probably just over reacting and that you're 
 probably going through something you don't want to talk about, but knowing you're 
 suffering in slience makes me suffer too. More so because you refuse to talk about it.
 
@@ -670,7 +670,7 @@ Will you be there to see it?
 
 
 Note from Festival organizers:
-We are aware of the recent statement from the GDD about the dangers of a 
+We are aware of the recent statement from the GAA about the dangers of a 
 supernova.
 Please also take into account that the chances of new elements or radiation 
 coming from a supernova are a million to one."
@@ -712,7 +712,7 @@ Light Speed! Right Speed!
 
 
 Established in Sol-209, The Farseeing Courier Company is the oldest and most
-prestigous interstellar delievery service within The Great Solarian Systems.
+prestigous interstellar delivery service within The Great Solarian Systems.
 
 Pioneers of post-FTL logistics, Farseeing Couriers was the first to harness 
 humanity's crowning technological achievement, Faster-Than-Light travel, 
@@ -818,7 +818,7 @@ text = "Calihan Journal Entry 2
 
 
 Woke up earlier to a purple light outside the ship.
-Is that festival everyone was going on about?
+Is that the festival everyone was going on about?
 That's too bright for my liking.
 
 Comms and Navigation are offline. 
@@ -950,7 +950,7 @@ Naomi likes.
 Can't get ahold of system authorities cos comms are still off.
 And now my ship picked up a virus. Great, a dirty docking port.
 
-The virus is a audio file? Might as well give it a listen.
+The virus is an audio file? Might as well give it a listen.
 
 If what this file is saying is true... I...
 Need to get home.
@@ -1227,16 +1227,8 @@ mouse_filter = 2
 [node name="CRT Shader" parent="." unique_id=463006829 instance=ExtResource("23_d1qpe")]
 visible = false
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 396.0
 offset_bottom = 141.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1215288909]
 stream = ExtResource("24_tl14l")

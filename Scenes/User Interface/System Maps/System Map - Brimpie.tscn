@@ -1,6 +1,6 @@
-[gd_scene load_steps=33 format=3 uid="uid://b2oorbwd64fjm"]
+[gd_scene format=3 uid="uid://b2oorbwd64fjm"]
 
-[ext_resource type="Script" path="res://Scripts/system_map_brimpie Script.gd" id="1_fdo4o"]
+[ext_resource type="Script" uid="uid://duowlyejoroew" path="res://Scripts/system_map_brimpie Script.gd" id="1_fdo4o"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_sruyx"]
 [ext_resource type="Texture2D" uid="uid://d3buatuj6dwwv" path="res://Scenes/User Interface/Menus/Brimpie Map.png" id="3_2eo25"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="3_lqydu"]
@@ -11,29 +11,29 @@
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="5_fjepf"]
 [ext_resource type="Texture2D" uid="uid://cpvq15bqaje1d" path="res://Scenes/User Interface/Menus/Station Icon Hover.png" id="6_e3g6g"]
 [ext_resource type="Texture2D" uid="uid://djmjri0uw7w55" path="res://Scenes/User Interface/Menus/Star Icon Hover.png" id="6_uk0j6"]
-[ext_resource type="Script" path="res://Scripts/brimpie_orbital_button_script.gd" id="7_jfod7"]
+[ext_resource type="Script" uid="uid://c5vbx3rxfshj0" path="res://Scripts/brimpie_orbital_button_script.gd" id="7_jfod7"]
 [ext_resource type="Texture2D" uid="uid://c854ctkysutyy" path="res://Scenes/User Interface/Menus/Ship Icon.png" id="7_qlnf2"]
 [ext_resource type="Texture2D" uid="uid://eri5y6wdonwk" path="res://Scenes/User Interface/Menus/Station Icon Disabled.png" id="7_xbjk2"]
 [ext_resource type="Texture2D" uid="uid://cwsqd1i3sdb5o" path="res://Scenes/User Interface/Menus/Ship Icon Selected.png" id="8_lr8rx"]
 [ext_resource type="Texture2D" uid="uid://crhlo4auay1fk" path="res://Scenes/User Interface/Menus/Ship Icon Hover.png" id="9_6ymqc"]
-[ext_resource type="Script" path="res://Scripts/abandoned_ship_button_script.gd" id="11_12eqx"]
+[ext_resource type="Script" uid="uid://vlw3lgh2jpry" path="res://Scripts/abandoned_ship_button_script.gd" id="11_12eqx"]
 [ext_resource type="Texture2D" uid="uid://chau6xauy2qrt" path="res://Scenes/User Interface/Menus/Ship Icon Disabled.png" id="12_gxcka"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="13_h5ch6"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="14_1dl65"]
-[ext_resource type="Script" path="res://Scripts/avalon_system_button_script.gd" id="15_y1tbr"]
-[ext_resource type="Script" path="res://Scripts/system_info_script.gd" id="16_81n38"]
+[ext_resource type="Script" uid="uid://bkvvf6ylkiaic" path="res://Scripts/avalon_system_button_script.gd" id="15_y1tbr"]
+[ext_resource type="Script" uid="uid://ccafgrym8fejv" path="res://Scripts/system_info_script.gd" id="16_81n38"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="17_0k8ih"]
 [ext_resource type="Texture2D" uid="uid://b2cdxrpslet2e" path="res://Scenes/User Interface/Menus/Star Icon Disabled.png" id="17_qtwee"]
-[ext_resource type="Script" path="res://Scripts/lore1_x_button.gd" id="18_3ak0c"]
-[ext_resource type="Script" path="res://Scripts/system_info_2_script.gd" id="21_8bhbe"]
+[ext_resource type="Script" uid="uid://bvg1wln35255g" path="res://Scripts/lore1_x_button.gd" id="18_3ak0c"]
+[ext_resource type="Script" uid="uid://dqqti8g71bbg6" path="res://Scripts/system_info_2_script.gd" id="21_8bhbe"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="21_itf4a"]
 [ext_resource type="LabelSettings" uid="uid://bwcxue14m8ej3" path="res://Scenes/User Interface/Menus/LabelSettings3.tres" id="21_kqeq8"]
-[ext_resource type="Script" path="res://Scripts/yes_button_script.gd" id="25_vaw8v"]
-[ext_resource type="Script" path="res://Scripts/yes_button_script2.gd" id="26_0vqra"]
-[ext_resource type="Script" path="res://Scripts/no_button_script.gd" id="26_84xiu"]
-[ext_resource type="Script" path="res://Scripts/yes_button_script3.gd" id="27_7ammg"]
+[ext_resource type="Script" uid="uid://bxysx5yk0074m" path="res://Scripts/yes_button_script.gd" id="25_vaw8v"]
+[ext_resource type="Script" uid="uid://ds7f7cvor8uas" path="res://Scripts/yes_button_script2.gd" id="26_0vqra"]
+[ext_resource type="Script" uid="uid://cmbwh5xkmy7b0" path="res://Scripts/no_button_script.gd" id="26_84xiu"]
+[ext_resource type="Script" uid="uid://cxpakacmdxkgg" path="res://Scripts/yes_button_script3.gd" id="27_7ammg"]
 
-[node name="SystemScreen" type="Control"]
+[node name="SystemScreen" type="Control" unique_id=1688780151]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,17 +42,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fdo4o")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="."]
+[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1587507275]
 position = Vector2(960.205, 540)
 scale = Vector2(2, 2)
 texture = ExtResource("1_sruyx")
 
-[node name="BrimpieMap" type="Sprite2D" parent="."]
+[node name="BrimpieMap" type="Sprite2D" parent="." unique_id=1500253824]
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
 texture = ExtResource("3_2eo25")
 
-[node name="BrimpieOrbitalButton" type="TextureButton" parent="."]
+[node name="BrimpieOrbitalButton" type="TextureButton" parent="." unique_id=426606770]
 layout_mode = 0
 offset_left = 384.0
 offset_top = 546.0
@@ -68,7 +68,7 @@ texture_disabled = ExtResource("7_xbjk2")
 stretch_mode = 0
 script = ExtResource("7_jfod7")
 
-[node name="AbandonedShipButton" type="TextureButton" parent="."]
+[node name="AbandonedShipButton" type="TextureButton" parent="." unique_id=952794784]
 layout_mode = 0
 offset_left = 1305.0
 offset_top = 128.0
@@ -83,7 +83,7 @@ texture_disabled = ExtResource("12_gxcka")
 stretch_mode = 0
 script = ExtResource("11_12eqx")
 
-[node name="AvalonSystemButton" type="TextureButton" parent="."]
+[node name="AvalonSystemButton" type="TextureButton" parent="." unique_id=923215972]
 layout_mode = 0
 offset_left = 894.0
 offset_top = 18.0
@@ -99,7 +99,7 @@ texture_disabled = ExtResource("17_qtwee")
 stretch_mode = 0
 script = ExtResource("15_y1tbr")
 
-[node name="Brimpie1" type="Label" parent="."]
+[node name="Brimpie1" type="Label" parent="." unique_id=1063327940]
 layout_mode = 0
 offset_left = 1075.0
 offset_top = 432.0
@@ -108,7 +108,7 @@ offset_bottom = 460.0
 text = "Brimpie - 1"
 label_settings = ExtResource("13_h5ch6")
 
-[node name="Brimpie2" type="Label" parent="."]
+[node name="Brimpie2" type="Label" parent="." unique_id=1012586546]
 layout_mode = 0
 offset_left = 413.0
 offset_top = 774.0
@@ -117,7 +117,7 @@ offset_bottom = 802.0
 text = "Brimpie - 2"
 label_settings = ExtResource("13_h5ch6")
 
-[node name="Brimpie3" type="Label" parent="."]
+[node name="Brimpie3" type="Label" parent="." unique_id=806205071]
 layout_mode = 0
 offset_left = 930.0
 offset_top = 904.0
@@ -126,7 +126,7 @@ offset_bottom = 932.0
 text = "Brimpie - 3"
 label_settings = ExtResource("14_1dl65")
 
-[node name="Brimpie4" type="Label" parent="."]
+[node name="Brimpie4" type="Label" parent="." unique_id=407987942]
 layout_mode = 0
 offset_left = 192.0
 offset_top = 279.0
@@ -135,7 +135,7 @@ offset_bottom = 307.0
 text = "Brimpie - 4"
 label_settings = ExtResource("13_h5ch6")
 
-[node name="NoLanding1" type="Label" parent="."]
+[node name="NoLanding1" type="Label" parent="." unique_id=1924817704]
 layout_mode = 0
 offset_left = 192.0
 offset_top = 303.0
@@ -146,7 +146,7 @@ High radition levels detected.
 Landing unavailable."
 label_settings = ExtResource("21_kqeq8")
 
-[node name="NoLanding2" type="Label" parent="."]
+[node name="NoLanding2" type="Label" parent="." unique_id=31280308]
 layout_mode = 0
 offset_left = 414.0
 offset_top = 795.0
@@ -157,7 +157,7 @@ High radition levels detected.
 Landing unavailable."
 label_settings = ExtResource("21_kqeq8")
 
-[node name="NoLanding3" type="Label" parent="."]
+[node name="NoLanding3" type="Label" parent="." unique_id=1867655307]
 layout_mode = 0
 offset_left = 1074.0
 offset_top = 451.0
@@ -168,7 +168,7 @@ High radition levels detected.
 Landing unavailable."
 label_settings = ExtResource("21_kqeq8")
 
-[node name="NoLanding4" type="Label" parent="."]
+[node name="NoLanding4" type="Label" parent="." unique_id=656540766]
 layout_mode = 0
 offset_left = 931.0
 offset_top = 934.0
@@ -179,7 +179,7 @@ High radition levels detected.
 Landing unavailable."
 label_settings = ExtResource("21_kqeq8")
 
-[node name="AbandonedShip" type="Label" parent="."]
+[node name="AbandonedShip" type="Label" parent="." unique_id=419711571]
 layout_mode = 0
 offset_left = 1241.0
 offset_top = 300.0
@@ -188,7 +188,7 @@ offset_bottom = 328.0
 text = "Abandoned Ship"
 label_settings = ExtResource("14_1dl65")
 
-[node name="BrimpieOrbital" type="Label" parent="."]
+[node name="BrimpieOrbital" type="Label" parent="." unique_id=327194095]
 layout_mode = 0
 offset_left = 249.0
 offset_top = 649.0
@@ -198,7 +198,7 @@ text = "Brimpie Orbital
 "
 label_settings = ExtResource("13_h5ch6")
 
-[node name="ToAvalon" type="Label" parent="."]
+[node name="ToAvalon" type="Label" parent="." unique_id=270303778]
 layout_mode = 0
 offset_left = 826.0
 offset_top = 143.0
@@ -210,7 +210,7 @@ Travel time: 14 cycles
 "
 label_settings = ExtResource("13_h5ch6")
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1814176512]
 layout_mode = 0
 offset_left = 136.0
 offset_top = 44.0
@@ -220,7 +220,7 @@ text = "Current System:
 The Brimpie System"
 label_settings = ExtResource("14_1dl65")
 
-[node name="Title2" type="Label" parent="."]
+[node name="Title2" type="Label" parent="." unique_id=303690282]
 layout_mode = 0
 offset_left = 192.0
 offset_top = 936.0
@@ -229,7 +229,7 @@ offset_bottom = 964.0
 text = "Destination:"
 label_settings = ExtResource("14_1dl65")
 
-[node name="Destination" type="Label" parent="."]
+[node name="Destination" type="Label" parent="." unique_id=1907650211]
 layout_mode = 0
 offset_left = 438.0
 offset_top = 938.0
@@ -239,7 +239,7 @@ text = "None
 "
 label_settings = ExtResource("14_1dl65")
 
-[node name="SystemInfo" type="Button" parent="."]
+[node name="SystemInfo" type="Button" parent="." unique_id=1714931823]
 layout_mode = 0
 offset_left = 101.0
 offset_top = 132.0
@@ -249,7 +249,7 @@ theme = ExtResource("17_0k8ih")
 text = "  More Info  "
 script = ExtResource("16_81n38")
 
-[node name="SystemInfoPage" type="Panel" parent="SystemInfo"]
+[node name="SystemInfoPage" type="Panel" parent="SystemInfo" unique_id=704904297]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -261,7 +261,7 @@ offset_right = -273.18
 offset_bottom = -46.7773
 theme = ExtResource("17_0k8ih")
 
-[node name="X Button" type="Button" parent="SystemInfo/SystemInfoPage"]
+[node name="X Button" type="Button" parent="SystemInfo/SystemInfoPage" unique_id=1831888946]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -273,7 +273,7 @@ theme = ExtResource("17_0k8ih")
 text = "X"
 script = ExtResource("18_3ak0c")
 
-[node name="Label" type="Label" parent="SystemInfo/SystemInfoPage"]
+[node name="Label" type="Label" parent="SystemInfo/SystemInfoPage" unique_id=527234693]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -311,7 +311,7 @@ Brimpie - 5. Metal Rich Planet
     Note: Planet destroyed due to mining accident. Travel is prohibited."
 label_settings = ExtResource("13_h5ch6")
 
-[node name="Are You Sure? Ava" type="Panel" parent="."]
+[node name="Are You Sure? Ava" type="Panel" parent="." unique_id=2069118127]
 visible = false
 layout_mode = 0
 offset_left = 667.0
@@ -320,7 +320,7 @@ offset_right = 1255.0
 offset_bottom = 597.0
 theme = ExtResource("17_0k8ih")
 
-[node name="Label" type="Label" parent="Are You Sure? Ava"]
+[node name="Label" type="Label" parent="Are You Sure? Ava" unique_id=1191884302]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -339,7 +339,7 @@ label_settings = ExtResource("14_1dl65")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Yes Button" type="Button" parent="Are You Sure? Ava"]
+[node name="Yes Button" type="Button" parent="Are You Sure? Ava" unique_id=635920828]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 164.0
@@ -348,7 +348,7 @@ offset_bottom = 204.0
 text = "  Yes  "
 script = ExtResource("25_vaw8v")
 
-[node name="No Button" type="Button" parent="Are You Sure? Ava"]
+[node name="No Button" type="Button" parent="Are You Sure? Ava" unique_id=1754136262]
 layout_mode = 0
 offset_left = 360.0
 offset_top = 164.0
@@ -357,7 +357,7 @@ offset_bottom = 204.0
 text = "  No  "
 script = ExtResource("26_84xiu")
 
-[node name="Are You Sure? ABSHIP" type="Panel" parent="."]
+[node name="Are You Sure? ABSHIP" type="Panel" parent="." unique_id=2102008909]
 visible = false
 layout_mode = 0
 offset_left = 667.0
@@ -366,7 +366,7 @@ offset_right = 1255.0
 offset_bottom = 597.0
 theme = ExtResource("17_0k8ih")
 
-[node name="Label" type="Label" parent="Are You Sure? ABSHIP"]
+[node name="Label" type="Label" parent="Are You Sure? ABSHIP" unique_id=1416017632]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -385,7 +385,7 @@ label_settings = ExtResource("14_1dl65")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Yes Button" type="Button" parent="Are You Sure? ABSHIP"]
+[node name="Yes Button" type="Button" parent="Are You Sure? ABSHIP" unique_id=221779553]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 164.0
@@ -394,7 +394,7 @@ offset_bottom = 204.0
 text = "  Yes  "
 script = ExtResource("26_0vqra")
 
-[node name="No Button" type="Button" parent="Are You Sure? ABSHIP"]
+[node name="No Button" type="Button" parent="Are You Sure? ABSHIP" unique_id=1789617351]
 layout_mode = 0
 offset_left = 360.0
 offset_top = 164.0
@@ -403,7 +403,7 @@ offset_bottom = 204.0
 text = "  No  "
 script = ExtResource("26_84xiu")
 
-[node name="Are You Sure? BRIM" type="Panel" parent="."]
+[node name="Are You Sure? BRIM" type="Panel" parent="." unique_id=270420933]
 visible = false
 layout_mode = 0
 offset_left = 667.0
@@ -412,7 +412,7 @@ offset_right = 1255.0
 offset_bottom = 597.0
 theme = ExtResource("17_0k8ih")
 
-[node name="Label" type="Label" parent="Are You Sure? BRIM"]
+[node name="Label" type="Label" parent="Are You Sure? BRIM" unique_id=1346780404]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -431,7 +431,7 @@ label_settings = ExtResource("14_1dl65")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Yes Button" type="Button" parent="Are You Sure? BRIM"]
+[node name="Yes Button" type="Button" parent="Are You Sure? BRIM" unique_id=550258273]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 164.0
@@ -440,7 +440,7 @@ offset_bottom = 204.0
 text = "  Yes  "
 script = ExtResource("27_7ammg")
 
-[node name="No Button" type="Button" parent="Are You Sure? BRIM"]
+[node name="No Button" type="Button" parent="Are You Sure? BRIM" unique_id=657545932]
 layout_mode = 0
 offset_left = 360.0
 offset_top = 164.0
@@ -449,7 +449,7 @@ offset_bottom = 204.0
 text = "  No  "
 script = ExtResource("26_84xiu")
 
-[node name="SystemInfo2" type="Button" parent="."]
+[node name="SystemInfo2" type="Button" parent="." unique_id=1069881047]
 layout_mode = 0
 offset_left = 1509.0
 offset_top = 59.0
@@ -459,24 +459,17 @@ theme = ExtResource("17_0k8ih")
 text = "  Close Console  "
 script = ExtResource("21_8bhbe")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="."]
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=781204572]
 position = Vector2(60, 1367)
 texture = ExtResource("3_lqydu")
 
-[node name="CRT Shader" parent="." instance=ExtResource("5_fjepf")]
+[node name="CRT Shader" parent="." unique_id=787176986 instance=ExtResource("5_fjepf")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
+layout_mode = 0
 offset_right = 396.0
 offset_bottom = 141.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1891994012]
 stream = ExtResource("21_itf4a")
 volume_db = -2.0
 autoplay = true
