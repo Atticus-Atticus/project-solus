@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Humanity took its place among the stars. But under the lazy rule of the Terran Parliament, became fractured and weak. And humamity suffered suffered for it.")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Humanity took its place among the stars. But under the lazy rule of the Terran Parliament, became fractured and weak. And humamity suffered for it.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 3:
