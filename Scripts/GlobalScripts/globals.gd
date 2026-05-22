@@ -16,9 +16,12 @@ var lore10 = 0
 #Keeping track of which collectibles the player has found.
 
 var InputType = 2
-#1 used for tank controls (default)
-#2 used for mouse directional
-#3 used for camera relative movement
+# 1 follow camera
+# 2 WASD camera
+
+#1 used for tank controls (default) (OLD)
+#2 used for mouse directional (OLD)
+#3 used for camera relative movement (OLD)
 
 var PlayerControls = true
 #disable or enable player controls

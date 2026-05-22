@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://ckxltsn4sln2f"]
+
+[ext_resource type="LabelSettings" uid="uid://uynypn6huu46" path="res://Scenes/User Interface/1_year_vid_label.tres" id="1_coydh"]
+
+[sub_resource type="Environment" id="Environment_coydh"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
+
+[node name="Control" type="Control" unique_id=1244752031]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=403925210]
+layout_mode = 0
+offset_right = 1650.0
+offset_bottom = 687.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text4" type="Label" parent="." unique_id=1711841645]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -2.0
+offset_right = 2052.0
+offset_bottom = -377.0
+grow_vertical = 2
+text = "    ____                  _              __                 
+   / __ \\ _____ ____     (_)___   _____ / /_  
+  / /_/ // ___// __ \\   / // _ \\ / ___// __/   
+ / ____// /   / /_/ /  / //  __// /__ / /_    
+/_/    /_/    \\____/__/ / \\___/ \\___/ \\__/
+                   /___/                                                    "
+label_settings = ExtResource("1_coydh")
+autowrap_mode = 2
+
+[node name="Text5" type="Label" parent="." unique_id=249686954]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 179.0
+offset_right = 1911.0
+offset_bottom = -196.0
+grow_vertical = 2
+text = "   _____         __    
+  / ___/ ____   / /__  __ _____
+  \\__ \\ / __ \\ / // / / // ___/
+ ___/ // /_/ // // /_/ /(__  ) 
+/____/ \\____//_/ \\__,_//____/                                                
+
+
+
+
+"
+label_settings = ExtResource("1_coydh")
+autowrap_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1165354143]
+environment = SubResource("Environment_coydh")

@@ -4,6 +4,10 @@
 
 [resource]
 line_spacing = 0.0
+paragraph_spacing = 0.82
 font = ExtResource("1_mjkqi")
-font_size = 35
+font_size = 42
 font_color = Color(0.4, 1, 0.9411765, 1)
+outline_color = Color(0, 0.10980392, 0.21176471, 0.78431374)
+shadow_size = 13
+shadow_color = Color(0, 0.10980392, 0.21176471, 0.78431374)

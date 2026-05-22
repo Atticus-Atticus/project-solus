@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3an4wo8tws83"]
+[gd_scene format=3 uid="uid://d3an4wo8tws83"]
 
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_50isw"]
-[ext_resource type="Script" path="res://Scripts/change_input_type.gd" id="1_qyb0b"]
+[ext_resource type="Script" uid="uid://b6q62td6mwllt" path="res://Scripts/change_input_type.gd" id="1_qyb0b"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="2_k7o2i"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="4_6vf77"]
 
-[node name="ChangeInputNode" type="Control"]
+[node name="ChangeInputNode" type="Control" unique_id=144221633]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,13 +16,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qyb0b")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1187159652]
 layout_mode = 0
 offset_right = 768.0
 offset_bottom = 312.0
 theme = ExtResource("1_50isw")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=260486089]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -32,12 +32,12 @@ offset_top = 23.0
 offset_right = 234.5
 offset_bottom = 71.0
 grow_horizontal = 2
-text = "Change Control Type"
+text = "Change Camera Control"
 label_settings = ExtResource("2_k7o2i")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="Panel" unique_id=1671737305]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -55,7 +55,7 @@ label_settings = ExtResource("2_k7o2i")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="Panel"]
+[node name="Label3" type="Label" parent="Panel" unique_id=230955685]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,56 +73,39 @@ label_settings = ExtResource("2_k7o2i")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tank Ctrl" type="Button" parent="Panel"]
+[node name="Tank Ctrl" type="Button" parent="Panel" unique_id=1458089507]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
+offset_left = 64.0
 offset_top = -104.0
-offset_right = 256.0
+offset_right = 304.0
 offset_bottom = -48.0
 grow_vertical = 0
 text = ">   Tank   <
 > Controls <"
 
-[node name="Mouse Ctrl" type="Button" parent="Panel"]
+[node name="Camera Ctrl" type="Button" parent="Panel" unique_id=1015411786]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -504.0
+offset_left = -304.0
 offset_top = -104.0
-offset_right = -264.0
-offset_bottom = -48.0
-grow_horizontal = 0
-grow_vertical = 0
-text = ">   Mouse  <
-> Controls <"
-
-[node name="Camera Ctrl" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -104.0
-offset_right = -16.0
+offset_right = -64.0
 offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
 text = ">  Camera  <
 > Relative <"
 
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="."]
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1068199663]
 stream = ExtResource("4_6vf77")
 volume_db = -2.0
 autoplay = true
 
 [connection signal="pressed" from="Panel/Tank Ctrl" to="." method="_on_tank_ctrl_pressed"]
-[connection signal="pressed" from="Panel/Mouse Ctrl" to="." method="_on_mouse_ctrl_pressed"]
 [connection signal="pressed" from="Panel/Camera Ctrl" to="." method="_on_camera_ctrl_pressed"]

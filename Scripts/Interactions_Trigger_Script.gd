@@ -15,5 +15,5 @@ func _exit_trigger(body: Node3D) -> void:
 	area.set_deferred("monitoring", false)
 	print("player has left trigger")
 
-func _process(delta: float) -> void:
-	print(area.monitoring)
+#func _process(delta: float) -> void:
+	#print(area.monitoring)

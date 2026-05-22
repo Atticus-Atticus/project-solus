@@ -47,3 +47,5 @@ func _process(delta: float) -> void:
 		cam.fov = clamp(cam.fov + 10.0, 30.0, 110.0)
 	if Input.is_action_just_pressed("CameraZoomOut"):
 		cam.fov = clamp(cam.fov - 10.0, 30.0, 110.0)
+	if Input.is_action_just_pressed("Debug"):
+		print(cam.fov)

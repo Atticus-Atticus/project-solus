@@ -72,6 +72,7 @@
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="70_qfmyx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="71_rq3pp"]
 [ext_resource type="Script" uid="uid://g7qv84wr1k2i" path="res://Scripts/FPSCounterScript.gd" id="72_7qrwl"]
+[ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="73_6xaq1"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vx47i"]
 data = PackedVector3Array(0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.1852, -0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0.1852, -0.5, 0.5, 0.1852, -0.5, -0.5, 0.1852, 0.5, -0.5, 0.1852, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0.1852, 0.5, -0.5, 0.1852, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.1852, 0.5, -0.5, 0, 0.5, 0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0.1852, -0.5, -0.5, 0.1852, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, -0.5, 2.5, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5, 0.5, 2.5, 0.5, -0.5, 2.5, 0.5, 0.5, 2.3148, 0.5, 0.5, 2.3148, 0.5, -0.5, 2.5, 0.5, -0.5, 2.3148, 0.5, 0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.5, -0.5, -0.5, 2.5, -0.5, 0.5, 2.3148, -0.5, -0.5, 2.3148, -0.5)
@@ -10587,6 +10588,11 @@ offset_bottom = 157.0
 text = "60"
 label_settings = ExtResource("71_rq3pp")
 script = ExtResource("72_7qrwl")
+
+[node name="Decal6" type="Decal" parent="." unique_id=1841936237]
+transform = Transform3D(-0.50000006, 7.450581e-09, 4.656613e-08, -4.916257e-08, -0.07236805, -0.4947352, 1.4901161e-08, -0.4947352, 0.07236804, 8.848169, 3.2867682, 6.4754725)
+size = Vector3(2, 2.7471924, 2)
+texture_albedo = ExtResource("73_6xaq1")
 
 [connection signal="body_entered" from="RunnerTrigger" to="RunnerTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="MutatedNaomi/Area3D" to="MutatedNaomi/Area3D" method="_on_body_entered"]

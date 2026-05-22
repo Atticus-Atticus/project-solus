@@ -85,6 +85,7 @@
 [ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="82_tvdd6"]
 [ext_resource type="PackedScene" uid="uid://co5iny00t6wux" path="res://Scenes/Objects/PointClickTriggerBox.tscn" id="82_ydjyw"]
 [ext_resource type="PackedScene" uid="uid://b57de0baiqcl6" path="res://Scenes/User Interface/Dialogue/BedSideDialogueBox.tscn" id="83_tvdd6"]
+[ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="86_5mll0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
 shader = ExtResource("68_rxu0r")
@@ -3454,6 +3455,11 @@ trigger = NodePath("PointClickTriggerbox")
 [node name="PointClickTriggerbox" parent="LockedDoorInteractableNode2" unique_id=959645803 instance=ExtResource("82_ydjyw")]
 transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, -0.85206103, -1.2003756, -0.030407786)
 visible = false
+
+[node name="Decal" type="Decal" parent="." unique_id=1543478040]
+transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -0.07236803, -0.49473515, 0.5, 3.3897933e-09, -4.6414392e-08, 14.278931, 1.158936, -1.2750916)
+size = Vector3(2, 2.7471924, 2)
+texture_albedo = ExtResource("86_5mll0")
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
