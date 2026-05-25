@@ -84,7 +84,9 @@
 [ext_resource type="PackedScene" uid="uid://cy4hbthjtjwky" path="res://Scenes/User Interface/Dialogue/LockedDoorDialogueBox.tscn" id="82_ouqyo"]
 [ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="82_tvdd6"]
 [ext_resource type="PackedScene" uid="uid://co5iny00t6wux" path="res://Scenes/Objects/PointClickTriggerBox.tscn" id="82_ydjyw"]
+[ext_resource type="PackedScene" uid="uid://d3gwceklmsuyg" path="res://Scenes/Objects/MessHallInteractableObject.tscn" id="83_q3orp"]
 [ext_resource type="PackedScene" uid="uid://b57de0baiqcl6" path="res://Scenes/User Interface/Dialogue/BedSideDialogueBox.tscn" id="83_tvdd6"]
+[ext_resource type="PackedScene" uid="uid://c6rhm4n6w0v2p" path="res://Scenes/Objects/CaliAirLockInteractableObject.tscn" id="84_d0rsu"]
 [ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="86_5mll0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
@@ -2071,7 +2073,7 @@ mesh = ExtResource("5_bjwp5")
 skeleton = NodePath("../..")
 
 [node name="PlayerSupplies" parent="NavigationRegion3D/Level" unique_id=1453260835 instance=ExtResource("9_8xua8")]
-transform = Transform3D(1.41055, 0, 0, 0, 1.58051, 0, 0, 0, 1, 11.9079, 0.347256, -1.90156)
+transform = Transform3D(1.41055, 0, 0, 0, 1.58051, 0, 0, 0, 1, 11.9079, 0.34725595, -1.9015598)
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=593361347]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 8)
@@ -3384,6 +3386,66 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0
 [node name="OverheadLight8" parent="Lights" unique_id=1429466763 instance=ExtResource("76_ubtfw")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, -25)
 
+[node name="Interactables" type="Node3D" parent="." unique_id=1105234823]
+
+[node name="LockedDoorInteractableNode" parent="Interactables" unique_id=175060331 node_paths=PackedStringArray("trigger") instance=ExtResource("15_hye6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.996697, 1.2926677, -14)
+text_scene = ExtResource("82_ouqyo")
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode" unique_id=1015541827 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 2.7170775, -0.30480957, -1.6154139, 0.041360855)
+visible = false
+
+[node name="LockedDoorInteractableNode2" parent="Interactables" unique_id=639690576 node_paths=PackedStringArray("trigger") instance=ExtResource("15_hye6e")]
+transform = Transform3D(0.4101777, 0, -0.9120056, 0, 1, 0, 0.9120056, 0, 0.4101777, -0.0418061, 0.17273903, 3.5766072)
+text_scene = ExtResource("83_tvdd6")
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode2" unique_id=959645803 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, -0.85206103, -1.2003756, -0.030407786)
+visible = false
+
+[node name="DoorNewNode" parent="Interactables" unique_id=1806845348 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4, -2, -2)
+
+[node name="Door Interactable" parent="Interactables/DoorNewNode" unique_id=207222191 instance=ExtResource("81_ydjyw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
+
+[node name="DoorNewNode2" parent="Interactables" unique_id=675628987 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 10, -2, -2)
+
+[node name="Door Interactable" parent="Interactables/DoorNewNode2" unique_id=78289826 instance=ExtResource("81_ydjyw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
+
+[node name="DoorNewNode3" parent="Interactables" unique_id=1492655091 instance=ExtResource("80_884ru")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 14, -2, -14)
+
+[node name="Door Interactable" parent="Interactables/DoorNewNode3" unique_id=545261893 instance=ExtResource("81_ydjyw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
+
+[node name="DoorNewNode4" parent="Interactables" unique_id=1923814741 instance=ExtResource("80_884ru")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, -2, -22)
+
+[node name="Door Interactable" parent="Interactables/DoorNewNode4" unique_id=1274383116 instance=ExtResource("81_ydjyw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
+
+[node name="MessHallInteractableNode" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("83_q3orp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.813014, 0.28564548, -5.130816)
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/MessHallInteractableNode" unique_id=1727176671 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.014389992, -1.2003756, -0.57864046)
+visible = false
+
+[node name="CaliAirLockInteractableNode" parent="Interactables" unique_id=307779935 node_paths=PackedStringArray("trigger") instance=ExtResource("84_d0rsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.470846, 0.6355845, -13.755806)
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/CaliAirLockInteractableNode" unique_id=2089706211 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.18013382, -1.2003756, -0.29987907)
+visible = false
+
 [node name="Lamp C" parent="." unique_id=2083170397 instance=ExtResource("79_vap76")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.483881, 0.0980523, 3.51547)
 
@@ -3394,30 +3456,6 @@ light_energy = 0.5
 
 [node name="DoorNode5" parent="." unique_id=814900261 instance=ExtResource("81_umbca")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, -1.6494346, -14)
-
-[node name="DoorNewNode" parent="." unique_id=1806845348 instance=ExtResource("80_884ru")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 4, -2, -2)
-
-[node name="Door Interactable" parent="DoorNewNode" unique_id=207222191 instance=ExtResource("81_ydjyw")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNewNode2" parent="." unique_id=675628987 instance=ExtResource("80_884ru")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 10, -2, -2)
-
-[node name="Door Interactable" parent="DoorNewNode2" unique_id=78289826 instance=ExtResource("81_ydjyw")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNewNode3" parent="." unique_id=1492655091 instance=ExtResource("80_884ru")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 14, -2, -14)
-
-[node name="Door Interactable" parent="DoorNewNode3" unique_id=545261893 instance=ExtResource("81_ydjyw")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNewNode4" parent="." unique_id=1923814741 instance=ExtResource("80_884ru")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, -2, -22)
-
-[node name="Door Interactable" parent="DoorNewNode4" unique_id=1274383116 instance=ExtResource("81_ydjyw")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1530557117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72657967, 0.24383998, -1)
@@ -3437,24 +3475,6 @@ mesh = SubResource("BoxMesh_q3orp")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=2050428504]
 debug_enabled = true
-
-[node name="LockedDoorInteractableNode" parent="." unique_id=175060331 node_paths=PackedStringArray("trigger") instance=ExtResource("15_hye6e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.996697, 1.2926677, -14)
-text_scene = ExtResource("82_ouqyo")
-trigger = NodePath("PointClickTriggerbox")
-
-[node name="PointClickTriggerbox" parent="LockedDoorInteractableNode" unique_id=1015541827 instance=ExtResource("82_ydjyw")]
-transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 2.7170775, -0.30480957, -1.6154139, 0.041360855)
-visible = false
-
-[node name="LockedDoorInteractableNode2" parent="." unique_id=639690576 node_paths=PackedStringArray("trigger") instance=ExtResource("15_hye6e")]
-transform = Transform3D(0.4101777, 0, -0.9120056, 0, 1, 0, 0.9120056, 0, 0.4101777, -0.0418061, 0.17273903, 3.5766072)
-text_scene = ExtResource("83_tvdd6")
-trigger = NodePath("PointClickTriggerbox")
-
-[node name="PointClickTriggerbox" parent="LockedDoorInteractableNode2" unique_id=959645803 instance=ExtResource("82_ydjyw")]
-transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, -0.85206103, -1.2003756, -0.030407786)
-visible = false
 
 [node name="Decal" type="Decal" parent="." unique_id=1543478040]
 transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -0.07236803, -0.49473515, 0.5, 3.3897933e-09, -4.6414392e-08, 14.278931, 1.158936, -1.2750916)

@@ -77,6 +77,7 @@
 [ext_resource type="PackedScene" uid="uid://j7agfwvhdu8e" path="res://Scenes/Objects/model_ship.tscn" id="73_ics5a"]
 [ext_resource type="Texture2D" uid="uid://bqwqicmpmh8gh" path="res://Images/DreamFlash1.png" id="74_jx41q"]
 [ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="78_0p1kn"]
+[ext_resource type="PackedScene" uid="uid://buehq2t0ri4h4" path="res://Scenes/Objects/Jacklyn.tscn" id="79_2iu2x"]
 [ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="79_nk55g"]
 
 [sub_resource type="Animation" id="Animation_c2lml"]
@@ -5686,6 +5687,9 @@ mesh = SubResource("BoxMesh_5j3nq")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=1662916365]
 debug_enabled = true
+
+[node name="Jacklyn" parent="." unique_id=1126204711 instance=ExtResource("79_2iu2x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.29066128, 0)
 
 [connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="FlyOver" to="." method="_on_fly_over_finished"]

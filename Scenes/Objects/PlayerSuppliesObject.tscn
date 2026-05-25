@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b03dx4b6rocx8"]
+[gd_scene format=3 uid="uid://b03dx4b6rocx8"]
 
-[ext_resource type="Script" path="res://Scripts/SupplyCountScript.gd" id="1_7d2i6"]
-[ext_resource type="Script" path="res://Scripts/Objective5Script.gd" id="1_h8ltv"]
+[ext_resource type="Script" uid="uid://cjrwosaf401tq" path="res://Scripts/SupplyCountScript.gd" id="1_7d2i6"]
+[ext_resource type="Script" uid="uid://chhugvk8j8o2h" path="res://Scripts/Objective5Script.gd" id="1_h8ltv"]
 [ext_resource type="Texture2D" uid="uid://58edxgcdybpp" path="res://Models/Clutter/Table01.png" id="2_cq6ud"]
 [ext_resource type="ArrayMesh" uid="uid://ca1l0xdq3opt" path="res://Models/Clutter/MassHallTable.obj" id="3_3d5yd"]
 [ext_resource type="ArrayMesh" uid="uid://cb8aaol02h6r8" path="res://Models/Clutter/RuinedRationBox.obj" id="4_8ov22"]
@@ -60,128 +60,126 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u6ada"]
 _data = {
-"Objective": SubResource("Animation_xsxt8"),
-"ObjectiveFlash": SubResource("Animation_ufi1c"),
-"RESET": SubResource("Animation_oeoou")
+&"Objective": SubResource("Animation_xsxt8"),
+&"ObjectiveFlash": SubResource("Animation_ufi1c"),
+&"RESET": SubResource("Animation_oeoou")
 }
 
-[node name="PlayerSupplies" type="Node3D"]
+[node name="PlayerSupplies" type="Node3D" unique_id=888631403]
 script = ExtResource("1_h8ltv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1750147934]
 script = ExtResource("1_7d2i6")
 
-[node name="Base" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="Base" type="CollisionShape3D" parent="StaticBody3D" unique_id=1400909061]
 transform = Transform3D(2, 0, -9.16257e-09, 0, 1.407, 0, 1.57568e-08, 0, 1.163, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qjmkm")
 
-[node name="MassHallTable" type="MeshInstance3D" parent="StaticBody3D/Base"]
+[node name="MassHallTable" type="MeshInstance3D" parent="StaticBody3D/Base" unique_id=1444050991]
 transform = Transform3D(1, 0, -8.88179e-16, 0, 1, 0, 8.88178e-16, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_opql8")
 mesh = ExtResource("3_3d5yd")
 skeleton = NodePath("../../..")
 
-[node name="SuppliesEmtpy" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="SuppliesEmtpy" type="CollisionShape3D" parent="StaticBody3D" unique_id=216637767]
 visible = false
 shape = SubResource("SphereShape3D_vwxgy")
 
-[node name="RuinedRationBox" type="MeshInstance3D" parent="StaticBody3D/SuppliesEmtpy"]
+[node name="RuinedRationBox" type="MeshInstance3D" parent="StaticBody3D/SuppliesEmtpy" unique_id=1179939221]
 transform = Transform3D(-1.11285, 0, -2.05813, 0, 1.965, 0, 1.66179, 0, -1.37827, -0.472932, 0.883464, -0.0905794)
 mesh = ExtResource("4_8ov22")
 skeleton = NodePath("../../Base")
 
-[node name="RationCan" type="MeshInstance3D" parent="StaticBody3D/SuppliesEmtpy"]
+[node name="RationCan" type="MeshInstance3D" parent="StaticBody3D/SuppliesEmtpy" unique_id=609047271]
 transform = Transform3D(0.711095, 1.86932, 8.17104e-08, 0, -8.74228e-08, 2, 1.86932, -0.711095, -3.10829e-08, 0.180912, 0.928333, 0.229478)
 mesh = ExtResource("5_mge8n")
 skeleton = NodePath("../..")
 
-[node name="SuppliesLow" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="SuppliesLow" type="CollisionShape3D" parent="StaticBody3D" unique_id=1839801907]
 transform = Transform3D(0.964044, 0, -0.265741, 0, 1, 0, 0.265741, 0, 0.964044, -0.597739, 0, 0)
 visible = false
 shape = SubResource("SphereShape3D_88glj")
 
-[node name="RuinedRationBox2" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow"]
+[node name="RuinedRationBox2" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow" unique_id=166793950]
 transform = Transform3D(-1.90609, 0, 0.750124, 0, 1.965, 0, -0.605672, 0, -2.36069, 1.05998, 0.883464, -0.386144)
 mesh = ExtResource("4_8ov22")
 skeleton = NodePath("../../Base")
 
-[node name="RationCan2" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow"]
+[node name="RationCan2" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow" unique_id=208672595]
 transform = Transform3D(1.18228, 1.61314, 7.05125e-08, 0, -8.74228e-08, 2, 1.61314, -1.18228, -5.16792e-08, 0.557118, 0.940906, 0.292981)
 mesh = ExtResource("5_mge8n")
 skeleton = NodePath("../..")
 
-[node name="RationCan3" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow"]
+[node name="RationCan3" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow" unique_id=1753932537]
 transform = Transform3D(2, 0, 2.98023e-07, 0, 2, 0, -2.98023e-07, 0, 2, 0.846322, 0.874499, 0.0554855)
 mesh = ExtResource("5_mge8n")
 skeleton = NodePath("../..")
 
-[node name="RationCansFour" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow"]
+[node name="RationCansFour" type="MeshInstance3D" parent="StaticBody3D/SuppliesLow" unique_id=365129149]
 transform = Transform3D(1.93378, 0, -0.510386, 0, 2, 0, 0.510386, 0, 1.93378, 0.199907, 0.888496, -0.0403539)
 mesh = ExtResource("6_ycnnh")
 skeleton = NodePath("../..")
 
-[node name="SuppliesMid" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="SuppliesMid" type="CollisionShape3D" parent="StaticBody3D" unique_id=806860632]
 transform = Transform3D(0.96555, 0, 0.260218, 0, 1, 0, -0.260218, 0, 0.96555, 0.577281, 0, 0.342135)
 visible = false
 shape = SubResource("BoxShape3D_mhf4i")
 
-[node name="RationCansFour2" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid"]
+[node name="RationCansFour2" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid" unique_id=673591488]
 transform = Transform3D(1.99623, 0, -0.122794, 0, 2, 0, 0.122794, 0, 1.99623, -0.418572, 0.888496, -0.45242)
 mesh = ExtResource("6_ycnnh")
 skeleton = NodePath("../..")
 
-[node name="RationBox" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid"]
+[node name="RationBox" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid" unique_id=675128876]
 transform = Transform3D(1.34059, 0, -1.48419, 0, 2, 0, 1.48419, 0, 1.34059, 0.112877, 0.879375, -0.502616)
 mesh = ExtResource("7_juu85")
 skeleton = NodePath("../../..")
 
-[node name="RationBox2" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid"]
+[node name="RationBox2" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid" unique_id=83980463]
 transform = Transform3D(0.495452, 0, 1.93766, 0, 2, 0, -1.93766, 0, 0.495452, -1.09545, 0.879375, -0.548801)
 mesh = ExtResource("7_juu85")
 skeleton = NodePath("../../..")
 
-[node name="RationCan4" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid"]
+[node name="RationCan4" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid" unique_id=1007045088]
 transform = Transform3D(1.72336, 0, -1.0149, 0, 2, 0, 1.0149, 0, 1.72336, -0.722356, 0.874499, -0.260693)
 mesh = ExtResource("5_mge8n")
 skeleton = NodePath("../..")
 
-[node name="RationCan5" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid"]
+[node name="RationCan5" type="MeshInstance3D" parent="StaticBody3D/SuppliesMid" unique_id=1251991977]
 transform = Transform3D(-0.166904, 0, 1.99302, 0, 2, 0, -1.99302, 0, -0.166904, -0.549472, 0.874499, -0.167164)
 mesh = ExtResource("5_mge8n")
 skeleton = NodePath("../..")
 
-[node name="SuppliesHigh" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="SuppliesHigh" type="CollisionShape3D" parent="StaticBody3D" unique_id=1688850514]
 transform = Transform3D(0.994049, 0, 0.108936, 0, 1, 0, -0.108936, 0, 0.994049, -0.0723834, 0.287015, 0.207171)
 visible = false
 shape = SubResource("SphereShape3D_k5res")
 
-[node name="RationBox3" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh"]
+[node name="RationBox3" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh" unique_id=1276280661]
 transform = Transform3D(1.55251, 0, -1.26084, 0, 2, 0, 1.26084, 0, 1.55251, 0.497004, 0.587107, -0.122843)
 mesh = ExtResource("7_juu85")
 skeleton = NodePath("../../..")
 
-[node name="RationBox4" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh"]
+[node name="RationBox4" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh" unique_id=1206669004]
 transform = Transform3D(0.885797, 0, 1.79314, 0, 2, 0, -1.79314, 0, 0.885797, -0.195877, 0.587107, -0.198775)
 mesh = ExtResource("7_juu85")
 skeleton = NodePath("../../..")
 
-[node name="RationBox5" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh"]
+[node name="RationBox5" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh" unique_id=431602024]
 transform = Transform3D(1.97237, 0, -0.331264, 0, 2, 0, 0.331264, 0, 1.97237, 0.1096, 1.02591, -0.201748)
 mesh = ExtResource("7_juu85")
 skeleton = NodePath("../../..")
 
-[node name="RationCansFour3" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh"]
+[node name="RationCansFour3" type="MeshInstance3D" parent="StaticBody3D/SuppliesHigh" unique_id=2035914273]
 transform = Transform3D(0.56582, 0, 1.91829, 0, 2, 0, -1.91829, 0, 0.56582, -0.57399, 0.601482, 0.112785)
 mesh = ExtResource("6_ycnnh")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D"]
+[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D" unique_id=579938716]
 root_node = NodePath("../OmniLight3D")
-libraries = {
-"": SubResource("AnimationLibrary_u6ada")
-}
+libraries/ = SubResource("AnimationLibrary_u6ada")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D"]
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=2086467218]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.79339, 0.418345)
 light_color = Color(0, 0.533333, 0, 1)
 light_energy = 0.0

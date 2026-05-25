@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c6rhm4n6w0v2p"]
+
+[ext_resource type="Script" uid="uid://15n34ats2gtf" path="res://Scripts/cali_air_lock_interactable_object.gd" id="1_42ico"]
+[ext_resource type="PackedScene" uid="uid://m88dbm2ki2lb" path="res://Scenes/User Interface/Dialogue/NoAirlockDialogueBox.tscn" id="2_njbfo"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_vnc52"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="3_njbfo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ue4ye"]
+
+[node name="CaliAirLockInteractableNode" type="StaticBody3D" unique_id=1089615765]
+script = ExtResource("1_42ico")
+text_scene0 = ExtResource("2_njbfo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959610252]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_ue4ye")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="AnimatedSprite3D2" parent="." unique_id=263787004 instance=ExtResource("2_vnc52")]
+frame_progress = 0.6728826
+
+[node name="Timer" type="Timer" parent="." unique_id=1346384459]
+
+[node name="CRT Shader Static" parent="." unique_id=1613207391 instance=ExtResource("3_njbfo")]
+visible = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -86,6 +86,7 @@
 [ext_resource type="PackedScene" uid="uid://bjon3x6ddohyo" path="res://Particles/fire_effect.tscn" id="77_lspa4"]
 [ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="78_e0rdy"]
 [ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="86_6kee3"]
+[ext_resource type="PackedScene" uid="uid://buehq2t0ri4h4" path="res://Scenes/Objects/Jacklyn.tscn" id="87_vth26"]
 
 [sub_resource type="Animation" id="Animation_rx5lr"]
 resource_name = "Flash"
@@ -5903,6 +5904,9 @@ mesh = SubResource("BoxMesh_px7a2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=1991923404]
 debug_enabled = true
+
+[node name="Jacklyn" parent="." unique_id=1126204711 instance=ExtResource("87_vth26")]
+transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.29066128, 0)
 
 [connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="Siren" to="." method="_on_siren_finished"]

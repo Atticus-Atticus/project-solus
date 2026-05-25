@@ -82,6 +82,7 @@
 [ext_resource type="AudioStream" uid="uid://dw14dka61tbg2" path="res://Audio/CityAmbience.mp3" id="73_oe8p2"]
 [ext_resource type="AudioStream" uid="uid://cucjm8gbb8ae3" path="res://Audio/Music/7800-soft-dough-138.wav" id="74_5b838"]
 [ext_resource type="PackedScene" uid="uid://bjon3x6ddohyo" path="res://Particles/fire_effect.tscn" id="74_bmf1f"]
+[ext_resource type="PackedScene" uid="uid://buehq2t0ri4h4" path="res://Scenes/Objects/Jacklyn.tscn" id="84_35d8q"]
 [ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="84_yga8m"]
 
 [sub_resource type="Animation" id="Animation_xnaxu"]
@@ -5989,6 +5990,9 @@ mesh = SubResource("BoxMesh_nlp5i")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=2057947756]
 debug_enabled = true
+
+[node name="Jacklyn" parent="." unique_id=1126204711 instance=ExtResource("84_35d8q")]
+transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.29066128, 0)
 
 [connection signal="animation_finished" from="AnimationPlayer Image Flash" to="." method="_on_animation_player_image_flash_animation_finished"]
 [connection signal="finished" from="FlyOver" to="." method="_on_fly_over_finished"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg7f512r26icg"]
+[gd_scene format=3 uid="uid://dg7f512r26icg"]
 
-[ext_resource type="Script" path="res://Scripts/Objective40Script.gd" id="1_je6wt"]
-[ext_resource type="Script" path="res://Scripts/AirlockChangeSceneScript.gd" id="1_ycr61"]
+[ext_resource type="Script" uid="uid://dhaulnd4qiu71" path="res://Scripts/Objective40Script.gd" id="1_je6wt"]
 [ext_resource type="ArrayMesh" uid="uid://cpeiu21bcv1oo" path="res://Models/ShipWallAirlock.obj" id="2_w1l85"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xvqyb"]
@@ -46,36 +45,33 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u6ada"]
 _data = {
-"Objective": SubResource("Animation_xsxt8"),
-"ObjectiveFlash": SubResource("Animation_ufi1c"),
-"RESET": SubResource("Animation_oeoou")
+&"Objective": SubResource("Animation_xsxt8"),
+&"ObjectiveFlash": SubResource("Animation_ufi1c"),
+&"RESET": SubResource("Animation_oeoou")
 }
 
-[node name="LeaveShipAirlockNode" type="Node3D"]
+[node name="LeaveShipAirlockNode" type="Node3D" unique_id=406033560]
 script = ExtResource("1_je6wt")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-script = ExtResource("1_ycr61")
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1992422803]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1052003210]
 transform = Transform3D(4.59559, 0, 0, 0, 3.98613, 0, 0, 0, 1, 0, 2.56679, 0.107257)
 shape = SubResource("BoxShape3D_xvqyb")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1811703812]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_2wml0")
 
-[node name="ShipWallAirlock" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+[node name="ShipWallAirlock" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1817409670]
 mesh = ExtResource("2_w1l85")
 skeleton = NodePath("../../..")
 
-[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D"]
+[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D" unique_id=251004211]
 root_node = NodePath("../OmniLight3D")
-libraries = {
-"": SubResource("AnimationLibrary_u6ada")
-}
+libraries/ = SubResource("AnimationLibrary_u6ada")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D"]
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=316309858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91498, -1.08843)
 light_color = Color(0, 0.533333, 0, 1)
 light_energy = 0.0
