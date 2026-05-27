@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://dja6r12cd36jx"]
+
+[ext_resource type="Script" uid="uid://dxjoprgp314fb" path="res://Scripts/ship_radio_interactable_object.gd" id="1_03s2v"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_h8vfa"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="3_yn151"]
+[ext_resource type="AudioStream" uid="uid://b1dq6c45lpfej" path="res://Audio/Morse/MorseCode.wav" id="4_4lo1t"]
+[ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="5_6dmkw"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="6_leo41"]
+[ext_resource type="LabelSettings" uid="uid://tp8yager30fu" path="res://Scenes/User Interface/Dialogue/DialogueBoxText.tres" id="7_12kn8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ue4ye"]
+
+[sub_resource type="Animation" id="Animation_vxsjl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5bkkr"]
+resource_name = "TextTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3njub"]
+_data = {
+&"RESET": SubResource("Animation_vxsjl"),
+&"TextTween": SubResource("Animation_5bkkr")
+}
+
+[node name="ShipRadioInteractableNode" type="StaticBody3D" unique_id=1089615765]
+script = ExtResource("1_03s2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959610252]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_ue4ye")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="AnimatedSprite3D2" parent="." unique_id=263787004 instance=ExtResource("2_h8vfa")]
+frame_progress = 0.6728826
+
+[node name="Timer" type="Timer" parent="." unique_id=1346384459]
+
+[node name="CRT Shader Static" parent="." unique_id=1613207391 instance=ExtResource("3_yn151")]
+visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2044242486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542087, 0)
+stream = ExtResource("4_4lo1t")
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=326668763]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -320.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=1712604956]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("5_6dmkw")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=1400366975]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=1473977563]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=1896360108]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1646504922]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("6_leo41")
+theme_override_font_sizes/font_size = 50
+text = ">"
+label_settings = ExtResource("7_12kn8")
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1467719570]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_leo41")
+theme_override_font_sizes/font_size = 50
+text = "..."
+label_settings = ExtResource("7_12kn8")
+autowrap_mode = 2
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1593252890]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("6_leo41")
+theme_override_font_sizes/font_size = 50
+text = "v"
+label_settings = ExtResource("7_12kn8")
+
+[node name="TweenAnimation" type="AnimationPlayer" parent="TextboxContainer" unique_id=2107313664]
+libraries/ = SubResource("AnimationLibrary_3njub")
+speed_scale = 2.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

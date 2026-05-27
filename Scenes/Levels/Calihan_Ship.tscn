@@ -36,8 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://cd2a0nw77v8tb" path="res://Models/BlueFlightDeck_3.png" id="27_s3ulh"]
 [ext_resource type="Texture2D" uid="uid://bsb3b267s8swr" path="res://Models/BlueFlightDeck_4.png" id="28_25txt"]
 [ext_resource type="ArrayMesh" uid="uid://cp5m31l4sdev6" path="res://Models/Bench.obj" id="28_mpfq5"]
-[ext_resource type="PackedScene" uid="uid://8jcon8uugkxp" path="res://Scenes/Objects/RadioInteractObject.tscn" id="28_n1msb"]
-[ext_resource type="PackedScene" uid="uid://d3wjjeh0gqwdg" path="res://Scenes/Objects/ControlsInteractObject.tscn" id="29_0jlxx"]
 [ext_resource type="Texture2D" uid="uid://cvcmqnpc7y85y" path="res://Models/BlueFlightDeck_5.png" id="29_haile"]
 [ext_resource type="Texture2D" uid="uid://bf0gjdp2hyonk" path="res://Models/BlueFlightDeck_6.png" id="30_sc5i3"]
 [ext_resource type="ArrayMesh" uid="uid://ctvy800dsdqrd" path="res://Models/Clutter/ShipBed02.obj" id="31_kuegp"]
@@ -87,7 +85,10 @@
 [ext_resource type="PackedScene" uid="uid://d3gwceklmsuyg" path="res://Scenes/Objects/MessHallInteractableObject.tscn" id="83_q3orp"]
 [ext_resource type="PackedScene" uid="uid://b57de0baiqcl6" path="res://Scenes/User Interface/Dialogue/BedSideDialogueBox.tscn" id="83_tvdd6"]
 [ext_resource type="PackedScene" uid="uid://c6rhm4n6w0v2p" path="res://Scenes/Objects/CaliAirLockInteractableObject.tscn" id="84_d0rsu"]
+[ext_resource type="PackedScene" uid="uid://dja6r12cd36jx" path="res://Scenes/Objects/ShipRadioInteractableObject.tscn" id="85_gcgmy"]
 [ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="86_5mll0"]
+[ext_resource type="PackedScene" uid="uid://d3qdypxacup06" path="res://Scenes/Objects/ShipControlsInteractableObject.tscn" id="86_apxh6"]
+[ext_resource type="PackedScene" uid="uid://cqdffg8y5uuy5" path="res://Scenes/Objects/ShipDatabaseInteractableObject.tscn" id="87_2arjd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
 shader = ExtResource("68_rxu0r")
@@ -3109,12 +3110,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21, -1
 [node name="BedSideTable" parent="NavigationRegion3D/Clutter" unique_id=1601461513 instance=ExtResource("17_lw6ax")]
 transform = Transform3D(1.13331, 0, 0, 0, 1.4, 0, 0, 0, 1.09123, 1.19899, -0.62960005, 3.78922)
 
-[node name="RadioInteract" parent="NavigationRegion3D/Clutter" unique_id=222589550 instance=ExtResource("28_n1msb")]
-transform = Transform3D(1, 0, 0, 0, 1.26942, 0, 0, 0, 3.66158, 12.3842, -0.25638998, -24.9426)
-
-[node name="ShipControlsInteract" parent="NavigationRegion3D/Clutter" unique_id=1958019232 instance=ExtResource("29_0jlxx")]
-transform = Transform3D(3.24416, 0, 0, 0, 1.23063, 0, 0, 0, 1, 8.98421, -0.19045997, -31.3012)
-
 [node name="Datadrive" parent="NavigationRegion3D/Clutter" unique_id=1411369316 instance=ExtResource("32_dmpu4")]
 transform = Transform3D(0.659936, 0, -0.751322, 0, 1, 0, 0.751322, 0, 0.659936, 12.4685, -0.62960005, 0.0859425)
 
@@ -3384,7 +3379,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -13)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, -18)
 
 [node name="OverheadLight8" parent="Lights" unique_id=1429466763 instance=ExtResource("76_ubtfw")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, -25)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, -26.93737)
+
+[node name="OverheadLight11" parent="Lights" unique_id=2106418573 instance=ExtResource("76_ubtfw")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 0, -21.93737)
 
 [node name="Interactables" type="Node3D" parent="." unique_id=1105234823]
 
@@ -3444,6 +3442,30 @@ trigger = NodePath("PointClickTriggerbox")
 
 [node name="PointClickTriggerbox" parent="Interactables/CaliAirLockInteractableNode" unique_id=2089706211 instance=ExtResource("82_ydjyw")]
 transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.18013382, -1.2003756, -0.29987907)
+visible = false
+
+[node name="ShipRadioInteractableNode" parent="Interactables" unique_id=1312934714 node_paths=PackedStringArray("trigger") instance=ExtResource("85_gcgmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.975818, 0.048026174, -25.503996)
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/ShipRadioInteractableNode" unique_id=809496288 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.021321297, -1.2003756, 0.051504135)
+visible = false
+
+[node name="ShipControlsInteractableNode" parent="Interactables" unique_id=667256754 node_paths=PackedStringArray("trigger") instance=ExtResource("86_apxh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.033516, 0.4812696, -31.547546)
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/ShipControlsInteractableNode" unique_id=341516683 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.42110348, -1.2003756, 0.051504135)
+visible = false
+
+[node name="ShipDatabaseInteractableNode" parent="Interactables" unique_id=803564185 node_paths=PackedStringArray("trigger") instance=ExtResource("87_2arjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.179261, 0.71472, -24.044226)
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/ShipDatabaseInteractableNode" unique_id=1072703894 instance=ExtResource("82_ydjyw")]
+transform = Transform3D(1.1070039, 0, -1.2284218e-07, 0, 2.507983, 0, 8.940697e-08, 0, 1.6471347, -0.5533166, -1.2830311, 0.051504135)
 visible = false
 
 [node name="Lamp C" parent="." unique_id=2083170397 instance=ExtResource("79_vap76")]

@@ -20,5 +20,4 @@ func interact():
 		$"../SpotLight3D".hide()
 		$"../AnimationPlayer".stop()
 	else:
-		var loadedscene2 = scene2.instantiate()
-		add_child(loadedscene2)
+		return

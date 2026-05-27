@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1f57cftveov5"]
 
 [ext_resource type="Script" uid="uid://c61rp5tndlb8w" path="res://Scripts/tutorial_level_script.gd" id="1_tsagn"]
+[ext_resource type="Shader" uid="uid://bb4qhiutll0th" path="res://Shaders/AnotherTest.gdshader" id="2_d4b3c"]
 [ext_resource type="PackedScene" uid="uid://n40070ndqw30" path="res://Scenes/User Interface/HUD/HUD.tscn" id="2_l7b8p"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="2_lvmlw"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_go1uo"]
@@ -17,6 +18,15 @@
 [ext_resource type="PackedScene" uid="uid://6lu31r05ib36" path="res://Particles/thruster_effect.tscn" id="15_reklg"]
 [ext_resource type="Texture2D" uid="uid://bmvbyikpfi6he" path="res://Models/Textures/Secret .png" id="17_d4b3c"]
 [ext_resource type="PackedScene" uid="uid://b45p76r754ycy" path="res://Scenes/Objects/DoorInteractionObject.tscn" id="17_unp4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uauxw"]
+shader = ExtResource("2_d4b3c")
+shader_parameter/opacity = 0.0
+shader_parameter/pixel_size = 0.01
+shader_parameter/greyscale = false
+shader_parameter/contrast = 0.0
+shader_parameter/pixel_colors = Color(0, 1, 0, 1)
+shader_parameter/background_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Environment" id="Environment_unp4q"]
 background_mode = 1
@@ -145,6 +155,11 @@ animations = [{
 
 [node name="Node3D" type="Node3D" unique_id=2035133510]
 script = ExtResource("1_tsagn")
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=445497599]
+material = SubResource("ShaderMaterial_uauxw")
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="HUD" parent="." unique_id=1189094878 instance=ExtResource("2_l7b8p")]
 

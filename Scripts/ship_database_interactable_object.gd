@@ -1,9 +1,9 @@
 extends StaticBody3D
 
 #@export var text_scene: PackedScene
+@onready var scene: PackedScene = preload("res://Scenes/User Interface/Menus/DataBaseMenu.tscn")
 
 @export var trigger = Area3D
-@export var supply = StaticBody3D
 
 var in_dialogue = false
 
@@ -15,7 +15,6 @@ func interact():
 	trigger.monitoring = true
 
 func _show_dialogue():
-	supply.interact()
-
-func _remove():
-	queue_free()
+	Globals.PlayerControls = false
+	var loadedscene = scene.instantiate()
+	add_child(loadedscene)

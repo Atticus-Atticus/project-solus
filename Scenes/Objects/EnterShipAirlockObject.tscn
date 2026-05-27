@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://te6upni4y82"]
+[gd_scene format=3 uid="uid://te6upni4y82"]
 
-[ext_resource type="Script" path="res://Scripts/ReturnToShipScript.gd" id="1_ky23x"]
 [ext_resource type="ArrayMesh" uid="uid://f6cbj0t7h7ob" path="res://Models/ShipWallAirlock Orange.obj" id="2_reaej"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d2pmp"]
@@ -43,30 +42,27 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u6ada"]
 _data = {
-"Objective": SubResource("Animation_xsxt8"),
-"ObjectiveFlash": SubResource("Animation_ufi1c"),
-"RESET": SubResource("Animation_oeoou")
+&"Objective": SubResource("Animation_xsxt8"),
+&"ObjectiveFlash": SubResource("Animation_ufi1c"),
+&"RESET": SubResource("Animation_oeoou")
 }
 
-[node name="LeaveShipAirlockNode" type="Node3D"]
+[node name="LeaveShipAirlockNode" type="Node3D" unique_id=1771348825]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-script = ExtResource("1_ky23x")
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=233856863]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1171584847]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_d2pmp")
 
-[node name="ShipWallAirlockOrange" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+[node name="ShipWallAirlockOrange" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1308719611]
 mesh = ExtResource("2_reaej")
 
-[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D"]
+[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D" unique_id=2110953838]
 root_node = NodePath("../OmniLight3D")
-libraries = {
-"": SubResource("AnimationLibrary_u6ada")
-}
+libraries/ = SubResource("AnimationLibrary_u6ada")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D"]
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=1690653752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91498, -1.08843)
 light_color = Color(0, 0.533333, 0, 1)
 light_energy = 0.0

@@ -23,7 +23,7 @@ font_size = 25
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iyk6m"]
 shader = ExtResource("2_tdqlu")
 shader_parameter/shake_power = 0.03
-shader_parameter/shake_rate = 0.400000019
+shader_parameter/shake_rate = 0.5650000268375
 shader_parameter/shake_speed = 5.0
 shader_parameter/shake_block_size = 30.5
 shader_parameter/shake_color_rate = 0.01
@@ -147,7 +147,7 @@ grow_vertical = 2
 script = ExtResource("1_iyk6m")
 
 [node name="Label4" type="Label" parent="." unique_id=1390624092]
-modulate = Color(1.199976, 1.199976, 1.199976, 0.16470589)
+modulate = Color(1.199976, 1.199976, 1.199976, 0.39215687)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0

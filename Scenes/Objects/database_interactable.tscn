@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccsfwkaiv2rnj"]
+[gd_scene format=3 uid="uid://ccsfwkaiv2rnj"]
 
-[ext_resource type="Script" path="res://Scripts/database_interactable_script.gd" id="1_nbftw"]
 [ext_resource type="Texture2D" uid="uid://d3qq2pevtwi34" path="res://Models/FlightDeckServerBlue.png" id="2_7evvt"]
 [ext_resource type="ArrayMesh" uid="uid://c5d5qvp2vd8q8" path="res://Models/Clutter/ServerBlock.obj" id="3_18cbr"]
 
@@ -44,36 +43,33 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1ngff"]
 _data = {
-"RESET": SubResource("Animation_0a1b7"),
-"blinking": SubResource("Animation_ylw8o")
+&"RESET": SubResource("Animation_0a1b7"),
+&"blinking": SubResource("Animation_ylw8o")
 }
 
-[node name="DatabaseInteractable" type="Node3D"]
+[node name="DatabaseInteractable" type="Node3D" unique_id=924474343]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-script = ExtResource("1_nbftw")
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=776590098]
 
-[node name="ServerBlock" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="ServerBlock" type="MeshInstance3D" parent="StaticBody3D" unique_id=738428726]
 material_override = SubResource("StandardMaterial3D_l5rh0")
 mesh = ExtResource("3_18cbr")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=531156746]
 shape = SubResource("ConcavePolygonShape3D_lp0np")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2121098535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51074, 1.05261, 0.307673)
 light_color = Color(0.4, 1, 0.941176, 1)
 omni_range = 0.233737
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=668082860]
 transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, -0.35667, 1.62647, 0.0219887)
 light_color = Color(0.4, 1, 0.941176, 1)
 spot_range = 3.5203
 spot_angle = 22.0303
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_1ngff")
-}
-autoplay = "blinking"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1298366279]
+libraries/ = SubResource("AnimationLibrary_1ngff")
+autoplay = &"blinking"
