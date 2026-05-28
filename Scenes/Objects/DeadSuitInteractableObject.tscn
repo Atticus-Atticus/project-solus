@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b5x0bek64k7fe"]
+
+[ext_resource type="Script" uid="uid://bg1l264am2sba" path="res://Scripts/dead_suit_interactable_object.gd" id="1_nmphq"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_wqbvn"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="3_m3m84"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ue4ye"]
+
+[node name="DeadSuitInteractableNode" type="StaticBody3D" unique_id=1089615765]
+script = ExtResource("1_nmphq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959610252]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_ue4ye")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="AnimatedSprite3D2" parent="." unique_id=263787004 instance=ExtResource("2_wqbvn")]
+frame_progress = 0.6728826
+
+[node name="Timer" type="Timer" parent="." unique_id=1346384459]
+
+[node name="CRT Shader Static" parent="." unique_id=1613207391 instance=ExtResource("3_m3m84")]
+visible = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
