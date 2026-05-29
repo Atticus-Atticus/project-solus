@@ -4,18 +4,11 @@
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_5gnfj"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_vomr3"]
 [ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="4_43q1g"]
-[ext_resource type="PackedScene" uid="uid://d3an4wo8tws83" path="res://Scenes/User Interface/Menus/ChangeInputType.tscn" id="5_iynpq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xn2yy"]
 font = ExtResource("3_vomr3")
 font_size = 64
 font_color = Color(0.4, 1, 0.9411765, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_4llvd"]
-line_spacing = 15.0
-font = ExtResource("3_vomr3")
-font_size = 30
-font_color = Color(0.4, 1, 0.941176, 1)
 
 [sub_resource type="Animation" id="Animation_reqnr"]
 resource_name = "Close"
@@ -146,40 +139,6 @@ offset_left = 53.0
 offset_top = 195.0
 offset_right = 53.47998
 offset_bottom = 195.36002
-
-[node name="ChangeInputNode" parent="Panel/Control" unique_id=659633144 instance=ExtResource("5_iynpq")]
-layout_mode = 1
-offset_left = 53.0
-offset_top = 335.99997
-offset_right = 13.0
-offset_bottom = 295.99997
-scale = Vector2(0.8, 0.8)
-
-[node name="Panel2" type="Panel" parent="Panel/Control" unique_id=226610838]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 573.0
-offset_right = 1302.0
-offset_bottom = 750.0
-theme = ExtResource("2_5gnfj")
-
-[node name="Controls" type="Label" parent="Panel/Control/Panel2" unique_id=460046906]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -600.0
-offset_top = -154.0
-offset_right = 600.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Use 'W' to move Forward. Use 'S' to move Backwards.
-The Subject will always face and move towards the mouse's position.
-Use 'E' to interact with objects.
-Use 'N' to show objective."
-label_settings = SubResource("LabelSettings_4llvd")
 
 [node name="X Button" type="Button" parent="Panel/Control" unique_id=69237454]
 layout_mode = 1

@@ -9,7 +9,7 @@ metadata={
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8bb73016d307a3c7f05ff22dc89d3904"
+"md5": "822c14876c4c4d1e1366485d60ad498d"
 }
 
 [deps]
@@ -22,6 +22,8 @@ dest_files=["res://.godot/imported/CalihanModel_4.png-e0130b80c4091b7d9b8adad3e6
 compress/mode=2
 compress/high_quality=true
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +31,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -7,8 +7,9 @@ extends Node3D
 
  #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var LoadedText = text.instantiate()
-	add_child(LoadedText)
+	#var LoadedText = text.instantiate()
+	#add_child(LoadedText)
+	pass
 
 
 func _process(delta: float) -> void:

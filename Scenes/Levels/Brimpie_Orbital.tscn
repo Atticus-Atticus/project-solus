@@ -10396,11 +10396,31 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12, 0,
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=70836957]
 environment = SubResource("Environment_1fsal")
 
-[node name="Datadrive" parent="." unique_id=511109017 instance=ExtResource("29_gr5qn")]
+[node name="Datadrive" parent="." unique_id=511109017 node_paths=PackedStringArray("interactable") instance=ExtResource("29_gr5qn")]
 transform = Transform3D(-0.81245, 0, -0.5830308, 0, 1, 0, 0.5830308, 0, -0.81245, 20.128622, 0.3704, 15.605778)
+interactable = NodePath("PickUpInteractableNode")
 
-[node name="Datadrive2" parent="." unique_id=1344101501 instance=ExtResource("31_p8xer")]
+[node name="PickUpInteractableNode" parent="Datadrive" unique_id=730359564 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+trigger = NodePath("PointClickTriggerbox")
+supply = NodePath("..")
+
+[node name="PointClickTriggerbox" parent="Datadrive/PickUpInteractableNode" unique_id=1989697390 instance=ExtResource("36_16q05")]
+transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787e-07, 0, 1.4846928, -0.016270638, -0.22463441, 0.021848679)
+visible = false
+
+[node name="Datadrive2" parent="." unique_id=1344101501 node_paths=PackedStringArray("interactable") instance=ExtResource("31_p8xer")]
 transform = Transform3D(-0.6960508, 0, 0.71799266, 0, 1, 0, -0.71799266, 0, -0.6960508, 13.938312, 0.3704, 38.47383)
+interactable = NodePath("PickUpInteractableNode")
+
+[node name="PickUpInteractableNode" parent="Datadrive2" unique_id=270516573 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+trigger = NodePath("PointClickTriggerbox")
+supply = NodePath("..")
+
+[node name="PointClickTriggerbox" parent="Datadrive2/PickUpInteractableNode" unique_id=1847013133 instance=ExtResource("36_16q05")]
+transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787e-07, 0, 1.4846928, -0.016270638, -0.22463441, 0.021848679)
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1580300690]
 stream = ExtResource("31_7levc")

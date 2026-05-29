@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="13_0kavk"]
 [ext_resource type="PackedScene" uid="uid://c4ejwph3itmdh" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Cutscene2.tscn" id="14_06hk3"]
 [ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="14_or18c"]
-[ext_resource type="PackedScene" uid="uid://dxfc02nvg3ckf" path="res://Models/CutscenePlayer/CalihanArms.tscn" id="15_f8igq"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="16_25uyb"]
 [ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="17_1llti"]
 [ext_resource type="AudioStream" uid="uid://dif64pbv6ratc" path="res://Audio/Speech/NaomiSpeech.wav" id="18_pwww1"]
@@ -33,7 +32,7 @@ shader_parameter/shake_color_rate = 0.01
 
 [sub_resource type="Animation" id="Animation_2joo3"]
 resource_name = "Cutscene2"
-length = 15.5333
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -642,10 +641,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -5.66227, 1.99529, 1.84
 
 [node name="blockbench_export2" parent="." unique_id=1373057169 instance=ExtResource("14_06hk3")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.09335, 0.428454, -2.66407)
-
-[node name="blockbench_export" parent="." unique_id=796719314 instance=ExtResource("15_f8igq")]
-transform = Transform3D(-0.99877, 0, -0.049582, 0.00174941, 0.999377, -0.0352398, 0.0495511, -0.0352832, -0.998148, -3.20577, 0.161993, -4.7786)
-visible = false
 
 [node name="Label" type="Label" parent="." unique_id=626237288]
 offset_left = 146.0
