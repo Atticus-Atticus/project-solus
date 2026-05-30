@@ -64,8 +64,8 @@
 [ext_resource type="Animation" uid="uid://l8oswunav2pu" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose2.res" id="58_syyjd"]
 [ext_resource type="Animation" uid="uid://bk28p3ffg26m1" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Pose2.res" id="59_vimbc"]
 [ext_resource type="Script" uid="uid://c4omxgk7gy1on" path="res://Scripts/Naomi Trigger.gd" id="60_nrogp"]
-[ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="62_fmbpl"]
 [ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="63_fmbpl"]
+[ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="66_3vw0k"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_473di"]
 vertices = PackedVector3Array(7.75, 3.2924323, -22.9626, 7.75, 3.0424323, -22.4626, 8.5, 3.0424323, -22.4626, 8.5, 3.2924323, -22.9626, 5.75, 0.7924324, -12.712601, 4, 0.7924324, -12.212601, 7, 0.7924324, -11.962601, 11.75, 0.7924324, -11.962601, 12, 0.7924324, -12.462601, 10.25, 0.7924324, -12.712601, 9, 0.7924324, -11.962601, 10.5, 0.7924324, -17.4626, 7, 0.7924324, -17.9626, 6.75, 0.7924324, -17.4626, 4.25, 0.7924324, -17.7126, 4, 0.7924324, -16.9626, 4, 0.7924324, -15.712601, 5.75, 0.7924324, -15.462601, 10.25, 0.7924324, -7.7126007, 11.5, 1.0424324, -7.9626007, 12, 0.7924324, -9.712601, 9, 0.7924324, -9.962601, 7, 0.7924324, -9.962601, 5.75, 0.7924324, -6.7126007, 6.5, 0.7924324, -5.4626007, 10.25, 0.7924324, -5.4626007, 5.75, 0.7924324, -9.962601, 3.5, 5.2924323, -14.712601, 3.5, 5.2924323, -13.462601, 4.75, 5.2924323, -13.462601, 4.75, 5.2924323, -14.962601, 4, 0.7924324, -14.462601, 4, 0.7924324, -13.712601, 4.5, 0.7924324, -13.712601, 4.5, 0.7924324, -14.462601, 14, 1.7924324, -5.7126007, 14, 1.7924324, -5.2126007, 16.25, 1.7924324, -5.7126007, 7, 0.7924324, 6.0373993, 5.5, 0.7924324, 6.0373993, 5.5, 0.7924324, 6.5373993, 10.5, 0.7924324, 6.5373993, 10.5, 0.7924324, 6.0373993, 9, 0.7924324, 6.0373993, 11.5, 0.7924324, -3.2126007, 11.5, 1.0424324, -3.9626007, 10.25, 0.7924324, -4.2126007, 12, 0.7924324, 1.0373993, 13, 1.0424324, 1.0373993, 13, 1.0424324, -0.9626007, 12, 0.7924324, -0.9626007, 5.5, 0.7924324, -4.2126007, 3.75, 0.7924324, -3.7126007, 3.75, 0.7924324, 3.2873993, 9, 0.7924324, 4.0373993, 12, 0.7924324, -3.2126007, 4.5, 0.7924324, 4.0373993, 7, 0.7924324, 4.0373993, 7.5, 0.7924324, 4.7873993, 8.5, 0.7924324, 4.7873993, 11.75, 0.7924324, 4.0373993, 14.5, 1.5424324, -3.9626007, 14.5, 1.5424324, -3.4626007, 15.75, 1.5424324, -3.9626007, -2, 0.7924324, -3.7126007, -2, 0.7924324, -2.9626007, -1.25, 0.7924324, -2.7126007, -1.25, 0.7924324, 2.7873993, -2, 0.7924324, 3.7873993, 1.25, 0.7924324, 4.0373993, 1.25, 0.7924324, 3.5373993, 19.25, 2.2924323, -2.9626007, 19.25, 2.0424323, -1.9626007, 20, 2.2924323, -2.2126007, 20, 2.2924323, -3.2126007, 14.5, 0.7924324, 4.7873993, 14, 0.7924324, 4.7873993, 14.25, 0.7924324, 6.0373993, 14, 0.7924324, 1.0373993, 14, 0.7924324, 3.0373993, 14.5, 0.7924324, 3.0373993, 14, 0.7924324, -0.9626007, 18.5, 0.7924324, 4.0373993, 20, 0.7924324, 5.7873993, 20, 0.7924324, 4.7873993, 18.25, 0.7924324, -2.7126007, 14, 0.7924324, -1.7126007)
@@ -696,15 +696,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_28o2u")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_omuvx"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_3vw0k"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob3jv"]
-albedo_texture = ExtResource("22_qstxi")
-
-[sub_resource type="BoxMesh" id="BoxMesh_qkdus"]
 
 [node name="StationLevelNode" type="Node3D" unique_id=196504382]
 script = ExtResource("1_jtff4")
@@ -2005,24 +1996,8 @@ transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -
 size = Vector3(2, 2.7471924, 2)
 texture_albedo = ExtResource("63_fmbpl")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1809166810]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19870925, 1.5694714, 0.38362825)
-script = ExtResource("62_fmbpl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1831662866]
-shape = SubResource("CapsuleShape3D_omuvx")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=291198595]
-mesh = SubResource("CapsuleMesh_3vw0k")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=13110332]
-transform = Transform3D(0.257562, 0, 0, 0, 0.294782, 0, 0, 0, 0.365385, -0.0754814, 0.407165, -0.527833)
-material_override = SubResource("StandardMaterial3D_ob3jv")
-mesh = SubResource("BoxMesh_qkdus")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=360804228]
-debug_enabled = true
+[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("66_3vw0k")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.43168283, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="MutatedNaomi2/Area3D" to="MutatedNaomi2/Area3D" method="_on_body_entered"]

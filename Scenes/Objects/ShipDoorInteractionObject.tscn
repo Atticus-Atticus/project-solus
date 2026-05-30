@@ -5,7 +5,9 @@
 [ext_resource type="Script" uid="uid://b5jcpl3ivrxqb" path="res://Scripts/door_back_script.gd" id="3_dkdpp"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="4_4toea"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4ccwu"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_17wmw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8bweg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_52v2l"]
 
@@ -20,7 +22,7 @@ script = ExtResource("2_8bweg")
 
 [node name="FrontCollision" type="CollisionShape3D" parent="Front" unique_id=919028892]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.5, 0.65, 0)
-shape = SubResource("BoxShape3D_4ccwu")
+shape = SubResource("SphereShape3D_17wmw")
 debug_color = Color(0, 0.5568628, 0.6509804, 1)
 
 [node name="AnimatedSprite3D" parent="Front" unique_id=347065643 instance=ExtResource("4_4toea")]
@@ -33,7 +35,7 @@ script = ExtResource("3_dkdpp")
 
 [node name="BackCollision" type="CollisionShape3D" parent="Back" unique_id=477849404]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.5, 0.65, 0)
-shape = SubResource("BoxShape3D_4ccwu")
+shape = SubResource("SphereShape3D_8bweg")
 debug_color = Color(0, 0.5568628, 0.6509804, 1)
 
 [node name="AnimatedSprite3D2" parent="Back" unique_id=1763497771 instance=ExtResource("4_4toea")]
@@ -43,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.65, 0)
 transform = Transform3D(3.003, 0, 0, 0, 0.898, 0, 0, 0, 0.898, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=795022271]
-transform = Transform3D(0.342657, 0, 0, 0, 2.567648, 0, 0, 0, 3.0000012, 0, 0.3645571, 0)
+transform = Transform3D(0.41461506, 0, 0, 0, 2.567648, 0, 0, 0, 3.0000012, 0, 0.3645571, 0)
 shape = SubResource("BoxShape3D_52v2l")
 
 [node name="Front Marker" type="Marker3D" parent="." unique_id=1264241976]

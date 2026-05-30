@@ -8,5 +8,5 @@ func interact():
 	#$CollisionShape3D.set_visible(false)
 	$Datadrive.hide()
 	$OmniLight3D.hide()
-	$"../AudioStreamPlayer3D".play()
+	$AudioStreamPlayer3D.play()
 	interactable._remove()

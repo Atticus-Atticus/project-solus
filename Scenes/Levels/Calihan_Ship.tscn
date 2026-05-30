@@ -2144,8 +2144,6 @@ libraries/ = SubResource("AnimationLibrary_le012")
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=766081844]
 stream = ExtResource("12_ysvwy")
 
-[node name="Player" parent="." unique_id=42021847 instance=ExtResource("14_2arjd")]
-
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=728206356]
 navigation_mesh = SubResource("NavigationMesh_5mll0")
 
@@ -3640,6 +3638,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, -
 transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -0.07236803, -0.49473515, 0.5, 3.3897933e-09, -4.6414392e-08, 14.278931, 1.158936, -1.2750916)
 size = Vector3(2, 2.7471924, 2)
 texture_albedo = ExtResource("86_5mll0")
+
+[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("14_2arjd")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.0858226, -1.4440655, 0)
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
