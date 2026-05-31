@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_s84ir"]
 [ext_resource type="ArrayMesh" uid="uid://buxw7oqqhe7wx" path="res://Models/Home Models/HomeCornerFront1.obj" id="5_81c58"]
 [ext_resource type="ArrayMesh" uid="uid://5jesnubkb3hj" path="res://Models/Home Models/HomeCornerSide1.obj" id="6_lbf2q"]
+[ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="6_q5es3"]
 [ext_resource type="PackedScene" uid="uid://l4vcveksvjuf" path="res://Models/Sci-Fi City Assets/Household/Kitchen/Microwave.fbx" id="6_qugqs"]
 [ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="7_ikkyk"]
 [ext_resource type="ArrayMesh" uid="uid://cuxbkdh2p7h8r" path="res://Models/Home Models/HomeWallDoorFront.obj" id="7_tbp8t"]
@@ -76,8 +77,6 @@
 [ext_resource type="PackedScene" uid="uid://j7agfwvhdu8e" path="res://Scenes/Objects/model_ship.tscn" id="73_cnn02"]
 [ext_resource type="AudioStream" uid="uid://yyof2bae0dw8" path="res://Audio/Music/7816-nikki-dreams-of-pete-138.wav" id="73_eu82b"]
 [ext_resource type="PackedScene" uid="uid://buehq2t0ri4h4" path="res://Scenes/Objects/Jacklyn.tscn" id="79_1uut5"]
-[ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="84_ag1a6"]
-[ext_resource type="Texture2D" uid="uid://cyy5uemdlxc5e" path="res://Temp Textures/TempTextureRed.png" id="85_tbe1u"]
 
 [sub_resource type="Gradient" id="Gradient_jmdbl"]
 offsets = PackedFloat32Array(0, 0.00574713, 1)
@@ -3293,15 +3292,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lolgq")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fsvjr"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ewirn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5g6kv"]
-albedo_texture = ExtResource("85_tbe1u")
-
-[sub_resource type="BoxMesh" id="BoxMesh_wpvxa"]
-
 [node name="DreamLevelNode" type="Node3D" unique_id=1158064378]
 script = ExtResource("1_xk6i7")
 
@@ -3346,6 +3336,9 @@ autoplay = &"Light"
 [node name="AnimationPlayer Light2" type="AnimationPlayer" parent="." unique_id=1916250129]
 libraries/ = SubResource("AnimationLibrary_b1jxq")
 autoplay = &"Light 2"
+
+[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("6_q5es3")]
+transform = Transform3D(2.3383749, 0, 1.8793626, 0, 3, 0, -1.8793626, 0, 2.3383749, -4.13403, 0.2786914, -0.5167059)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1798851063]
 navigation_mesh = SubResource("NavigationMesh_1uut5")
@@ -5011,7 +5004,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Clutter/Ceiling light2" unique_id=1052369263]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 8.881784e-16, 0, -8.881784e-16, 0.1, 0, 0, -0.012094736)
-light_color = Color(0.8288509, 0.97474366, 1, 1)
+light_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_enabled = true
 shadow_blur = 10.0
 
@@ -5023,7 +5016,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Clutter/Ceiling light3" unique_id=732492756]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 8.881784e-16, 0, -8.881784e-16, 0.1, 0, 0, -0.012094736)
-light_color = Color(0.8288509, 0.97474366, 1, 1)
+light_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_enabled = true
 shadow_blur = 10.0
 
@@ -5035,7 +5028,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Clutter/Ceiling light4" unique_id=384638463]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 8.881784e-16, 0, -8.881784e-16, 0.1, 0, 0, -0.012094736)
-light_color = Color(0.8288509, 0.97474366, 1, 1)
+light_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_enabled = true
 shadow_blur = 10.0
 
@@ -5047,7 +5040,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Clutter/Ceiling light5" unique_id=1879079682]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 8.881784e-16, 0, -8.881784e-16, 0.1, 0, 0, -0.012094736)
-light_color = Color(0.8288509, 0.97474366, 1, 1)
+light_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_enabled = true
 shadow_blur = 10.0
 
@@ -5059,7 +5052,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Clutter/Ceiling light6" unique_id=1549933399]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 8.881784e-16, 0, -8.881784e-16, 0.1, 0, 0, -0.012094736)
-light_color = Color(0.8288509, 0.97474366, 1, 1)
+light_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_enabled = true
 shadow_blur = 10.0
 
@@ -5368,25 +5361,6 @@ stream = ExtResource("73_eu82b")
 volume_db = -10.0
 unit_size = 3.0
 autoplay = true
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2127555655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4220867, 1.4086688, 1.3471271)
-script = ExtResource("84_ag1a6")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1181884268]
-shape = SubResource("CapsuleShape3D_fsvjr")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=1369510476]
-mesh = SubResource("CapsuleMesh_ewirn")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=1520587371]
-transform = Transform3D(0.257562, 0, 0, 0, 0.294782, 0, 0, 0, 0.365385, -0.0754814, 0.407165, -0.527833)
-material_override = SubResource("StandardMaterial3D_5g6kv")
-mesh = SubResource("BoxMesh_wpvxa")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=1706965707]
-debug_enabled = true
 
 [node name="Jacklyn" parent="." unique_id=1126204711 instance=ExtResource("79_1uut5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.29066128, 0)

@@ -10463,11 +10463,12 @@ transform = Transform3D(-1.86198e-07, 0, -1, 0, 2.23101, 0, 4.25971, 0, -4.37114
 visible = false
 
 [node name="BaseSupplyNode3" parent="." unique_id=2115808974 node_paths=PackedStringArray("Interactable") instance=ExtResource("39_j32wl")]
-transform = Transform3D(0.2587183, 0, -0.96595293, 0, 1, 0, 0.96595293, 0, 0.2587183, 8.742257, 0.3704, 46.2881)
+transform = Transform3D(-1.0000001, 0, 0.00010430813, 0, 1, 0, -0.00010430813, 0, -1.0000001, 8.742257, 0.3704, 46.2881)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode3" unique_id=674146968 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode3" unique_id=674146968 node_paths=PackedStringArray("player", "trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
 
@@ -10479,8 +10480,9 @@ visible = false
 transform = Transform3D(0.835817, 0, -0.549008, 0, 1, 0, 0.549008, 0, 0.835817, 9.49916, 0.3704, 50.1585)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode2" unique_id=1419847884 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode2" unique_id=1419847884 node_paths=PackedStringArray("player", "trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
 
@@ -10492,8 +10494,9 @@ visible = false
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24.0996, 0.3704, 52.9606)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode" unique_id=109988063 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode" unique_id=109988063 node_paths=PackedStringArray("player", "trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
 
