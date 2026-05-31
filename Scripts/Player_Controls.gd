@@ -13,30 +13,44 @@ extends CharacterBody3D
 @export var arrive_dist: float = 0.1  #Keep this var above 1 if going below causes problems.
 @export var door_arrive_dist: float = 0.6
 
+@export var playerPOS := Vector3.ZERO
 var holding_click := false
 var sp: Vector3
 var ep: Vector3
 
 var _auto_move := false
+var anim_blend_value: float = 0.0
 
+func get_player_pos():
+	SceneSwitcher.PlayerSpawn = playerPOS
+
+func get_player_pos2():
+	Globals.HallwayPos = playerPOS
 
 func _ready() -> void:
 	if anim_tree != null:
 		anim_tree.active = true
 
 func _process(delta: float) -> void:
-	_update_animation()
+	_update_animation(delta)
+	playerPOS = global_position
 
-func _update_animation() -> void:
+func _update_animation(delta: float) -> void:
 	if anim_tree == null:
 		return
 
 	var horizontal_velocity := Vector3(velocity.x, 0.0, velocity.z)
 	var current_speed := horizontal_velocity.length()
 
-	var blend_value := clampf(current_speed / max_anim_speed, 0.0, 1.0)
+	var target_blend := clampf(current_speed / max_anim_speed, 0.0, 1.0)
 
-	anim_tree.set("parameters/BlendSpace1D/blend_position", blend_value)
+	anim_blend_value = lerpf(
+		anim_blend_value,
+		target_blend,
+		1.0 - exp(-10.0 * delta)
+	)
+
+	anim_tree.set("parameters/BlendSpace1D/blend_position", anim_blend_value)
 
 func _physics_process(delta: float) -> void:
 	if nav_agent == null:
@@ -211,6 +225,27 @@ func _move_through_door() -> void:
 
 	ep = Vector3.ZERO
 	sp = Vector3.ZERO
+
+func _pick_up() -> void:
+	Globals.PlayerControls = false
+	holding_click = false
+
+	if nav_agent != null:
+		nav_agent.target_position = global_position
+
+	velocity.x = 0.0
+	velocity.z = 0.0
+	move_and_slide()
+
+	if anim_tree != null:
+		anim_tree.set(
+			"parameters/OneShot/request",
+			AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		)
+
+	await get_tree().create_timer(2.5).timeout
+
+	Globals.PlayerControls = true
 
 func _wait_until_reached_flat(target_pos: Vector3, distance: float) -> void:
 	while true:

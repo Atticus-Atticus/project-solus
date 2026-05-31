@@ -8,6 +8,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c6endhqsfrs4y" path="res://Models/ShipMid.obj" id="3_ob1ly"]
 [ext_resource type="PackedScene" uid="uid://qkolvndo8c42" path="res://Scenes/Objects/CameraTrigger.tscn" id="4_0ue58"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="4_hm30d"]
+[ext_resource type="PackedScene" uid="uid://32a206g6l5m4" path="res://Scenes/Objects/Player.tscn" id="6_16q05"]
 [ext_resource type="ArrayMesh" uid="uid://cd7dbu82gvthi" path="res://Models/ShipWallPillar.obj" id="6_h0ehf"]
 [ext_resource type="ArrayMesh" uid="uid://bkk6rtjpeqsi4" path="res://Models/Dead Spacesuit.obj" id="6_q3os7"]
 [ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="9_0tnim"]
@@ -51,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://bmvpsxll4822e" path="res://Scenes/Objects/BrimpieAirLockInteractableObject.tscn" id="37_16q05"]
 [ext_resource type="PackedScene" uid="uid://b5x0bek64k7fe" path="res://Scenes/Objects/DeadSuitInteractableObject.tscn" id="38_16q05"]
 [ext_resource type="PackedScene" uid="uid://due1b5qs0ato5" path="res://Scenes/Objects/SuppliesObject BrimpieOrbital.tscn" id="39_j32wl"]
+[ext_resource type="PackedScene" uid="uid://bic0k4hwwokp7" path="res://Scenes/Objects/DatadriveCollectable2.tscn" id="40_nc512"]
 [ext_resource type="PackedScene" uid="uid://1pvu0r1u8xqr" path="res://Scenes/Objects/Terminal_Key_interactable.tscn" id="42_6yuml"]
 [ext_resource type="PackedScene" uid="uid://n138euj4n1ln" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Naomi Mutated.gltf" id="46_5bnk4"]
 [ext_resource type="Animation" uid="uid://dsyajnkide172" path="res://Models/PlayerModel/Naomi/Normal Naomi/NaomiIdle.res" id="47_ang11"]
@@ -75,7 +77,6 @@
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="70_qfmyx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="71_rq3pp"]
 [ext_resource type="Script" uid="uid://g7qv84wr1k2i" path="res://Scripts/FPSCounterScript.gd" id="72_7qrwl"]
-[ext_resource type="Script" uid="uid://rsfa8uy0eg3r" path="res://Scripts/ClickToMove.gd" id="73_04ajx"]
 [ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="73_6xaq1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_7ltme"]
@@ -1847,15 +1848,6 @@ _data = {
 &"RESET": SubResource("Animation_fbcwl")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_omuvx"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_3vw0k"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob3jv"]
-albedo_texture = ExtResource("20_ec7xs")
-
-[sub_resource type="BoxMesh" id="BoxMesh_qkdus"]
-
 [node name="StationLevelNode" type="Node3D" unique_id=1552572337]
 script = ExtResource("1_kk3li")
 
@@ -1868,6 +1860,9 @@ offset_bottom = -1.99988
 
 [node name="PauseMenu" parent="." unique_id=669066258 instance=ExtResource("4_hm30d")]
 visible = false
+
+[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("6_16q05")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.269115, 0.6417563, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1831314820]
 navigation_mesh = SubResource("NavigationMesh_7ltme")
@@ -10188,6 +10183,20 @@ trigger = NodePath("PointClickTriggerbox")
 transform = Transform3D(-1.059814, 0, 1.9212639, 0, 2.5079834, 0, -1.059814, 0, -1.9212642, 0.5643797, -1.6154139, -0.19116974)
 visible = false
 
+[node name="Datadrive" parent="Interactables" unique_id=1805117793 node_paths=PackedStringArray("interactable") instance=ExtResource("40_nc512")]
+transform = Transform3D(0.5015714, 0, 0.86511636, 0, 1, 0, -0.86511636, 0, 0.5015714, 11.035953, 0.3258977, 14.614185)
+interactable = NodePath("PickUpInteractableNode")
+
+[node name="PickUpInteractableNode" parent="Interactables/Datadrive" unique_id=627452967 node_paths=PackedStringArray("player", "trigger", "supply") instance=ExtResource("51_nc512")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../../Player")
+trigger = NodePath("PointClickTriggerbox")
+supply = NodePath("..")
+
+[node name="PointClickTriggerbox" parent="Interactables/Datadrive/PickUpInteractableNode" unique_id=2017096745 instance=ExtResource("36_16q05")]
+transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787e-07, 0, 1.4846928, -0.016270638, -0.22463441, 0.021848679)
+visible = false
+
 [node name="Lights" type="Node3D" parent="." unique_id=690806789]
 
 [node name="OverheadLight" parent="Lights" unique_id=912881794 instance=ExtResource("34_swfy8")]
@@ -10400,8 +10409,9 @@ environment = SubResource("Environment_1fsal")
 transform = Transform3D(-0.81245, 0, -0.5830308, 0, 1, 0, 0.5830308, 0, -0.81245, 20.128622, 0.3704, 15.605778)
 interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="Datadrive" unique_id=730359564 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="Datadrive" unique_id=730359564 node_paths=PackedStringArray("player", "trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
 
@@ -10410,11 +10420,12 @@ transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787
 visible = false
 
 [node name="Datadrive2" parent="." unique_id=1344101501 node_paths=PackedStringArray("interactable") instance=ExtResource("31_p8xer")]
-transform = Transform3D(-0.6960508, 0, 0.71799266, 0, 1, 0, -0.71799266, 0, -0.6960508, 13.938312, 0.3704, 38.47383)
+transform = Transform3D(-0.6960508, 0, 0.71799266, 0, 1, 0, -0.71799266, 0, -0.6960508, -0.4268694, 0.3704, -0.18303668)
 interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="Datadrive2" unique_id=270516573 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="Datadrive2" unique_id=270516573 node_paths=PackedStringArray("player", "trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
 
@@ -10455,7 +10466,7 @@ visible = false
 transform = Transform3D(0.2587183, 0, -0.96595293, 0, 1, 0, 0.96595293, 0, 0.2587183, 8.742257, 0.3704, 46.2881)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode3" unique_id=674146968 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode3" unique_id=674146968 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
@@ -10468,7 +10479,7 @@ visible = false
 transform = Transform3D(0.835817, 0, -0.549008, 0, 1, 0, 0.549008, 0, 0.835817, 9.49916, 0.3704, 50.1585)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode2" unique_id=1419847884 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode2" unique_id=1419847884 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
@@ -10481,7 +10492,7 @@ visible = false
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24.0996, 0.3704, 52.9606)
 Interactable = NodePath("PickUpInteractableNode")
 
-[node name="PickUpInteractableNode" parent="BaseSupplyNode" unique_id=109988063 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("51_nc512")]
+[node name="PickUpInteractableNode" parent="BaseSupplyNode" unique_id=109988063 node_paths=PackedStringArray("trigger", "supply") groups=["Supplies"] instance=ExtResource("51_nc512")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
 trigger = NodePath("PointClickTriggerbox")
 supply = NodePath("..")
@@ -10568,10 +10579,12 @@ texture_albedo = ExtResource("64_uir4v")
 [node name="Decal3" type="Decal" parent="." unique_id=336093651]
 transform = Transform3D(0.197015, -0.963635, 6.32059e-08, -0.171581, -0.0293417, -1.07301, 1.03959, 0.177777, -0.177097, 4.34859, 2.05643, 1.04183)
 texture_albedo = ExtResource("64_uir4v")
+modulate = Color(1, 1, 1, 0.2509804)
 
 [node name="Decal4" type="Decal" parent="." unique_id=1032187564]
 transform = Transform3D(-0.270652, -0.913256, -0.00664267, -0.297877, 0.0328844, -1.07938, 1.61493, -0.14699, -0.200206, 4.34859, 2.69516, 2.95163)
 texture_albedo = ExtResource("65_byp3d")
+modulate = Color(1, 1, 1, 0.101960786)
 
 [node name="Decal2" type="Decal" parent="." unique_id=1711845551]
 transform = Transform3D(-1.21411, 0.430059, -0.185444, 0.229125, -0.0811594, -0.982655, -0.601388, -0.899146, 1.46983e-08, 12.7768, 1.86733, 40.995)
@@ -10598,25 +10611,6 @@ script = ExtResource("72_7qrwl")
 transform = Transform3D(-0.50000006, 7.450581e-09, 4.656613e-08, -4.916257e-08, -0.07236805, -0.4947352, 1.4901161e-08, -0.4947352, 0.07236804, 8.848169, 3.2867682, 6.4754725)
 size = Vector3(2, 2.7471924, 2)
 texture_albedo = ExtResource("73_6xaq1")
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1884439796]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1987095, 1.5694714, 0.38362825)
-script = ExtResource("73_04ajx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2070832224]
-shape = SubResource("CapsuleShape3D_omuvx")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=1299004481]
-mesh = SubResource("CapsuleMesh_3vw0k")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=647094594]
-transform = Transform3D(0.257562, 0, 0, 0, 0.294782, 0, 0, 0, 0.365385, -0.0754814, 0.407165, -0.527833)
-material_override = SubResource("StandardMaterial3D_ob3jv")
-mesh = SubResource("BoxMesh_qkdus")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=472968043]
-debug_enabled = true
 
 [connection signal="body_entered" from="RunnerTrigger" to="RunnerTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="MutatedNaomi/Area3D" to="MutatedNaomi/Area3D" method="_on_body_entered"]

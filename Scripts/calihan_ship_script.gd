@@ -8,23 +8,19 @@ extends Node3D
 @onready var Return2Text: PackedScene = preload("res://Scenes/User Interface/Dialogue/Returned2DialogueBox.tscn")
 @onready var Act1End: PackedScene = preload("res://Scenes/User Interface/Dialogue/Control4DialogueBox.tscn")
 
+@export var player = CharacterBody3D
+
 var ending1 = 0
 var ending2 = 0
 var anim1 = 0
 var anim2 = 0
 
 func _ready() -> void:
-	#if SceneSwitcher.PlayerSpawn == null:
-		#var LoadedPlayer = LoadPlayer.instantiate()
-		#LoadedPlayer.scale *= 1.2
-		#add_child(LoadedPlayer)
-	#else:
-		#var LoadedPlayer = LoadPlayer.instantiate()
-		#LoadedPlayer.position = SceneSwitcher.PlayerSpawn
-		#LoadedPlayer.scale *= 1.2
-		#add_child(LoadedPlayer)
-		#$AirlockDoorSFX.play()
-	
+	Globals.StoryStage += 1
+
+	if SceneSwitcher.PlayerSpawn != null:
+		player.position = SceneSwitcher.PlayerSpawn
+
 	if Globals.StoryStage == 1:
 		var LoadedText = WakeUpText.instantiate()
 		add_child(LoadedText)
@@ -40,8 +36,8 @@ func _ready() -> void:
 	SceneSwitcher.Destination = 0
 	Globals.Destination = 0
 
-#func _on_child_exiting_tree(node: Node) -> void:
-	#$Player/CharacterBody3D.get_player_pos()
+func _on_child_exiting_tree(node: Node) -> void:
+	player.get_player_pos()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):

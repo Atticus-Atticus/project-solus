@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cilejrwsga1qn"]
 
-[ext_resource type="Script" uid="uid://byqillctj7b5q" path="res://Scripts/naomi_door_interactable_object_script.gd" id="1_ue4ye"]
+[ext_resource type="Script" uid="uid://dkf06ae1xf6kx" path="res://Scripts/naomi_door_interactable_object2.gd" id="1_ue4ye"]
 [ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_ue4ye"]
 [ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="3_51m3b"]
 

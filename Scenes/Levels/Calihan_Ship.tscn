@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://cvcmqnpc7y85y" path="res://Models/BlueFlightDeck_5.png" id="29_haile"]
 [ext_resource type="Texture2D" uid="uid://bf0gjdp2hyonk" path="res://Models/BlueFlightDeck_6.png" id="30_sc5i3"]
 [ext_resource type="ArrayMesh" uid="uid://ctvy800dsdqrd" path="res://Models/Clutter/ShipBed02.obj" id="31_kuegp"]
-[ext_resource type="PackedScene" uid="uid://bic0k4hwwokp7" path="res://Scenes/Objects/DatadriveCollectable2.tscn" id="32_dmpu4"]
 [ext_resource type="ArrayMesh" uid="uid://bxsc5y8uc2lbf" path="res://Models/Clutter/WallSpaceSuitLocker Empty.obj" id="33_sc3d8"]
 [ext_resource type="AudioStream" uid="uid://dpgsv6jijelku" path="res://Audio/Alarm.wav" id="35_b33vr"]
 [ext_resource type="AudioStream" uid="uid://cjxsb42x1rtvy" path="res://Audio/RadioStatic.wav" id="35_cc7cl"]
@@ -69,10 +68,7 @@
 [ext_resource type="Animation" uid="uid://l8oswunav2pu" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose2.res" id="65_e7rps"]
 [ext_resource type="Animation" uid="uid://bk28p3ffg26m1" path="res://Models/PlayerModel/Naomi/Mutated Naomi/Pose2.res" id="66_rfxxw"]
 [ext_resource type="Script" uid="uid://cp15oop081xga" path="res://Scripts/NaomiShip1_script.gd" id="67_gakp8"]
-[ext_resource type="Script" uid="uid://hmpxaqrd2dsf" path="res://Scripts/NaomiShip2_script.gd" id="68_fjes8"]
-[ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="68_rxu0r"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="73_y476v"]
-[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="75_884ru"]
 [ext_resource type="PackedScene" uid="uid://bcip6wcm5epgl" path="res://Scenes/Objects/overhead_light.tscn" id="76_ubtfw"]
 [ext_resource type="PackedScene" uid="uid://boq50wsqksfji" path="res://bonnie_2.tscn" id="79_s7ggu"]
 [ext_resource type="PackedScene" uid="uid://dvr87ic8py8yk" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp C.fbx" id="79_vap76"]
@@ -88,17 +84,8 @@
 [ext_resource type="Texture2D" uid="uid://doa1eghqxu6qa" path="res://The Attic/renovation-work.jpg" id="86_5mll0"]
 [ext_resource type="PackedScene" uid="uid://d3qdypxacup06" path="res://Scenes/Objects/ShipControlsInteractableObject.tscn" id="86_apxh6"]
 [ext_resource type="PackedScene" uid="uid://cqdffg8y5uuy5" path="res://Scenes/Objects/ShipDatabaseInteractableObject.tscn" id="87_2arjd"]
-[ext_resource type="PackedScene" uid="uid://lqm5fw4menpt" path="res://Scenes/Objects/PickUpInteractableObject.tscn" id="87_3mmbl"]
 [ext_resource type="Texture2D" uid="uid://6r87trpxkou7" path="res://Models/Clutter/NaomiPicture_0.png" id="89_apxh6"]
 [ext_resource type="Texture2D" uid="uid://dh6xv7uccnw3w" path="res://Models/Clutter/Pills_0.png" id="90_2arjd"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jysci"]
-shader = ExtResource("68_rxu0r")
-shader_parameter/shake_power = 0.04
-shader_parameter/shake_rate = 0.4
-shader_parameter/shake_speed = 10.0
-shader_parameter/shake_block_size = 15.0
-shader_parameter/shake_color_rate = 0.01
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_psc51"]
 panorama = ExtResource("37_jmocg")
@@ -2013,11 +2000,6 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1avul"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_umbca"]
-font = ExtResource("75_884ru")
-font_size = 75
-font_color = Color(1, 0, 0, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxpq6"]
 albedo_texture = ExtResource("56_nplmc")
 
@@ -2085,23 +2067,15 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="MainLevelNode" type="Node3D" unique_id=2133606017]
+[node name="MainLevelNode" type="Node3D" unique_id=2133606017 node_paths=PackedStringArray("player")]
 script = ExtResource("1_lxh1w")
+player = NodePath("Player")
 
 [node name="CRT Shader Static" parent="." unique_id=1729524824 instance=ExtResource("2_2ki0e")]
 visible = false
 
 [node name="CRT Shader FFW" parent="." unique_id=153307592 instance=ExtResource("3_uqbcu")]
 visible = false
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=2111263565]
-visible = false
-material = SubResource("ShaderMaterial_jysci")
-offset_left = 4.0
-offset_top = -4.0
-offset_right = 1924.0
-offset_bottom = 1076.0
-metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=584972622]
 visible = false
@@ -2143,6 +2117,9 @@ libraries/ = SubResource("AnimationLibrary_le012")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=766081844]
 stream = ExtResource("12_ysvwy")
+
+[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("14_2arjd")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -0.11689973, -1.5871134, 1.1602341)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=728206356]
 navigation_mesh = SubResource("NavigationMesh_5mll0")
@@ -3443,36 +3420,6 @@ script = ExtResource("67_gakp8")
 transform = Transform3D(0.350675, 0, -1.46023, 0, 1, 0, 0.331002, 0, 1.54702, -0.17611, 0.5, -1.51182)
 shape = SubResource("BoxShape3D_1avul")
 
-[node name="Naomi2" parent="." unique_id=156014508 instance=ExtResource("57_6kdkd")]
-transform = Transform3D(-3.19674, 0, 0.144325, 0, 3.2, 0, -0.144325, 0, -3.19674, 8.60112, -1.62546, -19.9014)
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Naomi2" unique_id=2075774451]
-libraries/MutatedNaomi = SubResource("AnimationLibrary_5clv1")
-autoplay = &"MutatedNaomi/Pose2 2"
-
-[node name="Area3D" type="Area3D" parent="Naomi2" unique_id=83464890]
-script = ExtResource("68_fjes8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Naomi2/Area3D" unique_id=609518302]
-transform = Transform3D(0.499877, 0, -0.161523, 0, 1, 0, 0.0275447, 0, 2.93131, -0.581655, 0.5, -1.8969)
-shape = SubResource("BoxShape3D_1avul")
-
-[node name="Label" type="Label" parent="Naomi2/Area3D" unique_id=1798640770]
-offset_left = 263.0
-offset_top = 156.0
-offset_right = 1289.0
-offset_bottom = 431.0
-text = "ERROR"
-label_settings = SubResource("LabelSettings_umbca")
-
-[node name="ColorRect2" type="ColorRect" parent="Naomi2/Area3D" unique_id=537610384]
-material = SubResource("ShaderMaterial_jysci")
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1922.0
-offset_bottom = 1078.0
-metadata/_edit_use_anchors_ = true
-
 [node name="SM_Prop_Security_Monitor_02" type="MeshInstance3D" parent="." unique_id=780683034]
 transform = Transform3D(0.81136, 0, 0.584547, 0, 1, 0, -0.584547, 0, 0.81136, 6.60612, 2.60122, -30.469)
 material_override = SubResource("StandardMaterial3D_fxpq6")
@@ -3578,8 +3525,9 @@ trigger = NodePath("PointClickTriggerbox")
 transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.014389992, -1.2003756, -0.57864046)
 visible = false
 
-[node name="CaliAirLockInteractableNode" parent="Interactables" unique_id=307779935 node_paths=PackedStringArray("trigger") instance=ExtResource("84_d0rsu")]
+[node name="CaliAirLockInteractableNode" parent="Interactables" unique_id=307779935 node_paths=PackedStringArray("player", "trigger") instance=ExtResource("84_d0rsu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.470846, 0.6355845, -13.755806)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 
 [node name="PointClickTriggerbox" parent="Interactables/CaliAirLockInteractableNode" unique_id=2089706211 instance=ExtResource("82_ydjyw")]
@@ -3610,19 +3558,6 @@ trigger = NodePath("PointClickTriggerbox")
 transform = Transform3D(1.1070039, 0, -1.2284218e-07, 0, 2.507983, 0, 8.940697e-08, 0, 1.6471347, -0.5533166, -1.2830311, 0.051504135)
 visible = false
 
-[node name="Datadrive" parent="Interactables" unique_id=1411369316 node_paths=PackedStringArray("interactable") instance=ExtResource("32_dmpu4")]
-transform = Transform3D(0.659936, 0, -0.751322, 0, 1, 0, 0.751322, 0, 0.659936, 11.4685, -1.6296, 0.0859425)
-interactable = NodePath("PickUpInteractableNode")
-
-[node name="PickUpInteractableNode" parent="Interactables/Datadrive" unique_id=1132969419 node_paths=PackedStringArray("trigger", "supply") instance=ExtResource("87_3mmbl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6662332, 0)
-trigger = NodePath("PointClickTriggerbox")
-supply = NodePath("..")
-
-[node name="PointClickTriggerbox" parent="Interactables/Datadrive/PickUpInteractableNode" unique_id=2081314309 instance=ExtResource("82_ydjyw")]
-transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787e-07, 0, 1.4846928, -0.016270638, -0.22463441, 0.021848679)
-visible = false
-
 [node name="Lamp C" parent="." unique_id=2083170397 instance=ExtResource("79_vap76")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.023799121, 0.0980523, 3.90523)
 
@@ -3639,10 +3574,6 @@ transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -
 size = Vector3(2, 2.7471924, 2)
 texture_albedo = ExtResource("86_5mll0")
 
-[node name="Player" parent="." unique_id=1048792437 instance=ExtResource("14_2arjd")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.0858226, -1.4440655, 0)
-
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Naomi/Area3D" to="Naomi/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Naomi2/Area3D" to="Naomi2/Area3D" method="_on_body_entered"]
