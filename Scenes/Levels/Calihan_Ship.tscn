@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dg7f512r26icg" path="res://Scenes/Objects/LeaveShipAirlockObject.tscn" id="4_xht7j"]
 [ext_resource type="PackedScene" uid="uid://n40070ndqw30" path="res://Scenes/User Interface/HUD/HUD.tscn" id="4_y61xs"]
 [ext_resource type="ArrayMesh" uid="uid://df4vwhqnfj2qb" path="res://Models/ShipWallBase.obj" id="5_bjwp5"]
-[ext_resource type="PackedScene" uid="uid://b2oorbwd64fjm" path="res://Scenes/User Interface/System Maps/System Map - Brimpie.tscn" id="5_lr73c"]
 [ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="6_8ouc5"]
 [ext_resource type="PackedScene" uid="uid://cq7mjo8ve435w" path="res://Scenes/User Interface/HUD/HUD2.tscn" id="7_hykaw"]
 [ext_resource type="ArrayMesh" uid="uid://bh8gmj8mknr28" path="res://Models/Clutter/TrashBag.obj" id="8_8mb34"]
@@ -2084,7 +2083,6 @@ offset_bottom = 1078.0
 color = Color(0, 0, 0, 0)
 
 [node name="CRT Shader" parent="." unique_id=276973089 instance=ExtResource("1_6b51t")]
-visible = false
 
 [node name="HUD" parent="." unique_id=543915682 instance=ExtResource("4_y61xs")]
 
@@ -2092,9 +2090,6 @@ visible = false
 visible = false
 
 [node name="PointerNode" parent="." unique_id=2002571874 instance=ExtResource("9_8yw1e")]
-
-[node name="SystemScreen" parent="." unique_id=1471003602 instance=ExtResource("5_lr73c")]
-visible = false
 
 [node name="PauseMenu" parent="." unique_id=1133616610 instance=ExtResource("4_tt708")]
 visible = false

@@ -31,7 +31,6 @@ func _ready() -> void:
 	if anim_tree != null:
 		anim_tree.active = true
 
-	Globals.PlayerControls = true
 	_stop_movement()
 
 
@@ -42,6 +41,10 @@ func _stop_movement() -> void:
 	velocity = Vector3.ZERO
 
 	if nav_agent != null:
+		nav_agent.target_position = global_position
+
+		# Optional but useful: force the agent to forget old pathing
+		await get_tree().physics_frame
 		nav_agent.target_position = global_position
 
 func _process(delta: float) -> void:

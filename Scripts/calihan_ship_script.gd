@@ -18,6 +18,8 @@ var anim2 = 0
 func _ready() -> void:
 	Globals.StoryStage += 1
 
+	player._stop_movement()
+
 	if SceneSwitcher.PlayerSpawn != null:
 		player.position = SceneSwitcher.PlayerSpawn
 
@@ -43,11 +45,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):
 		pausemenu()
 
-	if Globals.ShipMenu == true:
-		$SystemScreen.show()
-
-	if Globals.ShipMenu == false:
-		$SystemScreen.hide()
+	#if Globals.ShipMenu == true:
+		#$SystemScreen.show()
+#
+	#if Globals.ShipMenu == false:
+		#$SystemScreen.hide()
 
 	if Globals.StoryStage == 8 and ending1 == 0:
 		ending1 = 1

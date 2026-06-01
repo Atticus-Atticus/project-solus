@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cdlj7sf16324x" path="res://Models/SkyBox/panorama_image.png" id="3_iurxr"]
 [ext_resource type="AudioStream" uid="uid://ckbsjd3wrfn4" path="res://Audio/ShipAmbience3.wav" id="4_2vldr"]
 [ext_resource type="AudioStream" uid="uid://dpgsv6jijelku" path="res://Audio/Alarm.wav" id="5_qh30q"]
+[ext_resource type="PackedScene" uid="uid://b37xdlnhpcfqx" path="res://Models/Ship Interfaces/DataBaseTerminal.glb" id="6_cvw3e"]
 [ext_resource type="PackedScene" uid="uid://gau34na8j31t" path="res://Scenes/User Interface/Menus/DataBaseMenu.tscn" id="6_qh30q"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="7_cvw3e"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
 resource_local_to_scene = true
@@ -24,6 +26,44 @@ ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.0
 reflected_light_source = 2
 
+[sub_resource type="Animation" id="Animation_0a1b7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ylw8o"]
+resource_name = "blinking"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cvw3e"]
+_data = {
+&"RESET": SubResource("Animation_0a1b7"),
+&"blinking": SubResource("Animation_ylw8o")
+}
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_57sr1"]
 viewport_path = NodePath("MeshInstance3D2/SubViewport")
 
@@ -35,14 +75,59 @@ albedo_texture = SubResource("ViewportTexture_57sr1")
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ma8rn")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fsbnf"]
+shader = ExtResource("7_cvw3e")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.2
+shader_parameter/scanlines_opacity = 0.01
+shader_parameter/scanlines_width = 0.5
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 1.653
+shader_parameter/roll_variation = 4.453
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01
+shader_parameter/noise_opacity = 0.047
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.10000000475
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="Database Terminal" type="Node3D" unique_id=1790285260]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
-transform = Transform3D(17.1, 0, 0, 0, 22, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(100.85476, 0, 0, 0, 66.294365, 0, 0, 0, 0.1, -43.88458, -6.9875364, -14)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=117026714]
+transform = Transform3D(100.85476, 0, 0, 0, 46.222233, 0, 0, 0, 0.1, 49.792873, -26.74299, -14)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=84650807]
+transform = Transform3D(100.85476, 0, 0, 0, 46.222233, 0, 0, 0, 0.1, 49.792873, 37.8206, -14)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=561351302]
+transform = Transform3D(77.259224, 2.9711065, 0, -64.82818, 3.5408268, 0, 0, 0, 0.099999994, 26.792873, 8.493347, -14)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1603491577]
+transform = Transform3D(63.466805, 0, 0.062928915, 0, 66.29436, 0, -63.466797, 0, 0.062928915, -25.908401, -6.9875364, -6.141552)
+mesh = SubResource("BoxMesh_8jb2r")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=186519207]
+transform = Transform3D(1.1444092e-05, 0, 0.099999994, 0, 66.294365, 0, -100.85475, 0, -3.7252903e-09, -32.2499, -6.9875364, -14)
 mesh = SubResource("BoxMesh_8jb2r")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.55944)
+transform = Transform3D(1, 0, 0, 0, 0.9959144, -0.090302326, 0, 0.090302326, 0.9959144, 0, -0.85845065, 6.1744523)
+fov = 90.0
 script = ExtResource("2_jbjl1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2102990598]
@@ -53,13 +138,34 @@ shadow_enabled = true
 environment = SubResource("Environment_fwuq5")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=213314888]
-transform = Transform3D(1, 0, 0, 0, 0.843588, 0.53699, 0, -0.53699, 0.843588, 0.155885, 2.14552, 3.30418)
+transform = Transform3D(1, 0, 0, 0, 0.4955044, 0.8686055, 0, -0.8686055, 0.4955044, 0.155885, 8.022769, 11.30418)
+light_color = Color(0.8666667, 0.94509804, 1, 1)
 light_energy = 4.0
 spot_range = 86.3607
 spot_angle = 87.1875
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=343399669]
+transform = Transform3D(1, 0, 0, 0, 0.99998665, 0.0051833093, 0, -0.0051833093, 0.99998665, 0.155885, -6.2492, 27.3992)
+spot_range = 86.3607
+spot_angle = 87.1875
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1487121683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.166815, -7.09955, 0.91788983)
+light_color = Color(0.4, 1, 0.941176, 1)
+omni_range = 2.5061316
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1700961043]
+transform = Transform3D(-1, -6.303582e-15, 2.9802322e-08, 3.6981797e-15, -1, -8.742279e-08, 2.9802322e-08, -8.742279e-08, 1, -0.101043314, 0.88450277, 4.851347)
+light_color = Color(0.4, 1, 0.941176, 1)
+spot_range = 53.383766
+spot_angle = 57.656246
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=132564780]
+libraries/ = SubResource("AnimationLibrary_cvw3e")
+autoplay = &"blinking"
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=951545218]
-transform = Transform3D(11, 0, 0, 0, 7.3008, 0, 0, 0, 1.873, -0.0160968, 0.2518201, 0.0961626)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.562, -0.1)
 mesh = SubResource("QuadMesh_sv2o5")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D2" unique_id=1758224256]
@@ -73,3 +179,12 @@ autoplay = true
 
 [node name="Alarm" type="AudioStreamPlayer" parent="." unique_id=1352884808]
 stream = ExtResource("5_qh30q")
+
+[node name="blockbench_export" parent="." unique_id=1735192381 instance=ExtResource("6_cvw3e")]
+transform = Transform3D(-9, 0, 1.3589622e-06, 0, 9, 0, -1.3589622e-06, 0, -9, 0, -8, -7)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1522481106]
+material = SubResource("ShaderMaterial_fsbnf")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
