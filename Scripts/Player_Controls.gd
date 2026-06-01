@@ -31,6 +31,19 @@ func _ready() -> void:
 	if anim_tree != null:
 		anim_tree.active = true
 
+	Globals.PlayerControls = true
+	_stop_movement()
+
+
+func _stop_movement() -> void:
+	holding_click = false
+	_auto_move = false
+
+	velocity = Vector3.ZERO
+
+	if nav_agent != null:
+		nav_agent.target_position = global_position
+
 func _process(delta: float) -> void:
 	_update_animation(delta)
 	playerPOS = global_position
