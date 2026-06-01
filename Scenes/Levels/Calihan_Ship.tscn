@@ -3550,8 +3550,9 @@ trigger = NodePath("PointClickTriggerbox")
 transform = Transform3D(1.1070039, 0, -1.7881393e-07, 0, 2.507983, 0, 8.940697e-08, 0, 2.3976345, 0.42110348, -1.2003756, 0.051504135)
 visible = false
 
-[node name="ShipDatabaseInteractableNode" parent="Interactables" unique_id=803564185 node_paths=PackedStringArray("trigger") instance=ExtResource("87_2arjd")]
+[node name="ShipDatabaseInteractableNode" parent="Interactables" unique_id=803564185 node_paths=PackedStringArray("player", "trigger") instance=ExtResource("87_2arjd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.179261, 0.71472, -24.044226)
+player = NodePath("../../Player")
 trigger = NodePath("PointClickTriggerbox")
 
 [node name="PointClickTriggerbox" parent="Interactables/ShipDatabaseInteractableNode" unique_id=1072703894 instance=ExtResource("82_ydjyw")]

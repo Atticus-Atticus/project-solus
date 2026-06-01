@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bctq48rhw4beb"
-path.s3tc="res://.godot/imported/CalihanModel_4.png-0981de1ac9c83b676a3f64607ef68f3f.s3tc.ctex"
+path.bptc="res://.godot/imported/CalihanModel_4.png-0981de1ac9c83b676a3f64607ef68f3f.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -15,12 +15,12 @@ generator_parameters={
 [deps]
 
 source_file="res://Models/PlayerModel/CalihanMark2/CalihanModel_4.png"
-dest_files=["res://.godot/imported/CalihanModel_4.png-0981de1ac9c83b676a3f64607ef68f3f.s3tc.ctex"]
+dest_files=["res://.godot/imported/CalihanModel_4.png-0981de1ac9c83b676a3f64607ef68f3f.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

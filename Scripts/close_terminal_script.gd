@@ -9,4 +9,4 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	$"../../../ChangeMenuSFX".play()
 	Globals.PlayerControls = true
-	$"../../..".queue_free()
+	get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")

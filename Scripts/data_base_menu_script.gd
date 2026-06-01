@@ -45,4 +45,4 @@ func _process(delta: float) -> void:
 		Globals.PlayerControls = true
 		$".".queue_free()
 
-	cursor.position = get_global_mouse_position()
+	#cursor.position = get_global_mouse_position()

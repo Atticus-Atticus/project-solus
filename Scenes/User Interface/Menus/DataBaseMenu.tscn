@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" uid="uid://rayt1edgi1js" path="res://Scripts/data_base_menu_script.gd" id="1_wy1b0"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_jbfp7"]
-[ext_resource type="Shader" uid="uid://bd8o4dwtxkvgg" path="res://Shaders/PauseMenuBackground.gdshader" id="3_u8oml"]
 [ext_resource type="Script" uid="uid://35otybe1lta8" path="res://Scripts/keysfound_script.gd" id="5_oplpb"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_qh6do"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="6_vjryu"]
 [ext_resource type="Script" uid="uid://c3xwwyhm8i22i" path="res://Scripts/calihanrecord_script.gd" id="7_vkhjs"]
+[ext_resource type="Script" uid="uid://bhrtide0tu5ld" path="res://Scripts/DatabaseAreaScript.gd" id="8_7vr1g"]
 [ext_resource type="Script" uid="uid://3cp6o5chwtch" path="res://Scripts/naomirecord_script.gd" id="8_ag15j"]
 [ext_resource type="Script" uid="uid://dfos8bq4fpwap" path="res://Scripts/DatabaseButtonScript.gd" id="8_s6gd0"]
 [ext_resource type="Script" uid="uid://dflikoq3mt6a1" path="res://Scripts/close_terminal_script.gd" id="10_l4klt"]
 [ext_resource type="Script" uid="uid://cd741y4ug3at7" path="res://Scenes/User Interface/Menus/encryption_file_script.gd" id="10_pb4xb"]
 [ext_resource type="Script" uid="uid://c6mh6b02oashj" path="res://Scripts/database_x_button.gd" id="10_qpogf"]
 [ext_resource type="Script" uid="uid://doy30lfwxndwu" path="res://Scripts/Lore1ButtonScript.gd" id="11_wu2jc"]
+[ext_resource type="Script" uid="uid://c8krj04byhf6f" path="res://Scripts/DatabaseForCalihanScript.gd" id="12_4wsr3"]
 [ext_resource type="Script" uid="uid://cl66dth3kstbr" path="res://Scripts/lore_2_script.gd" id="12_a7ju5"]
 [ext_resource type="Script" uid="uid://c8qnbklup44pa" path="res://Scripts/lore_3_script.gd" id="13_667g6"]
 [ext_resource type="Script" uid="uid://da06dyygi1ufn" path="res://Scripts/neuro_blackbox_button_script.gd" id="13_tlba5"]
@@ -26,13 +27,48 @@
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="20_q0khx"]
 [ext_resource type="Script" uid="uid://cfefmha4jn7dt" path="res://Scripts/life_beyond_scale_10.gd" id="20_v1oxy"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="21_pcyv2"]
-[ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="22_rlyqr"]
-[ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="23_d1qpe"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="24_tl14l"]
+[ext_resource type="Script" uid="uid://ds5746vgbil60" path="res://Scripts/Database_cursor.gd" id="26_ex575"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="29_4wsr3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wsr3"]
+size = Vector2(41, 52.834778)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vr1g"]
+size = Vector2(24, 30)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8c0vo"]
-shader = ExtResource("3_u8oml")
-shader_parameter/amount = 0.0
+shader = ExtResource("29_4wsr3")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.10000000475
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 8.6000004085
+shader_parameter/roll_variation = 2.3480001082701203
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01000004797499998
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.10000000475
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.2000000095
+
+[sub_resource type="Environment" id="Environment_4wsr3"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
 
 [node name="Database Menu" type="Control" unique_id=698585151]
 layout_mode = 3
@@ -47,16 +83,6 @@ script = ExtResource("1_wy1b0")
 position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("2_jbfp7")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=542616222]
-visible = false
-material = SubResource("ShaderMaterial_8c0vo")
-layout_mode = 0
-offset_left = -68.0
-offset_top = -38.0
-offset_right = 2005.0
-offset_bottom = 1114.0
-color = Color(0, 0.0705882, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=59243286]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -132,11 +158,29 @@ text = "Solarian Coalition Personnel Record - Calihan Lonan"
 alignment = 0
 script = ExtResource("7_vkhjs")
 
+[node name="Area2D" type="Area2D" parent="MarginContainer/VBoxContainer/Calihan" unique_id=448421905]
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/VBoxContainer/Calihan/Area2D" unique_id=2130326385]
+position = Vector2(508, 14.000183)
+scale = Vector2(24.880001, 0.52)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Naomi" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1205210580]
 layout_mode = 2
 text = "Solarian Coalition Personnel Record - Naomi Lonan-Roseberry"
 alignment = 0
 script = ExtResource("8_ag15j")
+
+[node name="Area2D" type="Area2D" parent="MarginContainer/VBoxContainer/Naomi" unique_id=1017316228]
+position = Vector2(-1.9999924, 0.00018310547)
+scale = Vector2(1.1600013, 1)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/VBoxContainer/Naomi/Area2D" unique_id=1004815642]
+position = Vector2(456.03397, 14)
+scale = Vector2(22.017933, 0.52)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Database" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1100619355]
 layout_mode = 2
@@ -144,12 +188,30 @@ text = "Database"
 alignment = 0
 script = ExtResource("8_s6gd0")
 
+[node name="Area2D" type="Area2D" parent="MarginContainer/VBoxContainer/Database" unique_id=1210092587]
+scale = Vector2(0.16000003, 1)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/VBoxContainer/Database/Area2D" unique_id=2133751436]
+position = Vector2(508, 14.000183)
+scale = Vector2(24.880001, 0.52)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="EncryptionFile" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1087369088]
 layout_mode = 2
 disabled = true
 text = "For_Calihan.txt"
 alignment = 0
 script = ExtResource("10_pb4xb")
+
+[node name="Area2D" type="Area2D" parent="MarginContainer/VBoxContainer/EncryptionFile" unique_id=1928974506]
+scale = Vector2(0.3199988, 1.16)
+script = ExtResource("12_4wsr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/VBoxContainer/EncryptionFile/Area2D" unique_id=1105478912]
+position = Vector2(508, 14.000183)
+scale = Vector2(24.880001, 0.52)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=439206893]
 layout_mode = 1
@@ -181,12 +243,21 @@ text = "Click here to shut down terminal"
 alignment = 0
 script = ExtResource("10_l4klt")
 
+[node name="Area2D" type="Area2D" parent="MarginContainer2/VBoxContainer/CloseTerminal" unique_id=2068371730]
+scale = Vector2(0.6400006, 1)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer2/VBoxContainer/CloseTerminal/Area2D" unique_id=218369935]
+position = Vector2(508, 14.000183)
+scale = Vector2(24.880001, 0.52)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="DatabasePanel" type="Panel" parent="." unique_id=689416855]
 visible = false
 layout_mode = 0
-offset_left = 625.0
+offset_left = 1178.0
 offset_top = 101.0
-offset_right = 1335.0
+offset_right = 1888.0
 offset_bottom = 972.0
 theme = ExtResource("6_vjryu")
 
@@ -201,6 +272,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("10_qpogf")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/X Button" unique_id=1666931913]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/X Button/Area2D" unique_id=1449023833]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="MarginContainer" type="MarginContainer" parent="DatabasePanel" unique_id=1894313832]
 layout_mode = 1
@@ -232,12 +312,31 @@ text = "Neurological Blackboxes"
 alignment = 0
 script = ExtResource("13_tlba5")
 
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" unique_id=1703219100]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0/Area2D" unique_id=1673580871]
+position = Vector2(5699.997, 6.886528)
+scale = Vector2(-277.12637, -0.2652909)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="FotN 1" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=688643060]
 layout_mode = 2
 disabled = true
 text = "Festival of the Nova"
 alignment = 0
 script = ExtResource("11_wu2jc")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" unique_id=1137317802]
+position = Vector2(0, 3.497589)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/FotN 1/Area2D" unique_id=1072327516]
+position = Vector2(5124.997, 6.632656)
+scale = Vector2(-246.12639, -0.2652909)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="FCC 2" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1807297793]
 layout_mode = 2
@@ -246,11 +345,33 @@ text = "Farseeing Courier Company"
 alignment = 0
 script = ExtResource("12_a7ju5")
 
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" unique_id=717936715]
+position = Vector2(0, 3.497589)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/FCC 2/Area2D" unique_id=1819660736]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Cali1 3" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1441320394]
 layout_mode = 2
 text = "Calihan Journal Entry 1"
 alignment = 0
 script = ExtResource("13_667g6")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" unique_id=1283313809]
+position = Vector2(0, -2.502411)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3/Area2D" unique_id=1858768274]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Cali2 4" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1949023277]
 layout_mode = 2
@@ -259,11 +380,33 @@ text = "Calihan Journal Entry 2
 alignment = 0
 script = ExtResource("14_dx833")
 
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" unique_id=625657835]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4/Area2D" unique_id=1238871670]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="ReadMe 5" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1549372494]
 layout_mode = 2
 text = "ListenClosely.wav"
 alignment = 0
 script = ExtResource("15_fgpow")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" unique_id=798450189]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5/Area2D" unique_id=394597381]
+position = Vector2(4249.998, 7.1428595)
+rotation = -3.1415925
+scale = Vector2(205.56175, 0.306104)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Cali3 6" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=38178924]
 layout_mode = 2
@@ -271,6 +414,17 @@ text = "Calihan Journal Entry 3
 "
 alignment = 0
 script = ExtResource("16_75qe2")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" unique_id=1106258041]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6/Area2D" unique_id=1529557709]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="AbndShip 7" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=215276551]
 layout_mode = 2
@@ -280,6 +434,17 @@ text = "Abandoned ship's log
 alignment = 0
 script = ExtResource("17_sdvkq")
 
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" unique_id=593758092]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7/Area2D" unique_id=270249952]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Brimpie Orb 8" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=561496633]
 layout_mode = 2
 disabled = true
@@ -288,12 +453,34 @@ text = "Brimpie Orbital Log
 alignment = 0
 script = ExtResource("18_r7p8c")
 
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" unique_id=963981237]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8/Area2D" unique_id=1677207292]
+position = Vector2(6324.997, 7.219589)
+rotation = -3.1415925
+scale = Vector2(305.12637, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Simulation 9" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=1047632342]
 layout_mode = 2
 disabled = true
 text = "The Numbers behind the stars"
 alignment = 0
 script = ExtResource("19_rn5ta")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" unique_id=922381707]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9/Area2D" unique_id=1322605883]
+position = Vector2(7074.9966, 8.163267)
+rotation = -3.1415925
+scale = Vector2(341.12613, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="LifeBeyondScale 10" type="Button" parent="DatabasePanel/MarginContainer/VBoxContainer" unique_id=355676959]
 layout_mode = 2
@@ -302,6 +489,17 @@ text = "Life beyond scale
 "
 alignment = 0
 script = ExtResource("20_v1oxy")
+
+[node name="Area2D" type="Area2D" parent="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" unique_id=1421793564]
+position = Vector2(0, -1.5024109)
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10/Area2D" unique_id=621255481]
+position = Vector2(4324.9976, 9.183669)
+rotation = -3.1415925
+scale = Vector2(207.12656, 0.30610722)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="CalihanPanel" type="Panel" parent="." unique_id=107449489]
 visible = false
@@ -323,6 +521,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="CalihanPanel/X Button" unique_id=1477865245]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CalihanPanel/X Button/Area2D" unique_id=1999083341]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="CalihanPanel" unique_id=1779742725]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -391,6 +598,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="NaomiPanel/X Button" unique_id=63938034]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NaomiPanel/X Button/Area2D" unique_id=1772068015]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="NaomiPanel" unique_id=1566146898]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -455,6 +671,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="SecretPanel/X Button" unique_id=1446066348]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecretPanel/X Button/Area2D" unique_id=1076044378]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="SecretPanel" unique_id=1843217611]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -525,6 +750,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="ForCalihanPanel/X Button" unique_id=1473776947]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForCalihanPanel/X Button/Area2D" unique_id=1603497273]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="ForCalihanPanel" unique_id=637337750]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -583,6 +817,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel0/X Button" unique_id=1787235502]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel0/X Button/Area2D" unique_id=1397705307]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel0" unique_id=592363843]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -636,6 +879,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="LorePanel1/X Button" unique_id=1974907122]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel1/X Button/Area2D" unique_id=29460722]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel1" unique_id=572887717]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -697,6 +949,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel2/X Button" unique_id=436359630]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel2/X Button/Area2D" unique_id=252527732]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel2" unique_id=1430561231]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -752,6 +1013,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel3/X Button" unique_id=804530551]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel3/X Button/Area2D" unique_id=122875494]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel3" unique_id=1481547398]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -803,6 +1073,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="LorePanel4/X Button" unique_id=844607038]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel4/X Button/Area2D" unique_id=399400478]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel4" unique_id=1719079136]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -861,6 +1140,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel5/X Button" unique_id=1143532658]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel5/X Button/Area2D" unique_id=1290277345]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel5" unique_id=431137221]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -887,7 +1175,7 @@ Any individuals showing these symptoms must be isolated and transported to the n
 zone for treatement.
 
 This new type of radiation cannot seem to penetrate the metal alloys used in ships, stations and 
-EVA suits. This means anyone who isn’t inside a ship or station, or wearing an EVA is at risk of 
+EVA suits. This means anyone who isn’t inside a ship or station or wearing an EVA suit is at risk of 
 exposure, even on inhabited worlds. Scans on a nearby planet inidicate that the radiation can
 affect the very air we breathe.
 
@@ -926,6 +1214,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="LorePanel6/X Button" unique_id=443112738]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel6/X Button/Area2D" unique_id=1729323061]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel6" unique_id=925663719]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -989,6 +1286,15 @@ grow_horizontal = 0
 theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
+
+[node name="Area2D" type="Area2D" parent="LorePanel7/X Button" unique_id=4903518]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel7/X Button/Area2D" unique_id=422414686]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel7" unique_id=286927949]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -1055,6 +1361,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel8/X Button" unique_id=200776969]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel8/X Button/Area2D" unique_id=1426192605]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel8" unique_id=1055750278]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -1115,6 +1430,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel9/X Button" unique_id=818118433]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel9/X Button/Area2D" unique_id=874878101]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel9" unique_id=38903479]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -1136,13 +1460,13 @@ seems to appear.
 Citizens across different systems, cultures, and professions have quietly
 reported recurring numbers. For example: 1123, 3344, 512, 907.
 These numbers are seen everywhere from starship diagnostic codes, 
-personal ID tages, planetary soil analyses, and even in
+personal ID numbers, planetary soil analyses, and even in
 digitized genetic helix sequences.
 
 A growing theory among philosophers suggests that such reptitions may not be
 random at all. But instead the echoes of computational processes.
 Their argument? That existance and the universe itself may be a simulation
-of immense complexity, and these numbers are the residue of virtual 
+of immense complexity and these numbers are the residue of virtual 
 scaffolding, bleeding into observable space.
 
 We may never be able to prove such a theory true or not, but new questions
@@ -1175,6 +1499,15 @@ theme = ExtResource("6_vjryu")
 text = "X"
 script = ExtResource("19_k3cli")
 
+[node name="Area2D" type="Area2D" parent="LorePanel10/X Button" unique_id=1014307230]
+scale = Vector2(0.04000002, 1.96)
+script = ExtResource("8_7vr1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel10/X Button/Area2D" unique_id=587857467]
+position = Vector2(699.9982, 14.285717)
+scale = Vector2(-18.132153, 0.3254704)
+shape = SubResource("RectangleShape2D_4wsr3")
+
 [node name="Label" type="Label" parent="LorePanel10" unique_id=1770509678]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
@@ -1191,9 +1524,9 @@ By Dr. Halena Myrr
 Published in The Solarian Observer
 
 We spend much of our time searching for life we can understand.
-Biological signatures, heat patterns, or transmissions.
+Biological signatures, heat patterns or transmissions.
 But what if the greatest threat to our continued existence does not seek us
-out, does not communicate, or may not even know we exist?
+out, does not communicate or may not even know we exist?
 
 Recent gravitational anomalies near the outskirts of the VX-00907 system and 
 the VX-66458 system have led some in the scientific community to revisit an 
@@ -1202,10 +1535,10 @@ vast, so fundamentally different in structure and perception, that our
 existence registers to them no more than bacteria does to us.
 
 Such macrocosmic lifeforms, if they exist, would not be bound to the scale 
-of flesh and matter, but prehaps to gravity wells, stellar currents, or even
-dark matter flows. They would not invade, nor attack.
+of flesh and matter, but prehaps to gravity wells, stellar currents or even
+dark matter flows. They would not invade or attack.
 They would simply move and in doing so, perhaps rupture the fabric of space,
-extinguish stars, or collapse civilizations without intent, without malice,
+extinguish stars, or collapse civilizations without intent, without malice
 and without ever knowing they were there.
 
 The unsettling truth: we may not be actors on the galactic stage, 
@@ -1215,87 +1548,96 @@ And if we are crushed beneath such a being, it wouldn't be war.
 It would be indifference."
 label_settings = ExtResource("20_q0khx")
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=138610122]
-position = Vector2(60, 1367)
+[node name="Cursor" type="CharacterBody2D" parent="." unique_id=1497983678]
+position = Vector2(1060, 754)
+script = ExtResource("26_ex575")
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="Cursor" unique_id=138610122]
 texture = ExtResource("21_pcyv2")
 
-[node name="CRT Shader2" parent="." unique_id=39602826 instance=ExtResource("22_rlyqr")]
-visible = false
-layout_mode = 1
-mouse_filter = 2
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor" unique_id=909536506]
+position = Vector2(2, 3)
+scale = Vector2(0.55967903, 0.46378136)
+shape = SubResource("RectangleShape2D_7vr1g")
 
-[node name="CRT Shader" parent="." unique_id=463006829 instance=ExtResource("23_d1qpe")]
-visible = false
+[node name="ColorRect" type="ColorRect" parent="." unique_id=542616222]
+material = SubResource("ShaderMaterial_8c0vo")
 layout_mode = 0
-offset_right = 396.0
-offset_bottom = 141.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0.0705882, 0, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1660444356]
+environment = SubResource("Environment_4wsr3")
 
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=1215288909]
 stream = ExtResource("24_tl14l")
 volume_db = -2.0
 autoplay = true
 
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Calihan" to="MarginContainer/VBoxContainer/Calihan" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Naomi" to="MarginContainer/VBoxContainer/Naomi" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Database" to="MarginContainer/VBoxContainer/Database" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/EncryptionFile" to="MarginContainer/VBoxContainer/EncryptionFile" method="_on_pressed"]
+[connection signal="body_entered" from="MarginContainer/VBoxContainer/Calihan/Area2D" to="MarginContainer/VBoxContainer/Calihan/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="MarginContainer/VBoxContainer/Calihan/Area2D" to="MarginContainer/VBoxContainer/Calihan/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="MarginContainer/VBoxContainer/Naomi/Area2D" to="MarginContainer/VBoxContainer/Naomi/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="MarginContainer/VBoxContainer/Naomi/Area2D" to="MarginContainer/VBoxContainer/Naomi/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="MarginContainer/VBoxContainer/Database/Area2D" to="MarginContainer/VBoxContainer/Database/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="MarginContainer/VBoxContainer/Database/Area2D" to="MarginContainer/VBoxContainer/Database/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="MarginContainer/VBoxContainer/EncryptionFile/Area2D" to="MarginContainer/VBoxContainer/EncryptionFile/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="MarginContainer/VBoxContainer/EncryptionFile/Area2D" to="MarginContainer/VBoxContainer/EncryptionFile/Area2D" method="_on_body_exited"]
 [connection signal="mouse_entered" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/CloseTerminal" to="MarginContainer2/VBoxContainer/CloseTerminal" method="_on_pressed"]
-[connection signal="pressed" from="DatabasePanel/X Button" to="DatabasePanel/X Button" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9" method="_on_pressed"]
-[connection signal="mouse_entered" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_mouse_exited"]
-[connection signal="pressed" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10" method="_on_pressed"]
-[connection signal="pressed" from="CalihanPanel/X Button" to="CalihanPanel/X Button" method="_on_pressed"]
-[connection signal="pressed" from="NaomiPanel/X Button" to="NaomiPanel/X Button" method="_on_pressed"]
-[connection signal="pressed" from="SecretPanel/X Button" to="SecretPanel/X Button" method="_on_pressed"]
-[connection signal="pressed" from="ForCalihanPanel/X Button" to="ForCalihanPanel/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel0/X Button" to="LorePanel0/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel1/X Button" to="LorePanel1/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel2/X Button" to="LorePanel2/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel3/X Button" to="LorePanel3/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel4/X Button" to="LorePanel4/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel5/X Button" to="LorePanel5/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel6/X Button" to="LorePanel6/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel7/X Button" to="LorePanel7/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel8/X Button" to="LorePanel8/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel9/X Button" to="LorePanel9/X Button" method="_on_pressed"]
-[connection signal="pressed" from="LorePanel10/X Button" to="LorePanel10/X Button" method="_on_pressed"]
+[connection signal="body_entered" from="MarginContainer2/VBoxContainer/CloseTerminal/Area2D" to="MarginContainer2/VBoxContainer/CloseTerminal/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="MarginContainer2/VBoxContainer/CloseTerminal/Area2D" to="MarginContainer2/VBoxContainer/CloseTerminal/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/X Button/Area2D" to="DatabasePanel/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/X Button/Area2D" to="DatabasePanel/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/NeuroBlackbox 0/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FotN 1/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/FotN 1/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/FCC 2/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/FCC 2/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali1 3/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali2 4/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/ReadMe 5/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Cali3 6/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/AbndShip 7/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Brimpie Orb 8/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/Simulation 9/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10/Area2D" to="DatabasePanel/MarginContainer/VBoxContainer/LifeBeyondScale 10/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="CalihanPanel/X Button/Area2D" to="CalihanPanel/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="CalihanPanel/X Button/Area2D" to="CalihanPanel/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="NaomiPanel/X Button/Area2D" to="NaomiPanel/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="NaomiPanel/X Button/Area2D" to="NaomiPanel/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="SecretPanel/X Button/Area2D" to="SecretPanel/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="SecretPanel/X Button/Area2D" to="SecretPanel/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="ForCalihanPanel/X Button/Area2D" to="ForCalihanPanel/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="ForCalihanPanel/X Button/Area2D" to="ForCalihanPanel/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel0/X Button/Area2D" to="LorePanel0/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel0/X Button/Area2D" to="LorePanel0/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel1/X Button/Area2D" to="LorePanel1/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel1/X Button/Area2D" to="LorePanel1/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel2/X Button/Area2D" to="LorePanel2/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel2/X Button/Area2D" to="LorePanel2/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel3/X Button/Area2D" to="LorePanel3/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel3/X Button/Area2D" to="LorePanel3/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel4/X Button/Area2D" to="LorePanel4/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel4/X Button/Area2D" to="LorePanel4/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel5/X Button/Area2D" to="LorePanel5/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel5/X Button/Area2D" to="LorePanel5/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel6/X Button/Area2D" to="LorePanel6/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel6/X Button/Area2D" to="LorePanel6/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel7/X Button/Area2D" to="LorePanel7/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel7/X Button/Area2D" to="LorePanel7/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel8/X Button/Area2D" to="LorePanel8/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel8/X Button/Area2D" to="LorePanel8/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel9/X Button/Area2D" to="LorePanel9/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel9/X Button/Area2D" to="LorePanel9/X Button/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="LorePanel10/X Button/Area2D" to="LorePanel10/X Button/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="LorePanel10/X Button/Area2D" to="LorePanel10/X Button/Area2D" method="_on_body_exited"]
