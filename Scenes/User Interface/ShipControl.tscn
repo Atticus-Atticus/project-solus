@@ -38,7 +38,7 @@ material = SubResource("StandardMaterial3D_ma8rn")
 [node name="Database Terminal" type="Node3D" unique_id=1790285260]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
-transform = Transform3D(17.1, 0, 0, 0, 22, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(17.099998, 0, 0, 0, 19.052557, 0.049999997, 0, -11, 0.08660254, 0, 0, 0)
 mesh = SubResource("BoxMesh_8jb2r")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
@@ -59,7 +59,7 @@ spot_range = 86.3607
 spot_angle = 87.1875
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=951545218]
-transform = Transform3D(11, 0, 0, 0, 7.3008, 0, 0, 0, 1.873, -0.0160968, 0.2518201, 0.0961626)
+transform = Transform3D(16, 0, 0, 0, 7.7942286, 1.362, 0, -4.5, 2.3590531, -0.0160968, 0.2518201, 0.0961626)
 mesh = SubResource("QuadMesh_sv2o5")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D2" unique_id=1758224256]

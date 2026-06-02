@@ -50,7 +50,7 @@ shader_parameter/roll_speed = 2.0
 shader_parameter/roll_size = 0.6000000285
 shader_parameter/roll_variation = 2.50600011577512
 shader_parameter/distort_intensity = 0.05
-shader_parameter/aberration = 0.010000047974999982
+shader_parameter/aberration = 0.01000004797499998
 shader_parameter/noise_opacity = 0.50000002375
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
@@ -504,7 +504,7 @@ shape = SubResource("RectangleShape2D_4wsr3")
 [node name="CalihanPanel" type="Panel" parent="." unique_id=107449489]
 visible = false
 layout_mode = 0
-offset_left = 805.0
+offset_left = 189.0
 offset_top = 78.0
 offset_right = 1863.0
 offset_bottom = 978.0
@@ -580,7 +580,7 @@ clip_text = true
 [node name="NaomiPanel" type="Panel" parent="." unique_id=1958668346]
 visible = false
 layout_mode = 0
-offset_left = 805.0
+offset_left = 189.0
 offset_top = 78.0
 offset_right = 1863.0
 offset_bottom = 978.0
@@ -654,7 +654,7 @@ clip_text = true
 [node name="SecretPanel" type="Panel" parent="." unique_id=2103044928]
 visible = false
 layout_mode = 0
-offset_left = 803.0
+offset_left = 189.0
 offset_top = 63.0
 offset_right = 1861.0
 offset_bottom = 1016.0
@@ -732,10 +732,10 @@ clip_text = true
 [node name="ForCalihanPanel" type="Panel" parent="." unique_id=54108137]
 visible = false
 layout_mode = 0
-offset_left = 736.0
-offset_top = 197.0
-offset_right = 1794.0
-offset_bottom = 883.0
+offset_left = 304.0
+offset_top = 202.0
+offset_right = 1362.0
+offset_bottom = 888.0
 theme = ExtResource("6_vjryu")
 
 [node name="X Button" type="Button" parent="ForCalihanPanel" unique_id=162584358]
@@ -1561,7 +1561,6 @@ scale = Vector2(0.55967903, 0.46378136)
 shape = SubResource("RectangleShape2D_7vr1g")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=542616222]
-visible = false
 material = SubResource("ShaderMaterial_8c0vo")
 layout_mode = 0
 offset_right = 1920.0

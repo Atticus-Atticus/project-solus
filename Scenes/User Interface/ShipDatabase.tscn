@@ -376,8 +376,7 @@ mesh = SubResource("ArrayMesh_a2x76")
 skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
-transform = Transform3D(1, 0, 0, 0, 0.9959144, -0.090302326, 0, 0.090302326, 0.9959144, 0, -0.85845065, 6.1744523)
-fov = 90.0
+transform = Transform3D(1, 0, 0, 0, 0.9929199, 0.11878522, 0, -0.11878522, 0.9929199, 0, 2.1992571, 6.617167)
 script = ExtResource("2_jbjl1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2102990598]

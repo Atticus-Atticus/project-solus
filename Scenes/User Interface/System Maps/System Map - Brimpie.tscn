@@ -1,16 +1,1488 @@
 [gd_scene format=3 uid="uid://b2oorbwd64fjm"]
 
 [ext_resource type="Script" uid="uid://duowlyejoroew" path="res://Scripts/system_map_brimpie Script.gd" id="1_fdo4o"]
+[ext_resource type="Texture2D" uid="uid://c350vc7ah8s4t" path="res://Sprites/Suns/4.png" id="2_j7sdl"]
 [ext_resource type="Script" uid="uid://dmi1ufoc8n8op" path="res://Scripts/LittleShip.gd" id="2_tydle"]
+[ext_resource type="Texture2D" uid="uid://cunc8sewfv4ft" path="res://Sprites/White Circle.png" id="3_jopg2"]
+[ext_resource type="Texture2D" uid="uid://sythnx70gf8w" path="res://Sprites/Terran_or_Earth-like/11.png" id="5_1jkw3"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="5_j7sdl"]
+[ext_resource type="Texture2D" uid="uid://lhsox3m0qstb" path="res://Sprites/Barren_or_Moon/1.png" id="5_jopg2"]
+[ext_resource type="Texture2D" uid="uid://b8e52a6aubpdj" path="res://Sprites/Moon_16x16/1.png" id="6_5uk6m"]
+[ext_resource type="Texture2D" uid="uid://ef7h4blkt1lo" path="res://Sprites/Terran_or_Earth-like/6.png" id="6_onoue"]
+[ext_resource type="Texture2D" uid="uid://bht1ys8cptk8l" path="res://Sprites/Ocean/2.png" id="8_sypc4"]
+[ext_resource type="Texture2D" uid="uid://bhyo8bpcm4gcp" path="res://Sprites/Rings/9.png" id="9_wfmlv"]
+[ext_resource type="Texture2D" uid="uid://bmk7v6eq6vcjq" path="res://Sprites/Lava/4.png" id="10_t648y"]
+[ext_resource type="Texture2D" uid="uid://cecwyx51sqsof" path="res://Sprites/Rings/11.png" id="11_kyq3y"]
+[ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="13_t648y"]
+[ext_resource type="Texture2D" uid="uid://r6qcutfbxeha" path="res://Sprites/Ship.png" id="14_sypc4"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="14_wfmlv"]
+[ext_resource type="Script" uid="uid://ldijwpcd4irp" path="res://Scripts/SystemMapArea2DScript.gd" id="15_bogfh"]
+[ext_resource type="Texture2D" uid="uid://bx5yqjxbabxug" path="res://Sprites/Station.png" id="15_wfmlv"]
+[ext_resource type="Script" uid="uid://wte77smswwoi" path="res://Scripts/Planet1.gd" id="16_r2jos"]
+[ext_resource type="Script" uid="uid://de11o2cfnwup6" path="res://Scripts/area_2d_2.gd" id="17_vjv7t"]
+[ext_resource type="Script" uid="uid://bi7784dpti7ce" path="res://Scripts/area_2d_3.gd" id="18_g5vso"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="18_kyq3y"]
+[ext_resource type="Script" uid="uid://fbkqwg8w5r17" path="res://Scripts/area_2d_4.gd" id="19_kxwub"]
+[ext_resource type="Script" uid="uid://dnic02wg8kf70" path="res://Scripts/area_2d_5.gd" id="20_o7tmm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jocav"]
+load_path = "res://.godot/imported/Blue1.png-886f7a0347ca07df943af9b358ef682f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxld4"]
+load_path = "res://.godot/imported/YellowStars.png-00e7d59aaae557af8ab68aedd5fd848e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyq3y"]
+atlas = ExtResource("13_t648y")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bogfh"]
+atlas = ExtResource("13_t648y")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rgpn"]
+atlas = ExtResource("13_t648y")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2jos"]
+atlas = ExtResource("13_t648y")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjv7t"]
+atlas = ExtResource("13_t648y")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo8v6"]
+atlas = ExtResource("13_t648y")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5vso"]
+atlas = ExtResource("13_t648y")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxwub"]
+atlas = ExtResource("13_t648y")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7tmm"]
+atlas = ExtResource("13_t648y")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hucc"]
+atlas = ExtResource("13_t648y")
+region = Rect2(50, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbrk5"]
+atlas = ExtResource("13_t648y")
+region = Rect2(100, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ms6"]
+atlas = ExtResource("13_t648y")
+region = Rect2(150, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j20qb"]
+atlas = ExtResource("13_t648y")
+region = Rect2(0, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suie5"]
+atlas = ExtResource("13_t648y")
+region = Rect2(50, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qynh2"]
+atlas = ExtResource("13_t648y")
+region = Rect2(100, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge4tu"]
+atlas = ExtResource("13_t648y")
+region = Rect2(150, 150, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wr2h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyq3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bogfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rgpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2jos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjv7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo8v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5vso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxwub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7tmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hucc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbrk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ms6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j20qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suie5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qynh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge4tu")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sypc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jocav"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_rxld4"]
 
-[node name="SystemScreen" type="Node2D" unique_id=927860912]
+[sub_resource type="LabelSettings" id="LabelSettings_bogfh"]
+line_spacing = 0.0
+paragraph_spacing = 6.0
+font = ExtResource("18_kyq3y")
+font_size = 30
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[sub_resource type="Animation" id="Animation_7rgpn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(662, 842)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_r2jos"]
+resource_name = "open"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(10, 842), Vector2(662, 842)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjv7t"]
+_data = {
+&"RESET": SubResource("Animation_7rgpn"),
+&"open": SubResource("Animation_r2jos")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jopg2"]
+shader = ExtResource("5_j7sdl")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.0
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 0.6000000285
+shader_parameter/roll_variation = 2.50600011577512
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 4.7499999933364734e-08
+shader_parameter/noise_opacity = 1.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.0
+
+[node name="SystemScreen" type="Node2D" unique_id=927860912 node_paths=PackedStringArray("cam", "ship")]
 script = ExtResource("1_fdo4o")
+cam = NodePath("Camera2D")
+ship = NodePath("CharacterBody2D")
+
+[node name="Background" type="Node2D" parent="." unique_id=1184358099]
+position = Vector2(24, 1632)
+scale = Vector2(0.5, 0.5)
+
+[node name="Blue1" type="Sprite2D" parent="Background" unique_id=2074637176]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue1" unique_id=1197069640]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue1" unique_id=1035741117]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue1" unique_id=1450767703]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue1" unique_id=123126520]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue2" type="Sprite2D" parent="Background" unique_id=1341008112]
+texture_filter = 1
+position = Vector2(2880, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue2" unique_id=1874037015]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue2" unique_id=948347327]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue2" unique_id=488957680]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue2" unique_id=905403334]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue3" type="Sprite2D" parent="Background" unique_id=1799843055]
+texture_filter = 1
+position = Vector2(2879, 1619.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue3" unique_id=1333849781]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue3" unique_id=539208934]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue3" unique_id=344721621]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue3" unique_id=786775041]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue4" type="Sprite2D" parent="Background" unique_id=1859231126]
+texture_filter = 1
+position = Vector2(0, 1618)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue4" unique_id=399982896]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue4" unique_id=1486302427]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue4" unique_id=563069779]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue4" unique_id=1456766038]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue5" type="Sprite2D" parent="Background" unique_id=300502452]
+texture_filter = 1
+position = Vector2(5760, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue5" unique_id=461952586]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue5" unique_id=918831010]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue5" unique_id=303560368]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue5" unique_id=522018818]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue6" type="Sprite2D" parent="Background" unique_id=646720067]
+texture_filter = 1
+position = Vector2(8640, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue6" unique_id=1097935624]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue6" unique_id=579502686]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue6" unique_id=216878392]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue6" unique_id=1046014301]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue7" type="Sprite2D" parent="Background" unique_id=415742713]
+texture_filter = 1
+position = Vector2(8639, 1619.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue7" unique_id=1139935706]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue7" unique_id=1334798336]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue7" unique_id=1928364762]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue7" unique_id=1712112106]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue8" type="Sprite2D" parent="Background" unique_id=204613754]
+texture_filter = 1
+position = Vector2(5759, 1620.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue8" unique_id=1337422296]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue8" unique_id=1583703979]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue8" unique_id=1755726155]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue8" unique_id=396344449]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue9" type="Sprite2D" parent="Background" unique_id=498798029]
+texture_filter = 1
+position = Vector2(5760, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue9" unique_id=1645966863]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue9" unique_id=727911986]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue9" unique_id=1938066824]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue9" unique_id=2085760589]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue10" type="Sprite2D" parent="Background" unique_id=622765937]
+texture_filter = 1
+position = Vector2(8640, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue10" unique_id=115142319]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue10" unique_id=2050036053]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue10" unique_id=279043483]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue10" unique_id=795703435]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue11" type="Sprite2D" parent="Background" unique_id=1922804383]
+texture_filter = 1
+position = Vector2(8639, 4858)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue11" unique_id=215414257]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue11" unique_id=1611753998]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue11" unique_id=896520320]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue11" unique_id=1101322392]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue12" type="Sprite2D" parent="Background" unique_id=163048245]
+texture_filter = 1
+position = Vector2(5760, 4857)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue12" unique_id=1488506614]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue12" unique_id=691137661]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue12" unique_id=935473521]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue12" unique_id=2074876473]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue13" type="Sprite2D" parent="Background" unique_id=143308023]
+texture_filter = 1
+position = Vector2(0, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue13" unique_id=539473406]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue13" unique_id=39825504]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue13" unique_id=1255949225]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue13" unique_id=355724904]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue14" type="Sprite2D" parent="Background" unique_id=1497213640]
+texture_filter = 1
+position = Vector2(2880, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue14" unique_id=625540694]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue14" unique_id=1891113138]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue14" unique_id=1561969372]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue14" unique_id=1360668679]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue15" type="Sprite2D" parent="Background" unique_id=811555515]
+texture_filter = 1
+position = Vector2(2880, 4858)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue15" unique_id=1971939104]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue15" unique_id=239002]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue15" unique_id=388316702]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue15" unique_id=1358960019]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue16" type="Sprite2D" parent="Background" unique_id=872959615]
+texture_filter = 1
+position = Vector2(0, 4858)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue16" unique_id=2082317218]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background/Blue16" unique_id=254490843]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background/Blue16" unique_id=1512334568]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background/Blue16" unique_id=1222150631]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Background2" type="Node2D" parent="." unique_id=962847842]
+position = Vector2(24, -1605)
+scale = Vector2(0.5, 0.5)
+
+[node name="Blue1" type="Sprite2D" parent="Background2" unique_id=117008167]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue1" unique_id=888278636]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue1" unique_id=724733941]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue1" unique_id=1266878912]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue1" unique_id=1814863249]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue2" type="Sprite2D" parent="Background2" unique_id=192846440]
+texture_filter = 1
+position = Vector2(2880, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue2" unique_id=1648495602]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue2" unique_id=1300861990]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue2" unique_id=597026398]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue2" unique_id=956929818]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue3" type="Sprite2D" parent="Background2" unique_id=1279147953]
+texture_filter = 1
+position = Vector2(2879, 1619.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue3" unique_id=1432308698]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue3" unique_id=2135492376]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue3" unique_id=545552668]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue3" unique_id=1213169257]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue4" type="Sprite2D" parent="Background2" unique_id=269584507]
+texture_filter = 1
+position = Vector2(0, 1620)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue4" unique_id=1696447176]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue4" unique_id=1174191348]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue4" unique_id=1189197795]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue4" unique_id=1932109027]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue5" type="Sprite2D" parent="Background2" unique_id=1792417109]
+texture_filter = 1
+position = Vector2(5760, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue5" unique_id=1855450210]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue5" unique_id=581807430]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue5" unique_id=467664790]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue5" unique_id=383141690]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue6" type="Sprite2D" parent="Background2" unique_id=546453313]
+texture_filter = 1
+position = Vector2(8640, 0)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue6" unique_id=1459890257]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue6" unique_id=319855504]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue6" unique_id=975121044]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue6" unique_id=1600606109]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue7" type="Sprite2D" parent="Background2" unique_id=1646952677]
+texture_filter = 1
+position = Vector2(8639, 1619.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue7" unique_id=1111550300]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue7" unique_id=409551073]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue7" unique_id=2088442180]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue7" unique_id=619594555]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue8" type="Sprite2D" parent="Background2" unique_id=813471653]
+texture_filter = 1
+position = Vector2(5759, 1620.0001)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue8" unique_id=8710081]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue8" unique_id=1986347627]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue8" unique_id=2082248118]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue8" unique_id=739258811]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue9" type="Sprite2D" parent="Background2" unique_id=27069021]
+texture_filter = 1
+position = Vector2(5760, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue9" unique_id=2123188971]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue9" unique_id=681133642]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue9" unique_id=1202801961]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue9" unique_id=624235067]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue10" type="Sprite2D" parent="Background2" unique_id=956029121]
+texture_filter = 1
+position = Vector2(8640, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue10" unique_id=1073444680]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue10" unique_id=1954726952]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue10" unique_id=1614083268]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue10" unique_id=1783230479]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue11" type="Sprite2D" parent="Background2" unique_id=1965275243]
+texture_filter = 1
+position = Vector2(8639, 4858)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue11" unique_id=589497408]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue11" unique_id=406675143]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue11" unique_id=1880815074]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue11" unique_id=356437594]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue12" type="Sprite2D" parent="Background2" unique_id=779099289]
+texture_filter = 1
+position = Vector2(5760, 4857)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue12" unique_id=317507807]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue12" unique_id=1748894987]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue12" unique_id=457638473]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue12" unique_id=986260375]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue13" type="Sprite2D" parent="Background2" unique_id=254849695]
+texture_filter = 1
+position = Vector2(0, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue13" unique_id=729748211]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue13" unique_id=1744992636]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue13" unique_id=949341781]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue13" unique_id=139376876]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue14" type="Sprite2D" parent="Background2" unique_id=1801122827]
+texture_filter = 1
+position = Vector2(2880, 3239)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue14" unique_id=338503996]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue14" unique_id=1924074998]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue14" unique_id=1593608848]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue14" unique_id=551316675]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue15" type="Sprite2D" parent="Background2" unique_id=2065311419]
+texture_filter = 1
+position = Vector2(2880, 4858)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue15" unique_id=653946277]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue15" unique_id=1943935009]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue15" unique_id=23531593]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue15" unique_id=748395194]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Blue16" type="Sprite2D" parent="Background2" unique_id=1906125687]
+texture_filter = 1
+position = Vector2(0, 4857)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_jocav")
+
+[node name="YellowStars" type="Sprite2D" parent="Background2/Blue16" unique_id=95535343]
+texture_filter = 1
+position = Vector2(-240.02777, -135.125)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars2" type="Sprite2D" parent="Background2/Blue16" unique_id=1627573326]
+texture_filter = 1
+position = Vector2(-240.00002, 136)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars3" type="Sprite2D" parent="Background2/Blue16" unique_id=793467579]
+texture_filter = 1
+position = Vector2(237.99998, 136)
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="YellowStars4" type="Sprite2D" parent="Background2/Blue16" unique_id=770061240]
+texture_filter = 1
+position = Vector2(238.00002, -135)
+rotation = 3.1415925
+scale = Vector2(0.49953702, 0.49953705)
+texture = SubResource("CompressedTexture2D_rxld4")
+
+[node name="Planets" type="Node2D" parent="." unique_id=629359146]
+
+[node name="Sun" type="Sprite2D" parent="Planets" unique_id=1328463016]
+texture_filter = 1
+position = Vector2(2160.0002, 1214.0001)
+scale = Vector2(8, 8)
+texture = ExtResource("2_j7sdl")
+
+[node name="WhiteCircle" type="Sprite2D" parent="Planets" unique_id=771118558]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+position = Vector2(2160, 1214)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_jopg2")
+
+[node name="Brimpie1" type="Sprite2D" parent="Planets" unique_id=340321679]
+texture_filter = 1
+position = Vector2(1744, 796)
+rotation = 3.1415927
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_jopg2")
+
+[node name="WhiteCircle2" type="Sprite2D" parent="Planets" unique_id=1757630329]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+position = Vector2(2160, 1214)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_jopg2")
+
+[node name="Brimpie2" type="Sprite2D" parent="Planets" unique_id=918031748]
+texture_filter = 1
+position = Vector2(1029, 1538)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("5_1jkw3")
+
+[node name="WhiteCircle" type="Sprite2D" parent="Planets/Brimpie2" unique_id=990603679]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_jopg2")
+
+[node name="1" type="Sprite2D" parent="Planets/Brimpie2" unique_id=1582709164]
+texture_filter = 1
+position = Vector2(-44.5, -21)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_5uk6m")
+
+[node name="WhiteCircle3" type="Sprite2D" parent="Planets" unique_id=1456774082]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+position = Vector2(2160, 1214)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_jopg2")
+
+[node name="Brimpie3" type="Sprite2D" parent="Planets" unique_id=862518709]
+texture_filter = 1
+position = Vector2(2997, 2408)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_onoue")
+
+[node name="WhiteCircle4" type="Sprite2D" parent="Planets" unique_id=533489730]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+position = Vector2(2160, 1214)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("3_jopg2")
+
+[node name="Brimpie4" type="Sprite2D" parent="Planets" unique_id=841700011]
+texture_filter = 1
+position = Vector2(3790, 317)
+rotation = -1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("8_sypc4")
+
+[node name="9" type="Sprite2D" parent="Planets/Brimpie4" unique_id=1296402024]
+rotation = 1.5707964
+texture = ExtResource("9_wfmlv")
+
+[node name="WhiteCircle5" type="Sprite2D" parent="Planets" unique_id=467008442]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+position = Vector2(2160, 1214)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_jopg2")
+
+[node name="Brimpie5" type="Sprite2D" parent="Planets" unique_id=963319691]
+texture_filter = 1
+position = Vector2(429.00003, -540)
+rotation = -3.1415927
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("10_t648y")
+
+[node name="11" type="Sprite2D" parent="Planets/Brimpie5" unique_id=436433001]
+rotation = -3.1415925
+texture = ExtResource("11_kyq3y")
+
+[node name="Ship" type="Sprite2D" parent="Planets" unique_id=470637457]
+texture_filter = 1
+position = Vector2(3005, 1687)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("14_sypc4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Planets/Ship" unique_id=1731123614]
+scale = Vector2(6.440016, 6.440016)
+sprite_frames = SubResource("SpriteFrames_0wr2h")
+autoplay = "default"
+frame_progress = 0.70945764
+
+[node name="Station" type="Sprite2D" parent="Planets" unique_id=779957116]
+texture_filter = 1
+position = Vector2(1246, 1066)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("15_wfmlv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Planets/Station" unique_id=420314618]
+scale = Vector2(6.440016, 6.440016)
+sprite_frames = SubResource("SpriteFrames_0wr2h")
+autoplay = "default"
+frame_progress = 0.46737507
+
+[node name="Area2D" type="Node2D" parent="." unique_id=1641848116]
+script = ExtResource("15_bogfh")
+
+[node name="Area2D" type="Area2D" parent="Area2D" unique_id=405887336]
+script = ExtResource("16_r2jos")
+
+[node name="Planet1" type="CollisionShape2D" parent="Area2D/Area2D" unique_id=1492737155]
+position = Vector2(1744.9999, 796)
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_sypc4")
+
+[node name="Area2D2" type="Area2D" parent="Area2D" unique_id=1928408422]
+script = ExtResource("17_vjv7t")
+
+[node name="Planet2" type="CollisionShape2D" parent="Area2D/Area2D2" unique_id=335658150]
+position = Vector2(1030, 1538.0001)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_sypc4")
+
+[node name="Area2D3" type="Area2D" parent="Area2D" unique_id=580481328]
+script = ExtResource("18_g5vso")
+
+[node name="Planet3" type="CollisionShape2D" parent="Area2D/Area2D3" unique_id=1542242291]
+position = Vector2(2998.0002, 2409.0002)
+scale = Vector2(12, 12)
+shape = SubResource("CircleShape2D_sypc4")
+
+[node name="Area2D4" type="Area2D" parent="Area2D" unique_id=1520936571]
+script = ExtResource("19_kxwub")
+
+[node name="Planet4" type="CollisionShape2D" parent="Area2D/Area2D4" unique_id=933144770]
+position = Vector2(3789.0002, 317)
+scale = Vector2(17, 17)
+shape = SubResource("CircleShape2D_sypc4")
+
+[node name="Area2D5" type="Area2D" parent="Area2D" unique_id=616812007]
+script = ExtResource("20_o7tmm")
+
+[node name="Planet5" type="CollisionShape2D" parent="Area2D/Area2D5" unique_id=1278673341]
+position = Vector2(429.00003, -534)
+scale = Vector2(17, 17)
+shape = SubResource("CircleShape2D_sypc4")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1813431465]
+position = Vector2(2906, 2513)
 script = ExtResource("2_tydle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=42263557]
@@ -21,4 +1493,71 @@ rotation = -3.1415927
 scale = Vector2(17.2, 17.64)
 mesh = SubResource("PrismMesh_rxld4")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1371090569]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1371090569]
+position = Vector2(2906, 2513)
+
+[node name="Panel" type="Panel" parent="Camera2D" unique_id=930862826]
+visible = false
+layout_direction = 1
+offset_left = 211.0
+offset_top = -402.0
+offset_right = 873.0
+offset_bottom = 440.0
+theme = ExtResource("14_wfmlv")
+
+[node name="Label" type="Label" parent="Camera2D/Panel" unique_id=1422538092]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 657.0
+offset_bottom = 837.0
+text = "
+              INFO PANEL
+
+
+PLANET: Brimpie - 3
+
+
+SYSTEM: Brimpie
+
+CLASSIFICATION: Earth-Like Planet
+
+POPULATION: 12.9 Million
+
+PURPOSE: 
+Wheat and Algea Agriculture and Residential
+
+ATMOSPHERE: Contamination Detected
+
+GRAVITY: 1.2 G
+
+TEMPERATURE: 17°C
+
+LANDING CLEARANCE: ERROR"
+label_settings = SubResource("LabelSettings_bogfh")
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Panel" unique_id=512629553]
+libraries/ = SubResource("AnimationLibrary_vjv7t")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=1134699096]
+material = SubResource("ShaderMaterial_jopg2")
+offset_left = -1818.0001
+offset_top = -1170.0
+offset_right = 101.99988
+offset_bottom = -90.0
+scale = Vector2(1.9199986, 2.1600008)
+color = Color(0, 0.0705882, 0, 1)
+
+[connection signal="body_entered" from="Area2D/Area2D" to="Area2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D" to="Area2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D2" to="Area2D/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D2" to="Area2D/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D3" to="Area2D/Area2D3" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D3" to="Area2D/Area2D3" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D4" to="Area2D/Area2D4" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D4" to="Area2D/Area2D4" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D5" to="Area2D/Area2D5" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D5" to="Area2D/Area2D5" method="_on_body_exited"]
