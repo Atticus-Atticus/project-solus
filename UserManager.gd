@@ -9,8 +9,9 @@ var user_status: String = "default"  # "default", "new", "returning", "secret"
 
 var secret_users := {
 	"Calihan": "Welcome Employee. Remember: Light Speed. Right Speed.",
-	"Naomi": "Signal detected... Welcome back, Naomi.",
-	"Polaris": "Access granted. Polaris systems online."
+	"Naomi": "Redirected Signal detected... Welcome back, Agent Niobe.",
+	"Polaris": "ERROR",
+	"Atticus": "bruh"
 }
 
 func _ready() -> void:

@@ -41,8 +41,8 @@ func _process(delta: float) -> void:
 	if Globals.KeysFound == 2:
 		$MarginContainer/VBoxContainer/EncryptionFile.set_disabled(false)
 
-	if Input.is_action_just_pressed("Pause"):
-		Globals.PlayerControls = true
-		$".".queue_free()
+	#if Input.is_action_just_pressed("Pause"):
+		#Globals.PlayerControls = true
+		#$".".queue_free()
 
 	#cursor.position = get_global_mouse_position()

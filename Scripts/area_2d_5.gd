@@ -29,7 +29,8 @@ TEMPERATURE: 278°C
 
 LANDING CLEARANCE: RESTRICTED
 
-NOTE: Planet destroyed in mining accident. Travel is prohibited.")
+NOTE: 
+Planet destroyed in mining accident. Travel is prohibited.")
 	anim.play("open")
 
 

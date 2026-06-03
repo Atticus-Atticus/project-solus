@@ -24,6 +24,9 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="18_kyq3y"]
 [ext_resource type="Script" uid="uid://fbkqwg8w5r17" path="res://Scripts/area_2d_4.gd" id="19_kxwub"]
 [ext_resource type="Script" uid="uid://dnic02wg8kf70" path="res://Scripts/area_2d_5.gd" id="20_o7tmm"]
+[ext_resource type="Script" uid="uid://belav1vqef3o1" path="res://Scripts/area_2d_6.gd" id="21_o7tmm"]
+[ext_resource type="Script" uid="uid://bcpo3jpwmeew1" path="res://Scripts/area_2d_7.gd" id="22_8hucc"]
+[ext_resource type="Texture2D" uid="uid://bpk0sy5b7d575" path="res://Sprites/PlayerShip.png" id="24_8hucc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jocav"]
 load_path = "res://.godot/imported/Blue1.png-886f7a0347ca07df943af9b358ef682f.ctex"
@@ -162,9 +165,12 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sypc4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jocav"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbrk5"]
 
-[sub_resource type="PrismMesh" id="PrismMesh_rxld4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50ms6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jocav"]
+size = Vector2(23.333252, 34.166626)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bogfh"]
 line_spacing = 0.0
@@ -281,6 +287,15 @@ shader_parameter/warp_amount = 0.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.0
+
+[sub_resource type="Environment" id="Environment_8hucc"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.4
+glow_strength = 0.83
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.75
 
 [node name="SystemScreen" type="Node2D" unique_id=927860912 node_paths=PackedStringArray("cam", "ship")]
 script = ExtResource("1_fdo4o")
@@ -1421,6 +1436,7 @@ scale = Vector2(1.25, 1.25)
 texture = ExtResource("14_sypc4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Planets/Ship" unique_id=1731123614]
+modulate = Color(0.4, 1, 0.9411765, 1)
 scale = Vector2(6.440016, 6.440016)
 sprite_frames = SubResource("SpriteFrames_0wr2h")
 autoplay = "default"
@@ -1433,6 +1449,7 @@ scale = Vector2(1.25, 1.25)
 texture = ExtResource("15_wfmlv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Planets/Station" unique_id=420314618]
+modulate = Color(0.4, 1, 0.9411765, 1)
 scale = Vector2(6.440016, 6.440016)
 sprite_frames = SubResource("SpriteFrames_0wr2h")
 autoplay = "default"
@@ -1481,17 +1498,37 @@ position = Vector2(429.00003, -534)
 scale = Vector2(17, 17)
 shape = SubResource("CircleShape2D_sypc4")
 
+[node name="Area2D6" type="Area2D" parent="Area2D" unique_id=1801418572 node_paths=PackedStringArray("PlayerShip")]
+script = ExtResource("21_o7tmm")
+PlayerShip = NodePath("../../CharacterBody2D")
+
+[node name="AbShip" type="CollisionShape2D" parent="Area2D/Area2D6" unique_id=147120146]
+position = Vector2(3005, 1686.0001)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbrk5")
+
+[node name="Area2D7" type="Area2D" parent="Area2D" unique_id=2122488378 node_paths=PackedStringArray("PlayerShip")]
+script = ExtResource("22_8hucc")
+PlayerShip = NodePath("../../CharacterBody2D")
+
+[node name="BpStation" type="CollisionShape2D" parent="Area2D/Area2D7" unique_id=1221589515]
+position = Vector2(1247.0001, 1067.0001)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_50ms6")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1813431465]
 position = Vector2(2906, 2513)
 script = ExtResource("2_tydle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=42263557]
+position = Vector2(0, -0.5)
+scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_jocav")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D" unique_id=1013648715]
-rotation = -3.1415927
-scale = Vector2(17.2, 17.64)
-mesh = SubResource("PrismMesh_rxld4")
+[node name="PlayerShip" type="Sprite2D" parent="CharacterBody2D" unique_id=1720650176]
+texture_filter = 1
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_8hucc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1371090569]
 position = Vector2(2906, 2513)
@@ -1515,25 +1552,25 @@ text = "
               INFO PANEL
 
 
-PLANET: Brimpie - 3
+SHIP: R.C.S Talbot
 
+REGISTRATION: TG-907
 
-SYSTEM: Brimpie
+REGISTERED OWNER: Mr F Talbot
 
-CLASSIFICATION: Earth-Like Planet
+SCAN RESULTS: 
+FUEL: NONE
 
-POPULATION: 12.9 Million
+LIFE SIGNS: NONE
 
-PURPOSE: 
-Wheat and Algea Agriculture and Residential
+STATE: DERELICT
 
-ATMOSPHERE: Contamination Detected
+AUTOMATED DOCKING RESPONSE: GRANTED
 
-GRAVITY: 1.2 G
+PRESS 'E' TO BEGIN DOCKING SEQUENCE
 
-TEMPERATURE: 17°C
-
-LANDING CLEARANCE: ERROR"
+WARNING:
+HIGH RADITION LEVELS DETECTED!"
 label_settings = SubResource("LabelSettings_bogfh")
 autowrap_mode = 2
 visible_characters = 0
@@ -1551,6 +1588,18 @@ offset_bottom = -90.0
 scale = Vector2(1.9199986, 2.1600008)
 color = Color(0, 0.0705882, 0, 1)
 
+[node name="Label" type="Label" parent="Camera2D" unique_id=1346542611]
+offset_left = -951.0
+offset_top = -530.0
+offset_right = -305.0
+offset_bottom = -507.0
+text = "MAP NOT TO SCALE"
+label_settings = SubResource("LabelSettings_bogfh")
+autowrap_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1013477069]
+environment = SubResource("Environment_8hucc")
+
 [connection signal="body_entered" from="Area2D/Area2D" to="Area2D/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D/Area2D" to="Area2D/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D/Area2D2" to="Area2D/Area2D2" method="_on_body_entered"]
@@ -1561,3 +1610,7 @@ color = Color(0, 0.0705882, 0, 1)
 [connection signal="body_exited" from="Area2D/Area2D4" to="Area2D/Area2D4" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D/Area2D5" to="Area2D/Area2D5" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D/Area2D5" to="Area2D/Area2D5" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D6" to="Area2D/Area2D6" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D6" to="Area2D/Area2D6" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D7" to="Area2D/Area2D7" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D7" to="Area2D/Area2D7" method="_on_body_exited"]

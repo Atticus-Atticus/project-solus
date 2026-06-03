@@ -45,7 +45,7 @@ var supplies1 = 0
 var supplies2 = 0
 #max is 3
 
-var StoryStage: int = 0
+var StoryStage: int = 4
 #determines state of the game's story
 #1 wake up.
 #2 eat
@@ -91,3 +91,7 @@ func _process(delta):
 	if timer > TIMER_LIMIT: # Prints every 2 seconds
 		timer = 0.0
 		print("fps: " + str(Engine.get_frames_per_second()))
+
+	if Input.is_action_just_pressed("Debug"):
+		print("Stage is: ", StoryStage)
+		print("Destination is: ", SceneSwitcher.Destination)

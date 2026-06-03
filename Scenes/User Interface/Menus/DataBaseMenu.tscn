@@ -278,8 +278,9 @@ scale = Vector2(0.04000002, 1.96)
 script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DatabasePanel/X Button/Area2D" unique_id=1449023833]
-position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+position = Vector2(700, 14.285709)
+rotation = 3.1415927
+scale = Vector2(27.132149, -0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="MarginContainer" type="MarginContainer" parent="DatabasePanel" unique_id=1894313832]
@@ -528,7 +529,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CalihanPanel/X Button/Area2D" unique_id=1999083341]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-27.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="CalihanPanel" unique_id=1779742725]
@@ -604,7 +605,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NaomiPanel/X Button/Area2D" unique_id=1772068015]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-27.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="NaomiPanel" unique_id=1566146898]
@@ -678,7 +679,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SecretPanel/X Button/Area2D" unique_id=1076044378]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="SecretPanel" unique_id=1843217611]
@@ -756,7 +757,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ForCalihanPanel/X Button/Area2D" unique_id=1603497273]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="ForCalihanPanel" unique_id=637337750]
@@ -823,7 +824,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel0/X Button/Area2D" unique_id=1397705307]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel0" unique_id=592363843]
@@ -886,7 +887,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel1/X Button/Area2D" unique_id=29460722]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel1" unique_id=572887717]
@@ -955,7 +956,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel2/X Button/Area2D" unique_id=252527732]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel2" unique_id=1430561231]
@@ -1019,7 +1020,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel3/X Button/Area2D" unique_id=122875494]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel3" unique_id=1481547398]
@@ -1080,7 +1081,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel4/X Button/Area2D" unique_id=399400478]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel4" unique_id=1719079136]
@@ -1146,7 +1147,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel5/X Button/Area2D" unique_id=1290277345]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel5" unique_id=431137221]
@@ -1221,7 +1222,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel6/X Button/Area2D" unique_id=1729323061]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel6" unique_id=925663719]
@@ -1293,7 +1294,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel7/X Button/Area2D" unique_id=422414686]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel7" unique_id=286927949]
@@ -1367,7 +1368,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel8/X Button/Area2D" unique_id=1426192605]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel8" unique_id=1055750278]
@@ -1436,7 +1437,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel9/X Button/Area2D" unique_id=874878101]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel9" unique_id=38903479]
@@ -1505,7 +1506,7 @@ script = ExtResource("8_7vr1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LorePanel10/X Button/Area2D" unique_id=587857467]
 position = Vector2(699.9982, 14.285717)
-scale = Vector2(-18.132153, 0.3254704)
+scale = Vector2(-28.132149, 0.44791937)
 shape = SubResource("RectangleShape2D_4wsr3")
 
 [node name="Label" type="Label" parent="LorePanel10" unique_id=1770509678]

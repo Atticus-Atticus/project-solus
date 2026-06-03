@@ -16,7 +16,7 @@ var anim1 = 0
 var anim2 = 0
 
 func _ready() -> void:
-	Globals.StoryStage += 1
+	#Globals.StoryStage += 1
 
 	player._stop_movement()
 
@@ -35,7 +35,7 @@ func _ready() -> void:
 		var LoadedText3 = Return2Text.instantiate()
 		add_child(LoadedText3)
 	
-	SceneSwitcher.Destination = 0
+	#SceneSwitcher.Destination = 0
 	Globals.Destination = 0
 
 func _on_child_exiting_tree(node: Node) -> void:
@@ -45,11 +45,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):
 		pausemenu()
 
-	#if Globals.ShipMenu == true:
-		#$SystemScreen.show()
-#
-	#if Globals.ShipMenu == false:
-		#$SystemScreen.hide()
+	if Globals.ShipMenu == true:
+		player.get_player_pos()
+		get_tree().change_scene_to_file("res://Scenes/User Interface/ShipControl.tscn")
+		Globals.ShipMenu = false
 
 	if Globals.StoryStage == 8 and ending1 == 0:
 		ending1 = 1

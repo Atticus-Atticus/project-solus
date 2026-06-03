@@ -29,4 +29,4 @@ func _show_dialogue():
 		get_tree().change_scene_to_file("res://Scenes/Levels/Brimpie_Orbital.tscn")
 		player.get_player_pos()
 		#$AnimationPlayerObjective.stop()
-	Globals.NaomiOnShip = true
+	#Globals.NaomiOnShip = true

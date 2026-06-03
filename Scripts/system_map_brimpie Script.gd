@@ -6,7 +6,14 @@ extends Node2D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	
+	if Globals.VisitedShip == 1:
+		$Area2D/Area2D6/AbShip.set_deferred("disabled", true)
+		$Planets/Ship/AnimatedSprite2D.hide()
 
+	if Globals.VisitedStation == 1:
+		$Area2D/Area2D7/BpStation.set_deferred("disabled", true)
+		$Planets/Station/AnimatedSprite2D.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
