@@ -1,13 +1,68 @@
 extends Node3D
 
+var signals_array := [113, 50, 182]
 
-@onready var radio_screen = $MeshInstance3D2/SubViewport/Control/Label
+@onready var text_scene1: PackedScene = preload("res://Scenes/User Interface/Dialogue/RadioDialogueBox.tscn")
+
+@onready var signal_display = $"Freq Screen/SubViewport/Control2/Label4"
+@export var radio_screen = Label
+@export var marker = Control
+
+@export var min_freq: float = 0.0
+@export var max_freq: float = 200.0
+
+@export var marker_left_x: float = 40.0
+@export var marker_right_x: float = 1240.0
+
+var message_up = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	update_marker_position()
+	signal_display.set_text("No Signal Detected")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	radio_screen.text = str(Globals.radio_freq)
+
+	if Globals.radio_freq == signals_array[0] and Globals.NaomiMessages == 0 and message_up == false:
+		signal_display.set_text("Long Range Comm")
+		var text1 = text_scene1.instantiate()
+		add_child(text1)
+		Globals.StoryStage += 1
+		message_up = true
+
+	if Globals.NaomiMessages != 0:
+		$"Freq Screen/SubViewport/Control2/NaomiSignal".hide()
+		signals_array[0] = 999
+
+	if Globals.radio_freq == signals_array[1]:
+		$"Automated Signal".volume_db = 0
+		signal_display.set_text("Automated Broadcast")
+	else:
+		$"Automated Signal".volume_db = -80
+
+	if Globals.radio_freq == signals_array[2]:
+		$"Morse Signal".volume_db = 0
+		signal_display.set_text("Signal Detected")
+	else:
+		$"Morse Signal".volume_db = -80
+
+	if Globals.radio_freq not in signals_array:
+		signal_display.set_text("No Signal Detected")
+
+	if Input.is_action_just_pressed("Pause"):
+		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
+
+	#if Input.is_action_just_pressed("Debug"):
+		#print(marker.position)
+
+
+func update_marker_position() -> void:
+	var t: float = inverse_lerp(0.0, 200.0, Globals.radio_freq)
+	t = clampf(t, 0.0, 1.0)
+
+	var target_x: float = lerpf(marker_left_x, marker_right_x, t)
+
+	marker.position.x = target_x - (marker.size.x / 2.0)

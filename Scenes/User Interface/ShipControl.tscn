@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://o013btxn1k3e"]
 
 [ext_resource type="Script" uid="uid://cch6vcu0lxojv" path="res://Scripts/ShipRadioCameraScript.gd" id="1_64iiw"]
+[ext_resource type="Script" uid="uid://dbx3mm8uysom7" path="res://Scripts/ship_control_script.gd" id="1_kisfl"]
 [ext_resource type="Texture2D" uid="uid://cdlj7sf16324x" path="res://Models/SkyBox/panorama_image.png" id="2_af4er"]
 [ext_resource type="PackedScene" uid="uid://b2oorbwd64fjm" path="res://Scenes/User Interface/System Maps/System Map - Brimpie.tscn" id="3_64iiw"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="4_3bfit"]
@@ -8,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://ckbsjd3wrfn4" path="res://Audio/ShipAmbience3.wav" id="4_u0n8h"]
 [ext_resource type="AudioStream" uid="uid://dpgsv6jijelku" path="res://Audio/Alarm.wav" id="5_pwdlk"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="5_u0n8h"]
+[ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="9_pwdlk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
 resource_local_to_scene = true
@@ -54,7 +56,32 @@ font = ExtResource("5_u0n8h")
 font_size = 200
 font_color = Color(0.4, 1, 0.9411765, 1)
 
-[node name="Database Terminal" type="Node3D" unique_id=1790285260]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kisfl"]
+shader = ExtResource("9_pwdlk")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.2
+shader_parameter/scanlines_opacity = 0.01
+shader_parameter/scanlines_width = 0.5
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 1.653
+shader_parameter/roll_variation = 4.453
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01
+shader_parameter/noise_opacity = 0.047
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.10000000475
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Ship Controls" type="Node3D" unique_id=1790285260]
+script = ExtResource("1_kisfl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
 transform = Transform3D(17.099998, 0, 0, 0, 21.250362, 0.025881903, 0, -5.6940203, 0.096592575, 0, -0.15699983, -0.6792514)
@@ -132,3 +159,9 @@ autoplay = true
 
 [node name="Alarm" type="AudioStreamPlayer" parent="." unique_id=1352884808]
 stream = ExtResource("5_pwdlk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1068804670]
+material = SubResource("ShaderMaterial_kisfl")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2

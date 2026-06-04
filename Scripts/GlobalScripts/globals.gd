@@ -45,7 +45,7 @@ var supplies1 = 0
 var supplies2 = 0
 #max is 3
 
-var StoryStage: int = 4
+var StoryStage: int = 0
 #determines state of the game's story
 #1 wake up.
 #2 eat
@@ -57,6 +57,8 @@ var StoryStage: int = 4
 #8 To Avalon
 #9 End of demo
 
+var NaomiMessages: int = 0
+
 var HallwayLoop = 0
 var HallwayPos = null
 
@@ -66,7 +68,7 @@ var NaomiOnShip = false
 
 var CamText: String = "Ship Cam"
 
-var radio_freq: int = 00.00
+var radio_freq: int = 000
 
 var ShipMenu = false
 

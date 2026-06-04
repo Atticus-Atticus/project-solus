@@ -22,7 +22,6 @@ func _process(delta: float) -> void:
 		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Radio:")
 		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("*STATIC* Ca...lihan...?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
-		$RadioStatic.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
 		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
@@ -66,7 +65,7 @@ func _process(delta: float) -> void:
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()
 		$ShipAISpeech.play()
-		$RadioStatic.stop()
+		Globals.NaomiMessages += 1
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 9:
 		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Calihan:")
@@ -89,5 +88,4 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 12:
 		Globals.CamText = "Use the ship's controls to choose a destination"
-		Globals.PlayerControls = true
 		$".".queue_free()

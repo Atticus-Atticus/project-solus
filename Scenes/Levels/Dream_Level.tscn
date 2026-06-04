@@ -4997,7 +4997,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021129131, 2.1933389, 13.5
 trigger = NodePath("PointClickTriggerbox2")
 
 [node name="PointClickTriggerbox2" parent="Interactables/NaomiDoorInteractableNode" unique_id=414344458 instance=ExtResource("48_tbe1u")]
-transform = Transform3D(-6.551477e-08, 0, 1.1702547, 0, 2.507983, 0, -1.4988031, 0, -5.1153457e-08, 0.07703829, -1.7200155, 0.58364105)
+transform = Transform3D(-6.551477e-08, 0, 1.1702547, 0, 2.507983, 0, -1.4988031, 0, -5.1153457e-08, 0.07703829, -1.7200155, 0.23258495)
 visible = false
 
 [node name="CameraMain" parent="." unique_id=1294855615 instance=ExtResource("13_jldc8")]

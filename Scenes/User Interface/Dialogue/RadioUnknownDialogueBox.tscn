@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://c2m3rw8t5x6cw"]
+
+[ext_resource type="Script" uid="uid://cmwhvhl16ab4t" path="res://Scripts/DialogueScripts/radio_dialogue_box_script.gd" id="1_2w086"]
+[ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="2_muh65"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_i1kea"]
+[ext_resource type="LabelSettings" uid="uid://tp8yager30fu" path="res://Scenes/User Interface/Dialogue/DialogueBoxText.tres" id="4_ppkfa"]
+[ext_resource type="AudioStream" uid="uid://b1dq6c45lpfej" path="res://Audio/Morse/MorseCode.wav" id="6_18a4l"]
+[ext_resource type="AudioStream" uid="uid://bx250ldn61i83" path="res://Audio/Speech/ShipAISpeech.wav" id="7_q50vd"]
+
+[sub_resource type="Animation" id="Animation_vxsjl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5bkkr"]
+resource_name = "TextTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iy72d"]
+_data = {
+&"RESET": SubResource("Animation_vxsjl"),
+&"TextTween": SubResource("Animation_5bkkr")
+}
+
+[node name="RadioTextBox" type="Node" unique_id=543930469]
+script = ExtResource("1_2w086")
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=1457960656]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -320.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=1415221166]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_muh65")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=1395516879]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=90706161]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=544551180]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1935839563]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_i1kea")
+theme_override_font_sizes/font_size = 50
+text = "Ship_Com:"
+label_settings = ExtResource("4_ppkfa")
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=6421452]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_i1kea")
+theme_override_font_sizes/font_size = 50
+text = "Opening Comms Channel."
+label_settings = ExtResource("4_ppkfa")
+autowrap_mode = 2
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1191014111]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_i1kea")
+theme_override_font_sizes/font_size = 50
+text = "v"
+label_settings = ExtResource("4_ppkfa")
+
+[node name="TweenAnimation" type="AnimationPlayer" parent="TextboxContainer" unique_id=970300270]
+libraries/ = SubResource("AnimationLibrary_iy72d")
+speed_scale = 2.5
+
+[node name="ShipAISpeech" type="AudioStreamPlayer" parent="." unique_id=997940703]
+stream = ExtResource("7_q50vd")
+
+[node name="Morse" type="AudioStreamPlayer" parent="." unique_id=458285764]
+stream = ExtResource("6_18a4l")
+
+[connection signal="animation_finished" from="TextboxContainer/TweenAnimation" to="." method="_on_tween_animation_animation_finished"]

@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://c4fh1pkf6dyt5" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_01_A.png" id="28_shfd7"]
 [ext_resource type="Texture2D" uid="uid://c88o6cffc3obx" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_04_A.png" id="29_gdu0l"]
 [ext_resource type="PackedScene" uid="uid://bs2yc8pa41ft5" path="res://Scenes/Objects/DatadriveCollectable1.tscn" id="29_gr5qn"]
-[ext_resource type="AudioStream" uid="uid://brjpqef5xddxb" path="res://Audio/ShipAmbience2.wav" id="31_7levc"]
 [ext_resource type="PackedScene" uid="uid://cisgnxs66jtu8" path="res://Scenes/Objects/DatadriveCollectable8.tscn" id="31_p8xer"]
 [ext_resource type="Texture2D" uid="uid://cq6tiibh8jurs" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_03_A.png" id="32_58a0o"]
 [ext_resource type="AudioStream" uid="uid://dxm1n68qn23v3" path="res://Audio/Explosion.wav" id="32_wyr8n"]
@@ -58,6 +57,7 @@
 [ext_resource type="Animation" uid="uid://dsyajnkide172" path="res://Models/PlayerModel/Naomi/Normal Naomi/NaomiIdle.res" id="47_ang11"]
 [ext_resource type="Animation" uid="uid://8fofl5e1uxg1" path="res://Models/PlayerModel/Naomi/Normal Naomi/NaomiWalk.res" id="48_ee2d6"]
 [ext_resource type="Animation" uid="uid://b8ak7n1v06oir" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose1.res" id="49_h6y00"]
+[ext_resource type="AudioStream" uid="uid://psdx0glyx34" path="res://Audio/270936-Spaceship_ambience.wav" id="49_nc512"]
 [ext_resource type="Animation" uid="uid://l8oswunav2pu" path="res://Models/PlayerModel/Naomi/Normal Naomi/Pose2.res" id="50_j0v5l"]
 [ext_resource type="Animation" uid="uid://ygurdojpfh83" path="res://Models/PlayerModel/Naomi/Mutated Naomi/NaomiMutatedIdle2.res" id="51_2hcar"]
 [ext_resource type="PackedScene" uid="uid://lqm5fw4menpt" path="res://Scenes/Objects/PickUpInteractableObject.tscn" id="51_nc512"]
@@ -5136,10 +5136,6 @@ shape = SubResource("BoxShape3D_dakmf")
 
 [node name="InvisableWall24" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=1148479002]
 transform = Transform3D(4.21802, 0, 0.832989, 0, 2.10247, 0, -6.35031, 0, 0.55329, -1.99545, 0.45204425, -0.19721)
-shape = SubResource("BoxShape3D_dakmf")
-
-[node name="InvisableWall25" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=1599736442]
-transform = Transform3D(2.03631, 0, 1.01204, 0, 2.10247, 0, -0.484592, 0, 4.25272, -2.87544, 1.69839, 3.35022)
 shape = SubResource("BoxShape3D_dakmf")
 
 [node name="InvisableWall8" type="CollisionShape3D" parent="NavigationRegion3D/Level" unique_id=1398024137]
@@ -10434,7 +10430,8 @@ transform = Transform3D(1.3807343, 0, -5.9604645e-08, 0, 0.8872891, 0, 3.5762787
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1580300690]
-stream = ExtResource("31_7levc")
+stream = ExtResource("49_nc512")
+volume_db = -2.0
 autoplay = true
 
 [node name="Explosion" type="AudioStreamPlayer" parent="." unique_id=367798479]

@@ -1,10 +1,10 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://clxf3x4jpjvx8"]
+[gd_resource type="LabelSettings" format=3 uid="uid://clxf3x4jpjvx8"]
 
 [ext_resource type="FontFile" uid="uid://cha0utckc7dq7" path="res://Fonts/DS-DIGIB.TTF" id="1_igqhu"]
 
 [resource]
 font = ExtResource("1_igqhu")
-font_size = 200
+font_size = 100
 font_color = Color(0.4, 1, 0.941176, 1)
 outline_size = 10
 outline_color = Color(5.05373e-07, 0.434636, 0.403366, 1)
