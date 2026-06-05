@@ -106,8 +106,8 @@ text = "
 > THANK YOU FOR PLAYING...
 >
 >
->                                                                           v0.2
-> 	 (demo)
+>                                                                           v0.3
+> 	 (Alpha)
 >
 > 
 >
@@ -121,7 +121,7 @@ text = "
 >
 >
 >
-This Terminal is property of the Coalition Collective of Intelligence."
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_srlce")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1437658539]
@@ -184,16 +184,6 @@ texture = ExtResource("7_ugvpk")
 
 [node name="CRT Shader" parent="." unique_id=723716134 instance=ExtResource("8_xcu8k")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 396.0
-offset_bottom = 141.0
-grow_horizontal = 1
-grow_vertical = 1
-mouse_filter = 2
 
 [node name="CRT Shader2" parent="." unique_id=621608671 instance=ExtResource("9_jdp4e")]
 visible = false

@@ -30,9 +30,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause") and SceneSwitcher.Destination != 0:
 		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
 		#Globals.StoryStage += 1
+		_save_pos()
 
 	if Input.is_action_just_pressed("Pause") and SceneSwitcher.Destination == 0:
 		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
+		_save_pos()
 
 	if input_dir.length() > 0.01:
 		rotation = lerp_angle(
@@ -46,3 +48,6 @@ func _toggle():
 		control = false
 	else:
 		control = true
+
+func _save_pos():
+	SceneSwitcher.PlayerShipSpawn = position

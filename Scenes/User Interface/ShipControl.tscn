@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dpgsv6jijelku" path="res://Audio/Alarm.wav" id="5_pwdlk"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="5_u0n8h"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="9_pwdlk"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="10_x20ox"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
 resource_local_to_scene = true
@@ -84,7 +85,7 @@ shader_parameter/vignette_opacity = 0.5
 script = ExtResource("1_kisfl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
-transform = Transform3D(17.099998, 0, 0, 0, 21.250362, 0.025881903, 0, -5.6940203, 0.096592575, 0, -0.15699983, -0.6792514)
+transform = Transform3D(39.329998, 0, 0, 0, 27.408245, 0.027891524, 0, -7.344021, 0.10409258, 0, -0.15699983, -0.6792514)
 mesh = SubResource("BoxMesh_8jb2r")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
@@ -99,7 +100,7 @@ shadow_enabled = true
 environment = SubResource("Environment_fwuq5")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=213314888]
-transform = Transform3D(1, 0, 0, 0, 0.843588, 0.53699, 0, -0.53699, 0.843588, 0.155885, 2.14552, 3.30418)
+transform = Transform3D(1, 0, 0, 0, 0.8435885, 0.5369903, 0, -0.5369903, 0.8435885, 0.155885, 5.14552, 6.30418)
 light_energy = 4.0
 spot_range = 86.3607
 spot_angle = 87.1875
@@ -159,6 +160,9 @@ autoplay = true
 
 [node name="Alarm" type="AudioStreamPlayer" parent="." unique_id=1352884808]
 stream = ExtResource("5_pwdlk")
+
+[node name="CRT Shader Static" parent="." unique_id=2136826413 instance=ExtResource("10_x20ox")]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1068804670]
 material = SubResource("ShaderMaterial_kisfl")

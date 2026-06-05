@@ -15,6 +15,17 @@ func _ready() -> void:
 		$Area2D/Area2D7/BpStation.set_deferred("disabled", true)
 		$Planets/Station/AnimatedSprite2D.hide()
 
+	if SceneSwitcher.PlayerShipSpawn != null:
+		ship.position = SceneSwitcher.PlayerShipSpawn
+
+	if Globals.StoryStage >= 7:
+		$Planets/AvalonStar.show()
+		$Area2D/Area2D8.show()
+		$Area2D/Area2D8/CollisionShape2D.set_deferred("disabled", false)
+	else:
+		$Planets/AvalonStar.hide()
+		$Area2D/Area2D8.hide()
+		$Area2D/Area2D8/CollisionShape2D.set_deferred("disabled", true)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	cam.global_position = ship.global_position

@@ -11,12 +11,16 @@
 [ext_resource type="Script" uid="uid://bv8xollrs77wp" path="res://Scripts/MinusFreqScript.gd" id="6_fx56j"]
 [ext_resource type="AudioStream" uid="uid://b1dq6c45lpfej" path="res://Audio/Morse/MorseCode.wav" id="6_q73t4"]
 [ext_resource type="LabelSettings" uid="uid://clxf3x4jpjvx8" path="res://Scenes/User Interface/ShipRadioButton.tres" id="7_cau1o"]
+[ext_resource type="AudioStream" uid="uid://buqxwce477yfu" path="res://Audio/Morse/NiceMorse.wav" id="7_vfmdt"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="8_cr6p2"]
 [ext_resource type="Shader" uid="uid://p2meysshkyok" path="res://Shaders/ShipRadio.gdshader" id="9_ep1bw"]
 [ext_resource type="Shader" uid="uid://d00xf67a3x2ga" path="res://Shaders/RadioSignal.gdshader" id="10_b8gkf"]
 [ext_resource type="FontFile" uid="uid://cha0utckc7dq7" path="res://Fonts/DS-DIGIB.TTF" id="10_eh7t2"]
 [ext_resource type="Texture2D" uid="uid://cruhmau34v44" path="res://Sprites/RadioScreen.png" id="12_347lm"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="14_l2h4j"]
+[ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="18_ldeb7"]
+[ext_resource type="AudioStream" uid="uid://ckbsjd3wrfn4" path="res://Audio/ShipAmbience3.wav" id="20_5itex"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="20_7virp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
 resource_local_to_scene = true
@@ -82,7 +86,7 @@ shader_parameter/intensity = 1.0
 shader_parameter/line_sharpness = 0.0
 shader_parameter/line_size = 1.0
 shader_parameter/fade = 0.5
-shader_parameter/rest_size = -1.6079999813799999
+shader_parameter/rest_size = -1.60799998138
 shader_parameter/edge = 0.190000009025
 shader_parameter/speed = 0.5
 shader_parameter/color = Color(0.42930937, 0.42930937, 0.42930937, 0.023529412)
@@ -195,13 +199,37 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7virp"]
+shader = ExtResource("8_cr6p2")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.2
+shader_parameter/scanlines_opacity = 0.01
+shader_parameter/scanlines_width = 0.5
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 1.653
+shader_parameter/roll_variation = 4.453
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.01
+shader_parameter/noise_opacity = 0.047
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.10000000475
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="Radio" type="Node3D" unique_id=1790285260 node_paths=PackedStringArray("radio_screen", "marker")]
 script = ExtResource("1_fyaab")
 radio_screen = NodePath("Freq Screen/SubViewport/Control2/Label")
 marker = NodePath("Freq Screen/SubViewport/Control2/Marker2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
-transform = Transform3D(19, 0, 0, 0, 10, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(19, 0, 0, 0, 12.20653, 0, 0, 0, 0.1, 0, 1.0211005, 0)
 mesh = SubResource("BoxMesh_8jb2r")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
@@ -229,6 +257,11 @@ autoplay = true
 [node name="Morse Signal" type="AudioStreamPlayer3D" parent="." unique_id=989693865]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39078477, 1.5292315, 0.9350947)
 stream = ExtResource("6_q73t4")
+autoplay = true
+
+[node name="Morse Signal2" type="AudioStreamPlayer3D" parent="." unique_id=1167932348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7427429, 1.5292315, 0.9350947)
+stream = ExtResource("7_vfmdt")
 autoplay = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=213314888]
@@ -326,6 +359,15 @@ offset_left = 1066.6
 offset_top = 566.0
 offset_right = 1708.7538
 offset_bottom = 695.17175
+rotation = -1.5707964
+
+[node name="ColorRect6" type="ColorRect" parent="Freq Screen/SubViewport/Control2" unique_id=1750125327]
+material = SubResource("ShaderMaterial_uby32")
+layout_mode = 0
+offset_left = 401.0
+offset_top = 570.0
+offset_right = 1043.1538
+offset_bottom = 699.17175
 rotation = -1.5707964
 
 [node name="ColorRect3" type="ColorRect" parent="Freq Screen/SubViewport/Control2" unique_id=1634263792]
@@ -481,9 +523,23 @@ offset_bottom = 725.0
 scale = Vector2(1.9199986, 2.1600008)
 color = Color(0, 0.0705882, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=578138923]
+[node name="PointerNode" parent="." unique_id=288821097 instance=ExtResource("18_ldeb7")]
+
+[node name="CRT Shader Static" parent="." unique_id=197002389 instance=ExtResource("20_7virp")]
 visible = false
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=578138923]
 material = SubResource("ShaderMaterial_a1qho")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=392775806]
+stream = ExtResource("20_5itex")
+autoplay = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1692205797]
+material = SubResource("ShaderMaterial_7virp")
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2

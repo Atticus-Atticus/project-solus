@@ -20,7 +20,7 @@ func _on_tween_animation_animation_finished(anim_name: StringName) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue") and textline == 1:
 		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Radio:")
-		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("*STATIC* Ca...lihan...?")
+		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("*STATIC* Ca...han...?")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 2:
@@ -74,7 +74,7 @@ func _process(delta: float) -> void:
 		$CalihanSpeed.play()
 
 	if Input.is_action_just_pressed("Dialogue") and textline == 10:
-		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com")
+		$TextboxContainer/MarginContainer/HBoxContainer/Start.set_text("Ship_Com:")
 		$TextboxContainer/MarginContainer/HBoxContainer/Label.set_text("Incoming Attachment.")
 		$TextboxContainer/TweenAnimation.play("TextTween")
 		$ShipBeep.play()

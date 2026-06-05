@@ -11,4 +11,6 @@ var Destination: int = 0
 #2- if un-loading hub scene run function called get_player_pos
 #3 -  store that player pos in a gloabal script
 #4 have a system that loads and applies playerpos (set_player_pos) when loading the hub scene
-#the comments above was from my college tutor. think I'll leave them there.
+#the comments above were from my college tutor. think I'll leave them there.
+
+@export var PlayerShipSpawn = null

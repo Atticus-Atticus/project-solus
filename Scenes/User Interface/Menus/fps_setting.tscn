@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bso76ti11xxxc"]
+
+[ext_resource type="Script" uid="uid://cn0wdd0i4vfkm" path="res://Scripts/fps_setting_script.gd" id="1_jff8l"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_w5a2h"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_jff8l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sc3oe"]
+font = ExtResource("2_jff8l")
+font_size = 30
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[node name="FPS Setting" type="Control" unique_id=1859656027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jff8l")
+
+[node name="Panel" type="Panel" parent="." unique_id=1251464167]
+layout_mode = 0
+offset_right = 303.0
+offset_bottom = 126.0
+theme = ExtResource("1_w5a2h")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1189582239]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.0
+offset_top = 18.0
+offset_right = 52.0
+offset_bottom = 41.0
+grow_horizontal = 2
+text = "Set FPS Limit:"
+label_settings = SubResource("LabelSettings_sc3oe")
+
+[node name="OptionButton" type="OptionButton" parent="Panel" unique_id=743530914]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -14.0
+offset_right = 104.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+selected = 1
+item_count = 4
+popup/item_0/text = "30 FPS"
+popup/item_0/id = 0
+popup/item_1/text = "60 PFS"
+popup/item_1/id = 1
+popup/item_2/text = "120 FPS"
+popup/item_2/id = 2
+popup/item_3/text = "Uncapped"
+popup/item_3/id = 3
+
+[connection signal="item_selected" from="Panel/OptionButton" to="." method="_on_option_button_item_selected"]

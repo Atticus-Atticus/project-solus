@@ -10,10 +10,11 @@ extends CharacterBody3D
 @export var gravity: float = 20.0
 
 @export var turn_speed: float = 8.0
-@export var arrive_dist: float = 0.1  #Keep this var above 1 if going below causes problems.
+@export var arrive_dist: float = 0.1 
 @export var door_arrive_dist: float = 0.6
 
 @export var playerPOS := Vector3.ZERO
+
 var holding_click := false
 var sp: Vector3
 var ep: Vector3
@@ -214,10 +215,10 @@ func _update_target_from_mouse() -> void:
 
 	nav_agent.target_position = closest_nav_point
 
-	print("Raw hit: ", hit_pos)
-	print("Nav target: ", closest_nav_point)
-	print("Reachable: ", nav_agent.is_target_reachable())
-	print("Path: ", nav_agent.get_current_navigation_path())
+	#print("Raw hit: ", hit_pos)
+	#print("Nav target: ", closest_nav_point)
+	#print("Reachable: ", nav_agent.is_target_reachable())
+	#print("Path: ", nav_agent.get_current_navigation_path())
 
 func _move_through_door() -> void:
 	Globals.PlayerControls = false

@@ -1,6 +1,6 @@
 extends Node3D
 
-var signals_array := [113, 50, 182]
+var signals_array := [113, 50, 182, 69]
 
 @onready var text_scene1: PackedScene = preload("res://Scenes/User Interface/Dialogue/RadioDialogueBox.tscn")
 
@@ -20,6 +20,18 @@ var message_up = false
 func _ready() -> void:
 	update_marker_position()
 	signal_display.set_text("No Signal Detected")
+
+	if Globals.NaomiMessages != 0:
+		$"Freq Screen/SubViewport/Control2/NaomiSignal".hide()
+		signals_array[0] = 999
+
+	$"Automated Signal".volume_db = -80
+	$"Morse Signal".volume_db = -80
+	$"Morse Signal2".volume_db = -80
+
+	$"CRT Shader Static".show()
+	await get_tree().create_timer(0.2).timeout
+	$"CRT Shader Static".hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,16 +56,23 @@ func _process(delta: float) -> void:
 		$"Automated Signal".volume_db = -80
 
 	if Globals.radio_freq == signals_array[2]:
-		$"Morse Signal".volume_db = 0
+		$"Morse Signal".volume_db = -2
 		signal_display.set_text("Signal Detected")
 	else:
 		$"Morse Signal".volume_db = -80
+
+	if Globals.radio_freq == signals_array[3]:
+		$"Morse Signal2".volume_db = -4
+		signal_display.set_text("No Signal Detected")
+	else:
+		$"Morse Signal2".volume_db = -80
 
 	if Globals.radio_freq not in signals_array:
 		signal_display.set_text("No Signal Detected")
 
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
+		Globals.PlayerControls = true
 
 	#if Input.is_action_just_pressed("Debug"):
 		#print(marker.position)

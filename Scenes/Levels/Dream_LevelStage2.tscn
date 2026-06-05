@@ -5398,12 +5398,12 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.532873, 3.6, 4.881)
 transform = Transform3D(30.695303, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, -12.970417, -11.427702, -19.536102)
 visible = false
 
-[node name="CameraMain4" parent="." unique_id=291157471 instance=ExtResource("45_df13e")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.923736, 4.43906, 4.52265)
+[node name="CameraMain4" parent="." unique_id=1956493779 instance=ExtResource("45_df13e")]
+transform = Transform3D(0.2, 0, 0, 0, 0.19318517, -0.05176381, 0, 0.05176381, 0.19318517, -3.923736, 4.43906, 4.52265)
 starting_rotation = Vector3(15, 180, 0)
 
-[node name="CameraTrigger" parent="CameraMain4" unique_id=1004866365 instance=ExtResource("46_6syrj")]
-transform = Transform3D(15.641201, 0, 0, 0, 16.006, 0, 0, 0, 35.2117, -3.9398117, -7.973239, -18.716902)
+[node name="CameraTrigger" parent="CameraMain4" unique_id=1150352245 instance=ExtResource("46_6syrj")]
+transform = Transform3D(15.641202, 0, 0, 0, 15.4606085, 9.113459, 0, -4.1426578, 34.011887, -3.9398117, -15.941789, -16.581732)
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2050752574]
@@ -5694,7 +5694,7 @@ mesh = SubResource("ArrayMesh_hwthk")
 skeleton = NodePath("")
 
 [node name="FireEffect" parent="." unique_id=1276777653 instance=ExtResource("74_bmf1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3025, 10.8649, -23.5839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.131742, 8.585834, -23.305248)
 
 [node name="AmbienceCHAOS" type="AudioStreamPlayer3D" parent="." unique_id=1343817379]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.1006, -7.36686, -12.0614)

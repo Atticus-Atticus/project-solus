@@ -97,3 +97,36 @@ func _process(delta):
 	if Input.is_action_just_pressed("Debug"):
 		print("Stage is: ", StoryStage)
 		print("Destination is: ", SceneSwitcher.Destination)
+
+	if Input.is_action_pressed("Ctrl") and Input.is_action_pressed("L_Shift") and Input.is_action_pressed("R_Key"):
+		_restart()
+
+func _restart():
+	Lore1 = 0
+	lore2 = 0
+	lore7 = 0
+	lore8 = 0
+	lore9 = 0
+	lore10 = 0
+	PlayerControls = true
+	InDialogue = false
+	paused = false
+	PlayerSupplies = 0
+	supplies1 = 0
+	supplies2 = 0
+	StoryStage = 0
+	NaomiMessages = 0
+	HallwayLoop = 0
+	NaomiShip1 = false
+	NaomiShip2 = false
+	NaomiOnShip = false
+	CamText = "Ship Cam"
+	radio_freq = 000
+	Destination = 0
+	Suit = false
+	VisitedShip = 0
+	VisitedStation = 0
+	KeysFound = 0
+	CutScene1Anim = 0
+	CutScene1Finished = 0
+	get_tree().change_scene_to_file("res://Scenes/User Interface/Menus/SplashScreen.tscn")

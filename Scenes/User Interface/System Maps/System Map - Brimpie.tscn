@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="13_t648y"]
 [ext_resource type="Texture2D" uid="uid://r6qcutfbxeha" path="res://Sprites/Ship.png" id="14_sypc4"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="14_wfmlv"]
-[ext_resource type="Script" uid="uid://ldijwpcd4irp" path="res://Scripts/SystemMapArea2DScript.gd" id="15_bogfh"]
+[ext_resource type="Texture2D" uid="uid://1m8q3qnpolrm" path="res://Sprites/Star1/Blue/star5.png" id="15_50ms6"]
 [ext_resource type="Texture2D" uid="uid://bx5yqjxbabxug" path="res://Sprites/Station.png" id="15_wfmlv"]
 [ext_resource type="Script" uid="uid://wte77smswwoi" path="res://Scripts/Planet1.gd" id="16_r2jos"]
 [ext_resource type="Script" uid="uid://de11o2cfnwup6" path="res://Scripts/area_2d_2.gd" id="17_vjv7t"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" uid="uid://belav1vqef3o1" path="res://Scripts/area_2d_6.gd" id="21_o7tmm"]
 [ext_resource type="Script" uid="uid://bcpo3jpwmeew1" path="res://Scripts/area_2d_7.gd" id="22_8hucc"]
 [ext_resource type="Texture2D" uid="uid://bpk0sy5b7d575" path="res://Sprites/PlayerShip.png" id="24_8hucc"]
+[ext_resource type="Script" uid="uid://bj0dypwvp73yl" path="res://Scripts/area_2d_8_AvalonStar.gd" id="24_j20qb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jocav"]
 load_path = "res://.godot/imported/Blue1.png-886f7a0347ca07df943af9b358ef682f.ctex"
@@ -168,6 +169,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbrk5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50ms6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suie5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jocav"]
 size = Vector2(23.333252, 34.166626)
@@ -1455,8 +1458,19 @@ sprite_frames = SubResource("SpriteFrames_0wr2h")
 autoplay = "default"
 frame_progress = 0.46737507
 
+[node name="AvalonStar" type="Sprite2D" parent="Planets" unique_id=143314710]
+texture_filter = 1
+position = Vector2(2159, 1642)
+scale = Vector2(11.357142, 11.357142)
+texture = ExtResource("15_50ms6")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Planets/AvalonStar" unique_id=1080152988]
+modulate = Color(0.4, 1, 0.9411765, 1)
+sprite_frames = SubResource("SpriteFrames_0wr2h")
+autoplay = "default"
+frame_progress = 0.7518369
+
 [node name="Area2D" type="Node2D" parent="." unique_id=1641848116]
-script = ExtResource("15_bogfh")
 
 [node name="Area2D" type="Area2D" parent="Area2D" unique_id=405887336]
 script = ExtResource("16_r2jos")
@@ -1516,8 +1530,17 @@ position = Vector2(1247.0001, 1067.0001)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_50ms6")
 
+[node name="Area2D8" type="Area2D" parent="Area2D" unique_id=1006846087 node_paths=PackedStringArray("PlayerShip")]
+script = ExtResource("24_j20qb")
+PlayerShip = NodePath("../../CharacterBody2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Area2D8" unique_id=321448937]
+position = Vector2(2159, 1643.0001)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_suie5")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1813431465]
-position = Vector2(2906, 2513)
+position = Vector2(2847, 2535)
 script = ExtResource("2_tydle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=42263557]
@@ -1552,25 +1575,18 @@ text = "
               INFO PANEL
 
 
-SHIP: R.C.S Talbot
+SYSTEM: Avalon
 
-REGISTRATION: TG-907
+DISTANCE: 8.3 ly
 
-REGISTERED OWNER: Mr F Talbot
+E.T.A: 14 Cycles
 
-SCAN RESULTS: 
-FUEL: NONE
+PLOTTED ROUTE:
+Brimpie (you are here) > Avalon > Tau Ceti > ERROR > ERROR > Altair
 
-LIFE SIGNS: NONE
+INTERSTELLAR HIGHWAY STATUS: ERROR
 
-STATE: DERELICT
-
-AUTOMATED DOCKING RESPONSE: GRANTED
-
-PRESS 'E' TO BEGIN DOCKING SEQUENCE
-
-WARNING:
-HIGH RADITION LEVELS DETECTED!"
+PRESS 'E' TO BEGIN CHARGING FTL DRIVE"
 label_settings = SubResource("LabelSettings_bogfh")
 autowrap_mode = 2
 visible_characters = 0
@@ -1581,10 +1597,10 @@ libraries/ = SubResource("AnimationLibrary_vjv7t")
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=1134699096]
 material = SubResource("ShaderMaterial_jopg2")
-offset_left = -1818.0001
-offset_top = -1170.0
-offset_right = 101.99988
-offset_bottom = -90.0
+offset_left = -992.00006
+offset_top = -557.99994
+offset_right = 42.37567
+offset_bottom = -35.777893
 scale = Vector2(1.9199986, 2.1600008)
 color = Color(0, 0.0705882, 0, 1)
 
@@ -1614,3 +1630,5 @@ environment = SubResource("Environment_8hucc")
 [connection signal="body_exited" from="Area2D/Area2D6" to="Area2D/Area2D6" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D/Area2D7" to="Area2D/Area2D7" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D/Area2D7" to="Area2D/Area2D7" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D/Area2D8" to="Area2D/Area2D8" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/Area2D8" to="Area2D/Area2D8" method="_on_body_exited"]

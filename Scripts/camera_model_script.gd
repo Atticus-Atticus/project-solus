@@ -43,9 +43,9 @@ func _process(delta: float) -> void:
 		cam.make_current()
 
 	# Zoom (clamp added so it can't go silly)
-	if Input.is_action_just_pressed("CameraZoomIn"):
+	if Input.is_action_just_pressed("F_Key"):
 		cam.fov = clamp(cam.fov + 10.0, 30.0, 110.0)
-	if Input.is_action_just_pressed("CameraZoomOut"):
+	if Input.is_action_just_pressed("R_Key"):
 		cam.fov = clamp(cam.fov - 10.0, 30.0, 110.0)
 	if Input.is_action_just_pressed("Debug"):
 		print(cam.fov)

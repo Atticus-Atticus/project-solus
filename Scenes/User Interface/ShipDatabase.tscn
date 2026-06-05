@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://qgq8el6018dt"]
 
+[ext_resource type="Script" uid="uid://brryq4wcvfnxh" path="res://Scripts/ship_database_script.gd" id="1_h7pe6"]
 [ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="1_muk5n"]
 [ext_resource type="Script" uid="uid://cch6vcu0lxojv" path="res://Scripts/ShipRadioCameraScript.gd" id="2_jbjl1"]
 [ext_resource type="Texture2D" uid="uid://dwx7p1ulyk7v5" path="res://Models/BlueFlightDeck_0.png" id="2_uqm88"]
@@ -15,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cvcmqnpc7y85y" path="res://Models/BlueFlightDeck_5.png" id="7_6ecak"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="7_cvw3e"]
 [ext_resource type="Texture2D" uid="uid://bf0gjdp2hyonk" path="res://Models/BlueFlightDeck_6.png" id="8_8ovsm"]
+[ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="16_ftupy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5kng"]
 resource_name = "material_0"
@@ -349,6 +351,7 @@ shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
 [node name="Database Terminal" type="Node3D" unique_id=1790285260]
+script = ExtResource("1_h7pe6")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=521313217]
 transform = Transform3D(0.095644146, -0.062227853, 0.99346864, 0.036674913, 0.99758685, 0.058955014, -0.9947399, 0.030796673, 0.09769556, 7.35825, 2.85602, 7.533828)
@@ -376,7 +379,8 @@ mesh = SubResource("ArrayMesh_a2x76")
 skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
-transform = Transform3D(1, 0, 0, 0, 0.9929199, 0.11878522, 0, -0.11878522, 0.9929199, 0, 2.1992571, 6.617167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4981563, 5.1669083)
+fov = 90.0
 script = ExtResource("2_jbjl1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2102990598]
@@ -431,6 +435,9 @@ stream = ExtResource("5_qh30q")
 
 [node name="blockbench_export" parent="." unique_id=1735192381 instance=ExtResource("6_cvw3e")]
 transform = Transform3D(-9, 0, 1.3589622e-06, 0, 9, 0, -1.3589622e-06, 0, -9, 0, -8, -7)
+
+[node name="CRT Shader Static" parent="." unique_id=1368267626 instance=ExtResource("16_ftupy")]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1522481106]
 material = SubResource("ShaderMaterial_fsbnf")

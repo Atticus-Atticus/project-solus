@@ -27,16 +27,18 @@ func _ready() -> void:
 		var LoadedText = WakeUpText.instantiate()
 		add_child(LoadedText)
 		
-	if Globals.StoryStage == 6:
+	if Globals.StoryStage == 6 and SceneSwitcher.Destination == 0:
 		var LoadedText2 = ReturnText.instantiate()
 		add_child(LoadedText2)
 		
-	if Globals.StoryStage == 7:
+	if Globals.StoryStage == 7 and SceneSwitcher.Destination != 3:
 		var LoadedText3 = Return2Text.instantiate()
 		add_child(LoadedText3)
 	
+	if SceneSwitcher.Destination == 3:
+		Globals.StoryStage += 1
+	
 	#SceneSwitcher.Destination = 0
-	Globals.Destination = 0
 
 func _on_child_exiting_tree(node: Node) -> void:
 	player.get_player_pos()

@@ -3348,7 +3348,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 4.95962, 2.54166, -22.0
 starting_rotation = Vector3(0, 120, 0)
 
 [node name="CameraTrigger" parent="CameraFlightDeck" unique_id=554224862 instance=ExtResource("4_di1hq")]
-transform = Transform3D(38.9746, 0, 0, 0, 10.9824, 0, 0, 0, 44.585, 10.5048, -12.6126, -20.1633)
+transform = Transform3D(38.9746, 0, 0, 0, 10.9824, 0, 0, 0, 53.212566, 10.504803, -12.6126, -23.007416)
 visible = false
 
 [node name="CameraMallHall" parent="." unique_id=1168754562 instance=ExtResource("3_46pqe")]
@@ -3389,15 +3389,15 @@ stream = ExtResource("35_cc7cl")
 [node name="Timer" type="Timer" parent="." unique_id=1131690385]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=641005568]
-transform = Transform3D(14.3107, 0, 0, 0, 14.623, 0, 0, 0, 1, -3.9975, 0, -8.03707)
+transform = Transform3D(14.3107, 0, 0, 0, 24.544632, 0, 0, 0, 1, -3.9974995, 0.07851339, -8.03707)
 mesh = SubResource("BoxMesh_1ipkg")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=498871711]
-transform = Transform3D(-6.25541e-07, 0, 1, 0, 14.623, 0, -14.3107, 0, -4.37114e-08, 2.49072, -0.347151, -14.7139)
+transform = Transform3D(-6.25541e-07, 0, 1, 0, 24.544632, 0, -14.3107, 0, -4.37114e-08, 2.49072, -0.5041778, -14.7139)
 mesh = SubResource("BoxMesh_1ipkg")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1219591901]
-transform = Transform3D(14.3107, 0, 0, 0, 14.623, 0, 0, 0, 1, 20.052, 0, -19.6285)
+transform = Transform3D(14.3107, 0, 0, 0, 24.544632, 0, 0, 0, 1, 20.052, 0.07851339, -19.6285)
 mesh = SubResource("BoxMesh_1ipkg")
 
 [node name="DatabaseInteractable2" parent="." unique_id=995354832 instance=ExtResource("51_mvpr6")]

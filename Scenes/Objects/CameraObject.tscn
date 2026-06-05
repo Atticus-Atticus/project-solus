@@ -29,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.834, 0)
 [node name="PitchPivot" type="Node3D" parent="YawPivot" unique_id=913859432]
 
 [node name="Camera3D" type="Camera3D" parent="YawPivot/PitchPivot" unique_id=1465436430 groups=["Security Cams"]]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -0.03, 1.114)
+transform = Transform3D(-1, -1.8623705e-08, -8.541603e-08, 0, 0.97704554, -0.21303037, 8.742278e-08, -0.21303037, -0.97704554, 0, -0.029999971, 1.114)
 fov = 85.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1140948825]

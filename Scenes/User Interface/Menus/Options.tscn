@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_5gnfj"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_vomr3"]
 [ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="4_43q1g"]
+[ext_resource type="PackedScene" uid="uid://bso76ti11xxxc" path="res://Scenes/User Interface/Menus/fps_setting.tscn" id="5_we4i2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xn2yy"]
 font = ExtResource("3_vomr3")
@@ -36,6 +37,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1391, 804), Vector2(12, 804), Vector2(12, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/FPS Setting:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_sx7s1"]
 resource_name = "Open"
@@ -59,6 +72,18 @@ tracks/1/path = NodePath("Panel/Control:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/FPS Setting:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -90,6 +115,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/FPS Setting:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_boeap"]
@@ -152,6 +189,14 @@ grow_horizontal = 0
 scale = Vector2(1.2, 1.2)
 theme = ExtResource("2_5gnfj")
 text = "X"
+
+[node name="FPS Setting" parent="Panel" unique_id=1859656027 instance=ExtResource("5_we4i2")]
+visible = false
+layout_mode = 1
+offset_left = 53.0
+offset_top = 324.0
+offset_right = 53.0
+offset_bottom = 324.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1547898002]
 libraries/ = SubResource("AnimationLibrary_boeap")

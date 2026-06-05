@@ -16,6 +16,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 	Globals.VisitedShip = 1
+	SceneSwitcher.Destination = 0
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):
