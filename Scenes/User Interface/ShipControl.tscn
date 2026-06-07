@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="5_u0n8h"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="9_pwdlk"]
 [ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="10_x20ox"]
+[ext_resource type="PackedScene" uid="uid://ck1j2jt7i3sfb" path="res://Models/Ship Interfaces/ShipControlsBig3.glb" id="12_1pngy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jb2r"]
 resource_local_to_scene = true
@@ -57,6 +58,30 @@ font = ExtResource("5_u0n8h")
 font_size = 200
 font_color = Color(0.4, 1, 0.9411765, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cqqbe"]
+shader = ExtResource("9_pwdlk")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.0
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 0.6000000285
+shader_parameter/roll_variation = 2.50600011577512
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 4.7499999933364734e-08
+shader_parameter/noise_opacity = 1.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kisfl"]
 shader = ExtResource("9_pwdlk")
 shader_parameter/overlay = false
@@ -81,15 +106,17 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
+[sub_resource type="BoxMesh" id="BoxMesh_1pngy"]
+
 [node name="Ship Controls" type="Node3D" unique_id=1790285260]
 script = ExtResource("1_kisfl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144782524]
-transform = Transform3D(39.329998, 0, 0, 0, 27.408245, 0.027891524, 0, -7.344021, 0.10409258, 0, -0.15699983, -0.6792514)
+transform = Transform3D(39.329998, 0, 0, 0, 27.408245, 0.027891524, 0, -7.344021, 0.10409258, 0, -9.954432, -0.6792514)
 mesh = SubResource("BoxMesh_8jb2r")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
-transform = Transform3D(1, 0, 0, 0, 0.9659259, 0.25881907, 0, -0.25881907, 0.9659258, 0, 6, 8.559441)
+transform = Transform3D(1, 0, 0, 0, 0.8686661, 0.49539807, 0, -0.49539807, 0.8686661, 0.13971174, 5.2880473, 4.9720445)
 script = ExtResource("1_64iiw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2102990598]
@@ -100,13 +127,13 @@ shadow_enabled = true
 environment = SubResource("Environment_fwuq5")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=213314888]
-transform = Transform3D(1, 0, 0, 0, 0.8435885, 0.5369903, 0, -0.5369903, 0.8435885, 0.155885, 5.14552, 6.30418)
+transform = Transform3D(1, 0, 0, 0, 0.55504787, 0.83181846, 0, -0.83181846, 0.55504787, 0.155885, 8.380104, 5.6671176)
 light_energy = 4.0
 spot_range = 86.3607
 spot_angle = 87.1875
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=951545218]
-transform = Transform3D(16, 0, 0, 0, 8.693332, 0.70502317, 0, -2.3293712, 2.631182, -0.0160968, 0.06135106, -0.52118963)
+transform = Transform3D(4.6369376, 0, 0, 0, 1.9319259, 0.60479736, 0, -1.5017442, 0.7780445, -0.63725585, 4.129508, 1.368763)
 mesh = SubResource("QuadMesh_sv2o5")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D2" unique_id=1758224256]
@@ -115,7 +142,7 @@ size = Vector2i(1920, 1080)
 [node name="SystemScreen" parent="MeshInstance3D2/SubViewport" unique_id=1688780151 instance=ExtResource("3_64iiw")]
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1394914105]
-transform = Transform3D(4.8, 0, 0, 0, 1.1189945, -1.8418274, 0, 4.176144, 0.49351606, -0.0160968, 7.599289, -1.6072339)
+transform = Transform3D(0.84181887, 0, 0, 0, 3.250217, -0.45226574, 0, 3.9428282, 0.37281916, 3.6304379, 4.625784, 0.7940841)
 mesh = SubResource("PlaneMesh_pwdlk")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D3" unique_id=53669835]
@@ -154,6 +181,16 @@ text = "Brimpie Orbital
 docking."
 label_settings = SubResource("LabelSettings_pwdlk")
 
+[node name="ColorRect" type="ColorRect" parent="MeshInstance3D3/SubViewport/Control" unique_id=335081411]
+material = SubResource("ShaderMaterial_cqqbe")
+layout_mode = 0
+offset_left = -992.00006
+offset_top = -557.99994
+offset_right = 42.37567
+offset_bottom = -35.777893
+scale = Vector2(1.9199986, 2.1600008)
+color = Color(0, 0.0705882, 0, 1)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1047463062]
 stream = ExtResource("4_u0n8h")
 autoplay = true
@@ -169,3 +206,33 @@ material = SubResource("ShaderMaterial_kisfl")
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
+
+[node name="blockbench_export" parent="." unique_id=1514955464 instance=ExtResource("12_1pngy")]
+transform = Transform3D(5, 0, 0, 0, 3.1803913, -3.8581228, 0, 3.8581228, 3.1803913, 1, -1, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="blockbench_export" unique_id=314821096]
+transform = Transform3D(0.015222186, 0, 0, 0, 0.015047573, 1.9744039e-07, 0, -1.9092113e-08, 0.1171673, -0.9778489, 1.0299652, -0.23205025)
+mesh = SubResource("BoxMesh_1pngy")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="blockbench_export" unique_id=1071347564]
+transform = Transform3D(0.015222186, 0, 0, 0, 0.015047578, 2.2351742e-07, 0, -2.188608e-08, 0.11716734, -0.9778489, 1.0337207, -0.4881481)
+mesh = SubResource("BoxMesh_1pngy")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="blockbench_export" unique_id=931386835]
+transform = Transform3D(0.015222186, 0, 0, 0, 0.015047586, 2.644956e-07, 0, -2.6077032e-08, 0.1171674, -0.9778489, 1.0305586, -0.7358539)
+mesh = SubResource("BoxMesh_1pngy")
+skeleton = NodePath("")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=97927137]
+transform = Transform3D(-1, -7.19176e-15, 2.9802322e-08, 1.4901165e-08, -0.86602545, 0.4999999, 2.5809566e-08, 0.4999999, 0.86602545, 3.5259776, 5.0234995, 1.6587679)
+light_color = Color(0.4, 1, 0.941176, 1)
+spot_range = 53.383766
+spot_angle = 57.656246
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=982762837]
+transform = Transform3D(-1, -7.19176e-15, 2.9802322e-08, 1.4901165e-08, -0.86602545, 0.4999999, 2.5809566e-08, 0.4999999, 0.86602545, -0.96721125, 5.1624846, 3.149962)
+light_color = Color(0.4, 1, 0.941176, 1)
+spot_range = 53.383766
+spot_angle = 57.656246

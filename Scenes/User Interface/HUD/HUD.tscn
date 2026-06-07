@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_marnl"]
 [ext_resource type="Script" uid="uid://2ewuo5t3mgfl" path="res://Scripts/CamCounterScript.gd" id="2_e51qc"]
 [ext_resource type="Texture2D" uid="uid://cqybqni06cl3d" path="res://Scenes/Project Solus Camera HUD Effects.png" id="3_gjfeq"]
-[ext_resource type="Texture2D" uid="uid://bjcf81eqm4vsd" path="res://Scenes/User Interface/HUD/RedDot.png" id="4_wvxon"]
 [ext_resource type="Texture2D" uid="uid://cdrn2bh31o81u" path="res://Scenes/User Interface/HUD/FFWD.png" id="5_7qe3e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvcec"]
@@ -14,44 +13,6 @@ font_color = Color(0.4, 1, 0.941176, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_tye4a"]
 font = ExtResource("1_marnl")
 font_size = 42
-
-[sub_resource type="Animation" id="Animation_vcf7g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RedDot:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_2qei2"]
-resource_name = "RecLight"
-length = 1.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RedDot:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.733333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oc6jv"]
-_data = {
-&"RESET": SubResource("Animation_vcf7g"),
-&"RecLight": SubResource("Animation_2qei2")
-}
 
 [node name="HUD" type="Control" unique_id=1189094878]
 layout_mode = 3
@@ -67,10 +28,10 @@ grow_vertical = 2
 
 [node name="CamLabel" type="Label" parent="." unique_id=63200111]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 64.0
-offset_right = 577.0
-offset_bottom = 115.0
+offset_left = 116.0
+offset_top = 94.0
+offset_right = 275.0
+offset_bottom = 145.0
 text = "Cam"
 label_settings = SubResource("LabelSettings_cvcec")
 vertical_alignment = 1
@@ -101,22 +62,14 @@ label_settings = SubResource("LabelSettings_tye4a")
 vertical_alignment = 1
 
 [node name="ProjectSolusCameraHudEffects" type="Sprite2D" parent="." unique_id=453508116]
+visible = false
 modulate = Color(1, 1, 1, 0.49019608)
 position = Vector2(960, 540)
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("3_gjfeq")
-
-[node name="RedDot" type="Sprite2D" parent="." unique_id=796845068]
-position = Vector2(232, 140)
-scale = Vector2(0.06, 0.06)
-texture = ExtResource("4_wvxon")
 
 [node name="FFWD" type="Sprite2D" parent="." unique_id=118699349]
 visible = false
 position = Vector2(232, 140)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("5_7qe3e")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1762508847]
-libraries/ = SubResource("AnimationLibrary_oc6jv")
-autoplay = &"RecLight"

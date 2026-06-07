@@ -62,7 +62,7 @@ func _process(delta: float) -> void:
 		$"Morse Signal".volume_db = -80
 
 	if Globals.radio_freq == signals_array[3]:
-		$"Morse Signal2".volume_db = -4
+		$"Morse Signal2".volume_db = -2
 		signal_display.set_text("No Signal Detected")
 	else:
 		$"Morse Signal2".volume_db = -80

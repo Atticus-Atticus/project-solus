@@ -40,4 +40,5 @@ func _on_body_exited(body: Node2D) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and in_trigger == true:
 		SceneSwitcher.Destination = 1
+		Globals.CamText = "Use the Airlock to enter the other ship"
 		PlayerShip._toggle()

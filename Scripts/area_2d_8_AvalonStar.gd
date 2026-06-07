@@ -40,4 +40,5 @@ func _on_body_exited(body: Node2D) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and in_trigger2 == true:
 		SceneSwitcher.Destination = 3
+		Globals.CamText = "Travel to the Avalon System"
 		PlayerShip._toggle()
