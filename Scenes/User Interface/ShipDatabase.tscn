@@ -17,6 +17,8 @@
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="7_cvw3e"]
 [ext_resource type="Texture2D" uid="uid://bf0gjdp2hyonk" path="res://Models/BlueFlightDeck_6.png" id="8_8ovsm"]
 [ext_resource type="PackedScene" uid="uid://bt2nct81pw135" path="res://Shaders/crt_shaderOFF.tscn" id="16_ftupy"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="17_3pw6i"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="18_sb1ob"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5kng"]
 resource_name = "material_0"
@@ -326,6 +328,48 @@ albedo_texture = SubResource("ViewportTexture_57sr1")
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ma8rn")
 
+[sub_resource type="LabelSettings" id="LabelSettings_6ecak"]
+font = ExtResource("18_sb1ob")
+font_size = 21
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[sub_resource type="Animation" id="Animation_3pw6i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sb1ob"]
+resource_name = "new_animation"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ecak"]
+_data = {
+&"RESET": SubResource("Animation_3pw6i"),
+&"new_animation": SubResource("Animation_sb1ob")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fsbnf"]
 shader = ExtResource("7_cvw3e")
 shader_parameter/overlay = false
@@ -435,6 +479,41 @@ stream = ExtResource("5_qh30q")
 
 [node name="blockbench_export" parent="." unique_id=1735192381 instance=ExtResource("6_cvw3e")]
 transform = Transform3D(-9, 0, 1.3589622e-06, 0, 9, 0, -1.3589622e-06, 0, -9, 0, -8, -7)
+
+[node name="Panel" type="Panel" parent="." unique_id=149775154]
+offset_left = 67.0
+offset_top = 80.0
+offset_right = 670.0
+offset_bottom = 253.0
+theme = ExtResource("17_3pw6i")
+
+[node name="Label" type="Label" parent="Panel" unique_id=940705802]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.5
+offset_top = -70.5
+offset_right = 304.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HOW TO USE:
+
+Use W A S D to move cursor.
+
+Press E or ENTER to interact.
+
+Press ESC to exit."
+label_settings = SubResource("LabelSettings_6ecak")
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel" unique_id=1366484930]
+libraries/ = SubResource("AnimationLibrary_6ecak")
+autoplay = &"new_animation"
 
 [node name="CRT Shader Static" parent="." unique_id=1368267626 instance=ExtResource("16_ftupy")]
 visible = false

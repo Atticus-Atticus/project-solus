@@ -6,8 +6,141 @@
 [ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
 [ext_resource type="PackedScene" uid="uid://yge8fijrn5xd" path="res://Scenes/User Interface/Menus/Options.tscn" id="6_soebr"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="9_irjb3"]
+[ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="10_3xvao"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lomrg"]
+font = ExtResource("9_irjb3")
+font_size = 21
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy1xy"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uobvk"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwuql"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjmwo"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or3o6"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rofc"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxrfc"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2bjp"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwdef"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq26n"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(50, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giuns"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(100, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlprd"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(150, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra88a"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(0, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq7qi"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(50, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj4x0"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(100, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e7y7"]
+atlas = ExtResource("10_3xvao")
+region = Rect2(150, 150, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vgg6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy1xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uobvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwuql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjmwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or3o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxrfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2bjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwdef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq26n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giuns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlprd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra88a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq7qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj4x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e7y7")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="PauseMenu" type="Control" unique_id=1048540629]
 layout_mode = 3
@@ -116,6 +249,49 @@ texture = ExtResource("19_12j1a")
 stream = ExtResource("22_ci7g1")
 volume_db = -2.0
 autoplay = true
+
+[node name="Panel" type="Panel" parent="." unique_id=22722056]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 527.0
+offset_right = 714.0
+offset_bottom = 791.0
+theme = ExtResource("3_ghp36")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1741479597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -118.0
+offset_right = 305.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONTROLS:
+
+Click or Hold Left Mouse Button on the floor to move.
+
+Objects with a Blue Ping can be interacted with by clicking the Ping.
+
+
+
+Blue Ping ->"
+label_settings = SubResource("LabelSettings_lomrg")
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel" unique_id=598255568]
+modulate = Color(0.4, 1, 0.9411765, 1)
+texture_filter = 1
+position = Vector2(205, 211)
+scale = Vector2(2.22, 2.22)
+sprite_frames = SubResource("SpriteFrames_vgg6k")
+autoplay = "default"
+frame_progress = 0.27748078
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]

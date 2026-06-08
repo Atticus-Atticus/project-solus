@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b03dx4b6rocx8"]
 
 [ext_resource type="Script" uid="uid://cjrwosaf401tq" path="res://Scripts/SupplyCountScript.gd" id="1_7d2i6"]
-[ext_resource type="Script" uid="uid://chhugvk8j8o2h" path="res://Scripts/Objective5Script.gd" id="1_h8ltv"]
 [ext_resource type="Texture2D" uid="uid://58edxgcdybpp" path="res://Models/Clutter/Table01.png" id="2_cq6ud"]
 [ext_resource type="ArrayMesh" uid="uid://ca1l0xdq3opt" path="res://Models/Clutter/MassHallTable.obj" id="3_3d5yd"]
 [ext_resource type="ArrayMesh" uid="uid://cb8aaol02h6r8" path="res://Models/Clutter/RuinedRationBox.obj" id="4_8ov22"]
@@ -23,50 +22,7 @@ albedo_texture = ExtResource("2_cq6ud")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k5res"]
 
-[sub_resource type="Animation" id="Animation_xsxt8"]
-resource_name = "Objective"
-
-[sub_resource type="Animation" id="Animation_ufi1c"]
-resource_name = "ObjectiveFlash"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 2.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_oeoou"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6ada"]
-_data = {
-&"Objective": SubResource("Animation_xsxt8"),
-&"ObjectiveFlash": SubResource("Animation_ufi1c"),
-&"RESET": SubResource("Animation_oeoou")
-}
-
 [node name="PlayerSupplies" type="Node3D" unique_id=888631403]
-script = ExtResource("1_h8ltv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1750147934]
 script = ExtResource("1_7d2i6")
@@ -121,7 +77,7 @@ mesh = ExtResource("6_ycnnh")
 skeleton = NodePath("../..")
 
 [node name="SuppliesMid" type="CollisionShape3D" parent="StaticBody3D" unique_id=806860632]
-transform = Transform3D(0.96555, 0, 0.260218, 0, 1, 0, -0.260218, 0, 0.96555, 0.577281, 0, 0.342135)
+transform = Transform3D(0.96555, 0, 0.260218, 0, 1, 0, -0.260218, 0, 0.96555, 0.5851898, -4.7683716e-07, 0.33701855)
 visible = false
 shape = SubResource("BoxShape3D_mhf4i")
 
@@ -174,12 +130,3 @@ skeleton = NodePath("../../..")
 transform = Transform3D(0.56582, 0, 1.91829, 0, 2, 0, -1.91829, 0, 0.56582, -0.57399, 0.601482, 0.112785)
 mesh = ExtResource("6_ycnnh")
 skeleton = NodePath("../..")
-
-[node name="AnimationPlayerObjective" type="AnimationPlayer" parent="StaticBody3D" unique_id=579938716]
-root_node = NodePath("../OmniLight3D")
-libraries/ = SubResource("AnimationLibrary_u6ada")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=2086467218]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.79339, 0.418345)
-light_color = Color(0, 0.533333, 0, 1)
-light_energy = 0.0

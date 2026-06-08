@@ -5194,15 +5194,6 @@ transform = Transform3D(-3.1615322e-08, 0, 0.72101265, 0, 0.81559074, 0, -0.7232
 [node name="Door Interactable" parent="Interactables/DoorNode" unique_id=207222191 instance=ExtResource("61_ep16x")]
 transform = Transform3D(-1.5872132e-08, 0, -0.74626976, 0, 0.8885494, 0, 0.8109522, 0, -7.2852316e-08, 0.004109921, 3.0014336, 0.10435033)
 
-[node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("62_eu0m1")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.3487816, 4.0701246)
-text_scene = ExtResource("63_ivrfy")
-trigger = NodePath("PointClickTriggerbox")
-
-[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode3" unique_id=1015541827 instance=ExtResource("64_5ff2u")]
-transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 1.1702547, 1.1777904, -2.7434545, 0.027070045)
-visible = false
-
 [node name="LockedDoorInteractableNode4" parent="Interactables" unique_id=1787942694 node_paths=PackedStringArray("trigger") instance=ExtResource("62_eu0m1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.034443, 2.1854112, 11.357971)
 text_scene = ExtResource("65_p8bh2")
@@ -5247,6 +5238,15 @@ trigger = NodePath("PointClickTriggerbox2")
 transform = Transform3D(-6.551477e-08, 0, 1.1702547, 0, 2.507983, 0, -1.4988031, 0, -5.1153457e-08, 0.07703829, -1.7200155, 0.3711214)
 visible = false
 
+[node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("62_eu0m1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.4325986, 4.0894513)
+text_scene = ExtResource("63_ivrfy")
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode3" unique_id=1015541827 instance=ExtResource("64_5ff2u")]
+transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 2.6089807, 1.8638213, -2.7434545, 0.027070045)
+visible = false
+
 [node name="CameraMain" parent="." unique_id=1294855615 instance=ExtResource("45_75dsg")]
 transform = Transform3D(0.19999999, 0, 0, 0, 0.19999997, 0, 0, 0, 0.19999997, -2.173, 3.8125558, 1.9810543)
 
@@ -5268,11 +5268,11 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.532873, 3.6, 4.881)
 transform = Transform3D(30.695303, 0, 0, 0, 16.0678, 0, 0, 0, 46.9635, -12.970417, -11.427702, -19.536102)
 visible = false
 
-[node name="CameraMain5" parent="." unique_id=2122076444 instance=ExtResource("45_75dsg")]
-transform = Transform3D(0.040000003, 0, 0, 0, 0.038637035, -0.010352762, 0, 0.010352762, 0.038637035, -4.708483, 5.3268723, 5.42718)
+[node name="CameraMain4" parent="." unique_id=291600647 instance=ExtResource("45_75dsg")]
+transform = Transform3D(0.2, 0, 0, 0, 0.19318517, -0.05176381, 0, 0.05176381, 0.19318517, -3.923736, 4.43906, 4.52265)
 starting_rotation = Vector3(15, 180, 0)
 
-[node name="CameraTrigger" parent="CameraMain5" unique_id=1393842557 instance=ExtResource("46_vutbk")]
+[node name="CameraTrigger" parent="CameraMain4" unique_id=2130534215 instance=ExtResource("46_vutbk")]
 transform = Transform3D(15.641202, 0, 0, 0, 15.4606085, 9.113459, 0, -4.1426578, 34.011887, -3.9398117, -15.941789, -16.581732)
 visible = false
 

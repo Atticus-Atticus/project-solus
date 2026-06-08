@@ -21,7 +21,7 @@ boot_splash/show_image=false
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
 boot_splash/image="res://Scenes/User Interface/Menus/Project Solus Splash Screen 3.png"
-config/icon="res://Scenes/User Interface/Menus/Project Solus Icon 500x500.png"
+config/icon="uid://bpqqretdcw6a0"
 config/windows_native_icon="res://Project Solus Icon.ico"
 run/size/borderless=false
 

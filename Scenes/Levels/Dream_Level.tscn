@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dlnjfff2fdk6o" path="res://Scripts/dream_level_script.gd" id="1_xk6i7"]
 [ext_resource type="ArrayMesh" uid="uid://l6pv085t6pdj" path="res://Models/Home Models/HomeWallDoorSide.obj" id="2_6pt17"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_rb3ft"]
+[ext_resource type="PackedScene" uid="uid://bfcxq540j1xkp" path="res://Scenes/User Interface/Menus/Tutorial.tscn" id="3_1uut5"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_p772u"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_wy8j1"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="3_yx00u"]
@@ -3177,6 +3178,8 @@ script = ExtResource("1_xk6i7")
 
 [node name="CRT Shader" parent="." unique_id=1872535988 instance=ExtResource("2_rb3ft")]
 
+[node name="Tutorial Panel" parent="." unique_id=1035684065 instance=ExtResource("3_1uut5")]
+
 [node name="PointerNode" parent="." unique_id=172646375 instance=ExtResource("3_p772u")]
 
 [node name="PauseMenu" parent="." unique_id=1952106487 instance=ExtResource("3_wy8j1")]
@@ -4936,12 +4939,12 @@ transform = Transform3D(-3.1615322e-08, 0, 0.72101265, 0, 0.81559074, 0, -0.7232
 transform = Transform3D(-1.5872132e-08, 0, -0.74626976, 0, 0.8885494, 0, 0.8109522, 0, -7.2852316e-08, 0.004109921, 3.0014336, 0.10435033)
 
 [node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("47_ag1a6")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.3487816, 4.0701246)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.4325986, 4.0894513)
 text_scene = ExtResource("48_0avmj")
 trigger = NodePath("PointClickTriggerbox")
 
 [node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode3" unique_id=1015541827 instance=ExtResource("48_tbe1u")]
-transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 1.1702547, 1.1777904, -2.7434545, 0.027070045)
+transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 2.6089807, 1.8638213, -2.7434545, 0.027070045)
 visible = false
 
 [node name="LockedDoorInteractableNode4" parent="Interactables" unique_id=160431411 node_paths=PackedStringArray("trigger") instance=ExtResource("47_ag1a6")]

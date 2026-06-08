@@ -1,0 +1,305 @@
+[gd_scene format=3 uid="uid://bfcxq540j1xkp"]
+
+[ext_resource type="Script" uid="uid://ca5m1wfmrlsye" path="res://Scripts/tutorial_panel_script.gd" id="1_hhhog"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_tengv"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_hhhog"]
+[ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="3_sr2mk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0d28c"]
+font = ExtResource("2_hhhog")
+font_size = 21
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy1xy"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uobvk"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwuql"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjmwo"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or3o6"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rofc"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxrfc"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2bjp"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwdef"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq26n"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(50, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giuns"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(100, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlprd"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(150, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra88a"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(0, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq7qi"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(50, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj4x0"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(100, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e7y7"]
+atlas = ExtResource("3_sr2mk")
+region = Rect2(150, 150, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23lns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy1xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uobvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwuql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjmwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or3o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxrfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2bjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwdef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq26n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giuns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlprd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra88a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq7qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj4x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e7y7")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_sr2mk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(603, 264)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0d28c"]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(10, 264), Vector2(603, 264)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oy1xy"]
+_data = {
+&"RESET": SubResource("Animation_sr2mk"),
+&"show": SubResource("Animation_0d28c")
+}
+
+[node name="Control" type="Control" unique_id=1035684065]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hhhog")
+
+[node name="Panel" type="Panel" parent="." unique_id=1101937603]
+visible = false
+layout_mode = 0
+offset_left = 1293.0
+offset_top = 83.0
+offset_right = 1896.0
+offset_bottom = 347.0
+theme = ExtResource("1_tengv")
+
+[node name="Label" type="Label" parent="Panel" unique_id=430418266]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -118.0
+offset_right = 305.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONTROLS:
+
+Click or Hold Left Mouse Button on the floor to move.
+
+Objects with a Blue Ping can be interacted with by clicking the Ping.
+
+
+
+Blue Ping ->"
+label_settings = SubResource("LabelSettings_0d28c")
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel" unique_id=1545653980]
+visible = false
+modulate = Color(0.4, 1, 0.9411765, 1)
+texture_filter = 1
+position = Vector2(205, 211)
+scale = Vector2(2.22, 2.22)
+sprite_frames = SubResource("SpriteFrames_23lns")
+autoplay = "default"
+frame_progress = 0.19694942
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1910362263]
+libraries/ = SubResource("AnimationLibrary_oy1xy")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

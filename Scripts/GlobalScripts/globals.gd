@@ -129,4 +129,7 @@ func _restart():
 	KeysFound = 0
 	CutScene1Anim = 0
 	CutScene1Finished = 0
+	SceneSwitcher.Destination = 0
+	SceneSwitcher.PlayerShipSpawn = null
+	SceneSwitcher.PlayerSpawn = null
 	get_tree().change_scene_to_file("res://Scenes/User Interface/Menus/SplashScreen.tscn")

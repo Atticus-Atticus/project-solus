@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="21_pcyv2"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="24_tl14l"]
 [ext_resource type="Script" uid="uid://ds5746vgbil60" path="res://Scripts/Database_cursor.gd" id="26_ex575"]
+[ext_resource type="Texture2D" uid="uid://c7wy0uqawhkdq" path="res://Images/Calihan.png" id="27_qtcu5"]
+[ext_resource type="Texture2D" uid="uid://dr3vpf8wqegqs" path="res://Images/Naomi.png" id="28_2rik1"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="29_4wsr3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wsr3"]
@@ -505,7 +507,7 @@ shape = SubResource("RectangleShape2D_4wsr3")
 [node name="CalihanPanel" type="Panel" parent="." unique_id=107449489]
 visible = false
 layout_mode = 0
-offset_left = 189.0
+offset_left = 649.0
 offset_top = 78.0
 offset_right = 1863.0
 offset_bottom = 978.0
@@ -578,10 +580,24 @@ Remarks:
 label_settings = ExtResource("20_q0khx")
 clip_text = true
 
+[node name="Panel" type="Panel" parent="CalihanPanel" unique_id=1179902917]
+modulate = Color(0.62908286, 0.62908286, 0.62908286, 1)
+layout_mode = 0
+offset_left = 838.0
+offset_top = 21.0
+offset_right = 1128.0
+offset_bottom = 311.0
+
+[node name="Calihan" type="Sprite2D" parent="CalihanPanel/Panel" unique_id=887939819]
+modulate = Color(0.85814106, 0.85814106, 0.85814106, 1)
+position = Vector2(145, 145)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("27_qtcu5")
+
 [node name="NaomiPanel" type="Panel" parent="." unique_id=1958668346]
 visible = false
 layout_mode = 0
-offset_left = 189.0
+offset_left = 650.0
 offset_top = 78.0
 offset_right = 1863.0
 offset_bottom = 978.0
@@ -651,6 +667,19 @@ Remarks:
    - Director R. Zannis, Brimpie-4 Communications Admin"
 label_settings = ExtResource("20_q0khx")
 clip_text = true
+
+[node name="Panel" type="Panel" parent="NaomiPanel" unique_id=1245324265]
+modulate = Color(0.45871374, 0.45871374, 0.45871374, 1)
+layout_mode = 0
+offset_left = 830.0
+offset_top = 31.0
+offset_right = 1120.0
+offset_bottom = 321.0
+
+[node name="Naomi" type="Sprite2D" parent="NaomiPanel/Panel" unique_id=1049277772]
+position = Vector2(145, 145)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("28_2rik1")
 
 [node name="SecretPanel" type="Panel" parent="." unique_id=2103044928]
 visible = false
@@ -1564,8 +1593,10 @@ shape = SubResource("RectangleShape2D_7vr1g")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=542616222]
 material = SubResource("ShaderMaterial_8c0vo")
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -38.0
+offset_top = -20.0
+offset_right = 1962.0
+offset_bottom = 1115.0
 color = Color(0, 0.0705882, 0, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1660444356]

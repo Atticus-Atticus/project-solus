@@ -5313,15 +5313,6 @@ transform = Transform3D(-3.1615322e-08, 0, 0.72101265, 0, 0.81559074, 0, -0.7232
 [node name="Door Interactable" parent="Interactables/DoorNode" unique_id=207222191 instance=ExtResource("60_vth26")]
 transform = Transform3D(-1.5872132e-08, 0, -0.74626976, 0, 0.8885494, 0, 0.8109522, 0, -7.2852316e-08, 0.004109921, 3.0014336, 0.10435033)
 
-[node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("61_3fnb2")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.3487816, 4.0701246)
-text_scene = ExtResource("62_esxta")
-trigger = NodePath("PointClickTriggerbox")
-
-[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode3" unique_id=1015541827 instance=ExtResource("63_ts47p")]
-transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 1.1702547, 1.1777904, -2.7434545, 0.027070045)
-visible = false
-
 [node name="LockedDoorInteractableNode4" parent="Interactables" unique_id=1379828748 node_paths=PackedStringArray("trigger") instance=ExtResource("61_3fnb2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.034443, 2.1854112, 11.357971)
 text_scene = ExtResource("64_l33e1")
@@ -5355,6 +5346,15 @@ trigger = NodePath("PointClickTriggerbox2")
 
 [node name="PointClickTriggerbox2" parent="Interactables/NaomiDoorInteractableNode" unique_id=427198886 instance=ExtResource("63_ts47p")]
 transform = Transform3D(-6.551477e-08, 0, 1.1702547, 0, 2.507983, 0, -1.4988031, 0, -5.1153457e-08, 0.07703829, -1.7200155, 0.27242184)
+visible = false
+
+[node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("61_3fnb2")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.4325986, 4.0894513)
+text_scene = ExtResource("62_esxta")
+trigger = NodePath("PointClickTriggerbox")
+
+[node name="PointClickTriggerbox" parent="Interactables/LockedDoorInteractableNode3" unique_id=1015541827 instance=ExtResource("63_ts47p")]
+transform = Transform3D(1.4988031, 0, 0, 0, 2.507983, 0, 0, 0, 2.6089807, 1.8638213, -2.7434545, 0.027070045)
 visible = false
 
 [node name="CameraMain" parent="." unique_id=1294855615 instance=ExtResource("45_jgs5o")]

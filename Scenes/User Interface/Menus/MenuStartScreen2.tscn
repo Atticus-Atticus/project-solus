@@ -11,6 +11,11 @@
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_2dyxb"]
 [ext_resource type="Script" uid="uid://bckermg5hkpu6" path="res://Scripts/story_1_button_script.gd" id="7_f3ah7"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_hctay"]
+[ext_resource type="Script" uid="uid://c07m5b8p1lvln" path="res://Scripts/story_2_button_script.gd" id="7_mrp4y"]
+[ext_resource type="Script" uid="uid://bueh6ore00tfv" path="res://Scripts/x_button2.gd" id="7_oxtd8"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="8_mrp4y"]
+[ext_resource type="Texture2D" uid="uid://c7wy0uqawhkdq" path="res://Images/Calihan.png" id="9_hhc3x"]
+[ext_resource type="Texture2D" uid="uid://mplycdx2fj0n" path="res://Images/Amy.png" id="10_mrp4y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
 line_spacing = 20.0
@@ -22,6 +27,187 @@ font_color = Color(0.4, 1, 0.941176, 1)
 font = ExtResource("3_t62y8")
 font_size = 41
 font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="Animation" id="Animation_ujdh4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("X Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1200, 962)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4ubk4"]
+resource_name = "Show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("X Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(10, 962), Vector2(1200, 962)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3v3f"]
+_data = {
+&"RESET": SubResource("Animation_ujdh4"),
+&"Show": SubResource("Animation_4ubk4")
+}
 
 [sub_resource type="Animation" id="Animation_nbo6e"]
 length = 0.001
@@ -380,9 +566,9 @@ offset_left = 29.0
 offset_top = 190.0
 offset_right = 557.0
 offset_bottom = 226.0
-disabled = true
 text = "> Subject 2 - Temperance <"
 alignment = 0
+script = ExtResource("7_mrp4y")
 
 [node name="Story3Button" type="Button" parent="Panel" unique_id=2110379050]
 layout_mode = 0
@@ -436,30 +622,224 @@ alignment = 0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=269809877]
 layout_mode = 0
-offset_left = 1155.0
-offset_top = 245.0
-offset_right = 2046.9941
-offset_bottom = 457.00018
+offset_left = 119.0
+offset_top = 291.0
+offset_right = 1010.99365
+offset_bottom = 503.00018
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1327333593]
 layout_mode = 0
-offset_left = 1155.0
-offset_top = 457.0
-offset_right = 2046.9944
-offset_bottom = 638.0
+offset_left = 119.0
+offset_top = 472.0
+offset_right = 1010.9939
+offset_bottom = 653.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=1561254433]
 layout_mode = 0
-offset_left = 1155.0
-offset_top = 636.0
-offset_right = 2046.9951
-offset_bottom = 897.0
+offset_left = 119.0
+offset_top = 653.0
+offset_right = 1010.99475
+offset_bottom = 914.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
+
+[node name="CalihanPanel" type="Panel" parent="." unique_id=1682715038]
+visible = false
+layout_mode = 0
+offset_left = 651.0
+offset_top = 46.0
+offset_right = 1851.0
+offset_bottom = 1008.0
+theme = ExtResource("4_7eaqs")
+
+[node name="X Button" type="Button" parent="CalihanPanel" unique_id=815974214]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("4_7eaqs")
+text = "X"
+script = ExtResource("7_oxtd8")
+
+[node name="Label" type="Label" parent="CalihanPanel" unique_id=1272016882]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - CALIHAN LONAN
+[confidential personnel file]
+
+FULL NAME:  Calihan Lonan
+STATUS:  Registered Citizen
+SERVICE ID:  2374-092-CL
+OCCUPATION:  Interstellar Courier for The Farseeing Courier Company
+WORLD OF BIRTH:  Brimpie-3
+REGISTERED HOMEWORLD:  Brimpie-3
+REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
+
+ASSOCIATIONS:
+  Registered domestic partnership with Naomi Lonan-Roseberry
+  Registered Parents: Elias Lonan and Jeneva Lonan(deceased)
+
+OCCUPATION:
+  Currently serving as a Farseeing Interstellar Courier.
+  Former Wheat and Algae Farmer before gaining admission into the 
+  Solarian Academy of Pilots.
+
+NOTES:
+  Psychological profile indicates emotional detachment, high stress tolerance, 
+  and low interpersonal engagement.
+  
+  Underwent disciplinary review following altercation with superior officer.
+  See incident report: SY-379 for more info.
+
+Remarks:
+  \"Lonan works best alone. Doesn't ask for help, doesn't expect it either.\"
+   - Supervisor D. Renhall, Farseeing Courier Management Division 4
+
+   \"Shows signs of unresolved trauma. Possible bullying from peers.\"
+   - Dr. Elia Morrix, Psych Eval"
+label_settings = ExtResource("8_mrp4y")
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Panel" type="Panel" parent="CalihanPanel" unique_id=20520854]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 830.0
+offset_top = 31.0
+offset_right = 1120.0
+offset_bottom = 321.0
+
+[node name="Calihan" type="Sprite2D" parent="CalihanPanel/Panel" unique_id=1128094472]
+position = Vector2(145, 145)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_hhc3x")
+
+[node name="Button" type="Button" parent="CalihanPanel" unique_id=1464749715]
+visible = false
+layout_mode = 0
+offset_left = 18.000002
+offset_top = 882.00006
+offset_right = 558.0
+offset_bottom = 974.00006
+scale = Vector2(1, 0.7200024)
+text = "> View subject's memories <"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CalihanPanel" unique_id=1271778244]
+libraries/ = SubResource("AnimationLibrary_e3v3f")
+
+[node name="AmyPanel" type="Panel" parent="." unique_id=2035250711]
+visible = false
+layout_mode = 0
+offset_left = 651.0
+offset_top = 46.0
+offset_right = 1851.0
+offset_bottom = 1008.0
+theme = ExtResource("4_7eaqs")
+
+[node name="X Button" type="Button" parent="AmyPanel" unique_id=917608417]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("4_7eaqs")
+text = "X"
+script = ExtResource("7_oxtd8")
+
+[node name="Label" type="Label" parent="AmyPanel" unique_id=229033343]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1144.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - AMY RAYEN
+[confidential cadet personnel file]
+
+FULL NAME:  Amy Rayen
+STATUS:  Registered Citizen
+SERVICE ID:  7721-907-AR
+OCCUPATION:  Cadet, Solarian Army Corps
+WORLD OF BIRTH:  82-G Eridani-d
+REGISTERED HOMEWORLD:  82-G Eridani-d
+REGISTERED RESIDENCE:  Barracks 1305, Cadet Complex Theta-19
+
+ASSOCIATIONS:
+  Maintains close bond with fellow Cadet Corporal Marcus.
+  Biological parents identified as two senior-ranking officers (names redacted).
+  Parents relationship deemed in violation of Coalition Oath Statute 12-B.
+
+OCCUPATION:
+  Currently enlisted in the Solarian Armed Forces reporting to Sergeant Crawford.
+  Specialization: Combat Medic
+
+NOTES:
+  Previous psychological evaluations note elevated compliance, and surppressed emotional 
+  expression. Also signs of introversion and chronic hypervigilance.
+  Tendency to seek isolation. (Roof access violations x12)
+  Shows creative tendencies. (Unauthorised sketchbook confiscated twice) 
+
+Remarks:
+  \"Quiet. Obedient. Keeps her head down. Has potential, but refuses to step forward.\"
+  - Drill Instructor P. Varrin, Youth Cadet Corps Division 3.
+
+  \"Her parentage makes her a political liability. Recommend continued observation.\"
+  - Commander [REDACTED], Personnel Oversight Committee"
+label_settings = ExtResource("8_mrp4y")
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Panel" type="Panel" parent="AmyPanel" unique_id=376230385]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 830.0
+offset_top = 31.0
+offset_right = 1120.0
+offset_bottom = 321.0
+
+[node name="Amy" type="Sprite2D" parent="AmyPanel/Panel" unique_id=1247360162]
+position = Vector2(145, 145)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_mrp4y")
+
+[node name="Button" type="Button" parent="AmyPanel" unique_id=1418728425]
+visible = false
+layout_mode = 0
+offset_left = 18.0
+offset_top = 882.00006
+offset_right = 566.0
+offset_bottom = 974.00006
+scale = Vector2(1, 0.7200024)
+disabled = true
+text = "> View subject's memories <"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AmyPanel" unique_id=1200189103]
+libraries/ = SubResource("AnimationLibrary_e3v3f")
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=814076117]
 position = Vector2(60, 1367)
@@ -492,5 +872,16 @@ environment = SubResource("Environment_b5v2b")
 [connection signal="mouse_entered" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Panel/Story1Button" to="Panel/Story1Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/Story2Button" to="Panel/Story2Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/Story2Button" to="Panel/Story2Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/Story2Button" to="Panel/Story2Button" method="_on_pressed"]
+[connection signal="pressed" from="CalihanPanel/X Button" to="CalihanPanel/X Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="CalihanPanel/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="CalihanPanel/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="CalihanPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AmyPanel/X Button" to="AmyPanel/X Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="AmyPanel/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="AmyPanel/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="AmyPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="tree_exited" from="ChangeMenuSFX" to="." method="_on_change_menu_sfx_tree_exited"]
