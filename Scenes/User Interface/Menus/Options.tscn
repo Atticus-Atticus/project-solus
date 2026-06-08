@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_vomr3"]
 [ext_resource type="PackedScene" uid="uid://cmjb1whpk1c0q" path="res://Scenes/User Interface/Menus/volumecontrol.tscn" id="4_43q1g"]
 [ext_resource type="PackedScene" uid="uid://bso76ti11xxxc" path="res://Scenes/User Interface/Menus/fps_setting.tscn" id="5_we4i2"]
+[ext_resource type="PackedScene" uid="uid://bm1yqkcdkeb3p" path="res://Scenes/User Interface/Menus/display_settings.tscn" id="6_5gnfj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xn2yy"]
 font = ExtResource("3_vomr3")
@@ -44,6 +45,18 @@ tracks/2/path = NodePath("Panel/FPS Setting:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/DisplaySettings:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -89,6 +102,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/DisplaySettings:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_dlpj5"]
 length = 0.001
@@ -123,6 +148,18 @@ tracks/2/path = NodePath("Panel/FPS Setting:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/DisplaySettings:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -197,6 +234,14 @@ offset_left = 53.0
 offset_top = 324.0
 offset_right = 53.0
 offset_bottom = 324.0
+
+[node name="DisplaySettings" parent="Panel" unique_id=1930080190 instance=ExtResource("6_5gnfj")]
+visible = false
+layout_mode = 1
+offset_left = 53.0
+offset_top = 462.0
+offset_right = 53.0
+offset_bottom = 462.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1547898002]
 libraries/ = SubResource("AnimationLibrary_boeap")

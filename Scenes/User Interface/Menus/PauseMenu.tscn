@@ -233,29 +233,12 @@ text = "> Return to Menu <"
 alignment = 0
 script = ExtResource("4_fjykx")
 
-[node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("6_soebr")]
-visible = false
-layout_mode = 1
-offset_left = 160.0
-offset_top = 154.0
-offset_right = 160.0
-offset_bottom = 154.0
-
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=600730338]
-position = Vector2(60, 1367)
-texture = ExtResource("19_12j1a")
-
-[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=335092426]
-stream = ExtResource("22_ci7g1")
-volume_db = -2.0
-autoplay = true
-
 [node name="Panel" type="Panel" parent="." unique_id=22722056]
 layout_mode = 0
-offset_left = 111.0
-offset_top = 527.0
-offset_right = 714.0
-offset_bottom = 791.0
+offset_left = 1054.0
+offset_top = 154.0
+offset_right = 1657.0
+offset_bottom = 418.0
 theme = ExtResource("3_ghp36")
 
 [node name="Label" type="Label" parent="Panel" unique_id=1741479597]
@@ -292,6 +275,23 @@ scale = Vector2(2.22, 2.22)
 sprite_frames = SubResource("SpriteFrames_vgg6k")
 autoplay = "default"
 frame_progress = 0.27748078
+
+[node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("6_soebr")]
+visible = false
+layout_mode = 1
+offset_left = 160.0
+offset_top = 154.0
+offset_right = 160.0
+offset_bottom = 154.0
+
+[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=600730338]
+position = Vector2(60, 1367)
+texture = ExtResource("19_12j1a")
+
+[node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=335092426]
+stream = ExtResource("22_ci7g1")
+volume_db = -2.0
+autoplay = true
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]

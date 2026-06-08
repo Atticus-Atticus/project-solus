@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bcip6wcm5epgl"]
 
 [ext_resource type="Texture2D" uid="uid://c4fh1pkf6dyt5" path="res://Models/Sci-Fi City Assets/Textures/PolygonScifi_01_A.png" id="1_3a8m5"]
+[ext_resource type="Script" uid="uid://cyqafohrkrven" path="res://Scripts/overhead_light_script.gd" id="1_ntbyt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntbyt"]
 albedo_texture = ExtResource("1_3a8m5")
@@ -46,6 +47,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_28o2u")
 
 [node name="OverheadLight" type="Node3D" unique_id=912881794]
+script = ExtResource("1_ntbyt")
 
 [node name="SM_Prop_LightBar_02" type="MeshInstance3D" parent="." unique_id=2060097985]
 material_override = SubResource("StandardMaterial3D_ntbyt")
@@ -66,7 +68,7 @@ light_energy = 0.4
 light_volumetric_fog_energy = 0.0
 omni_range = 5.59621
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="SM_Prop_LightBar_02" unique_id=1234360925]
+[node name="OmniLight With Shadows" type="OmniLight3D" parent="SM_Prop_LightBar_02" unique_id=1234360925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.68, 0)
 light_color = Color(0.8659152, 0.94411135, 0.99999994, 1)
 light_energy = 0.4

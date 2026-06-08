@@ -1,4 +1,17 @@
 extends Label
 
+var last_text := ""
+
+
+func _ready() -> void:
+	update_cam_text()
+
+
 func _process(delta: float) -> void:
-	$"../CamLabel".set_text(Globals.CamText)
+	if Globals.CamText != last_text:
+		update_cam_text()
+
+
+func update_cam_text() -> void:
+	last_text = Globals.CamText
+	text = Globals.CamText

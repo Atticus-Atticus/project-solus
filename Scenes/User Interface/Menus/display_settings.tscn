@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bm1yqkcdkeb3p"]
+
+[ext_resource type="Script" uid="uid://bm0e0fqavn8o4" path="res://Scripts/display_settings_script.gd" id="1_dtty2"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_iw38e"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_vxgla"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3r0wg"]
+font = ExtResource("3_vxgla")
+font_size = 30
+font_color = Color(0.4, 1, 0.9411765, 1)
+
+[node name="DisplaySettings" type="Control" unique_id=1930080190]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dtty2")
+
+[node name="Panel" type="Panel" parent="." unique_id=587233297]
+layout_mode = 0
+offset_right = 493.0
+offset_bottom = 284.0
+theme = ExtResource("1_iw38e")
+
+[node name="Label" type="Label" parent="Panel" unique_id=467854173]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = 58.0
+offset_bottom = 43.0
+text = "Display Settings:"
+label_settings = SubResource("LabelSettings_3r0wg")
+
+[node name="ShadowsCheckButton" type="CheckButton" parent="Panel" unique_id=1164768218]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 71.0
+offset_right = 354.0
+offset_bottom = 107.0
+button_pressed = true
+text = "Toggle Shadows"
+
+[connection signal="toggled" from="Panel/ShadowsCheckButton" to="." method="_on_shadows_check_button_toggled"]

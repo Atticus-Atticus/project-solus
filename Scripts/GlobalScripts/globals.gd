@@ -15,6 +15,8 @@ var lore9 = 0
 var lore10 = 0
 #Keeping track of which collectibles the player has found.
 
+var shadows = true
+
 var InputType = 2
 # 1 follow camera
 # 2 WASD camera

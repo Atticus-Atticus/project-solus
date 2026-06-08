@@ -3,16 +3,11 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_marnl"]
 [ext_resource type="Script" uid="uid://2ewuo5t3mgfl" path="res://Scripts/CamCounterScript.gd" id="2_e51qc"]
 [ext_resource type="Texture2D" uid="uid://cqybqni06cl3d" path="res://Scenes/Project Solus Camera HUD Effects.png" id="3_gjfeq"]
-[ext_resource type="Texture2D" uid="uid://cdrn2bh31o81u" path="res://Scenes/User Interface/HUD/FFWD.png" id="5_7qe3e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvcec"]
 font = ExtResource("1_marnl")
 font_size = 30
 font_color = Color(0.4, 1, 0.941176, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_tye4a"]
-font = ExtResource("1_marnl")
-font_size = 42
 
 [node name="HUD" type="Control" unique_id=1189094878]
 layout_mode = 3
@@ -35,31 +30,7 @@ offset_bottom = 145.0
 text = "Cam"
 label_settings = SubResource("LabelSettings_cvcec")
 vertical_alignment = 1
-
-[node name="Label" type="Label" parent="." unique_id=917006669]
-visible = false
-layout_mode = 0
-offset_left = 258.0
-offset_top = 94.0
-offset_right = 417.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(0.858807, 4.71681e-06, 1.15514e-06, 1)
-text = "REC"
-label_settings = SubResource("LabelSettings_tye4a")
-vertical_alignment = 1
 script = ExtResource("2_e51qc")
-
-[node name="Label2" type="Label" parent="." unique_id=225510091]
-visible = false
-layout_mode = 0
-offset_left = 258.0
-offset_top = 94.0
-offset_right = 417.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(0.858807, 4.71681e-06, 1.15514e-06, 1)
-text = "FFWD"
-label_settings = SubResource("LabelSettings_tye4a")
-vertical_alignment = 1
 
 [node name="ProjectSolusCameraHudEffects" type="Sprite2D" parent="." unique_id=453508116]
 visible = false
@@ -67,9 +38,3 @@ modulate = Color(1, 1, 1, 0.49019608)
 position = Vector2(960, 540)
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("3_gjfeq")
-
-[node name="FFWD" type="Sprite2D" parent="." unique_id=118699349]
-visible = false
-position = Vector2(232, 140)
-scale = Vector2(0.06, 0.06)
-texture = ExtResource("5_7qe3e")

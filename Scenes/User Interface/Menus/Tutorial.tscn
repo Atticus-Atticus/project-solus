@@ -245,7 +245,7 @@ _data = {
 &"show": SubResource("Animation_0d28c")
 }
 
-[node name="Control" type="Control" unique_id=1035684065]
+[node name="TutorialPanel" type="Control" unique_id=1035684065]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

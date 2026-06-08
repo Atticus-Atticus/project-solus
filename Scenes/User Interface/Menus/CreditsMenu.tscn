@@ -110,7 +110,7 @@ text = "
 > Atticus
 >
 > Developed using...
-> Godot
+> Godot 4.6
 >
 > Assets made in...
 > Blockbench
@@ -185,13 +185,11 @@ text = "
 Asset Packs used...
 
 
-LowPolyAssets on itch.io
-Low Poly Household items:
-https://lowpolyassets.itch.io/low-poly-household-item-pack
+LowPolyAssets on itch.io:
+Low Poly Household items
 
-Synty
-POLYGON - Sci-Fi City Pack
-https://syntystore.com/en-gb/products/polygon-sci-fi-city"
+Synty:
+POLYGON - Sci-Fi City Pack"
 label_settings = ExtResource("9_ibhi0")
 clip_text = true
 
