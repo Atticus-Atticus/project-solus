@@ -2,12 +2,14 @@
 
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_marnl"]
 [ext_resource type="Script" uid="uid://2ewuo5t3mgfl" path="res://Scripts/CamCounterScript.gd" id="2_e51qc"]
-[ext_resource type="Texture2D" uid="uid://cqybqni06cl3d" path="res://Scenes/Project Solus Camera HUD Effects.png" id="3_gjfeq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvcec"]
 font = ExtResource("1_marnl")
 font_size = 30
 font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6px42"]
+font_size = 20
 
 [node name="HUD" type="Control" unique_id=1189094878]
 layout_mode = 3
@@ -32,9 +34,11 @@ label_settings = SubResource("LabelSettings_cvcec")
 vertical_alignment = 1
 script = ExtResource("2_e51qc")
 
-[node name="ProjectSolusCameraHudEffects" type="Sprite2D" parent="." unique_id=453508116]
-visible = false
-modulate = Color(1, 1, 1, 0.49019608)
-position = Vector2(960, 540)
-scale = Vector2(0.95, 0.95)
-texture = ExtResource("3_gjfeq")
+[node name="Label" type="Label" parent="." unique_id=1994882709]
+layout_mode = 0
+offset_left = 1692.0
+offset_top = 23.0
+offset_right = 1887.0
+offset_bottom = 60.0
+text = "Project Solus ALPHA"
+label_settings = SubResource("LabelSettings_6px42")

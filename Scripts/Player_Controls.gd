@@ -237,11 +237,11 @@ func _move_through_door() -> void:
 	velocity.z = 0.0
 	move_and_slide()
 
-	_auto_move = false
-	Globals.PlayerControls = true
-
 	ep = Vector3.ZERO
 	sp = Vector3.ZERO
+
+	_auto_move = false
+	Globals.PlayerControls = true
 
 func _pick_up() -> void:
 	Globals.PlayerControls = false

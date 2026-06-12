@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bfcxq540j1xkp" path="res://Scenes/User Interface/Menus/Tutorial.tscn" id="3_1uut5"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_p772u"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_wy8j1"]
+[ext_resource type="PackedScene" uid="uid://n40070ndqw30" path="res://Scenes/User Interface/HUD/HUD.tscn" id="3_yprlp"]
 [ext_resource type="ArrayMesh" uid="uid://byv4wsed0klab" path="res://Models/Home Models/HomeWallSide.obj" id="3_yx00u"]
 [ext_resource type="ArrayMesh" uid="uid://c11kxfxkvxuxk" path="res://Models/Home Models/HomeWallFront.obj" id="4_r46qv"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="4_s84ir"]
@@ -3178,6 +3179,8 @@ script = ExtResource("1_xk6i7")
 
 [node name="CRT Shader" parent="." unique_id=1872535988 instance=ExtResource("2_rb3ft")]
 
+[node name="HUD" parent="." unique_id=1189094878 instance=ExtResource("3_yprlp")]
+
 [node name="Tutorial Panel" parent="." unique_id=1035684065 instance=ExtResource("3_1uut5")]
 
 [node name="PointerNode" parent="." unique_id=172646375 instance=ExtResource("3_p772u")]
@@ -4992,7 +4995,7 @@ transform = Transform3D(-6.551477e-08, 0, 1.1702547, 0, 2.507983, 0, -1.4988031,
 visible = false
 
 [node name="CameraMain" parent="." unique_id=1294855615 instance=ExtResource("13_jldc8")]
-transform = Transform3D(0.19999999, 0, 0, 0, 0.19999997, 0, 0, 0, 0.19999997, -2.173, 3.8125558, 1.9810543)
+transform = Transform3D(0.19999999, 0, 0, 0, 0.19999997, 0, 0, 0, 0.19999997, -2.173, 3.813, 2)
 
 [node name="CameraTrigger" parent="CameraMain" unique_id=339341151 instance=ExtResource("14_1ypgy")]
 transform = Transform3D(39.6113, 0, 0, 0, 16.006002, 0, 0, 0, 46.5815, 17.8589, -14.798204, -6.6850033)

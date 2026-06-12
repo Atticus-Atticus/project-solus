@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bolugpemj3spl" path="res://Scripts/dream_level_stage_3_Script.gd" id="1_fw444"]
 [ext_resource type="PackedScene" uid="uid://cgkclbhbe5b74" path="res://Shaders/crt_shader.tscn" id="2_pdj8h"]
+[ext_resource type="PackedScene" uid="uid://n40070ndqw30" path="res://Scenes/User Interface/HUD/HUD.tscn" id="3_3fnb2"]
 [ext_resource type="PackedScene" uid="uid://bgudoc35jqo6r" path="res://Scenes/User Interface/Menus/PauseMenu.tscn" id="3_s3cja"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="3_vqyp7"]
 [ext_resource type="Texture2D" uid="uid://chqa8jjgl65bo" path="res://Images/DreamFlash3.png" id="4_jcey6"]
@@ -3622,6 +3623,12 @@ shadow_mesh = SubResource("ArrayMesh_k4f6u")
 script = ExtResource("1_fw444")
 
 [node name="CRT Shader" parent="." unique_id=1480504277 instance=ExtResource("2_pdj8h")]
+
+[node name="HUD" parent="." unique_id=1189094878 instance=ExtResource("3_3fnb2")]
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = -4.0
 
 [node name="PointerNode" parent="." unique_id=2112858136 instance=ExtResource("3_vqyp7")]
 

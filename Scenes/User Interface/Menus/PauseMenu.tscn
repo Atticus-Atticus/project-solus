@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://budlmu3lqq23a" path="res://Scripts/pause_menu_script.gd" id="1_lnlhy"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_ghp36"]
+[ext_resource type="Script" uid="uid://c7isae2apbsvi" path="res://Scripts/resume_button_script.gd" id="4_3xvao"]
 [ext_resource type="Script" uid="uid://bmxas43uii3q1" path="res://Scripts/options_button_script.gd" id="4_5dqt4"]
 [ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="4_fjykx"]
 [ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="5_kj5pt"]
@@ -221,6 +222,12 @@ layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=67157773]
+layout_mode = 2
+text = "> Rusume <"
+alignment = 0
+script = ExtResource("4_3xvao")
+
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1941655625]
 layout_mode = 2
 text = "> Options <"
@@ -293,6 +300,9 @@ stream = ExtResource("22_ci7g1")
 volume_db = -2.0
 autoplay = true
 
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Resume" to="MarginContainer/VBoxContainer/Resume" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Resume" to="MarginContainer/VBoxContainer/Resume" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_pressed"]

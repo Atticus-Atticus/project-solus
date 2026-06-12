@@ -18,12 +18,10 @@ var lore10 = 0
 var shadows = true
 
 var InputType = 2
-# 1 follow camera
-# 2 WASD camera
+# 1 = manual control
+# 2 = auto control
 
-#1 used for tank controls (default) (OLD)
-#2 used for mouse directional (OLD)
-#3 used for camera relative movement (OLD)
+
 
 var PlayerControls = true
 #disable or enable player controls
@@ -47,7 +45,7 @@ var supplies1 = 0
 var supplies2 = 0
 #max is 3
 
-var StoryStage: int = 0
+var StoryStage: int = 1
 #determines state of the game's story
 #1 wake up.
 #2 eat

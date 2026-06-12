@@ -9,3 +9,7 @@ extends Control
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	cursor.position = get_global_mouse_position()
+
+
+func _on_resume_pressed() -> void:
+	get_parent().pausemenu()

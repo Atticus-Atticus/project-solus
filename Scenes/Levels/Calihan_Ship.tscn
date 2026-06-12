@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://n40070ndqw30" path="res://Scenes/User Interface/HUD/HUD.tscn" id="4_y61xs"]
 [ext_resource type="ArrayMesh" uid="uid://df4vwhqnfj2qb" path="res://Models/ShipWallBase.obj" id="5_bjwp5"]
 [ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="6_8ouc5"]
-[ext_resource type="PackedScene" uid="uid://cq7mjo8ve435w" path="res://Scenes/User Interface/HUD/HUD2.tscn" id="7_hykaw"]
 [ext_resource type="ArrayMesh" uid="uid://bh8gmj8mknr28" path="res://Models/Clutter/TrashBag.obj" id="8_8mb34"]
 [ext_resource type="PackedScene" uid="uid://b03dx4b6rocx8" path="res://Scenes/Objects/PlayerSuppliesObject.tscn" id="9_8xua8"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="9_8yw1e"]
@@ -147,7 +146,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD2:visible")
+tracks/3/path = NodePath("ColorRect3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -156,59 +155,47 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
-tracks/4/type = "value"
+tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect3:visible")
+tracks/4/path = NodePath("AudioStreamPlayer2")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0.0333333, 10),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AudioStreamPlayer2")
+tracks/5/path = NodePath("AudioStreamPlayer")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0.0333333, 10),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [0.0],
-"method": &"play"
-}, {
 "args": [],
 "method": &"stop"
+}, {
+"args": [0.0],
+"method": &"play"
 }]
 }
-tracks/6/type = "method"
+tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("AudioStreamPlayer")
+tracks/6/path = NodePath("ColorRect:color")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.0333333, 10),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"stop"
-}, {
-"args": [0.0],
-"method": &"play"
-}]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.5, 9.5, 10),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
@@ -257,34 +244,22 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD2:visible")
+tracks/3/path = NodePath("ColorRect3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.0333333, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect3:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("AudioStreamPlayer2")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0.0333334, 10),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -295,13 +270,13 @@ tracks/5/keys = {
 "method": &"stop"
 }]
 }
-tracks/6/type = "method"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("AudioStreamPlayer")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0.0333333, 10),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -312,13 +287,13 @@ tracks/6/keys = {
 "method": &"play"
 }]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.5, 9.5, 10),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
@@ -366,7 +341,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD2:visible")
+tracks/3/path = NodePath("ColorRect3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -378,22 +353,10 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect3:visible")
+tracks/4/path = NodePath("ColorRect:color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect:color")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -2085,9 +2048,6 @@ color = Color(0, 0, 0, 0)
 [node name="CRT Shader" parent="." unique_id=276973089 instance=ExtResource("1_6b51t")]
 
 [node name="HUD" parent="." unique_id=543915682 instance=ExtResource("4_y61xs")]
-
-[node name="HUD2" parent="." unique_id=1368968089 instance=ExtResource("7_hykaw")]
-visible = false
 
 [node name="PointerNode" parent="." unique_id=2002571874 instance=ExtResource("9_8yw1e")]
 
