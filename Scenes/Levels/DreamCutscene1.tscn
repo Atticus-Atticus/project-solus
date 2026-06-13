@@ -81,6 +81,7 @@
 [ext_resource type="PackedScene" uid="uid://dxd5e17wrkapr" path="res://Models/Ship/Calihan Ship.gltf" id="78_j7cgs"]
 [ext_resource type="PackedScene" uid="uid://6lu31r05ib36" path="res://Particles/thruster_effect.tscn" id="79_kal0v"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="81_scd07"]
+[ext_resource type="PackedScene" uid="uid://cpj4kr6ncx6y" path="res://The Attic/model.glb" id="82_avqex"]
 
 [sub_resource type="Gradient" id="Gradient_mpjht"]
 offsets = PackedFloat32Array(0, 0.00574713, 1)
@@ -2480,9 +2481,8 @@ visible = false
 [node name="CRT Shader" parent="." unique_id=1752664014 instance=ExtResource("2_bw4qf")]
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2033110008]
-transform = Transform3D(-0.48489487, 0.38141206, -0.787021, -0.5609121, 0.55481, 0.614462, 0.6710103, 0.73939896, -0.055085875, -8.9514, 7.11261, -0.269775)
+transform = Transform3D(-0.51471424, 0.41105285, -0.75239927, -0.53368, 0.5332212, 0.65639997, 0.6710102, 0.7393989, -0.055085912, -8.9514, 7.11261, -0.269775)
 light_color = Color(1, 0.896779, 0.857361, 1)
-light_energy = 0.75
 light_volumetric_fog_energy = 0.788
 shadow_enabled = true
 
@@ -2515,11 +2515,11 @@ libraries/ = SubResource("AnimationLibrary_b1jxq")
 autoplay = &"Light 2"
 
 [node name="blockbench_export" parent="." unique_id=403074857 instance=ExtResource("4_nxlvy")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -4.58648, 0.221942, -0.315544)
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -4.58648, 0.25084496, -0.315544)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=353617830]
-transform = Transform3D(0.326246, 0.0519424, -0.943857, -0.00011438, 0.998491, 0.0549096, 0.945285, -0.0178061, 0.32576, -7.34424, 2.47148, 0.911524)
-fov = 42.6507
+transform = Transform3D(0.31387782, 0.052170478, -0.948029, -0.000114377384, 0.99849135, 0.054909576, 0.9494634, -0.017126465, 0.31341025, -7.1504207, 2.4466963, 0.7651339)
+fov = 32.978252
 
 [node name="Bonnie" parent="." unique_id=8740705 instance=ExtResource("5_wku1e")]
 transform = Transform3D(0.368183, 0, 0.473753, 0, 0.6, 0, -0.473753, 0, 0.368183, -2.01812, 1.64032, 10.8004)
@@ -3988,7 +3988,7 @@ transform = Transform3D(-0.201439, 0, 8.27186e-08, 0, 0.649572, 0, -1.76104e-08,
 shape = SubResource("BoxShape3D_25ywq")
 
 [node name="DoorNode2" parent="." unique_id=464046505 instance=ExtResource("43_2w84t")]
-transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 5.6, 0, -1.4)
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 5.6, 0.29808784, -1.4)
 
 [node name="DoorNode4" parent="." unique_id=854518166 instance=ExtResource("44_ilbax")]
 transform = Transform3D(-0.7, 0, 1.05697e-07, 0, 0.7, 0, -1.05697e-07, 0, -0.7, 9.8, 0, -4.2)
@@ -4472,6 +4472,7 @@ transform = Transform3D(0.428571, 0, 0, 0, 0.428571, 0, 0, 0, 0.428571, -5.64854
 
 [node name="blockbench_export2" parent="." unique_id=1930070733 instance=ExtResource("75_nekpx")]
 transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 1.17519, 0.2625, 2.49095)
+visible = false
 
 [node name="blockbench_export3" parent="." unique_id=201695528 instance=ExtResource("75_qbg0f")]
 transform = Transform3D(2.73597, 0, -1.23063, 0, 3, 0, 1.23063, 0, 2.73597, 8.66072, 0.234415, -1.70217)
@@ -4481,6 +4482,7 @@ transform = Transform3D(-0.350688, 0, -2.97943, 0, 3, 0, 2.97943, 0, -0.350688, 
 
 [node name="blockbench_export5" parent="." unique_id=649117719 instance=ExtResource("77_q7r1b")]
 transform = Transform3D(0.776457, 0, 2.89778, 0, 3, 0, -2.89778, 0, 0.776457, -4.69152, 0.264818, 6.63776)
+visible = false
 
 [node name="blockbench_export6" parent="." unique_id=589650424 instance=ExtResource("78_j7cgs")]
 transform = Transform3D(-1.80914, 1.42994, 1.91893, 1.53914, 2.53728, -0.439645, -1.83251, 0.719374, -2.26372, -13.2637, 6.16173, -6.92448)
@@ -4498,10 +4500,12 @@ transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-0
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.158084, 0.0657587, 0.126627)
 
 [node name="Label" type="Label" parent="." unique_id=744006305]
-visible = false
 offset_left = 146.0
 offset_top = 97.0
 offset_right = 466.0
 offset_bottom = 168.0
 text = "Press BACKSPACE to skip cutscene"
 label_settings = ExtResource("81_scd07")
+
+[node name="blockbench_export7" parent="." unique_id=1149959215 instance=ExtResource("82_avqex")]
+transform = Transform3D(-0.2735143, 0, 2.9875057, 0, 3, 0, -2.9875057, 0, -0.2735143, -4.809916, -3.433592, -0.44422984)
