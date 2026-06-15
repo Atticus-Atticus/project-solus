@@ -1932,17 +1932,18 @@ shader_parameter/aberration = 0.01
 shader_parameter/noise_opacity = 0.047
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.0
-shader_parameter/pixelate = true
+shader_parameter/pixelate = false
 shader_parameter/discolor = false
 shader_parameter/warp_amount = 0.10000000475
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Radio" type="Node3D" unique_id=1790285260 node_paths=PackedStringArray("radio_screen", "marker")]
+[node name="Radio" type="Node3D" unique_id=1790285260 node_paths=PackedStringArray("radio_screen", "marker", "freq_cylinder")]
 script = ExtResource("1_fyaab")
 radio_screen = NodePath("Freq Screen/SubViewport/Control2/Label")
 marker = NodePath("Freq Screen/SubViewport/Control2/Marker2")
+freq_cylinder = NodePath("RadioModel/Freq Cylinder")
 
 [node name="RadioModel" type="Node3D" parent="." unique_id=1935126334]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3319316, 0, -0.39457726)
@@ -2485,7 +2486,8 @@ offset_bottom = 173.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "HOW TO USE:
-Use Left Mouse Button on the dial labelled FREQ to tune the radio.
+
+Use the MOUSE WHEEL to tune the radio frequency.
 
 Press ESC to exit."
 label_settings = SubResource("LabelSettings_hm5w5")

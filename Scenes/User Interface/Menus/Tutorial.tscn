@@ -224,7 +224,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(10, 10), Vector2(10, 264), Vector2(603, 264)]
+"values": [Vector2(10, 10), Vector2(10, 316), Vector2(603, 316)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -258,9 +258,9 @@ script = ExtResource("1_hhhog")
 visible = false
 layout_mode = 0
 offset_left = 1293.0
-offset_top = 83.0
+offset_top = 31.0
 offset_right = 1896.0
-offset_bottom = 347.0
+offset_bottom = 295.0
 theme = ExtResource("1_tengv")
 
 [node name="Label" type="Label" parent="Panel" unique_id=430418266]
@@ -271,20 +271,23 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -287.5
-offset_top = -118.0
+offset_top = -145.5
 offset_right = 305.0
-offset_bottom = 102.5
+offset_bottom = 120.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "CONTROLS:
 
 Click or Hold Left Mouse Button on the floor to move.
 
+Use R to zoom camera in.
+Use F to zoom camera out.
+
 Objects with a Blue Ping can be interacted with by clicking the Ping.
 
 
 
-Blue Ping ->"
+This is a Blue Ping ->"
 label_settings = SubResource("LabelSettings_0d28c")
 autowrap_mode = 2
 clip_text = true
@@ -293,11 +296,11 @@ clip_text = true
 visible = false
 modulate = Color(0.4, 1, 0.9411765, 1)
 texture_filter = 1
-position = Vector2(205, 211)
+position = Vector2(324, 269)
 scale = Vector2(2.22, 2.22)
 sprite_frames = SubResource("SpriteFrames_23lns")
 autoplay = "default"
-frame_progress = 0.19694942
+frame_progress = 0.4425761
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1910362263]
 libraries/ = SubResource("AnimationLibrary_oy1xy")

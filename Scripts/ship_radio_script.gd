@@ -8,6 +8,8 @@ var signals_array := [113, 50, 182, 69]
 @export var radio_screen = Label
 @export var marker = Control
 
+@export var freq_cylinder: Node3D
+
 @export var min_freq: float = 0.0
 @export var max_freq: float = 200.0
 
@@ -73,6 +75,16 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
 		Globals.PlayerControls = true
+
+	if Input.is_action_just_pressed("M_Wheel UP") and Globals.radio_freq < 200:
+		Globals.radio_freq += 1
+		freq_cylinder.rotate_x(deg_to_rad(5.0))
+		update_marker_position()
+
+	if Input.is_action_just_pressed("M_Wheel DOWN") and Globals.radio_freq > 0:
+		Globals.radio_freq -= 1
+		freq_cylinder.rotate_x(deg_to_rad(-5.0))
+		update_marker_position()
 
 	#if Input.is_action_just_pressed("Debug"):
 		#print(marker.position)

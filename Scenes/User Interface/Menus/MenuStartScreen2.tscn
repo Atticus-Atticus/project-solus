@@ -164,7 +164,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(10, 10), Vector2(10, 962), Vector2(1200, 962)]
+"values": [Vector2(10, 10), Vector2(10, 475), Vector2(1200, 475)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -642,7 +642,7 @@ color = Color(0, 0.109804, 0.211765, 1)
 layout_mode = 0
 offset_left = 119.0
 offset_top = 653.0
-offset_right = 1010.99475
+offset_right = 1010.9945
 offset_bottom = 914.0
 scale = Vector2(1.3199999, 1)
 color = Color(0, 0.109804, 0.211765, 1)
@@ -651,9 +651,9 @@ color = Color(0, 0.109804, 0.211765, 1)
 visible = false
 layout_mode = 0
 offset_left = 651.0
-offset_top = 46.0
+offset_top = 349.0
 offset_right = 1851.0
-offset_bottom = 1008.0
+offset_bottom = 1311.0
 theme = ExtResource("4_7eaqs")
 
 [node name="X Button" type="Button" parent="CalihanPanel" unique_id=815974214]
@@ -689,29 +689,9 @@ OCCUPATION:  Interstellar Courier for The Farseeing Courier Company
 WORLD OF BIRTH:  Brimpie-3
 REGISTERED HOMEWORLD:  Brimpie-3
 REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
-
 ASSOCIATIONS:
-  Registered domestic partnership with Naomi Lonan-Roseberry
-  Registered Parents: Elias Lonan and Jeneva Lonan(deceased)
-
-OCCUPATION:
-  Currently serving as a Farseeing Interstellar Courier.
-  Former Wheat and Algae Farmer before gaining admission into the 
-  Solarian Academy of Pilots.
-
-NOTES:
-  Psychological profile indicates emotional detachment, high stress tolerance, 
-  and low interpersonal engagement.
-  
-  Underwent disciplinary review following altercation with superior officer.
-  See incident report: SY-379 for more info.
-
-Remarks:
-  \"Lonan works best alone. Doesn't ask for help, doesn't expect it either.\"
-   - Supervisor D. Renhall, Farseeing Courier Management Division 4
-
-   \"Shows signs of unresolved trauma. Possible bullying from peers.\"
-   - Dr. Elia Morrix, Psych Eval"
+  * Registered Domestic Partnership with Naomi Lonan-Roseberry
+  * Registered Parents: Elias Lonan and Jeneva Lonan (deceased)"
 label_settings = ExtResource("8_mrp4y")
 clip_text = true
 visible_characters = 0
@@ -735,22 +715,23 @@ texture = ExtResource("9_hhc3x")
 visible = false
 layout_mode = 0
 offset_left = 18.000002
-offset_top = 882.00006
+offset_top = 402.99997
 offset_right = 558.0
-offset_bottom = 974.00006
+offset_bottom = 494.99997
 scale = Vector2(1, 0.7200024)
 text = "> View subject's memories <"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CalihanPanel" unique_id=1271778244]
 libraries/ = SubResource("AnimationLibrary_e3v3f")
+speed_scale = 2.0
 
 [node name="AmyPanel" type="Panel" parent="." unique_id=2035250711]
 visible = false
 layout_mode = 0
 offset_left = 651.0
-offset_top = 46.0
+offset_top = 336.0
 offset_right = 1851.0
-offset_bottom = 1008.0
+offset_bottom = 1298.0
 theme = ExtResource("4_7eaqs")
 
 [node name="X Button" type="Button" parent="AmyPanel" unique_id=917608417]
@@ -786,28 +767,11 @@ OCCUPATION:  Cadet, Solarian Army Corps
 WORLD OF BIRTH:  82-G Eridani-d
 REGISTERED HOMEWORLD:  82-G Eridani-d
 REGISTERED RESIDENCE:  Barracks 1305, Cadet Complex Theta-19
-
 ASSOCIATIONS:
-  Maintains close bond with fellow Cadet Corporal Marcus.
-  Biological parents identified as two senior-ranking officers (names redacted).
-  Parents relationship deemed in violation of Coalition Oath Statute 12-B.
-
-OCCUPATION:
-  Currently enlisted in the Solarian Armed Forces reporting to Sergeant Crawford.
-  Specialization: Combat Medic
-
-NOTES:
-  Previous psychological evaluations note elevated compliance, and surppressed emotional 
-  expression. Also signs of introversion and chronic hypervigilance.
-  Tendency to seek isolation. (Roof access violations x12)
-  Shows creative tendencies. (Unauthorised sketchbook confiscated twice) 
-
-Remarks:
-  \"Quiet. Obedient. Keeps her head down. Has potential, but refuses to step forward.\"
-  - Drill Instructor P. Varrin, Youth Cadet Corps Division 3.
-
-  \"Her parentage makes her a political liability. Recommend continued observation.\"
-  - Commander [REDACTED], Personnel Oversight Committee"
+* Maintains close bond with fellow Cadet Corporal Marcus.
+* Biological parents identified as two senior-ranking officers (names redacted).
+* Parents relationship deemed in violation of Coalition Oath Statute 12-B.
+"
 label_settings = ExtResource("8_mrp4y")
 clip_text = true
 visible_characters = 0
@@ -831,15 +795,16 @@ texture = ExtResource("10_mrp4y")
 visible = false
 layout_mode = 0
 offset_left = 18.0
-offset_top = 882.00006
+offset_top = 402.0001
 offset_right = 566.0
-offset_bottom = 974.00006
+offset_bottom = 494.0001
 scale = Vector2(1, 0.7200024)
 disabled = true
 text = "> View subject's memories <"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AmyPanel" unique_id=1200189103]
 libraries/ = SubResource("AnimationLibrary_e3v3f")
+speed_scale = 2.0
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=814076117]
 position = Vector2(60, 1367)

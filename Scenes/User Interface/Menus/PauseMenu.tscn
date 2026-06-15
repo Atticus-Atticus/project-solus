@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="19_12j1a"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="22_ci7g1"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_lomrg"]
+[sub_resource type="LabelSettings" id="LabelSettings_3xvao"]
 font = ExtResource("9_irjb3")
 font_size = 21
 font_color = Color(0.4, 1, 0.9411765, 1)
@@ -81,7 +81,7 @@ region = Rect2(100, 150, 50, 50)
 atlas = ExtResource("10_3xvao")
 region = Rect2(150, 150, 50, 50)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vgg6k"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_lomrg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -178,10 +178,10 @@ text = "
 > Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
 >
 > 
+>
+>
 > Pause Input recognised...
 > Program is now paused.
-> Press the 'ESC' key to resume Program.
-> To Exit Program click \"Return to Menu\"
 >
 >
 >
@@ -202,9 +202,9 @@ label_settings = ExtResource("5_kj5pt")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.057937503
-anchor_top = -0.08055556
+anchor_top = -0.08148148
 anchor_right = 0.188562
-anchor_bottom = 0.8601852
+anchor_bottom = 0.90462965
 offset_left = -0.240005
 offset_top = 515.0
 offset_right = 139.96
@@ -224,7 +224,7 @@ theme_override_constants/separation = 21
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=67157773]
 layout_mode = 2
-text = "> Rusume <"
+text = "> Resume <"
 alignment = 0
 script = ExtResource("4_3xvao")
 
@@ -240,15 +240,15 @@ text = "> Return to Menu <"
 alignment = 0
 script = ExtResource("4_fjykx")
 
-[node name="Panel" type="Panel" parent="." unique_id=22722056]
+[node name="Panel2" type="Panel" parent="." unique_id=835094924]
 layout_mode = 0
-offset_left = 1054.0
-offset_top = 154.0
-offset_right = 1657.0
-offset_bottom = 418.0
+offset_left = 1194.0
+offset_top = 106.0
+offset_right = 1797.0
+offset_bottom = 427.0
 theme = ExtResource("3_ghp36")
 
-[node name="Label" type="Label" parent="Panel" unique_id=1741479597]
+[node name="Label" type="Label" parent="Panel2" unique_id=733048886]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -256,32 +256,34 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -287.5
-offset_top = -118.0
+offset_top = -145.5
 offset_right = 305.0
-offset_bottom = 102.5
+offset_bottom = 120.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "CONTROLS:
 
 Click or Hold Left Mouse Button on the floor to move.
 
+Use R to zoom camera in.
+Use F to zoom camera out.
+
 Objects with a Blue Ping can be interacted with by clicking the Ping.
 
 
 
-Blue Ping ->"
-label_settings = SubResource("LabelSettings_lomrg")
+This is a Blue Ping ->"
+label_settings = SubResource("LabelSettings_3xvao")
 autowrap_mode = 2
 clip_text = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel" unique_id=598255568]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel2" unique_id=79478143]
 modulate = Color(0.4, 1, 0.9411765, 1)
 texture_filter = 1
-position = Vector2(205, 211)
+position = Vector2(324, 269)
 scale = Vector2(2.22, 2.22)
-sprite_frames = SubResource("SpriteFrames_vgg6k")
+sprite_frames = SubResource("SpriteFrames_lomrg")
 autoplay = "default"
-frame_progress = 0.27748078
 
 [node name="Options Panel" parent="." unique_id=1776467909 instance=ExtResource("6_soebr")]
 visible = false

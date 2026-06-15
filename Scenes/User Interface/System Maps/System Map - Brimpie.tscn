@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://duowlyejoroew" path="res://Scripts/system_map_brimpie Script.gd" id="1_fdo4o"]
 [ext_resource type="Texture2D" uid="uid://c350vc7ah8s4t" path="res://Sprites/Suns/4.png" id="2_j7sdl"]
+[ext_resource type="Texture2D" uid="uid://bvpvgmyxdndvg" path="res://Sprites/Backgrounds/Blue1.png" id="2_suie5"]
 [ext_resource type="Script" uid="uid://dmi1ufoc8n8op" path="res://Scripts/LittleShip.gd" id="2_tydle"]
 [ext_resource type="Texture2D" uid="uid://cunc8sewfv4ft" path="res://Sprites/White Circle.png" id="3_jopg2"]
+[ext_resource type="Texture2D" uid="uid://cemmn0lj6xhi4" path="res://Sprites/Backgrounds/YellowStars.png" id="3_qynh2"]
 [ext_resource type="Texture2D" uid="uid://sythnx70gf8w" path="res://Sprites/Terran_or_Earth-like/11.png" id="5_1jkw3"]
 [ext_resource type="Shader" uid="uid://cmrbvpubiyrjp" path="res://Shaders/CRT.gdshader" id="5_j7sdl"]
 [ext_resource type="Texture2D" uid="uid://lhsox3m0qstb" path="res://Sprites/Barren_or_Moon/1.png" id="5_jopg2"]
 [ext_resource type="Texture2D" uid="uid://b8e52a6aubpdj" path="res://Sprites/Moon_16x16/1.png" id="6_5uk6m"]
 [ext_resource type="Texture2D" uid="uid://ef7h4blkt1lo" path="res://Sprites/Terran_or_Earth-like/6.png" id="6_onoue"]
 [ext_resource type="Texture2D" uid="uid://bht1ys8cptk8l" path="res://Sprites/Ocean/2.png" id="8_sypc4"]
+[ext_resource type="Texture2D" uid="uid://ct1i3bxkt2ims" path="res://Sprites/Moon_16x16/3.png" id="9_qynh2"]
 [ext_resource type="Texture2D" uid="uid://bhyo8bpcm4gcp" path="res://Sprites/Rings/9.png" id="9_wfmlv"]
+[ext_resource type="Texture2D" uid="uid://cs06hg2khjst" path="res://Sprites/Moon_16x16/12.png" id="10_ge4tu"]
 [ext_resource type="Texture2D" uid="uid://bmk7v6eq6vcjq" path="res://Sprites/Lava/4.png" id="10_t648y"]
 [ext_resource type="Texture2D" uid="uid://cecwyx51sqsof" path="res://Sprites/Rings/11.png" id="11_kyq3y"]
 [ext_resource type="Texture2D" uid="uid://dgqb7kajax7h6" path="res://Scenes/User Interface/ping.png" id="13_t648y"]
@@ -302,6 +306,159 @@ script = ExtResource("1_fdo4o")
 cam = NodePath("Camera2D")
 ship = NodePath("CharacterBody2D")
 
+[node name="Background" type="Node2D" parent="." unique_id=1079270132]
+
+[node name="Blue1" type="Sprite2D" parent="Background" unique_id=622748570]
+texture_filter = 1
+position = Vector2(-1572, -1286)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue1" unique_id=2131191001]
+texture_filter = 1
+position = Vector2(0, 0.5)
+texture = ExtResource("3_qynh2")
+
+[node name="Blue2" type="Sprite2D" parent="Background" unique_id=1019185908]
+texture_filter = 1
+position = Vector2(2266, -1286)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue2" unique_id=596223788]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue3" type="Sprite2D" parent="Background" unique_id=299521550]
+texture_filter = 1
+position = Vector2(6106, -1286)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue3" unique_id=1389446384]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue4" type="Sprite2D" parent="Background" unique_id=1777527821]
+texture_filter = 1
+position = Vector2(-1572, -3447)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue4" unique_id=1493420224]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue5" type="Sprite2D" parent="Background" unique_id=2005325875]
+texture_filter = 1
+position = Vector2(2266, -3449)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue5" unique_id=91329189]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue6" type="Sprite2D" parent="Background" unique_id=142546394]
+texture_filter = 1
+position = Vector2(6106, -3449)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue6" unique_id=374883726]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue7" type="Sprite2D" parent="Background" unique_id=2073839098]
+texture_filter = 1
+position = Vector2(-1572, 876)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue7" unique_id=1188196172]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue8" type="Sprite2D" parent="Background" unique_id=825513215]
+texture_filter = 1
+position = Vector2(2266, 874)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue8" unique_id=577088935]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue9" type="Sprite2D" parent="Background" unique_id=244499009]
+texture_filter = 1
+position = Vector2(6106, 874)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue9" unique_id=1264144236]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue10" type="Sprite2D" parent="Background" unique_id=569558098]
+texture_filter = 1
+position = Vector2(-1572, 3036)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue10" unique_id=646663067]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue11" type="Sprite2D" parent="Background" unique_id=211607054]
+texture_filter = 1
+position = Vector2(2266, 3034)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue11" unique_id=40905392]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue12" type="Sprite2D" parent="Background" unique_id=268794671]
+texture_filter = 1
+position = Vector2(6106, 3034)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue12" unique_id=472821049]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue13" type="Sprite2D" parent="Background" unique_id=1628780720]
+texture_filter = 1
+position = Vector2(-1572, 5196)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue13" unique_id=1770043562]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue14" type="Sprite2D" parent="Background" unique_id=1886135957]
+texture_filter = 1
+position = Vector2(2266, 5194)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue14" unique_id=459241184]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
+[node name="Blue15" type="Sprite2D" parent="Background" unique_id=747230025]
+texture_filter = 1
+position = Vector2(6106, 5194)
+scale = Vector2(4, 4)
+texture = ExtResource("2_suie5")
+
+[node name="YellowStars" type="Sprite2D" parent="Background/Blue15" unique_id=988539207]
+texture_filter = 1
+texture = ExtResource("3_qynh2")
+
 [node name="Planets" type="Node2D" parent="." unique_id=629359146]
 
 [node name="Sun" type="Sprite2D" parent="Planets" unique_id=1328463016]
@@ -362,6 +519,30 @@ texture_filter = 1
 position = Vector2(2997, 2408)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_onoue")
+
+[node name="WhiteCircle" type="Sprite2D" parent="Planets/Brimpie3" unique_id=835658054]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_jopg2")
+
+[node name="WhiteCircle2" type="Sprite2D" parent="Planets/Brimpie3" unique_id=1105670855]
+modulate = Color(1, 1, 1, 0.5882353)
+texture_filter = 1
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_jopg2")
+
+[node name="3" type="Sprite2D" parent="Planets/Brimpie3" unique_id=1447613885]
+texture_filter = 1
+position = Vector2(-14.000004, -47.60002)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_qynh2")
+
+[node name="12" type="Sprite2D" parent="Planets/Brimpie3" unique_id=472281423]
+texture_filter = 1
+position = Vector2(-55.200027, -21.599989)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_ge4tu")
 
 [node name="WhiteCircle4" type="Sprite2D" parent="Planets" unique_id=533489730]
 modulate = Color(1, 1, 1, 0.5882353)
@@ -594,6 +775,7 @@ visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Panel" unique_id=512629553]
 libraries/ = SubResource("AnimationLibrary_vjv7t")
+speed_scale = 2.0
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=1134699096]
 material = SubResource("ShaderMaterial_jopg2")
