@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bgi8ti51sdg8s"]
+
+[ext_resource type="Script" uid="uid://cj7iiq88wltjb" path="res://Scripts/DoorInteractablesScript.gd" id="1_su5en"]
+[ext_resource type="Script" uid="uid://cx8xjwu3308mu" path="res://Scripts/door_front_script.gd" id="2_3va76"]
+[ext_resource type="Script" uid="uid://b5jcpl3ivrxqb" path="res://Scripts/door_back_script.gd" id="3_esnhw"]
+[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="4_anp5a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ccwu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_52v2l"]
+
+[node name="Door Interactable" type="Node3D" unique_id=207222191 node_paths=PackedStringArray("front_exit", "back_exit")]
+script = ExtResource("1_su5en")
+front_exit = NodePath("Front Marker")
+back_exit = NodePath("Back Marker")
+
+[node name="Front" type="StaticBody3D" parent="." unique_id=851704521]
+collision_layer = 2
+script = ExtResource("2_3va76")
+
+[node name="FrontCollision" type="CollisionShape3D" parent="Front" unique_id=919028892]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 0, 0)
+shape = SubResource("BoxShape3D_4ccwu")
+debug_color = Color(0, 0.5568628, 0.6509804, 1)
+
+[node name="Back" type="StaticBody3D" parent="." unique_id=1649263215]
+collision_layer = 2
+script = ExtResource("3_esnhw")
+
+[node name="AnimatedSprite3D" parent="." unique_id=347065643 instance=ExtResource("4_anp5a")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 0)
+frame_progress = 0.0
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1524028132]
+transform = Transform3D(3.003, 0, 0, 0, 0.898, 0, 0, 0, 0.898, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=795022271]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 3, 0, -2, 0)
+shape = SubResource("BoxShape3D_52v2l")
+
+[node name="Front Marker" type="Marker3D" parent="." unique_id=1264241976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -2, 0)
+
+[node name="Back Marker" type="Marker3D" parent="." unique_id=1156905885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_enter_trigger"]
+[connection signal="body_exited" from="Area3D" to="." method="_exit_trigger"]

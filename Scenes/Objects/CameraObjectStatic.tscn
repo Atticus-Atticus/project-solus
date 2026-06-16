@@ -2,22 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brxdlo6rjw1j1" path="res://Scripts/camera_object_static_script.gd" id="1_4w5ay"]
 [ext_resource type="Texture2D" uid="uid://ca21et6nfx8jh" path="res://Scenes/User Interface/Menus/tv-4k-tv-static-d3k7px9ms3ebgfv4.jpg" id="2_s5mlo"]
-[ext_resource type="Shader" uid="uid://dn0tx4hqul6t0" path="res://Shaders/Pixel.gdshader" id="3_5m5h4"]
 [ext_resource type="AudioStream" uid="uid://dh6njkag285wr" path="res://Audio/ChangeCam.wav" id="4_yrip5"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_g0afu"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_jo7kj"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4m6wn"]
-render_priority = 0
-shader = ExtResource("3_5m5h4")
-shader_parameter/shadows_enabled = true
-shader_parameter/highlights_enabled = false
-shader_parameter/shadow_strength = 0.4
-shader_parameter/highlight_strength = 1.0
-shader_parameter/highlight_color = Color(1, 1, 1, 1)
-shader_parameter/shadow_color = Color(0, 0, 0, 1)
 
 [node name="Camera" type="Node3D" unique_id=1294855615]
 script = ExtResource("1_4w5ay")
@@ -30,18 +15,5 @@ texture = ExtResource("2_s5mlo")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1140948825]
 stream = ExtResource("4_yrip5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=565087124]
-transform = Transform3D(1.34356, 0, 0, 0, 1, 0, 0, 0, 2.23696, 0, -0.014157057, -0.442949)
-mesh = SubResource("BoxMesh_g0afu")
-skeleton = NodePath("")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1465436430 groups=["Security Cams"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.033277035, -0.886012)
 fov = 80.0
-
-[node name="Postprocess" type="MeshInstance3D" parent="." unique_id=1765672454]
-transform = Transform3D(2.40969, 0, 0, 0, -4.37114e-08, -1.84268, 0, 1, -8.05461e-08, 0, -0.025939941, -1.84258)
-visible = false
-mesh = SubResource("PlaneMesh_jo7kj")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("ShaderMaterial_4m6wn")
