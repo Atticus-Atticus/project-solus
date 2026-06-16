@@ -36,9 +36,9 @@ script = ExtResource("2_e51qc")
 
 [node name="Label" type="Label" parent="." unique_id=1994882709]
 layout_mode = 0
-offset_left = 1692.0
-offset_top = 23.0
-offset_right = 1887.0
-offset_bottom = 60.0
+offset_left = 1635.0
+offset_top = 21.0
+offset_right = 1830.0
+offset_bottom = 58.0
 text = "Project Solus ALPHA"
 label_settings = SubResource("LabelSettings_6px42")

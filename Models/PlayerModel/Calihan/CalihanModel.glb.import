@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://efnm7xbfpi1l"
-path="res://.godot/imported/CalihanModel.gltf-e7dba95ce111c98fa99db3609fb40ebc.scn"
+uid="uid://bp3jftaipswqu"
+path="res://.godot/imported/CalihanModel.glb-bc765abe898fdd61c72a5738c966f436.scn"
 
 [deps]
 
-source_file="res://Models/PlayerModel/Calihan/CalihanModel.gltf"
-dest_files=["res://.godot/imported/CalihanModel.gltf-e7dba95ce111c98fa99db3609fb40ebc.scn"]
+source_file="res://Models/PlayerModel/Calihan/CalihanModel.glb"
+dest_files=["res://.godot/imported/CalihanModel.glb-bc765abe898fdd61c72a5738c966f436.scn"]
 
 [params]
 
@@ -43,7 +43,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Models/PlayerModel/Calihan/CalihanIdle01.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bu6b2v2shcbn4",
+"save_to_file/path": "uid://bmw7od4dgkto7",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -2099,7 +2099,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Models/PlayerModel/Calihan/CalihanIdleLoop.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://e3xjst3j311l",
+"save_to_file/path": "uid://bd5b0cy7oyqnj",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -4155,7 +4155,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Models/PlayerModel/Calihan/CalihanPickUP.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://c4mmk3yv5qmum",
+"save_to_file/path": "uid://cw32qlpxjdn4m",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -6211,8 +6211,8 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Models/PlayerModel/Calihan/CalihanWalk.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://epd61smy7y4f",
-"settings/loop_mode": 1,
+"save_to_file/path": "uid://bj4lm7p4jp82g",
+"settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
@@ -8265,5 +8265,5 @@ _subresources={
 }
 }
 }
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

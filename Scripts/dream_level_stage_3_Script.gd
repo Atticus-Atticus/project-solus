@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		timer = 0.0
 		var roll = randi() % 30 + 1
 		if roll == 10 and playing1 == 0:
-			$FlyOver.play()
+			$City/FlyOver.play()
 			playing1 = 1
 
 	timer += delta
@@ -37,24 +37,25 @@ func _process(delta: float) -> void:
 		timer = 0.0
 		var roll2 = randi() % 30 + 1
 		if roll2 == 15 and playing2 == 0:
-			$Siren.play()
+			$City/Siren.play()
 			playing2 = 1
 
 func pausemenu():
 	if Globals.paused:
 		pause_menu.hide()
 		Globals.PlayerControls = true
-		$Ambience.play()
+		$City/Ambience.play()
+		$City/AmbienceCHAOS.play()
 		$Music.play()
 		#Engine.time_scale = 1
 	else:
 		pause_menu.show()
 		Globals.PlayerControls = false
 		#Engine.time_scale = 0
-		$Ambience.stop()
+		$City/Ambience.stop()
+		$City/AmbienceCHAOS.stop()
 		$Music.stop()
 	Globals.paused = !Globals.paused
-
 
 func _on_siren_finished() -> void:
 	playing1 = 0
