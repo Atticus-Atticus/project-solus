@@ -4208,7 +4208,7 @@ transform = Transform3D(2.3383749, 0, 1.8793626, 0, 3, 0, -1.8793626, 0, 2.33837
 [node name="City" type="Node3D" parent="." unique_id=2106152725]
 
 [node name="SM_Sign_Neon_06" type="MeshInstance3D" parent="City" unique_id=2006404800]
-transform = Transform3D(0.994183, 0.107704, 0, -0.107704, 0.994183, 0, 0, 0, 1, -22.4823, -3.06419, -7.13095)
+transform = Transform3D(0.994183, 0.107704, 0, -0.107704, 0.994183, 0, 0, 0, 1, -19.4823, -3.06419, -7.13095)
 material_override = SubResource("StandardMaterial3D_agfxl")
 mesh = SubResource("ArrayMesh_c1of2")
 skeleton = NodePath("")
@@ -4286,7 +4286,7 @@ mesh = SubResource("ArrayMesh_npa0r")
 skeleton = NodePath("")
 
 [node name="SM_Bld_Large_Part_03" type="MeshInstance3D" parent="City" unique_id=34727408]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.918, -9.26614, -8.5706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.918, -9.26614, -8.5706)
 material_override = SubResource("StandardMaterial3D_8xx3t")
 mesh = SubResource("ArrayMesh_56rv4")
 skeleton = NodePath("")
@@ -4334,7 +4334,7 @@ mesh = SubResource("ArrayMesh_cc2tq")
 skeleton = NodePath("")
 
 [node name="SM_Bld_Power_07" type="MeshInstance3D" parent="City" unique_id=682713530]
-transform = Transform3D(0.184616, 0, 0.236468, 0, 0.3, 0, -0.236468, 0, 0.184616, -18.8895, 3.39576, -8.00681)
+transform = Transform3D(0.184616, 0, 0.236468, 0, 0.3, 0, -0.236468, 0, 0.184616, -15.8895, 3.39576, -8.00681)
 material_override = SubResource("StandardMaterial3D_t1fc0")
 mesh = SubResource("ArrayMesh_cc2tq")
 skeleton = NodePath("")
@@ -4373,26 +4373,27 @@ light_energy = 5.106
 omni_range = 2.31088
 
 [node name="SM_Sign_Neon_03" type="MeshInstance3D" parent="City" unique_id=1504359754]
-transform = Transform3D(1.95544, 0.419817, 0, -0.419817, 1.95544, 0, 0, 0, 2, -19.9506, -3.773, -7.13116)
+transform = Transform3D(1.95544, 0.419817, 0, -0.419817, 1.95544, 0, 0, 0, 2, -16.9506, -3.773, -7.13116)
 material_override = SubResource("StandardMaterial3D_iuuyk")
 mesh = SubResource("ArrayMesh_xbv42")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="City/SM_Sign_Neon_03" unique_id=41368290]
+transform = Transform3D(0.5000005, -1.4901161e-08, 0, 1.4901161e-08, 0.5000005, 0, 0, 0, 0.5, 0, -2.3841858e-07, 0)
 light_color = Color(0.878291, 0.000919105, 0.924559, 1)
 light_energy = 2.5
 light_size = 0.004
 omni_range = 2.81646
 
 [node name="SM_Sign_Neon_05" type="MeshInstance3D" parent="City" unique_id=1578736095]
-transform = Transform3D(0.951686, -0.307074, 0, 0.307074, 0.951686, 0, 0, 0, 1, -22.4823, -3.06419, -7.13095)
+transform = Transform3D(0.951686, -0.307074, 0, 0.307074, 0.951686, 0, 0, 0, 1, -19.4823, -3.06419, -7.13095)
 visible = false
 material_override = SubResource("StandardMaterial3D_e0baa")
 mesh = SubResource("ArrayMesh_c1of2")
 skeleton = NodePath("")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="City" unique_id=1229106032]
-transform = Transform3D(0.977721, 0.209909, 0, -0.209909, 0.977721, 0, 0, 0, 1, -22.3955, -3.12814, -7.00128)
+transform = Transform3D(0.977721, 0.209909, 0, -0.209909, 0.977721, 0, 0, 0, 1, -19.3955, -3.12814, -7.00128)
 light_color = Color(0.633674, 0.395303, 0.98311, 1)
 omni_range = 1.96682
 
@@ -4402,7 +4403,7 @@ light_color = Color(0, 1, 0, 1)
 omni_range = 0.63108
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="City" unique_id=1088919162]
-transform = Transform3D(0.9731989, 0.22996497, 0, -0.22996497, 0.9731989, 0, 0, 0, 1, -17.9981, 4.27325, -6.88931)
+transform = Transform3D(0.97319895, 0.22996499, 0, -0.22996499, 0.97319895, 0, 0, 0, 1, -14.9981, 4.27325, -6.88931)
 light_color = Color(1, 0, 0, 1)
 light_energy = 7.0
 omni_range = 0.781903

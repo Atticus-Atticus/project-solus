@@ -4,14 +4,12 @@
 [ext_resource type="Script" uid="uid://cch6vcu0lxojv" path="res://Scripts/ShipRadioCameraScript.gd" id="1_trtwo"]
 [ext_resource type="Texture2D" uid="uid://clhry0p7n2m26" path="res://Models/Ship Interfaces/ShipRadioBig_0.png" id="2_7virp"]
 [ext_resource type="Texture2D" uid="uid://cdlj7sf16324x" path="res://Models/SkyBox/panorama_image.png" id="2_qb4w1"]
-[ext_resource type="Script" uid="uid://be3xrhtfey3wf" path="res://Scripts/RadioButtonTestScript.gd" id="3_62yd5"]
 [ext_resource type="Texture2D" uid="uid://dwx7p1ulyk7v5" path="res://Models/BlueFlightDeck_0.png" id="3_ap7pc"]
 [ext_resource type="AudioStream" uid="uid://cjxsb42x1rtvy" path="res://Audio/RadioStatic.wav" id="4_a1qho"]
 [ext_resource type="Texture2D" uid="uid://de06dsx7ogx02" path="res://Models/BlueFlightDeck_1.png" id="4_lv0r6"]
 [ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="5_h0ubv"]
 [ext_resource type="Texture2D" uid="uid://bh2avpgtu13wl" path="res://Models/BlueFlightDeck_2.png" id="5_hm5w5"]
 [ext_resource type="AudioStream" uid="uid://i2bbhbmeclsw" path="res://Audio/Radio/BrimpieAutomatedVoice.wav" id="5_uby32"]
-[ext_resource type="Script" uid="uid://bv8xollrs77wp" path="res://Scripts/MinusFreqScript.gd" id="6_fx56j"]
 [ext_resource type="AudioStream" uid="uid://b1dq6c45lpfej" path="res://Audio/Morse/MorseCode.wav" id="6_q73t4"]
 [ext_resource type="Texture2D" uid="uid://cd2a0nw77v8tb" path="res://Models/BlueFlightDeck_3.png" id="6_yglvp"]
 [ext_resource type="LabelSettings" uid="uid://clxf3x4jpjvx8" path="res://Scenes/User Interface/ShipRadioButton.tres" id="7_cau1o"]
@@ -1743,8 +1741,6 @@ reflected_light_source = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_38p3t"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b4iaf"]
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_57sr1"]
 viewport_path = NodePath("Freq Screen/SubViewport")
 
@@ -2227,24 +2223,11 @@ light_color = Color(0.4, 1, 0.941176, 1)
 spot_range = 4.257215
 spot_angle = 51.445465
 
-[node name="Button + freq" type="StaticBody3D" parent="." unique_id=1187634232 node_paths=PackedStringArray("root", "freq_cylinder")]
-transform = Transform3D(0.202534, 0, 0, 0, -2.1855694e-08, 0.39861017, 0, -0.5, -1.7423803e-08, 0.0620521, 1.2483616, 1.4611615)
-script = ExtResource("3_62yd5")
-root = NodePath("..")
-freq_cylinder = NodePath("../RadioModel/Freq Cylinder")
+[node name="Button + freq" type="StaticBody3D" parent="." unique_id=1187634232]
+transform = Transform3D(0.44111907, 0, 0, 0, -2.1855694e-08, 0.39861017, 0, -0.5, -1.7423803e-08, -0.046147674, 1.2483616, 1.4611615)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Button + freq" unique_id=2046243645]
 shape = SubResource("BoxShape3D_38p3t")
-
-[node name="Button - freq" type="StaticBody3D" parent="." unique_id=1563558297 node_paths=PackedStringArray("root", "freq_cylinder")]
-transform = Transform3D(0.203, 0, 0, 0, -2.1855694e-08, 0.399, 0, -0.5, -1.7440843e-08, -1.096, 1.248, 1.461)
-script = ExtResource("6_fx56j")
-root = NodePath("..")
-freq_cylinder = NodePath("../RadioModel/Freq Cylinder")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Button - freq" unique_id=995615599]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 4.684534, 0, 0)
-shape = SubResource("BoxShape3D_b4iaf")
 
 [node name="Freq Screen" type="MeshInstance3D" parent="." unique_id=951545218]
 transform = Transform3D(3.4848447, 0, 0, 0, 1.7398088, 0, 0, 0, 1.873, -0.44041213, 2.835385, 1.4779122)
@@ -2468,8 +2451,8 @@ color = Color(0, 0.0705882, 0, 1)
 [node name="Panel" type="Panel" parent="." unique_id=1747741558]
 offset_left = 48.0
 offset_top = 102.0
-offset_right = 651.0
-offset_bottom = 234.0
+offset_right = 591.0
+offset_bottom = 245.0
 theme = ExtResource("27_lv0r6")
 
 [node name="Label" type="Label" parent="Panel" unique_id=969794255]
@@ -2479,15 +2462,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -287.5
-offset_top = -47.0
-offset_right = 305.0
-offset_bottom = 173.5
+offset_left = -260.5
+offset_top = -53.5
+offset_right = 273.5
+offset_bottom = 167.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "HOW TO USE:
 
-Use the MOUSE WHEEL to tune the radio frequency.
+Hover the mouse over the freq dial and then use the mouse wheel to tune the radio.
 
 Press ESC to exit."
 label_settings = SubResource("LabelSettings_hm5w5")
@@ -2512,3 +2495,6 @@ material = SubResource("ShaderMaterial_a1qho")
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
+
+[connection signal="mouse_entered" from="Button + freq" to="." method="_on_button_freq_mouse_entered"]
+[connection signal="mouse_exited" from="Button + freq" to="." method="_on_button_freq_mouse_exited"]

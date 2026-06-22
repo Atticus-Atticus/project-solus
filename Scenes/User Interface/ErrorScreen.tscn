@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_lulml"]
 [ext_resource type="Texture2D" uid="uid://nd7txv25ssn" path="res://Scenes/User Interface/HUD/Project Solus Camera HUD ERROR.png" id="2_iyk6m"]
 [ext_resource type="Shader" uid="uid://cnqbvlic7dp1a" path="res://Shaders/Glitch.gdshader" id="2_tdqlu"]
+[ext_resource type="AudioStream" uid="uid://0ku3gj18sk6v" path="res://Audio/ScreenGlitchSFX.wav" id="5_ghu3o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ghu3o"]
 line_spacing = 20.0
@@ -279,5 +280,10 @@ metadata/_edit_use_anchors_ = true
 libraries/ = SubResource("AnimationLibrary_iyk6m")
 autoplay = &"Error"
 speed_scale = 1.2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=587578420]
+stream = ExtResource("5_ghu3o")
+volume_db = 2.0
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

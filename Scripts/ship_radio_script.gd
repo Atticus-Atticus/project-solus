@@ -17,6 +17,7 @@ var signals_array := [113, 50, 182, 69]
 @export var marker_right_x: float = 1240.0
 
 var message_up = false
+var in_area = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +35,14 @@ func _ready() -> void:
 	$"CRT Shader Static".show()
 	await get_tree().create_timer(0.2).timeout
 	$"CRT Shader Static".hide()
+
+
+func _on_button_freq_mouse_entered() -> void:
+	in_area = true
+
+
+func _on_button_freq_mouse_exited() -> void:
+	in_area = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -76,12 +85,12 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/Levels/Calihan_Ship.tscn")
 		Globals.PlayerControls = true
 
-	if Input.is_action_just_pressed("M_Wheel UP") and Globals.radio_freq < 200:
+	if Input.is_action_just_pressed("M_Wheel UP") and Globals.radio_freq < 200 and in_area == true:
 		Globals.radio_freq += 1
 		freq_cylinder.rotate_x(deg_to_rad(5.0))
 		update_marker_position()
 
-	if Input.is_action_just_pressed("M_Wheel DOWN") and Globals.radio_freq > 0:
+	if Input.is_action_just_pressed("M_Wheel DOWN") and Globals.radio_freq > 0 and in_area == true:
 		Globals.radio_freq -= 1
 		freq_cylinder.rotate_x(deg_to_rad(-5.0))
 		update_marker_position()

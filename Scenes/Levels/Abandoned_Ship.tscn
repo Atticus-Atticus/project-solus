@@ -623,10 +623,6 @@ _data = {
 [node name="StationLevelNode" type="Node3D" unique_id=196504382]
 script = ExtResource("1_jtff4")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=527759360]
-transform = Transform3D(-0.546946, -0.307821, 0.778522, -0.519814, 0.853834, -0.0275937, -0.656235, -0.419779, -0.62701, -3.24007, 0, -10.1721)
-shadow_enabled = true
-
 [node name="CRT Shader" parent="." unique_id=2083229219 instance=ExtResource("1_cvdr8")]
 
 [node name="HUD" parent="." unique_id=1133988146 instance=ExtResource("2_03f3y")]
@@ -635,6 +631,11 @@ shadow_enabled = true
 
 [node name="PauseMenu" parent="." unique_id=1965237032 instance=ExtResource("4_qebqp")]
 visible = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1333771639]
+transform = Transform3D(-0.5872345, -0.379205, 0.71509385, -0.3053753, 0.9219743, 0.23813704, -0.74960095, -0.078529716, -0.657215, 7.35825, 1.8965325, -33.900894)
+light_color = Color(0.96862745, 0.56078434, 0.8352941, 1)
+shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1048792437 instance=ExtResource("66_3vw0k")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.43168283, 0)
@@ -1645,6 +1646,10 @@ environment = SubResource("Environment_0qcel")
 transform = Transform3D(-3.44733e-07, 0, -1, 0, 14.623, 0, 7.88658, 0, -4.37114e-08, 13.5392, 0, -11.0767)
 mesh = SubResource("BoxMesh_tn8xa")
 
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1867290305]
+transform = Transform3D(14.759632, 8.951524e-07, -4.371141e-08, -6.451632e-07, -8.9515237e-07, -0.99999994, -6.4516405e-07, 20.478699, -4.371139e-08, 9.303965, 6.253664, -8.297433)
+mesh = SubResource("BoxMesh_tn8xa")
+
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1596859655]
 transform = Transform3D(8.20715, 0, 0, 0, 14.623, 0, 0, 0, 1, 17.6978, 0, -7.5597)
 mesh = SubResource("BoxMesh_tn8xa")
@@ -1699,7 +1704,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 17, 4.71812, -6)
 
 [node name="Decal" type="Decal" parent="." unique_id=191629867]
-transform = Transform3D(1.007194e-08, -0.49473515, 0.07236803, -4.5435037e-08, -0.07236803, -0.49473515, 0.5, 3.3897933e-09, -4.6414392e-08, 12.265991, 3.2867682, 3.159948)
+transform = Transform3D(6.556708e-08, -0.14311378, -2.4137604e-08, -1.9106855e-15, 6.2557017e-09, -0.552204, 0.5, 1.8767105e-08, 1.0550882e-15, 12.670904, 3.5581555, 3.159948)
 size = Vector3(2, 2.7471924, 2)
 texture_albedo = ExtResource("63_fmbpl")
 
