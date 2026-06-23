@@ -6,7 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_k2lga"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="5_wu2u5"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_1kdye"]
-[ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_c8dei"]
+[ext_resource type="AudioStream" uid="uid://r8o3ygpamuy2" path="res://Audio/TV Static.mp3" id="7_iwym4"]
+[ext_resource type="AudioStream" uid="uid://dhw6gaaote7jm" path="res://Audio/StartScreenBootUp.wav" id="8_hox62"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hox62"]
+font = ExtResource("3_27ud3")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwym4"]
+font = ExtResource("3_27ud3")
+font_size = 30
+font_color = Color(0.4, 1, 0.9411765, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_esjad"]
 line_spacing = 20.0
@@ -66,6 +76,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_5teo1"]
 resource_name = "FadeToBlack"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -73,10 +84,24 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1),
+"times": PackedFloat32Array(2.4, 2.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StartUpSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_baft7"]
@@ -105,42 +130,114 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/path = NodePath("ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect3:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(636, 120)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3/Label2:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StartUpText:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Blackscreen:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(67, 1082)]
+}
 
 [sub_resource type="Animation" id="Animation_16u6q"]
 resource_name = "StartUp"
-length = 6.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartUpText:visible_ratio")
+tracks/0/path = NodePath("ColorRect3:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 2.5, 3.23333, 3.73333, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.413333, 0.413333, 0.556741, 0.556741, 1.0]
+"values": [Vector2(0, 120), Vector2(636, 120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect3/Label2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StartUpText:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Blackscreen:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-25, 2), Vector2(-25, 1113)]
 }
 
 [sub_resource type="Animation" id="Animation_gjvee"]
@@ -177,39 +274,85 @@ position = Vector2(967.75, 550.25)
 scale = Vector2(1.65287, 1.64971)
 texture = ExtResource("2_l4fph")
 
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1389416251]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -369.0
+offset_right = 318.0
+offset_bottom = -249.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+
+[node name="Label2" type="Label" parent="ColorRect3" unique_id=1059686004]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.0
+offset_top = -69.0
+offset_right = 422.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CRITICAL PLAYBACK ERROR"
+label_settings = SubResource("LabelSettings_hox62")
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
 [node name="StartUpText" type="Label" parent="." unique_id=1993776889]
 modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 67.0
-offset_top = -2.0
-offset_right = 1767.0
-offset_bottom = 2.0
+grow_horizontal = 2
 grow_vertical = 2
 text = "
-> 
-> 
-> CRITICAL ERROR DETECTED
-> 
-> Hallucination Overlay Buffer Exceeded
-> Cognitive Stream Desynchronization
-> Unstable Dream-State Data Detected
-> 
-> SYSTEM RESPONSE:
-> Purging excess overlay fragments...
-> Redirecting playback from Dream Memory Index to Conscious Memory Index...
-> WARNING: Data continuity cannot be guaranteed.
-> Expect distortions, temporal skips, or intrusive imagery.
-> 
-> STATUS: MEMORY STREAM SWAP IN PROGRESS
-> Do not terminate session
->
-> Press ENTER to attempt stabilization...
->
->
-"
-label_settings = SubResource("LabelSettings_esjad")
+
+
+
+
+
+
+
+
+
+
+
+
+Blackbox memory playback has encountered a critical error and system has been shut down to prevent damage.
+
+If this is the first time you've seen this error screen, restart the system. 
+If this screen appears again, follow these steps:
+
+Check to make sure any hardware or software is properly installed.
+Contact a registered NBB technician.
+
+
+Technical information:
+*** STOP: 0x534F4C5553
+
+
+WARNING:
+Further playback crashes may cause permanent observer cognitive damage.
+
+
+
+Press ENTER to attempt restart."
+label_settings = SubResource("LabelSettings_iwym4")
+horizontal_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -224,27 +367,27 @@ offset_right = 1767.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
-> 
->  
->  
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-> 
-This Terminal is property of the Coalition Collective of Intelligence."
+
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+This Terminal is property of the Coalition Collective of Intelligence & Surveillance."
 label_settings = SubResource("LabelSettings_esjad")
 
 [node name="Label" type="Label" parent="." unique_id=218607648]
@@ -302,10 +445,10 @@ label_settings = SubResource("LabelSettings_2r0ac")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=959203564]
 visible = false
 layout_mode = 0
-offset_left = 887.0
-offset_top = 862.0
-offset_right = 927.0
-offset_bottom = 902.0
+offset_left = -161.0
+offset_top = 1004.0
+offset_right = -121.0
+offset_bottom = 1044.0
 scale = Vector2(0.48, 0.64)
 color = Color(0.4, 1, 0.941176, 1)
 
@@ -325,6 +468,14 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2" unique_id=33559954]
 libraries/ = SubResource("AnimationLibrary_lbt5u")
 
+[node name="Blackscreen" type="ColorRect" parent="." unique_id=961808924]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 1082.0
+offset_right = 2054.0
+offset_bottom = 2162.0054
+color = Color(0, 0, 0, 1)
+
 [node name="CRT Shader" parent="." unique_id=1441286065 instance=ExtResource("4_k2lga")]
 layout_mode = 0
 
@@ -336,15 +487,17 @@ mouse_filter = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=589036696]
 libraries/ = SubResource("AnimationLibrary_8as7b")
 autoplay = &"StartUp"
-speed_scale = 0.8
 
 [node name="ChangeMenuSFX" type="AudioStreamPlayer" parent="." unique_id=484258764]
 stream = ExtResource("6_1kdye")
 autoplay = true
 
 [node name="MenuSFX" type="AudioStreamPlayer" parent="." unique_id=609653180]
-stream = ExtResource("7_c8dei")
+stream = ExtResource("7_iwym4")
 autoplay = true
+
+[node name="StartUpSFX" type="AudioStreamPlayer" parent="." unique_id=1121372935]
+stream = ExtResource("8_hox62")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1242108603]
 environment = SubResource("Environment_b5v2b")

@@ -52,6 +52,7 @@ func _process(delta: float) -> void:
 	_update_animation(delta)
 	playerPOS = global_position
 
+
 func _update_animation(delta: float) -> void:
 	if anim_tree == null:
 		return
@@ -68,6 +69,7 @@ func _update_animation(delta: float) -> void:
 	)
 
 	anim_tree.set("parameters/BlendSpace1D/blend_position", anim_blend_value)
+
 
 func _physics_process(delta: float) -> void:
 	if nav_agent == null:

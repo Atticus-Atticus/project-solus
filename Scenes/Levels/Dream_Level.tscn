@@ -4174,8 +4174,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1uut5")
 
-[node name="DreamLevelNode" type="Node3D" unique_id=1158064378]
+[node name="DreamLevelNode" type="Node3D" unique_id=1158064378 node_paths=PackedStringArray("player")]
 script = ExtResource("1_xk6i7")
+player = NodePath("Player")
 
 [node name="CRT Shader" parent="." unique_id=1872535988 instance=ExtResource("2_rb3ft")]
 

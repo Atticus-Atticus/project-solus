@@ -3,11 +3,12 @@ extends Node3D
 @onready var pause_menu = $PauseMenu
 
 @onready var LoadPlayer: PackedScene = preload("res://Scenes/Objects/Player.tscn")
-@onready var Player = $Player/CharacterBody3D
 
 @onready var text: PackedScene = preload("res://Scenes/User Interface/Dialogue/Loop0DialogueBox.tscn")
 
 @onready var cursor = $ProjectSolusCursor2
+
+@export var player = CharacterBody3D
 
 var timer := 0.0
 
@@ -17,6 +18,7 @@ var playing1 = 0
 func _ready() -> void:
 	var LoadedText = text.instantiate()
 	add_child(LoadedText)
+
 
 func _process(delta: float) -> void:
 	if Globals.HallwayLoop == 1:

@@ -4393,8 +4393,6 @@ _data = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i30yk"]
 albedo_texture = ExtResource("43_boa7e")
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_oktpo"]
-
 [sub_resource type="Animation" id="Animation_kqprj"]
 resource_name = "AlarmLight"
 loop_mode = 1
@@ -6469,7 +6467,7 @@ visible = false
 [node name="City" type="Node3D" parent="." unique_id=471967904]
 
 [node name="SM_Sign_Neon_06" type="MeshInstance3D" parent="City" unique_id=692515219]
-transform = Transform3D(0.994183, 0.107704, 0, -0.107704, 0.994183, 0, 0, 0, 1, -19.4823, -3.06419, -7.13095)
+transform = Transform3D(0.994183, 0.107704, 0, -0.107704, 0.994183, 0, 0, 0, 1, -19.4823, -5.06419, -7.13095)
 material_override = SubResource("StandardMaterial3D_6pojn")
 mesh = SubResource("ArrayMesh_vgcxq")
 skeleton = NodePath("")
@@ -6634,27 +6632,27 @@ light_energy = 5.106
 omni_range = 2.31088
 
 [node name="SM_Sign_Neon_03" type="MeshInstance3D" parent="City" unique_id=1249070099]
-transform = Transform3D(1.95544, 0.419817, 0, -0.419817, 1.95544, 0, 0, 0, 2, -16.9506, -3.773, -7.13116)
+transform = Transform3D(1.95544, 0.41981697, 0, -0.41981697, 1.95544, 0, 0, 0, 2, -16.9506, -5.773, -7.13116)
 material_override = SubResource("StandardMaterial3D_7yi0b")
 mesh = SubResource("ArrayMesh_p12ow")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="City/SM_Sign_Neon_03" unique_id=1126877451]
-transform = Transform3D(0.5000005, -1.4901161e-08, 0, 1.4901161e-08, 0.5000005, 0, 0, 0, 0.5, 0, -2.3841858e-07, 0)
+transform = Transform3D(0.50000054, -2.9802322e-08, 0, 2.9802322e-08, 0.50000054, 0, 0, 0, 0.5, 0, 0, 0.50160956)
 light_color = Color(0.878291, 0.000919105, 0.924559, 1)
 light_energy = 2.5
 light_size = 0.004
 omni_range = 2.81646
 
 [node name="SM_Sign_Neon_05" type="MeshInstance3D" parent="City" unique_id=2049294868]
-transform = Transform3D(0.951686, -0.307074, 0, 0.307074, 0.951686, 0, 0, 0, 1, -19.4823, -3.06419, -7.13095)
+transform = Transform3D(0.951686, -0.307074, 0, 0.307074, 0.951686, 0, 0, 0, 1, -19.4823, -5.06419, -7.13095)
 visible = false
 material_override = SubResource("StandardMaterial3D_xbrc3")
 mesh = SubResource("ArrayMesh_vgcxq")
 skeleton = NodePath("")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="City" unique_id=479359048]
-transform = Transform3D(0.977721, 0.209909, 0, -0.209909, 0.977721, 0, 0, 0, 1, -19.3955, -3.12814, -7.00128)
+transform = Transform3D(0.977721, 0.209909, 0, -0.209909, 0.977721, 0, 0, 0, 1, -19.3955, -5.12814, -6.8435264)
 light_color = Color(0.633674, 0.395303, 0.98311, 1)
 omni_range = 1.96682
 
@@ -6727,7 +6725,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4323, 3.7015812, -13.3766
 [node name="MeshInstance3D" type="MeshInstance3D" parent="City/AlarmLight" unique_id=1383250176]
 transform = Transform3D(0.1, 4.4663798e-07, 1.6168251e-12, 0, -3.61999e-07, 0.1, 4.4663798e-07, -0.1, -3.61999e-07, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_i30yk")
-mesh = SubResource("CylinderMesh_oktpo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="City/AlarmLight/MeshInstance3D" unique_id=839021776]
 transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0)
@@ -6753,7 +6750,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3473, 3.7015812, -16.2725
 [node name="MeshInstance3D" type="MeshInstance3D" parent="City/AlarmLight2" unique_id=1987016548]
 transform = Transform3D(0.1, 4.4663798e-07, 1.6168251e-12, 0, -3.61999e-07, 0.1, 4.4663798e-07, -0.1, -3.61999e-07, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_i30yk")
-mesh = SubResource("CylinderMesh_oktpo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="City/AlarmLight2/MeshInstance3D" unique_id=1315997881]
 transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0)
@@ -6779,7 +6775,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.562, -4.93484, -3.87049)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="City/AlarmLight3" unique_id=314462574]
 transform = Transform3D(0.1, 4.4663798e-07, 1.6168251e-12, 0, -3.61999e-07, 0.1, 4.4663798e-07, -0.1, -3.61999e-07, -5.35378e-08, -1.25671, -1.23006e-08)
 material_override = SubResource("StandardMaterial3D_i30yk")
-mesh = SubResource("CylinderMesh_oktpo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="City/AlarmLight3/MeshInstance3D" unique_id=1278750041]
 transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0)
@@ -6800,12 +6795,11 @@ libraries/ = SubResource("AnimationLibrary_kvxmb")
 autoplay = &"AlarmLight"
 
 [node name="AlarmLight4" type="Node3D" parent="City" unique_id=1308650813]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00406, -4.93484, -9.53691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00406, -6.521253, -9.53691)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="City/AlarmLight4" unique_id=1996046767]
 transform = Transform3D(0.1, 4.4663798e-07, 1.6168251e-12, 0, -3.61999e-07, 0.1, 4.4663798e-07, -0.1, -3.61999e-07, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_i30yk")
-mesh = SubResource("CylinderMesh_oktpo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="City/AlarmLight4/MeshInstance3D" unique_id=833103552]
 transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r8o3ygpamuy2"
+path="res://.godot/imported/TV Static.mp3-d6d2798c3f9f79fe452a6c2000cb0835.mp3str"
+
+[deps]
+
+source_file="res://Audio/TV Static.mp3"
+dest_files=["res://.godot/imported/TV Static.mp3-d6d2798c3f9f79fe452a6c2000cb0835.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

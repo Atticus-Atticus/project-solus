@@ -91,27 +91,15 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 11),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": ["Calihan: Naomi?", "Naomi: ...calihan..."]
+"values": ["Naomi?", ".̸̦͑.̴̱͗.̴̨̛ ̷͔̈́c̵͎͝a̴̠͘l̶̨̅i̴̡̔h̴͎͛a̸̢̿n̴͙̆ ̵̨̈́.̷̥̂.̸̬̉.̴͑ͅ"]
 }
-tracks/5/type = "value"
+tracks/5/type = "method"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/5/path = NodePath("CalihanSpeech")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 11.2667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-tracks/6/type = "method"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CalihanSpeech")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
 "times": PackedFloat32Array(7.03333, 9),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -122,13 +110,13 @@ tracks/6/keys = {
 "method": &"stop"
 }]
 }
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("NaomiSpeech")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NaomiSpeech")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(13, 14.5333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -139,29 +127,41 @@ tracks/7/keys = {
 "method": &"stop"
 }]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Boom:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Boom:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(11.3667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("ColorRect2:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ColorRect2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
 "times": PackedFloat32Array(0, 13.007933, 14.5333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Start:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Calihan:", "N̷͎̒a̸̭̒o̷͇̾m̴͚̎ị̶͐:"]
 }
 
 [sub_resource type="Animation" id="Animation_gk18n"]
@@ -229,19 +229,19 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Label:horizontal_alignment")
+tracks/5/path = NodePath("Boom:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [true]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Boom:playing")
+tracks/6/path = NodePath("ColorRect2:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -253,14 +253,14 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect2:visible")
+tracks/7/path = NodePath("TextboxContainer/MarginContainer/HBoxContainer/Start:text")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": ["N̷͎̒a̸̭̒o̷͇̾m̴͚̎ị̶͐:"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkmrm"]
@@ -370,7 +370,7 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_ss7ua")
 theme_override_font_sizes/font_size = 50
-text = ">"
+text = "N̷͎̒a̸̭̒o̷͇̾m̴͚̎ị̶͐:"
 label_settings = ExtResource("5_nr0x1")
 
 [node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=336988132]
@@ -382,7 +382,6 @@ theme_override_fonts/font = ExtResource("3_ss7ua")
 theme_override_font_sizes/font_size = 50
 text = "Calihan: Naomi?"
 label_settings = ExtResource("5_nr0x1")
-horizontal_alignment = 1
 autowrap_mode = 2
 clip_text = true
 text_overrun_behavior = 2
@@ -658,7 +657,7 @@ stream = ExtResource("18_pwww1")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=733359677]
 stream = ExtResource("21_lo61k")
-volume_db = 0.5
+volume_db = 5.0
 autoplay = true
 
 [node name="Boom" type="AudioStreamPlayer" parent="." unique_id=279120955]
