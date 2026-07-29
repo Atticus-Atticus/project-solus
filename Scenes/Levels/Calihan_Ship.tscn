@@ -2051,7 +2051,7 @@ libraries/ = SubResource("AnimationLibrary_le012")
 stream = ExtResource("12_ysvwy")
 
 [node name="Player" parent="." unique_id=1048792437 instance=ExtResource("14_2arjd")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -110.00274, 0.41288662, -6.150955)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -0.0027389526, -1.5871134, 0.8490448)
 
 [node name="Test" type="NavigationRegion3D" parent="." unique_id=945214267]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128, 0, 0)

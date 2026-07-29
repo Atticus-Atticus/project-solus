@@ -6349,6 +6349,6 @@ autoplay = true
 transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 7.736502, 0.3305698, -1.6925429)
 
 [node name="blockbench_export" parent="." unique_id=277956753 instance=ExtResource("77_q5es3")]
-transform = Transform3D(0.9290424, 0, -2.852522, 0, 2.9999998, 0, 2.852522, 0, 0.9290424, 6.593593, 0.22796214, -0.29304457)
+transform = Transform3D(0.9290424, 0, -2.852522, 0, 2.9999998, 0, 2.852522, 0, 0.9290424, 6.593593, 4.1010294, -0.29304457)
 
 [connection signal="finished" from="City/FlyOver" to="." method="_on_fly_over_finished"]
