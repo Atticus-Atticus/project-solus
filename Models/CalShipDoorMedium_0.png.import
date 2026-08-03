@@ -2,21 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7tstatqw2rr"
-path="res://.godot/imported/OpenAndCloseDoors01.png-b9a25e6c02b3984975f1bdc372ab6d3a.ctex"
+uid="uid://b4kji25gcgq6u"
+path="res://.godot/imported/CalShipDoorMedium_0.png-c9eaea99005bdb9e131de65d370da0c1.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "b536b714e80ff45ca821165988c1a24d"
 }
 
 [deps]
 
-source_file="res://Models/OpenAndCloseDoors01.png"
-dest_files=["res://.godot/imported/OpenAndCloseDoors01.png-b9a25e6c02b3984975f1bdc372ab6d3a.ctex"]
+source_file="res://Models/CalShipDoorMedium_0.png"
+dest_files=["res://.godot/imported/CalShipDoorMedium_0.png-c9eaea99005bdb9e131de65d370da0c1.ctex"]
 
 [params]
 
 compress/mode=0
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

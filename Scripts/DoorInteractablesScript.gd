@@ -3,8 +3,8 @@ extends Node3D
 var front = false
 var back = false
 
-@export var front_exit: Marker3D
-@export var back_exit: Marker3D
+#@export var front_exit: Marker3D
+#@export var back_exit: Marker3D
 
 func _ready() -> void:
 	$Area3D.monitoring = false

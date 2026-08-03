@@ -87,19 +87,19 @@ var KeysFound = 0
 const TIMER_LIMIT = 2.0
 var timer = 0.0
 
-func _process(delta):
-	timer
-	timer += delta
-	if timer > TIMER_LIMIT: # Prints every 2 seconds
-		timer = 0.0
-		print("fps: " + str(Engine.get_frames_per_second()))
-
-	if Input.is_action_just_pressed("Debug"):
-		print("Stage is: ", StoryStage)
-		print("Destination is: ", SceneSwitcher.Destination)
-
-	if Input.is_action_pressed("Ctrl") and Input.is_action_pressed("L_Shift") and Input.is_action_pressed("R_Key"):
-		_restart()
+#func _process(delta):
+	#timer
+	#timer += delta
+	#if timer > TIMER_LIMIT: # Prints every 2 seconds
+		#timer = 0.0
+		#print("fps: " + str(Engine.get_frames_per_second()))
+#
+	#if Input.is_action_just_pressed("Debug"):
+		#print("Stage is: ", StoryStage)
+		#print("Destination is: ", SceneSwitcher.Destination)
+#
+	#if Input.is_action_pressed("Ctrl") and Input.is_action_pressed("L_Shift") and Input.is_action_pressed("R_Key"):
+		#_restart()
 
 func _restart():
 	Lore1 = 0

@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://hl60pfst2vl4"]
+[gd_scene format=3 uid="uid://hl60pfst2vl4"]
 
 [ext_resource type="PackedScene" uid="uid://b2oorbwd64fjm" path="res://Scenes/User Interface/System Maps/System Map - Brimpie.tscn" id="1_psngh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_c5r06"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=151397557]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1684385376]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
 mesh = SubResource("BoxMesh_c5r06")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1612445441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=534149186]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 5)
 
-[node name="SystemScreen" parent="." instance=ExtResource("1_psngh")]
+[node name="SystemScreen" parent="." unique_id=60888096 instance=ExtResource("1_psngh")]

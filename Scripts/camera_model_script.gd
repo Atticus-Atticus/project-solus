@@ -39,8 +39,8 @@ func _process(delta: float) -> void:
 	pitch_pivot.rotation.x = lerp_angle(pitch_pivot.rotation.x, desired_pitch, 1.0 - exp(-pitch_speed * delta))
 
 	# make current
-	if not cam.is_current():
-		cam.make_current()
+	#if not cam.is_current():
+		#cam.make_current()
 
 	# Zoom (clamp added so it can't go silly)
 	if Input.is_action_pressed("F_Key"):
@@ -49,3 +49,6 @@ func _process(delta: float) -> void:
 		cam.fov = clamp(cam.fov - 0.5, 30.0, 110.0)
 	if Input.is_action_just_pressed("Debug"):
 		print(cam.fov)
+
+func _make_cam_current():
+	cam.make_current()

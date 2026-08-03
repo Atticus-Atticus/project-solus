@@ -9,6 +9,7 @@ func enter_trigger(body):
 		$"CRT Shader Static".show()
 		await get_tree().create_timer(0.2).timeout
 		$"CRT Shader Static".hide()
+		get_parent()._make_cam_current()
 #change varibles in CameraModelScript
 
 func exit_trigger(body):
@@ -17,6 +18,3 @@ func exit_trigger(body):
 		get_parent().character = null
 		get_parent().in_trigger = false
 #change varibles in CameraModelScript
-
-func _process(delta: float) -> void:
-	pass
