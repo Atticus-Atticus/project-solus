@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cq3708xbtemf7"]
 
 [ext_resource type="Script" uid="uid://ujmnfts3iq4j" path="res://Scripts/locked_door_interactable_trigger.gd" id="1_s7k8c"]
-[ext_resource type="PackedScene" uid="uid://3d80o4u06sud" path="res://Scenes/Objects/ping.tscn" id="2_3s57j"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3s57j"]
 
@@ -11,6 +10,3 @@ script = ExtResource("1_s7k8c")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959610252]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("SphereShape3D_3s57j")
-
-[node name="AnimatedSprite3D2" parent="." unique_id=263787004 instance=ExtResource("2_3s57j")]
-frame_progress = 0.15415396

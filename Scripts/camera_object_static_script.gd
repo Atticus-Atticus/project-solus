@@ -12,3 +12,6 @@ func _process(delta: float) -> void:
 #Makes the corrisponding camera3D as the current viewport
 
 # This camera is a static version of the main camera. This one will NOT follow the players movement.
+
+func _make_cam_current():
+	pass

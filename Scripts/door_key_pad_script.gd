@@ -16,6 +16,7 @@ var Previous_Camera: Camera3D
 #leaving it false will allow for the code to be set maunally
 
 func _ready() -> void:
+	$PointerNode.hide()
 	for button in buttons:
 		button.get_node("CollisionShape3D").set_deferred("disabled", true)
 
@@ -27,6 +28,7 @@ func _open_keypad():
 	Globals.PlayerControls = false
 	$Camera3D.make_current()
 	ViewingKeyPad = true
+	$PointerNode.show()
 	for button in buttons:
 		button.get_node("CollisionShape3D").set_deferred("disabled", false)
 
@@ -36,6 +38,7 @@ func _close_keypad():
 	Previous_Camera = null
 	Globals.PlayerControls = true
 	ViewingKeyPad = false
+	$PointerNode.hide()
 	for button in buttons:
 		button.get_node("CollisionShape3D").set_deferred("disabled", true)
 

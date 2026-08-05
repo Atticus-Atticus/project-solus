@@ -24,8 +24,6 @@ func _ready() -> void:
 	elif radius_override > 0.0:
 		radius = radius_override
 
-	if debug:
-		print("[AreaProximity] ready  radius=", radius, "  mask=", collision_mask)
 
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
@@ -43,15 +41,11 @@ func _physics_process(_delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody3D:
 		actor = body
-		if debug:
-			print("[AreaProximity] entered by ", body.name)
 		proximity_entered.emit()
 		# Emit an initial distance immediately
 		_physics_process(0.0)
 
 func _on_body_exited(body: Node) -> void:
 	if body == actor:
-		if debug:
-			print("[AreaProximity] exited by ", body.name)
 		actor = null
 		proximity_exited.emit()

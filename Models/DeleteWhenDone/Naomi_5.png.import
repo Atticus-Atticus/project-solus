@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8xm3fvdptgkl"
-path.s3tc="res://.godot/imported/Naomi_5.png-ffbadaf45fe7abf4572af17c1a99969b.s3tc.ctex"
+path="res://.godot/imported/Naomi_5.png-ffbadaf45fe7abf4572af17c1a99969b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "70535e81885882618a9a81d9555c2aff"
@@ -15,13 +14,15 @@ generator_parameters={
 [deps]
 
 source_file="res://Models/DeleteWhenDone/Naomi_5.png"
-dest_files=["res://.godot/imported/Naomi_5.png-ffbadaf45fe7abf4572af17c1a99969b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Naomi_5.png-ffbadaf45fe7abf4572af17c1a99969b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +30,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

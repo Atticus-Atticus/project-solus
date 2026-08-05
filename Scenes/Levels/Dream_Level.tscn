@@ -75,7 +75,6 @@
 [ext_resource type="AudioStream" uid="uid://ck2hq8dvokmv7" path="res://Audio/PlaneFlyOver1.wav" id="72_050yp"]
 [ext_resource type="PackedScene" uid="uid://j7agfwvhdu8e" path="res://Scenes/Objects/model_ship.tscn" id="73_cnn02"]
 [ext_resource type="AudioStream" uid="uid://yyof2bae0dw8" path="res://Audio/Music/7816-nikki-dreams-of-pete-138.wav" id="73_eu82b"]
-[ext_resource type="PackedScene" uid="uid://dtuy3c6x6nfig" path="res://Models/DeleteWhenDone/Nataly.gltf" id="77_q5es3"]
 [ext_resource type="PackedScene" uid="uid://buehq2t0ri4h4" path="res://Scenes/Objects/Jacklyn.tscn" id="79_1uut5"]
 
 [sub_resource type="Gradient" id="Gradient_jmdbl"]
@@ -6286,7 +6285,7 @@ transform = Transform3D(-3.1615322e-08, 0, 0.72101265, 0, 0.81559074, 0, -0.7232
 transform = Transform3D(-6.081463e-08, 0, 1.3826019, 0, 1.226106, 0, -1.3869385, 0, -6.0245895e-08, -2.142042e-08, 3.3263264, 0.4862392)
 
 [node name="LockedDoorInteractableNode3" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("47_ag1a6")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.4325986, 4.0894513)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.0833502, 2.1586294, 4.0894513)
 text_scene = ExtResource("48_0avmj")
 trigger = NodePath("PointClickTriggerbox")
 
@@ -6347,8 +6346,5 @@ autoplay = true
 
 [node name="Jacklyn" parent="." unique_id=1126204711 instance=ExtResource("79_1uut5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 7.736502, 0.3305698, -1.6925429)
-
-[node name="blockbench_export" parent="." unique_id=277956753 instance=ExtResource("77_q5es3")]
-transform = Transform3D(0.9290424, 0, -2.852522, 0, 2.9999998, 0, 2.852522, 0, 0.9290424, 6.593593, 4.1010294, -0.29304457)
 
 [connection signal="finished" from="City/FlyOver" to="." method="_on_fly_over_finished"]
