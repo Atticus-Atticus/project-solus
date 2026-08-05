@@ -7238,7 +7238,7 @@ transform = Transform3D(1.1070039, 0, -1.2284218e-07, 0, 2.507983, 0, 8.940697e-
 visible = false
 
 [node name="DoorKeyPad" parent="Interactables" unique_id=1023091714 node_paths=PackedStringArray("Linked_Door") instance=ExtResource("84_2arjd")]
-transform = Transform3D(-0.9989524, 0, -0.045764107, 0.022882052, 0.8660254, -0.49947613, 0.03963288, -0.50000006, -0.86511815, 0, 0, 39)
+transform = Transform3D(0.9989523, 4.8550685e-08, 0.045764174, 0.022882052, 0.8660254, -0.49947616, -0.039632965, 0.50000006, 0.86511815, 0, 0, 39)
 Linked_Door = NodePath("../CalShipDoorMedium")
 
 [node name="CalShipDoorMedium" parent="Interactables" unique_id=596482746 node_paths=PackedStringArray("KeyPad") instance=ExtResource("84_apxh6")]
@@ -7274,6 +7274,12 @@ skeleton = NodePath("../..")
 [node name="CalShipCargoWall1" type="MeshInstance3D" parent="." unique_id=979654124]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -120, -2, 9)
 mesh = ExtResource("89_gcgmy")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=219834913]
+transform = Transform3D(1, 0, 0, 0, 0.9659259, -0.25881907, 0, 0.25881907, 0.9659258, 0, 2, 45)
+light_energy = 4.0
+spot_range = 22.0
+spot_angle = 38.415707
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

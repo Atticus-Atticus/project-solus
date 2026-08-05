@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmx7sehyyirkw"
-path.s3tc="res://.godot/imported/TempTextureWhite.png-42d5578c20d596b2685a0ee973161e2a.s3tc.ctex"
+uid="uid://dt42df25udopj"
+path="res://.godot/imported/KeyPadBig_0.png-68bfab06d517975e5bc8ea9b848a8c27.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "50ef6db3a35bb7508f925056b6a161ba"
 }
 
 [deps]
 
-source_file="res://Models/Textures/TempTextureWhite.png"
-dest_files=["res://.godot/imported/TempTextureWhite.png-42d5578c20d596b2685a0ee973161e2a.s3tc.ctex"]
+source_file="res://Models/KeyPad/KeyPadBig_0.png"
+dest_files=["res://.godot/imported/KeyPadBig_0.png-68bfab06d517975e5bc8ea9b848a8c27.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

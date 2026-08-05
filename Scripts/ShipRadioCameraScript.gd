@@ -27,7 +27,7 @@ func shoot_ray():
 	ray_query.to = to
 
 	var raycast_result = space.intersect_ray(ray_query)
-	#print(raycast_result)
+	print(raycast_result)
 
 	if raycast_result:
 		var hit_object = raycast_result["collider"]

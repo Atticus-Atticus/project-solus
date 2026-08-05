@@ -45,7 +45,7 @@ func _update_label():
 func _check_code():
 	if Code == DoorCode:
 		print("Door Unlocked")
-		$OmniLight3D/AnimationPlayer.play("Right")
+		$sphere/AnimationPlayer.play("Right")
 		await get_tree().create_timer(1).timeout
 		_close_keypad()
 		Linked_Door.locked = false
@@ -53,7 +53,7 @@ func _check_code():
 
 	elif Code != DoorCode:
 		print("Code Incorrect")
-		$OmniLight3D/AnimationPlayer.play("Wrong")
+		$sphere/AnimationPlayer.play("Wrong")
 		Code = ""
 		$MeshInstance3D3/SubViewport/Control/ColorRect/Label.set_text("0000")
 

@@ -5,3 +5,4 @@ extends StaticBody3D
 
 func interact():
 	Root._check_code()
+	$"../Enter/AnimationPlayer".play("Press")
