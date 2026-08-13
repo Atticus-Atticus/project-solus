@@ -1,0 +1,1437 @@
+[gd_scene format=3 uid="uid://ku6kgm62x4c3"]
+
+[ext_resource type="PackedScene" uid="uid://csd3tjduk733y" path="res://Models/CalShip/LivingArea/cal_ship_floor.tscn" id="2_470c4"]
+[ext_resource type="PackedScene" uid="uid://do0rnvj6x3gp" path="res://Models/CalShip/LivingArea/cal_ship_door_frame_medium.tscn" id="3_v7ucl"]
+[ext_resource type="PackedScene" uid="uid://b7mkyixaj6fgl" path="res://Models/CalShip/LivingArea/cal_ship_wall_corner_in_1.tscn" id="4_w1cyh"]
+[ext_resource type="PackedScene" uid="uid://d0ymo7xfu34jk" path="res://Models/CalShip/LivingArea/cal_ship_wall_1.tscn" id="5_5ou6h"]
+[ext_resource type="PackedScene" uid="uid://dc3mkfg6vgaas" path="res://Models/CalShip/LivingArea/cal_ship_door_fame_small.tscn" id="6_q1djm"]
+[ext_resource type="PackedScene" uid="uid://bajat5q1dyq8n" path="res://Models/CalShip/LivingArea/cal_ship_door_frame_large.tscn" id="7_0o4un"]
+[ext_resource type="PackedScene" uid="uid://erh0jbqtsg7w" path="res://Models/CalShip/LivingArea/cal_ship_wall_5.tscn" id="8_plgq1"]
+[ext_resource type="PackedScene" uid="uid://bschio2w0vgy5" path="res://Models/CalShip/LivingArea/cal_ship_wall_corner_out_1.tscn" id="9_r7bjd"]
+[ext_resource type="PackedScene" uid="uid://c4e2lanc7ftmr" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_hole_left.tscn" id="10_5ou6h"]
+[ext_resource type="PackedScene" uid="uid://btttvbtdn3kk1" path="res://Models/CalShip/LivingArea/cal_ship_wall_corner_in_2.tscn" id="10_fpjcf"]
+[ext_resource type="PackedScene" uid="uid://dujkf2j86anpx" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_hole_mid.tscn" id="11_q1djm"]
+[ext_resource type="PackedScene" uid="uid://do7lq4ctoire5" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_hole_right.tscn" id="12_0o4un"]
+[ext_resource type="PackedScene" uid="uid://mjuobhkfes8v" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_1.tscn" id="13_plgq1"]
+[ext_resource type="PackedScene" uid="uid://bvatup1vtm8yn" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_floor.tscn" id="14_r7bjd"]
+[ext_resource type="PackedScene" uid="uid://dql7summkd01b" path="res://Models/CalShip/LivingArea/cal_ship_stairs.tscn" id="15_q1djm"]
+[ext_resource type="PackedScene" uid="uid://ddnd28mvq71w8" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_door_right.tscn" id="16_k0cdl"]
+[ext_resource type="PackedScene" uid="uid://bremx6lf275wr" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_door_left.tscn" id="17_7fv2c"]
+[ext_resource type="PackedScene" uid="uid://clne4xtr38b2m" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_door_mid_1.tscn" id="18_pnk0b"]
+[ext_resource type="PackedScene" uid="uid://dh4l52mltroao" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_door_mid_2.tscn" id="19_xdp0q"]
+[ext_resource type="PackedScene" uid="uid://cjysd1h0raoit" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_corner_in_1.tscn" id="20_0n7xn"]
+[ext_resource type="PackedScene" uid="uid://cxnmlov2svh25" path="res://Models/CalShip/CatWalk/cal_ship_cat_walk.tscn" id="21_6g652"]
+[ext_resource type="PackedScene" uid="uid://bufkuduwys12f" path="res://Models/CalShip/LivingArea/cal_ship_ramp.tscn" id="22_i5k5e"]
+[ext_resource type="PackedScene" uid="uid://8oqwtjtf53j8" path="res://Models/CalShip/CatWalk/cal_ship_cat_walk_rail.tscn" id="23_uicxh"]
+[ext_resource type="PackedScene" uid="uid://jkwg6sw0jpan" path="res://Models/CalShip/CatWalk/cal_ship_cat_walk_rail_corner.tscn" id="24_xxa8b"]
+[ext_resource type="PackedScene" uid="uid://br2pvh7miv4uv" path="res://Models/CalShip/CargoRoom/cal_ship_cargo_wall_door_frame_large.tscn" id="25_knyex"]
+[ext_resource type="PackedScene" uid="uid://bttrw45ia38x" path="res://Models/CalShip/LivingArea/cal_ship_flight_deck.tscn" id="26_o4h3g"]
+
+[node name="CalShip NavRegion" type="NavigationRegion3D" unique_id=237829046]
+
+[node name="CalShipFloor2" parent="." unique_id=1928467675 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="CalShipFloor3" parent="." unique_id=1862320207 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="CalShipFloor4" parent="." unique_id=415934251 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="CalShipFloor5" parent="." unique_id=591602417 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="CalShipFloor6" parent="." unique_id=2040562115 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="CalShipFloor7" parent="." unique_id=2128917626 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="CalShipFloor21" parent="." unique_id=751646291 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
+
+[node name="CalShipFloor25" parent="." unique_id=1077272163 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+
+[node name="CalShipFloor27" parent="." unique_id=1311861752 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 4)
+
+[node name="CalShipFloor36" parent="." unique_id=1995382262 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 12)
+
+[node name="CalShipFloor37" parent="." unique_id=197155822 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="CalShipFloor38" parent="." unique_id=376940040 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="CalShipFloor39" parent="." unique_id=739444919 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="CalShipFloor40" parent="." unique_id=744759920 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+
+[node name="CalShipFloor108" parent="." unique_id=3001878 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="CalShipFloor97" parent="." unique_id=1164612771 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="CalShipFloor98" parent="." unique_id=1934224598 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="CalShipFloor99" parent="." unique_id=1666864907 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="CalShipFloor100" parent="." unique_id=152760963 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="CalShipFloor101" parent="." unique_id=202811166 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="CalShipFloor102" parent="." unique_id=386290209 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
+
+[node name="CalShipFloor103" parent="." unique_id=913484052 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="CalShipFloor114" parent="." unique_id=1419518941 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10)
+
+[node name="CalShipFloor160" parent="." unique_id=165286394 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -12)
+
+[node name="CalShipFloor161" parent="." unique_id=1559780014 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -14)
+
+[node name="CalShipFloor162" parent="." unique_id=672747399 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -18)
+
+[node name="CalShipFloor163" parent="." unique_id=1907072698 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16)
+
+[node name="CalShipFloor164" parent="." unique_id=1159912134 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -18)
+
+[node name="CalShipFloor177" parent="." unique_id=1370860603 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5, -36)
+
+[node name="CalShipFloor178" parent="." unique_id=258420138 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, -36)
+
+[node name="CalShipFloor179" parent="." unique_id=143705250 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -36)
+
+[node name="CalShipFloor180" parent="." unique_id=1170905481 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -38)
+
+[node name="CalShipFloor181" parent="." unique_id=1683323928 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5, -38)
+
+[node name="CalShipFloor182" parent="." unique_id=149336789 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, -38)
+
+[node name="CalShipFloor183" parent="." unique_id=301733533 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 5, -36)
+
+[node name="CalShipFloor184" parent="." unique_id=826484182 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 5, -38)
+
+[node name="CalShipFloor186" parent="." unique_id=2087369042 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 5, -38)
+
+[node name="CalShipFloor187" parent="." unique_id=1723506450 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 5, -36)
+
+[node name="CalShipFloor188" parent="." unique_id=796717706 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 5, -38)
+
+[node name="CalShipFloor190" parent="." unique_id=1038889901 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 5, -38)
+
+[node name="CalShipFloor165" parent="." unique_id=305345249 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -18)
+
+[node name="CalShipFloor166" parent="." unique_id=555222821 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -16)
+
+[node name="CalShipFloor167" parent="." unique_id=257031701 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -14)
+
+[node name="CalShipFloor168" parent="." unique_id=2116545871 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
+
+[node name="CalShipFloor169" parent="." unique_id=277473466 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
+
+[node name="CalShipFloor170" parent="." unique_id=741965827 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10)
+
+[node name="CalShipFloor171" parent="." unique_id=1073520512 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+
+[node name="CalShipFloor172" parent="." unique_id=1552142323 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -14)
+
+[node name="CalShipFloor173" parent="." unique_id=1780796932 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -16)
+
+[node name="CalShipFloor115" parent="." unique_id=2110475006 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="CalShipFloor113" parent="." unique_id=1431698281 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -8)
+
+[node name="CalShipFloor126" parent="." unique_id=1979434631 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
+
+[node name="CalShipFloor127" parent="." unique_id=426321868 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -8)
+
+[node name="CalShipFloor128" parent="." unique_id=1267773631 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -8)
+
+[node name="CalShipFloor129" parent="." unique_id=1651149825 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -8)
+
+[node name="CalShipFloor130" parent="." unique_id=21359174 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -8)
+
+[node name="CalShipFloor174" parent="." unique_id=906540819 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -6)
+
+[node name="CalShipFloor175" parent="." unique_id=2141127903 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -6)
+
+[node name="CalShipFloor176" parent="." unique_id=1045656581 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -6)
+
+[node name="CalShipFloor131" parent="." unique_id=1766502988 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
+
+[node name="CalShipFloor132" parent="." unique_id=1026912267 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -12)
+
+[node name="CalShipFloor133" parent="." unique_id=1145357179 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -14)
+
+[node name="CalShipFloor135" parent="." unique_id=1912183364 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -16)
+
+[node name="CalShipFloor136" parent="." unique_id=562628308 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -16)
+
+[node name="CalShipFloor137" parent="." unique_id=812743852 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
+
+[node name="CalShipFloor138" parent="." unique_id=851853445 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -16)
+
+[node name="CalShipFloor139" parent="." unique_id=1332100344 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
+
+[node name="CalShipFloor140" parent="." unique_id=709319327 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -16)
+
+[node name="CalShipFloor142" parent="." unique_id=1985636533 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -14)
+
+[node name="CalShipFloor143" parent="." unique_id=365510038 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -12)
+
+[node name="CalShipFloor144" parent="." unique_id=1581930938 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10)
+
+[node name="CalShipFloor145" parent="." unique_id=1161176851 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -10)
+
+[node name="CalShipFloor146" parent="." unique_id=1749826417 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10)
+
+[node name="CalShipFloor147" parent="." unique_id=251775430 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -10)
+
+[node name="CalShipFloor148" parent="." unique_id=1298612575 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -12)
+
+[node name="CalShipFloor149" parent="." unique_id=737279291 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -14)
+
+[node name="CalShipFloor154" parent="." unique_id=1986394770 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -14)
+
+[node name="CalShipFloor155" parent="." unique_id=443513780 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -12)
+
+[node name="CalShipFloor156" parent="." unique_id=1172072457 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -12)
+
+[node name="CalShipFloor157" parent="." unique_id=1547149312 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -12)
+
+[node name="CalShipFloor158" parent="." unique_id=1354253152 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
+
+[node name="CalShipFloor159" parent="." unique_id=1156175937 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -14)
+
+[node name="CalShipFloor104" parent="." unique_id=2075677544 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -6)
+
+[node name="CalShipFloor105" parent="." unique_id=1763512160 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="CalShipFloor106" parent="." unique_id=1005772079 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="CalShipFloor107" parent="." unique_id=1144144111 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="CalShipFloor41" parent="." unique_id=1919928014 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -4)
+
+[node name="CalShipFloor42" parent="." unique_id=1389466582 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -6)
+
+[node name="CalShipFloor43" parent="." unique_id=385987386 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6)
+
+[node name="CalShipFloor44" parent="." unique_id=2056835067 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -4)
+
+[node name="CalShipFloor45" parent="." unique_id=1200509064 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -2)
+
+[node name="CalShipFloor46" parent="." unique_id=284255974 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="CalShipFloor47" parent="." unique_id=1795656273 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 2)
+
+[node name="CalShipFloor48" parent="." unique_id=1550272522 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 8)
+
+[node name="CalShipFloor49" parent="." unique_id=1284992929 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 10)
+
+[node name="CalShipFloor50" parent="." unique_id=1627404400 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 12)
+
+[node name="CalShipFloor60" parent="." unique_id=251878040 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 14)
+
+[node name="CalShipFloor61" parent="." unique_id=416804517 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 14)
+
+[node name="CalShipFloor116" parent="." unique_id=190747246 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
+
+[node name="CalShipFloor117" parent="." unique_id=1533710167 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10)
+
+[node name="CalShipFloor118" parent="." unique_id=1851300726 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
+
+[node name="CalShipFloor119" parent="." unique_id=101833329 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
+
+[node name="CalShipFloor120" parent="." unique_id=557680440 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
+
+[node name="CalShipFloor121" parent="." unique_id=659513603 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+
+[node name="CalShipFloor122" parent="." unique_id=50469351 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="CalShipFloor123" parent="." unique_id=189567081 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
+
+[node name="CalShipFloor124" parent="." unique_id=367238672 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
+
+[node name="CalShipFloor125" parent="." unique_id=1054149465 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6)
+
+[node name="CalShipFloor62" parent="." unique_id=304620721 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+
+[node name="CalShipFloor23" parent="." unique_id=1250261671 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 6)
+
+[node name="CalShipFloor75" parent="." unique_id=346466544 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 8)
+
+[node name="CalShipFloor76" parent="." unique_id=1270784292 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 6)
+
+[node name="CalShipFloor77" parent="." unique_id=411552136 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 4)
+
+[node name="CalShipFloor78" parent="." unique_id=186505606 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2)
+
+[node name="CalShipFloor79" parent="." unique_id=1126498185 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="CalShipFloor80" parent="." unique_id=1686515634 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -2)
+
+[node name="CalShipFloor81" parent="." unique_id=408541330 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -4)
+
+[node name="CalShipFloor82" parent="." unique_id=605411267 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -4)
+
+[node name="CalShipFloor83" parent="." unique_id=307538269 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -2)
+
+[node name="CalShipFloor84" parent="." unique_id=1439430313 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="CalShipFloor85" parent="." unique_id=1528409332 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 2)
+
+[node name="CalShipFloor86" parent="." unique_id=1657496207 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 4)
+
+[node name="CalShipFloor87" parent="." unique_id=952390847 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6)
+
+[node name="CalShipFloor88" parent="." unique_id=1395875936 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 8)
+
+[node name="CalShipFloor89" parent="." unique_id=1117749799 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 8)
+
+[node name="CalShipFloor90" parent="." unique_id=370062756 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 6)
+
+[node name="CalShipFloor91" parent="." unique_id=820051287 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 4)
+
+[node name="CalShipFloor92" parent="." unique_id=13374779 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 2)
+
+[node name="CalShipFloor93" parent="." unique_id=857160718 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="CalShipFloor94" parent="." unique_id=437364497 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -2)
+
+[node name="CalShipFloor95" parent="." unique_id=396021852 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -4)
+
+[node name="CalShipFloor24" parent="." unique_id=1927061816 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
+
+[node name="CalShipFloor96" parent="." unique_id=1843563695 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6)
+
+[node name="CalShipFloor109" parent="." unique_id=931474397 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="CalShipFloor110" parent="." unique_id=149674928 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+
+[node name="CalShipFloor111" parent="." unique_id=917592198 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="CalShipFloor15" parent="." unique_id=1800237529 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="CalShipFloor16" parent="." unique_id=1794177526 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="CalShipFloor17" parent="." unique_id=39684443 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="CalShipFloor18" parent="." unique_id=120278884 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+
+[node name="CalShipFloor19" parent="." unique_id=1598473012 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="CalShipFloor20" parent="." unique_id=317657476 instance=ExtResource("2_470c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="CalShipDoorFrameMedium" parent="." unique_id=37284508 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 3)
+
+[node name="CalShipDoorFrameMedium3" parent="." unique_id=1328194614 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 3)
+
+[node name="CalShipDoorFrameMedium9" parent="." unique_id=1208569583 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 5, -37)
+
+[node name="CalShipDoorFrameMedium10" parent="." unique_id=1246859119 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 5, -37)
+
+[node name="CalShipDoorFrameMedium5" parent="." unique_id=757890875 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, -11)
+
+[node name="CalShipDoorFrameMedium7" parent="." unique_id=847143853 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -19)
+
+[node name="CalShipDoorFrameMedium8" parent="." unique_id=1547563794 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, 0, -19)
+
+[node name="CalShipDoorFrameMedium6" parent="." unique_id=235475871 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 9, 0, -11)
+
+[node name="CalShipDoorFrameMedium2" parent="." unique_id=1946891308 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 9, 0, 3)
+
+[node name="CalShipDoorFrameMedium4" parent="." unique_id=171864522 instance=ExtResource("3_v7ucl")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 3)
+
+[node name="CalShipWallCornerIn2" parent="." unique_id=1268973499 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, 0)
+
+[node name="CalShipWallCornerIn3" parent="." unique_id=1911703487 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2, 0, 0)
+
+[node name="CalShipWallCornerIn4" parent="." unique_id=818143472 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 6)
+
+[node name="CalShipWallCornerIn10" parent="." unique_id=168397851 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 4, 0, 8)
+
+[node name="CalShipWallCornerIn23" parent="." unique_id=790543428 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 8, 0, 6)
+
+[node name="CalShipWallCornerIn7" parent="." unique_id=687934498 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 14)
+
+[node name="CalShipWallCornerIn8" parent="." unique_id=464171098 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 10)
+
+[node name="CalShipWallCornerIn11" parent="." unique_id=1269744001 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 8)
+
+[node name="CalShipWallCornerIn12" parent="." unique_id=1118803550 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 0, 14)
+
+[node name="CalShipWallCornerIn13" parent="." unique_id=1090203875 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+
+[node name="CalShipWallCornerIn15" parent="." unique_id=2065921594 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, -4)
+
+[node name="CalShipWallCornerIn17" parent="." unique_id=1617189853 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14, 0, -6)
+
+[node name="CalShipWallCornerIn18" parent="." unique_id=266728583 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="CalShipWallCornerIn19" parent="." unique_id=2073881169 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -8)
+
+[node name="CalShipWallCornerIn20" parent="." unique_id=1404346997 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, -6)
+
+[node name="CalShipWallCornerIn21" parent="." unique_id=138633255 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, -16)
+
+[node name="CalShipWallCornerIn24" parent="." unique_id=271057662 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17, 5, -38)
+
+[node name="CalShipWallCornerIn22" parent="." unique_id=1368646989 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, -16)
+
+[node name="CalShipWallCornerIn16" parent="." unique_id=1251361678 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 20, 0, -4)
+
+[node name="CalShipWallCornerIn14" parent="." unique_id=736988806 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 8)
+
+[node name="CalShipWall2" parent="." unique_id=487296547 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -1)
+
+[node name="CalShipWall9" parent="." unique_id=1302139168 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4, 0, 7)
+
+[node name="CalShipWall10" parent="." unique_id=952635040 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, 0, 7)
+
+[node name="CalShipWall4" parent="." unique_id=1286993445 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, 2)
+
+[node name="CalShipWall5" parent="." unique_id=1915985503 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, 4)
+
+[node name="CalShipWall42" parent="." unique_id=294179515 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -4)
+
+[node name="CalShipWall45" parent="." unique_id=1506898739 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -6)
+
+[node name="CalShipWall46" parent="." unique_id=339954044 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -8)
+
+[node name="CalShipWall47" parent="." unique_id=1966472089 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -10)
+
+[node name="CalShipWall49" parent="." unique_id=1600245522 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -12)
+
+[node name="CalShipWall50" parent="." unique_id=1197340576 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -14)
+
+[node name="CalShipWall66" parent="." unique_id=250448281 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -16)
+
+[node name="CalShipWall71" parent="." unique_id=874056767 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 5, -36)
+
+[node name="CalShipWall75" parent="." unique_id=1997181062 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, -35)
+
+[node name="CalShipWall76" parent="." unique_id=1180001667 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 5, -35)
+
+[node name="CalShipWall72" parent="." unique_id=2139016287 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7, 5, -39)
+
+[node name="CalShipWall73" parent="." unique_id=244592761 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5, 5, -39)
+
+[node name="CalShipWall74" parent="." unique_id=967240398 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 5, -38)
+
+[node name="CalShipWall48" parent="." unique_id=1230429815 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0, -14)
+
+[node name="CalShipWall68" parent="." unique_id=222078376 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0, -16)
+
+[node name="CalShipWall52" parent="." unique_id=1576882659 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 9, 0, -14)
+
+[node name="CalShipWall54" parent="." unique_id=609922218 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 12, 0, -17)
+
+[node name="CalShipWall55" parent="." unique_id=1040581363 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 14, 0, -17)
+
+[node name="CalShipWall56" parent="." unique_id=1310991610 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 16, 0, -17)
+
+[node name="CalShipWall57" parent="." unique_id=459000346 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 18, 0, -17)
+
+[node name="CalShipWall59" parent="." unique_id=1039208413 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21, 0, -14)
+
+[node name="CalShipWall60" parent="." unique_id=568025005 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21, 0, -12)
+
+[node name="CalShipWall61" parent="." unique_id=1650912619 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21, 0, -10)
+
+[node name="CalShipWall64" parent="." unique_id=1574688360 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21, 0, -8)
+
+[node name="CalShipWall62" parent="." unique_id=682607082 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 18, 0, -5)
+
+[node name="CalShipWall63" parent="." unique_id=2138014443 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 16, 0, -5)
+
+[node name="CalShipWall65" parent="." unique_id=2056740408 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 12, 0, -7)
+
+[node name="CalShipDoorFameSmall" parent="." unique_id=12033163 instance=ExtResource("6_q1djm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 12)
+
+[node name="CalShipDoorFameSmall3" parent="." unique_id=994790768 instance=ExtResource("6_q1djm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="CalShipDoorFameSmall5" parent="." unique_id=1684480861 instance=ExtResource("6_q1djm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 5, -37)
+
+[node name="CalShipDoorFameSmall4" parent="." unique_id=1590642972 instance=ExtResource("6_q1djm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -1)
+
+[node name="CalShipDoorFameSmall2" parent="." unique_id=786567549 instance=ExtResource("6_q1djm")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 12)
+
+[node name="CalShipWall16" parent="." unique_id=868442625 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 10)
+
+[node name="CalShipWall37" parent="." unique_id=1843803457 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 8)
+
+[node name="CalShipWall38" parent="." unique_id=728298838 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 0)
+
+[node name="CalShipWall41" parent="." unique_id=416265071 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, -2)
+
+[node name="CalShipWall43" parent="." unique_id=1849238448 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, -4)
+
+[node name="CalShipWall51" parent="." unique_id=554069598 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, -7)
+
+[node name="CalShipWall22" parent="." unique_id=848541583 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, 7)
+
+[node name="CalShipWall23" parent="." unique_id=1134169861 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, 7)
+
+[node name="CalShipWall24" parent="." unique_id=1176415828 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 3, 0, 10)
+
+[node name="CalShipWall25" parent="." unique_id=1288152421 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 3, 0, 12)
+
+[node name="CalShipWall21" parent="." unique_id=1984358926 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 15)
+
+[node name="CalShipWall14" parent="." unique_id=1313881612 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 15)
+
+[node name="CalShipWall15" parent="." unique_id=782691285 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18, 0, 9)
+
+[node name="CalShipWall27" parent="." unique_id=1633748964 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 9)
+
+[node name="CalShipWall28" parent="." unique_id=505723904 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 6)
+
+[node name="CalShipWall29" parent="." unique_id=568703861 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 0)
+
+[node name="CalShipWall30" parent="." unique_id=1466928176 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, -2)
+
+[node name="CalShipWall31" parent="." unique_id=39308416 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 18, 0, -5)
+
+[node name="CalShipWall32" parent="." unique_id=594353683 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21, 0, -2)
+
+[node name="CalShipWall33" parent="." unique_id=543389297 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21, 0, 0)
+
+[node name="CalShipWall34" parent="." unique_id=1593748851 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21, 0, 2)
+
+[node name="CalShipWall35" parent="." unique_id=1782080982 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21, 0, 4)
+
+[node name="CalShipWall36" parent="." unique_id=52440043 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21, 0, 6)
+
+[node name="CalShipWall17" parent="." unique_id=199571262 instance=ExtResource("5_5ou6h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21, 0, 12)
+
+[node name="CalShipWallCornerIn1" parent="." unique_id=520205410 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 14)
+
+[node name="CalShipWallCornerIn9" parent="." unique_id=104272121 instance=ExtResource("4_w1cyh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 10)
+
+[node name="CalShipDoorFrameLarge" parent="." unique_id=1275362174 instance=ExtResource("7_0o4un")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 10)
+
+[node name="CalShipDoorFrameLarge3" parent="." unique_id=1955075476 instance=ExtResource("7_0o4un")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 15)
+
+[node name="CalShipDoorFrameLarge2" parent="." unique_id=2104136211 instance=ExtResource("7_0o4un")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0, 10)
+
+[node name="CalShipWall11" parent="." unique_id=587063899 instance=ExtResource("8_plgq1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 14)
+
+[node name="CalShipWall26" parent="." unique_id=351379828 instance=ExtResource("8_plgq1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 14)
+
+[node name="CalShipWall40" parent="." unique_id=581047031 instance=ExtResource("8_plgq1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, -18)
+
+[node name="CalShipWall67" parent="." unique_id=215201076 instance=ExtResource("8_plgq1")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 3, 0, -18)
+
+[node name="CalShipWall69" parent="." unique_id=1649460895 instance=ExtResource("8_plgq1")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 9, 0, 6)
+
+[node name="CalShipWall70" parent="." unique_id=1425534585 instance=ExtResource("8_plgq1")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 15, 0, 6)
+
+[node name="CalShipWallCornerOut1" parent="." unique_id=95842099 instance=ExtResource("9_r7bjd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, 0)
+
+[node name="CalShipWallCornerOut3" parent="." unique_id=1340185320 instance=ExtResource("9_r7bjd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14, 0, -6)
+
+[node name="CalShipWallCornerOut4" parent="." unique_id=1011119794 instance=ExtResource("9_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 5, -36)
+
+[node name="CalShipWallCornerOut2" parent="." unique_id=923846374 instance=ExtResource("9_r7bjd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, -8)
+
+[node name="CalShipWallCornerIn5" parent="." unique_id=1505193292 instance=ExtResource("10_fpjcf")]
+transform = Transform3D(-2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, -2.9802322e-08, 3, 0, -19)
+
+[node name="CalShipWallCornerIn6" parent="." unique_id=482198553 instance=ExtResource("10_fpjcf")]
+transform = Transform3D(-1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -1, 9, 0, -19)
+
+[node name="CalShipCargoWallHoleLeft" parent="." unique_id=1474594415 instance=ExtResource("10_5ou6h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, -2, 15)
+
+[node name="CalShipCargoWallHoleMid" parent="." unique_id=539566180 instance=ExtResource("11_q1djm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, -2, 15)
+
+[node name="CalShipCargoWallHoleRight" parent="." unique_id=1443645192 instance=ExtResource("12_0o4un")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, -2, 15)
+
+[node name="CalShipCargoWall1" parent="." unique_id=623799205 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, -2, 15)
+
+[node name="CalShipCargoWall2" parent="." unique_id=1815074916 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, -2, 15)
+
+[node name="CalShipCargoWall15" parent="." unique_id=2111129980 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, -2, 31)
+
+[node name="CalShipCargoWall16" parent="." unique_id=2122079886 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 8, -2, 31)
+
+[node name="CalShipCargoWall17" parent="." unique_id=1951609042 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 10, -2, 31)
+
+[node name="CalShipCargoWall18" parent="." unique_id=1410338430 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 12, -2, 31)
+
+[node name="CalShipCargoWall19" parent="." unique_id=830960893 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 14, -2, 31)
+
+[node name="CalShipCargoWall20" parent="." unique_id=491868654 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 16, -2, 31)
+
+[node name="CalShipCargoWall21" parent="." unique_id=721181776 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, -2, 31)
+
+[node name="CalShipCargoWall22" parent="." unique_id=1552812569 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 20, -2, 31)
+
+[node name="CalShipCargoWall23" parent="." unique_id=1180281464 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, -2, 31)
+
+[node name="CalShipCargoWall24" parent="." unique_id=1911110761 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 24, -2, 31)
+
+[node name="CalShipCargoWall3" parent="." unique_id=1778193299 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, -2, 15)
+
+[node name="CalShipCargoWall4" parent="." unique_id=1603516475 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, -2, 15)
+
+[node name="CalShipCargoWall5" parent="." unique_id=1043616487 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18, -2, 15)
+
+[node name="CalShipCargoWall6" parent="." unique_id=1444670080 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, -2, 15)
+
+[node name="CalShipCargoWall7" parent="." unique_id=1841243344 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22, -2, 15)
+
+[node name="CalShipCargoWall8" parent="." unique_id=546445421 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24, -2, 15)
+
+[node name="CalShipCargoWall11" parent="." unique_id=469091289 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 18)
+
+[node name="CalShipCargoWall14" parent="." unique_id=979543938 instance=ExtResource("13_plgq1")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, -2, 18)
+
+[node name="CalShipCargoWall9" parent="." unique_id=253846750 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, -2, 15)
+
+[node name="CalShipCargoWall10" parent="." unique_id=163470291 instance=ExtResource("13_plgq1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -2, 15)
+
+[node name="CalShipCargoFloor" parent="." unique_id=1512960319 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 16)
+
+[node name="CalShipCargoFloor27" parent="." unique_id=1374291314 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 16)
+
+[node name="CalShipCargoFloor28" parent="." unique_id=903334741 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 16)
+
+[node name="CalShipCargoFloor37" parent="." unique_id=668866243 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 18)
+
+[node name="CalShipCargoFloor38" parent="." unique_id=1669523004 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 20)
+
+[node name="CalShipCargoFloor39" parent="." unique_id=73252980 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 22)
+
+[node name="CalShipCargoFloor40" parent="." unique_id=1961021698 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 24)
+
+[node name="CalShipCargoFloor41" parent="." unique_id=1329067466 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 26)
+
+[node name="CalShipCargoFloor42" parent="." unique_id=1533899263 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 28)
+
+[node name="CalShipCargoFloor45" parent="." unique_id=1438227215 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 18)
+
+[node name="CalShipCargoFloor46" parent="." unique_id=808013234 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 20)
+
+[node name="CalShipCargoFloor47" parent="." unique_id=1368976594 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 22)
+
+[node name="CalShipCargoFloor48" parent="." unique_id=858553686 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 24)
+
+[node name="CalShipCargoFloor49" parent="." unique_id=1185095297 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 26)
+
+[node name="CalShipCargoFloor50" parent="." unique_id=376761129 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 28)
+
+[node name="CalShipCargoFloor53" parent="." unique_id=2052389492 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 18)
+
+[node name="CalShipCargoFloor54" parent="." unique_id=1098913316 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 20)
+
+[node name="CalShipCargoFloor55" parent="." unique_id=840323393 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 22)
+
+[node name="CalShipCargoFloor56" parent="." unique_id=1849176977 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 24)
+
+[node name="CalShipCargoFloor57" parent="." unique_id=641853815 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 26)
+
+[node name="CalShipCargoFloor58" parent="." unique_id=1536741727 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 28)
+
+[node name="CalShipCargoFloor61" parent="." unique_id=1132771908 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 18)
+
+[node name="CalShipCargoFloor62" parent="." unique_id=402061514 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 20)
+
+[node name="CalShipCargoFloor63" parent="." unique_id=695095798 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 22)
+
+[node name="CalShipCargoFloor64" parent="." unique_id=719848139 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 24)
+
+[node name="CalShipCargoFloor65" parent="." unique_id=698864232 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 26)
+
+[node name="CalShipCargoFloor66" parent="." unique_id=1839804891 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 28)
+
+[node name="CalShipCargoFloor69" parent="." unique_id=217938630 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 18)
+
+[node name="CalShipCargoFloor70" parent="." unique_id=416670514 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 20)
+
+[node name="CalShipCargoFloor71" parent="." unique_id=615901639 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 22)
+
+[node name="CalShipCargoFloor72" parent="." unique_id=441308473 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 24)
+
+[node name="CalShipCargoFloor73" parent="." unique_id=590247068 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 26)
+
+[node name="CalShipCargoFloor74" parent="." unique_id=1416660604 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 28)
+
+[node name="CalShipCargoFloor77" parent="." unique_id=982508081 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 18)
+
+[node name="CalShipCargoFloor78" parent="." unique_id=970785145 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 20)
+
+[node name="CalShipCargoFloor79" parent="." unique_id=866135246 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 22)
+
+[node name="CalShipCargoFloor80" parent="." unique_id=642714985 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 24)
+
+[node name="CalShipCargoFloor81" parent="." unique_id=272107674 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 26)
+
+[node name="CalShipCargoFloor82" parent="." unique_id=51040788 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 28)
+
+[node name="CalShipCargoFloor85" parent="." unique_id=984786594 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 18)
+
+[node name="CalShipCargoFloor86" parent="." unique_id=449247115 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 20)
+
+[node name="CalShipCargoFloor87" parent="." unique_id=920213293 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 22)
+
+[node name="CalShipCargoFloor88" parent="." unique_id=1333637140 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 24)
+
+[node name="CalShipCargoFloor89" parent="." unique_id=1109731392 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 26)
+
+[node name="CalShipCargoFloor90" parent="." unique_id=161810448 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 28)
+
+[node name="CalShipCargoFloor93" parent="." unique_id=1249842289 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 18)
+
+[node name="CalShipCargoFloor94" parent="." unique_id=633891231 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 20)
+
+[node name="CalShipCargoFloor95" parent="." unique_id=1971724708 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 22)
+
+[node name="CalShipCargoFloor96" parent="." unique_id=1380825516 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 24)
+
+[node name="CalShipCargoFloor97" parent="." unique_id=348891767 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 26)
+
+[node name="CalShipCargoFloor98" parent="." unique_id=1062979670 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 28)
+
+[node name="CalShipCargoFloor101" parent="." unique_id=1229323357 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 18)
+
+[node name="CalShipCargoFloor102" parent="." unique_id=120712035 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 20)
+
+[node name="CalShipCargoFloor103" parent="." unique_id=1511575398 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 22)
+
+[node name="CalShipCargoFloor104" parent="." unique_id=2065860608 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 24)
+
+[node name="CalShipCargoFloor105" parent="." unique_id=1676873498 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 26)
+
+[node name="CalShipCargoFloor106" parent="." unique_id=2118306232 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 28)
+
+[node name="CalShipCargoFloor109" parent="." unique_id=1327585027 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 18)
+
+[node name="CalShipCargoFloor110" parent="." unique_id=47496665 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 20)
+
+[node name="CalShipCargoFloor111" parent="." unique_id=41842452 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 22)
+
+[node name="CalShipCargoFloor112" parent="." unique_id=949462824 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 24)
+
+[node name="CalShipCargoFloor113" parent="." unique_id=1944245199 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 26)
+
+[node name="CalShipCargoFloor114" parent="." unique_id=996995919 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 28)
+
+[node name="CalShipCargoFloor117" parent="." unique_id=1954999370 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 18)
+
+[node name="CalShipCargoFloor118" parent="." unique_id=1314405673 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 20)
+
+[node name="CalShipCargoFloor119" parent="." unique_id=1545253595 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 22)
+
+[node name="CalShipCargoFloor120" parent="." unique_id=249132286 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 24)
+
+[node name="CalShipCargoFloor121" parent="." unique_id=749738271 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 26)
+
+[node name="CalShipCargoFloor122" parent="." unique_id=1803434431 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 28)
+
+[node name="CalShipCargoFloor125" parent="." unique_id=366318899 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 18)
+
+[node name="CalShipCargoFloor126" parent="." unique_id=1520936368 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 20)
+
+[node name="CalShipCargoFloor127" parent="." unique_id=525931136 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 22)
+
+[node name="CalShipCargoFloor128" parent="." unique_id=411982372 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 24)
+
+[node name="CalShipCargoFloor129" parent="." unique_id=275900701 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 26)
+
+[node name="CalShipCargoFloor130" parent="." unique_id=1045854425 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 28)
+
+[node name="CalShipCargoFloor133" parent="." unique_id=1161520364 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 18)
+
+[node name="CalShipCargoFloor134" parent="." unique_id=1916986400 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 20)
+
+[node name="CalShipCargoFloor135" parent="." unique_id=455436750 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 22)
+
+[node name="CalShipCargoFloor136" parent="." unique_id=439828605 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 24)
+
+[node name="CalShipCargoFloor137" parent="." unique_id=1665512384 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 26)
+
+[node name="CalShipCargoFloor138" parent="." unique_id=159618426 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 28)
+
+[node name="CalShipCargoFloor141" parent="." unique_id=973386320 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 18)
+
+[node name="CalShipCargoFloor142" parent="." unique_id=642289082 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 20)
+
+[node name="CalShipCargoFloor143" parent="." unique_id=2119212544 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 22)
+
+[node name="CalShipCargoFloor144" parent="." unique_id=1415620415 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 24)
+
+[node name="CalShipCargoFloor145" parent="." unique_id=2064091306 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 26)
+
+[node name="CalShipCargoFloor146" parent="." unique_id=1613346863 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 28)
+
+[node name="CalShipCargoFloor149" parent="." unique_id=2061580751 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 18)
+
+[node name="CalShipCargoFloor150" parent="." unique_id=1926745407 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 20)
+
+[node name="CalShipCargoFloor151" parent="." unique_id=1399203175 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 22)
+
+[node name="CalShipCargoFloor152" parent="." unique_id=23257235 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 24)
+
+[node name="CalShipCargoFloor153" parent="." unique_id=822772613 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 26)
+
+[node name="CalShipCargoFloor154" parent="." unique_id=1832653069 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 28)
+
+[node name="CalShipCargoFloor43" parent="." unique_id=316942620 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 30)
+
+[node name="CalShipCargoFloor51" parent="." unique_id=702821554 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 30)
+
+[node name="CalShipCargoFloor59" parent="." unique_id=1573837255 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 30)
+
+[node name="CalShipCargoFloor67" parent="." unique_id=1794765048 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 30)
+
+[node name="CalShipCargoFloor75" parent="." unique_id=1805315389 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 30)
+
+[node name="CalShipCargoFloor83" parent="." unique_id=896143967 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 30)
+
+[node name="CalShipCargoFloor91" parent="." unique_id=738472956 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 30)
+
+[node name="CalShipCargoFloor99" parent="." unique_id=1799154698 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 30)
+
+[node name="CalShipCargoFloor107" parent="." unique_id=678450014 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 30)
+
+[node name="CalShipCargoFloor115" parent="." unique_id=564628177 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 30)
+
+[node name="CalShipCargoFloor123" parent="." unique_id=349404088 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 30)
+
+[node name="CalShipCargoFloor131" parent="." unique_id=1263064472 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 30)
+
+[node name="CalShipCargoFloor139" parent="." unique_id=1211308310 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 30)
+
+[node name="CalShipCargoFloor147" parent="." unique_id=135636561 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 30)
+
+[node name="CalShipCargoFloor155" parent="." unique_id=656248834 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 30)
+
+[node name="CalShipCargoFloor2" parent="." unique_id=782701279 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 16)
+
+[node name="CalShipCargoFloor3" parent="." unique_id=833207454 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 16)
+
+[node name="CalShipCargoFloor6" parent="." unique_id=465230812 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+
+[node name="CalShipCargoFloor7" parent="." unique_id=1472820479 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10)
+
+[node name="CalShipCargoFloor8" parent="." unique_id=1277281619 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+
+[node name="CalShipCargoFloor9" parent="." unique_id=1443789050 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 14)
+
+[node name="CalShipCargoFloor10" parent="." unique_id=1615824431 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
+
+[node name="CalShipCargoFloor11" parent="." unique_id=1634386210 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 14)
+
+[node name="CalShipCargoFloor12" parent="." unique_id=995955101 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+
+[node name="CalShipCargoFloor13" parent="." unique_id=1987373618 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10)
+
+[node name="CalShipCargoFloor14" parent="." unique_id=2072329925 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="CalShipCargoFloor15" parent="." unique_id=109236184 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
+
+[node name="CalShipCargoFloor16" parent="." unique_id=2133818393 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
+
+[node name="CalShipCargoFloor17" parent="." unique_id=2072231089 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+
+[node name="CalShipCargoFloor18" parent="." unique_id=508011889 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 12)
+
+[node name="CalShipCargoFloor19" parent="." unique_id=1046939197 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 10)
+
+[node name="CalShipCargoFloor20" parent="." unique_id=843815079 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 10)
+
+[node name="CalShipCargoFloor21" parent="." unique_id=691989113 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
+
+[node name="CalShipCargoFloor22" parent="." unique_id=461113638 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 12)
+
+[node name="CalShipCargoFloor23" parent="." unique_id=1996532917 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 12)
+
+[node name="CalShipCargoFloor24" parent="." unique_id=88136958 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
+
+[node name="CalShipCargoFloor25" parent="." unique_id=1164608577 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 14)
+
+[node name="CalShipCargoFloor26" parent="." unique_id=1640081811 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
+
+[node name="CalShipCargoFloor4" parent="." unique_id=65950371 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 16)
+
+[node name="CalShipCargoFloor5" parent="." unique_id=909789859 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 16)
+
+[node name="CalShipCargoFloor36" parent="." unique_id=1545613027 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 16)
+
+[node name="CalShipCargoFloor29" parent="." unique_id=683069144 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 16)
+
+[node name="CalShipCargoFloor30" parent="." unique_id=636780029 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 16)
+
+[node name="CalShipCargoFloor31" parent="." unique_id=662634479 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 16)
+
+[node name="CalShipCargoFloor32" parent="." unique_id=848538539 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, 16)
+
+[node name="CalShipCargoFloor33" parent="." unique_id=858510702 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -2, 16)
+
+[node name="CalShipCargoFloor34" parent="." unique_id=961433204 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -2, 16)
+
+[node name="CalShipCargoFloor35" parent="." unique_id=1731663860 instance=ExtResource("14_r7bjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -2, 16)
+
+[node name="CalShipStairs" parent="." unique_id=709739676 instance=ExtResource("15_q1djm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -20)
+
+[node name="CalShipCargoWallDoorRight" parent="." unique_id=1434865185 instance=ExtResource("16_k0cdl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 28)
+
+[node name="CalShipCargoWallDoorLeft" parent="." unique_id=1419521528 instance=ExtResource("17_7fv2c")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 20)
+
+[node name="CalShipCargoWallDoorMid1" parent="." unique_id=1324392350 instance=ExtResource("18_pnk0b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 22)
+
+[node name="CalShipCargoWallDoorMid2" parent="." unique_id=1208922948 instance=ExtResource("18_pnk0b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 26)
+
+[node name="CalShipCargoWallDoorMid3" parent="." unique_id=1422498205 instance=ExtResource("19_xdp0q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, -2, 24)
+
+[node name="CalShipCargoWallDoorRight2" parent="." unique_id=168576955 instance=ExtResource("16_k0cdl")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000002, -2, 20)
+
+[node name="CalShipCargoWallDoorLeft2" parent="." unique_id=105985916 instance=ExtResource("17_7fv2c")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.9999995, -2, 28)
+
+[node name="CalShipCargoWallDoorMid4" parent="." unique_id=1706288487 instance=ExtResource("18_pnk0b")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, -2, 26)
+
+[node name="CalShipCargoWallDoorMid5" parent="." unique_id=711082403 instance=ExtResource("18_pnk0b")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000002, -2, 22)
+
+[node name="CalShipCargoWallDoorMid6" parent="." unique_id=2133631448 instance=ExtResource("19_xdp0q")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, -2, 24)
+
+[node name="CalShipCargoCornerIn1" parent="." unique_id=462496981 instance=ExtResource("20_0n7xn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, -2, 16)
+
+[node name="CalShipCargoCornerIn3" parent="." unique_id=709607277 instance=ExtResource("20_0n7xn")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2, -2, 16)
+
+[node name="CalShipCargoCornerIn4" parent="." unique_id=266898003 instance=ExtResource("20_0n7xn")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, -2, 30)
+
+[node name="CalShipCargoCornerIn2" parent="." unique_id=1664787682 instance=ExtResource("20_0n7xn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26, -2, 30)
+
+[node name="CalShipCatWalk" parent="." unique_id=560008998 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 16)
+
+[node name="CalShipCatWalk2" parent="." unique_id=337100532 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 18)
+
+[node name="CalShipCatWalk17" parent="." unique_id=128121254 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
+
+[node name="CalShipCatWalk16" parent="." unique_id=507624352 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
+
+[node name="CalShipCatWalk3" parent="." unique_id=267326862 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
+
+[node name="CalShipCatWalk4" parent="." unique_id=224421396 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="CalShipCatWalk5" parent="." unique_id=436673864 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 16)
+
+[node name="CalShipCatWalk6" parent="." unique_id=311734862 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
+
+[node name="CalShipCatWalk7" parent="." unique_id=1437826607 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16)
+
+[node name="CalShipCatWalk8" parent="." unique_id=320912655 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
+
+[node name="CalShipCatWalk9" parent="." unique_id=760682488 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 16)
+
+[node name="CalShipCatWalk10" parent="." unique_id=1149906639 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="CalShipCatWalk11" parent="." unique_id=581335420 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 16)
+
+[node name="CalShipCatWalk12" parent="." unique_id=785647281 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 16)
+
+[node name="CalShipCatWalk13" parent="." unique_id=306284165 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 16)
+
+[node name="CalShipCatWalk14" parent="." unique_id=635217011 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 16)
+
+[node name="CalShipCatWalk15" parent="." unique_id=1384546345 instance=ExtResource("21_6g652")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 16)
+
+[node name="CalShipRamp" parent="." unique_id=481012342 instance=ExtResource("22_i5k5e")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 4, -1, 18)
+
+[node name="CalShipRamp3" parent="." unique_id=1550686472 instance=ExtResource("22_i5k5e")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 20, -1, 18)
+
+[node name="CalShipRamp4" parent="." unique_id=782814483 instance=ExtResource("22_i5k5e")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 22, -2, 18)
+
+[node name="CalShipRamp2" parent="." unique_id=1616138252 instance=ExtResource("22_i5k5e")]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 2, -2, 18)
+
+[node name="CalShipCatWalkRail" parent="." unique_id=932408265 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 16)
+
+[node name="CalShipCatWalkRail2" parent="." unique_id=1918332367 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 16)
+
+[node name="CalShipCatWalkRail3" parent="." unique_id=1183599124 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 16)
+
+[node name="CalShipCatWalkRail4" parent="." unique_id=30314580 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 16)
+
+[node name="CalShipCatWalkRail5" parent="." unique_id=1051478180 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, 16)
+
+[node name="CalShipCatWalkRail6" parent="." unique_id=2056294746 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 16)
+
+[node name="CalShipCatWalkRail7" parent="." unique_id=495604120 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, 16)
+
+[node name="CalShipCatWalkRail8" parent="." unique_id=1708386243 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 16)
+
+[node name="CalShipCatWalkRail9" parent="." unique_id=1707371874 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 16)
+
+[node name="CalShipCatWalkRail10" parent="." unique_id=509797221 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 16)
+
+[node name="CalShipCatWalkRail11" parent="." unique_id=2049764701 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22, 0, 16)
+
+[node name="CalShipCatWalkRail12" parent="." unique_id=1895793723 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24, 0, 16)
+
+[node name="CalShipCatWalkRail13" parent="." unique_id=1807764172 instance=ExtResource("23_uicxh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 16)
+
+[node name="CalShipCatWalkRailCorner" parent="." unique_id=1327485695 instance=ExtResource("24_xxa8b")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, 18)
+
+[node name="CalShipCatWalkRailCorner2" parent="." unique_id=1507712335 instance=ExtResource("24_xxa8b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 18)
+
+[node name="CalShipCargoWallDoorFrameLarge" parent="." unique_id=1778850774 instance=ExtResource("25_knyex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 31)
+
+[node name="CalShipFlightDeck" parent="." unique_id=1171538881 instance=ExtResource("26_o4h3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 5, -42)

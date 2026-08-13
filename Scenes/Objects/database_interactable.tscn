@@ -1,13 +1,52 @@
-[gd_scene format=3 uid="uid://ccsfwkaiv2rnj"]
+[gd_scene format=4 uid="uid://ccsfwkaiv2rnj"]
 
-[ext_resource type="Texture2D" uid="uid://d3qq2pevtwi34" path="res://Models/FlightDeckServerBlue.png" id="2_7evvt"]
-[ext_resource type="ArrayMesh" uid="uid://c5d5qvp2vd8q8" path="res://Models/Clutter/ServerBlock.obj" id="3_18cbr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5rh0"]
-albedo_texture = ExtResource("2_7evvt")
+[ext_resource type="Texture2D" uid="uid://dhcp76jifg40g" path="res://Models/Clutter/ServerBlock_0.png" id="1_2yr16"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lp0np"]
 data = PackedVector3Array(0.4375, 2.081, 0.5, 0.4375, 2.081, -0.504, 0.4375, -0.0023, 0.5, 0.4375, -0.0023, 0.5, 0.4375, 2.081, -0.504, 0.4375, -0.0023, -0.504, -0.3958, 2.081, 0.5, -0.3958, -0.0023, 0.5, -0.3958, 2.081, -0.504, -0.3958, 2.081, -0.504, -0.3958, -0.0023, 0.5, -0.3958, -0.0023, -0.504, 0.4375, 2.081, 0.5, -0.3958, 2.081, 0.5, 0.4375, 2.081, -0.504, 0.4375, 2.081, -0.504, -0.3958, 2.081, 0.5, -0.3958, 2.081, -0.504, 0.4375, -0.0023, 0.5, 0.4375, -0.0023, -0.504, -0.3958, -0.0023, 0.5, -0.3958, -0.0023, 0.5, 0.4375, -0.0023, -0.504, -0.3958, -0.0023, -0.504, 0.4375, 2.081, 0.5, 0.4375, -0.0023, 0.5, -0.3958, 2.081, 0.5, -0.3958, 2.081, 0.5, 0.4375, -0.0023, 0.5, -0.3958, -0.0023, 0.5, 0.4375, 2.081, -0.504, -0.3958, 2.081, -0.504, 0.4375, -0.0023, -0.504, 0.4375, -0.0023, -0.504, -0.3958, 2.081, -0.504, -0.3958, -0.0023, -0.504)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hocn7"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_2yr16")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_axtmr"]
+_surfaces = [{
+"aabb": AABB(3.729167, 0.185185, 0.4959675, 0.833333, 2.0833337, 1.0040325),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAAAEAAEAAQAFAAMABAAFAAEAAwAGAAAABgAEAAAABQAGAAMABgAHAAQABAAHAAUABQAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAA//8AAP///////wAAAAD/////AAD//wAAAAAAAAAAAAD//wAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jvavd"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(3.729167, 0.185185, 0.4959675, 0.833333, 2.0833337, 1.0040325),
+"attribute_data": PackedByteArray("/x8AAAAAf0IAAAAA/x9/Qv8/f0L/HwAA/z8AAP8ff0L/G/9jfzb/Q382/2P/G/9Df1L/Y/83/0N/Uv9D/zf/Y39af0L/PwAAf1oAAP8/f0J/Gv9DAAB/hgAA/0N/Gn+G"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_hocn7"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA/7///wAA////v/////////+///8AAAAA/78AAAAA////vwAA//8AAP+/AAD//////78AAAAAAAD/vwAA//////+//////wAA/7//////////vwAA//8AAP+///8AAAAA/78AAAAA////v///AAD///+/AAAAAAAA/7///wAA//8AgAAA/////wCA////////AIAAAAAA//8AgAAA//8AAP////8AAAAA////////AAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9///////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_axtmr")
 
 [sub_resource type="Animation" id="Animation_0a1b7"]
 length = 0.001
@@ -51,13 +90,13 @@ _data = {
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=776590098]
 
-[node name="ServerBlock" type="MeshInstance3D" parent="StaticBody3D" unique_id=738428726]
-material_override = SubResource("StandardMaterial3D_l5rh0")
-mesh = ExtResource("3_18cbr")
-skeleton = NodePath("../..")
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=531156746]
 shape = SubResource("ConcavePolygonShape3D_lp0np")
+
+[node name="Floor" type="MeshInstance3D" parent="StaticBody3D" unique_id=1601942658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.125, -0.1875, -1)
+mesh = SubResource("ArrayMesh_jvavd")
+skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2121098535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51074, 1.05261, 0.307673)

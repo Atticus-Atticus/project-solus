@@ -56,21 +56,21 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SM_Prop_LightBar_02" unique_id=744229738]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.679524, -1.15333)
-light_color = Color(0.8659152, 0.94411135, 0.99999994, 1)
+light_color = Color(0.9490196, 0.9607843, 1, 1)
 light_energy = 0.5
 light_volumetric_fog_energy = 0.0
 omni_range = 5.59621
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="SM_Prop_LightBar_02" unique_id=756018728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.679524, 1.15001)
-light_color = Color(0.8659152, 0.94411135, 0.99999994, 1)
+light_color = Color(0.9490196, 0.9607843, 1, 1)
 light_energy = 0.4
 light_volumetric_fog_energy = 0.0
 omni_range = 5.59621
 
 [node name="OmniLight With Shadows" type="OmniLight3D" parent="SM_Prop_LightBar_02" unique_id=1234360925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.68, 0)
-light_color = Color(0.8659152, 0.94411135, 0.99999994, 1)
+light_color = Color(0.9490196, 0.9607843, 1, 1)
 light_energy = 0.4
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true

@@ -1,0 +1,60 @@
+[gd_scene format=4 uid="uid://csd3tjduk733y"]
+
+[ext_resource type="Texture2D" uid="uid://ewgyykuchhdn" path="res://Models/CalShip/LivingArea/Assets/CalShipFloor_0.png" id="1_477gu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4cb"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_477gu")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_blm7n"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.1875, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAIAAwAAAAIAAAAEAAEAAwAFAAEABAAFAAEAAwAGAAAABgAEAAAABQAGAAMABgAHAAQABAAHAAUABQAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAD/////AAAAAP///////wAAAAD/////AAD//wAAAAAAAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4qn72"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.1875, 1),
+"attribute_data": PackedByteArray("/0P/C/+DAAD/QwAA/4P/C/9D/w//g/8b/4P/D/9D/xsAAP8//z8AAP8//z8AAAAA/4sAAP/L/z//ywAA/4v/P/9D/x//g/8r/4P/H/9D/yv/Q/87/4P/L/9D/y//g/87"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_if4cb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP//AAD/////AAAAAP///////wAA//8AAAAAAAAAAP//AAAAAAAAAAD//wAAAAD/////AAAAAAAAAAAAAAAA//////+//////wAA/7//////////vwAA//8AAP+/AAAAAP///z///wAAAAD/P///AAD///8/AAAAAAAA/z8AAP////8AAP//AAD//wAA////////AAAAAAAA//8AAP//AAAAAAAAAAD//wAAAAD/////AAAAAAAAAAAAAAAA/z//f/8//3//P/9//z//f/+//3//v/9//7//f/+//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3//f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_blm7n")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_477gu"]
+data = PackedVector3Array(0.5, 0, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0.1875, -0.5, -0.5, 0.1875, -0.5, -0.5, 0, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.1875, 0.5, 0.5, 0.1875, -0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0.1875, 0.5, 0.5, 0, 0.5, 0.5, 0.1875, 0.5, -0.5, 0.1875, 0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0.1875, -0.5, 0.5, 0.1875, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0.1875, -0.5)
+
+[node name="CalShipFloor" type="StaticBody3D" unique_id=1370860603]
+
+[node name="ShipMid" type="MeshInstance3D" parent="." unique_id=1198215303]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("ArrayMesh_4qn72")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1890625419]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_477gu")
