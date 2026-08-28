@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm5e7w56qdob"
-path="res://.godot/imported/CalShipWall3_0.png-95266b73a8bb999f16244011897ef348.ctex"
+uid="uid://26v8adkb64ic"
+path="res://.godot/imported/CalShipDoorMedium_0.png-e5a19ffaa8678fb60b7c87cc6d9996f6.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "01049449e3cda95d13ccaed6bda98af2"
+"md5": "918b60b3387eeab85ad76263d857c4a4"
 }
 
 [deps]
 
-source_file="res://Models/CalShip/LivingArea/Assets/CalShipWall3_0.png"
-dest_files=["res://.godot/imported/CalShipWall3_0.png-95266b73a8bb999f16244011897ef348.ctex"]
+source_file="res://Models/CalShip/LivingArea/Assets/CalShipDoorMedium_0.png"
+dest_files=["res://.godot/imported/CalShipDoorMedium_0.png-e5a19ffaa8678fb60b7c87cc6d9996f6.ctex"]
 
 [params]
 

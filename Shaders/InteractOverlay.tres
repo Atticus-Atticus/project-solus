@@ -1,10 +1,10 @@
-[gd_resource type="ShaderMaterial" format=3 uid="uid://bl8tnr3hug0ky"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cpp5sujxtij36"]
 
-[ext_resource type="Shader" uid="uid://dtag1h2ctixe7" path="res://Shaders/ItemHighlight.gdshader" id="1_mte0q"]
+[ext_resource type="Shader" uid="uid://dtag1h2ctixe7" path="res://Shaders/ItemHighlight.gdshader" id="1_pauxq"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_mte0q")
+shader = ExtResource("1_pauxq")
 shader_parameter/shine_color = Color(0.4, 1, 0.9411765, 0.49019608)
 shader_parameter/shine_speed = 4.00000019
 shader_parameter/shine_width = 0.050000002375

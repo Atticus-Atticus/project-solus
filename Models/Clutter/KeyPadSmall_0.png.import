@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm5e7w56qdob"
-path="res://.godot/imported/CalShipWall3_0.png-95266b73a8bb999f16244011897ef348.ctex"
+uid="uid://buw0thp71ik6y"
+path="res://.godot/imported/KeyPadSmall_0.png-f90aca993ee03fb9a190e5b2ab871d67.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "01049449e3cda95d13ccaed6bda98af2"
+"md5": "666da9a6c5dabbcc4590871b2a3ad66a"
 }
 
 [deps]
 
-source_file="res://Models/CalShip/LivingArea/Assets/CalShipWall3_0.png"
-dest_files=["res://.godot/imported/CalShipWall3_0.png-95266b73a8bb999f16244011897ef348.ctex"]
+source_file="res://Models/Clutter/KeyPadSmall_0.png"
+dest_files=["res://.godot/imported/KeyPadSmall_0.png-f90aca993ee03fb9a190e5b2ab871d67.ctex"]
 
 [params]
 
