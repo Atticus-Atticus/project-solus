@@ -6,6 +6,8 @@ var toggle = false
 var interactable = true
 #prevents the player from interacting with the door while it's opening and closing
 
+@export var out_of_order = false
+@export var out_of_order_text: PackedScene
 @export var locked = false
 @export var animation_player: AnimationPlayer
 @export var trigger_area: Area3D
@@ -20,7 +22,7 @@ func _ready() -> void:
 	trigger_area.monitoring = false
 
 func _door():
-	if interactable == true and locked == false:
+	if interactable == true and locked == false and out_of_order == false:
 		interactable = false
 		toggle = !toggle
 		if toggle == false:
@@ -34,8 +36,11 @@ func _door():
 		$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
 		interactable = true
 		toggle = false
-	elif interactable == true and locked == true:
+	elif interactable == true and locked == true and out_of_order == false:
 		KeyPad._open_keypad()
+	elif interactable == true and locked == false and out_of_order == true:
+		var text_temp1 = out_of_order_text.instantiate()
+		add_child(text_temp1)
 #closes door after 5 seconds when opened
 
 var front = false

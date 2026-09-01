@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cnnj76aufagwh" path="res://Scripts/DoorScript.gd" id="1_iraub"]
 [ext_resource type="Script" uid="uid://bjl47w31tj844" path="res://Scripts/DoorScript2.gd" id="2_qyp0l"]
+[ext_resource type="PackedScene" uid="uid://b3i60x5ubkrw3" path="res://Scenes/User Interface/Dialogue/BrokenDoorDialogueBox.tscn" id="2_vwtoq"]
 [ext_resource type="Texture2D" uid="uid://26v8adkb64ic" path="res://Models/CalShip/LivingArea/Assets/CalShipDoorMedium_0.png" id="4_iraub"]
 [ext_resource type="Material" uid="uid://cpp5sujxtij36" path="res://Shaders/InteractOverlay.tres" id="5_vwtoq"]
 
@@ -191,6 +192,7 @@ _data = {
 
 [node name="CalShipDoorMedium" type="Node3D" unique_id=596482746 node_paths=PackedStringArray("animation_player", "trigger_area")]
 script = ExtResource("1_iraub")
+out_of_order_text = ExtResource("2_vwtoq")
 animation_player = NodePath("AnimationPlayer")
 trigger_area = NodePath("Area3D")
 

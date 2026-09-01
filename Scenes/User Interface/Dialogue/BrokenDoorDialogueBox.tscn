@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://b3i60x5ubkrw3"]
+
+[ext_resource type="Script" uid="uid://cyk1vu5rj0inr" path="res://Scripts/DialogueScripts/broken_door_dialogue_box.gd" id="1_t6xet"]
+[ext_resource type="StyleBox" uid="uid://c6njew3fep6rk" path="res://Scenes/User Interface/Dialogue/DialogueBoxPanel.tres" id="2_1o1nw"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_sptlc"]
+[ext_resource type="LabelSettings" uid="uid://tp8yager30fu" path="res://Scenes/User Interface/Dialogue/DialogueBoxText.tres" id="4_7hb22"]
+[ext_resource type="AudioStream" uid="uid://drqxekqms4xph" path="res://Audio/Speech/CalihanSpeed.wav" id="5_t6xet"]
+
+[sub_resource type="Animation" id="Animation_vxsjl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5bkkr"]
+resource_name = "TextTween"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iy72d"]
+_data = {
+&"RESET": SubResource("Animation_vxsjl"),
+&"TextTween": SubResource("Animation_5bkkr")
+}
+
+[node name="TextBox" type="Node" unique_id=2123083532]
+script = ExtResource("1_t6xet")
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=1097762117]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -320.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=1667061285]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_1o1nw")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=1555553781]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=1247551970]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=489494388]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1724939811]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_sptlc")
+theme_override_font_sizes/font_size = 50
+text = "Calihan:"
+label_settings = ExtResource("4_7hb22")
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1346595954]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_sptlc")
+theme_override_font_sizes/font_size = 50
+text = "This door is broken and won't open."
+label_settings = ExtResource("4_7hb22")
+autowrap_mode = 1
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=559763653]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_sptlc")
+theme_override_font_sizes/font_size = 50
+text = "v"
+label_settings = ExtResource("4_7hb22")
+
+[node name="TweenAnimation" type="AnimationPlayer" parent="TextboxContainer" unique_id=314767406]
+libraries/ = SubResource("AnimationLibrary_iy72d")
+speed_scale = 2.5
+
+[node name="CalihanSpeed" type="AudioStreamPlayer" parent="." unique_id=541859252]
+stream = ExtResource("5_t6xet")
+
+[connection signal="animation_finished" from="TextboxContainer/TweenAnimation" to="." method="_on_tween_animation_animation_finished"]
