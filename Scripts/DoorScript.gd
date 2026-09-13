@@ -5,6 +5,8 @@ var toggle = false
 #determine whether door is open or not. false = closed and true = open.
 var interactable = true
 #prevents the player from interacting with the door while it's opening and closing
+var in_zone = false
+var interacted = false
 
 @export var out_of_order = false
 @export var out_of_order_text: PackedScene
@@ -19,10 +21,10 @@ func _ready() -> void:
 		push_error("Door trigger_area has not been assigned.")
 		return
 	
-	trigger_area.monitoring = false
+	#trigger_area.monitoring = false
 
 func _door():
-	if interactable == true and locked == false and out_of_order == false:
+	if interactable == true and locked == false and out_of_order == false and interacted == true and in_zone == true:
 		interactable = false
 		toggle = !toggle
 		if toggle == false:
@@ -36,9 +38,10 @@ func _door():
 		$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
 		interactable = true
 		toggle = false
-	elif interactable == true and locked == true and out_of_order == false:
+	elif interactable == true and locked == true and out_of_order == false and interacted == true and in_zone == true:
+		KeyPad.cam.show()
 		KeyPad._open_keypad()
-	elif interactable == true and locked == false and out_of_order == true:
+	elif interactable == true and locked == false and out_of_order == true and interacted == true and in_zone == true:
 		var text_temp1 = out_of_order_text.instantiate()
 		add_child(text_temp1)
 #closes door after 5 seconds when opened
@@ -46,29 +49,21 @@ func _door():
 var front = false
 var back = false
 
-#@export var front_exit: Marker3D
-#@export var back_exit: Marker3D
 
 func _start_monitoring():
 	trigger_area.monitoring = true
 
 func _enter_trigger(body):
-	if body is CharacterBody3D and front == true:
-		#body.sp = front_exit.global_position
-		#body.ep = back_exit.global_position
-		#body._move_through_door()
-		#await get_tree().create_timer(1.5).timeout
-		_door()
-		front = false
+	if body is CharacterBody3D:
+		in_zone = true
+	_check_door()
 
-	if body is CharacterBody3D and back == true:
-		#body.sp = back_exit.global_position
-		#body.ep = front_exit.global_position
-		#body._move_through_door()
-		#await get_tree().create_timer(1.5).timeout
-		_door()
-		back = false
 
 func _exit_trigger(body):
 	if body is CharacterBody3D:
-		$Area3D.monitoring = false
+		in_zone = false
+
+
+func _check_door():
+	if interacted == true and in_zone == true:
+		_door()

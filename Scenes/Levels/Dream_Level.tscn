@@ -57,7 +57,6 @@
 [ext_resource type="PackedScene" uid="uid://d2ur2r4xjn6yo" path="res://Models/Sci-Fi City Assets/Household/Shelves/Wall Shelf A.fbx" id="51_qrgdy"]
 [ext_resource type="PackedScene" uid="uid://bu7gqmb2mie0g" path="res://Models/Sci-Fi City Assets/Household/Shelves/Wall Shelf B.fbx" id="52_igyps"]
 [ext_resource type="PackedScene" uid="uid://dck2624ky6bcc" path="res://Models/Sci-Fi City Assets/Household/Lights/Lamp A.fbx" id="53_rfpwr"]
-[ext_resource type="ArrayMesh" uid="uid://8tv83us3yk4v" path="res://Models/Clutter/RationBox.obj" id="56_elhyx"]
 [ext_resource type="ArrayMesh" uid="uid://ortoy8nqyjps" path="res://Models/Clutter/RationCan.obj" id="57_wfdue"]
 [ext_resource type="ArrayMesh" uid="uid://bxsc5y8uc2lbf" path="res://Models/Clutter/WallSpaceSuitLocker Empty.obj" id="59_fuhwe"]
 [ext_resource type="PackedScene" uid="uid://v0rf5iopoidb" path="res://Models/Clutter/A-9 Sidewinder.glb" id="60_ekg3j"]
@@ -6252,11 +6251,6 @@ transform = Transform3D(-6.4824883e-09, 0, -0.3, 0, 0.3, 0, 0.148302, 0, -1.3113
 
 [node name="Lamp A" parent="NavigationRegion3D/Clutter" unique_id=1578211513 instance=ExtResource("53_rfpwr")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 6.50595, 1.70825, 4.68171)
-
-[node name="RationBox" type="MeshInstance3D" parent="NavigationRegion3D/Clutter" unique_id=1668543050]
-transform = Transform3D(0.191309, 0, -1.99083, 0, 2, 0, 1.99083, 0, 0.191309, 4.90046, 1.72492, 1.40199)
-mesh = ExtResource("56_elhyx")
-skeleton = NodePath("../../..")
 
 [node name="RationCan" type="MeshInstance3D" parent="NavigationRegion3D/Clutter" unique_id=1525873759]
 transform = Transform3D(1.78011, 0, 0.911711, 0, 2, 0, -0.911711, 0, 1.78011, 2.16896, 1.73269, 0.93429)

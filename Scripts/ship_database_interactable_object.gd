@@ -3,7 +3,6 @@ extends StaticBody3D
 #@export var text_scene: PackedScene
 #@onready var scene: PackedScene = preload("res://Scenes/User Interface/Menus/DataBaseMenu.tscn")
 @export var player = CharacterBody3D
-
 @export var trigger = Area3D
 
 var in_dialogue = false

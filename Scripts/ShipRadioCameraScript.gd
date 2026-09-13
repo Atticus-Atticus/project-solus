@@ -1,9 +1,19 @@
 extends Camera3D
 
+@export var root: Node3D
+@export var anim_player: AnimationPlayer
 @export var ray_fire_rate: float = 0.15
 
 var ray_timer: float = 0.0
 
+func _make_active():
+	anim_player.play("ZoomIn")
+	$".".make_current()
+
+func _exit_cam():
+	anim_player.play("ZoomOut")
+	await get_tree().create_timer(1).timeout
+	$ColorRect.hide()
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("LMB"):

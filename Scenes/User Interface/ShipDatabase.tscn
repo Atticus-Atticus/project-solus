@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brryq4wcvfnxh" path="res://Scripts/ship_database_script.gd" id="1_h7pe6"]
 [ext_resource type="ArrayMesh" uid="uid://hf1erxxvt4p1" path="res://Models/ShipWallCorner1.obj" id="1_muk5n"]
-[ext_resource type="Script" uid="uid://cch6vcu0lxojv" path="res://Scripts/ShipRadioCameraScript.gd" id="2_jbjl1"]
+[ext_resource type="PackedScene" uid="uid://cyw0ukgyal6qd" path="res://Scenes/Objects/InteractCamera.tscn" id="2_fsbnf"]
 [ext_resource type="Texture2D" uid="uid://dwx7p1ulyk7v5" path="res://Models/BlueFlightDeck_0.png" id="2_uqm88"]
 [ext_resource type="Texture2D" uid="uid://de06dsx7ogx02" path="res://Models/BlueFlightDeck_1.png" id="3_h7pe6"]
 [ext_resource type="Texture2D" uid="uid://cdlj7sf16324x" path="res://Models/SkyBox/panorama_image.png" id="3_iurxr"]
@@ -394,8 +394,9 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Database Terminal" type="Node3D" unique_id=1790285260]
+[node name="Database Terminal" type="Node3D" unique_id=1790285260 node_paths=PackedStringArray("cam")]
 script = ExtResource("1_h7pe6")
+cam = NodePath("Camera3D2")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=521313217]
 transform = Transform3D(0.095644146, -0.062227853, 0.99346864, 0.036674913, 0.99758685, 0.058955014, -0.9947399, 0.030796673, 0.09769556, 7.35825, 2.85602, 7.533828)
@@ -422,10 +423,8 @@ transform = Transform3D(-6.556708e-07, 0, -15, 0, 15, 0, 15, 0, -6.556708e-07, 7
 mesh = SubResource("ArrayMesh_a2x76")
 skeleton = NodePath("")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=18151750]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4981563, 5.1669083)
-fov = 90.0
-script = ExtResource("2_jbjl1")
+[node name="Camera3D2" parent="." unique_id=1570521019 instance=ExtResource("2_fsbnf")]
+transform = Transform3D(1, 0, 0, 0, 0.9971546, 0.07538358, 0, -0.07538358, 0.9971546, 0, 2, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2102990598]
 transform = Transform3D(-0.896897, -0.42355, -0.127205, -0.433016, 0.899517, 0.0580159, 0.0898504, 0.107116, -0.990178, -7, 0, 0)
@@ -462,7 +461,7 @@ libraries/ = SubResource("AnimationLibrary_cvw3e")
 autoplay = &"blinking"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=951545218]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.562, -0.1)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.562, -4.1)
 mesh = SubResource("QuadMesh_sv2o5")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D2" unique_id=1758224256]
@@ -478,7 +477,7 @@ autoplay = true
 stream = ExtResource("5_qh30q")
 
 [node name="blockbench_export" parent="." unique_id=1735192381 instance=ExtResource("6_cvw3e")]
-transform = Transform3D(-9, 0, 1.3589622e-06, 0, 9, 0, -1.3589622e-06, 0, -9, 0, -8, -7)
+transform = Transform3D(-9, 0, 1.3589622e-06, 0, 9, 0, -1.3589622e-06, 0, -9, 0, -8, -11)
 
 [node name="Panel" type="Panel" parent="." unique_id=149775154]
 offset_left = 67.0

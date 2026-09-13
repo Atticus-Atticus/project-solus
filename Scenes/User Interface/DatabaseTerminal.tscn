@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://ch0dlqx2npppc"]
+
+[ext_resource type="Script" uid="uid://douboyeknv80a" path="res://Scripts/terminal_script.gd" id="1_javsb"]
+[ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_0m3tq"]
+[ext_resource type="Texture2D" uid="uid://dr3vpf8wqegqs" path="res://Images/Naomi.png" id="5_bpkb3"]
+[ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="5_d3stu"]
+[ext_resource type="Texture2D" uid="uid://c7wy0uqawhkdq" path="res://Images/Calihan.png" id="6_7kmn1"]
+
+[node name="Terminal" type="Control" unique_id=1782736813]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_javsb")
+
+[node name="Output" type="RichTextLabel" parent="." unique_id=275154169]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -891.0
+offset_top = 25.0
+offset_right = 887.0
+offset_bottom = 950.0
+grow_horizontal = 2
+scroll_following = true
+vertical_alignment = 2
+
+[node name="CommandInput" type="LineEdit" parent="." unique_id=509678885]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 960.0
+offset_right = 1847.0
+offset_bottom = 991.0
+
+[node name="CalihanPanel" type="Panel" parent="." unique_id=1099472037]
+visible = false
+layout_mode = 0
+offset_left = 65.0
+offset_top = 44.0
+offset_right = 1279.0
+offset_bottom = 944.0
+theme = ExtResource("2_0m3tq")
+
+[node name="Label" type="Label" parent="CalihanPanel" unique_id=265900967]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - CALIHAN LONAN
+[confidential personnel file]
+
+FULL NAME:  Calihan Lonan
+STATUS:  Registered Citizen
+SERVICE ID:  2374-092-CL
+OCCUPATION:  Interstellar Courier for The Farseeing Courier Company
+WORLD OF BIRTH:  Brimpie-3
+REGISTERED HOMEWORLD:  Brimpie-3
+REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
+
+ASSOCIATIONS:
+  Registered domestic partnership with Naomi Lonan-Roseberry
+  Registered Parents: Elias Lonan and Jeneva Lonan(deceased)
+
+OCCUPATION:
+  Currently serving as a Farseeing Interstellar Courier.
+  Former Wheat and Algae Farmer before gaining admission into the 
+  Solarian Academy of Pilots.
+
+NOTES:
+  Psychological profile indicates emotional detachment, high stress tolerance, 
+  and low interpersonal engagement.
+  
+  Underwent disciplinary review following altercation with superior officer.
+  See incident report: SY-379 for more info.
+
+Remarks:
+  \"Lonan works best alone. Doesn't ask for help, doesn't expect it either.\"
+   - Supervisor D. Renhall, Farseeing Courier Management Division 4
+
+   \"Shows signs of unresolved trauma. Possible bullying from peers.\"
+   - Dr. Elia Morrix, Psych Eval"
+label_settings = ExtResource("5_d3stu")
+clip_text = true
+
+[node name="Panel" type="Panel" parent="CalihanPanel" unique_id=1214834957]
+modulate = Color(0.62908286, 0.62908286, 0.62908286, 1)
+layout_mode = 0
+offset_left = 838.0
+offset_top = 21.0
+offset_right = 1128.0
+offset_bottom = 311.0
+
+[node name="Calihan" type="Sprite2D" parent="CalihanPanel/Panel" unique_id=37305351]
+modulate = Color(0.85814106, 0.85814106, 0.85814106, 1)
+position = Vector2(145, 145)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_7kmn1")
+
+[node name="NaomiPanel" type="Panel" parent="." unique_id=306297791]
+visible = false
+layout_mode = 0
+offset_left = 65.0
+offset_top = 44.0
+offset_right = 1278.0
+offset_bottom = 944.0
+theme = ExtResource("2_0m3tq")
+
+[node name="Label" type="Label" parent="NaomiPanel" unique_id=1990382522]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - NAOMI LONAN-ROSEBERRY
+[confidential personnel file]
+
+FULL NAME:  Naomi Lonan-Roseberry
+STATUS:  Registered Citizen
+SERVICE ID:  4449-773-NR
+OCCUPATION:  N/A
+WORLD OF BIRTH:  Brimpie-4, Buoy Station 16
+REGISTERED HOMEWORLD:  Brimpie-3
+REGISTERED RESIDENCE:  Apartment 907, Habitat Zone 7
+
+ASSOCIATIONS:
+  Registered domestic partnership with Calihan Lonan.
+  No immediate family on file.
+
+OCCUPATION:
+  Former Deep Space Radio Operator and Telemetry Officer.
+  Occupation lost due to advancements in automated systems.
+
+NOTES:
+  Previous psychological evaluations note elevated empathy levels, signs of codependency, 
+  and chronic anxiety.
+  
+  Applied multiple times for off-world transfer; all applications denied due to 
+  bureaucratic backlog.
+
+  Rumors of involvement in unauthorized signal tracing and Coalition surveillance evasion.
+
+Remarks:
+  “Brilliant mind. Too soft for Coalition work.”
+   - Director R. Zannis, Brimpie-4 Communications Admin"
+label_settings = ExtResource("5_d3stu")
+clip_text = true
+
+[node name="Panel" type="Panel" parent="NaomiPanel" unique_id=356416816]
+modulate = Color(0.45871374, 0.45871374, 0.45871374, 1)
+layout_mode = 0
+offset_left = 830.0
+offset_top = 31.0
+offset_right = 1120.0
+offset_bottom = 321.0
+
+[node name="Naomi" type="Sprite2D" parent="NaomiPanel/Panel" unique_id=320466454]
+position = Vector2(145, 145)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("5_bpkb3")
+
+[node name="AmyPanel" type="Panel" parent="." unique_id=921524643]
+visible = false
+layout_mode = 0
+offset_left = 65.0
+offset_top = 44.0
+offset_right = 1278.0
+offset_bottom = 944.0
+theme = ExtResource("2_0m3tq")
+
+[node name="Label" type="Label" parent="AmyPanel" unique_id=885819400]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = -12.0
+grow_vertical = 2
+text = "Solarian Coalition Personnel Record - AMY RAYEN
+[confidential cadet personnel file]
+
+FULL NAME:  Amy Rayen
+STATUS:  Registered Citizen
+SERVICE ID:  7721-907-AR
+OCCUPATION:  Cadet, Solarian Army Corps
+WORLD OF BIRTH:  82-G Eridani-d
+REGISTERED HOMEWORLD:  82-G Eridani-d
+REGISTERED RESIDENCE:  Barracks 1305, Cadet Complex Theta-19
+
+ASSOCIATIONS:
+  Maintains close bond with fellow Cadet Corporal Marcus.
+  Biological parents identified as two senior-ranking officers (names redacted).
+  Parents relationship deemed in violation of Coalition Oath Statute 12-B.
+
+OCCUPATION:
+  Currently enlisted in the Solarian Armed Forces reporting to Sergeant Crawford.
+  Specialization: Combat Medic
+
+NOTES:
+  Previous psychological evaluations note elevated compliance, and surppressed emotional 
+  expression. Also signs of introversion and chronic hypervigilance. 
+  Most notably around figures of authority.
+  Tendency to seek isolation. (Roof access violations x12)
+  Shows creative tendencies. (unauthorised sketchbook confiscated twice) 
+
+Remarks:
+  \"Quiet. Obedient. Keeps her head down. Has potential, but refuses to step forward.\"
+  - Drill Instructor P. Varrin, Youth Cadet Corps Division 3.
+
+  \"Her parentage makes her a political liability. Recommend continued observation.\"
+  - Commander [REDACTED], Personnel Oversight Committee"
+label_settings = ExtResource("5_d3stu")
+clip_text = true

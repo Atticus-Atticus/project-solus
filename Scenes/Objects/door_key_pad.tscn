@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://cutbg3csr0lcw"]
 
 [ext_resource type="Script" uid="uid://c71ikpd5yt3pw" path="res://Scripts/door_key_pad_script.gd" id="1_57slu"]
-[ext_resource type="Script" uid="uid://cch6vcu0lxojv" path="res://Scripts/ShipRadioCameraScript.gd" id="1_sgrxu"]
 [ext_resource type="Texture2D" uid="uid://dmx7sehyyirkw" path="res://Models/Textures/TempTextureWhite.png" id="3_57slu"]
 [ext_resource type="Texture2D" uid="uid://dt42df25udopj" path="res://Models/KeyPad/KeyPadBig_0.png" id="4_3aoit"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="4_ro2fv"]
 [ext_resource type="PackedScene" uid="uid://xqa10t4rt0ql" path="res://Scenes/User Interface/PointerScene.tscn" id="5_81v41"]
 [ext_resource type="Script" uid="uid://8d0xepxfhm3a" path="res://Scripts/KeyPadButtonScript.gd" id="6_3aoit"]
 [ext_resource type="Script" uid="uid://kiyg32gxfuvo" path="res://Scripts/keypad_enter_button.gd" id="7_3aoit"]
+[ext_resource type="PackedScene" uid="uid://cyw0ukgyal6qd" path="res://Scenes/Objects/InteractCamera.tscn" id="8_57slu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ceyyw"]
 
@@ -973,8 +973,9 @@ font = ExtResource("4_ro2fv")
 font_size = 370
 font_color = Color(0.4, 1, 0.9411765, 1)
 
-[node name="DoorKeyPad" type="Node3D" unique_id=1023091714 node_paths=PackedStringArray("buttons")]
+[node name="DoorKeyPad" type="Node3D" unique_id=1023091714 node_paths=PackedStringArray("cam", "buttons")]
 script = ExtResource("1_57slu")
+cam = NodePath("Camera3D")
 buttons = [NodePath("Button1"), NodePath("Button2"), NodePath("Button3"), NodePath("Button4"), NodePath("Button5"), NodePath("Button6"), NodePath("Button7"), NodePath("Button8"), NodePath("Button9"), NodePath("Button0"), NodePath("ButtonEnter")]
 RandomCode = true
 
@@ -1226,6 +1227,5 @@ grow_vertical = 2
 text = "0000"
 label_settings = SubResource("LabelSettings_p517m")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=298503171]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1666923, 2.6811109)
-script = ExtResource("1_sgrxu")
+[node name="Camera3D" parent="." unique_id=1570521019 instance=ExtResource("8_57slu")]
+transform = Transform3D(1, 0, 0, 0, 0.9971546, 0.07538358, 0, -0.07538358, 0.9971546, 0, 0, 0)

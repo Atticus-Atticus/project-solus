@@ -165,6 +165,10 @@ Tab={
 ]
 }
 
+[navigation]
+
+3d/icon="uid://bpqqretdcw6a0"
+
 [rendering]
 
 anti_aliasing/quality/msaa_2d=1

@@ -6,6 +6,7 @@ var Code: String = ""
 var ViewingKeyPad = false
 var Previous_Camera: Camera3D
 
+@export var cam: Camera3D
 @export var buttons: Array[CollisionObject3D]
 @export var DoorCode: String = "1234"
 @export var Linked_Door: Node3D
@@ -16,6 +17,7 @@ var Previous_Camera: Camera3D
 #leaving it false will allow for the code to be set maunally
 
 func _ready() -> void:
+	cam.hide()
 	$PointerNode.hide()
 	for button in buttons:
 		button.get_node("CollisionShape3D").set_deferred("disabled", true)
@@ -26,7 +28,7 @@ func _ready() -> void:
 func _open_keypad():
 	Previous_Camera = get_viewport().get_camera_3d()
 	Globals.PlayerControls = false
-	$Camera3D.make_current()
+	cam._make_active()
 	ViewingKeyPad = true
 	$PointerNode.show()
 	for button in buttons:
@@ -49,6 +51,8 @@ func _check_code():
 	if Code == DoorCode:
 		print("Door Unlocked")
 		$sphere/AnimationPlayer.play("Right")
+		await get_tree().create_timer(0.5).timeout
+		cam._exit_cam()
 		await get_tree().create_timer(1).timeout
 		_close_keypad()
 		Linked_Door.locked = false
@@ -67,4 +71,7 @@ func _generate_code():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Tab") and ViewingKeyPad == true:
+		cam._exit_cam()
+		await get_tree().create_timer(1).timeout
+		cam.hide()
 		_close_keypad()
