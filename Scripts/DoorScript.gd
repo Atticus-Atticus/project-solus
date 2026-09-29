@@ -20,8 +20,6 @@ func _ready() -> void:
 	if trigger_area == null:
 		push_error("Door trigger_area has not been assigned.")
 		return
-	
-	#trigger_area.monitoring = false
 
 func _door():
 	if interactable == true and locked == false and out_of_order == false and interacted == true and in_zone == true:
@@ -30,12 +28,14 @@ func _door():
 		if toggle == false:
 			animation_player.play("Close")
 			$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
+			interacted = false
 		if toggle == true:
 			animation_player.play("Open")
 			$StaticBody3D/CollisionShape3D.set_deferred("disabled", true)
 		await get_tree().create_timer(5.0, false).timeout
 		animation_player.play("Close")
 		$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
+		interacted = false
 		interactable = true
 		toggle = false
 	elif interactable == true and locked == true and out_of_order == false and interacted == true and in_zone == true:
@@ -44,10 +44,13 @@ func _door():
 	elif interactable == true and locked == false and out_of_order == true and interacted == true and in_zone == true:
 		var text_temp1 = out_of_order_text.instantiate()
 		add_child(text_temp1)
-#closes door after 5 seconds when opened
 
-var front = false
-var back = false
+func _door_overide():
+	animation_player.play("Close")
+	$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
+	await get_tree().create_timer(5.0, false).timeout
+	animation_player.play("Close")
+	$StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
 
 
 func _start_monitoring():

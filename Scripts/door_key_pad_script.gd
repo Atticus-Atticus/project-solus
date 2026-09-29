@@ -56,7 +56,7 @@ func _check_code():
 		await get_tree().create_timer(1).timeout
 		_close_keypad()
 		Linked_Door.locked = false
-		Linked_Door._door()
+		Linked_Door._door_overide()
 
 	elif Code != DoorCode:
 		print("Code Incorrect")
