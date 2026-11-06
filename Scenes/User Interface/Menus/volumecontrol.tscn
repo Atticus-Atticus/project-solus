@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmjb1whpk1c0q"]
+[gd_scene format=3 uid="uid://cmjb1whpk1c0q"]
 
-[ext_resource type="Script" path="res://Scripts/VolumeControlScript.gd" id="1_u3ceb"]
+[ext_resource type="Script" uid="uid://cv4c277mjqvf4" path="res://Scripts/VolumeControlScript.gd" id="1_u3ceb"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="2_478fi"]
-[ext_resource type="LabelSettings" uid="uid://4dlvvwnnmr3" path="res://Scenes/User Interface/Menus/LabelSettings1.tres" id="3_jbwac"]
+[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_pyqb4"]
 
-[node name="Volume" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_ux4qk"]
+font = ExtResource("3_pyqb4")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="Volume" type="Control" unique_id=173852190]
 layout_mode = 3
 anchor_right = 0.206
 anchor_bottom = 0.108
@@ -14,29 +19,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u3ceb")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=925628578]
 layout_mode = 0
 offset_right = 396.0
-offset_bottom = 117.0
+offset_bottom = 62.0
 theme = ExtResource("2_478fi")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=984060986]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 12.0
-offset_right = 391.0
-offset_bottom = 60.0
-text = "Volume Control"
-label_settings = ExtResource("3_jbwac")
-horizontal_alignment = 1
+offset_top = -38.0
+offset_right = 386.0
+offset_bottom = 10.0
+text = "Volume Control:"
+label_settings = SubResource("LabelSettings_ux4qk")
 vertical_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="Panel"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 75.0
-offset_right = 388.0
-offset_bottom = 108.0
+[node name="HSlider" type="HSlider" parent="Panel" unique_id=1919705564]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -16.5
+offset_right = 190.0
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
 max_value = 1.0
 step = 0.001
 

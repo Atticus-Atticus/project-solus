@@ -11,4 +11,4 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	#var LoadedScene = scene.instantiate()
 	#add_child(LoadedScene)
-	$"../../../Options Panel"._open_menu()
+	$"../../../../Options Panel"._open_menu()

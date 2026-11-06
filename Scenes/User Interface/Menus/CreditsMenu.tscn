@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://drcjx2a442yt7"]
 
 [ext_resource type="Script" uid="uid://b2gjo5kat6h34" path="res://Scripts/credits_menu_script.gd" id="1_2emg8"]
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_kqwra"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="2_6ton8"]
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="3_56pl2"]
 [ext_resource type="Script" uid="uid://bl6pslhxhln3x" path="res://Scripts/ReturnToMenuButtonScript.gd" id="5_hu4cb"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="6_05kd7"]
 [ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="6_ha5nn"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="7_deir5"]
+[ext_resource type="Environment" uid="uid://c3cyo3gwyei0x" path="res://Shaders/MenuEnvironment.tres" id="7_hmpkh"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="8_xkmao"]
 [ext_resource type="LabelSettings" uid="uid://blip5s2fcb4ug" path="res://Scenes/User Interface/Menus/LabelSettings2.tres" id="9_ibhi0"]
 
@@ -19,19 +19,20 @@ font_color = Color(0.4, 1, 0.941176, 1)
 shadow_size = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
-line_spacing = 0.0
 font = ExtResource("2_6ton8")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
+outline_size = 2
 
-[sub_resource type="Environment" id="Environment_vnkvj"]
-background_mode = 3
-glow_enabled = true
-glow_normalized = true
-glow_intensity = 2.4
-glow_strength = 0.83
-glow_hdr_threshold = 0.0
-glow_hdr_scale = 1.75
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("2_6ton8")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yf5fn"]
+font = ExtResource("2_6ton8")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_rt7fl"]
 resource_name = "FlashingSquare"
@@ -84,10 +85,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2emg8")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=220627740]
-position = Vector2(967.75, 550.25)
-scale = Vector2(1.65287, 1.64971)
-texture = ExtResource("1_kqwra")
+[node name="Background2" type="ColorRect" parent="." unique_id=813382581]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -541.0
+offset_right = 1.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.813075e-08, 0.07182797, 0.15029377, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1375756557]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -161,14 +171,14 @@ stream = ExtResource("7_deir5")
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=535895800]
-environment = SubResource("Environment_vnkvj")
+environment = ExtResource("7_hmpkh")
 
 [node name="Panel" type="Panel" parent="." unique_id=478266556]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 277.0
 offset_right = 1510.0
-offset_bottom = 622.0
+offset_bottom = 490.0
 theme = ExtResource("3_56pl2")
 
 [node name="Label" type="Label" parent="Panel" unique_id=956666983]
@@ -176,16 +186,12 @@ modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 19.0
-offset_right = 1046.0
-offset_bottom = -22.0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 725.0
+offset_bottom = -6.0
 grow_vertical = 2
-text = "
-Asset Packs used...
-
-
-LowPolyAssets on itch.io:
+text = "LowPolyAssets on itch.io:
 Low Poly Household items
 
 Synty:
@@ -193,12 +199,27 @@ POLYGON - Sci-Fi City Pack"
 label_settings = ExtResource("9_ibhi0")
 clip_text = true
 
+[node name="Label2" type="Label" parent="Panel" unique_id=1327181203]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_right = 318.0
+offset_bottom = -191.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Asset Packs used:
+"
+label_settings = SubResource("LabelSettings_g4v7s")
+clip_text = true
+
 [node name="Panel2" type="Panel" parent="." unique_id=1015708249]
 layout_mode = 0
 offset_left = 970.0
 offset_top = 628.0
 offset_right = 1700.0
-offset_bottom = 973.0
+offset_bottom = 863.0
 theme = ExtResource("3_56pl2")
 
 [node name="Label" type="Label" parent="Panel2" unique_id=1584525148]
@@ -206,23 +227,31 @@ modulate = Color(1.2, 1.2, 1.2, 1)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 19.0
-offset_right = 721.0
-offset_bottom = -22.0
+offset_top = -27.0
+offset_right = 703.0
+offset_bottom = -239.0
 grow_vertical = 2
-text = "
-Special Thanks...
+text = "Special Thanks:"
+label_settings = SubResource("LabelSettings_yf5fn")
+clip_text = true
 
+[node name="Label2" type="Label" parent="Panel2" unique_id=458751659]
+modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 721.0
+offset_bottom = -8.0
+grow_vertical = 2
+text = "Friends, family and my college tutors who kept me going, either by listening to me ramble about different parts of the game or helped with idea generation, bug fixing, and play testing. 
 
-Friends, family and my college tutors who kept me going, 
-either by listening to me ramble about different parts of the 
-game or helped with idea generation, bug fixing, and 
-play testing. 
 Thank you so much.
 
 <3"
 label_settings = ExtResource("9_ibhi0")
+autowrap_mode = 2
 clip_text = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1260568650]

@@ -7,7 +7,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_sc3oe"]
 font = ExtResource("2_jff8l")
 font_size = 30
-font_color = Color(0.4, 1, 0.9411765, 1)
+font_color = Color(0, 0, 0, 1)
 
 [node name="FPS Setting" type="Control" unique_id=1859656027]
 layout_mode = 3
@@ -20,8 +20,8 @@ script = ExtResource("1_jff8l")
 
 [node name="Panel" type="Panel" parent="." unique_id=1251464167]
 layout_mode = 0
-offset_right = 303.0
-offset_bottom = 126.0
+offset_right = 515.0
+offset_bottom = 356.0
 theme = ExtResource("1_w5a2h")
 
 [node name="Label" type="Label" parent="Panel" unique_id=1189582239]
@@ -29,36 +29,74 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -52.0
-offset_top = 18.0
-offset_right = 52.0
-offset_bottom = 41.0
+offset_left = -257.5
+offset_top = -27.0
+offset_right = -17.5
+offset_bottom = -4.0
 grow_horizontal = 2
 text = "Set FPS Limit:"
 label_settings = SubResource("LabelSettings_sc3oe")
 
-[node name="OptionButton" type="OptionButton" parent="Panel" unique_id=743530914]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=2086658216]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -103.0
-offset_top = -14.0
-offset_right = 104.0
-offset_bottom = 57.0
-grow_horizontal = 2
+offset_top = -88.5
+offset_right = 320.0
+offset_bottom = 88.5
 grow_vertical = 2
-selected = 1
-item_count = 4
-popup/item_0/text = "30 FPS"
-popup/item_0/id = 0
-popup/item_1/text = "60 PFS"
-popup/item_1/id = 1
-popup/item_2/text = "120 FPS"
-popup/item_2/id = 2
-popup/item_3/text = "Uncapped"
-popup/item_3/id = 3
+scale = Vector2(1, 0.97)
+theme = ExtResource("1_w5a2h")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
-[connection signal="item_selected" from="Panel/OptionButton" to="." method="_on_option_button_item_selected"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1682726713]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+
+[node name="Lock to Refresh Rate" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1791388543]
+layout_mode = 2
+toggle_mode = true
+text = "> match refresh rate <"
+alignment = 0
+
+[node name="30" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1761987468]
+layout_mode = 2
+toggle_mode = true
+text = "> 30 fps <"
+alignment = 0
+
+[node name="60" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1559375091]
+layout_mode = 2
+toggle_mode = true
+text = "> 60 fps <"
+alignment = 0
+
+[node name="120" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=654909639]
+layout_mode = 2
+toggle_mode = true
+text = "> 120 fps <"
+alignment = 0
+
+[node name="144" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1943090411]
+layout_mode = 2
+toggle_mode = true
+text = "> 144 fps <"
+alignment = 0
+
+[node name="No Limit" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=2132607123]
+layout_mode = 2
+toggle_mode = true
+text = "> uncapped fps <"
+alignment = 0
+
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Lock to Refresh Rate" to="." method="_on_lock_to_refresh_rate_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/30" to="." method="_on_30_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/60" to="." method="_on_60_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/120" to="." method="_on_120_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/144" to="." method="_on_144_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/No Limit" to="." method="_on_no_limit_toggled"]

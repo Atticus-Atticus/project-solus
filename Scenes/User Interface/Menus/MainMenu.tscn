@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://c0hd413ct61mn" path="res://Scenes/User Interface/MenuButtonThemes.tres" id="1_4apuk"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_37eoc"]
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="1_rvp4i"]
 [ext_resource type="Script" uid="uid://dq4csgn6t4y8v" path="res://Scripts/reset_StoryStage_script.gd" id="1_y4g87"]
 [ext_resource type="Script" uid="uid://mpo4bemngpen" path="res://Scripts/PlayButtonScript.gd" id="3_pbbw1"]
 [ext_resource type="Script" uid="uid://b0hxy8yfqev5o" path="res://Scripts/ExitButtonScript.gd" id="5_0nmoh"]
@@ -10,22 +9,25 @@
 [ext_resource type="Script" uid="uid://bgdk3fjyc0tif" path="res://Scripts/credits_button.gd" id="6_n0anp"]
 [ext_resource type="Script" uid="uid://bmxas43uii3q1" path="res://Scripts/options_button_script.gd" id="7_4uqfl"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="7_gvxfj"]
-[ext_resource type="Texture2D" uid="uid://cwyhmg1rfc4ac" path="res://Scenes/User Interface/Menus/Project Solus Cursor 2.png" id="8_uqu75"]
 [ext_resource type="PackedScene" uid="uid://yge8fijrn5xd" path="res://Scenes/User Interface/Menus/Options.tscn" id="9_tr3c8"]
+[ext_resource type="PackedScene" uid="uid://bha8tvscf47y8" path="res://Scenes/User Interface/CursorScene.tscn" id="9_up7sg"]
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="10_81kxu"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="11_rd3md"]
+[ext_resource type="Environment" uid="uid://c3cyo3gwyei0x" path="res://Shaders/MenuEnvironment.tres" id="14_tr3c8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_srlce"]
 line_spacing = 20.0
 font = ExtResource("1_37eoc")
 font_size = 35
-font_color = Color(0.4, 1, 0.941176, 1)
+font_color = Color(0.4, 1, 0.9411765, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r0ac"]
-line_spacing = 0.0
 font = ExtResource("1_37eoc")
 font_size = 34
-font_color = Color(0.4, 1, 0.941176, 1)
+font_color = Color(0.4, 1, 0.9411765, 1)
+outline_size = 2
+outline_color = Color(0.88658464, 0.9946931, 0.9999998, 1)
+shadow_size = 0
 
 [sub_resource type="Animation" id="Animation_rt7fl"]
 resource_name = "FlashingSquare"
@@ -65,15 +67,6 @@ _data = {
 &"RESET": SubResource("Animation_o54d8")
 }
 
-[sub_resource type="Environment" id="Environment_mp1ky"]
-background_mode = 3
-glow_enabled = true
-glow_normalized = true
-glow_intensity = 2.4
-glow_strength = 0.83
-glow_hdr_threshold = 0.0
-glow_hdr_scale = 1.75
-
 [sub_resource type="Animation" id="Animation_tr3c8"]
 resource_name = "ChangeMenuIn"
 length = 0.5
@@ -101,10 +94,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y4g87")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1335430341]
-position = Vector2(967.75, 550.25)
-scale = Vector2(1.65287, 1.64971)
-texture = ExtResource("1_rvp4i")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=233681220]
+
+[node name="ColorRect2" parent="CanvasLayer" unique_id=1878880858 instance=ExtResource("6_23flb")]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1853172174]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.813075e-08, 0.07182797, 0.15029377, 1)
 
 [node name="Label" type="Label" parent="." unique_id=968439915]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -117,7 +121,7 @@ offset_right = 425.0
 offset_bottom = 2.0
 grow_vertical = 2
 text = "
-> Generic BIOS v9.07 (c) Copyright Sol-54 - Sol-578 Generic Computers Ltd
+> Generic BIOS v9.07 (c) Copyright 54-SY - 578-SY Generic Computers Ltd
 >
 > 
 >
@@ -171,17 +175,22 @@ text = "    ____                  __              __     _____         __
                    /___/                                                    "
 label_settings = SubResource("LabelSettings_2r0ac")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=161844328]
+[node name="Panel" type="Panel" parent="." unique_id=1492892893]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 611.0
+offset_right = 623.0
+offset_bottom = 866.0
+theme = ExtResource("1_4apuk")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=161844328]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.055854168
-anchor_top = 0.09907407
-anchor_right = 0.19116697
-anchor_bottom = 1.1305555
-offset_left = -0.2400055
-offset_top = 514.0
-offset_right = 139.96002
-offset_bottom = -423.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -88.5
+offset_right = 320.0
+offset_bottom = 88.5
 grow_vertical = 2
 scale = Vector2(1, 0.97)
 theme = ExtResource("1_4apuk")
@@ -189,32 +198,31 @@ theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
-metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1644881180]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1644881180]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 21
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=602867290]
+[node name="Play" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=602867290]
 layout_mode = 2
-text = "> Begin <"
+text = "> Play <"
 alignment = 0
 script = ExtResource("3_pbbw1")
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=761155826]
+[node name="Options" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=761155826]
 layout_mode = 2
 text = "> Options <"
 alignment = 0
 script = ExtResource("7_4uqfl")
 
-[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1012220440]
+[node name="Credits" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1012220440]
 layout_mode = 2
 text = "> Credits <"
 alignment = 0
 script = ExtResource("6_n0anp")
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1151524765]
+[node name="Exit" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1151524765]
 layout_mode = 2
 text = "> Exit Program <"
 alignment = 0
@@ -241,12 +249,7 @@ offset_top = 187.0
 offset_right = 132.0
 offset_bottom = 187.0
 
-[node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=346135372]
-position = Vector2(60, 1367)
-texture = ExtResource("8_uqu75")
-
-[node name="ColorRect2" parent="." unique_id=1878880858 instance=ExtResource("6_23flb")]
-layout_mode = 0
+[node name="CursorNode" parent="." unique_id=397047418 instance=ExtResource("9_up7sg")]
 
 [node name="CRT Shader2" parent="." unique_id=1094389167 instance=ExtResource("7_gvxfj")]
 visible = false
@@ -262,20 +265,20 @@ stream = ExtResource("11_rd3md")
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1292493903]
-environment = SubResource("Environment_mp1ky")
+environment = ExtResource("14_tr3c8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2124735123]
 libraries/ = SubResource("AnimationLibrary_mtql0")
 
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer/Credits" method="_on_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer/Exit" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/MarginContainer/VBoxContainer/Play" to="Panel/MarginContainer/VBoxContainer/Play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/MarginContainer/VBoxContainer/Play" to="Panel/MarginContainer/VBoxContainer/Play" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Play" to="Panel/MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/MarginContainer/VBoxContainer/Options" to="Panel/MarginContainer/VBoxContainer/Options" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/MarginContainer/VBoxContainer/Options" to="Panel/MarginContainer/VBoxContainer/Options" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Options" to="Panel/MarginContainer/VBoxContainer/Options" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/MarginContainer/VBoxContainer/Credits" to="Panel/MarginContainer/VBoxContainer/Credits" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/MarginContainer/VBoxContainer/Credits" to="Panel/MarginContainer/VBoxContainer/Credits" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Credits" to="Panel/MarginContainer/VBoxContainer/Credits" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/MarginContainer/VBoxContainer/Exit" to="Panel/MarginContainer/VBoxContainer/Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/MarginContainer/VBoxContainer/Exit" to="Panel/MarginContainer/VBoxContainer/Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Exit" to="Panel/MarginContainer/VBoxContainer/Exit" method="_on_pressed"]

@@ -1,9 +1,8 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://4dlvvwnnmr3"]
 
-[ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_1oij1"]
+[ext_resource type="FontFile" uid="uid://dxbengwcj1ncc" path="res://Fonts/retro_computer_personal_use.ttf" id="1_guq0b"]
 
 [resource]
-line_spacing = 20.0
-font = ExtResource("1_1oij1")
-font_size = 35
-font_color = Color(0.4, 1, 0.941176, 1)
+font = ExtResource("1_guq0b")
+font_size = 30
+font_color = Color(0.78039217, 0.93333334, 1, 1)

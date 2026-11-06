@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://do8fx8e50k864"]
 
 [ext_resource type="Script" uid="uid://drygq783kuhji" path="res://Scripts/dream_crash_screen_script.gd" id="1_163g5"]
-[ext_resource type="Texture2D" uid="uid://caobj4gdl62sj" path="res://Scenes/User Interface/Project Solus Main Menu Background.png" id="2_l4fph"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="3_27ud3"]
 [ext_resource type="PackedScene" uid="uid://bg7nxttds0cxk" path="res://Shaders/crt_shaderNoTime.tscn" id="4_k2lga"]
 [ext_resource type="PackedScene" uid="uid://bfcd338u12bne" path="res://Shaders/crt_shaderOFFNoTime.tscn" id="5_wu2u5"]
@@ -269,10 +268,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_163g5")
 
-[node name="ProjectSolusMainMenuBackground" type="Sprite2D" parent="." unique_id=1292076294]
-position = Vector2(967.75, 550.25)
-scale = Vector2(1.65287, 1.64971)
-texture = ExtResource("2_l4fph")
+[node name="Background" type="ColorRect" parent="." unique_id=222916807]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.813075e-08, 0.07182797, 0.15029377, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=1389416251]
 layout_mode = 1

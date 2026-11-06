@@ -35,5 +35,8 @@ func _open_menu():
 
 func _on_x_button_pressed() -> void:
 	$AnimationPlayer.play("Close")
-	await get_tree().create_timer(1.3).timeout
-	$".".hide()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Close":
+		$".".hide()

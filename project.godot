@@ -15,6 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Project Solus"
+config/description="A Sci-fi horror game set in space. idk what else to put here lol."
+config/version="0.4.0"
 run/main_scene="uid://nw7ta1u1f7qs"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/show_image=false
@@ -43,6 +45,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://cwyhmg1rfc4ac"
 
 [global_group]
 

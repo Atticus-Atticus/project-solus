@@ -9,8 +9,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_xn2yy"]
 font = ExtResource("3_vomr3")
-font_size = 64
-font_color = Color(0.4, 1, 0.9411765, 1)
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_reqnr"]
 resource_name = "Close"
@@ -184,8 +184,10 @@ script = ExtResource("1_we4i2")
 
 [node name="Panel" type="Panel" parent="." unique_id=1715596703]
 layout_mode = 1
-offset_right = 1391.0
-offset_bottom = 804.0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 1399.0
+offset_bottom = 844.0
 theme = ExtResource("2_5gnfj")
 
 [node name="Control" type="Control" parent="Panel" unique_id=1936173576]
@@ -198,53 +200,60 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 528.0
-offset_right = 784.0
-offset_bottom = 129.0
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 236.0
+offset_bottom = -3.0
 grow_horizontal = 2
-text = "Options"
+text = "Options:"
 label_settings = SubResource("LabelSettings_xn2yy")
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Volume" parent="Panel/Control" unique_id=1022413433 instance=ExtResource("4_43q1g")]
 layout_mode = 1
-offset_left = 53.0
-offset_top = 195.0
-offset_right = 53.47998
-offset_bottom = 195.36002
+offset_left = 40.0
+offset_top = 84.0
+offset_right = 40.47998
+offset_bottom = 84.36002
 
 [node name="X Button" type="Button" parent="Panel/Control" unique_id=69237454]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 1280.0
-offset_right = 1336.0
-offset_bottom = 60.0
+offset_left = 1304.0
+offset_top = -55.0
+offset_right = 1360.0
+offset_bottom = 5.0
 grow_horizontal = 0
 scale = Vector2(1.2, 1.2)
 theme = ExtResource("2_5gnfj")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 text = "X"
 
 [node name="FPS Setting" parent="Panel" unique_id=1859656027 instance=ExtResource("5_we4i2")]
 visible = false
 layout_mode = 1
-offset_left = 53.0
-offset_top = 324.0
-offset_right = 53.0
-offset_bottom = 324.0
+offset_left = 40.0
+offset_top = 232.0
+offset_right = 40.0
+offset_bottom = 232.0
 
 [node name="DisplaySettings" parent="Panel" unique_id=1930080190 instance=ExtResource("6_5gnfj")]
 visible = false
 layout_mode = 1
-offset_left = 53.0
-offset_top = 462.0
-offset_right = 53.0
-offset_bottom = 462.0
+offset_left = 621.0
+offset_top = 84.0
+offset_right = 621.0
+offset_bottom = 84.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1547898002]
 libraries/ = SubResource("AnimationLibrary_boeap")
 speed_scale = 2.0
 
 [connection signal="pressed" from="Panel/Control/X Button" to="." method="_on_x_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

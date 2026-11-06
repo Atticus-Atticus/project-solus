@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://6bhoemw7xbmv" path="res://Audio/ChangeMenu2.wav" id="8_wxj22"]
 [ext_resource type="Script" uid="uid://bsm6d4ehekqo" path="res://Scripts/StartUpScript.gd" id="10_20jfy"]
 [ext_resource type="AudioStream" uid="uid://2tj4jn650v3b" path="res://Audio/MenuAmbience.wav" id="12_62ken"]
+[ext_resource type="Environment" uid="uid://c3cyo3gwyei0x" path="res://Shaders/MenuEnvironment.tres" id="13_ux4qk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ejov"]
 font = ExtResource("2_yjw5q")
@@ -47,6 +48,11 @@ line_spacing = 0.0
 font = ExtResource("2_yjw5q")
 font_size = 34
 font_color = Color(0.4, 1, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b47fg"]
+font = ExtResource("2_yjw5q")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_otn71"]
 length = 0.001
@@ -100,7 +106,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(576, 384), Vector2(1348, 384)]
+"values": [Vector2(570, 350), Vector2(1352, 330)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -112,7 +118,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(576, 501), Vector2(576, 501), Vector2(1344, 501)]
+"values": [Vector2(570, 467), Vector2(570, 467), Vector2(1356, 467)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -121,10 +127,10 @@ tracks/2/path = NodePath("ColorRect3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8),
+"times": PackedFloat32Array(0, 0.40000004, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(576, 618), Vector2(576, 618), Vector2(1348, 618)]
+"values": [Vector2(570, 584), Vector2(570, 584), Vector2(1354, 584)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xqpr1"]
@@ -228,7 +234,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [false]
 }
 
@@ -292,7 +298,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [true]
 }
 
@@ -311,15 +317,6 @@ _data = {
 &"Title": SubResource("Animation_gjvee"),
 &"TurnOn": SubResource("Animation_vi7bc")
 }
-
-[sub_resource type="Environment" id="Environment_e55cl"]
-background_mode = 3
-glow_enabled = true
-glow_normalized = true
-glow_intensity = 2.4
-glow_strength = 0.83
-glow_hdr_threshold = 0.0
-glow_hdr_scale = 1.75
 
 [node name="MainMenu" type="Control" unique_id=212934873]
 layout_mode = 3
@@ -373,7 +370,7 @@ offset_top = -540.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.109804, 0.211765, 1)
+color = Color(0, 0.07058824, 0.14901961, 1)
 
 [node name="StartUpText" type="Label" parent="." unique_id=1518083198]
 modulate = Color(1.2, 1.2, 1.2, 1)
@@ -466,7 +463,6 @@ text = "    ____                  _              __     _____         __
 label_settings = SubResource("LabelSettings_2r0ac")
 
 [node name="Login" type="Control" parent="." unique_id=1063518864]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -491,14 +487,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -234.5
-offset_top = 23.0
-offset_right = 234.5
-offset_bottom = 71.0
+offset_left = -384.0
+offset_top = -38.0
+offset_right = 230.0
+offset_bottom = 10.0
 grow_horizontal = 2
-text = "Please Enter Login Details"
-label_settings = ExtResource("5_v0pky")
-horizontal_alignment = 1
+text = "Please Enter Login Details:"
+label_settings = SubResource("LabelSettings_b47fg")
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Login/Panel" unique_id=1260091388]
@@ -524,14 +519,15 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -38.0
-offset_right = 426.0
-offset_bottom = 38.0
+offset_left = 52.0
+offset_top = -73.0
+offset_right = 388.0
+offset_bottom = 27.0
 grow_vertical = 2
-text = "  Username:
+text = "Username:
 Access Key:"
 label_settings = ExtResource("5_v0pky")
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="LineEdit User" type="LineEdit" parent="Login/Panel" unique_id=634577659]
@@ -541,10 +537,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -38.0
-offset_right = 188.0
-offset_bottom = -7.0
+offset_left = 8.0
+offset_top = -58.0
+offset_right = 258.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_xa31x")
@@ -557,10 +553,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = 7.0
-offset_right = 188.0
-offset_bottom = 38.0
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 258.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_xa31x")
@@ -586,31 +582,35 @@ text = "> Enter <"
 layout_mode = 0
 offset_left = 576.0
 offset_top = 384.0
-offset_right = 1347.9995
-offset_bottom = 501.0
-color = Color(0, 0.109804, 0.211765, 1)
+offset_right = 1347.9998
+offset_bottom = 544.9979
+scale = Vector2(1.0399976, 1)
+color = Color(0, 0.07058824, 0.14901961, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Login" unique_id=54684818]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 501.0
-offset_right = 1347.999
-offset_bottom = 618.0
-color = Color(0, 0.109804, 0.211765, 1)
+offset_right = 1347.9956
+offset_bottom = 617.99677
+scale = Vector2(1.0399976, 1)
+color = Color(0, 0.07058824, 0.14901961, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Login" unique_id=1841760090]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 618.0
-offset_right = 1347.999
-offset_bottom = 735.0
-color = Color(0, 0.109804, 0.211765, 1)
+offset_right = 1348.0007
+offset_bottom = 762.0
+scale = Vector2(1.0399976, 1)
+color = Color(0, 0.07058824, 0.14901961, 1)
 
 [node name="AnimationPlayerLogin" type="AnimationPlayer" parent="Login" unique_id=389517743]
 libraries/ = SubResource("AnimationLibrary_xqpr1")
 speed_scale = 0.7
 
 [node name="ProjectSolusCursor2" type="Sprite2D" parent="." unique_id=1496109505]
+visible = false
 position = Vector2(60, 1367)
 texture = ExtResource("4_8auyq")
 
@@ -643,7 +643,7 @@ stream = ExtResource("12_62ken")
 stream = ExtResource("8_wxj22")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759802349]
-environment = SubResource("Environment_e55cl")
+environment = ExtResource("13_ux4qk")
 
 [connection signal="mouse_entered" from="Login/Panel/EnterButton" to="." method="_on_enter_button_mouse_entered"]
 [connection signal="mouse_exited" from="Login/Panel/EnterButton" to="." method="_on_enter_button_mouse_exited"]

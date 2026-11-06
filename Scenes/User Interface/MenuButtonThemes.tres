@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://c0hd413ct61mn"]
 
+[ext_resource type="FontFile" uid="uid://dxbengwcj1ncc" path="res://Fonts/retro_computer_personal_use.ttf" id="1_mauva"]
 [ext_resource type="FontFile" uid="uid://cl13vdpjsrg3q" path="res://Fonts/whitrabt.ttf" id="1_mtgfi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4o0f"]
@@ -18,22 +19,31 @@ bg_color = Color(0.4, 1, 0.941176, 1)
 bg_color = Color(0.4, 1, 0.941176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydd4n"]
-bg_color = Color(0, 0.109804, 0.211765, 1)
+bg_color = Color(0.0890001, 0.15377504, 0.21696624, 1)
 border_width_left = 5
-border_width_top = 5
+border_width_top = 32
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.4, 1, 0.941176, 1)
+border_color = Color(8.856058e-06, 0.74004316, 0.92718375, 1)
+expand_margin_left = 5.0
+expand_margin_top = 32.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mahqc"]
+bg_color = Color(0.09019608, 0.15294118, 0.21568628, 1)
+border_blend = true
 
 [resource]
-Button/colors/font_color = Color(0.4, 1, 0.941176, 1)
+Button/colors/font_color = Color(0.78047717, 0.93222624, 1, 1)
+Button/colors/font_disabled_color = Color(4.5242905e-06, 0.38926983, 0.5012022, 1)
 Button/colors/font_hover_color = Color(0.4, 1, 0.941176, 1)
 Button/colors/font_hover_pressed_color = Color(0.4, 1, 0.941176, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 0)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/colors/icon_normal_color = Color(1, 1, 1, 0)
-Button/font_sizes/font_size = 35
-Button/fonts/font = ExtResource("1_mtgfi")
+Button/colors/font_pressed_color = Color(0.78039217, 0.93333334, 1, 1)
+Button/colors/icon_normal_color = Color(0.78039217, 0.93333334, 1, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_mauva")
 Button/styles/hover = SubResource("StyleBoxFlat_t4o0f")
 Button/styles/normal = SubResource("StyleBoxFlat_scm4j")
 Button/styles/pressed = SubResource("StyleBoxFlat_cg3c1")
@@ -45,6 +55,8 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_irset")
 LineEdit/colors/font_color = Color(0.4, 1, 0.941176, 1)
 LineEdit/font_sizes/font_size = 25
 LineEdit/fonts/font = ExtResource("1_mtgfi")
-OptionButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-OptionButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_ydd4n")
+PopupMenu/colors/font_color = Color(0.78039217, 0.93333334, 1, 1)
+PopupMenu/colors/font_hover_color = Color(0.4, 1, 0.9411765, 1)
+PopupMenu/fonts/font = ExtResource("1_mtgfi")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_mahqc")
