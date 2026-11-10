@@ -9673,59 +9673,11 @@ skeleton = NodePath("")
 
 [node name="Interactables" type="Node3D" parent="." unique_id=877203600]
 
-[node name="DoorNode1" parent="Interactables" unique_id=1025806860 instance=ExtResource("1_2i266")]
-transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 12, 0, 8)
-
-[node name="Door Interactable" parent="Interactables/DoorNode1" unique_id=207222191 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode2" parent="Interactables" unique_id=961079432 instance=ExtResource("1_2i266")]
-transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 0, 0, 8)
-
-[node name="Door Interactable" parent="Interactables/DoorNode2" unique_id=1489130137 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode3" parent="Interactables" unique_id=917892534 instance=ExtResource("1_2i266")]
-transform = Transform3D(3.8941477e-07, 0, 2, 0, 2, 0, -2, 0, 3.8941477e-07, 16, 0, 18)
-
-[node name="Door Interactable" parent="Interactables/DoorNode3" unique_id=2058056923 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode4" parent="Interactables" unique_id=597939999 instance=ExtResource("1_2i266")]
-transform = Transform3D(2, 0, -4.7683756e-07, 0, 2, 0, 4.7683756e-07, 0, 2, 22, 0, 36)
-
-[node name="Door Interactable" parent="Interactables/DoorNode4" unique_id=2020070137 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode5" parent="Interactables" unique_id=1724101662 instance=ExtResource("1_2i266")]
-transform = Transform3D(2, 0, -4.7683756e-07, 0, 2, 0, 4.7683756e-07, 0, 2, 30, 0, 46)
-
-[node name="Door Interactable" parent="Interactables/DoorNode5" unique_id=1983726436 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode6" parent="Interactables" unique_id=1792421116 instance=ExtResource("1_2i266")]
-transform = Transform3D(-5.6426035e-07, 0, -2, 0, 2, 0, 2, 0, -5.6426035e-07, 16, 0, 52)
-
-[node name="Door Interactable" parent="Interactables/DoorNode6" unique_id=1805929915 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
-
-[node name="DoorNode7" parent="Interactables" unique_id=1866234111 instance=ExtResource("1_2i266")]
-transform = Transform3D(-2, 0, 6.5168314e-07, 0, 2, 0, -6.5168314e-07, 0, -2, 6, 0, 44)
-
-[node name="Door Interactable" parent="Interactables/DoorNode7" unique_id=1208255746 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.0017883778, 1, 0.5028591)
-
 [node name="DoorNode8" parent="Interactables" unique_id=2134567866 instance=ExtResource("1_2i266")]
 transform = Transform3D(7.3910593e-07, 0, 2, 0, 2, 0, -2, 0, 7.3910593e-07, 10, 0, 36)
 
 [node name="Door Interactable" parent="Interactables/DoorNode8" unique_id=281535764 instance=ExtResource("33_swfy8")]
 transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 0.016477585, 1, 0.49935722)
-
-[node name="DoorNode9" parent="Interactables" unique_id=18038608 instance=ExtResource("1_2i266")]
-transform = Transform3D(2, 0, -8.265287e-07, 0, 2, 0, 8.265287e-07, 0, 2, 6, 0, 28)
-
-[node name="Door Interactable" parent="Interactables/DoorNode9" unique_id=1480406482 instance=ExtResource("33_swfy8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0.5)
 
 [node name="LockedDoorInteractableNode" parent="Interactables" unique_id=1089615765 node_paths=PackedStringArray("trigger") instance=ExtResource("14_ar2in")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20.56891, 3.2590504, 26.08595)

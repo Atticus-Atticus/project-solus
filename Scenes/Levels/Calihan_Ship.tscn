@@ -375,10 +375,8 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_1avul"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_q3orp"]
-vertices = PackedVector3Array(128.48503, 10.0199995, -47.25, 123.48503, 10.0199995, -47.25, 121.73503, 10.0199995, -45.5, 121.73503, 10.0199995, -38.75, 130.48503, 10.0199995, -38.75, 130.48503, 10.0199995, -45.25, 122.73503, 0.38999987, -17, 122.23503, 0.38999987, -16.5, 123.73503, 0.38999987, -16.5, 128.48503, 5.3899994, -42.25, 128.48503, 5.3899994, -43.5, 127.23503, 5.3899994, -42.75, 124.48503, 5.3899994, -43.25, 124.48503, 5.3899994, -45, 123.73503, 5.3899994, -44.75, 123.73503, 5.3899994, -43, 123.73503, 5.3899994, -37.5, 122.73503, 5.3899994, -32.75, 123.73503, 0.38999987, -17.9, 123.73503, 0.5999999, -19.3, 123.73503, 1.1199999, -20.699999, 123.73503, 1.74, -22.099998, 123.73503, 2.2699997, -23.5, 123.73503, 3.5199997, -26.3, 123.73503, 4.04, -27.7, 123.73503, 4.66, -29.099998, 123.73503, 5.1800003, -30.5, 123.73503, 5.3899994, -31.9, 122.73503, 5.3899994, -31.318182, 122.73503, 4.9700003, -29.886364, 122.73503, 4.3499994, -28.454546, 122.73503, 3.8299997, -27.022728, 122.73503, 1.9499998, -22.727272, 122.73503, 1.4299998, -21.295454, 122.73503, 0.80999994, -19.863636, 122.73503, 0.38999987, -18.431818, 124.48503, 5.3899994, -42.5, 124.98503, 5.3899994, -42.75, 121.98503, 5.3899994, -39.75, 121.98503, 5.3899994, -33.25, 124.48503, 5.3899994, -41.75, 124.23503, 5.3899994, -37.75, 124.23503, 5.3899994, -39.25, 124.73503, 5.3899994, -39.75, 129.98503, 5.3899994, -39.5, 129.98503, 5.3899994, -41.75, 127.73503, 0.38999987, -10, 128.23503, 0.38999987, -10.5, 127.23503, 0.38999987, -10.5, 126.73503, 0.38999987, -9.75, 127.73503, 0.38999987, -8.75, 124.48503, 0.38999987, -13.75, 124.98503, 0.38999987, -14, 124.98503, 0.38999987, -15, 122.73503, 0.38999987, -8.25, 121.98503, 0.53, -7.75, 124.98503, 0.38999987, -7.25, 126.98503, 0.38999987, -8, 125.48503, 0.38999987, -9.75, 125.48503, 0.38999987, -8.25, 121.98503, 0.38999987, -11.5, 122.73503, 0.38999987, -10.75, 124.98503, 0.38999987, -10.25, 120.98503, 0.38999987, -15, 120.98503, 0.38999987, -11.5, 135.98503, 0.45000005, -10.5, 136.73503, 0.38999987, -9.5, 136.73503, 0.38999987, -12.5, 136.36003, 0.51, -11.5, 136.73503, 0.63999987, -10.5, 136.73503, 0.63999987, -11.5, 131.23503, 0.38999987, -12.25, 129.23503, 0.38999987, -12.75, 129.23503, 0.38999987, -11, 134.98503, 0.38999987, -13, 134.63503, 0.38999987, -10.599998, 131.98503, 0.38999987, -12.75, 128.73503, 0.38999987, -10.75, 134.53503, 0.38999987, -10.549999, 129.23503, 1.3699999, -8.5, 130.98503, 1.3699999, -8.5, 130.73503, 1.3699999, -9, 129.23503, 1.3699999, -9, 122.73503, 0.38999987, -2, 123.23503, 0.38999987, -1.5, 123.48503, 0.38999987, -2, 121.73503, 0.38999987, -4.25, 129.23503, 0.38999987, -1.75, 129.48503, 0.38999987, -0.5, 130.98503, 0.38999987, -0.5, 120.98503, 0.38999987, -7.5, 120.98503, 0.38999987, -5.75, 121.73503, 0.38999987, -5.25, 120.98503, 0.38999987, -3.75, 121.23503, 0.38999987, -2, 124.98503, 0.38999987, -4.5, 128.48503, 0.38999987, -2.5, 130.98503, 0.38999987, -3.75, 125.48503, 0.38999987, -4, 134.23503, 0.38999987, -0.75, 134.98503, 0.38999987, -0.5, 134.98503, 0.38999987, -1.5, 133.73503, 0.38999987, -1.75, 124.48503, 0.38999987, 3.75, 124.73503, 0.38999987, 4.25, 126.73503, 0.38999987, 3.75, 128.23503, 0.38999987, 3, 124.73503, 0.38999987, 2.25, 130.48503, 0.38999987, 2.25, 130.98503, 0.38999987, 2, 128.98503, 0.38999987, 2.25, 122.98503, 0.38999987, 0, 120.98503, 0.6199999, 0.25, 120.23503, 0.38999987, 1, 120.23503, 0.38999987, 3.75, 121.98503, 0.38999987, 0.125, 127.73503, 0.38999987, 6, 130.23503, 0.38999987, 6, 130.98503, 0.38999987, 5, 133.73503, 4.6399994, 1.75, 133.73503, 4.6399994, 2.5, 137.48503, 4.6399994, 2.5, 137.48503, 4.6399994, 1.75, 130.48503, 0.38999987, 11.75, 130.98503, 0.38999987, 11.5, 130.98503, 0.38999987, 10.25, 133.23503, 0.38999987, 10.25, 132.98503, 0.38999987, 12, 133.73503, 0.38999987, 12, 134.48503, 0.38999987, 10.5, 134.23503, 0.38999987, 9.25, 134.98503, 0.38999987, 8.75, 134.98503, 0.38999987, 7.25, 134.73503, 0.38999987, 7.25, 132.73503, 0.38999987, 8.25, 132.73503, 0.38999987, 9.75, 135.73503, 0.38999987, 6.5, 136.73503, 0.38999987, 6.5, 135.98503, 0.39999986, 4.25, 134.48503, 0.38999987, 14, 135.23503, 0.38999987, 14, 135.23503, 0.38999987, 11, 127.23503, 0.38999987, 8.75, 126.73503, 0.38999987, 9.25, 126.73503, 0.38999987, 10.75, 126.98503, 0.38999987, 7, 125.48503, 0.38999987, 10.75, 125.48503, 0.38999987, 9.25, 124.98503, 0.38999987, 8, 120.98503, 0.38999987, 8.25, 121.73503, 0.38999987, 10.75, 123.23503, 0.38999987, 12, 120.98503, 0.38999987, 13, 121.73503, 0.38999987, 13.5, 120.98503, 0.38999987, 10.25, 134.23503, 0.39999986, 4.25, 127.23503, 0.38999987, 11.25, 131.48503, 0.38999987, 8.25, 131.48503, 0.38999987, 9.75, 127.23503, 0.38999987, 14, 130.73503, 0.38999987, 14, 122.73503, 0.38999987, 16.5, 123.73503, 0.38999987, 16, 134.48503, 0.38999987, 16, 134.98503, 0.38999987, 16.75, 135.48503, 0.38999987, 16.25, 118.23503, -1.37, 18.25, 121.48503, 0.26, 18, 118.48503, -1.24, 18, 120.401695, -0.37, 18.083336, 117.98503, -1.61, 16.5, 118.23503, -1.37, 17.25, 117.73503, -1.61, 18.75, 115.48503, -1.61, 16.5, 115.48503, -1.61, 20.5, 115.48503, -1.61, 27.5, 115.48503, -1.61, 29.5, 117.23503, -1.61, 29.5, 117.98503, -1.61, 30.25, 120.23503, -1.61, 30.25, 120.73503, -1.61, 29.5, 121.48503, -1.61, 20, 118.23503, -1.61, 20, 114.98503, -1.61, 20.75, 114.98503, -1.61, 27.25, 121.48503, -1.61, 29.5, 139.73503, -1.35, 18, 136.48503, 0.26999998, 18, 139.73503, -1.35, 18.25, 138.6517, -0.85, 18, 138.6517, -0.85, 18.166664, 140.23503, -1.6, 18.75, 142.48503, -1.61, 20.5, 142.48503, -1.61, 16.5, 140.23503, -1.61, 16.5, 139.98503, -1.6, 17.25, 135.98503, -1.61, 19.5, 136.23503, -1.61, 16.5, 121.98503, -1.61, 16.5, 122.23503, -1.61, 19.5, 142.48503, -1.61, 27.75, 136.48503, -1.61, 20, 142.48503, -1.61, 29.5, 139.98503, -1.61, 20, 142.98503, -1.61, 20.75, 142.98503, -1.61, 27.5)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(8, 6, 18), PackedInt32Array(18, 6, 35), PackedInt32Array(18, 35, 19), PackedInt32Array(19, 35, 34), PackedInt32Array(19, 34, 20), PackedInt32Array(20, 34, 33), PackedInt32Array(20, 33, 21), PackedInt32Array(21, 33, 32), PackedInt32Array(21, 32, 22), PackedInt32Array(22, 32, 23), PackedInt32Array(23, 32, 31), PackedInt32Array(23, 31, 24), PackedInt32Array(24, 31, 30), PackedInt32Array(24, 30, 25), PackedInt32Array(25, 30, 29), PackedInt32Array(25, 29, 26), PackedInt32Array(26, 29, 28), PackedInt32Array(26, 28, 27), PackedInt32Array(27, 28, 17), PackedInt32Array(27, 17, 16), PackedInt32Array(37, 36, 12), PackedInt32Array(12, 36, 15), PackedInt32Array(17, 39, 16), PackedInt32Array(16, 39, 38), PackedInt32Array(40, 36, 37), PackedInt32Array(41, 16, 42), PackedInt32Array(42, 16, 38), PackedInt32Array(40, 37, 43), PackedInt32Array(43, 37, 11), PackedInt32Array(43, 11, 9), PackedInt32Array(43, 9, 44), PackedInt32Array(9, 45, 44), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 38), PackedInt32Array(48, 47, 46), PackedInt32Array(48, 46, 49), PackedInt32Array(49, 46, 50), PackedInt32Array(52, 51, 53), PackedInt32Array(53, 51, 8), PackedInt32Array(56, 55, 54), PackedInt32Array(50, 57, 49), PackedInt32Array(49, 57, 59), PackedInt32Array(49, 59, 58), PackedInt32Array(61, 60, 62), PackedInt32Array(62, 60, 51), PackedInt32Array(7, 8, 63), PackedInt32Array(63, 8, 51), PackedInt32Array(63, 51, 60), PackedInt32Array(63, 60, 64), PackedInt32Array(58, 59, 62), PackedInt32Array(62, 59, 56), PackedInt32Array(62, 56, 54), PackedInt32Array(62, 54, 61), PackedInt32Array(67, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(68, 69, 65), PackedInt32Array(65, 69, 66), PackedInt32Array(73, 72, 71), PackedInt32Array(65, 75, 68), PackedInt32Array(68, 75, 67), PackedInt32Array(67, 75, 74), PackedInt32Array(74, 75, 71), PackedInt32Array(71, 75, 73), PackedInt32Array(71, 76, 74), PackedInt32Array(65, 78, 75), PackedInt32Array(75, 78, 73), PackedInt32Array(73, 78, 77), PackedInt32Array(82, 81, 79), PackedInt32Array(79, 81, 80), PackedInt32Array(84, 83, 85), PackedInt32Array(85, 83, 86), PackedInt32Array(89, 88, 87), PackedInt32Array(90, 55, 91), PackedInt32Array(91, 55, 92), PackedInt32Array(93, 86, 94), PackedInt32Array(94, 86, 83), PackedInt32Array(92, 55, 86), PackedInt32Array(86, 55, 56), PackedInt32Array(86, 56, 95), PackedInt32Array(86, 95, 85), PackedInt32Array(85, 98, 96), PackedInt32Array(96, 98, 97), PackedInt32Array(87, 96, 89), PackedInt32Array(89, 96, 97), PackedInt32Array(95, 98, 85), PackedInt32Array(100, 99, 101), PackedInt32Array(101, 99, 102), PackedInt32Array(103, 107, 104), PackedInt32Array(104, 107, 105), PackedInt32Array(105, 107, 106), PackedInt32Array(108, 110, 109), PackedInt32Array(109, 110, 88), PackedInt32Array(109, 88, 89), PackedInt32Array(112, 115, 113), PackedInt32Array(113, 115, 111), PackedInt32Array(113, 111, 114), PackedInt32Array(114, 111, 107), PackedInt32Array(114, 107, 103), PackedInt32Array(117, 116, 118), PackedInt32Array(118, 116, 105), PackedInt32Array(118, 105, 106), PackedInt32Array(118, 106, 108), PackedInt32Array(106, 110, 108), PackedInt32Array(122, 121, 119), PackedInt32Array(119, 121, 120), PackedInt32Array(125, 124, 123), PackedInt32Array(127, 126, 128), PackedInt32Array(128, 126, 129), PackedInt32Array(132, 131, 133), PackedInt32Array(133, 131, 130), PackedInt32Array(133, 130, 134), PackedInt32Array(134, 130, 135), PackedInt32Array(138, 137, 136), PackedInt32Array(129, 141, 128), PackedInt32Array(128, 141, 139), PackedInt32Array(139, 141, 140), PackedInt32Array(144, 143, 142), PackedInt32Array(145, 116, 142), PackedInt32Array(142, 116, 117), PackedInt32Array(147, 146, 148), PackedInt32Array(148, 146, 151), PackedInt32Array(148, 151, 150), PackedInt32Array(148, 150, 149), PackedInt32Array(135, 130, 126), PackedInt32Array(126, 130, 129), PackedInt32Array(153, 152, 151), PackedInt32Array(151, 152, 150), PackedInt32Array(154, 149, 150), PackedInt32Array(132, 133, 136), PackedInt32Array(136, 133, 138), PackedInt32Array(138, 133, 155), PackedInt32Array(144, 142, 156), PackedInt32Array(156, 142, 123), PackedInt32Array(123, 142, 157), PackedInt32Array(157, 142, 117), PackedInt32Array(157, 158, 125), PackedInt32Array(160, 159, 123), PackedInt32Array(123, 159, 156), PackedInt32Array(144, 146, 143), PackedInt32Array(143, 146, 147), PackedInt32Array(161, 153, 162), PackedInt32Array(162, 153, 151), PackedInt32Array(157, 134, 158), PackedInt32Array(158, 134, 135), PackedInt32Array(157, 125, 123), PackedInt32Array(165, 164, 163), PackedInt32Array(166, 168, 169), PackedInt32Array(169, 168, 167), PackedInt32Array(168, 166, 171), PackedInt32Array(171, 166, 170), PackedInt32Array(166, 172, 170), PackedInt32Array(170, 172, 173), PackedInt32Array(173, 172, 174), PackedInt32Array(177, 176, 175), PackedInt32Array(179, 178, 180), PackedInt32Array(180, 178, 177), PackedInt32Array(180, 177, 175), PackedInt32Array(182, 181, 183), PackedInt32Array(183, 181, 184), PackedInt32Array(184, 181, 180), PackedInt32Array(180, 181, 185), PackedInt32Array(180, 175, 184), PackedInt32Array(174, 172, 182), PackedInt32Array(183, 174, 182), PackedInt32Array(188, 190, 186), PackedInt32Array(186, 190, 189), PackedInt32Array(189, 190, 187), PackedInt32Array(188, 186, 191), PackedInt32Array(191, 186, 195), PackedInt32Array(191, 195, 194), PackedInt32Array(191, 194, 193), PackedInt32Array(191, 193, 192), PackedInt32Array(199, 198, 196), PackedInt32Array(196, 198, 197), PackedInt32Array(201, 200, 196), PackedInt32Array(196, 200, 202), PackedInt32Array(196, 202, 199), PackedInt32Array(199, 202, 185), PackedInt32Array(185, 181, 199), PackedInt32Array(203, 191, 192), PackedInt32Array(192, 204, 203), PackedInt32Array(203, 204, 201), PackedInt32Array(201, 204, 205), PackedInt32Array(201, 205, 200)]
-cell_height = 0.01
-agent_radius = 0.6
+vertices = PackedVector3Array(0.23503113, 10.5, -38.5, 0.48503113, 10, -37.5, 4.235031, 10, -37.5, 4.485031, 10.5, -38.5, -3.5149689, 10.5, -45.5, -3.5149689, 10.5, -38.5, 5.735031, 10.5, -38.5, 5.735031, 10.5, -45.25, 3.4850311, 10.5, -47.5, -1.5149689, 10.5, -47.5, 0.7350311, 7.25, -45.75, 0.7350311, 6.75, -44.25, 1.4850311, 6.75, -44.25, 1.4850311, 7.25, -45.75, 3.7350311, 5.75, -43.75, 2.4850311, 5.75, -43.5, 2.2350311, 5.75, -43, 3.7350311, 5.75, -42.25, -0.014968872, 5.75, -43, -0.7649689, 5.75, -41.75, -0.5149689, 5.75, -39.25, 4.735031, 5.75, -39.5, -1.0149689, 5.75, -37.5, -0.5149689, 5.75, -37.75, -3.2649689, 5.75, -40, -0.26496887, 5.75, -45.25, -1.5149689, 5.75, -45, -1.5149689, 5.75, -43, -0.7649689, 5.75, -42.5, -1.2649689, 0.75, -18.75, -1.2649689, 5.75, -33, -2.5149689, 5.75, -32.75, -2.5149689, 0.75, -18.75, -1.2649689, 5.5, -30.15, -2.5149689, 5.75, -31.35, -2.5149689, 4.75, -28.55, -3.2649689, 5.75, -33.25, -0.7649689, 5.75, -33.25, 5.235031, 5.75, -39, 5.235031, 5.75, -42, -3.2649689, 8, -44, -3.2649689, 8, -43.25, -2.7649689, 8, -43.25, -2.7649689, 8, -44.25, 19.985031, -0.25, -19.5, 19.985031, -0.5, -18.75, 20.485031, -0.75, -19.25, -0.26496887, 0.75, -15.25, -0.26496887, 0.75, -16, -1.0149689, 0.75, -16.25, -2.5149689, 0.75, -17, -4.264969, 0.75, -15, -4.264969, 0.75, -11.5, -2.5149689, 0.75, -10.75, -0.26496887, 0.75, -12.75, -0.014968872, 0.75, -10.5, 0.23503113, 0.75, -12.5, 0.23503113, 0.75, -15, 0.23503113, 0.75, -7.5, 0.7350311, 0.75, -8, 0.7350311, 0.75, -10, -2.5149689, 0.75, -9, 2.2350311, 0.75, -7.75, 2.4850311, 0.75, -8.25, 1.7350311, 0.75, -10, 3.7350311, 0.75, -10.25, 3.4850311, 0.75, -11, 1.9850311, 0.75, -10.75, 3.4850311, 0.75, -8.25, 6.235031, 0.75, -12.5, 3.9850311, 0.75, -13, 3.9850311, 0.75, -11.5, 11.485031, 1, -10.25, 11.985031, 0.75, -12.5, 9.985031, 0.75, -13.25, 6.985031, 0.75, -13, 11.985031, 0.75, -9.5, 1.2350311, 5, -13, 1.2350311, 5, -11.75, 1.9850311, 4.75, -11.75, 1.9850311, 4.75, -13, 4.485031, 1.75, -8.25, 7.985031, 1.75, -8.25, 7.735031, 1.75, -9.25, 4.485031, 1.75, -9.25, 9.485031, 1.75, -8.5, 10.735031, 1.75, -8.25, 10.735031, 1.75, -9.25, 9.485031, 1.75, -9.25, -0.014968872, 0.75, 2, -0.26496887, 0.75, 1.25, -1.2649689, 0.75, 0.75, -0.5149689, 0.75, 4, 1.7350311, 0.75, 2.75, 1.2350311, 0.75, 2, -0.26496887, 0.75, 4.5, 1.4850311, 0.75, 4, -2.7649689, 0.75, -8, -4.264969, 0.75, -2.25, -3.7649689, 0.75, -1.75, -2.2649689, 0.75, -1.75, -3.5149689, 0.75, -4.25, -4.264969, 0.75, -4, -1.7649689, 0.75, -1.75, 0.23503113, 0.75, -4.5, 1.2350311, 0.75, -2.25, 2.2350311, 0.75, -2.25, 2.2350311, 0.75, -4.25, -3.5149689, 0.75, -5.25, -2.0149689, 0.75, -0.25, -4.014969, 1, 0, -5.014969, 0.75, 1, -5.014969, 0.75, 4, -4.264969, 0.75, -7.75, -4.264969, 0.75, -5.5, 0.9850311, 0.75, -1.75, 1.7350311, 0.75, -6.25, 1.7350311, 0.75, -5.5, 2.7350311, 0.75, -5.5, 2.7350311, 0.75, -6.25, 1.9850311, 0.75, 4.25, 3.2350311, 0.75, 2.75, 6.485031, 0.75, 0.25, 6.235031, 0.75, -3.75, 3.9850311, 0.75, -1.75, 4.235031, 0.75, 0.25, 5.735031, 0.75, 2.25, 6.235031, 0.75, 2, 3.4850311, 0.75, -2.25, 5.735031, 0.75, -4.25, 2.2350311, 0.75, 6.25, 5.735031, 0.75, 6.25, 5.735031, 0.75, 5.5, 6.235031, 0.75, 5.25, 7.735031, 0.75, -0.25, 7.735031, 0.75, 0.25, 8.235031, 0.75, 0.25, 10.235031, 0.75, -0.5, 8.985031, 0.75, -0.5, 10.235031, 0.75, -1.5, 8.985031, 0.75, -1.75, 11.735031, 1.75, -1.25, 11.735031, 1.75, -0.75, 12.235031, 2, -0.75, 12.235031, 2, -1.25, 1.9850311, 0.75, 0, 1.9850311, 0.75, 0.5, 2.9850311, 0.75, 0.25, 11.485031, 5, 0.5, 10.735031, 5, 0.5, 10.235031, 5, 1.25, 8.485031, 5, 1.25, 8.485031, 5, 3, 12.735031, 5, 1.5, 12.735031, 5, 3, 6.985031, 5, 6, 7.235031, 5, 6.75, 7.985031, 4.75, 6.5, 7.735031, 5, 3.75, 7.235031, 5, 3.75, 5.735031, 0.75, 14.25, 6.235031, 0.75, 13.75, 5.735031, 0.75, 13.25, 2.2350311, 0.75, 14.25, 11.735031, 0.75, 5.25, 12.235031, 0.75, 4.75, 10.985031, 0.75, 4, 5.735031, 0.75, 11.75, 6.235031, 0.75, 11.5, 6.235031, 0.75, 10.25, 10.735031, 0.75, 6.75, 12.235031, 0.75, 6.75, 9.485031, 0.75, 9.25, 10.235031, 0.75, 8.75, 10.235031, 0.75, 7.25, 9.485031, 0.75, 7.25, 7.735031, 0.75, 8, 7.735031, 0.75, 10, 1.7350311, 0.75, 7, 1.9850311, 0.75, 8.5, 8.985031, 0.75, 12.5, 9.235031, 0.75, 14.25, 10.485031, 0.75, 14.25, 10.485031, 0.75, 11, 6.485031, 0.75, 8, 9.735031, 0.75, 10.5, 7.735031, 0.75, 12.25, 8.985031, 0.75, 4, 1.9850311, 0.75, 11.5, 1.7350311, 0.75, 13.75, 1.2350311, 0.75, 8.75, 1.2350311, 0.75, 11.25, -1.7649689, 2.25, 5.5, -1.2649689, 2.5, 6.25, -1.2649689, 2.25, 5, -3.2649689, 2.25, 5.75, -4.264969, 2.25, 5.25, -18.764969, 4.75, 5.5, -18.764969, 4.75, 6, -17.514969, 4.75, 6, -17.514969, 4.75, 5.5, -3.7649689, 0.75, 13.25, -3.7649689, 0.75, 14.25, -3.0149689, 0.75, 14.5, -1.5149689, 0.75, 14, -1.2649689, 0.75, 16, -0.5149689, 0.75, 16, -0.7649689, 0.75, 14.5, -6.514969, -1.25, 16.5, -4.764969, -1.25, 16.5, -4.764969, -1.25, 16.25, -9.764969, -1.25, 16.25, -2.2649689, 0.75, 16.5, -2.0149689, 0.75, 16.75, -3.2649689, 0.75, 16, -3.5149689, 0.75, 10.75, -4.264969, 0.75, 13, -1.5149689, 0.75, 12, -4.264969, 0.75, 8.25, -4.264969, 0.75, 10.5, -2.2649689, 0.75, 17.25, -3.5149689, 0.5, 17.75, -3.2649689, 0.75, 18, -2.0149689, 0.75, 18, 0.23503113, 0.75, 8.5, -1.0149689, 0.75, 11.5, -3.7649689, 0.75, 7.75, 0.23503113, 0.75, 7.75, -6.764969, -1, 17.5, -6.514969, -1, 18.5, -3.5149689, 0.5, 18.5, -9.764969, -1.25, 19.25, -6.764969, -1, 19.25, 11.235031, 2.25, 8.25, 11.235031, 2.5, 10.25, 11.735031, 2.25, 9.25, 11.485031, 2.5, 13.25, 12.235031, 2.5, 13.25, 12.235031, 2.5, 10.5, 11.485031, 2.5, 10.25, 7.235031, 5, 14.25, 7.985031, 5, 14.5, 7.985031, 4.75, 13.25, 7.235031, 5, 13.25, 12.985031, -1.25, 16.25, 12.985031, -1.25, 16.5, 14.735031, -1.25, 16.5, 17.735031, -1.25, 16.25, 14.985031, -1.25, 19.5, 14.485031, -1.25, 19.75, 17.735031, -1.25, 20, 11.735031, 0.5, 17.75, 11.235031, 0.75, 18, 11.485031, 0.75, 18.5, 14.735031, -1, 18.5, 14.985031, -1, 17.5, 10.735031, 0.75, 16, 17.735031, 0.75, 15.75, 7.235031, 0.75, 15.75, 9.235031, 0.75, 16, 10.485031, 0.75, 17.25, 9.985031, 0.75, 18, 9.985031, 0.75, 16.75, -2.7649689, -1.25, 16.75, 10.985031, -1.25, 16.75, 10.985031, -1.25, 19.5, -2.7649689, -1.25, 19.5, 18.235031, -1.25, 20.75, 17.735031, -1.25, 27.75, 18.235031, -1.25, 27.5, -3.2649689, -1.25, 19.75, -3.2649689, -1.25, 29.75, 17.735031, -1.25, 29.75, -9.764969, -1.25, 27.5, -9.764969, -1.25, 29.75, -7.764969, -1.25, 29.75, -9.764969, -1.25, 20.5, -6.514969, -1.25, 19.75, -10.264969, -1.25, 20.75, -7.514969, -1, 30.5, -4.514969, -1, 30.5, -4.264969, -1.25, 29.75, -10.264969, -1.25, 27.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(0, 5, 4), PackedInt32Array(7, 6, 3), PackedInt32Array(9, 8, 4), PackedInt32Array(4, 8, 7), PackedInt32Array(4, 7, 0), PackedInt32Array(0, 7, 3), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(18, 16, 19), PackedInt32Array(19, 16, 17), PackedInt32Array(19, 17, 20), PackedInt32Array(20, 17, 21), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 24), PackedInt32Array(20, 24, 19), PackedInt32Array(28, 27, 18), PackedInt32Array(18, 27, 26), PackedInt32Array(18, 26, 25), PackedInt32Array(31, 30, 34), PackedInt32Array(34, 30, 33), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 32), PackedInt32Array(32, 33, 29), PackedInt32Array(30, 31, 37), PackedInt32Array(37, 31, 36), PackedInt32Array(37, 36, 22), PackedInt32Array(22, 36, 24), PackedInt32Array(19, 28, 18), PackedInt32Array(38, 21, 39), PackedInt32Array(39, 21, 17), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(46, 45, 44), PackedInt32Array(49, 48, 47), PackedInt32Array(32, 29, 50), PackedInt32Array(50, 29, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 47), PackedInt32Array(47, 52, 51), PackedInt32Array(47, 51, 50), PackedInt32Array(56, 55, 54), PackedInt32Array(54, 55, 53), PackedInt32Array(47, 57, 54), PackedInt32Array(59, 58, 60), PackedInt32Array(60, 58, 55), PackedInt32Array(55, 58, 61), PackedInt32Array(55, 61, 53), PackedInt32Array(50, 49, 47), PackedInt32Array(62, 59, 63), PackedInt32Array(63, 59, 64), PackedInt32Array(64, 59, 60), PackedInt32Array(66, 65, 67), PackedInt32Array(67, 65, 64), PackedInt32Array(64, 65, 63), PackedInt32Array(63, 65, 68), PackedInt32Array(71, 70, 69), PackedInt32Array(75, 74, 69), PackedInt32Array(69, 74, 73), PackedInt32Array(69, 73, 72), PackedInt32Array(69, 72, 65), PackedInt32Array(73, 76, 72), PackedInt32Array(66, 71, 65), PackedInt32Array(65, 71, 69), PackedInt32Array(80, 79, 77), PackedInt32Array(77, 79, 78), PackedInt32Array(84, 83, 81), PackedInt32Array(81, 83, 82), PackedInt32Array(88, 87, 85), PackedInt32Array(85, 87, 86), PackedInt32Array(90, 89, 91), PackedInt32Array(91, 89, 92), PackedInt32Array(94, 93, 89), PackedInt32Array(89, 93, 96), PackedInt32Array(89, 96, 92), PackedInt32Array(92, 96, 95), PackedInt32Array(97, 61, 58), PackedInt32Array(99, 98, 100), PackedInt32Array(100, 98, 102), PackedInt32Array(100, 102, 101), PackedInt32Array(100, 104, 103), PackedInt32Array(106, 105, 107), PackedInt32Array(107, 105, 104), PackedInt32Array(101, 108, 100), PackedInt32Array(100, 108, 104), PackedInt32Array(104, 108, 58), PackedInt32Array(58, 108, 97), PackedInt32Array(109, 91, 110), PackedInt32Array(110, 91, 111), PackedInt32Array(111, 91, 112), PackedInt32Array(112, 91, 92), PackedInt32Array(100, 103, 109), PackedInt32Array(109, 103, 91), PackedInt32Array(114, 113, 108), PackedInt32Array(108, 113, 97), PackedInt32Array(105, 115, 104), PackedInt32Array(104, 115, 103), PackedInt32Array(119, 118, 116), PackedInt32Array(116, 118, 117), PackedInt32Array(96, 93, 120), PackedInt32Array(120, 93, 121), PackedInt32Array(125, 124, 122), PackedInt32Array(122, 124, 123), PackedInt32Array(127, 126, 122), PackedInt32Array(122, 126, 125), PackedInt32Array(125, 126, 121), PackedInt32Array(128, 106, 107), PackedInt32Array(128, 107, 124), PackedInt32Array(124, 107, 129), PackedInt32Array(124, 129, 123), PackedInt32Array(132, 131, 130), PackedInt32Array(133, 132, 126), PackedInt32Array(126, 132, 121), PackedInt32Array(121, 132, 120), PackedInt32Array(120, 132, 130), PackedInt32Array(135, 134, 136), PackedInt32Array(136, 134, 138), PackedInt32Array(136, 138, 137), PackedInt32Array(137, 138, 139), PackedInt32Array(139, 138, 140), PackedInt32Array(144, 143, 141), PackedInt32Array(141, 143, 142), PackedInt32Array(147, 146, 145), PackedInt32Array(150, 149, 148), PackedInt32Array(152, 151, 150), PackedInt32Array(148, 153, 150), PackedInt32Array(150, 153, 154), PackedInt32Array(150, 154, 152), PackedInt32Array(156, 155, 157), PackedInt32Array(157, 155, 159), PackedInt32Array(157, 159, 158), PackedInt32Array(161, 160, 162), PackedInt32Array(162, 160, 163), PackedInt32Array(166, 165, 164), PackedInt32Array(169, 168, 167), PackedInt32Array(164, 171, 170), PackedInt32Array(174, 173, 175), PackedInt32Array(175, 173, 172), PackedInt32Array(175, 172, 176), PackedInt32Array(176, 172, 177), PackedInt32Array(130, 179, 178), PackedInt32Array(181, 180, 182), PackedInt32Array(182, 180, 183), PackedInt32Array(184, 169, 167), PackedInt32Array(183, 180, 185), PackedInt32Array(185, 180, 186), PackedInt32Array(185, 186, 177), PackedInt32Array(174, 175, 170), PackedInt32Array(170, 175, 164), PackedInt32Array(164, 175, 166), PackedInt32Array(166, 175, 187), PackedInt32Array(131, 184, 130), PackedInt32Array(130, 184, 179), PackedInt32Array(179, 184, 188), PackedInt32Array(188, 184, 167), PackedInt32Array(176, 177, 184), PackedInt32Array(184, 177, 169), PackedInt32Array(172, 185, 177), PackedInt32Array(189, 188, 163), PackedInt32Array(163, 188, 162), PackedInt32Array(162, 188, 167), PackedInt32Array(190, 179, 191), PackedInt32Array(191, 179, 188), PackedInt32Array(192, 194, 193), PackedInt32Array(192, 195, 194), PackedInt32Array(194, 195, 196), PackedInt32Array(200, 199, 197), PackedInt32Array(197, 199, 198), PackedInt32Array(202, 201, 203), PackedInt32Array(203, 201, 204), PackedInt32Array(207, 206, 205), PackedInt32Array(209, 208, 210), PackedInt32Array(210, 208, 211), PackedInt32Array(213, 212, 205), PackedInt32Array(205, 212, 207), PackedInt32Array(207, 212, 204), PackedInt32Array(204, 212, 203), PackedInt32Array(203, 212, 214), PackedInt32Array(216, 215, 201), PackedInt32Array(201, 215, 217), PackedInt32Array(201, 217, 204), PackedInt32Array(215, 219, 218), PackedInt32Array(221, 220, 222), PackedInt32Array(222, 220, 223), PackedInt32Array(190, 191, 224), PackedInt32Array(224, 191, 225), PackedInt32Array(218, 226, 215), PackedInt32Array(215, 226, 225), PackedInt32Array(225, 226, 224), PackedInt32Array(224, 226, 227), PackedInt32Array(212, 213, 220), PackedInt32Array(220, 213, 223), PackedInt32Array(215, 225, 217), PackedInt32Array(211, 208, 228), PackedInt32Array(222, 230, 221), PackedInt32Array(221, 230, 229), PackedInt32Array(221, 229, 228), PackedInt32Array(229, 232, 228), PackedInt32Array(228, 232, 231), PackedInt32Array(228, 231, 211), PackedInt32Array(235, 234, 233), PackedInt32Array(237, 236, 238), PackedInt32Array(238, 236, 239), PackedInt32Array(243, 242, 240), PackedInt32Array(240, 242, 241), PackedInt32Array(245, 244, 246), PackedInt32Array(246, 244, 247), PackedInt32Array(248, 250, 249), PackedInt32Array(252, 251, 253), PackedInt32Array(253, 251, 254), PackedInt32Array(254, 251, 255), PackedInt32Array(255, 246, 247), PackedInt32Array(254, 255, 248), PackedInt32Array(248, 255, 250), PackedInt32Array(250, 255, 247), PackedInt32Array(259, 258, 256), PackedInt32Array(256, 258, 257), PackedInt32Array(251, 252, 260), PackedInt32Array(260, 252, 261), PackedInt32Array(262, 259, 256), PackedInt32Array(261, 262, 260), PackedInt32Array(260, 262, 256), PackedInt32Array(209, 210, 263), PackedInt32Array(263, 210, 264), PackedInt32Array(264, 210, 245), PackedInt32Array(245, 210, 244), PackedInt32Array(266, 263, 265), PackedInt32Array(265, 263, 264), PackedInt32Array(250, 267, 249), PackedInt32Array(249, 267, 265), PackedInt32Array(265, 267, 269), PackedInt32Array(265, 269, 268), PackedInt32Array(270, 266, 271), PackedInt32Array(271, 266, 265), PackedInt32Array(271, 265, 268), PackedInt32Array(271, 268, 272), PackedInt32Array(275, 274, 273), PackedInt32Array(276, 231, 232), PackedInt32Array(232, 277, 276), PackedInt32Array(276, 277, 278), PackedInt32Array(280, 279, 275), PackedInt32Array(280, 275, 281), PackedInt32Array(281, 275, 273), PackedInt32Array(281, 273, 282), PackedInt32Array(277, 270, 278), PackedInt32Array(278, 270, 282), PackedInt32Array(282, 270, 281), PackedInt32Array(281, 270, 271)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nojs5"]
 resource_name = "material_0"
@@ -4671,1409 +4669,1411 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, -5, 15)
 transform = Transform3D(-8.742278e-08, 0, 1.9, 0, 2, 0, -2, 0, -8.305164e-08, -2, 0, 10)
 
 [node name="CalShipDoorSmall" parent="Interactables" unique_id=1185149194 instance=ExtResource("22_oncqd")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 4, 0, -2)
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 4, 0, 0)
 
 [node name="CalShipDoorSmall2" parent="Interactables" unique_id=1206303611 instance=ExtResource("22_oncqd")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -5, 0, -1)
 
 [node name="CalihanShip Nav Region" type="NavigationRegion3D" parent="." unique_id=945214267]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_q3orp")
 
 [node name="CalShipFloor2" parent="CalihanShip Nav Region" unique_id=1370860603 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
 [node name="CalShipFloor4" parent="CalihanShip Nav Region" unique_id=2064578196 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
 [node name="CalShipFloor6" parent="CalihanShip Nav Region" unique_id=1551528 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 [node name="CalShipFloor21" parent="CalihanShip Nav Region" unique_id=1332869366 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
 
 [node name="CalShipFloor25" parent="CalihanShip Nav Region" unique_id=1677994899 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
 
 [node name="CalShipFloor27" parent="CalihanShip Nav Region" unique_id=1652297479 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
 
 [node name="CalShipFloor36" parent="CalihanShip Nav Region" unique_id=1934658202 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
 
 [node name="CalShipFloor37" parent="CalihanShip Nav Region" unique_id=43765234 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 10)
 
 [node name="CalShipFloor38" parent="CalihanShip Nav Region" unique_id=1380178784 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 
 [node name="CalShipFloor39" parent="CalihanShip Nav Region" unique_id=1362571402 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
 [node name="CalShipFloor40" parent="CalihanShip Nav Region" unique_id=1088473435 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 
 [node name="CalShipFloor108" parent="CalihanShip Nav Region" unique_id=709553092 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
 [node name="CalShipFloor97" parent="CalihanShip Nav Region" unique_id=481528756 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 
 [node name="CalShipFloor98" parent="CalihanShip Nav Region" unique_id=1303995740 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
 
 [node name="CalShipFloor100" parent="CalihanShip Nav Region" unique_id=54619623 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 
 [node name="CalShipFloor101" parent="CalihanShip Nav Region" unique_id=579225853 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
 
 [node name="CalShipFloor102" parent="CalihanShip Nav Region" unique_id=838234559 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
 
 [node name="CalShipFloor103" parent="CalihanShip Nav Region" unique_id=456893378 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 
 [node name="CalShipFloor114" parent="CalihanShip Nav Region" unique_id=87068236 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 
 [node name="CalShipFloor160" parent="CalihanShip Nav Region" unique_id=1012963651 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 
 [node name="CalShipFloor161" parent="CalihanShip Nav Region" unique_id=436417473 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
 
 [node name="CalShipFloor162" parent="CalihanShip Nav Region" unique_id=136803832 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 
 [node name="CalShipFloor163" parent="CalihanShip Nav Region" unique_id=617218297 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
 
 [node name="CalShipFloor164" parent="CalihanShip Nav Region" unique_id=1005947320 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -16)
 
 [node name="CalShipFloor177" parent="CalihanShip Nav Region" unique_id=2039749641 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124, 5, -34)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -34)
 
 [node name="CalShipFloor178" parent="CalihanShip Nav Region" unique_id=1425765593 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122, 5, -38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -38)
 
 [node name="CalShipFloor179" parent="CalihanShip Nav Region" unique_id=1420670400 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122, 5, -34)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -34)
 
 [node name="CalShipFloor180" parent="CalihanShip Nav Region" unique_id=1615092143 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122, 5, -36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -36)
 
 [node name="CalShipFloor181" parent="CalihanShip Nav Region" unique_id=153737031 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124, 5, -36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -36)
 
 [node name="CalShipFloor183" parent="CalihanShip Nav Region" unique_id=532836965 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124, 5, -38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -38)
 
 [node name="CalShipFloor187" parent="CalihanShip Nav Region" unique_id=166677551 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 5, -38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -38)
 
 [node name="CalShipFloor191" parent="CalihanShip Nav Region" unique_id=388494063 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130, 5, -38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -38)
 
 [node name="CalShipFloor192" parent="CalihanShip Nav Region" unique_id=7787385 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 5, -38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -38)
 
 [node name="CalShipFloor165" parent="CalihanShip Nav Region" unique_id=1370681704 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -16)
 
 [node name="CalShipFloor166" parent="CalihanShip Nav Region" unique_id=750020162 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -14)
 
 [node name="CalShipFloor167" parent="CalihanShip Nav Region" unique_id=1157175831 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -12)
 
 [node name="CalShipFloor168" parent="CalihanShip Nav Region" unique_id=160204726 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
 
 [node name="CalShipFloor169" parent="CalihanShip Nav Region" unique_id=1689195424 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
 
 [node name="CalShipFloor170" parent="CalihanShip Nav Region" unique_id=176540523 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
 
 [node name="CalShipFloor171" parent="CalihanShip Nav Region" unique_id=378040936 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
 
 [node name="CalShipFloor172" parent="CalihanShip Nav Region" unique_id=896911639 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
 
 [node name="CalShipFloor173" parent="CalihanShip Nav Region" unique_id=1793408509 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -14)
 
 [node name="CalShipFloor115" parent="CalihanShip Nav Region" unique_id=1444135156 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
 
 [node name="CalShipFloor113" parent="CalihanShip Nav Region" unique_id=1438212772 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
 
 [node name="CalShipFloor131" parent="CalihanShip Nav Region" unique_id=979745322 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
 
 [node name="CalShipFloor132" parent="CalihanShip Nav Region" unique_id=554871486 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10)
 
 [node name="CalShipFloor133" parent="CalihanShip Nav Region" unique_id=384851049 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -12)
 
 [node name="CalShipFloor135" parent="CalihanShip Nav Region" unique_id=898601084 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -14)
 
 [node name="CalShipFloor136" parent="CalihanShip Nav Region" unique_id=582008110 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -14)
 
 [node name="CalShipFloor137" parent="CalihanShip Nav Region" unique_id=1162517352 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -14)
 
 [node name="CalShipFloor138" parent="CalihanShip Nav Region" unique_id=1569999070 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -14)
 
 [node name="CalShipFloor139" parent="CalihanShip Nav Region" unique_id=556399000 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -14)
 
 [node name="CalShipFloor140" parent="CalihanShip Nav Region" unique_id=1418846632 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14)
 
 [node name="CalShipFloor142" parent="CalihanShip Nav Region" unique_id=1299474399 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
 
 [node name="CalShipFloor143" parent="CalihanShip Nav Region" unique_id=1170331996 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10)
 
 [node name="CalShipFloor144" parent="CalihanShip Nav Region" unique_id=1022955586 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
 
 [node name="CalShipFloor145" parent="CalihanShip Nav Region" unique_id=834982485 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
 
 [node name="CalShipFloor146" parent="CalihanShip Nav Region" unique_id=2011210299 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
 
 [node name="CalShipFloor147" parent="CalihanShip Nav Region" unique_id=372389737 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -8)
 
 [node name="CalShipFloor148" parent="CalihanShip Nav Region" unique_id=362381683 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
 
 [node name="CalShipFloor149" parent="CalihanShip Nav Region" unique_id=1828364251 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -12)
 
 [node name="CalShipFloor154" parent="CalihanShip Nav Region" unique_id=271315846 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
 
 [node name="CalShipFloor155" parent="CalihanShip Nav Region" unique_id=1577547522 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
 
 [node name="CalShipFloor156" parent="CalihanShip Nav Region" unique_id=1681477068 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10)
 
 [node name="CalShipFloor157" parent="CalihanShip Nav Region" unique_id=2024128963 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10)
 
 [node name="CalShipFloor158" parent="CalihanShip Nav Region" unique_id=146569689 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -12)
 
 [node name="CalShipFloor159" parent="CalihanShip Nav Region" unique_id=124034322 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
 
 [node name="CalShipFloor104" parent="CalihanShip Nav Region" unique_id=471520392 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
 [node name="CalShipFloor107" parent="CalihanShip Nav Region" unique_id=895601764 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
 
 [node name="CalShipFloor42" parent="CalihanShip Nav Region" unique_id=585882878 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 
 [node name="CalShipFloor43" parent="CalihanShip Nav Region" unique_id=768094654 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
 
 [node name="CalShipFloor45" parent="CalihanShip Nav Region" unique_id=2092050068 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 
 [node name="CalShipFloor46" parent="CalihanShip Nav Region" unique_id=289630234 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 
 [node name="CalShipFloor47" parent="CalihanShip Nav Region" unique_id=724629247 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
 
 [node name="CalShipFloor48" parent="CalihanShip Nav Region" unique_id=988474049 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
 
 [node name="CalShipFloor49" parent="CalihanShip Nav Region" unique_id=927340689 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
 
 [node name="CalShipFloor50" parent="CalihanShip Nav Region" unique_id=2096438617 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
 
 [node name="CalShipFloor60" parent="CalihanShip Nav Region" unique_id=1551377202 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
 
 [node name="CalShipFloor61" parent="CalihanShip Nav Region" unique_id=131921196 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 14)
 
 [node name="CalShipFloor116" parent="CalihanShip Nav Region" unique_id=1606233859 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
 
 [node name="CalShipFloor117" parent="CalihanShip Nav Region" unique_id=207244256 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10)
 
 [node name="CalShipFloor118" parent="CalihanShip Nav Region" unique_id=222450882 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
 
 [node name="CalShipFloor119" parent="CalihanShip Nav Region" unique_id=1944278595 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
 
 [node name="CalShipFloor120" parent="CalihanShip Nav Region" unique_id=869672956 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 
 [node name="CalShipFloor121" parent="CalihanShip Nav Region" unique_id=763243894 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
 
 [node name="CalShipFloor122" parent="CalihanShip Nav Region" unique_id=1563105471 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
 [node name="CalShipFloor123" parent="CalihanShip Nav Region" unique_id=507631683 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
 [node name="CalShipFloor125" parent="CalihanShip Nav Region" unique_id=1069927812 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
 
 [node name="CalShipFloor62" parent="CalihanShip Nav Region" unique_id=521978162 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
 
 [node name="CalShipFloor23" parent="CalihanShip Nav Region" unique_id=714722981 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
 
 [node name="CalShipFloor75" parent="CalihanShip Nav Region" unique_id=369976062 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 14)
 
 [node name="CalShipFloor76" parent="CalihanShip Nav Region" unique_id=660464359 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
 
 [node name="CalShipFloor77" parent="CalihanShip Nav Region" unique_id=1882146875 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10)
 
 [node name="CalShipFloor78" parent="CalihanShip Nav Region" unique_id=993382427 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
 
 [node name="CalShipFloor79" parent="CalihanShip Nav Region" unique_id=620776601 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6)
 
 [node name="CalShipFloor80" parent="CalihanShip Nav Region" unique_id=174963996 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
 
 [node name="CalShipFloor81" parent="CalihanShip Nav Region" unique_id=374627271 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
 
 [node name="CalShipFloor82" parent="CalihanShip Nav Region" unique_id=146694893 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
 
 [node name="CalShipFloor83" parent="CalihanShip Nav Region" unique_id=1521122843 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
 
 [node name="CalShipFloor84" parent="CalihanShip Nav Region" unique_id=1944643651 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
 
 [node name="CalShipFloor85" parent="CalihanShip Nav Region" unique_id=227377494 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
 
 [node name="CalShipFloor86" parent="CalihanShip Nav Region" unique_id=104957290 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
 
 [node name="CalShipFloor87" parent="CalihanShip Nav Region" unique_id=402679296 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 12)
 
 [node name="CalShipFloor88" parent="CalihanShip Nav Region" unique_id=1515399249 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
 
 [node name="CalShipFloor89" parent="CalihanShip Nav Region" unique_id=1493254845 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 14)
 
 [node name="CalShipFloor90" parent="CalihanShip Nav Region" unique_id=1232642700 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
 
 [node name="CalShipFloor91" parent="CalihanShip Nav Region" unique_id=1246392033 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10)
 
 [node name="CalShipFloor92" parent="CalihanShip Nav Region" unique_id=70253224 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
 
 [node name="CalShipFloor93" parent="CalihanShip Nav Region" unique_id=415560888 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
 
 [node name="CalShipFloor94" parent="CalihanShip Nav Region" unique_id=1020643348 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
 
 [node name="CalShipFloor95" parent="CalihanShip Nav Region" unique_id=1667504945 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
 
 [node name="CalShipFloor24" parent="CalihanShip Nav Region" unique_id=849277139 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
 
 [node name="CalShipFloor96" parent="CalihanShip Nav Region" unique_id=1896805900 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
 [node name="CalShipFloor110" parent="CalihanShip Nav Region" unique_id=1659594422 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
 
 [node name="CalShipFloor16" parent="CalihanShip Nav Region" unique_id=1787503900 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
 
 [node name="CalShipFloor18" parent="CalihanShip Nav Region" unique_id=1753360211 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
 
 [node name="CalShipFloor20" parent="CalihanShip Nav Region" unique_id=902957528 instance=ExtResource("11_01typ")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
 
 [node name="CalShipDoorFrameMedium" parent="CalihanShip Nav Region" unique_id=37284508 instance=ExtResource("12_5mno4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, 3)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, 3)
 
 [node name="CalShipDoorFrameMedium3" parent="CalihanShip Nav Region" unique_id=1483497202 instance=ExtResource("12_5mno4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, 9)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 9)
 
 [node name="CalShipDoorFrameMedium9" parent="CalihanShip Nav Region" unique_id=128427801 instance=ExtResource("12_5mno4")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, 5, -37)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 5, -37)
 
 [node name="CalShipDoorFrameMedium10" parent="CalihanShip Nav Region" unique_id=1326115867 instance=ExtResource("12_5mno4")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 123, 5, -37)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, 5, -37)
 
 [node name="CalShipDoorFrameMedium5" parent="CalihanShip Nav Region" unique_id=1098243638 instance=ExtResource("12_5mno4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, -9)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -9)
 
 [node name="CalShipDoorFrameMedium7" parent="CalihanShip Nav Region" unique_id=764263535 instance=ExtResource("12_5mno4")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, 0, -17)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, -17)
 
 [node name="CalShipDoorFrameMedium8" parent="CalihanShip Nav Region" unique_id=2145468820 instance=ExtResource("12_5mno4")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 123, 0, -17)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, 0, -17)
 
 [node name="CalShipDoorFrameMedium6" parent="CalihanShip Nav Region" unique_id=2113995587 instance=ExtResource("12_5mno4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 126, 0, -9)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, -9)
 
 [node name="CalShipDoorFrameMedium2" parent="CalihanShip Nav Region" unique_id=1582349967 instance=ExtResource("12_5mno4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 126, 0, 3)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, 3)
 
 [node name="CalShipDoorFrameMedium4" parent="CalihanShip Nav Region" unique_id=1824798821 instance=ExtResource("12_5mno4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 9)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 9)
 
 [node name="CalShipWallCornerIn2" parent="CalihanShip Nav Region" unique_id=1268973499 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 125, 0, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="CalShipWallCornerIn10" parent="CalihanShip Nav Region" unique_id=524487748 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 121, 0, 8)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4, 0, 8)
 
 [node name="CalShipWallCornerIn23" parent="CalihanShip Nav Region" unique_id=213506904 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 125, 0, 6)
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 0, 0, 6)
 
 [node name="CalShipWallCornerIn12" parent="CalihanShip Nav Region" unique_id=39835966 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 131, 0, 14)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 14)
 
 [node name="CalShipWallCornerIn13" parent="CalihanShip Nav Region" unique_id=315132470 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
 
 [node name="CalShipWallCornerIn17" parent="CalihanShip Nav Region" unique_id=471249209 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 131, 0, -4)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, -4)
 
 [node name="CalShipWallCornerIn18" parent="CalihanShip Nav Region" unique_id=1777667127 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
 
 [node name="CalShipWallCornerIn24" parent="CalihanShip Nav Region" unique_id=254067793 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 130, 5, -38)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 5, -38)
 
 [node name="CalShipWall2" parent="CalihanShip Nav Region" unique_id=487296547 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 121, 0, -1)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -1)
 
 [node name="CalShipWall9" parent="CalihanShip Nav Region" unique_id=1652080736 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 121, 0, 7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4, 0, 7)
 
 [node name="CalShipWall10" parent="CalihanShip Nav Region" unique_id=1893818687 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 123, 0, 7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, 0, 7)
 
 [node name="CalShipWall4" parent="CalihanShip Nav Region" unique_id=1322853251 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 118, 0, 2)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -7, 0, 2)
 
 [node name="CalShipWall5" parent="CalihanShip Nav Region" unique_id=11211993 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 118, 0, 4)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -7, 0, 4)
 
 [node name="CalShipWall6" parent="CalihanShip Nav Region" unique_id=205270360 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 118, 0, 6)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -7, 0, 6)
 
 [node name="CalShipWall7" parent="CalihanShip Nav Region" unique_id=998116470 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 118, 0, 0)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -7, 0, 0)
 
 [node name="CalShipWall8" parent="CalihanShip Nav Region" unique_id=857917600 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 119, 0, -1)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -6, 0, -1)
 
 [node name="CalShipWall12" parent="CalihanShip Nav Region" unique_id=1737618593 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 119, 0, 7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -6, 0, 7)
 
 [node name="CalShipWall68" parent="CalihanShip Nav Region" unique_id=1829610065 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="CalShipWall46" parent="CalihanShip Nav Region" unique_id=1114670126 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, -6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -6)
 
 [node name="CalShipWall47" parent="CalihanShip Nav Region" unique_id=1281548591 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -8)
 
 [node name="CalShipWall50" parent="CalihanShip Nav Region" unique_id=1113544248 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, -12)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -12)
 
 [node name="CalShipWall66" parent="CalihanShip Nav Region" unique_id=211494675 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, -14)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -14)
 
 [node name="CalShipWall71" parent="CalihanShip Nav Region" unique_id=2093580930 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 121, 5, -34)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 5, -34)
 
 [node name="CalShipWall72" parent="CalihanShip Nav Region" unique_id=1151086551 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 125, 5, -34)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 5, -34)
 
 [node name="CalShipWall73" parent="CalihanShip Nav Region" unique_id=11544729 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 125, 5, -36)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 5, -36)
 
 [node name="CalShipWall78" parent="CalihanShip Nav Region" unique_id=1811097492 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 5, -37)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -37)
 
 [node name="CalShipWall99" parent="CalihanShip Nav Region" unique_id=1195919206 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 5, -37)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -37)
 
 [node name="CalShipWall100" parent="CalihanShip Nav Region" unique_id=881424157 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 121, 5, -38)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 5, -38)
 
 [node name="CalShipWall74" parent="CalihanShip Nav Region" unique_id=951132071 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 121, 5, -36)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 5, -36)
 
 [node name="CalShipWall48" parent="CalihanShip Nav Region" unique_id=1088947185 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 126, 0, -12)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, -12)
 
 [node name="CalShipWall51" parent="CalihanShip Nav Region" unique_id=2042184372 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 126, 0, -6)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, -6)
 
 [node name="CalShipWall76" parent="CalihanShip Nav Region" unique_id=557366923 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 127, 0, -5)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 2, 0, -5)
 
 [node name="CalShipWall52" parent="CalihanShip Nav Region" unique_id=630467809 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 126, 0, -12)
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 1, 0, -12)
 
 [node name="CalShipWall64" parent="CalihanShip Nav Region" unique_id=988272620 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 126, 0, -14)
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 1, 0, -14)
 
 [node name="CalShipWall93" parent="CalihanShip Nav Region" unique_id=1950501512 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 127, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 2, 0, -15)
 
 [node name="CalShipWall54" parent="CalihanShip Nav Region" unique_id=40346402 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 129, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 4, 0, -15)
 
 [node name="CalShipWall55" parent="CalihanShip Nav Region" unique_id=1441779947 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 131, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 6, 0, -15)
 
 [node name="CalShipWall56" parent="CalihanShip Nav Region" unique_id=1686449705 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 133, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 8, 0, -15)
 
 [node name="CalShipWall61" parent="CalihanShip Nav Region" unique_id=29456308 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 137, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 12, 0, -15)
 
 [node name="CalShipWall57" parent="CalihanShip Nav Region" unique_id=572877496 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 135, 0, -15)
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 10, 0, -15)
 
 [node name="CalShipWall87" parent="CalihanShip Nav Region" unique_id=76876341 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 138, 0, -7)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 13, 0, -7)
 
 [node name="CalShipWall88" parent="CalihanShip Nav Region" unique_id=1788962463 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 138, 0, -15)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 13, 0, -15)
 
 [node name="CalShipWall62" parent="CalihanShip Nav Region" unique_id=1849662708 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 135, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 10, 0, -7)
 
 [node name="CalShipWall86" parent="CalihanShip Nav Region" unique_id=1296049839 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 137, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 12, 0, -7)
 
 [node name="CalShipWall63" parent="CalihanShip Nav Region" unique_id=1657878735 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 133, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 8, 0, -7)
 
 [node name="CalShipWall85" parent="CalihanShip Nav Region" unique_id=1836903933 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 131, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 6, 0, -7)
 
 [node name="CalShipWall65" parent="CalihanShip Nav Region" unique_id=1024042939 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 129, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 4, 0, -7)
 
 [node name="CalShipWall84" parent="CalihanShip Nav Region" unique_id=1885305030 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 127, 0, -7)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 0, -7)
 
 [node name="CalShipDoorFameSmall" parent="CalihanShip Nav Region" unique_id=12033163 instance=ExtResource("15_pmuk1")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, -2)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 0)
 
 [node name="CalShipDoorFameSmall3" parent="CalihanShip Nav Region" unique_id=1236138730 instance=ExtResource("15_pmuk1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
 
 [node name="CalShipDoorFameSmall4" parent="CalihanShip Nav Region" unique_id=742343038 instance=ExtResource("15_pmuk1")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, 0, -1)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, -1)
 
 [node name="CalShipDoorFameSmall2" parent="CalihanShip Nav Region" unique_id=1990998279 instance=ExtResource("15_pmuk1")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, -2)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 0)
 
 [node name="CalShipWall37" parent="CalihanShip Nav Region" unique_id=1843242277 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, 4)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 4)
 
 [node name="CalShipWall41" parent="CalihanShip Nav Region" unique_id=169524030 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -2)
 
 [node name="CalShipWall22" parent="CalihanShip Nav Region" unique_id=382806438 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 125, 0, 7)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 7)
 
 [node name="CalShipWall24" parent="CalihanShip Nav Region" unique_id=1834353631 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 120, 0, 10)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -5, 0, 10)
 
 [node name="CalShipWall17" parent="CalihanShip Nav Region" unique_id=1918173462 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+
+[node name="CalShipWall21" parent="CalihanShip Nav Region" unique_id=349482374 instance=ExtResource("14_50umo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
 
 [node name="CalShipWall19" parent="CalihanShip Nav Region" unique_id=400523680 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 132, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -2)
 
 [node name="CalShipWall15" parent="CalihanShip Nav Region" unique_id=45520922 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 135, 0, -3)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, -3)
 
 [node name="CalShipWall18" parent="CalihanShip Nav Region" unique_id=1761166821 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 133, 0, -3)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, -3)
 
 [node name="CalShipWall27" parent="CalihanShip Nav Region" unique_id=652621378 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 135, 0, 15)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 10, 0, 15)
 
 [node name="CalShipWall95" parent="CalihanShip Nav Region" unique_id=265334414 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 133, 0, 15)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 8, 0, 15)
 
 [node name="CalShipWall28" parent="CalihanShip Nav Region" unique_id=517737047 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 12)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 12)
 
 [node name="CalShipWall94" parent="CalihanShip Nav Region" unique_id=1095272939 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 14)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 14)
 
 [node name="CalShipWall29" parent="CalihanShip Nav Region" unique_id=730953920 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 6)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 6)
 
 [node name="CalShipWall30" parent="CalihanShip Nav Region" unique_id=1091703380 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 4)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 4)
 
 [node name="CalShipWall31" parent="CalihanShip Nav Region" unique_id=485962631 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 135, 0, 1)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 10, 0, 1)
 
 [node name="CalShipWall59" parent="CalihanShip Nav Region" unique_id=1225795167 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 137, 0, 1)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 12, 0, 1)
 
 [node name="CalShipWall39" parent="CalihanShip Nav Region" unique_id=462349459 instance=ExtResource("14_50umo")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 133, 0, 1)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 8, 0, 1)
 
 [node name="CalShipWall44" parent="CalihanShip Nav Region" unique_id=149437666 instance=ExtResource("14_50umo")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 132, 0, 2)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7, 0, 2)
 
 [node name="CalShipWall60" parent="CalihanShip Nav Region" unique_id=1651886857 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 3)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 3)
 
 [node name="CalShipWall96" parent="CalihanShip Nav Region" unique_id=1118026710 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 2)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 2)
 
 [node name="CalShipWall33" parent="CalihanShip Nav Region" unique_id=1806821132 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 7)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 7)
 
 [node name="CalShipWall34" parent="CalihanShip Nav Region" unique_id=606940648 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 11)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 11)
 
 [node name="CalShipWall36" parent="CalihanShip Nav Region" unique_id=1905189824 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 14)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 14)
 
 [node name="CalShipWall53" parent="CalihanShip Nav Region" unique_id=1958679405 instance=ExtResource("14_50umo")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 138, 0, 13)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 13, 0, 13)
 
 [node name="CalShipWall58" parent="CalihanShip Nav Region" unique_id=753900151 instance=ExtResource("14_50umo")]
-transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 137, 0, 15)
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 12, 0, 15)
 
 [node name="CalShipWallCornerIn1" parent="CalihanShip Nav Region" unique_id=1533998570 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 137, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 0, 0)
 
 [node name="CalShipWallCornerIn3" parent="CalihanShip Nav Region" unique_id=1301862362 instance=ExtResource("13_lpcl5")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 137, 0, -2)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, -2)
 
 [node name="CalShipDoorFrameLarge" parent="CalihanShip Nav Region" unique_id=1275362174 instance=ExtResource("16_fcl5o")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 126, 0, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 10)
 
 [node name="CalShipDoorFrameLarge3" parent="CalihanShip Nav Region" unique_id=740404260 instance=ExtResource("16_fcl5o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 15)
 
 [node name="CalShipDoorFrameLarge4" parent="CalihanShip Nav Region" unique_id=122149401 instance=ExtResource("16_fcl5o")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138, 0, -11)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13, 0, -11)
 
 [node name="CalShipDoorFrameLarge2" parent="CalihanShip Nav Region" unique_id=1335899815 instance=ExtResource("16_fcl5o")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 126, 0, 10)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, 10)
 
 [node name="CalShipWall11" parent="CalihanShip Nav Region" unique_id=587063899 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, 14)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, 14)
 
 [node name="CalShipWall26" parent="CalihanShip Nav Region" unique_id=1525261111 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, 14)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, 14)
 
 [node name="CalShipWall40" parent="CalihanShip Nav Region" unique_id=428676586 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, -16)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -16)
 
 [node name="CalShipWall67" parent="CalihanShip Nav Region" unique_id=1262072564 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 120, 0, -16)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -5, 0, -16)
 
 [node name="CalShipWall80" parent="CalihanShip Nav Region" unique_id=1369792692 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 128, 0, -15)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -15)
 
 [node name="CalShipWall81" parent="CalihanShip Nav Region" unique_id=406936805 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 131, 0, -15)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 6, 0, -15)
 
 [node name="CalShipWall82" parent="CalihanShip Nav Region" unique_id=1559059163 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 134, 0, -15)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 9, 0, -15)
 
 [node name="CalShipWall83" parent="CalihanShip Nav Region" unique_id=2092450236 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 137, 0, -15)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 12, 0, -15)
 
 [node name="CalShipWall89" parent="CalihanShip Nav Region" unique_id=1760270489 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 137, 0, -7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 12, 0, -7)
 
 [node name="CalShipWall90" parent="CalihanShip Nav Region" unique_id=1638652393 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 134, 0, -7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 9, 0, -7)
 
 [node name="CalShipWall91" parent="CalihanShip Nav Region" unique_id=610170495 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 131, 0, -7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, 0, -7)
 
 [node name="CalShipWall92" parent="CalihanShip Nav Region" unique_id=773041240 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 128, 0, -7)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3, 0, -7)
 
 [node name="CalShipWall69" parent="CalihanShip Nav Region" unique_id=812752682 instance=ExtResource("17_hivnf")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 126, 0, 6)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, 6)
 
 [node name="CalShipWall70" parent="CalihanShip Nav Region" unique_id=1605354981 instance=ExtResource("17_hivnf")]
-transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 132, 0, 6)
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 7, 0, 6)
 
 [node name="CalShipWallCornerIn5" parent="CalihanShip Nav Region" unique_id=1505193292 instance=ExtResource("19_0301d")]
-transform = Transform3D(-2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, -2.9802322e-08, 120, 0, -17)
+transform = Transform3D(-2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, -2.9802322e-08, -5, 0, -17)
 
 [node name="CalShipWallCornerIn6" parent="CalihanShip Nav Region" unique_id=797204885 instance=ExtResource("19_0301d")]
-transform = Transform3D(-1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -1, 126, 0, -17)
+transform = Transform3D(-1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -1, 1, 0, -17)
 
 [node name="CalShipCargoWallHoleLeft" parent="CalihanShip Nav Region" unique_id=1474594415 instance=ExtResource("20_ucumq")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 125, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -2, 15)
 
 [node name="CalShipCargoWallHoleMid" parent="CalihanShip Nav Region" unique_id=539566180 instance=ExtResource("21_85ree")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, -2, 15)
 
 [node name="CalShipCargoWallHoleRight" parent="CalihanShip Nav Region" unique_id=1443645192 instance=ExtResource("22_pc5fs")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 121, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, -2, 15)
 
 [node name="CalShipCargoWall1" parent="CalihanShip Nav Region" unique_id=623799205 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 119, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, -2, 15)
 
 [node name="CalShipCargoWall2" parent="CalihanShip Nav Region" unique_id=690004916 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 127, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, -2, 15)
 
 [node name="CalShipCargoWall15" parent="CalihanShip Nav Region" unique_id=1886880059 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 123, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, -2, 31)
 
 [node name="CalShipCargoWall16" parent="CalihanShip Nav Region" unique_id=1135852608 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 125, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, -2, 31)
 
 [node name="CalShipCargoWall17" parent="CalihanShip Nav Region" unique_id=1278842119 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 127, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, -2, 31)
 
 [node name="CalShipCargoWall18" parent="CalihanShip Nav Region" unique_id=1340832926 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 129, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4, -2, 31)
 
 [node name="CalShipCargoWall19" parent="CalihanShip Nav Region" unique_id=1789174756 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 131, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, -2, 31)
 
 [node name="CalShipCargoWall20" parent="CalihanShip Nav Region" unique_id=922605770 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 133, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 8, -2, 31)
 
 [node name="CalShipCargoWall21" parent="CalihanShip Nav Region" unique_id=483648228 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 135, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 10, -2, 31)
 
 [node name="CalShipCargoWall22" parent="CalihanShip Nav Region" unique_id=1867890288 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 137, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 12, -2, 31)
 
 [node name="CalShipCargoWall23" parent="CalihanShip Nav Region" unique_id=2134788060 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 139, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 14, -2, 31)
 
 [node name="CalShipCargoWall24" parent="CalihanShip Nav Region" unique_id=1046684837 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 141, -2, 31)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 16, -2, 31)
 
 [node name="CalShipCargoWall3" parent="CalihanShip Nav Region" unique_id=247329000 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 131, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, -2, 15)
 
 [node name="CalShipCargoWall4" parent="CalihanShip Nav Region" unique_id=1069230348 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 133, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, -2, 15)
 
 [node name="CalShipCargoWall5" parent="CalihanShip Nav Region" unique_id=43874062 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 135, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, -2, 15)
 
 [node name="CalShipCargoWall6" parent="CalihanShip Nav Region" unique_id=417079229 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 137, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, -2, 15)
 
 [node name="CalShipCargoWall7" parent="CalihanShip Nav Region" unique_id=791896365 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 139, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, -2, 15)
 
 [node name="CalShipCargoWall8" parent="CalihanShip Nav Region" unique_id=938981409 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 141, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, -2, 15)
 
 [node name="CalShipCargoWall11" parent="CalihanShip Nav Region" unique_id=865160915 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 18)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 18)
 
 [node name="CalShipCargoWall14" parent="CalihanShip Nav Region" unique_id=1270709465 instance=ExtResource("23_n3d54")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 18)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 18)
 
 [node name="CalShipCargoWall9" parent="CalihanShip Nav Region" unique_id=2085456896 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 129, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, -2, 15)
 
 [node name="CalShipCargoWall10" parent="CalihanShip Nav Region" unique_id=495509250 instance=ExtResource("23_n3d54")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 117, -2, 15)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8, -2, 15)
 
 [node name="CalShipCargoFloor" parent="CalihanShip Nav Region" unique_id=1512960319 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 16)
 
 [node name="CalShipCargoFloor27" parent="CalihanShip Nav Region" unique_id=852565099 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 16)
 
 [node name="CalShipCargoFloor28" parent="CalihanShip Nav Region" unique_id=1279714237 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 16)
 
 [node name="CalShipCargoFloor37" parent="CalihanShip Nav Region" unique_id=1311405329 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 18)
 
 [node name="CalShipCargoFloor38" parent="CalihanShip Nav Region" unique_id=71573684 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 20)
 
 [node name="CalShipCargoFloor39" parent="CalihanShip Nav Region" unique_id=1266693282 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 22)
 
 [node name="CalShipCargoFloor40" parent="CalihanShip Nav Region" unique_id=1976036848 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 24)
 
 [node name="CalShipCargoFloor41" parent="CalihanShip Nav Region" unique_id=1959477896 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 26)
 
 [node name="CalShipCargoFloor42" parent="CalihanShip Nav Region" unique_id=1243823544 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 28)
 
 [node name="CalShipCargoFloor45" parent="CalihanShip Nav Region" unique_id=1767673572 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 18)
 
 [node name="CalShipCargoFloor46" parent="CalihanShip Nav Region" unique_id=649264578 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 20)
 
 [node name="CalShipCargoFloor47" parent="CalihanShip Nav Region" unique_id=136763734 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 22)
 
 [node name="CalShipCargoFloor48" parent="CalihanShip Nav Region" unique_id=499975167 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 24)
 
 [node name="CalShipCargoFloor49" parent="CalihanShip Nav Region" unique_id=221483120 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 26)
 
 [node name="CalShipCargoFloor50" parent="CalihanShip Nav Region" unique_id=749972614 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 28)
 
 [node name="CalShipCargoFloor53" parent="CalihanShip Nav Region" unique_id=652428059 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 18)
 
 [node name="CalShipCargoFloor54" parent="CalihanShip Nav Region" unique_id=1169784080 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 20)
 
 [node name="CalShipCargoFloor55" parent="CalihanShip Nav Region" unique_id=150301937 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 22)
 
 [node name="CalShipCargoFloor56" parent="CalihanShip Nav Region" unique_id=1236071553 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 24)
 
 [node name="CalShipCargoFloor57" parent="CalihanShip Nav Region" unique_id=226392303 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 26)
 
 [node name="CalShipCargoFloor58" parent="CalihanShip Nav Region" unique_id=1795346333 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 28)
 
 [node name="CalShipCargoFloor61" parent="CalihanShip Nav Region" unique_id=87898582 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 18)
 
 [node name="CalShipCargoFloor62" parent="CalihanShip Nav Region" unique_id=2051009415 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 20)
 
 [node name="CalShipCargoFloor63" parent="CalihanShip Nav Region" unique_id=1266705179 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 22)
 
 [node name="CalShipCargoFloor64" parent="CalihanShip Nav Region" unique_id=1073664151 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 24)
 
 [node name="CalShipCargoFloor65" parent="CalihanShip Nav Region" unique_id=285108313 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 26)
 
 [node name="CalShipCargoFloor66" parent="CalihanShip Nav Region" unique_id=1698099693 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 28)
 
 [node name="CalShipCargoFloor69" parent="CalihanShip Nav Region" unique_id=1182907292 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 18)
 
 [node name="CalShipCargoFloor70" parent="CalihanShip Nav Region" unique_id=1889899360 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 20)
 
 [node name="CalShipCargoFloor71" parent="CalihanShip Nav Region" unique_id=264811110 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 22)
 
 [node name="CalShipCargoFloor72" parent="CalihanShip Nav Region" unique_id=1904193435 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 24)
 
 [node name="CalShipCargoFloor73" parent="CalihanShip Nav Region" unique_id=1553469123 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 26)
 
 [node name="CalShipCargoFloor74" parent="CalihanShip Nav Region" unique_id=1597996120 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 28)
 
 [node name="CalShipCargoFloor77" parent="CalihanShip Nav Region" unique_id=1250979028 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 18)
 
 [node name="CalShipCargoFloor78" parent="CalihanShip Nav Region" unique_id=1099537958 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 20)
 
 [node name="CalShipCargoFloor79" parent="CalihanShip Nav Region" unique_id=300825508 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 22)
 
 [node name="CalShipCargoFloor80" parent="CalihanShip Nav Region" unique_id=837143547 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 24)
 
 [node name="CalShipCargoFloor81" parent="CalihanShip Nav Region" unique_id=2086025411 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 26)
 
 [node name="CalShipCargoFloor82" parent="CalihanShip Nav Region" unique_id=1056258517 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 28)
 
 [node name="CalShipCargoFloor85" parent="CalihanShip Nav Region" unique_id=1309257898 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 18)
 
 [node name="CalShipCargoFloor86" parent="CalihanShip Nav Region" unique_id=1753681933 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 20)
 
 [node name="CalShipCargoFloor87" parent="CalihanShip Nav Region" unique_id=1445663255 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 22)
 
 [node name="CalShipCargoFloor88" parent="CalihanShip Nav Region" unique_id=786207416 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 24)
 
 [node name="CalShipCargoFloor89" parent="CalihanShip Nav Region" unique_id=283435356 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 26)
 
 [node name="CalShipCargoFloor90" parent="CalihanShip Nav Region" unique_id=1381181112 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 28)
 
 [node name="CalShipCargoFloor93" parent="CalihanShip Nav Region" unique_id=1610001066 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 18)
 
 [node name="CalShipCargoFloor94" parent="CalihanShip Nav Region" unique_id=779499483 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 20)
 
 [node name="CalShipCargoFloor95" parent="CalihanShip Nav Region" unique_id=172715018 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 22)
 
 [node name="CalShipCargoFloor96" parent="CalihanShip Nav Region" unique_id=1267237846 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 24)
 
 [node name="CalShipCargoFloor97" parent="CalihanShip Nav Region" unique_id=251935854 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 26)
 
 [node name="CalShipCargoFloor98" parent="CalihanShip Nav Region" unique_id=367326016 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 28)
 
 [node name="CalShipCargoFloor101" parent="CalihanShip Nav Region" unique_id=1555464767 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 18)
 
 [node name="CalShipCargoFloor102" parent="CalihanShip Nav Region" unique_id=1122135025 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 20)
 
 [node name="CalShipCargoFloor103" parent="CalihanShip Nav Region" unique_id=1639772239 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 22)
 
 [node name="CalShipCargoFloor104" parent="CalihanShip Nav Region" unique_id=920846155 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 24)
 
 [node name="CalShipCargoFloor105" parent="CalihanShip Nav Region" unique_id=405462708 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 26)
 
 [node name="CalShipCargoFloor106" parent="CalihanShip Nav Region" unique_id=167661772 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 28)
 
 [node name="CalShipCargoFloor109" parent="CalihanShip Nav Region" unique_id=1722098153 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 18)
 
 [node name="CalShipCargoFloor110" parent="CalihanShip Nav Region" unique_id=1289429311 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 20)
 
 [node name="CalShipCargoFloor111" parent="CalihanShip Nav Region" unique_id=1569765218 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 22)
 
 [node name="CalShipCargoFloor112" parent="CalihanShip Nav Region" unique_id=642762401 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 24)
 
 [node name="CalShipCargoFloor113" parent="CalihanShip Nav Region" unique_id=2388100 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 26)
 
 [node name="CalShipCargoFloor114" parent="CalihanShip Nav Region" unique_id=1423966378 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 28)
 
 [node name="CalShipCargoFloor117" parent="CalihanShip Nav Region" unique_id=2000690213 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 18)
 
 [node name="CalShipCargoFloor118" parent="CalihanShip Nav Region" unique_id=423107583 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 20)
 
 [node name="CalShipCargoFloor119" parent="CalihanShip Nav Region" unique_id=1844893742 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 22)
 
 [node name="CalShipCargoFloor120" parent="CalihanShip Nav Region" unique_id=2146079692 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 24)
 
 [node name="CalShipCargoFloor121" parent="CalihanShip Nav Region" unique_id=139026852 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 26)
 
 [node name="CalShipCargoFloor122" parent="CalihanShip Nav Region" unique_id=1572112706 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 28)
 
 [node name="CalShipCargoFloor125" parent="CalihanShip Nav Region" unique_id=389651207 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 18)
 
 [node name="CalShipCargoFloor126" parent="CalihanShip Nav Region" unique_id=2020885 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 20)
 
 [node name="CalShipCargoFloor127" parent="CalihanShip Nav Region" unique_id=1207142786 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 22)
 
 [node name="CalShipCargoFloor128" parent="CalihanShip Nav Region" unique_id=1013419457 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 24)
 
 [node name="CalShipCargoFloor129" parent="CalihanShip Nav Region" unique_id=2100590866 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 26)
 
 [node name="CalShipCargoFloor130" parent="CalihanShip Nav Region" unique_id=1163807470 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 28)
 
 [node name="CalShipCargoFloor133" parent="CalihanShip Nav Region" unique_id=1479389653 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 18)
 
 [node name="CalShipCargoFloor134" parent="CalihanShip Nav Region" unique_id=150497006 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 20)
 
 [node name="CalShipCargoFloor135" parent="CalihanShip Nav Region" unique_id=372622996 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 22)
 
 [node name="CalShipCargoFloor136" parent="CalihanShip Nav Region" unique_id=894439546 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 24)
 
 [node name="CalShipCargoFloor137" parent="CalihanShip Nav Region" unique_id=596988526 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 26)
 
 [node name="CalShipCargoFloor138" parent="CalihanShip Nav Region" unique_id=729466001 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 28)
 
 [node name="CalShipCargoFloor141" parent="CalihanShip Nav Region" unique_id=465181780 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 18)
 
 [node name="CalShipCargoFloor142" parent="CalihanShip Nav Region" unique_id=1986911525 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 20)
 
 [node name="CalShipCargoFloor143" parent="CalihanShip Nav Region" unique_id=1445142352 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 22)
 
 [node name="CalShipCargoFloor144" parent="CalihanShip Nav Region" unique_id=2063684232 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 24)
 
 [node name="CalShipCargoFloor145" parent="CalihanShip Nav Region" unique_id=1939860287 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 26)
 
 [node name="CalShipCargoFloor146" parent="CalihanShip Nav Region" unique_id=1127538693 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 28)
 
 [node name="CalShipCargoFloor149" parent="CalihanShip Nav Region" unique_id=2111078472 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 18)
 
 [node name="CalShipCargoFloor150" parent="CalihanShip Nav Region" unique_id=1493620632 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 20)
 
 [node name="CalShipCargoFloor151" parent="CalihanShip Nav Region" unique_id=719069758 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 22)
 
 [node name="CalShipCargoFloor152" parent="CalihanShip Nav Region" unique_id=359345512 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 24)
 
 [node name="CalShipCargoFloor153" parent="CalihanShip Nav Region" unique_id=1483897426 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 26)
 
 [node name="CalShipCargoFloor154" parent="CalihanShip Nav Region" unique_id=16357398 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 28)
 
 [node name="CalShipCargoFloor43" parent="CalihanShip Nav Region" unique_id=1526953303 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 30)
 
 [node name="CalShipCargoFloor51" parent="CalihanShip Nav Region" unique_id=1169096353 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 30)
 
 [node name="CalShipCargoFloor59" parent="CalihanShip Nav Region" unique_id=1494162328 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 30)
 
 [node name="CalShipCargoFloor67" parent="CalihanShip Nav Region" unique_id=749026006 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 30)
 
 [node name="CalShipCargoFloor75" parent="CalihanShip Nav Region" unique_id=720281892 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 30)
 
 [node name="CalShipCargoFloor83" parent="CalihanShip Nav Region" unique_id=142950086 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 30)
 
 [node name="CalShipCargoFloor91" parent="CalihanShip Nav Region" unique_id=684344619 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 30)
 
 [node name="CalShipCargoFloor99" parent="CalihanShip Nav Region" unique_id=2016787288 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 30)
 
 [node name="CalShipCargoFloor107" parent="CalihanShip Nav Region" unique_id=730541891 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 30)
 
 [node name="CalShipCargoFloor115" parent="CalihanShip Nav Region" unique_id=625719928 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 30)
 
 [node name="CalShipCargoFloor123" parent="CalihanShip Nav Region" unique_id=404905047 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 30)
 
 [node name="CalShipCargoFloor131" parent="CalihanShip Nav Region" unique_id=168129453 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 30)
 
 [node name="CalShipCargoFloor139" parent="CalihanShip Nav Region" unique_id=1769817230 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 30)
 
 [node name="CalShipCargoFloor147" parent="CalihanShip Nav Region" unique_id=544955193 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 30)
 
 [node name="CalShipCargoFloor155" parent="CalihanShip Nav Region" unique_id=1011906939 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 30)
 
 [node name="CalShipCargoFloor2" parent="CalihanShip Nav Region" unique_id=210898103 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 16)
 
 [node name="CalShipCargoFloor3" parent="CalihanShip Nav Region" unique_id=1298845596 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 16)
 
 [node name="CalShipCargoFloor6" parent="CalihanShip Nav Region" unique_id=1021766508 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
 
 [node name="CalShipCargoFloor7" parent="CalihanShip Nav Region" unique_id=1784298557 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 
 [node name="CalShipCargoFloor8" parent="CalihanShip Nav Region" unique_id=1532971955 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 
 [node name="CalShipCargoFloor9" parent="CalihanShip Nav Region" unique_id=783590609 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
 
 [node name="CalShipCargoFloor10" parent="CalihanShip Nav Region" unique_id=964959217 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 14)
 
 [node name="CalShipCargoFloor11" parent="CalihanShip Nav Region" unique_id=1323784351 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 14)
 
 [node name="CalShipCargoFloor12" parent="CalihanShip Nav Region" unique_id=1388685309 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 12)
 
 [node name="CalShipCargoFloor13" parent="CalihanShip Nav Region" unique_id=1990408886 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 10)
 
 [node name="CalShipCargoFloor14" parent="CalihanShip Nav Region" unique_id=562507505 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
 
 [node name="CalShipCargoFloor15" parent="CalihanShip Nav Region" unique_id=986564690 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 8)
 
 [node name="CalShipCargoFloor16" parent="CalihanShip Nav Region" unique_id=143786053 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 10)
 
 [node name="CalShipCargoFloor17" parent="CalihanShip Nav Region" unique_id=64480336 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12)
 
 [node name="CalShipCargoFloor18" parent="CalihanShip Nav Region" unique_id=99563171 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
 
 [node name="CalShipCargoFloor22" parent="CalihanShip Nav Region" unique_id=1781456361 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
 
 [node name="CalShipCargoFloor23" parent="CalihanShip Nav Region" unique_id=938332974 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
 
 [node name="CalShipCargoFloor24" parent="CalihanShip Nav Region" unique_id=272586166 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
 [node name="CalShipCargoFloor44" parent="CalihanShip Nav Region" unique_id=593707425 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 0)
 
 [node name="CalShipCargoFloor52" parent="CalihanShip Nav Region" unique_id=1412039180 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [node name="CalShipCargoFloor60" parent="CalihanShip Nav Region" unique_id=1020477176 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
 
 [node name="CalShipCargoFloor68" parent="CalihanShip Nav Region" unique_id=1825136358 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 
 [node name="CalShipCargoFloor76" parent="CalihanShip Nav Region" unique_id=314520703 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
 [node name="CalShipCargoFloor84" parent="CalihanShip Nav Region" unique_id=2133438561 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
 
 [node name="CalShipCargoFloor92" parent="CalihanShip Nav Region" unique_id=1395634175 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
 
 [node name="CalShipCargoFloor100" parent="CalihanShip Nav Region" unique_id=1301868541 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
 
 [node name="CalShipCargoFloor25" parent="CalihanShip Nav Region" unique_id=2025430293 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
 [node name="CalShipCargoFloor26" parent="CalihanShip Nav Region" unique_id=2137809046 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
 
 [node name="CalShipCargoFloor4" parent="CalihanShip Nav Region" unique_id=413796622 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 16)
 
 [node name="CalShipCargoFloor5" parent="CalihanShip Nav Region" unique_id=2133917006 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 16)
 
 [node name="CalShipCargoFloor36" parent="CalihanShip Nav Region" unique_id=298765732 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 16)
 
 [node name="CalShipCargoFloor29" parent="CalihanShip Nav Region" unique_id=242516891 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 16)
 
 [node name="CalShipCargoFloor30" parent="CalihanShip Nav Region" unique_id=684442689 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 16)
 
 [node name="CalShipCargoFloor31" parent="CalihanShip Nav Region" unique_id=1799563012 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 16)
 
 [node name="CalShipCargoFloor32" parent="CalihanShip Nav Region" unique_id=897789648 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 16)
 
 [node name="CalShipCargoFloor33" parent="CalihanShip Nav Region" unique_id=2083148912 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2, 16)
 
 [node name="CalShipCargoFloor34" parent="CalihanShip Nav Region" unique_id=605006940 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, 16)
 
 [node name="CalShipCargoFloor35" parent="CalihanShip Nav Region" unique_id=1799644194 instance=ExtResource("24_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, -2, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 16)
 
 [node name="CalShipStairs" parent="CalihanShip Nav Region" unique_id=709739676 instance=ExtResource("25_mma5m")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, 0, -18)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, -18)
 
 [node name="CalShipCargoWallDoorRight" parent="CalihanShip Nav Region" unique_id=1434865185 instance=ExtResource("26_ywc32")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 28)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 28)
 
 [node name="CalShipCargoWallDoorLeft" parent="CalihanShip Nav Region" unique_id=1419521528 instance=ExtResource("27_oncqd")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 20)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 20)
 
 [node name="CalShipCargoWallDoorMid1" parent="CalihanShip Nav Region" unique_id=1324392350 instance=ExtResource("28_42ytj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 22)
 
 [node name="CalShipCargoWallDoorMid2" parent="CalihanShip Nav Region" unique_id=1039726582 instance=ExtResource("28_42ytj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 26)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 26)
 
 [node name="CalShipCargoWallDoorMid3" parent="CalihanShip Nav Region" unique_id=1422498205 instance=ExtResource("29_b45ad")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 144, -2, 24)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, -2, 24)
 
 [node name="CalShipCargoWallDoorRight2" parent="CalihanShip Nav Region" unique_id=1156426002 instance=ExtResource("26_ywc32")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 20)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 20)
 
 [node name="CalShipCargoWallDoorLeft2" parent="CalihanShip Nav Region" unique_id=1100517184 instance=ExtResource("27_oncqd")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 28)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 28)
 
 [node name="CalShipCargoWallDoorMid4" parent="CalihanShip Nav Region" unique_id=2015363914 instance=ExtResource("28_42ytj")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 26)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 26)
 
 [node name="CalShipCargoWallDoorMid5" parent="CalihanShip Nav Region" unique_id=1620226377 instance=ExtResource("28_42ytj")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 22)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 22)
 
 [node name="CalShipCargoWallDoorMid6" parent="CalihanShip Nav Region" unique_id=169350593 instance=ExtResource("29_b45ad")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 114, -2, 24)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -11, -2, 24)
 
 [node name="CalShipCargoCornerIn1" parent="CalihanShip Nav Region" unique_id=462496981 instance=ExtResource("30_q8ele")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 143, -2, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18, -2, 16)
 
 [node name="CalShipCargoCornerIn3" parent="CalihanShip Nav Region" unique_id=672311961 instance=ExtResource("30_q8ele")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 115, -2, 16)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10, -2, 16)
 
 [node name="CalShipCargoCornerIn4" parent="CalihanShip Nav Region" unique_id=1222238197 instance=ExtResource("30_q8ele")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 115, -2, 30)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -10, -2, 30)
 
 [node name="CalShipCargoCornerIn2" parent="CalihanShip Nav Region" unique_id=485470578 instance=ExtResource("30_q8ele")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 143, -2, 30)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, -2, 30)
 
 [node name="CalShipCatWalk" parent="CalihanShip Nav Region" unique_id=560008998 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 16)
 
 [node name="CalShipCatWalk2" parent="CalihanShip Nav Region" unique_id=115864052 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 18)
 
 [node name="CalShipCatWalk17" parent="CalihanShip Nav Region" unique_id=148031893 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 18)
 
 [node name="CalShipCatWalk16" parent="CalihanShip Nav Region" unique_id=1780449682 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 16)
 
 [node name="CalShipCatWalk3" parent="CalihanShip Nav Region" unique_id=96845421 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16)
 
 [node name="CalShipCatWalk4" parent="CalihanShip Nav Region" unique_id=468138700 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 16)
 
 [node name="CalShipCatWalk5" parent="CalihanShip Nav Region" unique_id=290600564 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 16)
 
 [node name="CalShipCatWalk6" parent="CalihanShip Nav Region" unique_id=341999359 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
 [node name="CalShipCatWalk7" parent="CalihanShip Nav Region" unique_id=497081791 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
 
 [node name="CalShipCatWalk8" parent="CalihanShip Nav Region" unique_id=1827968200 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
 
 [node name="CalShipCatWalk9" parent="CalihanShip Nav Region" unique_id=308706531 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 16)
 
 [node name="CalShipCatWalk10" parent="CalihanShip Nav Region" unique_id=364183144 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
 
 [node name="CalShipCatWalk11" parent="CalihanShip Nav Region" unique_id=11869271 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16)
 
 [node name="CalShipCatWalk12" parent="CalihanShip Nav Region" unique_id=372063478 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
 
 [node name="CalShipCatWalk13" parent="CalihanShip Nav Region" unique_id=228548036 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 16)
 
 [node name="CalShipCatWalk14" parent="CalihanShip Nav Region" unique_id=993332892 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
 
 [node name="CalShipCatWalk15" parent="CalihanShip Nav Region" unique_id=1942856211 instance=ExtResource("31_xcka2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 16)
 
 [node name="CalShipRamp" parent="CalihanShip Nav Region" unique_id=481012342 instance=ExtResource("32_ovrn4")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 121, -1, 18)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -4, -1, 18)
 
 [node name="CalShipRamp3" parent="CalihanShip Nav Region" unique_id=1801829323 instance=ExtResource("32_ovrn4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 137, -1, 18)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12, -1, 18)
 
 [node name="CalShipRamp4" parent="CalihanShip Nav Region" unique_id=1683779845 instance=ExtResource("32_ovrn4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 139, -2, 18)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 14, -2, 18)
 
 [node name="CalShipRamp2" parent="CalihanShip Nav Region" unique_id=1598189340 instance=ExtResource("32_ovrn4")]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 119, -2, 18)
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -6, -2, 18)
 
 [node name="CalShipCatWalkRail" parent="CalihanShip Nav Region" unique_id=932408265 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 117, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8, 0, 16)
 
 [node name="CalShipCatWalkRail2" parent="CalihanShip Nav Region" unique_id=1801033313 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 115, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10, 0, 16)
 
 [node name="CalShipCatWalkRail3" parent="CalihanShip Nav Region" unique_id=1822375335 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 119, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 0, 16)
 
 [node name="CalShipCatWalkRail4" parent="CalihanShip Nav Region" unique_id=1472644417 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 121, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 16)
 
 [node name="CalShipCatWalkRail5" parent="CalihanShip Nav Region" unique_id=2068977848 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 125, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 16)
 
 [node name="CalShipCatWalkRail6" parent="CalihanShip Nav Region" unique_id=227736114 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 127, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 16)
 
 [node name="CalShipCatWalkRail7" parent="CalihanShip Nav Region" unique_id=640313142 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 129, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 16)
 
 [node name="CalShipCatWalkRail8" parent="CalihanShip Nav Region" unique_id=1571550023 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 131, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, 16)
 
 [node name="CalShipCatWalkRail9" parent="CalihanShip Nav Region" unique_id=971339321 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 133, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 0, 16)
 
 [node name="CalShipCatWalkRail10" parent="CalihanShip Nav Region" unique_id=1845456063 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 137, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, 16)
 
 [node name="CalShipCatWalkRail11" parent="CalihanShip Nav Region" unique_id=2069954661 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 139, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 16)
 
 [node name="CalShipCatWalkRail12" parent="CalihanShip Nav Region" unique_id=1062976385 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 141, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 16)
 
 [node name="CalShipCatWalkRail13" parent="CalihanShip Nav Region" unique_id=1409507524 instance=ExtResource("33_f5ko0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 143, 0, 16)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18, 0, 16)
 
 [node name="CalShipCatWalkRailCorner" parent="CalihanShip Nav Region" unique_id=1327485695 instance=ExtResource("34_nyimn")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 123, 0, 18)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 18)
 
 [node name="CalShipCatWalkRailCorner2" parent="CalihanShip Nav Region" unique_id=1415489132 instance=ExtResource("34_nyimn")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 135, 0, 18)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 18)
 
 [node name="CalShipCargoWallDoorFrameLarge" parent="CalihanShip Nav Region" unique_id=1778850774 instance=ExtResource("35_iicyg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, -2, 31)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 31)
 
 [node name="CalShipFlightDeck" parent="CalihanShip Nav Region" unique_id=1171538881 instance=ExtResource("36_0dii5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 5, -41)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -41)
 
 [node name="CalShipWall3" parent="CalihanShip Nav Region" unique_id=269390720 instance=ExtResource("37_i1031")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138, 0, 5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13, 0, 5)
 
 [node name="CalShipWall14" parent="CalihanShip Nav Region" unique_id=1500988680 instance=ExtResource("37_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1)
 
 [node name="CalShipWall16" parent="CalihanShip Nav Region" unique_id=84458698 instance=ExtResource("37_i1031")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 120, 0, 12)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, 12)
 
 [node name="CalShipWall20" parent="CalihanShip Nav Region" unique_id=1469236257 instance=ExtResource("37_i1031")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.30444, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.304443, 0, -7)
 
 [node name="CalShipWall25" parent="CalihanShip Nav Region" unique_id=1917341456 instance=ExtResource("37_i1031")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, -14)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -14)
 
 [node name="CalShipWall32" parent="CalihanShip Nav Region" unique_id=594041852 instance=ExtResource("37_i1031")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 120, 0, -4)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -5, 0, -4)
 
 [node name="CalShipWall45" parent="CalihanShip Nav Region" unique_id=922039172 instance=ExtResource("37_i1031")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 121, 5, -40)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 5, -40)
 
 [node name="CalShipWall38" parent="CalihanShip Nav Region" unique_id=1129336573 instance=ExtResource("37_i1031")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, 2)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 2)
 
 [node name="CalShipWall13" parent="CalihanShip Nav Region" unique_id=648401764 instance=ExtResource("37_i1031")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 118, 0, 5.471197)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -7, 0, 5.471197)
 
 [node name="CalShipWall35" parent="CalihanShip Nav Region" unique_id=937412763 instance=ExtResource("50_q8ele")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 126, 0, 0)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1, 0, 0)
 
 [node name="CalShipWallCornerSmall" parent="CalihanShip Nav Region" unique_id=581359988 instance=ExtResource("51_xcka2")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 126, 0, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -1)
 
 [node name="CalShipWallCornerSmall2" parent="CalihanShip Nav Region" unique_id=1042177961 instance=ExtResource("51_xcka2")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 126, 0, -5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -5)
 
 [node name="CalShipWall42" parent="CalihanShip Nav Region" unique_id=1356737005 instance=ExtResource("52_ovrn4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 132, 0, 12)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 12)
 
 [node name="CalShipWall43" parent="CalihanShip Nav Region" unique_id=1086100798 instance=ExtResource("52_ovrn4")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 120, 0, -10)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -5, 0, -10)
 
 [node name="CalShipWallCompany" parent="CalihanShip Nav Region" unique_id=429590576 instance=ExtResource("53_f5ko0")]
-transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 129, 0, -4)
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 4, 0, -4)
 
 [node name="Company Logo" type="MeshInstance3D" parent="CalihanShip Nav Region/CalShipWallCompany" unique_id=1766342780]
 transform = Transform3D(1.125, -7.151965e-08, -3.1262228e-15, 0, -4.9175313e-08, 1.125, -7.151965e-08, -1.125, -4.9175313e-08, 0, 1.762, 0.4324999)
@@ -6081,7 +6081,7 @@ mesh = SubResource("ArrayMesh_dftac")
 skeleton = NodePath("")
 
 [node name="CalShipWallCompany2" parent="CalihanShip Nav Region" unique_id=595498836 instance=ExtResource("53_f5ko0")]
-transform = Transform3D(2, 0, 3.496911e-07, 0, 2, 0, -3.496911e-07, 0, 2, 129, 0, 14)
+transform = Transform3D(2, 0, 3.496911e-07, 0, 2, 0, -3.496911e-07, 0, 2, 4, 0, 14)
 
 [node name="Company Logo" type="MeshInstance3D" parent="CalihanShip Nav Region/CalShipWallCompany2" unique_id=59527768]
 transform = Transform3D(1.125, -7.151965e-08, -3.1262228e-15, 0, -4.9175313e-08, 1.125, -7.151965e-08, -1.125, -4.9175313e-08, 0, 1.762, 0.4324999)
@@ -6089,7 +6089,7 @@ mesh = SubResource("ArrayMesh_dftac")
 skeleton = NodePath("")
 
 [node name="CalShipWallCompany5" parent="CalihanShip Nav Region" unique_id=109058229 instance=ExtResource("53_f5ko0")]
-transform = Transform3D(-4.371139e-07, 0, 2, 0, 2, 0, -2, 0, -4.371139e-07, 137, 0, 9)
+transform = Transform3D(-4.371139e-07, 0, 2, 0, 2, 0, -2, 0, -4.371139e-07, 12, 0, 9)
 
 [node name="Company Logo" type="MeshInstance3D" parent="CalihanShip Nav Region/CalShipWallCompany5" unique_id=1076598711]
 transform = Transform3D(1.125, -7.151965e-08, -3.1262228e-15, 0, -4.9175313e-08, 1.125, -7.151965e-08, -1.125, -4.9175313e-08, 0, 1.762, 0.4324999)
@@ -6097,7 +6097,7 @@ mesh = SubResource("ArrayMesh_dftac")
 skeleton = NodePath("")
 
 [node name="CalShipWallCompany4" parent="CalihanShip Nav Region" unique_id=1859198715 instance=ExtResource("53_f5ko0")]
-transform = Transform3D(-2, 0, -5.2453663e-07, 0, 2, 0, 5.2453663e-07, 0, -2, 123, 0, 8)
+transform = Transform3D(-2, 0, -5.2453663e-07, 0, 2, 0, 5.2453663e-07, 0, -2, -2, 0, 8)
 
 [node name="Company Logo" type="MeshInstance3D" parent="CalihanShip Nav Region/CalShipWallCompany4" unique_id=1366136348]
 transform = Transform3D(1.125, -7.151965e-08, -3.1262228e-15, 0, -4.9175313e-08, 1.125, -7.151965e-08, -1.125, -4.9175313e-08, 0, 1.762, 0.4324999)
@@ -6105,15 +6105,16 @@ mesh = SubResource("ArrayMesh_dftac")
 skeleton = NodePath("")
 
 [node name="Server1" parent="CalihanShip Nav Region" unique_id=487021911 instance=ExtResource("54_xcka2")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 127.338, 5.375, -37.921)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.3379974, 5.375, -37.921)
 
 [node name="Server2" parent="CalihanShip Nav Region" unique_id=507635225 instance=ExtResource("55_ovrn4")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 128.862, 5.375, -37.921)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.8619995, 5.375, -37.921)
 
 [node name="Server3 NEEDS COMPUTER" parent="CalihanShip Nav Region" unique_id=1608261296 instance=ExtResource("56_f5ko0")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 125.80192, 5.375, -37.920937)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.801918, 5.375, -37.920937)
 
 [node name="Clutter" type="StaticBody3D" parent="CalihanShip Nav Region" unique_id=613956174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125, 0, 0)
 
 [node name="CollisionShape3D37" type="CollisionShape3D" parent="CalihanShip Nav Region/Clutter" unique_id=493319925]
 transform = Transform3D(-0.033107474, 0, 0.9994519, 0, 1, 0, -0.9994519, 0, -0.033107474, 125.224785, 0.37031358, 12.850556)
@@ -6650,7 +6651,7 @@ mesh = SubResource("ArrayMesh_pdl6u")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D27" type="CollisionShape3D" parent="CalihanShip Nav Region/Clutter" unique_id=598859964]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 135.17696, 0.36732733, -8.675455)
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 135.66122, 0.36732733, -8.675455)
 shape = SubResource("ConcavePolygonShape3D_ovrn4")
 
 [node name="Bench" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter/CollisionShape3D27" unique_id=1505836864]
@@ -6658,7 +6659,7 @@ mesh = SubResource("ArrayMesh_wlrku")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D28" type="CollisionShape3D" parent="CalihanShip Nav Region/Clutter" unique_id=1142578234]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 131.58287, 0.36732733, -8.675455)
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 132.06714, 0.36732733, -8.675455)
 shape = SubResource("ConcavePolygonShape3D_ovrn4")
 
 [node name="Bench" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter/CollisionShape3D28" unique_id=1897576157]
@@ -7053,7 +7054,7 @@ mesh = SubResource("ArrayMesh_c04p5")
 skeleton = NodePath("")
 
 [node name="cylinder2" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter" unique_id=2030488141]
-transform = Transform3D(6.687399e-15, 1.5298986e-07, -3.5, 3.5, -1.5298986e-07, 0, -1.5298986e-07, -3.5, -1.5298986e-07, 133.31396, 3.632985, 0.7318431)
+transform = Transform3D(6.687399e-15, 1.5298986e-07, -3.5, 3.5, -1.5298986e-07, 0, -1.5298986e-07, -3.5, -1.5298986e-07, 133.31396, 3.632985, -0.992687)
 mesh = SubResource("ArrayMesh_3awi0")
 skeleton = NodePath("")
 
@@ -7073,12 +7074,12 @@ mesh = SubResource("ArrayMesh_ywfmn")
 skeleton = NodePath("")
 
 [node name="Towel holder" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter" unique_id=787705247]
-transform = Transform3D(50.000008, -2.4795532e-05, -1.1368684e-12, 7.482031e-20, -2.9414712e-06, 67.29301, -1.9073486e-05, -67.293015, -2.9414716e-06, 133.30597, 2.7088063, -2.7596006)
+transform = Transform3D(-50.000008, 3.0678475e-05, 1.3940205e-12, 1.5952362e-19, -2.9414712e-06, 67.29301, 2.3444623e-05, 67.293015, 2.9414718e-06, 134.22643, 2.7088063, 0.7781668)
 mesh = SubResource("ArrayMesh_v7hee")
 skeleton = NodePath("")
 
 [node name="Towel holder2" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter" unique_id=1875439433]
-transform = Transform3D(50.000008, -2.4795532e-05, -1.1368684e-12, 7.482031e-20, -2.9414712e-06, 67.29301, -1.9073486e-05, -67.293015, -2.9414716e-06, 133.30597, 3.5807078, -2.7596006)
+transform = Transform3D(-50.000008, 3.0678475e-05, 1.3940205e-12, 1.5952362e-19, -2.9414712e-06, 67.29301, 2.3444623e-05, 67.293015, 2.9414718e-06, 134.22643, 3.5807078, 0.7781668)
 mesh = SubResource("ArrayMesh_v7hee")
 skeleton = NodePath("")
 
@@ -7316,7 +7317,7 @@ mesh = SubResource("ArrayMesh_f0mki")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D33" type="CollisionShape3D" parent="CalihanShip Nav Region/Clutter" unique_id=451898083]
-transform = Transform3D(4.132802, 0, -2.8142402, 0, 5, 0, 2.8142402, 0, 4.132802, 127.96858, 0.35632765, -11.920072)
+transform = Transform3D(4.132802, 0, -2.8142402, 0, 5, 0, 2.8142402, 0, 4.132802, 127.96858, 0.35632765, -12.196268)
 shape = SubResource("ConcavePolygonShape3D_ge6pt")
 
 [node name="Spool Full" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter/CollisionShape3D33" unique_id=113688917]
@@ -7325,7 +7326,7 @@ mesh = SubResource("ArrayMesh_b440i")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D34" type="CollisionShape3D" parent="CalihanShip Nav Region/Clutter" unique_id=967663821]
-transform = Transform3D(4.936757, 0, -0.792737, 0, 5.0000005, 0, 0.792737, 0, 4.936757, 127.95454, 0.9858099, -11.934161)
+transform = Transform3D(4.936757, 0, -0.792737, 0, 5.0000005, 0, 0.792737, 0, 4.936757, 127.95454, 0.9858099, -12.210358)
 shape = SubResource("ConcavePolygonShape3D_ge6pt")
 
 [node name="Spool Full" type="MeshInstance3D" parent="CalihanShip Nav Region/Clutter/CollisionShape3D34" unique_id=527779034]
@@ -7437,10 +7438,10 @@ mesh = SubResource("ArrayMesh_a707u")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" parent="CalihanShip Nav Region" unique_id=1921840627 instance=ExtResource("77_nyimn")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 126, 5.3690333, -45)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 5.3690333, -45)
 
 [node name="Bobblehead" parent="CalihanShip Nav Region" unique_id=451015360 instance=ExtResource("78_iicyg")]
-transform = Transform3D(-0.49738926, 0, 0.051029176, 0, 0.5, 0, -0.051029176, 0, -0.49738926, 125.82044, 7.622182, -47.03266)
+transform = Transform3D(-0.49738926, 0, 0.051029176, 0, 0.5, 0, -0.051029176, 0, -0.49738926, 0.8204422, 7.622182, -47.03266)
 
 [node name="CameraMallHall4" parent="." unique_id=1366142858 instance=ExtResource("3_46pqe")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -7, 4.5, 8)
